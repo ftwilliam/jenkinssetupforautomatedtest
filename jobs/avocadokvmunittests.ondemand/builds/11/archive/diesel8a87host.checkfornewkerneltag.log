@@ -1,0 +1,105 @@
++ set -e
++ mkdir -p kernel
++ cd kernel
++ '[' '!' -d linux ']'
++ cd linux
++ git remote set-url origin https://github.com/torvalds/linux.git
++ git fetch --all --tags
+Fetching origin
++ '[' 1 -eq 2 -a -n '' ']'
+++ git describe --tags --abbrev=0 origin/master
++ latestkerneltag=v4.17-rc3
+++ cat latestkerneltag
++ '[' v4.17-rc3 '!=' v4.13-rc7 ']'
++ git checkout v4.17-rc3
+HEAD is now at 6da6c0db5316... Linux v4.17-rc3
++ rm -f ../linux-4.17.0-rc3-jenkins_4.17.0-rc3-jenkins-1.diff.gz ../linux-4.17.0-rc3-jenkins_4.17.0-rc3-jenkins.orig.tar.gz
++ make mrproper
+  CLEAN   scripts/basic
+  CLEAN   scripts/kconfig
+  CLEAN   ./debian/
+  CLEAN   include/config include/generated
+  CLEAN   .config .config.old
+++ uname -r
++ cp /boot/config-4.13.0-rc7-jenkins .config
++ sed -ie 's/CONFIG_LOCALVERSION.*/CONFIG_LOCALVERSION=""/g' .config
++ ./scripts/config --disable CONFIG_MODULE_SIG
++ yes ''
++ make olddefconfig
+  HOSTCC  scripts/basic/fixdep
+  HOSTCC  scripts/kconfig/conf.o
+  YACC    scripts/kconfig/zconf.tab.c
+  LEX     scripts/kconfig/zconf.lex.c
+  HOSTCC  scripts/kconfig/zconf.tab.o
+  HOSTLD  scripts/kconfig/conf
+scripts/kconfig/conf  --olddefconfig Kconfig
+.config:57:warning: override: reassigning to symbol LOCALVERSION
+.config:1111:warning: symbol value 'm' invalid for NF_TABLES_INET
+.config:1112:warning: symbol value 'm' invalid for NF_TABLES_NETDEV
+.config:1294:warning: symbol value 'm' invalid for NF_TABLES_IPV4
+.config:1299:warning: symbol value 'm' invalid for NF_TABLES_ARP
+.config:1341:warning: symbol value 'm' invalid for NF_TABLES_IPV6
+.config:1379:warning: symbol value 'm' invalid for NF_TABLES_BRIDGE
+#
+# configuration written to .config
+#
+++ getconf _NPROCESSORS_ONLN
++ make -j 128 deb-pkg LOCALVERSION=-jenkins
+scripts/kconfig/conf  --syncconfig Kconfig
+  CHK     include/config/kernel.release
+  UPD     include/config/kernel.release
+make clean
+/bin/sh ./scripts/package/mkdebian
+  TAR     linux-4.17.0-rc3-jenkins.tar.gz
+origversion=$(dpkg-parsechangelog -SVersion |sed 's/-[^-]*$//');\
+	mv linux-4.17.0-rc3-jenkins.tar.gz ../linux-4.17.0-rc3-jenkins_${origversion}.orig.tar.gz
+dpkg-buildpackage -r"fakeroot -u" -a$(cat debian/arch) -i.git -us -uc
+dpkg-buildpackage: info: source package linux-4.17.0-rc3-jenkins
+dpkg-buildpackage: info: source version 4.17.0-rc3-jenkins-1
+dpkg-buildpackage: info: source distribution artful
+dpkg-buildpackage: info: source changed by Anonymous <jenkins@diesel8a87host>
+dpkg-buildpackage: warning: debian/rules is not executable; fixing that
+ dpkg-source -i.git --before-build linux
+dpkg-buildpackage: info: host architecture amd64
+ fakeroot -u debian/rules clean
+rm -rf debian/*tmp debian/files
+make clean
+ dpkg-source -i.git -b linux
+dpkg-source: warning: no source format specified in debian/source/format, see dpkg-source(1)
+dpkg-source: warning: source directory 'linux' is not <sourcepackage>-<upstreamversion> 'linux-4.17.0-rc3-jenkins-4.17.0-rc3-jenkins'
+dpkg-source: warning: .orig directory name linux.orig is not <package>-<upstreamversion> (wanted linux-4.17.0-rc3-jenkins-4.17.0-rc3-jenkins.orig)
+dpkg-source: info: using source format '1.0'
+dpkg-source: info: building linux-4.17.0-rc3-jenkins using existing linux-4.17.0-rc3-jenkins_4.17.0-rc3-jenkins.orig.tar.gz
+dpkg-source: info: building linux-4.17.0-rc3-jenkins in linux-4.17.0-rc3-jenkins_4.17.0-rc3-jenkins-1.diff.gz
+dpkg-source: warning: ignoring deletion of file .scmversion, use --include-removal to override
+dpkg-source: error: cannot represent change to kernel-4.16.0_rc2_jenkins.tar.gz: binary file contents changed
+dpkg-source: error: cannot represent change to kernel-4.16.0_rc2_jenkinsguest.tar.gz: binary file contents changed
+dpkg-source: error: cannot represent change to linux-4.16.0-rc2-jenkinsguest.tar.gz: binary file contents changed
+dpkg-source: warning: the diff modifies the following upstream files: 
+ .clang-format
+ .cocciconfig
+ .config.old
+ .confige
+ .get_maintainer.ignore
+ .mailmap
+ CREDITS
+ LICENSES/exceptions/Linux-syscall-note
+ LICENSES/other/GPL-1.0
+ LICENSES/other/MPL-1.1
+ LICENSES/preferred/BSD-2-Clause
+ LICENSES/preferred/BSD-3-Clause
+ LICENSES/preferred/BSD-3-Clause-Clear
+ LICENSES/preferred/GPL-2.0
+ LICENSES/preferred/LGPL-2.0
+ LICENSES/preferred/LGPL-2.1
+ LICENSES/preferred/MIT
+ MAINTAINERS
+ README
+ latestkerneltag
+dpkg-source: info: use the '3.0 (quilt)' format to have separate and documented changes to upstream files, see dpkg-source(1)
+dpkg-source: error: unrepresentable changes to source
+dpkg-buildpackage: error: dpkg-source -i.git -b linux gave error exit status 1
+scripts/package/Makefile:71: recipe for target 'deb-pkg' failed
+make[1]: *** [deb-pkg] Error 1
+Makefile:1405: recipe for target 'deb-pkg' failed
+make: *** [deb-pkg] Error 2

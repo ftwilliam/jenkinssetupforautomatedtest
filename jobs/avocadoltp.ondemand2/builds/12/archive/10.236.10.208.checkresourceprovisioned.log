@@ -1,0 +1,17 @@
++ cd /var/lib/jenkins
++ ./checkresourceprovisioned.new.sh 10.236.10.208
++ set -e
++ ping -c 1 10.236.10.208
++ ssh -q -o PasswordAuthentication=no -o StrictHostKeyChecking=no jenkins@10.236.10.208 'test ! -f checkfornewkerneltag.sh'
++ '[' 255 -eq 1 ']'
++ ssh-keygen -R 10.236.10.208
++ ssh -q -o PasswordAuthentication=no -o StrictHostKeyChecking=no root@10.236.10.208 :
++ ./ssh-copy-id.expect root@10.236.10.208
+spawn ssh-copy-id -o StrictHostKeyChecking=no root@10.236.10.208
+/bin/ssh-copy-id: INFO: Source of key(s) to be installed: "/var/lib/jenkins/.ssh/id_rsa.pub"
+/bin/ssh-copy-id: INFO: attempting to log in with the new key(s), to filter out any that are already installed
+/bin/ssh-copy-id: INFO: 1 key(s) remain to be installed -- if you are prompted now it is to install the new keys
+root@10.236.10.208's password: 
+Permission denied, please try again.
+root@10.236.10.208's password: ++ ./what_distro.sh root@10.236.10.208
++ distro='failed to ID distro'

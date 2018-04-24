@@ -1,0 +1,1391 @@
++ set -e
++ '[' '!' -d qemu ']'
++ git clone --progress https://github.com/qemu/qemu.git
+Cloning into 'qemu'...
+remote: Counting objects: 371021, done.        
+remote: Compressing objects:   1% (1/70)           remote: Compressing objects:   2% (2/70)           remote: Compressing objects:   4% (3/70)           remote: Compressing objects:   5% (4/70)           remote: Compressing objects:   7% (5/70)           remote: Compressing objects:   8% (6/70)           remote: Compressing objects:  10% (7/70)           remote: Compressing objects:  11% (8/70)           remote: Compressing objects:  12% (9/70)           remote: Compressing objects:  14% (10/70)           remote: Compressing objects:  15% (11/70)           remote: Compressing objects:  17% (12/70)           remote: Compressing objects:  18% (13/70)           remote: Compressing objects:  20% (14/70)           remote: Compressing objects:  21% (15/70)           remote: Compressing objects:  22% (16/70)           remote: Compressing objects:  24% (17/70)           remote: Compressing objects:  25% (18/70)           remote: Compressing objects:  27% (19/70)           remote: Compressing objects:  28% (20/70)           remote: Compressing objects:  30% (21/70)           remote: Compressing objects:  31% (22/70)           remote: Compressing objects:  32% (23/70)           remote: Compressing objects:  34% (24/70)           remote: Compressing objects:  35% (25/70)           remote: Compressing objects:  37% (26/70)           remote: Compressing objects:  38% (27/70)           remote: Compressing objects:  40% (28/70)           remote: Compressing objects:  41% (29/70)           remote: Compressing objects:  42% (30/70)           remote: Compressing objects:  44% (31/70)           remote: Compressing objects:  45% (32/70)           remote: Compressing objects:  47% (33/70)           remote: Compressing objects:  48% (34/70)           remote: Compressing objects:  50% (35/70)           remote: Compressing objects:  51% (36/70)           remote: Compressing objects:  52% (37/70)           remote: Compressing objects:  54% (38/70)           remote: Compressing objects:  55% (39/70)           remote: Compressing objects:  57% (40/70)           remote: Compressing objects:  58% (41/70)           remote: Compressing objects:  60% (42/70)           remote: Compressing objects:  61% (43/70)           remote: Compressing objects:  62% (44/70)           remote: Compressing objects:  64% (45/70)           remote: Compressing objects:  65% (46/70)           remote: Compressing objects:  67% (47/70)           remote: Compressing objects:  68% (48/70)           remote: Compressing objects:  70% (49/70)           remote: Compressing objects:  71% (50/70)           remote: Compressing objects:  72% (51/70)           remote: Compressing objects:  74% (52/70)           remote: Compressing objects:  75% (53/70)           remote: Compressing objects:  77% (54/70)           remote: Compressing objects:  78% (55/70)           remote: Compressing objects:  80% (56/70)           remote: Compressing objects:  81% (57/70)           remote: Compressing objects:  82% (58/70)           remote: Compressing objects:  84% (59/70)           remote: Compressing objects:  85% (60/70)           remote: Compressing objects:  87% (61/70)           remote: Compressing objects:  88% (62/70)           remote: Compressing objects:  90% (63/70)           remote: Compressing objects:  91% (64/70)           remote: Compressing objects:  92% (65/70)           remote: Compressing objects:  94% (66/70)           remote: Compressing objects:  95% (67/70)           remote: Compressing objects:  97% (68/70)           remote: Compressing objects:  98% (69/70)           remote: Compressing objects: 100% (70/70)           remote: Compressing objects: 100% (70/70), done.        
+Receiving objects:   0% (1/371021)   Receiving objects:   0% (1334/371021), 636.01 KiB | 631.00 KiB/s   Receiving objects:   0% (3312/371021), 1.54 MiB | 784.00 KiB/s   Receiving objects:   1% (3711/371021), 1.54 MiB | 784.00 KiB/s   Receiving objects:   1% (5620/371021), 2.61 MiB | 881.00 KiB/s   Receiving objects:   2% (7421/371021), 3.15 MiB | 914.00 KiB/s   Receiving objects:   2% (7606/371021), 3.15 MiB | 914.00 KiB/s   Receiving objects:   2% (9082/371021), 3.89 MiB | 876.00 KiB/s   Receiving objects:   2% (10973/371021), 4.66 MiB | 911.00 KiB/s   Receiving objects:   3% (11131/371021), 5.07 MiB | 907.00 KiB/s   Receiving objects:   3% (12701/371021), 5.44 MiB | 879.00 KiB/s   Receiving objects:   3% (13937/371021), 6.18 MiB | 805.00 KiB/s   Receiving objects:   4% (14841/371021), 6.70 MiB | 713.00 KiB/s   Receiving objects:   4% (15048/371021), 6.70 MiB | 713.00 KiB/s   Receiving objects:   4% (16221/371021), 7.22 MiB | 665.00 KiB/s   Receiving objects:   4% (17685/371021), 7.84 MiB | 621.00 KiB/s   Receiving objects:   5% (18552/371021), 8.19 MiB | 617.00 KiB/s   Receiving objects:   5% (19515/371021), 8.60 MiB | 616.00 KiB/s   Receiving objects:   5% (21392/371021), 9.48 MiB | 681.00 KiB/s   Receiving objects:   6% (22262/371021), 9.89 MiB | 716.00 KiB/s   Receiving objects:   6% (23319/371021), 10.34 MiB | 763.00 KiB/s   Receiving objects:   6% (25181/371021), 11.12 MiB | 810.00 KiB/s   Receiving objects:   7% (25972/371021), 11.49 MiB | 819.00 KiB/s   Receiving objects:   7% (26469/371021), 11.75 MiB | 797.00 KiB/s   Receiving objects:   7% (28018/371021), 12.36 MiB | 748.00 KiB/s   Receiving objects:   8% (29682/371021), 13.14 MiB | 731.00 KiB/s   Receiving objects:   8% (30126/371021), 13.14 MiB | 731.00 KiB/s   Receiving objects:   8% (32680/371021), 14.09 MiB | 754.00 KiB/s   Receiving objects:   9% (33392/371021), 14.62 MiB | 788.00 KiB/s   Receiving objects:   9% (35099/371021), 15.10 MiB | 811.00 KiB/s   Receiving objects:  10% (37103/371021), 15.91 MiB | 873.00 KiB/s   Receiving objects:  10% (37457/371021), 15.91 MiB | 873.00 KiB/s   Receiving objects:  10% (40084/371021), 16.75 MiB | 906.00 KiB/s   Receiving objects:  11% (40813/371021), 17.15 MiB | 904.00 KiB/s   Receiving objects:  11% (42375/371021), 17.55 MiB | 890.00 KiB/s   Receiving objects:  11% (44470/371021), 18.27 MiB | 820.00 KiB/s   Receiving objects:  12% (44523/371021), 18.27 MiB | 820.00 KiB/s   Receiving objects:  12% (47180/371021), 19.05 MiB | 794.00 KiB/s   Receiving objects:  13% (48233/371021), 19.50 MiB | 808.00 KiB/s   Receiving objects:  13% (50185/371021), 19.97 MiB | 823.00 KiB/s   Receiving objects:  14% (51943/371021), 20.49 MiB | 838.00 KiB/s   Receiving objects:  14% (53159/371021), 20.92 MiB | 845.00 KiB/s   Receiving objects:  15% (55654/371021), 21.75 MiB | 862.00 KiB/s   Receiving objects:  15% (56162/371021), 21.75 MiB | 862.00 KiB/s   Receiving objects:  15% (59199/371021), 22.61 MiB | 890.00 KiB/s   Receiving objects:  16% (59364/371021), 22.61 MiB | 890.00 KiB/s   Receiving objects:  17% (63074/371021), 23.51 MiB | 901.00 KiB/s   Receiving objects:  17% (63110/371021), 23.51 MiB | 901.00 KiB/s   Receiving objects:  17% (63788/371021), 24.44 MiB | 892.00 KiB/s   Receiving objects:  17% (64270/371021), 25.30 MiB | 884.00 KiB/s   Receiving objects:  17% (64889/371021), 26.09 MiB | 883.00 KiB/s   Receiving objects:  17% (65360/371021), 26.75 MiB | 827.00 KiB/s   Receiving objects:  17% (65886/371021), 27.36 MiB | 765.00 KiB/s   Receiving objects:  17% (66481/371021), 28.03 MiB | 711.00 KiB/s   Receiving objects:  18% (66784/371021), 28.35 MiB | 687.00 KiB/s   Receiving objects:  18% (67082/371021), 28.69 MiB | 671.00 KiB/s   Receiving objects:  18% (67606/371021), 29.36 MiB | 662.00 KiB/s   Receiving objects:  18% (67995/371021), 29.93 MiB | 650.00 KiB/s   Receiving objects:  18% (68498/371021), 30.60 MiB | 655.00 KiB/s   Receiving objects:  18% (69156/371021), 31.11 MiB | 623.00 KiB/s   Receiving objects:  18% (70214/371021), 31.67 MiB | 593.00 KiB/s   Receiving objects:  19% (70494/371021), 31.67 MiB | 593.00 KiB/s   Receiving objects:  19% (71095/371021), 32.36 MiB | 612.00 KiB/s   Receiving objects:  19% (71500/371021), 33.20 MiB | 665.00 KiB/s   Receiving objects:  19% (71504/371021), 34.18 MiB | 745.00 KiB/s   Receiving objects:  19% (71557/371021), 35.16 MiB | 851.00 KiB/s   Receiving objects:  19% (71601/371021), 35.68 MiB | 903.00 KiB/s   Receiving objects:  19% (71673/371021), 36.79 MiB | 995.00 KiB/s   Receiving objects:  19% (72785/371021), 38.68 MiB | 1.10 MiB/s   Receiving objects:  19% (73490/371021), 39.23 MiB | 1.11 MiB/s   Receiving objects:  19% (73832/371021), 40.22 MiB | 1.10 MiB/s   Receiving objects:  19% (74204/371021), 40.75 MiB | 1007.00 KiB/s   Receiving objects:  20% (74205/371021), 40.75 MiB | 1007.00 KiB/s   Receiving objects:  20% (74903/371021), 41.43 MiB | 901.00 KiB/s   Receiving objects:  20% (75784/371021), 42.10 MiB | 763.00 KiB/s   Receiving objects:  20% (77395/371021), 42.82 MiB | 665.00 KiB/s   Receiving objects:  21% (77915/371021), 43.52 MiB | 682.00 KiB/s   Receiving objects:  21% (78116/371021), 43.52 MiB | 682.00 KiB/s   Receiving objects:  21% (78641/371021), 44.33 MiB | 731.00 KiB/s   Receiving objects:  21% (79272/371021), 45.25 MiB | 784.00 KiB/s   Receiving objects:  21% (79713/371021), 46.17 MiB | 825.00 KiB/s   Receiving objects:  21% (80331/371021), 47.21 MiB | 911.00 KiB/s   Receiving objects:  21% (81007/371021), 48.18 MiB | 962.00 KiB/s   Receiving objects:  21% (81590/371021), 49.11 MiB | 970.00 KiB/s   Receiving objects:  21% (81595/371021), 50.01 MiB | 975.00 KiB/s   Receiving objects:  22% (81625/371021), 50.44 MiB | 964.00 KiB/s   Receiving objects:  22% (81654/371021), 50.86 MiB | 942.00 KiB/s   Receiving objects:  22% (81781/371021), 51.57 MiB | 881.00 KiB/s   Receiving objects:  22% (82338/371021), 52.35 MiB | 827.00 KiB/s   Receiving objects:  22% (83052/371021), 53.16 MiB | 815.00 KiB/s   Receiving objects:  22% (83834/371021), 54.08 MiB | 821.00 KiB/s   Receiving objects:  22% (84091/371021), 54.96 MiB | 841.00 KiB/s   Receiving objects:  22% (84949/371021), 55.69 MiB | 836.00 KiB/s   Receiving objects:  23% (85335/371021), 56.11 MiB | 846.00 KiB/s   Receiving objects:  23% (85760/371021), 56.59 MiB | 865.00 KiB/s   Receiving objects:  23% (86674/371021), 57.65 MiB | 910.00 KiB/s   Receiving objects:  23% (87106/371021), 58.59 MiB | 902.00 KiB/s   Receiving objects:  23% (87737/371021), 59.55 MiB | 954.00 KiB/s   Receiving objects:  24% (89046/371021), 60.45 MiB | 976.00 KiB/s   Receiving objects:  24% (89101/371021), 60.45 MiB | 976.00 KiB/s   Receiving objects:  24% (89628/371021), 61.33 MiB | 953.00 KiB/s   Receiving objects:  24% (89633/371021), 62.21 MiB | 925.00 KiB/s   Receiving objects:  24% (89637/371021), 62.86 MiB | 840.00 KiB/s   Receiving objects:  24% (89789/371021), 63.46 MiB | 775.00 KiB/s   Receiving objects:  24% (90796/371021), 64.14 MiB | 737.00 KiB/s   Receiving objects:  24% (91313/371021), 64.87 MiB | 692.00 KiB/s   Receiving objects:  24% (92269/371021), 65.71 MiB | 710.00 KiB/s   Receiving objects:  25% (92756/371021), 65.71 MiB | 710.00 KiB/s   Receiving objects:  25% (93001/371021), 66.69 MiB | 800.00 KiB/s   Receiving objects:  25% (93008/371021), 67.68 MiB | 868.00 KiB/s   Receiving objects:  25% (93422/371021), 68.06 MiB | 877.00 KiB/s   Receiving objects:  25% (94171/371021), 68.70 MiB | 858.00 KiB/s   Receiving objects:  25% (94749/371021), 69.33 MiB | 812.00 KiB/s   Receiving objects:  25% (95292/371021), 70.55 MiB | 744.00 KiB/s   Receiving objects:  25% (95297/371021), 70.98 MiB | 742.00 KiB/s   Receiving objects:  25% (95594/371021), 71.86 MiB | 785.00 KiB/s   Receiving objects:  26% (96466/371021), 72.68 MiB | 829.00 KiB/s   Receiving objects:  26% (96822/371021), 72.68 MiB | 829.00 KiB/s   Receiving objects:  26% (97900/371021), 73.39 MiB | 830.00 KiB/s   Receiving objects:  26% (97907/371021), 74.59 MiB | 808.00 KiB/s   Receiving objects:  26% (97917/371021), 74.87 MiB | 775.00 KiB/s   Receiving objects:  26% (97964/371021), 75.43 MiB | 709.00 KiB/s   Receiving objects:  26% (99151/371021), 76.15 MiB | 702.00 KiB/s   Receiving objects:  27% (100176/371021), 77.03 MiB | 717.00 KiB/s   Receiving objects:  27% (100210/371021), 77.03 MiB | 717.00 KiB/s   Receiving objects:  27% (101113/371021), 77.82 MiB | 618.00 KiB/s   Receiving objects:  27% (101116/371021), 77.84 MiB | 566.00 KiB/s   Receiving objects:  27% (101148/371021), 77.90 MiB | 468.00 KiB/s   Receiving objects:  27% (101279/371021), 77.96 MiB | 410.00 KiB/s   Receiving objects:  27% (101382/371021), 78.13 MiB | 294.00 KiB/s   Receiving objects:  27% (101672/371021), 78.42 MiB | 187.00 KiB/s   Receiving objects:  27% (101840/371021), 78.76 MiB | 189.00 KiB/s   Receiving objects:  27% (102244/371021), 79.24 MiB | 298.00 KiB/s   Receiving objects:  27% (102762/371021), 79.89 MiB | 420.00 KiB/s   Receiving objects:  28% (103886/371021), 80.29 MiB | 486.00 KiB/s   Receiving objects:  28% (105362/371021), 80.71 MiB | 555.00 KiB/s   Receiving objects:  28% (106153/371021), 81.68 MiB | 699.00 KiB/s   Receiving objects:  29% (107597/371021), 82.79 MiB | 859.00 KiB/s   Receiving objects:  29% (107738/371021), 82.79 MiB | 859.00 KiB/s   Receiving objects:  29% (108408/371021), 83.36 MiB | 793.00 KiB/s   Receiving objects:  29% (108999/371021), 83.52 MiB | 751.00 KiB/s   Receiving objects:  29% (110201/371021), 84.33 MiB | 749.00 KiB/s   Receiving objects:  29% (110589/371021), 85.04 MiB | 696.00 KiB/s   Receiving objects:  29% (111032/371021), 85.69 MiB | 599.00 KiB/s   Receiving objects:  30% (111307/371021), 86.04 MiB | 602.00 KiB/s   Receiving objects:  30% (111406/371021), 86.34 MiB | 666.00 KiB/s   Receiving objects:  30% (111825/371021), 87.02 MiB | 719.00 KiB/s   Receiving objects:  30% (112179/371021), 87.79 MiB | 686.00 KiB/s   Receiving objects:  30% (112765/371021), 88.57 MiB | 713.00 KiB/s   Receiving objects:  30% (113275/371021), 89.36 MiB | 745.00 KiB/s   Receiving objects:  31% (115017/371021), 90.20 MiB | 794.00 KiB/s   Receiving objects:  31% (115257/371021), 90.20 MiB | 794.00 KiB/s   Receiving objects:  31% (116112/371021), 91.08 MiB | 825.00 KiB/s   Receiving objects:  31% (116117/371021), 91.96 MiB | 855.00 KiB/s   Receiving objects:  31% (116576/371021), 92.93 MiB | 887.00 KiB/s   Receiving objects:  31% (118485/371021), 93.84 MiB | 917.00 KiB/s   Receiving objects:  32% (118727/371021), 94.32 MiB | 929.00 KiB/s   Receiving objects:  32% (119391/371021), 94.84 MiB | 945.00 KiB/s   Receiving objects:  32% (120165/371021), 95.82 MiB | 970.00 KiB/s   Receiving objects:  32% (121335/371021), 96.82 MiB | 982.00 KiB/s   Receiving objects:  33% (122437/371021), 97.36 MiB | 994.00 KiB/s   Receiving objects:  33% (123439/371021), 97.90 MiB | 1006.00 KiB/s   Receiving objects:  33% (124774/371021), 99.11 MiB | 1.05 MiB/s   Receiving objects:  33% (125712/371021), 100.21 MiB | 1.06 MiB/s   Receiving objects:  34% (126148/371021), 100.82 MiB | 1.09 MiB/s   Receiving objects:  34% (126609/371021), 101.45 MiB | 1.13 MiB/s   Receiving objects:  34% (128441/371021), 102.64 MiB | 1.16 MiB/s   Receiving objects:  35% (129858/371021), 103.21 MiB | 1.17 MiB/s   Receiving objects:  35% (130164/371021), 103.82 MiB | 1.17 MiB/s   Receiving objects:  35% (131768/371021), 104.79 MiB | 1.13 MiB/s   Receiving objects:  35% (132555/371021), 105.87 MiB | 1.11 MiB/s   Receiving objects:  35% (132718/371021), 106.96 MiB | 1.07 MiB/s   Receiving objects:  35% (133267/371021), 108.11 MiB | 1.07 MiB/s   Receiving objects:  36% (133568/371021), 108.72 MiB | 1.08 MiB/s   Receiving objects:  36% (133760/371021), 109.35 MiB | 1.11 MiB/s   Receiving objects:  36% (134168/371021), 110.68 MiB | 1.18 MiB/s   Receiving objects:  36% (134847/371021), 112.07 MiB | 1.23 MiB/s   Receiving objects:  36% (135635/371021), 113.05 MiB | 1.21 MiB/s   Receiving objects:  36% (136109/371021), 113.47 MiB | 1.18 MiB/s   Receiving objects:  36% (136792/371021), 114.32 MiB | 1.09 MiB/s   Receiving objects:  36% (137225/371021), 115.14 MiB | 1002.00 KiB/s   Receiving objects:  37% (137278/371021), 115.54 MiB | 924.00 KiB/s   Receiving objects:  37% (137828/371021), 115.95 MiB | 872.00 KiB/s   Receiving objects:  37% (138611/371021), 116.89 MiB | 862.00 KiB/s   Receiving objects:  37% (139429/371021), 117.79 MiB | 867.00 KiB/s   Receiving objects:  37% (139914/371021), 118.82 MiB | 905.00 KiB/s   Receiving objects:  37% (140116/371021), 119.58 MiB | 901.00 KiB/s   Receiving objects:  38% (140988/371021), 119.87 MiB | 873.00 KiB/s   Receiving objects:  38% (141597/371021), 120.20 MiB | 841.00 KiB/s   Receiving objects:  39% (144699/371021), 120.97 MiB | 818.00 KiB/s   Receiving objects:  39% (144748/371021), 120.97 MiB | 818.00 KiB/s   Receiving objects:  40% (148409/371021), 121.43 MiB | 813.00 KiB/s   Receiving objects:  40% (149899/371021), 121.92 MiB | 811.00 KiB/s   Receiving objects:  41% (152119/371021), 122.45 MiB | 813.00 KiB/s   Receiving objects:  42% (155829/371021), 123.00 MiB | 837.00 KiB/s   Receiving objects:  42% (156498/371021), 123.00 MiB | 837.00 KiB/s   Receiving objects:  43% (159540/371021), 123.61 MiB | 905.00 KiB/s   Receiving objects:  43% (161499/371021), 124.09 MiB | 948.00 KiB/s   Receiving objects:  44% (163250/371021), 124.63 MiB | 996.00 KiB/s   Receiving objects:  44% (166071/371021), 125.21 MiB | 1.02 MiB/s   Receiving objects:  45% (166960/371021), 125.21 MiB | 1.02 MiB/s   Receiving objects:  45% (170001/371021), 126.43 MiB | 1.10 MiB/s   Receiving objects:  46% (170670/371021), 126.43 MiB | 1.10 MiB/s   Receiving objects:  46% (174379/371021), 127.76 MiB | 1.17 MiB/s   Receiving objects:  47% (174380/371021), 127.76 MiB | 1.17 MiB/s   Receiving objects:  48% (178091/371021), 129.21 MiB | 1.23 MiB/s   Receiving objects:  48% (178440/371021), 129.21 MiB | 1.23 MiB/s   Receiving objects:  48% (181205/371021), 130.47 MiB | 1.29 MiB/s   Receiving objects:  49% (181801/371021), 130.96 MiB | 1.26 MiB/s   Receiving objects:  49% (182782/371021), 131.31 MiB | 1.20 MiB/s   Receiving objects:  49% (183661/371021), 132.04 MiB | 1.09 MiB/s   Receiving objects:  50% (185511/371021), 132.46 MiB | 1.03 MiB/s   Receiving objects:  50% (186688/371021), 132.91 MiB | 994.00 KiB/s   Receiving objects:  50% (188872/371021), 133.91 MiB | 908.00 KiB/s   Receiving objects:  51% (189221/371021), 133.91 MiB | 908.00 KiB/s   Receiving objects:  51% (192607/371021), 134.84 MiB | 870.00 KiB/s   Receiving objects:  52% (192931/371021), 134.84 MiB | 870.00 KiB/s   Receiving objects:  52% (195382/371021), 135.79 MiB | 932.00 KiB/s   Receiving objects:  53% (196642/371021), 136.27 MiB | 954.00 KiB/s   Receiving objects:  53% (199308/371021), 136.76 MiB | 970.00 KiB/s   Receiving objects:  54% (200352/371021), 137.58 MiB | 938.00 KiB/s   Receiving objects:  54% (200475/371021), 137.58 MiB | 938.00 KiB/s   Receiving objects:  54% (202726/371021), 138.30 MiB | 891.00 KiB/s   Receiving objects:  55% (204062/371021), 138.86 MiB | 792.00 KiB/s   Receiving objects:  55% (204351/371021), 138.86 MiB | 792.00 KiB/s   Receiving objects:  55% (206786/371021), 139.32 MiB | 687.00 KiB/s   Receiving objects:  56% (207772/371021), 139.32 MiB | 687.00 KiB/s   Receiving objects:  56% (210503/371021), 139.92 MiB | 622.00 KiB/s   Receiving objects:  57% (211482/371021), 139.92 MiB | 622.00 KiB/s   Receiving objects:  57% (213481/371021), 140.64 MiB | 600.00 KiB/s   Receiving objects:  58% (215193/371021), 140.64 MiB | 600.00 KiB/s   Receiving objects:  58% (218886/371021), 141.34 MiB | 618.00 KiB/s   Receiving objects:  59% (218903/371021), 141.34 MiB | 618.00 KiB/s   Receiving objects:  60% (222613/371021), 141.74 MiB | 650.00 KiB/s   Receiving objects:  60% (222967/371021), 142.14 MiB | 689.00 KiB/s   Receiving objects:  61% (226323/371021), 142.51 MiB | 719.00 KiB/s   Receiving objects:  61% (226734/371021), 142.92 MiB | 749.00 KiB/s   Receiving objects:  61% (228658/371021), 143.71 MiB | 777.00 KiB/s   Receiving objects:  62% (230034/371021), 144.11 MiB | 782.00 KiB/s   Receiving objects:  62% (231494/371021), 144.53 MiB | 801.00 KiB/s   Receiving objects:  63% (233744/371021), 144.97 MiB | 819.00 KiB/s   Receiving objects:  63% (236524/371021), 145.44 MiB | 835.00 KiB/s   Receiving objects:  64% (237454/371021), 145.44 MiB | 835.00 KiB/s   Receiving objects:  65% (241164/371021), 145.95 MiB | 859.00 KiB/s   Receiving objects:  65% (241759/371021), 146.49 MiB | 896.00 KiB/s   Receiving objects:  66% (244874/371021), 147.07 MiB | 938.00 KiB/s   Receiving objects:  66% (248195/371021), 147.60 MiB | 962.00 KiB/s   Receiving objects:  67% (248585/371021), 147.60 MiB | 962.00 KiB/s   Receiving objects:  68% (252295/371021), 148.14 MiB | 999.00 KiB/s   Receiving objects:  68% (255137/371021), 148.14 MiB | 999.00 KiB/s   Receiving objects:  69% (256005/371021), 148.71 MiB | 1.01 MiB/s   Receiving objects:  70% (259715/371021), 149.17 MiB | 1.02 MiB/s   Receiving objects:  70% (260131/371021), 149.17 MiB | 1.02 MiB/s   Receiving objects:  71% (263425/371021), 149.67 MiB | 1.03 MiB/s   Receiving objects:  72% (267136/371021), 150.19 MiB | 1.05 MiB/s   Receiving objects:  72% (267277/371021), 150.19 MiB | 1.05 MiB/s   Receiving objects:  73% (270846/371021), 151.18 MiB | 1.03 MiB/s   Receiving objects:  73% (271511/371021), 151.18 MiB | 1.03 MiB/s   Receiving objects:  74% (274556/371021), 152.01 MiB | 990.00 KiB/s   Receiving objects:  74% (275588/371021), 152.01 MiB | 990.00 KiB/s   Receiving objects:  75% (278266/371021), 152.96 MiB | 953.00 KiB/s   Receiving objects:  75% (279777/371021), 152.96 MiB | 953.00 KiB/s   Receiving objects:  76% (281976/371021), 153.49 MiB | 967.00 KiB/s   Receiving objects:  77% (285687/371021), 154.06 MiB | 981.00 KiB/s   Receiving objects:  77% (285994/371021), 154.06 MiB | 981.00 KiB/s   Receiving objects:  78% (289397/371021), 154.67 MiB | 1001.00 KiB/s   Receiving objects:  78% (290248/371021), 155.32 MiB | 1.01 MiB/s   Receiving objects:  79% (293107/371021), 156.50 MiB | 1.08 MiB/s   Receiving objects:  79% (293640/371021), 156.50 MiB | 1.08 MiB/s   Receiving objects:  80% (296817/371021), 157.14 MiB | 1.13 MiB/s   Receiving objects:  80% (299550/371021), 157.82 MiB | 1.18 MiB/s   Receiving objects:  81% (300528/371021), 157.82 MiB | 1.18 MiB/s   Receiving objects:  82% (304238/371021), 158.50 MiB | 1.22 MiB/s   Receiving objects:  82% (306900/371021), 159.21 MiB | 1.26 MiB/s   Receiving objects:  83% (307948/371021), 159.81 MiB | 1.27 MiB/s   Receiving objects:  84% (311658/371021), 159.81 MiB | 1.27 MiB/s   Receiving objects:  84% (313956/371021), 160.44 MiB | 1.27 MiB/s   Receiving objects:  85% (315368/371021), 161.00 MiB | 1.25 MiB/s   Receiving objects:  86% (319079/371021), 161.55 MiB | 1.24 MiB/s   Receiving objects:  86% (319698/371021), 161.55 MiB | 1.24 MiB/s   Receiving objects:  87% (322789/371021), 162.13 MiB | 1.24 MiB/s   Receiving objects:  87% (325525/371021), 162.75 MiB | 1.23 MiB/s   Receiving objects:  88% (326499/371021), 162.75 MiB | 1.23 MiB/s   Receiving objects:  89% (330209/371021), 163.42 MiB | 1.23 MiB/s   Receiving objects:  89% (332369/371021), 164.12 MiB | 1.24 MiB/s   Receiving objects:  90% (333919/371021), 164.82 MiB | 1.24 MiB/s   Receiving objects:  91% (337630/371021), 165.42 MiB | 1.23 MiB/s   Receiving objects:  91% (337699/371021), 165.42 MiB | 1.23 MiB/s   Receiving objects:  92% (341340/371021), 165.96 MiB | 1.21 MiB/s   Receiving objects:  92% (343102/371021), 166.50 MiB | 1.21 MiB/s   Receiving objects:  93% (345050/371021), 167.64 MiB | 1.21 MiB/s   Receiving objects:  93% (345261/371021), 167.64 MiB | 1.21 MiB/s   Receiving objects:  93% (347991/371021), 168.75 MiB | 1.17 MiB/s   Receiving objects:  94% (348760/371021), 169.22 MiB | 1.12 MiB/s   Receiving objects:  94% (350017/371021), 169.68 MiB | 1.06 MiB/s   Receiving objects:  94% (352041/371021), 170.67 MiB | 1.04 MiB/s   Receiving objects:  95% (352470/371021), 170.67 MiB | 1.04 MiB/s   Receiving objects:  95% (355264/371021), 171.81 MiB | 1.05 MiB/s   Receiving objects:  96% (356181/371021), 171.81 MiB | 1.05 MiB/s   Receiving objects:  96% (359757/371021), 173.09 MiB | 1.07 MiB/s   Receiving objects:  97% (359891/371021), 173.09 MiB | 1.07 MiB/s   Receiving objects:  98% (363601/371021), 173.79 MiB | 1.11 MiB/s   Receiving objects:  98% (366323/371021), 174.54 MiB | 1.17 MiB/s   Receiving objects:  99% (367311/371021), 174.54 MiB | 1.17 MiB/s   Receiving objects:  99% (369117/371021), 175.82 MiB | 1.24 MiB/s   Receiving objects:  99% (369904/371021), 177.29 MiB | 1.33 MiB/s   Receiving objects:  99% (370985/371021), 178.68 MiB | 1.37 MiB/s   remote: Total 371021 (delta 39), reused 52 (delta 28), pack-reused 370923        
+Receiving objects: 100% (371021/371021), 178.68 MiB | 1.37 MiB/s   Receiving objects: 100% (371021/371021), 178.89 MiB | 884.00 KiB/s, done.
+Resolving deltas:   0% (0/297861)   Resolving deltas:   1% (2980/297861)   Resolving deltas:   2% (5959/297861)   Resolving deltas:   3% (8937/297861)   Resolving deltas:   4% (11934/297861)   Resolving deltas:   5% (14895/297861)   Resolving deltas:   6% (18008/297861)   Resolving deltas:   7% (20880/297861)   Resolving deltas:   8% (23841/297861)   Resolving deltas:   9% (26811/297861)   Resolving deltas:  10% (29818/297861)   Resolving deltas:  10% (29938/297861)   Resolving deltas:  11% (32856/297861)   Resolving deltas:  12% (35762/297861)   Resolving deltas:  13% (39044/297861)   Resolving deltas:  14% (41703/297861)   Resolving deltas:  15% (44681/297861)   Resolving deltas:  16% (47662/297861)   Resolving deltas:  17% (50656/297861)   Resolving deltas:  18% (53687/297861)   Resolving deltas:  18% (54466/297861)   Resolving deltas:  19% (57931/297861)   Resolving deltas:  20% (59577/297861)   Resolving deltas:  21% (62614/297861)   Resolving deltas:  22% (65532/297861)   Resolving deltas:  23% (68510/297861)   Resolving deltas:  24% (71494/297861)   Resolving deltas:  25% (74505/297861)   Resolving deltas:  26% (77482/297861)   Resolving deltas:  26% (79186/297861)   Resolving deltas:  27% (80424/297861)   Resolving deltas:  28% (83402/297861)   Resolving deltas:  29% (86394/297861)   Resolving deltas:  30% (89385/297861)   Resolving deltas:  31% (92360/297861)   Resolving deltas:  32% (95389/297861)   Resolving deltas:  33% (98372/297861)   Resolving deltas:  34% (101526/297861)   Resolving deltas:  35% (104263/297861)   Resolving deltas:  36% (107266/297861)   Resolving deltas:  37% (110220/297861)   Resolving deltas:  37% (112209/297861)   Resolving deltas:  38% (113271/297861)   Resolving deltas:  39% (116186/297861)   Resolving deltas:  40% (119149/297861)   Resolving deltas:  41% (122269/297861)   Resolving deltas:  42% (125137/297861)   Resolving deltas:  43% (128100/297861)   Resolving deltas:  44% (131070/297861)   Resolving deltas:  45% (134040/297861)   Resolving deltas:  46% (137041/297861)   Resolving deltas:  47% (140025/297861)   Resolving deltas:  48% (142989/297861)   Resolving deltas:  49% (146001/297861)   Resolving deltas:  50% (149234/297861)   Resolving deltas:  50% (151112/297861)   Resolving deltas:  51% (151937/297861)   Resolving deltas:  52% (154897/297861)   Resolving deltas:  53% (158071/297861)   Resolving deltas:  54% (160887/297861)   Resolving deltas:  55% (163836/297861)   Resolving deltas:  56% (166906/297861)   Resolving deltas:  57% (169970/297861)   Resolving deltas:  58% (172787/297861)   Resolving deltas:  59% (175742/297861)   Resolving deltas:  60% (178790/297861)   Resolving deltas:  61% (181720/297861)   Resolving deltas:  62% (184683/297861)   Resolving deltas:  63% (187680/297861)   Resolving deltas:  64% (190690/297861)   Resolving deltas:  64% (193437/297861)   Resolving deltas:  65% (193617/297861)   Resolving deltas:  66% (196597/297861)   Resolving deltas:  67% (199933/297861)   Resolving deltas:  68% (202596/297861)   Resolving deltas:  69% (205568/297861)   Resolving deltas:  70% (208503/297861)   Resolving deltas:  71% (211489/297861)   Resolving deltas:  72% (214478/297861)   Resolving deltas:  73% (218026/297861)   Resolving deltas:  74% (220455/297861)   Resolving deltas:  75% (223438/297861)   Resolving deltas:  76% (226377/297861)   Resolving deltas:  77% (230066/297861)   Resolving deltas:  78% (232412/297861)   Resolving deltas:  79% (235315/297861)   Resolving deltas:  80% (238316/297861)   Resolving deltas:  81% (241359/297861)   Resolving deltas:  82% (244263/297861)   Resolving deltas:  83% (247227/297861)   Resolving deltas:  84% (250359/297861)   Resolving deltas:  85% (253222/297861)   Resolving deltas:  86% (256180/297861)   Resolving deltas:  87% (259142/297861)   Resolving deltas:  88% (262338/297861)   Resolving deltas:  89% (265411/297861)   Resolving deltas:  90% (268075/297861)   Resolving deltas:  91% (271411/297861)   Resolving deltas:  92% (274240/297861)   Resolving deltas:  93% (277280/297861)   Resolving deltas:  94% (280103/297861)   Resolving deltas:  95% (282979/297861)   Resolving deltas:  96% (286072/297861)   Resolving deltas:  97% (288932/297861)   Resolving deltas:  98% (291909/297861)   Resolving deltas:  99% (294900/297861)   Resolving deltas: 100% (297861/297861)   Resolving deltas: 100% (297861/297861), done.
++ cd qemu
++ git fetch --all --tags
+Fetching origin
++ '[' 2 -eq 2 ']'
++ latestqemutag=v2.11.1
+++ cat latestqemutag
++ '[' v2.11.1 '!=' '' ']'
++ git checkout v2.11.1
+Note: checking out 'v2.11.1'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by performing another checkout.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -b with the checkout command again. Example:
+
+  git checkout -b <new-branch-name>
+
+HEAD is now at 7c1beb52ed... Update version for 2.11.1 release
++ sudo apt -y install libglib2.0-dev libpixman-1-dev
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following additional packages will be installed:
+  libglib2.0-dev-bin libpcre16-3 libpcre3-dev libpcre32-3 libpcrecpp0v5
+Suggested packages:
+  libglib2.0-doc
+The following NEW packages will be installed:
+  libglib2.0-dev libglib2.0-dev-bin libpcre16-3 libpcre3-dev libpcre32-3
+  libpcrecpp0v5 libpixman-1-dev
+0 upgraded, 7 newly installed, 0 to remove and 115 not upgraded.
+Need to get 2,540 kB of archives.
+After this operation, 14.1 MB of additional disk space will be used.
+Get:1 http://us.archive.ubuntu.com/ubuntu artful/main amd64 libglib2.0-dev-bin amd64 2.54.1-1ubuntu1 [84.7 kB]
+Get:2 http://us.archive.ubuntu.com/ubuntu artful/main amd64 libpcre16-3 amd64 2:8.39-5ubuntu3 [147 kB]
+Get:3 http://us.archive.ubuntu.com/ubuntu artful/main amd64 libpcre32-3 amd64 2:8.39-5ubuntu3 [138 kB]
+Get:4 http://us.archive.ubuntu.com/ubuntu artful/main amd64 libpcrecpp0v5 amd64 2:8.39-5ubuntu3 [15.2 kB]
+Get:5 http://us.archive.ubuntu.com/ubuntu artful/main amd64 libpcre3-dev amd64 2:8.39-5ubuntu3 [536 kB]
+Get:6 http://us.archive.ubuntu.com/ubuntu artful/main amd64 libglib2.0-dev amd64 2.54.1-1ubuntu1 [1,373 kB]
+Get:7 http://us.archive.ubuntu.com/ubuntu artful/main amd64 libpixman-1-dev amd64 0.34.0-1 [245 kB]
+debconf: unable to initialize frontend: Dialog
+debconf: (Dialog frontend will not work on a dumb terminal, an emacs shell buffer, or without a controlling terminal.)
+debconf: falling back to frontend: Readline
+debconf: unable to initialize frontend: Readline
+debconf: (This frontend requires a controlling tty.)
+debconf: falling back to frontend: Teletype
+dpkg-preconfigure: unable to re-open stdin: 
+Fetched 2,540 kB in 1s (2,130 kB/s)
+Selecting previously unselected package libglib2.0-dev-bin.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 230949 files and directories currently installed.)
+Preparing to unpack .../0-libglib2.0-dev-bin_2.54.1-1ubuntu1_amd64.deb ...
+Unpacking libglib2.0-dev-bin (2.54.1-1ubuntu1) ...
+Selecting previously unselected package libpcre16-3:amd64.
+Preparing to unpack .../1-libpcre16-3_2%3a8.39-5ubuntu3_amd64.deb ...
+Unpacking libpcre16-3:amd64 (2:8.39-5ubuntu3) ...
+Selecting previously unselected package libpcre32-3:amd64.
+Preparing to unpack .../2-libpcre32-3_2%3a8.39-5ubuntu3_amd64.deb ...
+Unpacking libpcre32-3:amd64 (2:8.39-5ubuntu3) ...
+Selecting previously unselected package libpcrecpp0v5:amd64.
+Preparing to unpack .../3-libpcrecpp0v5_2%3a8.39-5ubuntu3_amd64.deb ...
+Unpacking libpcrecpp0v5:amd64 (2:8.39-5ubuntu3) ...
+Selecting previously unselected package libpcre3-dev:amd64.
+Preparing to unpack .../4-libpcre3-dev_2%3a8.39-5ubuntu3_amd64.deb ...
+Unpacking libpcre3-dev:amd64 (2:8.39-5ubuntu3) ...
+Selecting previously unselected package libglib2.0-dev:amd64.
+Preparing to unpack .../5-libglib2.0-dev_2.54.1-1ubuntu1_amd64.deb ...
+Unpacking libglib2.0-dev:amd64 (2.54.1-1ubuntu1) ...
+Selecting previously unselected package libpixman-1-dev.
+Preparing to unpack .../6-libpixman-1-dev_0.34.0-1_amd64.deb ...
+Unpacking libpixman-1-dev (0.34.0-1) ...
+Setting up libglib2.0-dev-bin (2.54.1-1ubuntu1) ...
+Processing triggers for libglib2.0-0:amd64 (2.54.1-1ubuntu1) ...
+Processing triggers for libc-bin (2.26-0ubuntu2) ...
+Setting up libpixman-1-dev (0.34.0-1) ...
+Processing triggers for man-db (2.7.6.1-2) ...
+Setting up libpcrecpp0v5:amd64 (2:8.39-5ubuntu3) ...
+Setting up libpcre32-3:amd64 (2:8.39-5ubuntu3) ...
+Setting up libpcre16-3:amd64 (2:8.39-5ubuntu3) ...
+Setting up libpcre3-dev:amd64 (2:8.39-5ubuntu3) ...
+Setting up libglib2.0-dev:amd64 (2.54.1-1ubuntu1) ...
+Processing triggers for libc-bin (2.26-0ubuntu2) ...
++ ./configure --target-list=x86_64-softmmu --enable-trace-backend=log --prefix=/usr
+Install prefix    /usr
+BIOS directory    /usr/share/qemu
+firmware path     /usr/share/qemu-firmware
+binary directory  /usr/bin
+library directory /usr/lib
+module directory  /usr/lib/qemu
+libexec directory /usr/libexec
+include directory /usr/include
+config directory  /usr/etc
+local state directory   /usr/var
+Manual directory  /usr/share/man
+ELF interp prefix /usr/gnemul/qemu-%M
+Source path       /home/jenkins/qemu
+GIT binary        git
+GIT submodules    ui/keycodemapdb dtc capstone
+C compiler        cc
+Host C compiler   cc
+C++ compiler      c++
+Objective-C compiler cc
+ARFLAGS           rv
+CFLAGS            -O2 -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2 -g 
+QEMU_CFLAGS       -I/usr/include/pixman-1 -I$(SRC_PATH)/dtc/libfdt -Werror -pthread -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -fPIE -DPIE -m64 -mcx16 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -Wstrict-prototypes -Wredundant-decls -Wall -Wundef -Wwrite-strings -Wmissing-prototypes -fno-strict-aliasing -fno-common -fwrapv  -Wexpansion-to-defined -Wendif-labels -Wno-shift-negative-value -Wno-missing-include-dirs -Wempty-body -Wnested-externs -Wformat-security -Wformat-y2k -Winit-self -Wignored-qualifiers -Wold-style-declaration -Wold-style-definition -Wtype-limits -fstack-protector-strong  -I$(SRC_PATH)/capstone/include
+LDFLAGS           -Wl,--warn-common -lxenctrl -lxenstore -lxenguest -lxenforeignmemory -lxengnttab -lxenevtchn -lxendevicemodel -Wl,-z,relro -Wl,-z,now -pie -m64 -g 
+make              make
+install           install
+python            python -B
+smbd              /usr/sbin/smbd
+module support    no
+host CPU          x86_64
+host big endian   no
+target list       x86_64-softmmu
+gprof enabled     no
+sparse enabled    no
+strip binaries    yes
+profiler          no
+static build      no
+SDL support       no 
+GTK support       no 
+GTK GL support    no
+VTE support       no 
+TLS priority      NORMAL
+GNUTLS support    no
+GNUTLS rnd        no
+libgcrypt         no
+libgcrypt kdf     no
+nettle            no 
+nettle kdf        no
+libtasn1          no
+curses support    no
+virgl support     no
+curl support      no
+mingw32 support   no
+Audio drivers     oss
+Block whitelist (rw) 
+Block whitelist (ro) 
+VirtFS support    no
+Multipath support no
+VNC support       yes
+VNC SASL support  no
+VNC JPEG support  no
+VNC PNG support   no
+xen support       yes
+xen ctrl version  40900
+pv dom build      no
+brlapi support    no
+bluez  support    no
+Documentation     no
+PIE               yes
+vde support       no
+netmap support    no
+Linux AIO support no
+ATTR/XATTR support yes
+Install blobs     yes
+KVM support       yes
+HAX support       no
+TCG support       yes
+TCG debug enabled no
+TCG interpreter   no
+RDMA support      no
+fdt support       yes
+preadv support    yes
+fdatasync         yes
+madvise           yes
+posix_madvise     yes
+libcap-ng support no
+vhost-net support yes
+vhost-scsi support yes
+vhost-vsock support yes
+vhost-user support yes
+Trace backends    log
+spice support     no 
+rbd support       no
+xfsctl support    no
+smartcard support no
+libusb            no
+usb net redir     no
+OpenGL support    no
+OpenGL dmabufs    no
+libiscsi support  no
+libnfs support    no
+build guest agent yes
+QGA VSS support   no
+QGA w32 disk info no
+QGA MSI support   no
+seccomp support   no
+coroutine backend ucontext
+coroutine pool    yes
+debug stack usage no
+crypto afalg      no
+GlusterFS support no
+gcov              gcov
+gcov enabled      no
+TPM support       yes
+libssh2 support   no
+TPM passthrough   yes
+TPM emulator      yes
+QOM debugging     yes
+Live block migration yes
+lzo support       no
+snappy support    no
+bzip2 support     no
+NUMA host support no
+tcmalloc support  no
+jemalloc support  no
+avx2 optimization yes
+replication support yes
+VxHS block device no
+capstone          git
+++ getconf _NPROCESSORS_ONLN
++ make -j6
+  GEN     x86_64-softmmu/config-devices.mak.tmp
+  GIT     ui/keycodemapdb dtc capstone
+  GEN     config-host.h
+  GEN     qemu-options.def
+  GEN     qmp-commands.h
+  GEN     qapi-types.h
+  GEN     x86_64-softmmu/config-devices.mak
+  GEN     qapi-visit.h
+  GEN     qapi-event.h
+Submodule 'capstone' (git://git.qemu.org/capstone.git) registered for path 'capstone'
+Submodule 'dtc' (git://git.qemu-project.org/dtc.git) registered for path 'dtc'
+Submodule 'ui/keycodemapdb' (git://git.qemu.org/keycodemapdb.git) registered for path 'ui/keycodemapdb'
+  GEN     qmp-marshal.c
+Cloning into '/home/jenkins/qemu/capstone'...
+  GEN     qapi-types.c
+  GEN     qapi-visit.c
+  GEN     qapi-event.c
+  GEN     qmp-introspect.h
+  GEN     qmp-introspect.c
+  GEN     trace/generated-tcg-tracers.h
+  GEN     trace/generated-helpers-wrappers.h
+  GEN     trace/generated-helpers.h
+  GEN     trace/generated-helpers.c
+  GEN     module_block.h
+  GEN     tests/test-qapi-types.h
+  GEN     tests/test-qapi-visit.h
+  GEN     tests/test-qmp-commands.h
+  GEN     tests/test-qapi-event.h
+  GEN     tests/test-qmp-introspect.h
+  GEN     trace-root.h
+  GEN     util/trace.h
+  GEN     crypto/trace.h
+  GEN     io/trace.h
+  GEN     migration/trace.h
+  GEN     block/trace.h
+  GEN     chardev/trace.h
+  GEN     hw/block/trace.h
+  GEN     hw/block/dataplane/trace.h
+  GEN     hw/char/trace.h
+  GEN     hw/intc/trace.h
+  GEN     hw/net/trace.h
+  GEN     hw/virtio/trace.h
+  GEN     hw/audio/trace.h
+  GEN     hw/misc/trace.h
+  GEN     hw/usb/trace.h
+  GEN     hw/scsi/trace.h
+  GEN     hw/nvram/trace.h
+  GEN     hw/display/trace.h
+  GEN     hw/input/trace.h
+  GEN     hw/timer/trace.h
+  GEN     hw/dma/trace.h
+  GEN     hw/sparc/trace.h
+  GEN     hw/sd/trace.h
+  GEN     hw/isa/trace.h
+  GEN     hw/mem/trace.h
+  GEN     hw/i386/trace.h
+  GEN     hw/i386/xen/trace.h
+  GEN     hw/9pfs/trace.h
+  GEN     hw/ppc/trace.h
+  GEN     hw/pci/trace.h
+  GEN     hw/s390x/trace.h
+  GEN     hw/vfio/trace.h
+  GEN     hw/acpi/trace.h
+  GEN     hw/arm/trace.h
+  GEN     hw/alpha/trace.h
+  GEN     hw/xen/trace.h
+  GEN     hw/ide/trace.h
+  GEN     ui/trace.h
+  GEN     audio/trace.h
+  GEN     net/trace.h
+  GEN     target/arm/trace.h
+  GEN     target/i386/trace.h
+  GEN     target/mips/trace.h
+  GEN     target/sparc/trace.h
+  GEN     target/s390x/trace.h
+  GEN     target/ppc/trace.h
+  GEN     qom/trace.h
+  GEN     linux-user/trace.h
+  GEN     qapi/trace.h
+  GEN     accel/tcg/trace.h
+  GEN     accel/kvm/trace.h
+  GEN     nbd/trace.h
+  GEN     trace-root.c
+  GEN     scsi/trace.h
+  GEN     util/trace.c
+  GEN     crypto/trace.c
+  GEN     io/trace.c
+  GEN     migration/trace.c
+  GEN     block/trace.c
+  GEN     chardev/trace.c
+  GEN     hw/block/trace.c
+  GEN     hw/block/dataplane/trace.c
+  GEN     hw/char/trace.c
+  GEN     hw/intc/trace.c
+  GEN     hw/net/trace.c
+  GEN     hw/virtio/trace.c
+  GEN     hw/audio/trace.c
+  GEN     hw/misc/trace.c
+  GEN     hw/usb/trace.c
+  GEN     hw/scsi/trace.c
+  GEN     hw/nvram/trace.c
+  GEN     hw/display/trace.c
+  GEN     hw/input/trace.c
+  GEN     hw/timer/trace.c
+  GEN     hw/dma/trace.c
+  GEN     hw/sparc/trace.c
+  GEN     hw/sd/trace.c
+  GEN     hw/isa/trace.c
+  GEN     hw/mem/trace.c
+  GEN     hw/i386/trace.c
+  GEN     hw/i386/xen/trace.c
+  GEN     hw/9pfs/trace.c
+  GEN     hw/ppc/trace.c
+  GEN     hw/pci/trace.c
+  GEN     hw/s390x/trace.c
+  GEN     hw/vfio/trace.c
+  GEN     hw/acpi/trace.c
+  GEN     hw/arm/trace.c
+  GEN     hw/alpha/trace.c
+  GEN     hw/xen/trace.c
+  GEN     hw/ide/trace.c
+  GEN     ui/trace.c
+  GEN     audio/trace.c
+  GEN     net/trace.c
+  GEN     target/arm/trace.c
+  GEN     target/i386/trace.c
+  GEN     target/mips/trace.c
+  GEN     target/sparc/trace.c
+  GEN     target/s390x/trace.c
+  GEN     target/ppc/trace.c
+  GEN     qom/trace.c
+  GEN     linux-user/trace.c
+  GEN     qapi/trace.c
+  GEN     accel/tcg/trace.c
+  GEN     accel/kvm/trace.c
+  GEN     nbd/trace.c
+  GEN     scsi/trace.c
+  GEN     config-all-devices.mak
+Cloning into '/home/jenkins/qemu/dtc'...
+Cloning into '/home/jenkins/qemu/ui/keycodemapdb'...
+mkdir -p dtc/libfdt
+mkdir -p dtc/tests
+  GEN     ui/input-keymap-linux-to-qcode.c
+  GEN     ui/input-keymap-qcode-to-qnum.c
+  GEN     ui/input-keymap-qnum-to-qcode.c
+  CC      cs.o
+  CC      utils.o
+  CC      SStream.o
+  CC      MCInstrDesc.o
+  CC      MCRegisterInfo.o
+  CC      arch/ARM/ARMDisassembler.o
+	 DEP tests/dumptrees.c
+	 DEP tests/trees.S
+  CC      arch/ARM/ARMInstPrinter.o
+	 DEP tests/testutils.c
+	 DEP tests/value-labels.c
+  CC      arch/ARM/ARMMapping.o
+	 DEP tests/asm_tree_dump.c
+  CC      arch/ARM/ARMModule.o
+	 DEP tests/truncated_property.c
+	 DEP tests/check_path.c
+	 DEP tests/overlay_bad_fixup.c
+	 DEP tests/overlay.c
+  CC      arch/AArch64/AArch64BaseInfo.o
+	 DEP tests/subnode_iterate.c
+	 DEP tests/property_iterate.c
+  CC      arch/AArch64/AArch64Disassembler.o
+	 DEP tests/integer-expressions.c
+	 DEP tests/utilfdt_test.c
+	 DEP tests/path_offset_aliases.c
+  CC      arch/AArch64/AArch64InstPrinter.o
+	 DEP tests/add_subnode_with_nops.c
+	 DEP tests/dtbs_equal_unordered.c
+	 DEP tests/dtb_reverse.c
+	 DEP tests/dtbs_equal_ordered.c
+  CC      arch/AArch64/AArch64Mapping.o
+	 DEP tests/extra-terminating-null.c
+	 DEP tests/incbin.c
+	 DEP tests/boot-cpuid.c
+	 DEP tests/phandle_format.c
+	 DEP tests/path-references.c
+	 DEP tests/references.c
+	 DEP tests/string_escapes.c
+	 DEP tests/propname_escapes.c
+	 DEP tests/appendprop2.c
+	 DEP tests/appendprop1.c
+	 DEP tests/del_node.c
+	 DEP tests/del_property.c
+	 DEP tests/setprop.c
+  CC      arch/AArch64/AArch64Module.o
+	 DEP tests/set_name.c
+	 DEP tests/rw_tree1.c
+	 DEP tests/open_pack.c
+	 DEP tests/nopulate.c
+	 DEP tests/mangle-layout.c
+  CC      arch/Mips/MipsDisassembler.o
+	 DEP tests/move_and_save.c
+  CC      arch/Mips/MipsInstPrinter.o
+	 DEP tests/sw_tree1.c
+  CC      arch/Mips/MipsMapping.o
+	 DEP tests/nop_node.c
+  CC      arch/Mips/MipsModule.o
+	 DEP tests/nop_property.c
+  CC      arch/PowerPC/PPCDisassembler.o
+	 DEP tests/setprop_inplace.c
+	 DEP tests/stringlist.c
+	 DEP tests/addr_size_cells.c
+	 DEP tests/notfound.c
+	 DEP tests/sized_cells.c
+	 DEP tests/char_literal.c
+	 DEP tests/get_alias.c
+	 DEP tests/node_offset_by_compatible.c
+	 DEP tests/node_check_compatible.c
+	 DEP tests/node_offset_by_phandle.c
+	 DEP tests/node_offset_by_prop_value.c
+	 DEP tests/parent_offset.c
+	 DEP tests/supernode_atdepth_offset.c
+	 DEP tests/get_path.c
+	 DEP tests/get_phandle.c
+	 DEP tests/getprop.c
+	 DEP tests/get_name.c
+	 DEP tests/path_offset.c
+	 DEP tests/subnode_offset.c
+	 DEP tests/find_property.c
+	 DEP tests/root_node.c
+	 DEP tests/get_mem_rsv.c
+	 DEP libfdt/fdt_overlay.c
+	 DEP libfdt/fdt_addresses.c
+	 DEP libfdt/fdt_empty_tree.c
+	 DEP libfdt/fdt_strerror.c
+	 DEP libfdt/fdt_rw.c
+	 DEP libfdt/fdt_sw.c
+	 DEP libfdt/fdt_wip.c
+	 DEP libfdt/fdt_ro.c
+	 DEP libfdt/fdt.c
+	 DEP util.c
+	 DEP fdtput.c
+	 DEP fdtget.c
+	 DEP fdtdump.c
+	 LEX convert-dtsv0-lexer.lex.c
+	 DEP srcpos.c
+	 BISON dtc-parser.tab.c
+  CC      arch/PowerPC/PPCInstPrinter.o
+	 LEX dtc-lexer.lex.c
+	 DEP treesource.c
+	 DEP livetree.c
+	 DEP fstree.c
+	 DEP flattree.c
+	 DEP dtc.c
+	 DEP data.c
+	 DEP checks.c
+	 DEP convert-dtsv0-lexer.lex.c
+	 DEP dtc-parser.tab.c
+	 DEP dtc-lexer.lex.c
+  CC      arch/PowerPC/PPCMapping.o
+	CHK version_gen.h
+	UPD version_gen.h
+	 DEP util.c
+	CHK version_gen.h
+	 CC libfdt/fdt.o
+  CC      arch/PowerPC/PPCModule.o
+	 CC libfdt/fdt_ro.o
+  CC      arch/Sparc/SparcDisassembler.o
+  CC      arch/Sparc/SparcInstPrinter.o
+  CC      arch/Sparc/SparcMapping.o
+  CC      arch/Sparc/SparcModule.o
+  CC      arch/SystemZ/SystemZDisassembler.o
+  CC      arch/SystemZ/SystemZInstPrinter.o
+  CC      arch/SystemZ/SystemZMapping.o
+  CC      arch/SystemZ/SystemZModule.o
+  CC      arch/SystemZ/SystemZMCTargetDesc.o
+  CC      arch/X86/X86DisassemblerDecoder.o
+	 CC libfdt/fdt_wip.o
+	 CC libfdt/fdt_sw.o
+	 CC libfdt/fdt_rw.o
+	 CC libfdt/fdt_strerror.o
+	 CC libfdt/fdt_empty_tree.o
+	 CC libfdt/fdt_addresses.o
+	 CC libfdt/fdt_overlay.o
+	 AR libfdt/libfdt.a
+ar: creating libfdt/libfdt.a
+a - libfdt/fdt.o
+a - libfdt/fdt_ro.o
+a - libfdt/fdt_wip.o
+a - libfdt/fdt_sw.o
+a - libfdt/fdt_rw.o
+a - libfdt/fdt_strerror.o
+a - libfdt/fdt_empty_tree.o
+a - libfdt/fdt_addresses.o
+a - libfdt/fdt_overlay.o
+  CC      arch/X86/X86Disassembler.o
+  CC      arch/X86/X86IntelInstPrinter.o
+  CC      arch/X86/X86ATTInstPrinter.o
+  CC      arch/X86/X86Mapping.o
+  CC      arch/X86/X86Module.o
+  CC      arch/XCore/XCoreDisassembler.o
+  CC      arch/XCore/XCoreInstPrinter.o
+  CC      arch/XCore/XCoreMapping.o
+  CC      arch/XCore/XCoreModule.o
+  CC      MCInst.o
+  AR      libcapstone.a
+ar: creating /home/jenkins/qemu/capstone/libcapstone.a
+make[1]: '/home/jenkins/qemu/capstone/libcapstone.a' is up to date.
+	CHK version_gen.h
+  CC      tests/qemu-iotests/socket_scm_helper.o
+  GEN     qga/qapi-generated/qga-qapi-visit.h
+  GEN     qga/qapi-generated/qga-qapi-types.h
+  GEN     qga/qapi-generated/qga-qmp-commands.h
+  GEN     qga/qapi-generated/qga-qapi-types.c
+  GEN     qga/qapi-generated/qga-qapi-visit.c
+  GEN     qga/qapi-generated/qga-qmp-marshal.c
+  CC      qmp-introspect.o
+  CC      qapi-types.o
+  CC      qapi-visit.o
+  CC      qapi-event.o
+  CC      qapi/qapi-visit-core.o
+  CC      qapi/qapi-dealloc-visitor.o
+  CC      qapi/qobject-input-visitor.o
+  CC      qapi/qobject-output-visitor.o
+  CC      qapi/qmp-registry.o
+  CC      qapi/qmp-dispatch.o
+  CC      qapi/string-input-visitor.o
+  CC      qapi/string-output-visitor.o
+  CC      qapi/opts-visitor.o
+  CC      qapi/qapi-clone-visitor.o
+  CC      qapi/qmp-event.o
+  CC      qapi/qapi-util.o
+  CC      qobject/qnull.o
+  CC      qobject/qnum.o
+  CC      qobject/qstring.o
+  CC      qobject/qdict.o
+  CC      qobject/qlist.o
+  CC      qobject/qbool.o
+  CC      qobject/qlit.o
+  CC      qobject/qjson.o
+  CC      qobject/qobject.o
+  CC      qobject/json-lexer.o
+  CC      qobject/json-streamer.o
+  CC      qobject/json-parser.o
+  CC      trace/control.o
+  CC      trace/qmp.o
+  CC      util/cutils.o
+  CC      util/osdep.o
+  CC      util/unicode.o
+  CC      util/qemu-timer-common.o
+  CC      util/bufferiszero.o
+  CC      util/lockcnt.o
+  CC      util/aiocb.o
+  CC      util/async.o
+  CC      util/thread-pool.o
+  CC      util/qemu-timer.o
+  CC      util/main-loop.o
+  CC      util/iohandler.o
+  CC      util/aio-posix.o
+  CC      util/compatfd.o
+  CC      util/event_notifier-posix.o
+  CC      util/mmap-alloc.o
+  CC      util/oslib-posix.o
+  CC      util/qemu-openpty.o
+  CC      util/qemu-thread-posix.o
+  CC      util/memfd.o
+  CC      util/envlist.o
+  CC      util/path.o
+  CC      util/module.o
+  CC      util/host-utils.o
+  CC      util/bitmap.o
+  CC      util/bitops.o
+  CC      util/hbitmap.o
+  CC      util/fifo8.o
+  CC      util/acl.o
+  CC      util/cacheinfo.o
+  CC      util/error.o
+  CC      util/qemu-error.o
+  CC      util/id.o
+  CC      util/iov.o
+  CC      util/qemu-config.o
+  CC      util/qemu-sockets.o
+  CC      util/uri.o
+  CC      util/notify.o
+  CC      util/qemu-option.o
+  CC      util/qemu-progress.o
+  CC      util/keyval.o
+  CC      util/hexdump.o
+  CC      util/crc32c.o
+  CC      util/uuid.o
+  CC      util/throttle.o
+  CC      util/getauxval.o
+  CC      util/readline.o
+  CC      util/rcu.o
+  CC      util/qemu-coroutine.o
+  CC      util/qemu-coroutine-lock.o
+  CC      util/qemu-coroutine-io.o
+  CC      util/qemu-coroutine-sleep.o
+  CC      util/coroutine-ucontext.o
+  CC      util/buffer.o
+  CC      util/timed-average.o
+  CC      util/base64.o
+  CC      util/log.o
+  CC      util/pagesize.o
+  CC      util/qdist.o
+  CC      util/qht.o
+  CC      util/range.o
+  CC      util/stats64.o
+  CC      util/systemd.o
+  CC      trace-root.o
+  CC      util/trace.o
+  CC      crypto/trace.o
+  CC      io/trace.o
+  CC      migration/trace.o
+  CC      block/trace.o
+  CC      chardev/trace.o
+  CC      hw/block/trace.o
+  CC      hw/block/dataplane/trace.o
+  CC      hw/intc/trace.o
+  CC      hw/char/trace.o
+  CC      hw/net/trace.o
+  CC      hw/virtio/trace.o
+  CC      hw/audio/trace.o
+  CC      hw/misc/trace.o
+  CC      hw/usb/trace.o
+  CC      hw/scsi/trace.o
+  CC      hw/nvram/trace.o
+  CC      hw/display/trace.o
+  CC      hw/input/trace.o
+  CC      hw/timer/trace.o
+  CC      hw/dma/trace.o
+  CC      hw/sparc/trace.o
+  CC      hw/sd/trace.o
+  CC      hw/isa/trace.o
+  CC      hw/mem/trace.o
+  CC      hw/i386/trace.o
+  CC      hw/i386/xen/trace.o
+  CC      hw/9pfs/trace.o
+  CC      hw/ppc/trace.o
+  CC      hw/pci/trace.o
+  CC      hw/s390x/trace.o
+  CC      hw/vfio/trace.o
+  CC      hw/acpi/trace.o
+  CC      hw/arm/trace.o
+  CC      hw/alpha/trace.o
+  CC      hw/xen/trace.o
+  CC      hw/ide/trace.o
+  CC      ui/trace.o
+  CC      audio/trace.o
+  CC      net/trace.o
+  CC      target/arm/trace.o
+  CC      target/i386/trace.o
+  CC      target/mips/trace.o
+  CC      target/sparc/trace.o
+  CC      target/s390x/trace.o
+  CC      target/ppc/trace.o
+  CC      qom/trace.o
+  CC      linux-user/trace.o
+  CC      qapi/trace.o
+  CC      nbd/trace.o
+  CC      accel/tcg/trace.o
+  CC      scsi/trace.o
+  CC      accel/kvm/trace.o
+  CC      crypto/pbkdf-stub.o
+  CC      stubs/arch-query-cpu-def.o
+  CC      stubs/arch-query-cpu-model-expansion.o
+  CC      stubs/arch-query-cpu-model-comparison.o
+  CC      stubs/arch-query-cpu-model-baseline.o
+  CC      stubs/bdrv-next-monitor-owned.o
+  CC      stubs/blk-commit-all.o
+  CC      stubs/blockdev-close-all-bdrv-states.o
+  CC      stubs/clock-warp.o
+  CC      stubs/cpu-get-icount.o
+  CC      stubs/cpu-get-clock.o
+  CC      stubs/dump.o
+  CC      stubs/error-printf.o
+  CC      stubs/fdset.o
+  CC      stubs/gdbstub.o
+  CC      stubs/get-vm-name.o
+  CC      stubs/iothread.o
+  CC      stubs/iothread-lock.o
+  CC      stubs/is-daemonized.o
+  CC      stubs/machine-init-done.o
+  CC      stubs/migr-blocker.o
+  CC      stubs/change-state-handler.o
+  CC      stubs/monitor.o
+  CC      stubs/notify-event.o
+  CC      stubs/qtest.o
+  CC      stubs/replay.o
+  CC      stubs/runstate-check.o
+  CC      stubs/set-fd-handler.o
+  CC      stubs/slirp.o
+  CC      stubs/sysbus.o
+  CC      stubs/tpm.o
+  CC      stubs/trace-control.o
+  CC      stubs/uuid.o
+  CC      stubs/vm-stop.o
+  CC      stubs/vmstate.o
+  CC      stubs/qmp_pc_dimm.o
+  CC      stubs/target-monitor-defs.o
+  CC      stubs/target-get-monitor-def.o
+  CC      stubs/pc_madt_cpu_entry.o
+  CC      stubs/vmgenid.o
+  CC      stubs/xen-common.o
+  CC      stubs/xen-hvm.o
+  CC      stubs/pci-host-piix.o
+  CC      contrib/ivshmem-client/ivshmem-client.o
+  CC      contrib/ivshmem-client/main.o
+  CC      contrib/ivshmem-server/ivshmem-server.o
+  CC      contrib/ivshmem-server/main.o
+  CC      qemu-nbd.o
+  CC      block.o
+  CC      blockjob.o
+  CC      qemu-io-cmds.o
+  CC      replication.o
+  CC      block/raw-format.o
+  CC      block/qcow.o
+  CC      block/vdi.o
+  CC      block/vmdk.o
+  CC      block/cloop.o
+  CC      block/bochs.o
+  CC      block/vpc.o
+  CC      block/vvfat.o
+  CC      block/dmg.o
+  CC      block/qcow2.o
+  CC      block/qcow2-refcount.o
+  CC      block/qcow2-cluster.o
+  CC      block/qcow2-snapshot.o
+  CC      block/qcow2-cache.o
+  CC      block/qcow2-bitmap.o
+  CC      block/qed.o
+  CC      block/qed-l2-cache.o
+  CC      block/qed-table.o
+  CC      block/qed-cluster.o
+  CC      block/qed-check.o
+  CC      block/vhdx.o
+  CC      block/vhdx-endian.o
+  CC      block/vhdx-log.o
+  CC      block/quorum.o
+  CC      block/parallels.o
+  CC      block/blkdebug.o
+  CC      block/blkverify.o
+  CC      block/blkreplay.o
+  CC      block/block-backend.o
+  CC      block/snapshot.o
+  CC      block/qapi.o
+  CC      block/file-posix.o
+  CC      block/null.o
+  CC      block/mirror.o
+  CC      block/commit.o
+  CC      block/io.o
+  CC      block/throttle-groups.o
+  CC      block/nbd.o
+  CC      block/nbd-client.o
+  CC      block/sheepdog.o
+  CC      block/accounting.o
+  CC      block/dirty-bitmap.o
+  CC      block/write-threshold.o
+  CC      block/backup.o
+  CC      block/replication.o
+  CC      block/throttle.o
+  CC      block/crypto.o
+  CC      nbd/server.o
+  CC      nbd/client.o
+  CC      nbd/common.o
+  CC      scsi/utils.o
+  CC      scsi/pr-manager.o
+  CC      scsi/pr-manager-helper.o
+  CC      crypto/init.o
+  CC      crypto/hash.o
+  CC      crypto/hash-glib.o
+  CC      crypto/hmac.o
+  CC      crypto/hmac-glib.o
+  CC      crypto/aes.o
+  CC      crypto/desrfb.o
+  CC      crypto/cipher.o
+  CC      crypto/tlscreds.o
+  CC      crypto/tlscredsanon.o
+  CC      crypto/tlscredsx509.o
+  CC      crypto/tlssession.o
+  CC      crypto/secret.o
+  CC      crypto/random-platform.o
+  CC      crypto/pbkdf.o
+  CC      crypto/ivgen.o
+  CC      crypto/ivgen-essiv.o
+  CC      crypto/ivgen-plain.o
+  CC      crypto/ivgen-plain64.o
+  CC      crypto/afsplit.o
+  CC      crypto/xts.o
+  CC      crypto/block.o
+  CC      crypto/block-qcow.o
+  CC      crypto/block-luks.o
+  CC      io/channel.o
+  CC      io/channel-buffer.o
+  CC      io/channel-command.o
+  CC      io/channel-file.o
+  CC      io/channel-socket.o
+  CC      io/channel-tls.o
+  CC      io/channel-watch.o
+  CC      io/channel-websock.o
+  CC      io/channel-util.o
+  CC      io/dns-resolver.o
+  CC      io/task.o
+  CC      qom/object.o
+  CC      qom/container.o
+  CC      qom/qom-qobject.o
+  CC      qom/object_interfaces.o
+  GEN     qemu-img-cmds.h
+  CC      qemu-io.o
+  CC      scsi/qemu-pr-helper.o
+  CC      qemu-bridge-helper.o
+  CC      blockdev.o
+  CC      blockdev-nbd.o
+  CC      bootdevice.o
+  CC      iothread.o
+  CC      qdev-monitor.o
+  CC      device-hotplug.o
+  CC      os-posix.o
+  CC      bt-host.o
+  CC      bt-vhci.o
+  CC      dma-helpers.o
+  CC      vl.o
+  CC      tpm.o
+  CC      device_tree.o
+  CC      qmp-marshal.o
+  CC      qmp.o
+  CC      hmp.o
+  CC      cpus-common.o
+  CC      audio/audio.o
+  CC      audio/noaudio.o
+  CC      audio/wavaudio.o
+  CC      audio/mixeng.o
+  CC      audio/ossaudio.o
+  CC      audio/wavcapture.o
+  CC      backends/rng.o
+  CC      backends/rng-egd.o
+  CC      backends/rng-random.o
+  CC      backends/tpm.o
+  CC      backends/hostmem.o
+  CC      backends/hostmem-ram.o
+  CC      backends/hostmem-file.o
+  CC      backends/cryptodev.o
+  CC      backends/cryptodev-builtin.o
+  CC      block/stream.o
+  CC      chardev/msmouse.o
+  CC      chardev/wctablet.o
+  CC      chardev/testdev.o
+  CC      disas/i386.o
+  CC      fsdev/qemu-fsdev-dummy.o
+  CC      fsdev/qemu-fsdev-opts.o
+  CC      fsdev/qemu-fsdev-throttle.o
+  CC      hw/acpi/core.o
+  CC      hw/acpi/piix4.o
+  CC      hw/acpi/pcihp.o
+  CC      hw/acpi/ich9.o
+  CC      hw/acpi/tco.o
+  CC      hw/acpi/cpu_hotplug.o
+  CC      hw/acpi/memory_hotplug.o
+  CC      hw/acpi/cpu.o
+  CC      hw/acpi/nvdimm.o
+  CC      hw/acpi/vmgenid.o
+  CC      hw/acpi/acpi_interface.o
+  CC      hw/acpi/bios-linker-loader.o
+  CC      hw/acpi/aml-build.o
+  CC      hw/acpi/ipmi.o
+  CC      hw/acpi/acpi-stub.o
+  CC      hw/acpi/ipmi-stub.o
+  CC      hw/audio/sb16.o
+  CC      hw/audio/es1370.o
+  CC      hw/audio/ac97.o
+  CC      hw/audio/fmopl.o
+  CC      hw/audio/adlib.o
+  CC      hw/audio/gus.o
+  CC      hw/audio/gusemu_hal.o
+  CC      hw/audio/gusemu_mixer.o
+  CC      hw/audio/cs4231a.o
+  CC      hw/audio/intel-hda.o
+  CC      hw/audio/hda-codec.o
+  CC      hw/audio/pcspk.o
+  CC      hw/audio/soundhw.o
+  CC      hw/block/block.o
+  CC      hw/block/cdrom.o
+  CC      hw/block/hd-geometry.o
+  CC      hw/block/fdc.o
+  CC      hw/block/pflash_cfi01.o
+  CC      hw/block/xen_disk.o
+  CC      hw/block/nvme.o
+  CC      hw/bt/core.o
+  CC      hw/bt/l2cap.o
+  CC      hw/bt/sdp.o
+  CC      hw/bt/hci.o
+  CC      hw/bt/hid.o
+  CC      hw/bt/hci-csr.o
+  CC      hw/char/ipoctal232.o
+  CC      hw/char/parallel.o
+  CC      hw/char/serial.o
+  CC      hw/char/serial-isa.o
+  CC      hw/char/serial-pci.o
+  CC      hw/char/virtio-console.o
+  CC      hw/char/xen_console.o
+  CC      hw/char/debugcon.o
+  CC      hw/core/qdev.o
+  CC      hw/core/qdev-properties.o
+  CC      hw/core/bus.o
+  CC      hw/core/reset.o
+  CC      hw/core/fw-path-provider.o
+  CC      hw/core/irq.o
+  CC      hw/core/hotplug.o
+  CC      hw/core/nmi.o
+  CC      hw/core/sysbus.o
+  CC      hw/core/machine.o
+  CC      hw/core/loader.o
+  CC      hw/core/qdev-properties-system.o
+  CC      hw/core/register.o
+  CC      hw/core/or-irq.o
+  CC      hw/cpu/core.o
+  CC      hw/display/cirrus_vga.o
+  CC      hw/display/xenfb.o
+  CC      hw/display/vga-pci.o
+  CC      hw/display/vga-isa.o
+  CC      hw/display/vmware_vga.o
+  CC      hw/dma/i8257.o
+  CC      hw/i2c/core.o
+  CC      hw/i2c/smbus.o
+  CC      hw/i2c/smbus_ich9.o
+  CC      hw/i2c/smbus_eeprom.o
+  CC      hw/i2c/pm_smbus.o
+  CC      hw/ide/core.o
+  CC      hw/ide/atapi.o
+  CC      hw/ide/qdev.o
+  CC      hw/ide/pci.o
+  CC      hw/ide/isa.o
+  CC      hw/ide/piix.o
+  CC      hw/ide/ahci.o
+  CC      hw/ide/ich.o
+  CC      hw/input/hid.o
+  CC      hw/input/pckbd.o
+  CC      hw/input/ps2.o
+  CC      hw/input/vmmouse.o
+  CC      hw/input/virtio-input.o
+  CC      hw/input/virtio-input-hid.o
+  CC      hw/input/virtio-input-host.o
+  CC      hw/intc/i8259_common.o
+  CC      hw/intc/i8259.o
+  CC      hw/intc/ioapic_common.o
+  CC      hw/intc/intc.o
+  CC      hw/ipack/ipack.o
+  CC      hw/ipack/tpci200.o
+  CC      hw/ipmi/ipmi.o
+  CC      hw/ipmi/ipmi_bmc_sim.o
+  CC      hw/ipmi/ipmi_bmc_extern.o
+  CC      hw/ipmi/isa_ipmi_kcs.o
+  CC      hw/ipmi/isa_ipmi_bt.o
+  CC      hw/isa/isa-bus.o
+  CC      hw/isa/apm.o
+  CC      hw/mem/pc-dimm.o
+  CC      hw/mem/nvdimm.o
+  CC      hw/misc/applesmc.o
+  CC      hw/misc/debugexit.o
+  CC      hw/misc/sga.o
+  CC      hw/misc/pc-testdev.o
+  CC      hw/misc/pci-testdev.o
+  CC      hw/misc/edu.o
+  CC      hw/misc/unimp.o
+  CC      hw/misc/vmcoreinfo.o
+  CC      hw/net/xen_nic.o
+  CC      hw/net/ne2000.o
+  CC      hw/net/eepro100.o
+  CC      hw/net/pcnet-pci.o
+  CC      hw/net/pcnet.o
+  CC      hw/net/e1000.o
+  CC      hw/net/e1000x_common.o
+  CC      hw/net/net_tx_pkt.o
+  CC      hw/net/net_rx_pkt.o
+  CC      hw/net/e1000e.o
+  CC      hw/net/e1000e_core.o
+  CC      hw/net/rtl8139.o
+  CC      hw/net/vmxnet3.o
+  CC      hw/net/ne2000-isa.o
+  CC      hw/net/rocker/rocker.o
+  CC      hw/net/rocker/rocker_fp.o
+  CC      hw/net/rocker/rocker_desc.o
+  CC      hw/net/rocker/rocker_world.o
+  CC      hw/net/rocker/rocker_of_dpa.o
+  CC      hw/nvram/eeprom93xx.o
+  CC      hw/nvram/fw_cfg.o
+  CC      hw/nvram/chrp_nvram.o
+  CC      hw/pci-bridge/pci_bridge_dev.o
+  CC      hw/pci-bridge/pcie_root_port.o
+  CC      hw/pci-bridge/gen_pcie_root_port.o
+  CC      hw/pci-bridge/pcie_pci_bridge.o
+  CC      hw/pci-bridge/pci_expander_bridge.o
+  CC      hw/pci-bridge/xio3130_upstream.o
+  CC      hw/pci-bridge/xio3130_downstream.o
+  CC      hw/pci-bridge/ioh3420.o
+  CC      hw/pci-bridge/i82801b11.o
+  CC      hw/pci-host/pam.o
+  CC      hw/pci-host/piix.o
+  CC      hw/pci-host/q35.o
+  CC      hw/pci/pci.o
+  CC      hw/pci/pci_bridge.o
+  CC      hw/pci/msix.o
+  CC      hw/pci/msi.o
+  CC      hw/pci/shpc.o
+  CC      hw/pci/slotid_cap.o
+  CC      hw/pci/pci_host.o
+  CC      hw/pci/pcie_host.o
+  CC      hw/pci/pcie.o
+  CC      hw/pci/pcie_aer.o
+  CC      hw/pci/pcie_port.o
+  CC      hw/pci/pci-stub.o
+  CC      hw/pcmcia/pcmcia.o
+  CC      hw/scsi/scsi-disk.o
+  CC      hw/scsi/scsi-generic.o
+  CC      hw/scsi/scsi-bus.o
+  CC      hw/scsi/lsi53c895a.o
+  CC      hw/scsi/mptsas.o
+  CC      hw/scsi/mptconfig.o
+  CC      hw/scsi/mptendian.o
+  CC      hw/scsi/megasas.o
+  CC      hw/scsi/vmw_pvscsi.o
+  CC      hw/scsi/esp.o
+  CC      hw/scsi/esp-pci.o
+  CC      hw/sd/sd.o
+  CC      hw/sd/core.o
+  CC      hw/sd/sdhci.o
+  CC      hw/smbios/smbios.o
+  CC      hw/smbios/smbios_type_38.o
+  CC      hw/smbios/smbios-stub.o
+  CC      hw/smbios/smbios_type_38-stub.o
+  CC      hw/timer/hpet.o
+  CC      hw/timer/i8254_common.o
+  CC      hw/timer/i8254.o
+  CC      hw/tpm/tpm_tis.o
+  CC      hw/tpm/tpm_passthrough.o
+  CC      hw/tpm/tpm_util.o
+  CC      hw/tpm/tpm_emulator.o
+  CC      hw/usb/core.o
+  CC      hw/usb/combined-packet.o
+  CC      hw/usb/bus.o
+  CC      hw/usb/libhw.o
+  CC      hw/usb/desc.o
+  CC      hw/usb/desc-msos.o
+  CC      hw/usb/hcd-uhci.o
+  CC      hw/usb/hcd-ohci.o
+  CC      hw/usb/hcd-ehci.o
+  CC      hw/usb/hcd-ehci-pci.o
+  CC      hw/usb/hcd-xhci.o
+  CC      hw/usb/hcd-xhci-nec.o
+  CC      hw/usb/dev-hub.o
+  CC      hw/usb/dev-hid.o
+  CC      hw/usb/dev-wacom.o
+  CC      hw/usb/dev-storage.o
+  CC      hw/usb/dev-uas.o
+  CC      hw/usb/dev-audio.o
+  CC      hw/usb/dev-serial.o
+  CC      hw/usb/dev-network.o
+  CC      hw/usb/dev-bluetooth.o
+  CC      hw/usb/dev-smartcard-reader.o
+  CC      hw/usb/dev-mtp.o
+  CC      hw/usb/host-stub.o
+  CC      hw/virtio/virtio-rng.o
+  CC      hw/virtio/virtio-pci.o
+  CC      hw/virtio/virtio-bus.o
+  CC      hw/virtio/virtio-mmio.o
+  CC      hw/virtio/vhost-stub.o
+  CC      hw/watchdog/watchdog.o
+  CC      hw/watchdog/wdt_i6300esb.o
+  CC      hw/watchdog/wdt_ib700.o
+  CC      hw/xen/xen_backend.o
+  CC      hw/xen/xen_devconfig.o
+  CC      hw/xen/xen_pvdev.o
+  CC      hw/xen/xen-common.o
+  CC      migration/migration.o
+  CC      migration/socket.o
+  CC      migration/fd.o
+  CC      migration/exec.o
+  CC      migration/tls.o
+  CC      migration/channel.o
+  CC      migration/savevm.o
+  CC      migration/colo-comm.o
+  CC      migration/colo.o
+  CC      migration/colo-failover.o
+  CC      migration/vmstate.o
+  CC      migration/vmstate-types.o
+  CC      migration/page_cache.o
+  CC      migration/qemu-file.o
+  CC      migration/global_state.o
+  CC      migration/qemu-file-channel.o
+  CC      migration/xbzrle.o
+  CC      migration/postcopy-ram.o
+  CC      migration/qjson.o
+  CC      migration/block.o
+  CC      net/net.o
+  CC      net/queue.o
+  CC      net/checksum.o
+  CC      net/util.o
+  CC      net/hub.o
+  CC      net/socket.o
+  CC      net/dump.o
+  CC      net/eth.o
+  CC      net/l2tpv3.o
+  CC      net/vhost-user.o
+  CC      net/slirp.o
+  CC      net/filter.o
+  CC      net/filter-buffer.o
+  CC      net/filter-mirror.o
+  CC      net/colo-compare.o
+  CC      net/colo.o
+  CC      net/filter-rewriter.o
+  CC      net/filter-replay.o
+  CC      net/tap.o
+  CC      net/tap-linux.o
+  CC      qom/cpu.o
+  CC      replay/replay.o
+  CC      replay/replay-internal.o
+  CC      replay/replay-events.o
+  CC      replay/replay-time.o
+  CC      replay/replay-input.o
+  CC      replay/replay-char.o
+  CC      replay/replay-snapshot.o
+  CC      replay/replay-net.o
+  CC      replay/replay-audio.o
+  CC      slirp/cksum.o
+  CC      slirp/if.o
+  CC      slirp/ip_icmp.o
+  CC      slirp/ip6_icmp.o
+  CC      slirp/ip6_input.o
+  CC      slirp/ip6_output.o
+  CC      slirp/ip_input.o
+  CC      slirp/ip_output.o
+  CC      slirp/dnssearch.o
+  CC      slirp/dhcpv6.o
+  CC      slirp/slirp.o
+  CC      slirp/mbuf.o
+  CC      slirp/misc.o
+  CC      slirp/sbuf.o
+  CC      slirp/socket.o
+  CC      slirp/tcp_input.o
+  CC      slirp/tcp_output.o
+  CC      slirp/tcp_subr.o
+  CC      slirp/tcp_timer.o
+  CC      slirp/udp.o
+  CC      slirp/udp6.o
+  CC      slirp/bootp.o
+  CC      slirp/tftp.o
+  CC      slirp/arp_table.o
+  CC      slirp/ndp_table.o
+  CC      slirp/ncsi.o
+  CC      ui/keymaps.o
+  CC      ui/console.o
+  CC      ui/cursor.o
+  CC      ui/qemu-pixman.o
+  CC      ui/input.o
+  CC      ui/input-keymap.o
+  CC      ui/input-legacy.o
+  CC      ui/input-linux.o
+  CC      ui/vnc.o
+  CC      ui/vnc-enc-zlib.o
+  CC      ui/vnc-enc-hextile.o
+  CC      ui/vnc-enc-tight.o
+  CC      ui/vnc-palette.o
+  CC      ui/vnc-enc-zrle.o
+  CC      ui/vnc-auth-vencrypt.o
+  CC      ui/vnc-ws.o
+  CC      ui/vnc-jobs.o
+  CC      chardev/char.o
+  CC      chardev/char-fd.o
+  CC      chardev/char-fe.o
+  CC      chardev/char-file.o
+  CC      chardev/char-io.o
+  CC      chardev/char-mux.o
+  CC      chardev/char-null.o
+  CC      chardev/char-parallel.o
+  CC      chardev/char-pipe.o
+  CC      chardev/char-pty.o
+  CC      chardev/char-ringbuf.o
+  CC      chardev/char-serial.o
+  CC      chardev/char-socket.o
+  CC      chardev/char-stdio.o
+  CC      chardev/char-udp.o
+  LINK    tests/qemu-iotests/socket_scm_helper
+  AS      optionrom/multiboot.o
+  CC      qga/commands.o
+  AS      optionrom/linuxboot.o
+  CC      optionrom/linuxboot_dma.o
+  CC      qga/guest-agent-command-state.o
+  AS      optionrom/kvmvapic.o
+  BUILD   optionrom/multiboot.img
+  BUILD   optionrom/linuxboot.img
+  BUILD   optionrom/linuxboot_dma.img
+  BUILD   optionrom/kvmvapic.img
+  BUILD   optionrom/multiboot.raw
+  BUILD   optionrom/linuxboot.raw
+  CC      qga/main.o
+  BUILD   optionrom/linuxboot_dma.raw
+  BUILD   optionrom/kvmvapic.raw
+  SIGN    optionrom/multiboot.bin
+  SIGN    optionrom/linuxboot.bin
+  SIGN    optionrom/linuxboot_dma.bin
+  SIGN    optionrom/kvmvapic.bin
+  CC      qga/commands-posix.o
+  CC      qga/channel-posix.o
+  CC      qga/qapi-generated/qga-qapi-types.o
+  CC      qga/qapi-generated/qga-qapi-visit.o
+  CC      qga/qapi-generated/qga-qmp-marshal.o
+  AR      libqemuutil.a
+  CC      qemu-img.o
+  LINK    qemu-io
+  LINK    scsi/qemu-pr-helper
+  LINK    qemu-bridge-helper
+  LINK    ivshmem-client
+  LINK    ivshmem-server
+  LINK    qemu-nbd
+  LINK    qemu-ga
+  GEN     x86_64-softmmu/hmp-commands.h
+  GEN     x86_64-softmmu/hmp-commands-info.h
+  GEN     x86_64-softmmu/config-target.h
+  CC      x86_64-softmmu/exec.o
+  CC      x86_64-softmmu/tcg/tcg.o
+  CC      x86_64-softmmu/tcg/tcg-op.o
+  CC      x86_64-softmmu/tcg/optimize.o
+  CC      x86_64-softmmu/tcg/tcg-common.o
+  CC      x86_64-softmmu/fpu/softfloat.o
+  CC      x86_64-softmmu/disas.o
+  GEN     x86_64-softmmu/gdbstub-xml.c
+  CC      x86_64-softmmu/arch_init.o
+  LINK    qemu-img
+  CC      x86_64-softmmu/cpus.o
+  CC      x86_64-softmmu/monitor.o
+  CC      x86_64-softmmu/gdbstub.o
+  CC      x86_64-softmmu/balloon.o
+  CC      x86_64-softmmu/ioport.o
+  CC      x86_64-softmmu/numa.o
+  CC      x86_64-softmmu/qtest.o
+  CC      x86_64-softmmu/memory.o
+  CC      x86_64-softmmu/memory_mapping.o
+  CC      x86_64-softmmu/dump.o
+  CC      x86_64-softmmu/migration/ram.o
+  CC      x86_64-softmmu/accel/accel.o
+  CC      x86_64-softmmu/accel/kvm/kvm-all.o
+  CC      x86_64-softmmu/accel/stubs/hax-stub.o
+  CC      x86_64-softmmu/accel/tcg/tcg-all.o
+  CC      x86_64-softmmu/accel/tcg/cputlb.o
+  CC      x86_64-softmmu/accel/tcg/tcg-runtime.o
+  CC      x86_64-softmmu/accel/tcg/cpu-exec.o
+  CC      x86_64-softmmu/accel/tcg/cpu-exec-common.o
+  CC      x86_64-softmmu/accel/tcg/translate-all.o
+  CC      x86_64-softmmu/accel/tcg/translator.o
+  CC      x86_64-softmmu/hw/block/virtio-blk.o
+  CC      x86_64-softmmu/hw/block/dataplane/virtio-blk.o
+  CC      x86_64-softmmu/hw/char/virtio-serial-bus.o
+  CC      x86_64-softmmu/hw/core/generic-loader.o
+  CC      x86_64-softmmu/hw/core/null-machine.o
+  CC      x86_64-softmmu/hw/display/vga.o
+  CC      x86_64-softmmu/hw/display/virtio-gpu.o
+  CC      x86_64-softmmu/hw/display/virtio-gpu-3d.o
+  CC      x86_64-softmmu/hw/display/virtio-gpu-pci.o
+  CC      x86_64-softmmu/hw/display/virtio-vga.o
+  CC      x86_64-softmmu/hw/intc/apic.o
+  CC      x86_64-softmmu/hw/intc/apic_common.o
+  CC      x86_64-softmmu/hw/intc/ioapic.o
+  CC      x86_64-softmmu/hw/isa/lpc_ich9.o
+  CC      x86_64-softmmu/hw/misc/vmport.o
+  CC      x86_64-softmmu/hw/misc/ivshmem.o
+  CC      x86_64-softmmu/hw/misc/pvpanic.o
+  CC      x86_64-softmmu/hw/misc/hyperv_testdev.o
+  CC      x86_64-softmmu/hw/misc/mmio_interface.o
+  CC      x86_64-softmmu/hw/net/virtio-net.o
+  CC      x86_64-softmmu/hw/net/vhost_net.o
+  CC      x86_64-softmmu/hw/scsi/virtio-scsi.o
+  CC      x86_64-softmmu/hw/scsi/virtio-scsi-dataplane.o
+  CC      x86_64-softmmu/hw/scsi/vhost-scsi-common.o
+  CC      x86_64-softmmu/hw/scsi/vhost-scsi.o
+  CC      x86_64-softmmu/hw/scsi/vhost-user-scsi.o
+  CC      x86_64-softmmu/hw/timer/mc146818rtc.o
+  CC      x86_64-softmmu/hw/vfio/common.o
+  CC      x86_64-softmmu/hw/vfio/pci.o
+  CC      x86_64-softmmu/hw/vfio/pci-quirks.o
+  CC      x86_64-softmmu/hw/vfio/platform.o
+  CC      x86_64-softmmu/hw/vfio/spapr.o
+  CC      x86_64-softmmu/hw/virtio/virtio.o
+  CC      x86_64-softmmu/hw/virtio/virtio-balloon.o
+  CC      x86_64-softmmu/hw/virtio/vhost.o
+  CC      x86_64-softmmu/hw/virtio/vhost-backend.o
+  CC      x86_64-softmmu/hw/virtio/vhost-user.o
+  CC      x86_64-softmmu/hw/virtio/vhost-vsock.o
+  CC      x86_64-softmmu/hw/virtio/virtio-crypto.o
+  CC      x86_64-softmmu/hw/virtio/virtio-crypto-pci.o
+  CC      x86_64-softmmu/hw/xen/xen-host-pci-device.o
+  CC      x86_64-softmmu/hw/xen/xen_pt.o
+  CC      x86_64-softmmu/hw/xen/xen_pt_config_init.o
+  CC      x86_64-softmmu/hw/xen/xen_pt_graphics.o
+  CC      x86_64-softmmu/hw/xen/xen_pt_msi.o
+  CC      x86_64-softmmu/hw/xen/xen_pt_load_rom.o
+  CC      x86_64-softmmu/hw/i386/multiboot.o
+  CC      x86_64-softmmu/hw/i386/pc.o
+  CC      x86_64-softmmu/hw/i386/pc_piix.o
+  CC      x86_64-softmmu/hw/i386/pc_q35.o
+  CC      x86_64-softmmu/hw/i386/pc_sysfw.o
+  CC      x86_64-softmmu/hw/i386/x86-iommu.o
+  CC      x86_64-softmmu/hw/i386/intel_iommu.o
+  CC      x86_64-softmmu/hw/i386/amd_iommu.o
+  CC      x86_64-softmmu/hw/i386/kvmvapic.o
+  CC      x86_64-softmmu/hw/i386/acpi-build.o
+  CC      x86_64-softmmu/hw/i386/../xenpv/xen_machine_pv.o
+  CC      x86_64-softmmu/hw/i386/kvm/clock.o
+  CC      x86_64-softmmu/hw/i386/kvm/apic.o
+  CC      x86_64-softmmu/hw/i386/kvm/i8259.o
+  CC      x86_64-softmmu/hw/i386/kvm/ioapic.o
+  CC      x86_64-softmmu/hw/i386/kvm/i8254.o
+  CC      x86_64-softmmu/hw/i386/xen/xen_platform.o
+  CC      x86_64-softmmu/hw/i386/xen/xen_apic.o
+  CC      x86_64-softmmu/hw/i386/xen/xen_pvdevice.o
+  CC      x86_64-softmmu/hw/i386/xen/xen-hvm.o
+  CC      x86_64-softmmu/hw/i386/xen/xen-mapcache.o
+  CC      x86_64-softmmu/target/i386/helper.o
+  CC      x86_64-softmmu/target/i386/cpu.o
+  CC      x86_64-softmmu/target/i386/gdbstub.o
+  CC      x86_64-softmmu/target/i386/xsave_helper.o
+  CC      x86_64-softmmu/target/i386/translate.o
+  CC      x86_64-softmmu/target/i386/bpt_helper.o
+  CC      x86_64-softmmu/target/i386/cc_helper.o
+  CC      x86_64-softmmu/target/i386/excp_helper.o
+  CC      x86_64-softmmu/target/i386/fpu_helper.o
+  CC      x86_64-softmmu/target/i386/int_helper.o
+  CC      x86_64-softmmu/target/i386/mem_helper.o
+  CC      x86_64-softmmu/target/i386/misc_helper.o
+  CC      x86_64-softmmu/target/i386/mpx_helper.o
+  CC      x86_64-softmmu/target/i386/seg_helper.o
+  CC      x86_64-softmmu/target/i386/smm_helper.o
+  CC      x86_64-softmmu/target/i386/svm_helper.o
+  CC      x86_64-softmmu/target/i386/machine.o
+  CC      x86_64-softmmu/target/i386/arch_memory_mapping.o
+  CC      x86_64-softmmu/target/i386/arch_dump.o
+  CC      x86_64-softmmu/target/i386/monitor.o
+  CC      x86_64-softmmu/target/i386/kvm.o
+  CC      x86_64-softmmu/target/i386/hyperv.o
+  GEN     trace/generated-helpers.c
+  CC      x86_64-softmmu/trace/control-target.o
+  CC      x86_64-softmmu/gdbstub-xml.o
+  CC      x86_64-softmmu/trace/generated-helpers.o
+  LINK    x86_64-softmmu/qemu-system-x86_64
+++ getconf _NPROCESSORS_ONLN
++ sudo make -j6 install
+make[1]: '/home/jenkins/qemu/capstone/libcapstone.a' is up to date.
+	CHK version_gen.h
+install -d -m 0755 "/usr/share/qemu"
+install -d -m 0755 "/usr/var"/run
+install -d -m 0755 "/usr/bin"
+install -c -m 0755 qemu-ga ivshmem-client ivshmem-server qemu-nbd qemu-img qemu-io  scsi/qemu-pr-helper "/usr/bin"
+strip "/usr/bin/qemu-ga" "/usr/bin/ivshmem-client" "/usr/bin/ivshmem-server" "/usr/bin/qemu-nbd" "/usr/bin/qemu-img" "/usr/bin/qemu-io" "/usr/bin/qemu-pr-helper"
+install -d -m 0755 "/usr/libexec"
+install -c -m 0755 qemu-bridge-helper "/usr/libexec"
+strip "/usr/libexec/qemu-bridge-helper"
+set -e; for x in bios.bin bios-256k.bin sgabios.bin vgabios.bin vgabios-cirrus.bin vgabios-stdvga.bin vgabios-vmware.bin vgabios-qxl.bin vgabios-virtio.bin acpi-dsdt.aml ppc_rom.bin openbios-sparc32 openbios-sparc64 openbios-ppc QEMU,tcx.bin QEMU,cgthree.bin pxe-e1000.rom pxe-eepro100.rom pxe-ne2k_pci.rom pxe-pcnet.rom pxe-rtl8139.rom pxe-virtio.rom efi-e1000.rom efi-eepro100.rom efi-ne2k_pci.rom efi-pcnet.rom efi-rtl8139.rom efi-virtio.rom efi-e1000e.rom efi-vmxnet3.rom qemu-icon.bmp qemu_logo_no_text.svg bamboo.dtb petalogix-s3adsp1800.dtb petalogix-ml605.dtb multiboot.bin linuxboot.bin linuxboot_dma.bin kvmvapic.bin s390-ccw.img s390-netboot.img spapr-rtas.bin slof.bin skiboot.lid palcode-clipper u-boot.e500 qemu_vga.ndrv; do \
+	install -c -m 0644 /home/jenkins/qemu/pc-bios/$x "/usr/share/qemu"; \
+done
+install -d -m 0755 "/usr/share/qemu/keymaps"
+set -e; for x in da     en-gb  et  fr     fr-ch  is  lt  modifiers  no  pt-br  sv ar      de     en-us  fi  fr-be  hr     it  lv  nl         pl  ru     th common  de-ch  es     fo  fr-ca  hu     ja  mk  nl-be      pt  sl     tr bepo    cz; do \
+	install -c -m 0644 /home/jenkins/qemu/pc-bios/keymaps/$x "/usr/share/qemu/keymaps"; \
+done
+install -c -m 0644 /home/jenkins/qemu/trace-events-all "/usr/share/qemu/trace-events-all"
+for d in x86_64-softmmu; do \
+make --no-print-directory BUILD_DIR=/home/jenkins/qemu TARGET_DIR=$d/ -C $d install || exit 1 ; \
+        done
+install -d -m 0755 "/usr/bin"
+install -c -m 0755 qemu-system-x86_64  "/usr/bin"
+strip "/usr/bin/qemu-system-x86_64"
++ echo v2.11.1
++ exit 0

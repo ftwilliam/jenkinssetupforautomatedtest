@@ -1,0 +1,60 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<build>
+  <actions>
+    <hudson.model.ParametersAction>
+      <safeParameters class="sorted-set"/>
+      <parameters>
+        <hudson.model.StringParameterValue>
+          <name>KERNELREPO</name>
+          <description>Git repository to use when cloning the kernel.  CURRENT -&gt; the current kernel, DISTRO -&gt; latest kernel distro</description>
+          <value>CURRENT</value>
+        </hudson.model.StringParameterValue>
+        <hudson.model.StringParameterValue>
+          <name>KERNELTAG</name>
+          <description>Kernel tag to use; it can also be a commit id.</description>
+          <value>v4.16-rc2</value>
+        </hudson.model.StringParameterValue>
+        <hudson.model.StringParameterValue>
+          <name>IMAGE</name>
+          <description>Image to be tested.  Can be a URL to sos-repos. 
+Ex: http://sos-repos.amd.com/updated_disk_images/build4/rhel-7.5_build4.img.bz2</description>
+          <value>http://sos-repos.amd.com/updated_disk_images/build4/ubuntu-18.04_build4.img.bz2</value>
+        </hudson.model.StringParameterValue>
+        <hudson.model.StringParameterValue>
+          <name>RESOURCES</name>
+          <description>Space separated list of hostnames onto which to run the test</description>
+          <value>10.236.10.208</value>
+        </hudson.model.StringParameterValue>
+      </parameters>
+      <parameterDefinitionNames>
+        <string>KERNELREPO</string>
+        <string>KERNELTAG</string>
+        <string>IMAGE</string>
+        <string>RESOURCES</string>
+      </parameterDefinitionNames>
+    </hudson.model.ParametersAction>
+    <hudson.model.CauseAction>
+      <causeBag class="linked-hash-map">
+        <entry>
+          <hudson.model.Cause_-UserIdCause>
+            <userId>brwoods</userId>
+          </hudson.model.Cause_-UserIdCause>
+          <int>1</int>
+        </entry>
+      </causeBag>
+    </hudson.model.CauseAction>
+    <org.jvnet.hudson.plugins.DownstreamBuildViewAction plugin="downstream-buildview@1.9"/>
+  </actions>
+  <queueId>850</queueId>
+  <timestamp>1528929405142</timestamp>
+  <startTime>1528929405161</startTime>
+  <result>SUCCESS</result>
+  <duration>661557</duration>
+  <charset>UTF-8</charset>
+  <keepLog>false</keepLog>
+  <builtOn></builtOn>
+  <workspace>/var/lib/jenkins/workspace/avocadoltp.ondemand2</workspace>
+  <hudsonVersion>2.127</hudsonVersion>
+  <scm class="hudson.scm.NullChangeLogParser"/>
+  <culprits class="com.google.common.collect.EmptyImmutableSortedSet"/>
+</build>

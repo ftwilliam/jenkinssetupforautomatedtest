@@ -1,0 +1,115 @@
+Started by upstream project "[8mha:////4KLEW2l8TRLc9D+sUGMqO8H5b5aXKzLSzjMsy/Q0tlymAAAAox+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyREgYp/az8JP2S1OKSYr3iksSi4ozMAjCjRB8APZdZ9M8AAAA=[0mtests.starship.start" build number [8mha:////4BoyfZ7+IxHkrsQRU/DuQl+/mnJUUszVnJ95Dyx41w5QAAAApR+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAymEgYZ/az8JP2S1OKSYr3iksSi4ozMAjCjRN/QAgCcvnJu0QAAAA==[0m18
+originally caused by:
+ Started by timer
+[lockable-resources] acquired lock on [diesel8a87host, sos-dsldbg-00]
+Building in workspace /var/lib/jenkins/workspace/avocadodbench.starship
+[WS-CLEANUP] Deleting project workspace...
+[WS-CLEANUP] Done
+[avocadodbench.starship] $ /bin/sh -xe /tmp/jenkins417329365614453920.sh
+++ cd /var/lib/jenkins
+++ ./resourceslockedby.py avocadodbench.starship#25
++ RESOURCES='diesel8a87host
+sos-dsldbg-00'
++ :
++ for R in ${RESOURCES}
++ echo -n '"diesel8a87host",'
++ for R in ${RESOURCES}
++ echo -n '"sos-dsldbg-00",'
++ truncate --size=-1 plot.csv
++ echo
+++ echo avocadodbench.starship
+++ grep -oP '(?<=\.)v.+\..+(?=\.)'
+++ :
++ KERNVER=
++ TIMEOUT=1800
++ ITERATIONS=1
++ for R in ${RESOURCES}
++ for R in ${RESOURCES}
++ wait
++ ssh -q jenkins@diesel8a87host ./checkfornewkerneltag.sh
++ ssh -q jenkins@sos-dsldbg-00 ./checkfornewkerneltag.sh
++ '[' -n '' ']'
++ cd /var/lib/jenkins
++ ./rebootresource.sh jenkins@sos-dsldbg-00
+++ ssh -q jenkins@sos-dsldbg-00 'uname -r'
++ echo 'sos-dsldbg-00: 4.16.0-amdsos-build4+'
++ timeout -sKILL 1800 ssh -q jenkins@sos-dsldbg-00
++ '[' -n '' ']'
++ cd /var/lib/jenkins
++ ./rebootresource.sh jenkins@diesel8a87host
+++ ssh -q jenkins@diesel8a87host 'uname -r'
++ echo 'diesel8a87host: 4.16.0-amdsos-build4+'
++ timeout -sKILL 1800 ssh -q jenkins@diesel8a87host
++ '[' 0 -eq 0 ']'
+++ cat sos-dsldbg-00.ssh.log
+++ fgrep 'JOB LOG'
+++ grep -oP '(?<=: ).+$'
++ AVOCADO_LOG_PATH=/home/jenkins/avocado/job-results/job-2018-06-27T10.17-0b6072c/job.log
++ scp jenkins@sos-dsldbg-00:/home/jenkins/avocado/job-results/job-2018-06-27T10.17-0b6072c/job.log sos-dsldbg-00.avocado.log
++ bc -l
+++ cat sos-dsldbg-00.avocado.log
+++ fgrep -m1 'Throughput '
+++ grep -oP '(?<=Throughput )[0-9.]+'
++ echo 9612.73 /1
+9612.73000000000000000000
+++ bc -l
++++ cat sos-dsldbg-00.avocado.log
++++ fgrep -m1 'Throughput '
++++ grep -oP '(?<=Throughput )[0-9.]+'
+++ echo 9612.73 /1
++ plotval=9612.73000000000000000000
++ '[' -f sos-dsldbg-00.prevplotval ']'
+++ bc -l
++++ cat sos-dsldbg-00.prevplotval
+++ echo '(8684.54545607566833496093+9612.73000000000000000000)/2'
++ plotval=9148.63772803783416748046
++ echo -n 9148.63772803783416748046
++ echo -n 9148.63772803783416748046
++ '[' 0 -eq 0 ']'
+++ cat diesel8a87host.ssh.log
+++ fgrep 'JOB LOG'
+++ grep -oP '(?<=: ).+$'
++ AVOCADO_LOG_PATH=/home/jenkins/avocado/job-results/job-2018-06-27T10.20-c033989/job.log
++ scp jenkins@diesel8a87host:/home/jenkins/avocado/job-results/job-2018-06-27T10.20-c033989/job.log diesel8a87host.avocado.log
++ bc -l
+++ cat diesel8a87host.avocado.log
+++ fgrep -m1 'Throughput '
+++ grep -oP '(?<=Throughput )[0-9.]+'
++ echo 9418.18 /1
+9418.18000000000000000000
+++ bc -l
++++ cat diesel8a87host.avocado.log
++++ fgrep -m1 'Throughput '
++++ grep -oP '(?<=Throughput )[0-9.]+'
+++ echo 9418.18 /1
++ plotval=9418.18000000000000000000
++ '[' -f diesel8a87host.prevplotval ']'
++ echo -n 9418.18000000000000000000
++ echo -n 9418.18000000000000000000
++ echo -n 'Kernel Release: '
++ for R in ${RESOURCES}
++ '[' -f diesel8a87host.kernelrelease ']'
+++ cat diesel8a87host.kernelrelease
++ echo -n 'diesel8a87host: 4.16.0-amdsos-build4+, '
++ for R in ${RESOURCES}
++ '[' -f sos-dsldbg-00.kernelrelease ']'
+++ cat sos-dsldbg-00.kernelrelease
++ echo -n 'sos-dsldbg-00: 4.16.0-amdsos-build4+, '
++ truncate --size=-2 kernelreleases
+++ cat kernelreleases
++ echo '[Kernel' Release: diesel8a87host: 4.16.0-amdsos-build4+, sos-dsldbg-00: '4.16.0-amdsos-build4+]'
+[Kernel Release: diesel8a87host: 4.16.0-amdsos-build4+, sos-dsldbg-00: 4.16.0-amdsos-build4+]
++ for R in ${RESOURCES}
+++ cat diesel8a87host.plotval
++ echo -n 9418.18000000000000000000,
++ for R in ${RESOURCES}
+++ cat sos-dsldbg-00.plotval
++ echo -n 9148.63772803783416748046,
++ truncate --size=-1 plot.csv
++ echo
+Archiving artifacts
+Recording plot data
+[description-setter] Description set: diesel8a87host: 4.16.0-amdsos-build4+, sos-dsldbg-00: 4.16.0-amdsos-build4+
+[lockable-resources] released lock on [diesel8a87host, sos-dsldbg-00]
+Triggering a new build of [8mha:////4EoQXCCvCL1ZAUvbxERBMTGFvdw8yZlTD18gs9e3mwThAAAAqB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzxEgZZ/az8JP3EsvzkxJT8tEygouISveKSxKLijMwCfQAg0vi80gAAAA==[0mavocadofiotest.starship
+Finished: SUCCESS

@@ -1,0 +1,290 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<hudson>
+  <disabledAdministrativeMonitors>
+    <string>jenkins.CLI</string>
+    <string>jenkins.diagnostics.SecurityIsOffMonitor</string>
+    <string>jenkins.security.s2m.MasterKillSwitchWarning</string>
+  </disabledAdministrativeMonitors>
+  <version>2.134</version>
+  <installStateName>RESTART</installStateName>
+  <numExecutors>4</numExecutors>
+  <mode>NORMAL</mode>
+  <useSecurity>true</useSecurity>
+  <authorizationStrategy class="hudson.security.GlobalMatrixAuthorizationStrategy">
+    <permission>com.cloudbees.plugins.credentials.CredentialsProvider.Create:authenticated</permission>
+    <permission>com.cloudbees.plugins.credentials.CredentialsProvider.Delete:authenticated</permission>
+    <permission>com.cloudbees.plugins.credentials.CredentialsProvider.ManageDomains:authenticated</permission>
+    <permission>com.cloudbees.plugins.credentials.CredentialsProvider.Update:authenticated</permission>
+    <permission>com.cloudbees.plugins.credentials.CredentialsProvider.View:authenticated</permission>
+    <permission>hudson.model.Computer.Build:authenticated</permission>
+    <permission>hudson.model.Computer.Configure:authenticated</permission>
+    <permission>hudson.model.Computer.Connect:authenticated</permission>
+    <permission>hudson.model.Computer.Create:authenticated</permission>
+    <permission>hudson.model.Computer.Delete:authenticated</permission>
+    <permission>hudson.model.Computer.Disconnect:authenticated</permission>
+    <permission>hudson.model.Hudson.Administer:authenticated</permission>
+    <permission>hudson.model.Hudson.Read:anonymous</permission>
+    <permission>hudson.model.Hudson.Read:authenticated</permission>
+    <permission>hudson.model.Item.Build:anonymous</permission>
+    <permission>hudson.model.Item.Build:authenticated</permission>
+    <permission>hudson.model.Item.Cancel:authenticated</permission>
+    <permission>hudson.model.Item.Configure:authenticated</permission>
+    <permission>hudson.model.Item.Create:authenticated</permission>
+    <permission>hudson.model.Item.Delete:authenticated</permission>
+    <permission>hudson.model.Item.Discover:authenticated</permission>
+    <permission>hudson.model.Item.Move:authenticated</permission>
+    <permission>hudson.model.Item.Read:anonymous</permission>
+    <permission>hudson.model.Item.Read:authenticated</permission>
+    <permission>hudson.model.Item.ViewStatus:anonymous</permission>
+    <permission>hudson.model.Item.ViewStatus:authenticated</permission>
+    <permission>hudson.model.Item.Workspace:authenticated</permission>
+    <permission>hudson.model.Run.Delete:authenticated</permission>
+    <permission>hudson.model.Run.Update:authenticated</permission>
+    <permission>hudson.model.View.Configure:authenticated</permission>
+    <permission>hudson.model.View.Create:authenticated</permission>
+    <permission>hudson.model.View.Delete:authenticated</permission>
+    <permission>hudson.model.View.Read:anonymous</permission>
+    <permission>hudson.model.View.Read:authenticated</permission>
+    <permission>hudson.scm.SCM.Tag:authenticated</permission>
+    <permission>org.jenkins.plugins.lockableresources.LockableResourcesManager.Reserve:authenticated</permission>
+    <permission>org.jenkins.plugins.lockableresources.LockableResourcesManager.Unlock:authenticated</permission>
+  </authorizationStrategy>
+  <securityRealm class="hudson.security.LDAPSecurityRealm" plugin="ldap@1.20">
+    <disableMailAddressResolver>false</disableMailAddressResolver>
+    <configurations>
+      <jenkins.security.plugins.ldap.LDAPConfiguration>
+        <server>AUSLDAP.amd.com</server>
+        <rootDN>OU=Austin,DC=amd,DC=com</rootDN>
+        <inhibitInferRootDN>false</inhibitInferRootDN>
+        <userSearchBase></userSearchBase>
+        <userSearch>(|(mail={0})(sAMAccountName={0}))</userSearch>
+        <groupMembershipStrategy class="jenkins.security.plugins.ldap.FromGroupSearchLDAPGroupMembershipStrategy">
+          <filter></filter>
+        </groupMembershipStrategy>
+        <managerDN>sos_test@amd.com</managerDN>
+        <managerPasswordSecret>{AQAAABAAAAAQh7mm1BGyH8Q4UAPLxkJqwpub2a8+lmeV2G83AKPaLpg=}</managerPasswordSecret>
+        <displayNameAttributeName>displayname</displayNameAttributeName>
+        <mailAddressAttributeName></mailAddressAttributeName>
+        <ignoreIfUnavailable>false</ignoreIfUnavailable>
+        <extraEnvVars class="linked-hash-map">
+          <entry>
+            <string></string>
+            <string></string>
+          </entry>
+        </extraEnvVars>
+      </jenkins.security.plugins.ldap.LDAPConfiguration>
+    </configurations>
+    <userIdStrategy class="jenkins.model.IdStrategy$CaseInsensitive"/>
+    <groupIdStrategy class="jenkins.model.IdStrategy$CaseInsensitive"/>
+    <disableRolePrefixing>false</disableRolePrefixing>
+  </securityRealm>
+  <disableRememberMe>false</disableRememberMe>
+  <projectNamingStrategy class="jenkins.model.ProjectNamingStrategy$DefaultProjectNamingStrategy"/>
+  <workspaceDir>${JENKINS_HOME}/workspace/${ITEM_FULLNAME}</workspaceDir>
+  <buildsDir>${ITEM_ROOTDIR}/builds</buildsDir>
+  <systemMessage>&lt;h2 align=&quot;center&quot;&gt;&lt;a href= &quot;http://confluence.amd.com/pages/viewpage.action?pageId=62945651&quot; target=&quot;_blank&quot; style=&quot;text-decoration: none&quot;&gt;Info on preparing a new system for use with the test-infrastructure&lt;/a&gt;&lt;/h2&gt;</systemMessage>
+  <markupFormatter class="hudson.markup.RawHtmlMarkupFormatter" plugin="antisamy-markup-formatter@1.5">
+    <disableSyntaxHighlighting>false</disableSyntaxHighlighting>
+  </markupFormatter>
+  <jdks/>
+  <viewsTabBar class="hudson.views.DefaultViewsTabBar"/>
+  <myViewsTabBar class="hudson.views.DefaultMyViewsTabBar"/>
+  <clouds/>
+  <quietPeriod>30</quietPeriod>
+  <scmCheckoutRetryCount>0</scmCheckoutRetryCount>
+  <views>
+    <hudson.model.AllView>
+      <owner class="hudson" reference="../../.."/>
+      <name>all</name>
+      <filterExecutors>false</filterExecutors>
+      <filterQueue>false</filterQueue>
+      <properties class="hudson.model.View$PropertyList"/>
+    </hudson.model.AllView>
+    <listView>
+      <owner class="hudson" reference="../../.."/>
+      <name>Tests</name>
+      <description>&lt;img src=&quot;http://avocado-server:8080/job/avocadodbench.upstream.recurrent/plot/getPlot?index=0&amp;width=750&amp;height=450&quot;/&gt;&#xd;
+&lt;img src=&quot;http://avocado-server:8080/job/avocadokernbench.upstream.recurrent/plot/getPlot?index=0&amp;width=750&amp;height=450&quot;/&gt;&#xd;
+&lt;img src=&quot;http://avocado-server:8080/job/avocadoperfbench.upstream.recurrent/plot/getPlot?index=0&amp;width=750&amp;height=450&quot;/&gt;&#xd;
+</description>
+      <filterExecutors>false</filterExecutors>
+      <filterQueue>false</filterQueue>
+      <properties class="hudson.model.View$PropertyList"/>
+      <jobNames>
+        <comparator class="hudson.util.CaseInsensitiveComparator"/>
+        <string>avocadodbench.ondemand</string>
+        <string>avocadodbench.upstream.recurrent</string>
+        <string>avocadofiotest.upstream.recurrent</string>
+        <string>avocadofsx.starship</string>
+        <string>avocadofsx.upstream.recurrent</string>
+        <string>avocadointerbench.ondemand</string>
+        <string>avocadointerbench.starship</string>
+        <string>avocadointerbench.upstream.recurrent</string>
+        <string>avocadokernbench.starship</string>
+        <string>avocadokernbench.upstream.recurrent</string>
+        <string>avocadokvmunittests.ondemand</string>
+        <string>avocadokvmunittests.v4.16-rc1.recurrent</string>
+        <string>avocadokvmunittests.v4.16-rc2.recurrent</string>
+        <string>avocadoltp.ondemand</string>
+        <string>avocadoltp.ondemand2</string>
+        <string>avocadoltp.starship</string>
+        <string>avocadoltp.upstream.recurrent</string>
+        <string>avocadoperfbench.ondemand</string>
+        <string>avocadoperfbench.starship</string>
+        <string>avocadoperfbench.upstream.recurrent</string>
+        <string>avocadormaptest.ondemand</string>
+        <string>avocadormaptest.starship</string>
+        <string>avocadormaptest.upstream.recurrent</string>
+        <string>avocadosleeptest.ondemand</string>
+        <string>avocadosleeptest.starship</string>
+        <string>avocadosleeptest.upstream.recurrent</string>
+        <string>avocadostress.ondemand</string>
+        <string>avocadostress.starship</string>
+        <string>avocadostress.upstream.recurrent</string>
+        <string>avocadosysbench.ondemand</string>
+        <string>avocadosysbench.starship</string>
+        <string>avocadosysbench.upstream.recurrent</string>
+        <string>avocadovtmigration.ondemand</string>
+        <string>perfbench.starship</string>
+        <string>perfbench.upstream.recurrent</string>
+        <string>perfbench.v4.13-rc7.recurrent</string>
+        <string>perfbench.v4.15-rc6.recurrent</string>
+      </jobNames>
+      <jobFilters/>
+      <columns>
+        <hudson.views.StatusColumn/>
+        <hudson.views.WeatherColumn/>
+        <hudson.views.JobColumn/>
+        <hudson.views.LastSuccessColumn/>
+        <hudson.views.LastFailureColumn/>
+        <hudson.views.LastDurationColumn/>
+        <hudson.plugins.UpDownStreamViewColumn plugin="upstream-downstream-view@1.006"/>
+        <hudson.views.BuildButtonColumn/>
+        <jenkins.plugins.extracolumns.DisableProjectColumn plugin="extra-columns@1.19">
+          <useIcon>true</useIcon>
+        </jenkins.plugins.extracolumns.DisableProjectColumn>
+      </columns>
+      <recurse>false</recurse>
+    </listView>
+    <listView>
+      <owner class="hudson" reference="../../.."/>
+      <name>tests.daily</name>
+      <description>&lt;img src=&quot;http://avocado-server:8080/job/avocadodbench.upstream.recurrent/plot/getPlot?index=0&amp;width=750&amp;height=450&quot;/&gt;&#xd;
+&lt;img src=&quot;http://avocado-server:8080/job/avocadokernbench.upstream.recurrent/plot/getPlot?index=0&amp;width=750&amp;height=450&quot;/&gt;&#xd;
+&lt;img src=&quot;http://avocado-server:8080/job/avocadoperfbench.upstream.recurrent/plot/getPlot?index=0&amp;width=750&amp;height=450&quot;/&gt;&#xd;
+</description>
+      <filterExecutors>false</filterExecutors>
+      <filterQueue>false</filterQueue>
+      <properties class="hudson.model.View$PropertyList"/>
+      <jobNames>
+        <comparator class="hudson.util.CaseInsensitiveComparator"/>
+      </jobNames>
+      <jobFilters/>
+      <columns>
+        <hudson.views.StatusColumn/>
+        <hudson.views.WeatherColumn/>
+        <hudson.views.JobColumn/>
+        <hudson.views.LastSuccessColumn/>
+        <hudson.views.LastFailureColumn/>
+        <hudson.views.LastDurationColumn/>
+        <hudson.views.BuildButtonColumn/>
+        <hudson.plugins.UpDownStreamViewColumn plugin="upstream-downstream-view@1.006"/>
+      </columns>
+      <includeRegex>.+\.recurrent.*</includeRegex>
+      <recurse>false</recurse>
+    </listView>
+    <listView>
+      <owner class="hudson" reference="../../.."/>
+      <name>tests.ondemand</name>
+      <filterExecutors>false</filterExecutors>
+      <filterQueue>false</filterQueue>
+      <properties class="hudson.model.View$PropertyList"/>
+      <jobNames>
+        <comparator class="hudson.util.CaseInsensitiveComparator" reference="../../../listView[2]/jobNames/comparator"/>
+      </jobNames>
+      <jobFilters/>
+      <columns>
+        <hudson.views.StatusColumn/>
+        <hudson.views.WeatherColumn/>
+        <hudson.views.JobColumn/>
+        <hudson.views.LastSuccessColumn/>
+        <hudson.views.LastFailureColumn/>
+        <hudson.views.LastDurationColumn/>
+        <hudson.views.BuildButtonColumn/>
+        <hudson.plugins.UpDownStreamViewColumn plugin="upstream-downstream-view@1.006"/>
+      </columns>
+      <includeRegex>.+\.ondemand.*</includeRegex>
+      <recurse>false</recurse>
+    </listView>
+    <listView>
+      <owner class="hudson" reference="../../.."/>
+      <name>tests.starship</name>
+      <description>&lt;img src=&quot;http://avocado-server:8080/job/avocadokernbench.starship/plot/getPlot?index=0&amp;width=750&amp;height=450&quot;/&gt;&#xd;
+&lt;img src=&quot;http://avocado-server:8080/job/avocadoperfbench.starship/plot/getPlot?index=0&amp;width=750&amp;height=450&quot;/&gt;&#xd;
+</description>
+      <filterExecutors>false</filterExecutors>
+      <filterQueue>false</filterQueue>
+      <properties class="hudson.model.View$PropertyList"/>
+      <jobNames>
+        <comparator class="hudson.util.CaseInsensitiveComparator"/>
+        <string>provisioning.starship</string>
+        <string>tests.starship.start</string>
+      </jobNames>
+      <jobFilters/>
+      <columns>
+        <hudson.views.StatusColumn/>
+        <hudson.views.WeatherColumn/>
+        <hudson.views.JobColumn/>
+        <hudson.views.LastSuccessColumn/>
+        <hudson.views.LastFailureColumn/>
+        <hudson.views.LastDurationColumn/>
+        <hudson.plugins.UpDownStreamViewColumn plugin="upstream-downstream-view@1.006"/>
+        <hudson.views.BuildButtonColumn/>
+      </columns>
+      <includeRegex>.+\.starship.*</includeRegex>
+      <recurse>false</recurse>
+    </listView>
+    <au.com.centrumsystems.hudson.plugin.buildpipeline.BuildPipelineView plugin="build-pipeline-plugin@1.5.8">
+      <owner class="hudson" reference="../../.."/>
+      <name>StarshipTestPipeline</name>
+      <description>&lt;img src=&quot;http://avocado-server:8080/job/avocadokernbench.starship/plot/getPlot?index=0&amp;width=750&amp;height=450&quot;/&gt;&#xd;
+&lt;img src=&quot;http://avocado-server:8080/job/avocadoperfbench.starship/plot/getPlot?index=0&amp;width=750&amp;height=450&quot;/&gt;&#xd;
+</description>
+      <filterExecutors>false</filterExecutors>
+      <filterQueue>false</filterQueue>
+      <properties class="hudson.model.View$PropertyList"/>
+      <gridBuilder class="au.com.centrumsystems.hudson.plugin.buildpipeline.DownstreamProjectGridBuilder">
+        <firstJob>avocadodbench.starship</firstJob>
+        <firstJobLink>job/avocadodbench.starship/</firstJobLink>
+      </gridBuilder>
+      <noOfDisplayedBuilds>10</noOfDisplayedBuilds>
+      <buildViewTitle></buildViewTitle>
+      <consoleOutputLinkStyle>Lightbox</consoleOutputLinkStyle>
+      <cssUrl></cssUrl>
+      <triggerOnlyLatestJob>false</triggerOnlyLatestJob>
+      <alwaysAllowManualTrigger>false</alwaysAllowManualTrigger>
+      <showPipelineParameters>false</showPipelineParameters>
+      <rowHeaders class="au.com.centrumsystems.hudson.plugin.buildpipeline.extension.BuildVariablesHeader"/>
+      <showPipelineParametersInHeaders>false</showPipelineParametersInHeaders>
+      <columnHeaders class="au.com.centrumsystems.hudson.plugin.buildpipeline.extension.NullColumnHeader"/>
+      <buildCard class="au.com.centrumsystems.hudson.plugin.buildpipeline.extension.StandardBuildCard"/>
+      <startsWithParameters>false</startsWithParameters>
+      <refreshFrequency>3</refreshFrequency>
+      <showPipelineDefinitionHeader>false</showPipelineDefinitionHeader>
+    </au.com.centrumsystems.hudson.plugin.buildpipeline.BuildPipelineView>
+  </views>
+  <primaryView>Tests</primaryView>
+  <slaveAgentPort>-1</slaveAgentPort>
+  <disabledAgentProtocols>
+    <string>JNLP-connect</string>
+    <string>JNLP2-connect</string>
+    <string>JNLP4-connect</string>
+  </disabledAgentProtocols>
+  <label></label>
+  <crumbIssuer class="hudson.security.csrf.DefaultCrumbIssuer">
+    <excludeClientIPFromCrumb>false</excludeClientIPFromCrumb>
+  </crumbIssuer>
+  <nodeProperties/>
+  <globalNodeProperties/>
+  <noUsageStatistics>true</noUsageStatistics>
+</hudson>

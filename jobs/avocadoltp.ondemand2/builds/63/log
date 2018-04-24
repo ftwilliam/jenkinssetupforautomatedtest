@@ -1,0 +1,124 @@
+Started by user [8mha:////4M5O53X5QONrb+aF7d3XuO6Y0FqwaEK30o3y1qqs3uiMAAAAmR+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyeEgZe/dLi1CL9pKLy/PyUYgAEKGTnwgAAAA==[0mWoods, Brian
+Building in workspace /var/lib/jenkins/workspace/avocadoltp.ondemand2
+[WS-CLEANUP] Deleting project workspace...
+[WS-CLEANUP] Done
+[avocadoltp.ondemand2] $ /bin/sh -xe /tmp/jenkins7581543827850367453.sh
++ RESOURCES=10.236.10.208
+++ echo avocadoltp.ondemand2
+++ grep -oP '(?<=\.)v.+\..+(?=\.)'
+++ :
++ KERNVER=
++ TIMEOUT=3600
++ AVO_RV=()
+++ cat /var/lib/jenkins/.ssh/id_rsa.pub
++ SSHKEY='ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDLouAeFsxExPwW0TBUwWU52qTIiDQHiAX4AXtBHWCDiDl4FBnlKLbPxXGnByoSXvMS/BIdxX9j4E+yXZTCf+EvgOUm2fAe7lIwGyhLhItdPPgQQJ++Dax5YYvM2h5YCEHmwDfD0hB1bofrvXi3/z83LvEbEj3+HWF2xPw0PmPsO815XlG7WvIwVBZ1DbQU9I+cBCvqZM7F+KbGSEG5NpRx1F2Tj2u3EzciC5DoEP62vAa8VjATTmC/Yo+pcxBhdfoqlrCZD008dT47FxMV38nFYtJw7o0M56TQpNOg6MhP9K72f7PDHDjIxoqv+we9mYCk1l4S3ATBm5MnSaiVsNfH jenkins@avocado-server'
++ (( I=0 ))
++ (( I<1 ))
++ (( I++ ))
++ (( I<1 ))
++ wait
++ R=10.236.10.208
++ AVO_RV[$I]=424242
++ [[ ! -z http://sos-repos.amd.com/updated_disk_images/build4/ubuntu-18.04_build4.img.bz2 ]]
++ ssh root@10.236.10.208 './image_to_scratchdisk.sh http://sos-repos.amd.com/updated_disk_images/build4/ubuntu-18.04_build4.img.bz2'
++ set -e
++ FILE=/etc/test_scratchdisk
++ BOOT_TOOL=./efiboot_multitool.pl
++ MNT_POINT=./mnt
++ ((  1 < 1  ))
++ IMAGE=http://sos-repos.amd.com/updated_disk_images/build4/ubuntu-18.04_build4.img.bz2
++ KEY=
++ ((  1 >= 2  ))
++ '[' -f /root/.ssh/id_rsa.pub ']'
++ KEY='#no key added'
++ '[' -f /etc/test_scratchdisk ']'
++ source /etc/test_scratchdisk
+++ SCRATCHDISK=/dev/disk/by-id/wwn-0x500a075102fbef3d
++ '[' -z /dev/disk/by-id/wwn-0x500a075102fbef3d ']'
++ DEV=/dev/disk/by-id/wwn-0x500a075102fbef3d
++ BZIP=
++ RV=0
++ which pbzip2
+/usr/bin/pbzip2
++ '[' 0 -eq 0 ']'
++ BZIP=pbzip2
++ [[ http://sos-repos.amd.com/updated_disk_images/build4/ubuntu-18.04_build4.img.bz2 = \h\t\t\p* ]]
++ curl -f -O -s -L http://sos-repos.amd.com/updated_disk_images/build4/ubuntu-18.04_build4.img.bz2
+++ ls -c ./ubuntu-18.04_build4.img.bz2
+++ head -n 1
++ IMAGE=./ubuntu-18.04_build4.img.bz2
++ pbzip2 -cd ./ubuntu-18.04_build4.img.bz2
++ dd oflag=sync bs=128k of=/dev/disk/by-id/wwn-0x500a075102fbef3d
+150260+25036 records in
+150260+25036 records out
+22538092544 bytes (23 GB, 21 GiB) copied, 643.693 s, 35.0 MB/s
++ rm -f ./ubuntu-18.04_build4.img.bz2
++ sync
++ partprobe
+Warning: Not all of the space available to /dev/sdb appears to be used, you can fix the GPT to use all of the space (an extra 456098480 blocks) or continue with the current setting? 
++ sleep 3
+++ tail -n1
+++ ls /dev/disk/by-id/wwn-0x500a075102fbef3d /dev/disk/by-id/wwn-0x500a075102fbef3d-part1 /dev/disk/by-id/wwn-0x500a075102fbef3d-part2 /dev/disk/by-id/wwn-0x500a075102fbef3d-part3
++ ROOTDEV=/dev/disk/by-id/wwn-0x500a075102fbef3d-part3
++ sgdisk -e /dev/disk/by-id/wwn-0x500a075102fbef3d
+The operation has completed successfully.
++ sgdisk -n 0:0:+40G -t 8300 -c 0:home /dev/disk/by-id/wwn-0x500a075102fbef3d
+Setting name!
+partNum is 3
+The operation has completed successfully.
++ sync
++ partprobe
++ sleep 3
+++ tail -n1
+++ ls /dev/disk/by-id/wwn-0x500a075102fbef3d /dev/disk/by-id/wwn-0x500a075102fbef3d-part1 /dev/disk/by-id/wwn-0x500a075102fbef3d-part2 /dev/disk/by-id/wwn-0x500a075102fbef3d-part3 /dev/disk/by-id/wwn-0x500a075102fbef3d-part4
++ HOMEDEV=/dev/disk/by-id/wwn-0x500a075102fbef3d-part4
+++ mkfs.ext4 -F /dev/disk/by-id/wwn-0x500a075102fbef3d-part4
+++ grep UUID
+++ awk -F ' ' '{print $3}'
+mke2fs 1.44.1 (24-Mar-2018)
++ UUID=efe5729b-8690-4bb9-aeb2-dd26e1eb3472
++ mkdir -p ./mnt
++ mount -t auto /dev/disk/by-id/wwn-0x500a075102fbef3d-part3 ./mnt
++ echo 'UUID=efe5729b-8690-4bb9-aeb2-dd26e1eb3472 /home ext4 defaults 0 2'
++ mv ./mnt/home ./mnt/home.old
++ mkdir ./mnt/home/
++ mount -t ext4 /dev/disk/by-id/wwn-0x500a075102fbef3d-part4 ./mnt/home
++ cp -a ./mnt/home.old/amd ./mnt/home
++ [[ ./ubuntu-18.04_build4.img.bz2 = *\u\b\u\n\t\u\-\1\8\.\0\4* ]]
++ '[' -f ./mnt/etc/cloud/cloud.cfg ']'
++ echo sos-avocado-os0
++ rm -f ./mnt/etc/ssh/ssh_host_ecdsa_key ./mnt/etc/ssh/ssh_host_ecdsa_key.pub ./mnt/etc/ssh/ssh_host_ed25519_key ./mnt/etc/ssh/ssh_host_ed25519_key.pub ./mnt/etc/ssh/ssh_host_rsa_key ./mnt/etc/ssh/ssh_host_rsa_key.pub
++ cp -a /etc/ssh/ssh_host_dsa_key /etc/ssh/ssh_host_dsa_key.pub /etc/ssh/ssh_host_ecdsa_key /etc/ssh/ssh_host_ecdsa_key.pub /etc/ssh/ssh_host_ed25519_key /etc/ssh/ssh_host_ed25519_key.pub /etc/ssh/ssh_host_key /etc/ssh/ssh_host_key.pub /etc/ssh/ssh_host_rsa_key /etc/ssh/ssh_host_rsa_key.pub ./mnt/etc/ssh/
++ echo root:amd123
++ chroot ./mnt /usr/sbin/chpasswd
++ echo amd:amd123
++ chroot ./mnt /usr/sbin/chpasswd
++ sed -i '/PermitRootLogin/c\PermitRootLogin Yes' ./mnt/etc/ssh/sshd_config
++ '[' '!' -f ./mnt/root/.ssh/authorized_keys ']'
++ mkdir -p ./mnt/root/.ssh/
++ chmod 700 ./mnt/root/.ssh/
++ touch ./mnt/root/.ssh/authorized_keys
++ chmod 600 ./mnt/root/.ssh/authorized_keys
++ echo -n '#no key added'
++ sync
++ umount ./mnt/home
++ umount ./mnt
+++ grep '\-testing'
+++ ./efiboot_multitool.pl list
+++ awk -F = '{print $2}'
++ for ENTRY in $($BOOT_TOOL list | grep '\-testing' | awk -F '=' '{print $2}')
++ ./efiboot_multitool.pl delete ubuntu-testing
++ EFINAME=
++ EFIDEV=/dev/disk/by-id/wwn-0x500a075102fbef3d-part3
++ EFIDEV=/dev/disk/by-id/wwn-0x500a075102fbef3d-part1
++ [[ ./ubuntu-18.04_build4.img.bz2 = *\u\b\u\n\t\u* ]]
++ EFINAME=ubuntu-testing
++ ./efiboot_multitool.pl add 'ubuntu-testing,/dev/disk/by-id/wwn-0x500a075102fbef3d-part1,\EFI\UBUNTU\SHIMX64.EFI'
++ ./efiboot_multitool.pl push ubuntu-testing
++ cd /var/lib/jenkins
++ ./rebootresource.sh root@10.236.10.208
+Build was aborted
+Aborted by [8mha:////4M5O53X5QONrb+aF7d3XuO6Y0FqwaEK30o3y1qqs3uiMAAAAmR+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyeEgZe/dLi1CL9pKLy/PyUYgAEKGTnwgAAAA==[0mWoods, Brian
+Archiving artifacts
+[description-setter] Description set: 
+Finished: ABORTED

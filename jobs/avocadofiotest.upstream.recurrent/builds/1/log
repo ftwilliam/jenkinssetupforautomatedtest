@@ -1,0 +1,46 @@
+Started by user [8mha:////4FqkCksSARbySc15RUTa15KLDuDohiBDNYbuyYSsWMPyAAAAlR+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzmEgZO/dLi1CL9xNwUAAxcekO+AAAA[0mamd
+[lockable-resources] acquired lock on [diesel84e2host, diesel7ac4host, diesel79d4host]
+Building in workspace /var/lib/jenkins/workspace/fiotest
+[fiotest] $ /bin/sh -xe /tmp/jenkins6251864063262700550.sh
+++ cd /var/lib/jenkins
+++ ./unlockedresources.py
++ RESOURCES='diesel84e2host
+diesel7ac4host
+diesel79d4host'
++ for R in ${RESOURCES}
++ ssh -q jenkins@diesel84e2host
++ tee fiotest.log
++ '[' 255 -eq 0 ']'
++ :
++ for R in ${RESOURCES}
++ ssh -q jenkins@diesel7ac4host
++ tee fiotest.log
++ '[' 255 -eq 0 ']'
++ :
++ for R in ${RESOURCES}
++ ssh -q jenkins@diesel79d4host
++ tee fiotest.log
+Welcome to Ubuntu 17.10 (GNU/Linux 4.15.0-rc3-sev x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+
+97 packages can be updated.
+49 updates are security updates.
+
+JOB ID     : fefcd6ae711cd8164271824763c0f343b916d737
+JOB LOG    : /var/lib/jenkins/avocado/job-results/job-2018-02-23T15.30-fefcd6a/job.log
+ (1/1) avocado-misc-tests/io/disk/fiotest.py:FioTest.test:  PASS (157.77 s)
+RESULTS    : PASS 1 | ERROR 0 | FAIL 0 | SKIP 0 | WARN 0 | INTERRUPT 0 | CANCEL 0
+JOB TIME   : 158.39 s
++ '[' 0 -eq 0 ']'
+++ cat fiotest.log
+++ srep 'JOB LOG'
+++ srep -a -p '#{: }*#{\n}'
++ AVOCADO_LOG_PATH=/var/lib/jenkins/avocado/job-results/job-2018-02-23T15.30-fefcd6a/job.log
++ scp jenkins@diesel79d4host:/var/lib/jenkins/avocado/job-results/job-2018-02-23T15.30-fefcd6a/job.log avocado.log
+Archiving artifacts
+[lockable-resources] released lock on [diesel84e2host, diesel7ac4host, diesel79d4host]
+Finished: SUCCESS

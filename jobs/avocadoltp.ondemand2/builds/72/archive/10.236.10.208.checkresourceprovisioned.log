@@ -1,0 +1,31 @@
++ cd /var/lib/jenkins
++ ./checkresourceprovisioned.new.sh 10.236.10.208
++ set -e
++ ping -c 1 10.236.10.208
++ RV=0
++ ssh -q -o PasswordAuthentication=no -o StrictHostKeyChecking=no jenkins@10.236.10.208 'test ! -f checkfornewkerneltag.sh'
++ RV=255
++ (( RV == 1 ))
++ ssh-keygen -R 10.236.10.208
++ ssh -q -o PasswordAuthentication=no -o StrictHostKeyChecking=no root@10.236.10.208 :
+++ ./what_distro_remote.sh root@10.236.10.208
++ distro=rhel-7.5
++ [[ rhel-7.5 = \u\b\u\n\t\u\-* ]]
++ [[ rhel-7.5 = \d\e\b\i\a\n\-* ]]
++ false
++ '[' rhel-7.5 = sles-12.3 ']'
++ '[' rhel-7.5 = rhel-7.5 ']'
++ ssh -q root@10.236.10.208
+--2018-06-15 11:08:54--  http://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+Resolving dl.fedoraproject.org (dl.fedoraproject.org)... 209.132.181.25, 209.132.181.23, 209.132.181.24
+Connecting to dl.fedoraproject.org (dl.fedoraproject.org)|209.132.181.25|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 15080 (15K) [application/x-rpm]
+Saving to: ‘epel-release-latest-7.noarch.rpm.1’
+
+     0K .......... ....                                       100%  286K=0.05s
+
+2018-06-15 11:08:55 (286 KB/s) - ‘epel-release-latest-7.noarch.rpm.1’ saved [15080/15080]
+
+Preparing...                          ########################################
+	package epel-release-7-11.noarch is already installed

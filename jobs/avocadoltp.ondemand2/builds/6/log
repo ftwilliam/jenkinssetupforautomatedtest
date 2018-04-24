@@ -1,0 +1,42 @@
+Started by user unknown or anonymous
+Building in workspace /var/lib/jenkins/workspace/avocadoltp.ondemand2
+[WS-CLEANUP] Deleting project workspace...
+[WS-CLEANUP] Done
+[avocadoltp.ondemand2] $ /bin/sh -xe /tmp/jenkins1324997872346299437.sh
++ RESOURCES=sosmachine1
+++ echo avocadoltp.ondemand2
+++ grep -oP '(?<=\.)v.+\..+(?=\.)'
+++ :
++ KERNVER=
++ TIMEOUT=3600
++ for R in ${RESOURCES}
++ wait
++ ssh -q jenkins@sosmachine1 './checkfornewkerneltag.sh https://github.com/torvalds/linux.git'
+++ ssh -q jenkins@sosmachine1 ls 'kernel/linux-image*'
+++ grep -oP '(?<=linux-image-).+(?=-jenkins_)'
++ kernbuilt=4.17.0-rc6
++ cd /var/lib/jenkins
++ ./rebootresource.sh jenkins@sosmachine1 4.17.0-rc6
+++ ssh -q jenkins@sosmachine1 'uname -r'
++ echo 'sosmachine1: 4.17.0-rc6-jenkins'
++ timeout -sKILL 3600 ssh -q jenkins@sosmachine1
++ :
++ '[' 0 -eq 0 ']'
+++ cat sosmachine1.ssh.log
+++ fgrep 'JOB LOG'
+++ grep -oP '(?<=: ).+$'
++ AVOCADO_LOG_PATH=/home/jenkins/avocado/job-results/job-2018-05-21T17.19-6e5d38e/job.log
++ scp jenkins@sosmachine1:/home/jenkins/avocado/job-results/job-2018-05-21T17.19-6e5d38e/job.log sosmachine1.avocado.log
++ echo -n 'Kernel Release: '
++ for R in ${RESOURCES}
++ '[' -f sosmachine1.kernelrelease ']'
+++ cat sosmachine1.kernelrelease
+++ grep -oP '.+(?=-jenkins)'
++ echo -n 'sosmachine1: 4.17.0-rc6, '
++ truncate --size=-2 kernelreleases
+++ cat kernelreleases
++ echo '[Kernel' Release: sosmachine1: '4.17.0-rc6]'
+[Kernel Release: sosmachine1: 4.17.0-rc6]
+Archiving artifacts
+[description-setter] Description set: sosmachine1: 4.17.0-rc6
+Finished: SUCCESS

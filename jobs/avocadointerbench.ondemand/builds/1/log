@@ -1,0 +1,23 @@
+Started by user [8mha:////4FqkCksSARbySc15RUTa15KLDuDohiBDNYbuyYSsWMPyAAAAlR+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzmEgZO/dLi1CL9xNwUAAxcekO+AAAA[0mamd
+Building in workspace /var/lib/jenkins/workspace/avocadointerbench.ondemand
+[WS-CLEANUP] Deleting project workspace...
+[avocadointerbench.ondemand] $ /bin/sh -xe /tmp/jenkins4948643091580347031.sh
++ RESOURCES=diesel8a87host
+++ echo avocadointerbench.ondemand
+++ grep -oP '(?<=\.)v.+\..+(?=\.)'
+++ :
++ KERNVER=
++ TIMEOUT=3600
++ for R in ${RESOURCES}
++ wait
++ ssh -q jenkins@diesel8a87host './checkfornewkerneltag.sh https://github.com/torvalds/linux.git'
+++ ssh -q jenkins@diesel8a87host 'uname -r'
++ echo 'diesel8a87host: 4.17.0-rc5-jenkins'
++ timeout -sKILL 3600 ssh -q jenkins@diesel8a87host
++ :
++ '[' 0 -eq 0 ']'
+Build was aborted
+Aborted by [8mha:////4FqkCksSARbySc15RUTa15KLDuDohiBDNYbuyYSsWMPyAAAAlR+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzmEgZO/dLi1CL9xNwUAAxcekO+AAAA[0mamd
+Archiving artifacts
+[description-setter] Description set: 
+Finished: ABORTED

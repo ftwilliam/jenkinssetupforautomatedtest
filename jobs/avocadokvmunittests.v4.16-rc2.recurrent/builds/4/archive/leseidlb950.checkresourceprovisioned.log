@@ -1,0 +1,1214 @@
++ cd /var/lib/jenkins
++ ./checkresourceprovisioned.sh leseidlb950
++ set -e
++ ping -c 1 leseidlb950
++ ssh -q -o PasswordAuthentication=no -o StrictHostKeyChecking=no jenkins@leseidlb950 'test ! -f checkfornewkerneltag.sh'
++ '[' 255 -eq 1 ']'
++ ssh -q -o PasswordAuthentication=no -o StrictHostKeyChecking=no root@leseidlb950 :
++ ./ssh-copy-id.expect root@leseidlb950
+spawn ssh-copy-id -o StrictHostKeyChecking=no root@leseidlb950
+/bin/ssh-copy-id: INFO: Source of key(s) to be installed: "/var/lib/jenkins/.ssh/id_rsa.pub"
+/bin/ssh-copy-id: INFO: attempting to log in with the new key(s), to filter out any that are already installed
+/bin/ssh-copy-id: INFO: 1 key(s) remain to be installed -- if you are prompted now it is to install the new keys
+root@leseidlb950's password: 
+
+Number of key(s) added: 1
+
+Now try logging into the machine, with:   "ssh -o 'StrictHostKeyChecking=no' 'root@leseidlb950'"
+and check to make sure that only the key(s) you wanted were added.
+
++ ssh -q root@leseidlb950
+Welcome to Ubuntu 17.10 (GNU/Linux 4.13.0-37-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+mesg: ttyname failed: Inappropriate ioctl for device
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following additional packages will be installed:
+  binutils binutils-common binutils-x86-64-linux-gnu cpp-7 dpkg-dev fakeroot
+  g++ g++-7 gcc gcc-7 gcc-7-base git-man libalgorithm-diff-perl
+  libalgorithm-diff-xs-perl libalgorithm-merge-perl libasan4 libatomic1
+  libbinutils libbison-dev libc-dev-bin libc6 libc6-dbg libc6-dev libcc1-0
+  libcilkrts5 libdpkg-perl liberror-perl libfakeroot libfile-fcntllock-perl
+  libfl-dev libgcc-7-dev libgcc1 libgomp1 libitm1 liblsan0 libmpx2
+  libquadmath0 libsigsegv2 libssl-doc libstdc++-7-dev libstdc++6 libtsan0
+  libubsan0 linux-libc-dev m4 make manpages-dev patch zlib1g-dev
+Suggested packages:
+  binutils-doc bison-doc gcc-7-locales debian-keyring g++-multilib
+  g++-7-multilib gcc-7-doc libstdc++6-7-dbg gcc-multilib autoconf automake
+  libtool gcc-doc gcc-7-multilib libgcc1-dbg libgomp1-dbg libitm1-dbg
+  libatomic1-dbg libasan4-dbg liblsan0-dbg libtsan0-dbg libubsan0-dbg
+  libcilkrts5-dbg libmpx2-dbg libquadmath0-dbg git-daemon-run
+  | git-daemon-sysvinit git-doc git-el git-email git-gui gitk gitweb git-cvs
+  git-mediawiki git-svn rdnssd glibc-doc libstdc++-7-doc m4-doc make-doc
+  diffutils-doc
+The following NEW packages will be installed:
+  binutils binutils-common binutils-x86-64-linux-gnu bison build-essential
+  dpkg-dev fakeroot flex g++ g++-7 gcc gcc-7 git git-man ifupdown
+  libalgorithm-diff-perl libalgorithm-diff-xs-perl libalgorithm-merge-perl
+  libasan4 libatomic1 libbinutils libbison-dev libc-dev-bin libc6-dev
+  libcilkrts5 libdpkg-perl libelf-dev liberror-perl libfakeroot
+  libfile-fcntllock-perl libfl-dev libgcc-7-dev libitm1 liblsan0 libmpx2
+  libquadmath0 libsigsegv2 libssl-dev libssl-doc libstdc++-7-dev libtsan0
+  libubsan0 linux-libc-dev m4 make manpages-dev patch zlib1g-dev
+The following packages will be upgraded:
+  cpp-7 gcc-7-base libc6 libc6-dbg libcc1-0 libgcc1 libgomp1 libstdc++6
+8 upgraded, 48 newly installed, 0 to remove and 107 not upgraded.
+Need to get 52.3 MB of archives.
+After this operation, 177 MB of additional disk space will be used.
+Get:1 http://us.archive.ubuntu.com/ubuntu artful-updates/main amd64 libc6-dbg amd64 2.26-0ubuntu2.1 [4,997 kB]
+Get:2 http://us.archive.ubuntu.com/ubuntu artful-updates/main amd64 libgomp1 amd64 7.2.0-8ubuntu3.2 [76.4 kB]
+Get:3 http://us.archive.ubuntu.com/ubuntu artful-updates/main amd64 gcc-7-base amd64 7.2.0-8ubuntu3.2 [18.4 kB]
+Get:4 http://us.archive.ubuntu.com/ubuntu artful-updates/main amd64 libgcc1 amd64 1:7.2.0-8ubuntu3.2 [39.4 kB]
+Get:5 http://us.archive.ubuntu.com/ubuntu artful-updates/main amd64 libcc1-0 amd64 7.2.0-8ubuntu3.2 [38.7 kB]
+Get:6 http://us.archive.ubuntu.com/ubuntu artful-updates/main amd64 cpp-7 amd64 7.2.0-8ubuntu3.2 [6,732 kB]
+Get:7 http://us.archive.ubuntu.com/ubuntu artful-updates/main amd64 libstdc++6 amd64 7.2.0-8ubuntu3.2 [405 kB]
+Get:8 http://us.archive.ubuntu.com/ubuntu artful-updates/main amd64 libc6 amd64 2.26-0ubuntu2.1 [2,780 kB]
+Get:9 http://us.archive.ubuntu.com/ubuntu artful/main amd64 libsigsegv2 amd64 2.11-1 [13.2 kB]
+Get:10 http://us.archive.ubuntu.com/ubuntu artful/main amd64 m4 amd64 1.4.18-1 [197 kB]
+Get:11 http://us.archive.ubuntu.com/ubuntu artful/main amd64 flex amd64 2.6.1-1.3 [312 kB]
+Get:12 http://us.archive.ubuntu.com/ubuntu artful/main amd64 liberror-perl all 0.17024-1 [23.0 kB]
+Get:13 http://us.archive.ubuntu.com/ubuntu artful/main amd64 git-man all 1:2.14.1-1ubuntu4 [790 kB]
+Get:14 http://us.archive.ubuntu.com/ubuntu artful/main amd64 git amd64 1:2.14.1-1ubuntu4 [3,130 kB]
+Get:15 http://us.archive.ubuntu.com/ubuntu artful/main amd64 binutils-common amd64 2.29.1-4ubuntu1 [190 kB]
+Get:16 http://us.archive.ubuntu.com/ubuntu artful/main amd64 libbinutils amd64 2.29.1-4ubuntu1 [502 kB]
+Get:17 http://us.archive.ubuntu.com/ubuntu artful/main amd64 binutils-x86-64-linux-gnu amd64 2.29.1-4ubuntu1 [1,824 kB]
+Get:18 http://us.archive.ubuntu.com/ubuntu artful/main amd64 binutils amd64 2.29.1-4ubuntu1 [3,342 B]
+Get:19 http://us.archive.ubuntu.com/ubuntu artful/main amd64 libbison-dev amd64 2:3.0.4.dfsg-1build1 [339 kB]
+Get:20 http://us.archive.ubuntu.com/ubuntu artful/main amd64 bison amd64 2:3.0.4.dfsg-1build1 [266 kB]
+Get:21 http://us.archive.ubuntu.com/ubuntu artful-updates/main amd64 libc-dev-bin amd64 2.26-0ubuntu2.1 [69.5 kB]
+Get:22 http://us.archive.ubuntu.com/ubuntu artful-updates/main amd64 linux-libc-dev amd64 4.13.0-37.42 [951 kB]
+Get:23 http://us.archive.ubuntu.com/ubuntu artful-updates/main amd64 libc6-dev amd64 2.26-0ubuntu2.1 [2,526 kB]
+Get:24 http://us.archive.ubuntu.com/ubuntu artful-updates/main amd64 libitm1 amd64 7.2.0-8ubuntu3.2 [27.6 kB]
+Get:25 http://us.archive.ubuntu.com/ubuntu artful-updates/main amd64 libatomic1 amd64 7.2.0-8ubuntu3.2 [8,950 B]
+Get:26 http://us.archive.ubuntu.com/ubuntu artful-updates/main amd64 libasan4 amd64 7.2.0-8ubuntu3.2 [360 kB]
+Get:27 http://us.archive.ubuntu.com/ubuntu artful-updates/main amd64 liblsan0 amd64 7.2.0-8ubuntu3.2 [133 kB]
+Get:28 http://us.archive.ubuntu.com/ubuntu artful-updates/main amd64 libtsan0 amd64 7.2.0-8ubuntu3.2 [282 kB]
+Get:29 http://us.archive.ubuntu.com/ubuntu artful-updates/main amd64 libubsan0 amd64 7.2.0-8ubuntu3.2 [126 kB]
+Get:30 http://us.archive.ubuntu.com/ubuntu artful-updates/main amd64 libcilkrts5 amd64 7.2.0-8ubuntu3.2 [42.6 kB]
+Get:31 http://us.archive.ubuntu.com/ubuntu artful-updates/main amd64 libmpx2 amd64 7.2.0-8ubuntu3.2 [11.7 kB]
+Get:32 http://us.archive.ubuntu.com/ubuntu artful-updates/main amd64 libquadmath0 amd64 7.2.0-8ubuntu3.2 [133 kB]
+Get:33 http://us.archive.ubuntu.com/ubuntu artful-updates/main amd64 libgcc-7-dev amd64 7.2.0-8ubuntu3.2 [2,368 kB]
+Get:34 http://us.archive.ubuntu.com/ubuntu artful-updates/main amd64 gcc-7 amd64 7.2.0-8ubuntu3.2 [7,418 kB]
+Get:35 http://us.archive.ubuntu.com/ubuntu artful/main amd64 gcc amd64 4:7.2.0-1ubuntu1 [5,124 B]
+Get:36 http://us.archive.ubuntu.com/ubuntu artful-updates/main amd64 libstdc++-7-dev amd64 7.2.0-8ubuntu3.2 [1,456 kB]
+Get:37 http://us.archive.ubuntu.com/ubuntu artful-updates/main amd64 g++-7 amd64 7.2.0-8ubuntu3.2 [7,555 kB]
+Get:38 http://us.archive.ubuntu.com/ubuntu artful/main amd64 g++ amd64 4:7.2.0-1ubuntu1 [1,482 B]
+Get:39 http://us.archive.ubuntu.com/ubuntu artful/main amd64 make amd64 4.1-9.1 [154 kB]
+Get:40 http://us.archive.ubuntu.com/ubuntu artful/main amd64 libdpkg-perl all 1.18.24ubuntu1 [209 kB]
+Get:41 http://us.archive.ubuntu.com/ubuntu artful/main amd64 patch amd64 2.7.5-1build1 [92.4 kB]
+Get:42 http://us.archive.ubuntu.com/ubuntu artful/main amd64 dpkg-dev all 1.18.24ubuntu1 [608 kB]
+Get:43 http://us.archive.ubuntu.com/ubuntu artful/main amd64 build-essential amd64 12.4ubuntu1 [4,758 B]
+Get:44 http://us.archive.ubuntu.com/ubuntu artful/main amd64 libfakeroot amd64 1.21-1ubuntu2 [25.9 kB]
+Get:45 http://us.archive.ubuntu.com/ubuntu artful/main amd64 fakeroot amd64 1.21-1ubuntu2 [62.2 kB]
+Get:46 http://us.archive.ubuntu.com/ubuntu artful/main amd64 ifupdown amd64 0.8.16ubuntu2 [55.2 kB]
+Get:47 http://us.archive.ubuntu.com/ubuntu artful/main amd64 libalgorithm-diff-perl all 1.19.03-1 [47.6 kB]
+Get:48 http://us.archive.ubuntu.com/ubuntu artful/main amd64 libalgorithm-diff-xs-perl amd64 0.04-4build3 [11.2 kB]
+Get:49 http://us.archive.ubuntu.com/ubuntu artful/main amd64 libalgorithm-merge-perl all 0.08-3 [12.0 kB]
+Get:50 http://us.archive.ubuntu.com/ubuntu artful/main amd64 libelf-dev amd64 0.170-0.1 [57.1 kB]
+Get:51 http://us.archive.ubuntu.com/ubuntu artful/main amd64 libfile-fcntllock-perl amd64 0.22-3build2 [33.2 kB]
+Get:52 http://us.archive.ubuntu.com/ubuntu artful/main amd64 libfl-dev amd64 2.6.1-1.3 [7,538 B]
+Get:53 http://us.archive.ubuntu.com/ubuntu artful/main amd64 zlib1g-dev amd64 1:1.2.11.dfsg-0ubuntu2 [176 kB]
+Get:54 http://us.archive.ubuntu.com/ubuntu artful-updates/main amd64 libssl-dev amd64 1.0.2g-1ubuntu13.3 [1,358 kB]
+Get:55 http://us.archive.ubuntu.com/ubuntu artful-updates/main amd64 libssl-doc all 1.0.2g-1ubuntu13.3 [1,056 kB]
+Get:56 http://us.archive.ubuntu.com/ubuntu artful/main amd64 manpages-dev all 4.13-3 [2,202 kB]
+debconf: unable to initialize frontend: Dialog
+debconf: (TERM is not set, so the dialog frontend is not usable.)
+debconf: falling back to frontend: Readline
+debconf: unable to initialize frontend: Readline
+debconf: (This frontend requires a controlling tty.)
+debconf: falling back to frontend: Teletype
+dpkg-preconfigure: unable to re-open stdin: 
+Fetched 52.3 MB in 16s (3,204 kB/s)
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 214330 files and directories currently installed.)
+Preparing to unpack .../libc6-dbg_2.26-0ubuntu2.1_amd64.deb ...
+Unpacking libc6-dbg:amd64 (2.26-0ubuntu2.1) over (2.26-0ubuntu2) ...
+Preparing to unpack .../libgomp1_7.2.0-8ubuntu3.2_amd64.deb ...
+Unpacking libgomp1:amd64 (7.2.0-8ubuntu3.2) over (7.2.0-8ubuntu3) ...
+Preparing to unpack .../gcc-7-base_7.2.0-8ubuntu3.2_amd64.deb ...
+Unpacking gcc-7-base:amd64 (7.2.0-8ubuntu3.2) over (7.2.0-8ubuntu3) ...
+Setting up gcc-7-base:amd64 (7.2.0-8ubuntu3.2) ...
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 214330 files and directories currently installed.)
+Preparing to unpack .../libgcc1_1%3a7.2.0-8ubuntu3.2_amd64.deb ...
+Unpacking libgcc1:amd64 (1:7.2.0-8ubuntu3.2) over (1:7.2.0-8ubuntu3) ...
+Setting up libgcc1:amd64 (1:7.2.0-8ubuntu3.2) ...
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 214330 files and directories currently installed.)
+Preparing to unpack .../libcc1-0_7.2.0-8ubuntu3.2_amd64.deb ...
+Unpacking libcc1-0:amd64 (7.2.0-8ubuntu3.2) over (7.2.0-8ubuntu3) ...
+Preparing to unpack .../cpp-7_7.2.0-8ubuntu3.2_amd64.deb ...
+Unpacking cpp-7 (7.2.0-8ubuntu3.2) over (7.2.0-8ubuntu3) ...
+Preparing to unpack .../libstdc++6_7.2.0-8ubuntu3.2_amd64.deb ...
+Unpacking libstdc++6:amd64 (7.2.0-8ubuntu3.2) over (7.2.0-8ubuntu3) ...
+Setting up libstdc++6:amd64 (7.2.0-8ubuntu3.2) ...
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 214330 files and directories currently installed.)
+Preparing to unpack .../libc6_2.26-0ubuntu2.1_amd64.deb ...
+debconf: unable to initialize frontend: Dialog
+debconf: (TERM is not set, so the dialog frontend is not usable.)
+debconf: falling back to frontend: Readline
+Unpacking libc6:amd64 (2.26-0ubuntu2.1) over (2.26-0ubuntu2) ...
+Setting up libc6:amd64 (2.26-0ubuntu2.1) ...
+debconf: unable to initialize frontend: Dialog
+debconf: (TERM is not set, so the dialog frontend is not usable.)
+debconf: falling back to frontend: Readline
+Selecting previously unselected package libsigsegv2:amd64.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 214330 files and directories currently installed.)
+Preparing to unpack .../00-libsigsegv2_2.11-1_amd64.deb ...
+Unpacking libsigsegv2:amd64 (2.11-1) ...
+Selecting previously unselected package m4.
+Preparing to unpack .../01-m4_1.4.18-1_amd64.deb ...
+Unpacking m4 (1.4.18-1) ...
+Selecting previously unselected package flex.
+Preparing to unpack .../02-flex_2.6.1-1.3_amd64.deb ...
+Unpacking flex (2.6.1-1.3) ...
+Selecting previously unselected package liberror-perl.
+Preparing to unpack .../03-liberror-perl_0.17024-1_all.deb ...
+Unpacking liberror-perl (0.17024-1) ...
+Selecting previously unselected package git-man.
+Preparing to unpack .../04-git-man_1%3a2.14.1-1ubuntu4_all.deb ...
+Unpacking git-man (1:2.14.1-1ubuntu4) ...
+Selecting previously unselected package git.
+Preparing to unpack .../05-git_1%3a2.14.1-1ubuntu4_amd64.deb ...
+Unpacking git (1:2.14.1-1ubuntu4) ...
+Selecting previously unselected package binutils-common:amd64.
+Preparing to unpack .../06-binutils-common_2.29.1-4ubuntu1_amd64.deb ...
+Unpacking binutils-common:amd64 (2.29.1-4ubuntu1) ...
+Selecting previously unselected package libbinutils:amd64.
+Preparing to unpack .../07-libbinutils_2.29.1-4ubuntu1_amd64.deb ...
+Unpacking libbinutils:amd64 (2.29.1-4ubuntu1) ...
+Selecting previously unselected package binutils-x86-64-linux-gnu.
+Preparing to unpack .../08-binutils-x86-64-linux-gnu_2.29.1-4ubuntu1_amd64.deb ...
+Unpacking binutils-x86-64-linux-gnu (2.29.1-4ubuntu1) ...
+Selecting previously unselected package binutils.
+Preparing to unpack .../09-binutils_2.29.1-4ubuntu1_amd64.deb ...
+Unpacking binutils (2.29.1-4ubuntu1) ...
+Selecting previously unselected package libbison-dev:amd64.
+Preparing to unpack .../10-libbison-dev_2%3a3.0.4.dfsg-1build1_amd64.deb ...
+Unpacking libbison-dev:amd64 (2:3.0.4.dfsg-1build1) ...
+Selecting previously unselected package bison.
+Preparing to unpack .../11-bison_2%3a3.0.4.dfsg-1build1_amd64.deb ...
+Unpacking bison (2:3.0.4.dfsg-1build1) ...
+Selecting previously unselected package libc-dev-bin.
+Preparing to unpack .../12-libc-dev-bin_2.26-0ubuntu2.1_amd64.deb ...
+Unpacking libc-dev-bin (2.26-0ubuntu2.1) ...
+Selecting previously unselected package linux-libc-dev:amd64.
+Preparing to unpack .../13-linux-libc-dev_4.13.0-37.42_amd64.deb ...
+Unpacking linux-libc-dev:amd64 (4.13.0-37.42) ...
+Selecting previously unselected package libc6-dev:amd64.
+Preparing to unpack .../14-libc6-dev_2.26-0ubuntu2.1_amd64.deb ...
+Unpacking libc6-dev:amd64 (2.26-0ubuntu2.1) ...
+Selecting previously unselected package libitm1:amd64.
+Preparing to unpack .../15-libitm1_7.2.0-8ubuntu3.2_amd64.deb ...
+Unpacking libitm1:amd64 (7.2.0-8ubuntu3.2) ...
+Selecting previously unselected package libatomic1:amd64.
+Preparing to unpack .../16-libatomic1_7.2.0-8ubuntu3.2_amd64.deb ...
+Unpacking libatomic1:amd64 (7.2.0-8ubuntu3.2) ...
+Selecting previously unselected package libasan4:amd64.
+Preparing to unpack .../17-libasan4_7.2.0-8ubuntu3.2_amd64.deb ...
+Unpacking libasan4:amd64 (7.2.0-8ubuntu3.2) ...
+Selecting previously unselected package liblsan0:amd64.
+Preparing to unpack .../18-liblsan0_7.2.0-8ubuntu3.2_amd64.deb ...
+Unpacking liblsan0:amd64 (7.2.0-8ubuntu3.2) ...
+Selecting previously unselected package libtsan0:amd64.
+Preparing to unpack .../19-libtsan0_7.2.0-8ubuntu3.2_amd64.deb ...
+Unpacking libtsan0:amd64 (7.2.0-8ubuntu3.2) ...
+Selecting previously unselected package libubsan0:amd64.
+Preparing to unpack .../20-libubsan0_7.2.0-8ubuntu3.2_amd64.deb ...
+Unpacking libubsan0:amd64 (7.2.0-8ubuntu3.2) ...
+Selecting previously unselected package libcilkrts5:amd64.
+Preparing to unpack .../21-libcilkrts5_7.2.0-8ubuntu3.2_amd64.deb ...
+Unpacking libcilkrts5:amd64 (7.2.0-8ubuntu3.2) ...
+Selecting previously unselected package libmpx2:amd64.
+Preparing to unpack .../22-libmpx2_7.2.0-8ubuntu3.2_amd64.deb ...
+Unpacking libmpx2:amd64 (7.2.0-8ubuntu3.2) ...
+Selecting previously unselected package libquadmath0:amd64.
+Preparing to unpack .../23-libquadmath0_7.2.0-8ubuntu3.2_amd64.deb ...
+Unpacking libquadmath0:amd64 (7.2.0-8ubuntu3.2) ...
+Selecting previously unselected package libgcc-7-dev:amd64.
+Preparing to unpack .../24-libgcc-7-dev_7.2.0-8ubuntu3.2_amd64.deb ...
+Unpacking libgcc-7-dev:amd64 (7.2.0-8ubuntu3.2) ...
+Selecting previously unselected package gcc-7.
+Preparing to unpack .../25-gcc-7_7.2.0-8ubuntu3.2_amd64.deb ...
+Unpacking gcc-7 (7.2.0-8ubuntu3.2) ...
+Selecting previously unselected package gcc.
+Preparing to unpack .../26-gcc_4%3a7.2.0-1ubuntu1_amd64.deb ...
+Unpacking gcc (4:7.2.0-1ubuntu1) ...
+Selecting previously unselected package libstdc++-7-dev:amd64.
+Preparing to unpack .../27-libstdc++-7-dev_7.2.0-8ubuntu3.2_amd64.deb ...
+Unpacking libstdc++-7-dev:amd64 (7.2.0-8ubuntu3.2) ...
+Selecting previously unselected package g++-7.
+Preparing to unpack .../28-g++-7_7.2.0-8ubuntu3.2_amd64.deb ...
+Unpacking g++-7 (7.2.0-8ubuntu3.2) ...
+Selecting previously unselected package g++.
+Preparing to unpack .../29-g++_4%3a7.2.0-1ubuntu1_amd64.deb ...
+Unpacking g++ (4:7.2.0-1ubuntu1) ...
+Selecting previously unselected package make.
+Preparing to unpack .../30-make_4.1-9.1_amd64.deb ...
+Unpacking make (4.1-9.1) ...
+Selecting previously unselected package libdpkg-perl.
+Preparing to unpack .../31-libdpkg-perl_1.18.24ubuntu1_all.deb ...
+Unpacking libdpkg-perl (1.18.24ubuntu1) ...
+Selecting previously unselected package patch.
+Preparing to unpack .../32-patch_2.7.5-1build1_amd64.deb ...
+Unpacking patch (2.7.5-1build1) ...
+Selecting previously unselected package dpkg-dev.
+Preparing to unpack .../33-dpkg-dev_1.18.24ubuntu1_all.deb ...
+Unpacking dpkg-dev (1.18.24ubuntu1) ...
+Selecting previously unselected package build-essential.
+Preparing to unpack .../34-build-essential_12.4ubuntu1_amd64.deb ...
+Unpacking build-essential (12.4ubuntu1) ...
+Selecting previously unselected package libfakeroot:amd64.
+Preparing to unpack .../35-libfakeroot_1.21-1ubuntu2_amd64.deb ...
+Unpacking libfakeroot:amd64 (1.21-1ubuntu2) ...
+Selecting previously unselected package fakeroot.
+Preparing to unpack .../36-fakeroot_1.21-1ubuntu2_amd64.deb ...
+Unpacking fakeroot (1.21-1ubuntu2) ...
+Selecting previously unselected package ifupdown.
+Preparing to unpack .../37-ifupdown_0.8.16ubuntu2_amd64.deb ...
+Unpacking ifupdown (0.8.16ubuntu2) ...
+Selecting previously unselected package libalgorithm-diff-perl.
+Preparing to unpack .../38-libalgorithm-diff-perl_1.19.03-1_all.deb ...
+Unpacking libalgorithm-diff-perl (1.19.03-1) ...
+Selecting previously unselected package libalgorithm-diff-xs-perl.
+Preparing to unpack .../39-libalgorithm-diff-xs-perl_0.04-4build3_amd64.deb ...
+Unpacking libalgorithm-diff-xs-perl (0.04-4build3) ...
+Selecting previously unselected package libalgorithm-merge-perl.
+Preparing to unpack .../40-libalgorithm-merge-perl_0.08-3_all.deb ...
+Unpacking libalgorithm-merge-perl (0.08-3) ...
+Selecting previously unselected package libelf-dev:amd64.
+Preparing to unpack .../41-libelf-dev_0.170-0.1_amd64.deb ...
+Unpacking libelf-dev:amd64 (0.170-0.1) ...
+Selecting previously unselected package libfile-fcntllock-perl.
+Preparing to unpack .../42-libfile-fcntllock-perl_0.22-3build2_amd64.deb ...
+Unpacking libfile-fcntllock-perl (0.22-3build2) ...
+Selecting previously unselected package libfl-dev:amd64.
+Preparing to unpack .../43-libfl-dev_2.6.1-1.3_amd64.deb ...
+Unpacking libfl-dev:amd64 (2.6.1-1.3) ...
+Selecting previously unselected package zlib1g-dev:amd64.
+Preparing to unpack .../44-zlib1g-dev_1%3a1.2.11.dfsg-0ubuntu2_amd64.deb ...
+Unpacking zlib1g-dev:amd64 (1:1.2.11.dfsg-0ubuntu2) ...
+Selecting previously unselected package libssl-dev:amd64.
+Preparing to unpack .../45-libssl-dev_1.0.2g-1ubuntu13.3_amd64.deb ...
+Unpacking libssl-dev:amd64 (1.0.2g-1ubuntu13.3) ...
+Selecting previously unselected package libssl-doc.
+Preparing to unpack .../46-libssl-doc_1.0.2g-1ubuntu13.3_all.deb ...
+Unpacking libssl-doc (1.0.2g-1ubuntu13.3) ...
+Selecting previously unselected package manpages-dev.
+Preparing to unpack .../47-manpages-dev_4.13-3_all.deb ...
+Unpacking manpages-dev (4.13-3) ...
+Setting up libquadmath0:amd64 (7.2.0-8ubuntu3.2) ...
+Setting up libgomp1:amd64 (7.2.0-8ubuntu3.2) ...
+Setting up libatomic1:amd64 (7.2.0-8ubuntu3.2) ...
+Setting up git-man (1:2.14.1-1ubuntu4) ...
+Setting up libcc1-0:amd64 (7.2.0-8ubuntu3.2) ...
+Setting up make (4.1-9.1) ...
+Setting up libc6-dbg:amd64 (2.26-0ubuntu2.1) ...
+Setting up ifupdown (0.8.16ubuntu2) ...
+Created symlink /etc/systemd/system/multi-user.target.wants/networking.service → /lib/systemd/system/networking.service.
+Created symlink /etc/systemd/system/network-online.target.wants/networking.service → /lib/systemd/system/networking.service.
+Processing triggers for ureadahead (0.100.0-20) ...
+Setting up libasan4:amd64 (7.2.0-8ubuntu3.2) ...
+Setting up liberror-perl (0.17024-1) ...
+Setting up libsigsegv2:amd64 (2.11-1) ...
+Setting up libcilkrts5:amd64 (7.2.0-8ubuntu3.2) ...
+Processing triggers for install-info (6.4.90.dfsg.1-1build1) ...
+Setting up libubsan0:amd64 (7.2.0-8ubuntu3.2) ...
+Setting up libtsan0:amd64 (7.2.0-8ubuntu3.2) ...
+Setting up linux-libc-dev:amd64 (4.13.0-37.42) ...
+Setting up libdpkg-perl (1.18.24ubuntu1) ...
+Setting up m4 (1.4.18-1) ...
+Setting up libelf-dev:amd64 (0.170-0.1) ...
+Setting up cpp-7 (7.2.0-8ubuntu3.2) ...
+Setting up liblsan0:amd64 (7.2.0-8ubuntu3.2) ...
+Setting up binutils-common:amd64 (2.29.1-4ubuntu1) ...
+Setting up libfile-fcntllock-perl (0.22-3build2) ...
+Setting up libmpx2:amd64 (7.2.0-8ubuntu3.2) ...
+Setting up patch (2.7.5-1build1) ...
+Processing triggers for libc-bin (2.26-0ubuntu2) ...
+Setting up libfakeroot:amd64 (1.21-1ubuntu2) ...
+Processing triggers for systemd (234-2ubuntu12.1) ...
+Setting up libbison-dev:amd64 (2:3.0.4.dfsg-1build1) ...
+Setting up libalgorithm-diff-perl (1.19.03-1) ...
+Processing triggers for man-db (2.7.6.1-2) ...
+Setting up libssl-doc (1.0.2g-1ubuntu13.3) ...
+Setting up libc-dev-bin (2.26-0ubuntu2.1) ...
+Setting up bison (2:3.0.4.dfsg-1build1) ...
+update-alternatives: using /usr/bin/bison.yacc to provide /usr/bin/yacc (yacc) in auto mode
+Setting up manpages-dev (4.13-3) ...
+Setting up libc6-dev:amd64 (2.26-0ubuntu2.1) ...
+Setting up git (1:2.14.1-1ubuntu4) ...
+Setting up libitm1:amd64 (7.2.0-8ubuntu3.2) ...
+Setting up zlib1g-dev:amd64 (1:1.2.11.dfsg-0ubuntu2) ...
+Setting up libbinutils:amd64 (2.29.1-4ubuntu1) ...
+Setting up flex (2.6.1-1.3) ...
+Setting up libssl-dev:amd64 (1.0.2g-1ubuntu13.3) ...
+Setting up fakeroot (1.21-1ubuntu2) ...
+update-alternatives: using /usr/bin/fakeroot-sysv to provide /usr/bin/fakeroot (fakeroot) in auto mode
+Setting up libgcc-7-dev:amd64 (7.2.0-8ubuntu3.2) ...
+Setting up libfl-dev:amd64 (2.6.1-1.3) ...
+Setting up libstdc++-7-dev:amd64 (7.2.0-8ubuntu3.2) ...
+Setting up libalgorithm-merge-perl (0.08-3) ...
+Setting up libalgorithm-diff-xs-perl (0.04-4build3) ...
+Setting up binutils-x86-64-linux-gnu (2.29.1-4ubuntu1) ...
+Setting up binutils (2.29.1-4ubuntu1) ...
+Setting up gcc-7 (7.2.0-8ubuntu3.2) ...
+Setting up g++-7 (7.2.0-8ubuntu3.2) ...
+Setting up gcc (4:7.2.0-1ubuntu1) ...
+Setting up dpkg-dev (1.18.24ubuntu1) ...
+Setting up g++ (4:7.2.0-1ubuntu1) ...
+update-alternatives: using /usr/bin/g++ to provide /usr/bin/c++ (c++) in auto mode
+Setting up build-essential (12.4ubuntu1) ...
+Processing triggers for libc-bin (2.26-0ubuntu2) ...
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following additional packages will be installed:
+  dmeventd libblas3 libdevmapper-event1.02.1 libexpat1-dev libgfortran4
+  liblapack3 liblvm2app2.2 liblvm2cmd2.02 libpython-dev libpython2.7-dev
+  libreadline5 libvirt0 libxen-4.9 libxen-dev libxenstore3.0 lvm2
+  openvswitch-common pkg-config python-decorator python-numpy
+  python-pkg-resources python-six python-yaml python2.7-dev
+Suggested packages:
+  liblzma-doc libyaml-doc thin-provisioning-tools ethtool python-matplotlib
+  python-scipy python-pygraphviz | python-pydot gfortran python-nose
+  python-numpy-dbg python-numpy-doc python-setuptools
+The following NEW packages will be installed:
+  bridge-utils dmeventd libblas3 libdevmapper-event1.02.1 libexpat1-dev
+  libgfortran4 liblapack3 liblvm2app2.2 liblvm2cmd2.02 liblzma-dev
+  libpython-dev libpython2.7-dev libreadline5 libvirt-dev libvirt0 libxen-4.9
+  libxen-dev libxenstore3.0 libyaml-dev lvm2 openvswitch-common
+  openvswitch-switch pkg-config python-decorator python-dev python-networkx
+  python-numpy python-pkg-resources python-six python-yaml python2.7-dev
+0 upgraded, 31 newly installed, 0 to remove and 107 not upgraded.
+Need to get 41.2 MB of archives.
+After this operation, 95.9 MB of additional disk space will be used.
+Get:1 http://us.archive.ubuntu.com/ubuntu artful/main amd64 bridge-utils amd64 1.5-9ubuntu2 [29.2 kB]
+Get:2 http://us.archive.ubuntu.com/ubuntu artful/main amd64 libdevmapper-event1.02.1 amd64 2:1.02.137-2ubuntu3 [11.3 kB]
+Get:3 http://us.archive.ubuntu.com/ubuntu artful/main amd64 liblvm2cmd2.02 amd64 2.02.168-2ubuntu3 [589 kB]
+Get:4 http://us.archive.ubuntu.com/ubuntu artful/main amd64 dmeventd amd64 2:1.02.137-2ubuntu3 [29.4 kB]
+Get:5 http://us.archive.ubuntu.com/ubuntu artful/main amd64 libblas3 amd64 3.7.1-3ubuntu2 [140 kB]
+Get:6 http://us.archive.ubuntu.com/ubuntu artful/main amd64 libexpat1-dev amd64 2.2.3-1 [120 kB]
+Get:7 http://us.archive.ubuntu.com/ubuntu artful-updates/main amd64 libgfortran4 amd64 7.2.0-8ubuntu3.2 [494 kB]
+Get:8 http://us.archive.ubuntu.com/ubuntu artful/main amd64 liblapack3 amd64 3.7.1-3ubuntu2 [2,112 kB]
+Get:9 http://us.archive.ubuntu.com/ubuntu artful/main amd64 liblvm2app2.2 amd64 2.02.168-2ubuntu3 [458 kB]
+Get:10 http://us.archive.ubuntu.com/ubuntu artful/main amd64 libpython2.7-dev amd64 2.7.14-2ubuntu2 [28.2 MB]
+Get:11 http://us.archive.ubuntu.com/ubuntu artful/main amd64 libpython-dev amd64 2.7.14-2ubuntu1 [7,644 B]
+Get:12 http://us.archive.ubuntu.com/ubuntu artful/main amd64 libreadline5 amd64 5.2+dfsg-3build1 [99.5 kB]
+Get:13 http://us.archive.ubuntu.com/ubuntu artful/main amd64 libxenstore3.0 amd64 4.9.0-0ubuntu3 [20.2 kB]
+Get:14 http://us.archive.ubuntu.com/ubuntu artful/main amd64 libxen-4.9 amd64 4.9.0-0ubuntu3 [399 kB]
+Get:15 http://us.archive.ubuntu.com/ubuntu artful-updates/main amd64 libvirt0 amd64 3.6.0-1ubuntu6.3 [1,244 kB]
+Get:16 http://us.archive.ubuntu.com/ubuntu artful/main amd64 libxen-dev amd64 4.9.0-0ubuntu3 [662 kB]
+Get:17 http://us.archive.ubuntu.com/ubuntu artful-updates/main amd64 libvirt-dev amd64 3.6.0-1ubuntu6.3 [141 kB]
+Get:18 http://us.archive.ubuntu.com/ubuntu artful/main amd64 lvm2 amd64 2.02.168-2ubuntu3 [841 kB]
+Get:19 http://us.archive.ubuntu.com/ubuntu artful/main amd64 pkg-config amd64 0.29.1-0ubuntu2 [45.0 kB]
+Get:20 http://us.archive.ubuntu.com/ubuntu artful/main amd64 python-decorator all 4.1.1-1 [9,200 B]
+Get:21 http://us.archive.ubuntu.com/ubuntu artful/main amd64 python2.7-dev amd64 2.7.14-2ubuntu2 [278 kB]
+Get:22 http://us.archive.ubuntu.com/ubuntu artful/main amd64 python-dev amd64 2.7.14-2ubuntu1 [1,176 B]
+Get:23 http://us.archive.ubuntu.com/ubuntu artful/main amd64 python-networkx all 1.11-1ubuntu1 [806 kB]
+Get:24 http://us.archive.ubuntu.com/ubuntu artful/main amd64 python-numpy amd64 1:1.12.1-3.1ubuntu4 [1,885 kB]
+Get:25 http://us.archive.ubuntu.com/ubuntu artful/main amd64 python-pkg-resources all 36.2.7-2 [128 kB]
+Get:26 http://us.archive.ubuntu.com/ubuntu artful/main amd64 python-six all 1.10.0-4 [10.8 kB]
+Get:27 http://us.archive.ubuntu.com/ubuntu artful/main amd64 python-yaml amd64 3.12-1build2 [115 kB]
+Get:28 http://us.archive.ubuntu.com/ubuntu artful/main amd64 liblzma-dev amd64 5.2.2-1.3 [145 kB]
+Get:29 http://us.archive.ubuntu.com/ubuntu artful/main amd64 libyaml-dev amd64 0.1.7-2ubuntu3 [55.7 kB]
+Get:30 http://us.archive.ubuntu.com/ubuntu artful-updates/main amd64 openvswitch-common amd64 2.8.1-0ubuntu0.17.10.2 [712 kB]
+Get:31 http://us.archive.ubuntu.com/ubuntu artful-updates/main amd64 openvswitch-switch amd64 2.8.1-0ubuntu0.17.10.2 [1,422 kB]
+debconf: unable to initialize frontend: Dialog
+debconf: (TERM is not set, so the dialog frontend is not usable.)
+debconf: falling back to frontend: Readline
+debconf: unable to initialize frontend: Readline
+debconf: (This frontend requires a controlling tty.)
+debconf: falling back to frontend: Teletype
+dpkg-preconfigure: unable to re-open stdin: 
+Fetched 41.2 MB in 8s (5,078 kB/s)
+Selecting previously unselected package bridge-utils.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 222633 files and directories currently installed.)
+Preparing to unpack .../00-bridge-utils_1.5-9ubuntu2_amd64.deb ...
+Unpacking bridge-utils (1.5-9ubuntu2) ...
+Selecting previously unselected package libdevmapper-event1.02.1:amd64.
+Preparing to unpack .../01-libdevmapper-event1.02.1_2%3a1.02.137-2ubuntu3_amd64.deb ...
+Unpacking libdevmapper-event1.02.1:amd64 (2:1.02.137-2ubuntu3) ...
+Selecting previously unselected package liblvm2cmd2.02:amd64.
+Preparing to unpack .../02-liblvm2cmd2.02_2.02.168-2ubuntu3_amd64.deb ...
+Unpacking liblvm2cmd2.02:amd64 (2.02.168-2ubuntu3) ...
+Selecting previously unselected package dmeventd.
+Preparing to unpack .../03-dmeventd_2%3a1.02.137-2ubuntu3_amd64.deb ...
+Unpacking dmeventd (2:1.02.137-2ubuntu3) ...
+Selecting previously unselected package libblas3:amd64.
+Preparing to unpack .../04-libblas3_3.7.1-3ubuntu2_amd64.deb ...
+Unpacking libblas3:amd64 (3.7.1-3ubuntu2) ...
+Selecting previously unselected package libexpat1-dev:amd64.
+Preparing to unpack .../05-libexpat1-dev_2.2.3-1_amd64.deb ...
+Unpacking libexpat1-dev:amd64 (2.2.3-1) ...
+Selecting previously unselected package libgfortran4:amd64.
+Preparing to unpack .../06-libgfortran4_7.2.0-8ubuntu3.2_amd64.deb ...
+Unpacking libgfortran4:amd64 (7.2.0-8ubuntu3.2) ...
+Selecting previously unselected package liblapack3:amd64.
+Preparing to unpack .../07-liblapack3_3.7.1-3ubuntu2_amd64.deb ...
+Unpacking liblapack3:amd64 (3.7.1-3ubuntu2) ...
+Selecting previously unselected package liblvm2app2.2:amd64.
+Preparing to unpack .../08-liblvm2app2.2_2.02.168-2ubuntu3_amd64.deb ...
+Unpacking liblvm2app2.2:amd64 (2.02.168-2ubuntu3) ...
+Selecting previously unselected package libpython2.7-dev:amd64.
+Preparing to unpack .../09-libpython2.7-dev_2.7.14-2ubuntu2_amd64.deb ...
+Unpacking libpython2.7-dev:amd64 (2.7.14-2ubuntu2) ...
+Selecting previously unselected package libpython-dev:amd64.
+Preparing to unpack .../10-libpython-dev_2.7.14-2ubuntu1_amd64.deb ...
+Unpacking libpython-dev:amd64 (2.7.14-2ubuntu1) ...
+Selecting previously unselected package libreadline5:amd64.
+Preparing to unpack .../11-libreadline5_5.2+dfsg-3build1_amd64.deb ...
+Unpacking libreadline5:amd64 (5.2+dfsg-3build1) ...
+Selecting previously unselected package libxenstore3.0:amd64.
+Preparing to unpack .../12-libxenstore3.0_4.9.0-0ubuntu3_amd64.deb ...
+Unpacking libxenstore3.0:amd64 (4.9.0-0ubuntu3) ...
+Selecting previously unselected package libxen-4.9:amd64.
+Preparing to unpack .../13-libxen-4.9_4.9.0-0ubuntu3_amd64.deb ...
+Unpacking libxen-4.9:amd64 (4.9.0-0ubuntu3) ...
+Selecting previously unselected package libvirt0:amd64.
+Preparing to unpack .../14-libvirt0_3.6.0-1ubuntu6.3_amd64.deb ...
+Unpacking libvirt0:amd64 (3.6.0-1ubuntu6.3) ...
+Selecting previously unselected package libxen-dev:amd64.
+Preparing to unpack .../15-libxen-dev_4.9.0-0ubuntu3_amd64.deb ...
+Unpacking libxen-dev:amd64 (4.9.0-0ubuntu3) ...
+Selecting previously unselected package libvirt-dev:amd64.
+Preparing to unpack .../16-libvirt-dev_3.6.0-1ubuntu6.3_amd64.deb ...
+Unpacking libvirt-dev:amd64 (3.6.0-1ubuntu6.3) ...
+Selecting previously unselected package lvm2.
+Preparing to unpack .../17-lvm2_2.02.168-2ubuntu3_amd64.deb ...
+Unpacking lvm2 (2.02.168-2ubuntu3) ...
+Selecting previously unselected package pkg-config.
+Preparing to unpack .../18-pkg-config_0.29.1-0ubuntu2_amd64.deb ...
+Unpacking pkg-config (0.29.1-0ubuntu2) ...
+Selecting previously unselected package python-decorator.
+Preparing to unpack .../19-python-decorator_4.1.1-1_all.deb ...
+Unpacking python-decorator (4.1.1-1) ...
+Selecting previously unselected package python2.7-dev.
+Preparing to unpack .../20-python2.7-dev_2.7.14-2ubuntu2_amd64.deb ...
+Unpacking python2.7-dev (2.7.14-2ubuntu2) ...
+Selecting previously unselected package python-dev.
+Preparing to unpack .../21-python-dev_2.7.14-2ubuntu1_amd64.deb ...
+Unpacking python-dev (2.7.14-2ubuntu1) ...
+Selecting previously unselected package python-networkx.
+Preparing to unpack .../22-python-networkx_1.11-1ubuntu1_all.deb ...
+Unpacking python-networkx (1.11-1ubuntu1) ...
+Selecting previously unselected package python-numpy.
+Preparing to unpack .../23-python-numpy_1%3a1.12.1-3.1ubuntu4_amd64.deb ...
+Unpacking python-numpy (1:1.12.1-3.1ubuntu4) ...
+Selecting previously unselected package python-pkg-resources.
+Preparing to unpack .../24-python-pkg-resources_36.2.7-2_all.deb ...
+Unpacking python-pkg-resources (36.2.7-2) ...
+Selecting previously unselected package python-six.
+Preparing to unpack .../25-python-six_1.10.0-4_all.deb ...
+Unpacking python-six (1.10.0-4) ...
+Selecting previously unselected package python-yaml.
+Preparing to unpack .../26-python-yaml_3.12-1build2_amd64.deb ...
+Unpacking python-yaml (3.12-1build2) ...
+Selecting previously unselected package liblzma-dev:amd64.
+Preparing to unpack .../27-liblzma-dev_5.2.2-1.3_amd64.deb ...
+Unpacking liblzma-dev:amd64 (5.2.2-1.3) ...
+Selecting previously unselected package libyaml-dev:amd64.
+Preparing to unpack .../28-libyaml-dev_0.1.7-2ubuntu3_amd64.deb ...
+Unpacking libyaml-dev:amd64 (0.1.7-2ubuntu3) ...
+Selecting previously unselected package openvswitch-common.
+Preparing to unpack .../29-openvswitch-common_2.8.1-0ubuntu0.17.10.2_amd64.deb ...
+Unpacking openvswitch-common (2.8.1-0ubuntu0.17.10.2) ...
+Selecting previously unselected package openvswitch-switch.
+Preparing to unpack .../30-openvswitch-switch_2.8.1-0ubuntu0.17.10.2_amd64.deb ...
+Unpacking openvswitch-switch (2.8.1-0ubuntu0.17.10.2) ...
+Setting up python-yaml (3.12-1build2) ...
+Processing triggers for ureadahead (0.100.0-20) ...
+Setting up libgfortran4:amd64 (7.2.0-8ubuntu3.2) ...
+Setting up libxenstore3.0:amd64 (4.9.0-0ubuntu3) ...
+Setting up libyaml-dev:amd64 (0.1.7-2ubuntu3) ...
+Setting up python-pkg-resources (36.2.7-2) ...
+Setting up bridge-utils (1.5-9ubuntu2) ...
+debconf: unable to initialize frontend: Dialog
+debconf: (TERM is not set, so the dialog frontend is not usable.)
+debconf: falling back to frontend: Readline
+Setting up libdevmapper-event1.02.1:amd64 (2:1.02.137-2ubuntu3) ...
+Setting up pkg-config (0.29.1-0ubuntu2) ...
+Setting up libblas3:amd64 (3.7.1-3ubuntu2) ...
+update-alternatives: using /usr/lib/x86_64-linux-gnu/blas/libblas.so.3 to provide /usr/lib/x86_64-linux-gnu/libblas.so.3 (libblas.so.3-x86_64-linux-gnu) in auto mode
+Setting up python-six (1.10.0-4) ...
+Processing triggers for libc-bin (2.26-0ubuntu2) ...
+Processing triggers for systemd (234-2ubuntu12.1) ...
+Setting up libexpat1-dev:amd64 (2.2.3-1) ...
+Setting up liblvm2app2.2:amd64 (2.02.168-2ubuntu3) ...
+Processing triggers for man-db (2.7.6.1-2) ...
+Setting up libxen-4.9:amd64 (4.9.0-0ubuntu3) ...
+Setting up libpython2.7-dev:amd64 (2.7.14-2ubuntu2) ...
+Setting up python-decorator (4.1.1-1) ...
+Setting up liblzma-dev:amd64 (5.2.2-1.3) ...
+Setting up libreadline5:amd64 (5.2+dfsg-3build1) ...
+Setting up python2.7-dev (2.7.14-2ubuntu2) ...
+Setting up libpython-dev:amd64 (2.7.14-2ubuntu1) ...
+Setting up python-networkx (1.11-1ubuntu1) ...
+Setting up openvswitch-common (2.8.1-0ubuntu0.17.10.2) ...
+Setting up python-dev (2.7.14-2ubuntu1) ...
+Setting up liblapack3:amd64 (3.7.1-3ubuntu2) ...
+update-alternatives: using /usr/lib/x86_64-linux-gnu/lapack/liblapack.so.3 to provide /usr/lib/x86_64-linux-gnu/liblapack.so.3 (liblapack.so.3-x86_64-linux-gnu) in auto mode
+Setting up libvirt0:amd64 (3.6.0-1ubuntu6.3) ...
+Setting up libxen-dev:amd64 (4.9.0-0ubuntu3) ...
+Setting up python-numpy (1:1.12.1-3.1ubuntu4) ...
+Setting up openvswitch-switch (2.8.1-0ubuntu0.17.10.2) ...
+update-alternatives: using /usr/lib/openvswitch-switch/ovs-vswitchd to provide /usr/sbin/ovs-vswitchd (ovs-vswitchd) in auto mode
+Created symlink /etc/systemd/system/multi-user.target.wants/openvswitch-switch.service → /lib/systemd/system/openvswitch-switch.service.
+openvswitch-nonetwork.service is a disabled or a static unit, not starting it.
+Setting up libvirt-dev:amd64 (3.6.0-1ubuntu6.3) ...
+Setting up liblvm2cmd2.02:amd64 (2.02.168-2ubuntu3) ...
+Setting up dmeventd (2:1.02.137-2ubuntu3) ...
+Created symlink /etc/systemd/system/sockets.target.wants/dm-event.socket → /lib/systemd/system/dm-event.socket.
+Setting up lvm2 (2.02.168-2ubuntu3) ...
+update-initramfs: deferring update (trigger activated)
+Created symlink /etc/systemd/system/sysinit.target.wants/lvm2-lvmetad.socket → /lib/systemd/system/lvm2-lvmetad.socket.
+Created symlink /etc/systemd/system/sysinit.target.wants/lvm2-lvmpolld.socket → /lib/systemd/system/lvm2-lvmpolld.socket.
+Created symlink /etc/systemd/system/sysinit.target.wants/lvm2-monitor.service → /lib/systemd/system/lvm2-monitor.service.
+Processing triggers for libc-bin (2.26-0ubuntu2) ...
+Processing triggers for ureadahead (0.100.0-20) ...
+Processing triggers for systemd (234-2ubuntu12.1) ...
+Processing triggers for initramfs-tools (0.125ubuntu12) ...
+update-initramfs: Generating /boot/initrd.img-4.13.0-37-generic
+-bash: line 4: pip: command not found
+-bash: line 5: pip: command not found
+Generating grub configuration file ...
+Found linux image: /boot/vmlinuz-4.13.0-37-generic
+Found initrd image: /boot/initrd.img-4.13.0-37-generic
+Found linux image: /boot/vmlinuz-4.13.0-21-generic
+Found initrd image: /boot/initrd.img-4.13.0-21-generic
+Adding boot menu entry for EFI firmware configuration
+done
+Synchronizing state of unattended-upgrades.service with SysV service script with /lib/systemd/systemd-sysv-install.
+Executing: /lib/systemd/systemd-sysv-install disable unattended-upgrades
+Synchronizing state of sddm.service with SysV service script with /lib/systemd/systemd-sysv-install.
+Executing: /lib/systemd/systemd-sysv-install disable sddm
+Synchronizing state of cups.service with SysV service script with /lib/systemd/systemd-sysv-install.
+Executing: /lib/systemd/systemd-sysv-install disable cups
+Synchronizing state of cups-browsed.service with SysV service script with /lib/systemd/systemd-sysv-install.
+Executing: /lib/systemd/systemd-sysv-install disable cups-browsed
+Synchronizing state of whoopsie.service with SysV service script with /lib/systemd/systemd-sysv-install.
+Executing: /lib/systemd/systemd-sysv-install disable whoopsie
+apport.service is not a native service, redirecting to systemd-sysv-install.
+Executing: /lib/systemd/systemd-sysv-install disable apport
+Synchronizing state of apparmor.service with SysV service script with /lib/systemd/systemd-sysv-install.
+Executing: /lib/systemd/systemd-sysv-install disable apparmor
+Synchronizing state of ufw.service with SysV service script with /lib/systemd/systemd-sysv-install.
+Executing: /lib/systemd/systemd-sysv-install disable ufw
+Synchronizing state of network-manager.service with SysV service script with /lib/systemd/systemd-sysv-install.
+Executing: /lib/systemd/systemd-sysv-install disable network-manager
+Removed /etc/systemd/system/dbus-org.freedesktop.nm-dispatcher.service.
+Removed /etc/systemd/system/display-manager.service.
+Removed /etc/systemd/system/sockets.target.wants/cups.socket.
+Removed /etc/systemd/system/multi-user.target.wants/cups.path.
+Removed /etc/systemd/system/multi-user.target.wants/NetworkManager.service.
+Synchronizing state of networking.service with SysV service script with /lib/systemd/systemd-sysv-install.
+Executing: /lib/systemd/systemd-sysv-install enable networking
++ ssh -q root@leseidlb950 'cat > /etc/network/interfaces'
++ ssh -q root@leseidlb950 'useradd -m -s /bin/bash -G sudo jenkins && echo jenkins:amd123 | chpasswd'
++ ./ssh-copy-id.expect jenkins@leseidlb950
+spawn ssh-copy-id -o StrictHostKeyChecking=no jenkins@leseidlb950
+/bin/ssh-copy-id: INFO: Source of key(s) to be installed: "/var/lib/jenkins/.ssh/id_rsa.pub"
+/bin/ssh-copy-id: INFO: attempting to log in with the new key(s), to filter out any that are already installed
+/bin/ssh-copy-id: INFO: 1 key(s) remain to be installed -- if you are prompted now it is to install the new keys
+jenkins@leseidlb950's password: 
+
+Number of key(s) added: 1
+
+Now try logging into the machine, with:   "ssh -o 'StrictHostKeyChecking=no' 'jenkins@leseidlb950'"
+and check to make sure that only the key(s) you wanted were added.
+
++ scp checkfornewkerneltag.sh jenkins@leseidlb950:
++ ssh -q jenkins@leseidlb950
+Welcome to Ubuntu 17.10 (GNU/Linux 4.13.0-37-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+Cloning into 'avocado'...
+/usr/bin/python -m pip --version || /usr/bin/python -c "import os; import sys; import urllib; f = urllib.urlretrieve('https://bootstrap.pypa.io/get-pip.py')[0]; os.system('%s %s' % (sys.executable, f))"
+/usr/bin/python: No module named pip
+The directory '/home/jenkins/.cache/pip/http' or its parent directory is not owned by the current user and the cache has been disabled. Please check the permissions and owner of that directory. If executing pip with sudo, you may want sudo's -H flag.
+The directory '/home/jenkins/.cache/pip' or its parent directory is not owned by the current user and caching wheels has been disabled. check the permissions and owner of that directory. If executing pip with sudo, you may want sudo's -H flag.
+Collecting pip
+  Downloading pip-9.0.3-py2.py3-none-any.whl (1.4MB)
+Collecting setuptools
+  Downloading setuptools-39.0.1-py2.py3-none-any.whl (569kB)
+Collecting wheel
+  Downloading wheel-0.30.0-py2.py3-none-any.whl (49kB)
+Installing collected packages: pip, setuptools, wheel
+Successfully installed pip-9.0.3 setuptools-39.0.1 wheel-0.30.0
+pip install "pip>=6.0.1"
+The directory '/home/jenkins/.cache/pip/http' or its parent directory is not owned by the current user and the cache has been disabled. Please check the permissions and owner of that directory. If executing pip with sudo, you may want sudo's -H flag.
+The directory '/home/jenkins/.cache/pip' or its parent directory is not owned by the current user and caching wheels has been disabled. check the permissions and owner of that directory. If executing pip with sudo, you may want sudo's -H flag.
+Requirement already satisfied: pip>=6.0.1 in /usr/local/lib/python2.7/dist-packages
+pip install -r requirements.txt
+The directory '/home/jenkins/.cache/pip/http' or its parent directory is not owned by the current user and the cache has been disabled. Please check the permissions and owner of that directory. If executing pip with sudo, you may want sudo's -H flag.
+The directory '/home/jenkins/.cache/pip' or its parent directory is not owned by the current user and caching wheels has been disabled. check the permissions and owner of that directory. If executing pip with sudo, you may want sudo's -H flag.
+Collecting backports.lzma>=0.0.10 (from -r requirements.txt (line 3))
+  Downloading backports.lzma-0.0.10.tar.gz
+Collecting requests>=1.2.3 (from -r requirements.txt (line 5))
+  Downloading requests-2.18.4-py2.py3-none-any.whl (88kB)
+Requirement already satisfied: six>=1.10.0 in /usr/lib/python2.7/dist-packages (from -r requirements.txt (line 7))
+Collecting stevedore>=0.14 (from -r requirements.txt (line 9))
+  Downloading stevedore-1.28.0-py2.py3-none-any.whl
+Collecting idna<2.7,>=2.5 (from requests>=1.2.3->-r requirements.txt (line 5))
+  Downloading idna-2.6-py2.py3-none-any.whl (56kB)
+Collecting urllib3<1.23,>=1.21.1 (from requests>=1.2.3->-r requirements.txt (line 5))
+  Downloading urllib3-1.22-py2.py3-none-any.whl (132kB)
+Collecting certifi>=2017.4.17 (from requests>=1.2.3->-r requirements.txt (line 5))
+  Downloading certifi-2018.1.18-py2.py3-none-any.whl (151kB)
+Collecting chardet<3.1.0,>=3.0.2 (from requests>=1.2.3->-r requirements.txt (line 5))
+  Downloading chardet-3.0.4-py2.py3-none-any.whl (133kB)
+Collecting pbr!=2.1.0,>=2.0.0 (from stevedore>=0.14->-r requirements.txt (line 9))
+  Downloading pbr-3.1.1-py2.py3-none-any.whl (99kB)
+Installing collected packages: backports.lzma, idna, urllib3, certifi, chardet, requests, pbr, stevedore
+  Running setup.py install for backports.lzma: started
+    Running setup.py install for backports.lzma: finished with status 'done'
+Successfully installed backports.lzma-0.0.10 certifi-2018.1.18 chardet-3.0.4 idna-2.6 pbr-3.1.1 requests-2.18.4 stevedore-1.28.0 urllib3-1.22
+running install
+running bdist_egg
+running egg_info
+creating avocado_framework.egg-info
+writing requirements to avocado_framework.egg-info/requires.txt
+writing avocado_framework.egg-info/PKG-INFO
+writing top-level names to avocado_framework.egg-info/top_level.txt
+writing dependency_links to avocado_framework.egg-info/dependency_links.txt
+writing entry points to avocado_framework.egg-info/entry_points.txt
+writing manifest file 'avocado_framework.egg-info/SOURCES.txt'
+reading manifest file 'avocado_framework.egg-info/SOURCES.txt'
+reading manifest template 'MANIFEST.in'
+writing manifest file 'avocado_framework.egg-info/SOURCES.txt'
+installing library code to build/bdist.linux-x86_64/egg
+running install_lib
+running build_py
+creating build
+creating build/lib.linux-x86_64-2.7
+creating build/lib.linux-x86_64-2.7/avocado
+copying avocado/__init__.py -> build/lib.linux-x86_64-2.7/avocado
+copying avocado/__main__.py -> build/lib.linux-x86_64-2.7/avocado
+creating build/lib.linux-x86_64-2.7/avocado/plugins
+copying avocado/plugins/wrapper.py -> build/lib.linux-x86_64-2.7/avocado/plugins
+copying avocado/plugins/list.py -> build/lib.linux-x86_64-2.7/avocado/plugins
+copying avocado/plugins/plugins.py -> build/lib.linux-x86_64-2.7/avocado/plugins
+copying avocado/plugins/gdb.py -> build/lib.linux-x86_64-2.7/avocado/plugins
+copying avocado/plugins/human.py -> build/lib.linux-x86_64-2.7/avocado/plugins
+copying avocado/plugins/variants.py -> build/lib.linux-x86_64-2.7/avocado/plugins
+copying avocado/plugins/exec_path.py -> build/lib.linux-x86_64-2.7/avocado/plugins
+copying avocado/plugins/json_variants.py -> build/lib.linux-x86_64-2.7/avocado/plugins
+copying avocado/plugins/jsonresult.py -> build/lib.linux-x86_64-2.7/avocado/plugins
+copying avocado/plugins/distro.py -> build/lib.linux-x86_64-2.7/avocado/plugins
+copying avocado/plugins/archive.py -> build/lib.linux-x86_64-2.7/avocado/plugins
+copying avocado/plugins/__init__.py -> build/lib.linux-x86_64-2.7/avocado/plugins
+copying avocado/plugins/sysinfo.py -> build/lib.linux-x86_64-2.7/avocado/plugins
+copying avocado/plugins/envkeep.py -> build/lib.linux-x86_64-2.7/avocado/plugins
+copying avocado/plugins/tap.py -> build/lib.linux-x86_64-2.7/avocado/plugins
+copying avocado/plugins/multiplex.py -> build/lib.linux-x86_64-2.7/avocado/plugins
+copying avocado/plugins/diff.py -> build/lib.linux-x86_64-2.7/avocado/plugins
+copying avocado/plugins/replay.py -> build/lib.linux-x86_64-2.7/avocado/plugins
+copying avocado/plugins/jobscripts.py -> build/lib.linux-x86_64-2.7/avocado/plugins
+copying avocado/plugins/teststmpdir.py -> build/lib.linux-x86_64-2.7/avocado/plugins
+copying avocado/plugins/config.py -> build/lib.linux-x86_64-2.7/avocado/plugins
+copying avocado/plugins/xunit.py -> build/lib.linux-x86_64-2.7/avocado/plugins
+copying avocado/plugins/run.py -> build/lib.linux-x86_64-2.7/avocado/plugins
+copying avocado/plugins/journal.py -> build/lib.linux-x86_64-2.7/avocado/plugins
+creating build/lib.linux-x86_64-2.7/avocado/utils
+copying avocado/utils/debug.py -> build/lib.linux-x86_64-2.7/avocado/utils
+copying avocado/utils/partition.py -> build/lib.linux-x86_64-2.7/avocado/utils
+copying avocado/utils/filelock.py -> build/lib.linux-x86_64-2.7/avocado/utils
+copying avocado/utils/gdb.py -> build/lib.linux-x86_64-2.7/avocado/utils
+copying avocado/utils/wait.py -> build/lib.linux-x86_64-2.7/avocado/utils
+copying avocado/utils/iso9660.py -> build/lib.linux-x86_64-2.7/avocado/utils
+copying avocado/utils/distro.py -> build/lib.linux-x86_64-2.7/avocado/utils
+copying avocado/utils/archive.py -> build/lib.linux-x86_64-2.7/avocado/utils
+copying avocado/utils/__init__.py -> build/lib.linux-x86_64-2.7/avocado/utils
+copying avocado/utils/crypto.py -> build/lib.linux-x86_64-2.7/avocado/utils
+copying avocado/utils/path.py -> build/lib.linux-x86_64-2.7/avocado/utils
+copying avocado/utils/astring.py -> build/lib.linux-x86_64-2.7/avocado/utils
+copying avocado/utils/cpu.py -> build/lib.linux-x86_64-2.7/avocado/utils
+copying avocado/utils/lv_utils.py -> build/lib.linux-x86_64-2.7/avocado/utils
+copying avocado/utils/vmimage.py -> build/lib.linux-x86_64-2.7/avocado/utils
+copying avocado/utils/script.py -> build/lib.linux-x86_64-2.7/avocado/utils
+copying avocado/utils/software_manager.py -> build/lib.linux-x86_64-2.7/avocado/utils
+copying avocado/utils/service.py -> build/lib.linux-x86_64-2.7/avocado/utils
+copying avocado/utils/genio.py -> build/lib.linux-x86_64-2.7/avocado/utils
+copying avocado/utils/memory.py -> build/lib.linux-x86_64-2.7/avocado/utils
+copying avocado/utils/build.py -> build/lib.linux-x86_64-2.7/avocado/utils
+copying avocado/utils/disk.py -> build/lib.linux-x86_64-2.7/avocado/utils
+copying avocado/utils/data_factory.py -> build/lib.linux-x86_64-2.7/avocado/utils
+copying avocado/utils/download.py -> build/lib.linux-x86_64-2.7/avocado/utils
+copying avocado/utils/aurl.py -> build/lib.linux-x86_64-2.7/avocado/utils
+copying avocado/utils/linux_modules.py -> build/lib.linux-x86_64-2.7/avocado/utils
+copying avocado/utils/git.py -> build/lib.linux-x86_64-2.7/avocado/utils
+copying avocado/utils/runtime.py -> build/lib.linux-x86_64-2.7/avocado/utils
+copying avocado/utils/process.py -> build/lib.linux-x86_64-2.7/avocado/utils
+copying avocado/utils/stacktrace.py -> build/lib.linux-x86_64-2.7/avocado/utils
+copying avocado/utils/kernel.py -> build/lib.linux-x86_64-2.7/avocado/utils
+copying avocado/utils/output.py -> build/lib.linux-x86_64-2.7/avocado/utils
+copying avocado/utils/asset.py -> build/lib.linux-x86_64-2.7/avocado/utils
+copying avocado/utils/pci.py -> build/lib.linux-x86_64-2.7/avocado/utils
+copying avocado/utils/data_structures.py -> build/lib.linux-x86_64-2.7/avocado/utils
+copying avocado/utils/network.py -> build/lib.linux-x86_64-2.7/avocado/utils
+copying avocado/utils/multipath.py -> build/lib.linux-x86_64-2.7/avocado/utils
+creating build/lib.linux-x86_64-2.7/avocado/core
+copying avocado/core/tree.py -> build/lib.linux-x86_64-2.7/avocado/core
+copying avocado/core/plugin_interfaces.py -> build/lib.linux-x86_64-2.7/avocado/core
+copying avocado/core/varianter.py -> build/lib.linux-x86_64-2.7/avocado/core
+copying avocado/core/settings.py -> build/lib.linux-x86_64-2.7/avocado/core
+copying avocado/core/test.py -> build/lib.linux-x86_64-2.7/avocado/core
+copying avocado/core/safeloader.py -> build/lib.linux-x86_64-2.7/avocado/core
+copying avocado/core/decorators.py -> build/lib.linux-x86_64-2.7/avocado/core
+copying avocado/core/job.py -> build/lib.linux-x86_64-2.7/avocado/core
+copying avocado/core/loader.py -> build/lib.linux-x86_64-2.7/avocado/core
+copying avocado/core/job_id.py -> build/lib.linux-x86_64-2.7/avocado/core
+copying avocado/core/__init__.py -> build/lib.linux-x86_64-2.7/avocado/core
+copying avocado/core/exit_codes.py -> build/lib.linux-x86_64-2.7/avocado/core
+copying avocado/core/sysinfo.py -> build/lib.linux-x86_64-2.7/avocado/core
+copying avocado/core/dispatcher.py -> build/lib.linux-x86_64-2.7/avocado/core
+copying avocado/core/version.py -> build/lib.linux-x86_64-2.7/avocado/core
+copying avocado/core/status.py -> build/lib.linux-x86_64-2.7/avocado/core
+copying avocado/core/data_dir.py -> build/lib.linux-x86_64-2.7/avocado/core
+copying avocado/core/jobdata.py -> build/lib.linux-x86_64-2.7/avocado/core
+copying avocado/core/parser.py -> build/lib.linux-x86_64-2.7/avocado/core
+copying avocado/core/app.py -> build/lib.linux-x86_64-2.7/avocado/core
+copying avocado/core/runner.py -> build/lib.linux-x86_64-2.7/avocado/core
+copying avocado/core/result.py -> build/lib.linux-x86_64-2.7/avocado/core
+copying avocado/core/output.py -> build/lib.linux-x86_64-2.7/avocado/core
+copying avocado/core/exceptions.py -> build/lib.linux-x86_64-2.7/avocado/core
+copying avocado/core/parameters.py -> build/lib.linux-x86_64-2.7/avocado/core
+creating build/lib.linux-x86_64-2.7/avocado/utils/external
+copying avocado/utils/external/spark.py -> build/lib.linux-x86_64-2.7/avocado/utils/external
+copying avocado/utils/external/gdbmi_parser.py -> build/lib.linux-x86_64-2.7/avocado/utils/external
+copying avocado/utils/external/__init__.py -> build/lib.linux-x86_64-2.7/avocado/utils/external
+creating build/lib.linux-x86_64-2.7/avocado/core/restclient
+copying avocado/core/restclient/connection.py -> build/lib.linux-x86_64-2.7/avocado/core/restclient
+copying avocado/core/restclient/response.py -> build/lib.linux-x86_64-2.7/avocado/core/restclient
+copying avocado/core/restclient/__init__.py -> build/lib.linux-x86_64-2.7/avocado/core/restclient
+creating build/lib.linux-x86_64-2.7/avocado/core/restclient/cli
+copying avocado/core/restclient/cli/__init__.py -> build/lib.linux-x86_64-2.7/avocado/core/restclient/cli
+copying avocado/core/restclient/cli/parser.py -> build/lib.linux-x86_64-2.7/avocado/core/restclient/cli
+copying avocado/core/restclient/cli/app.py -> build/lib.linux-x86_64-2.7/avocado/core/restclient/cli
+creating build/lib.linux-x86_64-2.7/avocado/core/restclient/cli/actions
+copying avocado/core/restclient/cli/actions/base.py -> build/lib.linux-x86_64-2.7/avocado/core/restclient/cli/actions
+copying avocado/core/restclient/cli/actions/__init__.py -> build/lib.linux-x86_64-2.7/avocado/core/restclient/cli/actions
+copying avocado/core/restclient/cli/actions/server.py -> build/lib.linux-x86_64-2.7/avocado/core/restclient/cli/actions
+creating build/lib.linux-x86_64-2.7/avocado/core/restclient/cli/args
+copying avocado/core/restclient/cli/args/base.py -> build/lib.linux-x86_64-2.7/avocado/core/restclient/cli/args
+copying avocado/core/restclient/cli/args/__init__.py -> build/lib.linux-x86_64-2.7/avocado/core/restclient/cli/args
+copying avocado/core/restclient/cli/args/server.py -> build/lib.linux-x86_64-2.7/avocado/core/restclient/cli/args
+creating build/lib.linux-x86_64-2.7/avocado/etc
+creating build/lib.linux-x86_64-2.7/avocado/etc/avocado
+copying avocado/etc/avocado/avocado.conf -> build/lib.linux-x86_64-2.7/avocado/etc/avocado
+creating build/lib.linux-x86_64-2.7/avocado/etc/avocado/conf.d
+copying avocado/etc/avocado/conf.d/README -> build/lib.linux-x86_64-2.7/avocado/etc/avocado/conf.d
+copying avocado/etc/avocado/conf.d/gdb.conf -> build/lib.linux-x86_64-2.7/avocado/etc/avocado/conf.d
+copying avocado/etc/avocado/conf.d/jobscripts.conf -> build/lib.linux-x86_64-2.7/avocado/etc/avocado/conf.d
+copying avocado/etc/avocado/conf.d/result_upload.conf -> build/lib.linux-x86_64-2.7/avocado/etc/avocado/conf.d
+copying avocado/etc/avocado/conf.d/resultsdb.conf -> build/lib.linux-x86_64-2.7/avocado/etc/avocado/conf.d
+creating build/lib.linux-x86_64-2.7/avocado/etc/avocado/scripts
+creating build/lib.linux-x86_64-2.7/avocado/etc/avocado/scripts/job
+creating build/lib.linux-x86_64-2.7/avocado/etc/avocado/scripts/job/post.d
+copying avocado/etc/avocado/scripts/job/post.d/README -> build/lib.linux-x86_64-2.7/avocado/etc/avocado/scripts/job/post.d
+creating build/lib.linux-x86_64-2.7/avocado/etc/avocado/scripts/job/pre.d
+copying avocado/etc/avocado/scripts/job/pre.d/README -> build/lib.linux-x86_64-2.7/avocado/etc/avocado/scripts/job/pre.d
+creating build/lib.linux-x86_64-2.7/avocado/etc/avocado/sysinfo
+copying avocado/etc/avocado/sysinfo/commands -> build/lib.linux-x86_64-2.7/avocado/etc/avocado/sysinfo
+copying avocado/etc/avocado/sysinfo/files -> build/lib.linux-x86_64-2.7/avocado/etc/avocado/sysinfo
+copying avocado/etc/avocado/sysinfo/profilers -> build/lib.linux-x86_64-2.7/avocado/etc/avocado/sysinfo
+creating build/lib.linux-x86_64-2.7/avocado/libexec
+copying avocado/libexec/avocado-bash-utils -> build/lib.linux-x86_64-2.7/avocado/libexec
+copying avocado/libexec/avocado_debug -> build/lib.linux-x86_64-2.7/avocado/libexec
+copying avocado/libexec/avocado_error -> build/lib.linux-x86_64-2.7/avocado/libexec
+copying avocado/libexec/avocado_info -> build/lib.linux-x86_64-2.7/avocado/libexec
+copying avocado/libexec/avocado_warn -> build/lib.linux-x86_64-2.7/avocado/libexec
+creating build/bdist.linux-x86_64
+creating build/bdist.linux-x86_64/egg
+creating build/bdist.linux-x86_64/egg/avocado
+creating build/bdist.linux-x86_64/egg/avocado/plugins
+copying build/lib.linux-x86_64-2.7/avocado/plugins/wrapper.py -> build/bdist.linux-x86_64/egg/avocado/plugins
+copying build/lib.linux-x86_64-2.7/avocado/plugins/list.py -> build/bdist.linux-x86_64/egg/avocado/plugins
+copying build/lib.linux-x86_64-2.7/avocado/plugins/plugins.py -> build/bdist.linux-x86_64/egg/avocado/plugins
+copying build/lib.linux-x86_64-2.7/avocado/plugins/gdb.py -> build/bdist.linux-x86_64/egg/avocado/plugins
+copying build/lib.linux-x86_64-2.7/avocado/plugins/human.py -> build/bdist.linux-x86_64/egg/avocado/plugins
+copying build/lib.linux-x86_64-2.7/avocado/plugins/variants.py -> build/bdist.linux-x86_64/egg/avocado/plugins
+copying build/lib.linux-x86_64-2.7/avocado/plugins/exec_path.py -> build/bdist.linux-x86_64/egg/avocado/plugins
+copying build/lib.linux-x86_64-2.7/avocado/plugins/json_variants.py -> build/bdist.linux-x86_64/egg/avocado/plugins
+copying build/lib.linux-x86_64-2.7/avocado/plugins/jsonresult.py -> build/bdist.linux-x86_64/egg/avocado/plugins
+copying build/lib.linux-x86_64-2.7/avocado/plugins/distro.py -> build/bdist.linux-x86_64/egg/avocado/plugins
+copying build/lib.linux-x86_64-2.7/avocado/plugins/archive.py -> build/bdist.linux-x86_64/egg/avocado/plugins
+copying build/lib.linux-x86_64-2.7/avocado/plugins/__init__.py -> build/bdist.linux-x86_64/egg/avocado/plugins
+copying build/lib.linux-x86_64-2.7/avocado/plugins/sysinfo.py -> build/bdist.linux-x86_64/egg/avocado/plugins
+copying build/lib.linux-x86_64-2.7/avocado/plugins/envkeep.py -> build/bdist.linux-x86_64/egg/avocado/plugins
+copying build/lib.linux-x86_64-2.7/avocado/plugins/tap.py -> build/bdist.linux-x86_64/egg/avocado/plugins
+copying build/lib.linux-x86_64-2.7/avocado/plugins/multiplex.py -> build/bdist.linux-x86_64/egg/avocado/plugins
+copying build/lib.linux-x86_64-2.7/avocado/plugins/diff.py -> build/bdist.linux-x86_64/egg/avocado/plugins
+copying build/lib.linux-x86_64-2.7/avocado/plugins/replay.py -> build/bdist.linux-x86_64/egg/avocado/plugins
+copying build/lib.linux-x86_64-2.7/avocado/plugins/jobscripts.py -> build/bdist.linux-x86_64/egg/avocado/plugins
+copying build/lib.linux-x86_64-2.7/avocado/plugins/teststmpdir.py -> build/bdist.linux-x86_64/egg/avocado/plugins
+copying build/lib.linux-x86_64-2.7/avocado/plugins/config.py -> build/bdist.linux-x86_64/egg/avocado/plugins
+copying build/lib.linux-x86_64-2.7/avocado/plugins/xunit.py -> build/bdist.linux-x86_64/egg/avocado/plugins
+copying build/lib.linux-x86_64-2.7/avocado/plugins/run.py -> build/bdist.linux-x86_64/egg/avocado/plugins
+copying build/lib.linux-x86_64-2.7/avocado/plugins/journal.py -> build/bdist.linux-x86_64/egg/avocado/plugins
+creating build/bdist.linux-x86_64/egg/avocado/utils
+copying build/lib.linux-x86_64-2.7/avocado/utils/debug.py -> build/bdist.linux-x86_64/egg/avocado/utils
+copying build/lib.linux-x86_64-2.7/avocado/utils/partition.py -> build/bdist.linux-x86_64/egg/avocado/utils
+copying build/lib.linux-x86_64-2.7/avocado/utils/filelock.py -> build/bdist.linux-x86_64/egg/avocado/utils
+copying build/lib.linux-x86_64-2.7/avocado/utils/gdb.py -> build/bdist.linux-x86_64/egg/avocado/utils
+copying build/lib.linux-x86_64-2.7/avocado/utils/wait.py -> build/bdist.linux-x86_64/egg/avocado/utils
+creating build/bdist.linux-x86_64/egg/avocado/utils/external
+copying build/lib.linux-x86_64-2.7/avocado/utils/external/spark.py -> build/bdist.linux-x86_64/egg/avocado/utils/external
+copying build/lib.linux-x86_64-2.7/avocado/utils/external/gdbmi_parser.py -> build/bdist.linux-x86_64/egg/avocado/utils/external
+copying build/lib.linux-x86_64-2.7/avocado/utils/external/__init__.py -> build/bdist.linux-x86_64/egg/avocado/utils/external
+copying build/lib.linux-x86_64-2.7/avocado/utils/iso9660.py -> build/bdist.linux-x86_64/egg/avocado/utils
+copying build/lib.linux-x86_64-2.7/avocado/utils/distro.py -> build/bdist.linux-x86_64/egg/avocado/utils
+copying build/lib.linux-x86_64-2.7/avocado/utils/archive.py -> build/bdist.linux-x86_64/egg/avocado/utils
+copying build/lib.linux-x86_64-2.7/avocado/utils/__init__.py -> build/bdist.linux-x86_64/egg/avocado/utils
+copying build/lib.linux-x86_64-2.7/avocado/utils/crypto.py -> build/bdist.linux-x86_64/egg/avocado/utils
+copying build/lib.linux-x86_64-2.7/avocado/utils/path.py -> build/bdist.linux-x86_64/egg/avocado/utils
+copying build/lib.linux-x86_64-2.7/avocado/utils/astring.py -> build/bdist.linux-x86_64/egg/avocado/utils
+copying build/lib.linux-x86_64-2.7/avocado/utils/cpu.py -> build/bdist.linux-x86_64/egg/avocado/utils
+copying build/lib.linux-x86_64-2.7/avocado/utils/lv_utils.py -> build/bdist.linux-x86_64/egg/avocado/utils
+copying build/lib.linux-x86_64-2.7/avocado/utils/vmimage.py -> build/bdist.linux-x86_64/egg/avocado/utils
+copying build/lib.linux-x86_64-2.7/avocado/utils/script.py -> build/bdist.linux-x86_64/egg/avocado/utils
+copying build/lib.linux-x86_64-2.7/avocado/utils/software_manager.py -> build/bdist.linux-x86_64/egg/avocado/utils
+copying build/lib.linux-x86_64-2.7/avocado/utils/service.py -> build/bdist.linux-x86_64/egg/avocado/utils
+copying build/lib.linux-x86_64-2.7/avocado/utils/genio.py -> build/bdist.linux-x86_64/egg/avocado/utils
+copying build/lib.linux-x86_64-2.7/avocado/utils/memory.py -> build/bdist.linux-x86_64/egg/avocado/utils
+copying build/lib.linux-x86_64-2.7/avocado/utils/build.py -> build/bdist.linux-x86_64/egg/avocado/utils
+copying build/lib.linux-x86_64-2.7/avocado/utils/disk.py -> build/bdist.linux-x86_64/egg/avocado/utils
+copying build/lib.linux-x86_64-2.7/avocado/utils/data_factory.py -> build/bdist.linux-x86_64/egg/avocado/utils
+copying build/lib.linux-x86_64-2.7/avocado/utils/download.py -> build/bdist.linux-x86_64/egg/avocado/utils
+copying build/lib.linux-x86_64-2.7/avocado/utils/aurl.py -> build/bdist.linux-x86_64/egg/avocado/utils
+copying build/lib.linux-x86_64-2.7/avocado/utils/linux_modules.py -> build/bdist.linux-x86_64/egg/avocado/utils
+copying build/lib.linux-x86_64-2.7/avocado/utils/git.py -> build/bdist.linux-x86_64/egg/avocado/utils
+copying build/lib.linux-x86_64-2.7/avocado/utils/runtime.py -> build/bdist.linux-x86_64/egg/avocado/utils
+copying build/lib.linux-x86_64-2.7/avocado/utils/process.py -> build/bdist.linux-x86_64/egg/avocado/utils
+copying build/lib.linux-x86_64-2.7/avocado/utils/stacktrace.py -> build/bdist.linux-x86_64/egg/avocado/utils
+copying build/lib.linux-x86_64-2.7/avocado/utils/kernel.py -> build/bdist.linux-x86_64/egg/avocado/utils
+copying build/lib.linux-x86_64-2.7/avocado/utils/output.py -> build/bdist.linux-x86_64/egg/avocado/utils
+copying build/lib.linux-x86_64-2.7/avocado/utils/asset.py -> build/bdist.linux-x86_64/egg/avocado/utils
+copying build/lib.linux-x86_64-2.7/avocado/utils/pci.py -> build/bdist.linux-x86_64/egg/avocado/utils
+copying build/lib.linux-x86_64-2.7/avocado/utils/data_structures.py -> build/bdist.linux-x86_64/egg/avocado/utils
+copying build/lib.linux-x86_64-2.7/avocado/utils/network.py -> build/bdist.linux-x86_64/egg/avocado/utils
+copying build/lib.linux-x86_64-2.7/avocado/utils/multipath.py -> build/bdist.linux-x86_64/egg/avocado/utils
+creating build/bdist.linux-x86_64/egg/avocado/core
+copying build/lib.linux-x86_64-2.7/avocado/core/tree.py -> build/bdist.linux-x86_64/egg/avocado/core
+copying build/lib.linux-x86_64-2.7/avocado/core/plugin_interfaces.py -> build/bdist.linux-x86_64/egg/avocado/core
+copying build/lib.linux-x86_64-2.7/avocado/core/varianter.py -> build/bdist.linux-x86_64/egg/avocado/core
+copying build/lib.linux-x86_64-2.7/avocado/core/settings.py -> build/bdist.linux-x86_64/egg/avocado/core
+copying build/lib.linux-x86_64-2.7/avocado/core/test.py -> build/bdist.linux-x86_64/egg/avocado/core
+copying build/lib.linux-x86_64-2.7/avocado/core/safeloader.py -> build/bdist.linux-x86_64/egg/avocado/core
+copying build/lib.linux-x86_64-2.7/avocado/core/decorators.py -> build/bdist.linux-x86_64/egg/avocado/core
+copying build/lib.linux-x86_64-2.7/avocado/core/job.py -> build/bdist.linux-x86_64/egg/avocado/core
+copying build/lib.linux-x86_64-2.7/avocado/core/loader.py -> build/bdist.linux-x86_64/egg/avocado/core
+copying build/lib.linux-x86_64-2.7/avocado/core/job_id.py -> build/bdist.linux-x86_64/egg/avocado/core
+copying build/lib.linux-x86_64-2.7/avocado/core/__init__.py -> build/bdist.linux-x86_64/egg/avocado/core
+copying build/lib.linux-x86_64-2.7/avocado/core/exit_codes.py -> build/bdist.linux-x86_64/egg/avocado/core
+copying build/lib.linux-x86_64-2.7/avocado/core/sysinfo.py -> build/bdist.linux-x86_64/egg/avocado/core
+copying build/lib.linux-x86_64-2.7/avocado/core/dispatcher.py -> build/bdist.linux-x86_64/egg/avocado/core
+copying build/lib.linux-x86_64-2.7/avocado/core/version.py -> build/bdist.linux-x86_64/egg/avocado/core
+copying build/lib.linux-x86_64-2.7/avocado/core/status.py -> build/bdist.linux-x86_64/egg/avocado/core
+copying build/lib.linux-x86_64-2.7/avocado/core/data_dir.py -> build/bdist.linux-x86_64/egg/avocado/core
+copying build/lib.linux-x86_64-2.7/avocado/core/jobdata.py -> build/bdist.linux-x86_64/egg/avocado/core
+creating build/bdist.linux-x86_64/egg/avocado/core/restclient
+copying build/lib.linux-x86_64-2.7/avocado/core/restclient/connection.py -> build/bdist.linux-x86_64/egg/avocado/core/restclient
+copying build/lib.linux-x86_64-2.7/avocado/core/restclient/response.py -> build/bdist.linux-x86_64/egg/avocado/core/restclient
+copying build/lib.linux-x86_64-2.7/avocado/core/restclient/__init__.py -> build/bdist.linux-x86_64/egg/avocado/core/restclient
+creating build/bdist.linux-x86_64/egg/avocado/core/restclient/cli
+creating build/bdist.linux-x86_64/egg/avocado/core/restclient/cli/actions
+copying build/lib.linux-x86_64-2.7/avocado/core/restclient/cli/actions/base.py -> build/bdist.linux-x86_64/egg/avocado/core/restclient/cli/actions
+copying build/lib.linux-x86_64-2.7/avocado/core/restclient/cli/actions/__init__.py -> build/bdist.linux-x86_64/egg/avocado/core/restclient/cli/actions
+copying build/lib.linux-x86_64-2.7/avocado/core/restclient/cli/actions/server.py -> build/bdist.linux-x86_64/egg/avocado/core/restclient/cli/actions
+creating build/bdist.linux-x86_64/egg/avocado/core/restclient/cli/args
+copying build/lib.linux-x86_64-2.7/avocado/core/restclient/cli/args/base.py -> build/bdist.linux-x86_64/egg/avocado/core/restclient/cli/args
+copying build/lib.linux-x86_64-2.7/avocado/core/restclient/cli/args/__init__.py -> build/bdist.linux-x86_64/egg/avocado/core/restclient/cli/args
+copying build/lib.linux-x86_64-2.7/avocado/core/restclient/cli/args/server.py -> build/bdist.linux-x86_64/egg/avocado/core/restclient/cli/args
+copying build/lib.linux-x86_64-2.7/avocado/core/restclient/cli/__init__.py -> build/bdist.linux-x86_64/egg/avocado/core/restclient/cli
+copying build/lib.linux-x86_64-2.7/avocado/core/restclient/cli/parser.py -> build/bdist.linux-x86_64/egg/avocado/core/restclient/cli
+copying build/lib.linux-x86_64-2.7/avocado/core/restclient/cli/app.py -> build/bdist.linux-x86_64/egg/avocado/core/restclient/cli
+copying build/lib.linux-x86_64-2.7/avocado/core/parser.py -> build/bdist.linux-x86_64/egg/avocado/core
+copying build/lib.linux-x86_64-2.7/avocado/core/app.py -> build/bdist.linux-x86_64/egg/avocado/core
+copying build/lib.linux-x86_64-2.7/avocado/core/runner.py -> build/bdist.linux-x86_64/egg/avocado/core
+copying build/lib.linux-x86_64-2.7/avocado/core/result.py -> build/bdist.linux-x86_64/egg/avocado/core
+copying build/lib.linux-x86_64-2.7/avocado/core/output.py -> build/bdist.linux-x86_64/egg/avocado/core
+copying build/lib.linux-x86_64-2.7/avocado/core/exceptions.py -> build/bdist.linux-x86_64/egg/avocado/core
+copying build/lib.linux-x86_64-2.7/avocado/core/parameters.py -> build/bdist.linux-x86_64/egg/avocado/core
+creating build/bdist.linux-x86_64/egg/avocado/libexec
+copying build/lib.linux-x86_64-2.7/avocado/libexec/avocado_info -> build/bdist.linux-x86_64/egg/avocado/libexec
+copying build/lib.linux-x86_64-2.7/avocado/libexec/avocado_error -> build/bdist.linux-x86_64/egg/avocado/libexec
+copying build/lib.linux-x86_64-2.7/avocado/libexec/avocado-bash-utils -> build/bdist.linux-x86_64/egg/avocado/libexec
+copying build/lib.linux-x86_64-2.7/avocado/libexec/avocado_debug -> build/bdist.linux-x86_64/egg/avocado/libexec
+copying build/lib.linux-x86_64-2.7/avocado/libexec/avocado_warn -> build/bdist.linux-x86_64/egg/avocado/libexec
+copying build/lib.linux-x86_64-2.7/avocado/__init__.py -> build/bdist.linux-x86_64/egg/avocado
+copying build/lib.linux-x86_64-2.7/avocado/__main__.py -> build/bdist.linux-x86_64/egg/avocado
+creating build/bdist.linux-x86_64/egg/avocado/etc
+creating build/bdist.linux-x86_64/egg/avocado/etc/avocado
+creating build/bdist.linux-x86_64/egg/avocado/etc/avocado/sysinfo
+copying build/lib.linux-x86_64-2.7/avocado/etc/avocado/sysinfo/commands -> build/bdist.linux-x86_64/egg/avocado/etc/avocado/sysinfo
+copying build/lib.linux-x86_64-2.7/avocado/etc/avocado/sysinfo/profilers -> build/bdist.linux-x86_64/egg/avocado/etc/avocado/sysinfo
+copying build/lib.linux-x86_64-2.7/avocado/etc/avocado/sysinfo/files -> build/bdist.linux-x86_64/egg/avocado/etc/avocado/sysinfo
+creating build/bdist.linux-x86_64/egg/avocado/etc/avocado/conf.d
+copying build/lib.linux-x86_64-2.7/avocado/etc/avocado/conf.d/resultsdb.conf -> build/bdist.linux-x86_64/egg/avocado/etc/avocado/conf.d
+copying build/lib.linux-x86_64-2.7/avocado/etc/avocado/conf.d/result_upload.conf -> build/bdist.linux-x86_64/egg/avocado/etc/avocado/conf.d
+copying build/lib.linux-x86_64-2.7/avocado/etc/avocado/conf.d/README -> build/bdist.linux-x86_64/egg/avocado/etc/avocado/conf.d
+copying build/lib.linux-x86_64-2.7/avocado/etc/avocado/conf.d/jobscripts.conf -> build/bdist.linux-x86_64/egg/avocado/etc/avocado/conf.d
+copying build/lib.linux-x86_64-2.7/avocado/etc/avocado/conf.d/gdb.conf -> build/bdist.linux-x86_64/egg/avocado/etc/avocado/conf.d
+copying build/lib.linux-x86_64-2.7/avocado/etc/avocado/avocado.conf -> build/bdist.linux-x86_64/egg/avocado/etc/avocado
+creating build/bdist.linux-x86_64/egg/avocado/etc/avocado/scripts
+creating build/bdist.linux-x86_64/egg/avocado/etc/avocado/scripts/job
+creating build/bdist.linux-x86_64/egg/avocado/etc/avocado/scripts/job/post.d
+copying build/lib.linux-x86_64-2.7/avocado/etc/avocado/scripts/job/post.d/README -> build/bdist.linux-x86_64/egg/avocado/etc/avocado/scripts/job/post.d
+creating build/bdist.linux-x86_64/egg/avocado/etc/avocado/scripts/job/pre.d
+copying build/lib.linux-x86_64-2.7/avocado/etc/avocado/scripts/job/pre.d/README -> build/bdist.linux-x86_64/egg/avocado/etc/avocado/scripts/job/pre.d
+byte-compiling build/bdist.linux-x86_64/egg/avocado/plugins/wrapper.py to wrapper.pyc
+byte-compiling build/bdist.linux-x86_64/egg/avocado/plugins/list.py to list.pyc
+byte-compiling build/bdist.linux-x86_64/egg/avocado/plugins/plugins.py to plugins.pyc
+byte-compiling build/bdist.linux-x86_64/egg/avocado/plugins/gdb.py to gdb.pyc
+byte-compiling build/bdist.linux-x86_64/egg/avocado/plugins/human.py to human.pyc
+byte-compiling build/bdist.linux-x86_64/egg/avocado/plugins/variants.py to variants.pyc
+byte-compiling build/bdist.linux-x86_64/egg/avocado/plugins/exec_path.py to exec_path.pyc
+byte-compiling build/bdist.linux-x86_64/egg/avocado/plugins/json_variants.py to json_variants.pyc
+byte-compiling build/bdist.linux-x86_64/egg/avocado/plugins/jsonresult.py to jsonresult.pyc
+byte-compiling build/bdist.linux-x86_64/egg/avocado/plugins/distro.py to distro.pyc
+byte-compiling build/bdist.linux-x86_64/egg/avocado/plugins/archive.py to archive.pyc
+byte-compiling build/bdist.linux-x86_64/egg/avocado/plugins/__init__.py to __init__.pyc
+byte-compiling build/bdist.linux-x86_64/egg/avocado/plugins/sysinfo.py to sysinfo.pyc
+byte-compiling build/bdist.linux-x86_64/egg/avocado/plugins/envkeep.py to envkeep.pyc
+byte-compiling build/bdist.linux-x86_64/egg/avocado/plugins/tap.py to tap.pyc
+byte-compiling build/bdist.linux-x86_64/egg/avocado/plugins/multiplex.py to multiplex.pyc
+byte-compiling build/bdist.linux-x86_64/egg/avocado/plugins/diff.py to diff.pyc
+byte-compiling build/bdist.linux-x86_64/egg/avocado/plugins/replay.py to replay.pyc
+byte-compiling build/bdist.linux-x86_64/egg/avocado/plugins/jobscripts.py to jobscripts.pyc
+byte-compiling build/bdist.linux-x86_64/egg/avocado/plugins/teststmpdir.py to teststmpdir.pyc
+byte-compiling build/bdist.linux-x86_64/egg/avocado/plugins/config.py to config.pyc
+byte-compiling build/bdist.linux-x86_64/egg/avocado/plugins/xunit.py to xunit.pyc
+byte-compiling build/bdist.linux-x86_64/egg/avocado/plugins/run.py to run.pyc
+byte-compiling build/bdist.linux-x86_64/egg/avocado/plugins/journal.py to journal.pyc
+byte-compiling build/bdist.linux-x86_64/egg/avocado/utils/debug.py to debug.pyc
+byte-compiling build/bdist.linux-x86_64/egg/avocado/utils/partition.py to partition.pyc
+byte-compiling build/bdist.linux-x86_64/egg/avocado/utils/filelock.py to filelock.pyc
+byte-compiling build/bdist.linux-x86_64/egg/avocado/utils/gdb.py to gdb.pyc
+byte-compiling build/bdist.linux-x86_64/egg/avocado/utils/wait.py to wait.pyc
+byte-compiling build/bdist.linux-x86_64/egg/avocado/utils/external/spark.py to spark.pyc
+byte-compiling build/bdist.linux-x86_64/egg/avocado/utils/external/gdbmi_parser.py to gdbmi_parser.pyc
+byte-compiling build/bdist.linux-x86_64/egg/avocado/utils/external/__init__.py to __init__.pyc
+byte-compiling build/bdist.linux-x86_64/egg/avocado/utils/iso9660.py to iso9660.pyc
+byte-compiling build/bdist.linux-x86_64/egg/avocado/utils/distro.py to distro.pyc
+byte-compiling build/bdist.linux-x86_64/egg/avocado/utils/archive.py to archive.pyc
+byte-compiling build/bdist.linux-x86_64/egg/avocado/utils/__init__.py to __init__.pyc
+byte-compiling build/bdist.linux-x86_64/egg/avocado/utils/crypto.py to crypto.pyc
+byte-compiling build/bdist.linux-x86_64/egg/avocado/utils/path.py to path.pyc
+byte-compiling build/bdist.linux-x86_64/egg/avocado/utils/astring.py to astring.pyc
+byte-compiling build/bdist.linux-x86_64/egg/avocado/utils/cpu.py to cpu.pyc
+byte-compiling build/bdist.linux-x86_64/egg/avocado/utils/lv_utils.py to lv_utils.pyc
+byte-compiling build/bdist.linux-x86_64/egg/avocado/utils/vmimage.py to vmimage.pyc
+byte-compiling build/bdist.linux-x86_64/egg/avocado/utils/script.py to script.pyc
+byte-compiling build/bdist.linux-x86_64/egg/avocado/utils/software_manager.py to software_manager.pyc
+byte-compiling build/bdist.linux-x86_64/egg/avocado/utils/service.py to service.pyc
+byte-compiling build/bdist.linux-x86_64/egg/avocado/utils/genio.py to genio.pyc
+byte-compiling build/bdist.linux-x86_64/egg/avocado/utils/memory.py to memory.pyc
+byte-compiling build/bdist.linux-x86_64/egg/avocado/utils/build.py to build.pyc
+byte-compiling build/bdist.linux-x86_64/egg/avocado/utils/disk.py to disk.pyc
+byte-compiling build/bdist.linux-x86_64/egg/avocado/utils/data_factory.py to data_factory.pyc
+byte-compiling build/bdist.linux-x86_64/egg/avocado/utils/download.py to download.pyc
+byte-compiling build/bdist.linux-x86_64/egg/avocado/utils/aurl.py to aurl.pyc
+byte-compiling build/bdist.linux-x86_64/egg/avocado/utils/linux_modules.py to linux_modules.pyc
+byte-compiling build/bdist.linux-x86_64/egg/avocado/utils/git.py to git.pyc
+byte-compiling build/bdist.linux-x86_64/egg/avocado/utils/runtime.py to runtime.pyc
+byte-compiling build/bdist.linux-x86_64/egg/avocado/utils/process.py to process.pyc
+byte-compiling build/bdist.linux-x86_64/egg/avocado/utils/stacktrace.py to stacktrace.pyc
+byte-compiling build/bdist.linux-x86_64/egg/avocado/utils/kernel.py to kernel.pyc
+byte-compiling build/bdist.linux-x86_64/egg/avocado/utils/output.py to output.pyc
+byte-compiling build/bdist.linux-x86_64/egg/avocado/utils/asset.py to asset.pyc
+byte-compiling build/bdist.linux-x86_64/egg/avocado/utils/pci.py to pci.pyc
+byte-compiling build/bdist.linux-x86_64/egg/avocado/utils/data_structures.py to data_structures.pyc
+byte-compiling build/bdist.linux-x86_64/egg/avocado/utils/network.py to network.pyc
+byte-compiling build/bdist.linux-x86_64/egg/avocado/utils/multipath.py to multipath.pyc
+byte-compiling build/bdist.linux-x86_64/egg/avocado/core/tree.py to tree.pyc
+byte-compiling build/bdist.linux-x86_64/egg/avocado/core/plugin_interfaces.py to plugin_interfaces.pyc
+byte-compiling build/bdist.linux-x86_64/egg/avocado/core/varianter.py to varianter.pyc
+byte-compiling build/bdist.linux-x86_64/egg/avocado/core/settings.py to settings.pyc
+byte-compiling build/bdist.linux-x86_64/egg/avocado/core/test.py to test.pyc
+byte-compiling build/bdist.linux-x86_64/egg/avocado/core/safeloader.py to safeloader.pyc
+byte-compiling build/bdist.linux-x86_64/egg/avocado/core/decorators.py to decorators.pyc
+byte-compiling build/bdist.linux-x86_64/egg/avocado/core/job.py to job.pyc
+byte-compiling build/bdist.linux-x86_64/egg/avocado/core/loader.py to loader.pyc
+byte-compiling build/bdist.linux-x86_64/egg/avocado/core/job_id.py to job_id.pyc
+byte-compiling build/bdist.linux-x86_64/egg/avocado/core/__init__.py to __init__.pyc
+byte-compiling build/bdist.linux-x86_64/egg/avocado/core/exit_codes.py to exit_codes.pyc
+byte-compiling build/bdist.linux-x86_64/egg/avocado/core/sysinfo.py to sysinfo.pyc
+byte-compiling build/bdist.linux-x86_64/egg/avocado/core/dispatcher.py to dispatcher.pyc
+byte-compiling build/bdist.linux-x86_64/egg/avocado/core/version.py to version.pyc
+byte-compiling build/bdist.linux-x86_64/egg/avocado/core/status.py to status.pyc
+byte-compiling build/bdist.linux-x86_64/egg/avocado/core/data_dir.py to data_dir.pyc
+byte-compiling build/bdist.linux-x86_64/egg/avocado/core/jobdata.py to jobdata.pyc
+byte-compiling build/bdist.linux-x86_64/egg/avocado/core/restclient/connection.py to connection.pyc
+byte-compiling build/bdist.linux-x86_64/egg/avocado/core/restclient/response.py to response.pyc
+byte-compiling build/bdist.linux-x86_64/egg/avocado/core/restclient/__init__.py to __init__.pyc
+byte-compiling build/bdist.linux-x86_64/egg/avocado/core/restclient/cli/actions/base.py to base.pyc
+byte-compiling build/bdist.linux-x86_64/egg/avocado/core/restclient/cli/actions/__init__.py to __init__.pyc
+byte-compiling build/bdist.linux-x86_64/egg/avocado/core/restclient/cli/actions/server.py to server.pyc
+byte-compiling build/bdist.linux-x86_64/egg/avocado/core/restclient/cli/args/base.py to base.pyc
+byte-compiling build/bdist.linux-x86_64/egg/avocado/core/restclient/cli/args/__init__.py to __init__.pyc
+byte-compiling build/bdist.linux-x86_64/egg/avocado/core/restclient/cli/args/server.py to server.pyc
+byte-compiling build/bdist.linux-x86_64/egg/avocado/core/restclient/cli/__init__.py to __init__.pyc
+byte-compiling build/bdist.linux-x86_64/egg/avocado/core/restclient/cli/parser.py to parser.pyc
+byte-compiling build/bdist.linux-x86_64/egg/avocado/core/restclient/cli/app.py to app.pyc
+byte-compiling build/bdist.linux-x86_64/egg/avocado/core/parser.py to parser.pyc
+byte-compiling build/bdist.linux-x86_64/egg/avocado/core/app.py to app.pyc
+byte-compiling build/bdist.linux-x86_64/egg/avocado/core/runner.py to runner.pyc
+byte-compiling build/bdist.linux-x86_64/egg/avocado/core/result.py to result.pyc
+byte-compiling build/bdist.linux-x86_64/egg/avocado/core/output.py to output.pyc
+byte-compiling build/bdist.linux-x86_64/egg/avocado/core/exceptions.py to exceptions.pyc
+byte-compiling build/bdist.linux-x86_64/egg/avocado/core/parameters.py to parameters.pyc
+byte-compiling build/bdist.linux-x86_64/egg/avocado/__init__.py to __init__.pyc
+byte-compiling build/bdist.linux-x86_64/egg/avocado/__main__.py to __main__.pyc
+creating build/bdist.linux-x86_64/egg/EGG-INFO
+installing scripts to build/bdist.linux-x86_64/egg/EGG-INFO/scripts
+running install_scripts
+running build_scripts
+creating build/scripts-2.7
+copying and adjusting scripts/avocado -> build/scripts-2.7
+copying and adjusting scripts/avocado-rest-client -> build/scripts-2.7
+changing mode of build/scripts-2.7/avocado from 644 to 755
+changing mode of build/scripts-2.7/avocado-rest-client from 644 to 755
+creating build/bdist.linux-x86_64/egg/EGG-INFO/scripts
+copying build/scripts-2.7/avocado -> build/bdist.linux-x86_64/egg/EGG-INFO/scripts
+copying build/scripts-2.7/avocado-rest-client -> build/bdist.linux-x86_64/egg/EGG-INFO/scripts
+changing mode of build/bdist.linux-x86_64/egg/EGG-INFO/scripts/avocado to 755
+changing mode of build/bdist.linux-x86_64/egg/EGG-INFO/scripts/avocado-rest-client to 755
+copying avocado_framework.egg-info/PKG-INFO -> build/bdist.linux-x86_64/egg/EGG-INFO
+copying avocado_framework.egg-info/SOURCES.txt -> build/bdist.linux-x86_64/egg/EGG-INFO
+copying avocado_framework.egg-info/dependency_links.txt -> build/bdist.linux-x86_64/egg/EGG-INFO
+copying avocado_framework.egg-info/entry_points.txt -> build/bdist.linux-x86_64/egg/EGG-INFO
+copying avocado_framework.egg-info/not-zip-safe -> build/bdist.linux-x86_64/egg/EGG-INFO
+copying avocado_framework.egg-info/requires.txt -> build/bdist.linux-x86_64/egg/EGG-INFO
+copying avocado_framework.egg-info/top_level.txt -> build/bdist.linux-x86_64/egg/EGG-INFO
+creating dist
+creating 'dist/avocado_framework-59.0-py2.7.egg' and adding 'build/bdist.linux-x86_64/egg' to it
+removing 'build/bdist.linux-x86_64/egg' (and everything under it)
+Processing avocado_framework-59.0-py2.7.egg
+creating /usr/local/lib/python2.7/dist-packages/avocado_framework-59.0-py2.7.egg
+Extracting avocado_framework-59.0-py2.7.egg to /usr/local/lib/python2.7/dist-packages
+Adding avocado-framework 59.0 to easy-install.pth file
+Installing avocado script to /usr/local/bin
+Installing avocado-rest-client script to /usr/local/bin
+
+Installed /usr/local/lib/python2.7/dist-packages/avocado_framework-59.0-py2.7.egg
+Processing dependencies for avocado-framework==59.0
+Searching for setuptools==39.0.1
+Best match: setuptools 39.0.1
+Adding setuptools 39.0.1 to easy-install.pth file
+Installing easy_install script to /usr/local/bin
+Installing easy_install-3.6 script to /usr/local/bin
+
+Using /usr/local/lib/python2.7/dist-packages
+Searching for six==1.10.0
+Best match: six 1.10.0
+Adding six 1.10.0 to easy-install.pth file
+
+Using /usr/lib/python2.7/dist-packages
+Searching for stevedore==1.28.0
+Best match: stevedore 1.28.0
+Adding stevedore 1.28.0 to easy-install.pth file
+
+Using /usr/local/lib/python2.7/dist-packages
+Searching for pbr==3.1.1
+Best match: pbr 3.1.1
+Adding pbr 3.1.1 to easy-install.pth file
+Installing pbr script to /usr/local/bin
+
+Using /usr/local/lib/python2.7/dist-packages
+Finished processing dependencies for avocado-framework==59.0
+running install
+running bdist_egg
+running egg_info
+creating avocado_framework_plugin_varianter_yaml_to_mux.egg-info
+writing requirements to avocado_framework_plugin_varianter_yaml_to_mux.egg-info/requires.txt
+writing avocado_framework_plugin_varianter_yaml_to_mux.egg-info/PKG-INFO
+writing top-level names to avocado_framework_plugin_varianter_yaml_to_mux.egg-info/top_level.txt
+writing dependency_links to avocado_framework_plugin_varianter_yaml_to_mux.egg-info/dependency_links.txt
+writing entry points to avocado_framework_plugin_varianter_yaml_to_mux.egg-info/entry_points.txt
+writing manifest file 'avocado_framework_plugin_varianter_yaml_to_mux.egg-info/SOURCES.txt'
+reading manifest file 'avocado_framework_plugin_varianter_yaml_to_mux.egg-info/SOURCES.txt'
+reading manifest template 'MANIFEST.in'
+writing manifest file 'avocado_framework_plugin_varianter_yaml_to_mux.egg-info/SOURCES.txt'
+installing library code to build/bdist.linux-x86_64/egg
+running install_lib
+running build_py
+creating build
+creating build/lib.linux-x86_64-2.7
+creating build/lib.linux-x86_64-2.7/avocado_varianter_yaml_to_mux
+copying avocado_varianter_yaml_to_mux/mux.py -> build/lib.linux-x86_64-2.7/avocado_varianter_yaml_to_mux
+copying avocado_varianter_yaml_to_mux/__init__.py -> build/lib.linux-x86_64-2.7/avocado_varianter_yaml_to_mux
+creating build/bdist.linux-x86_64
+creating build/bdist.linux-x86_64/egg
+creating build/bdist.linux-x86_64/egg/avocado_varianter_yaml_to_mux
+copying build/lib.linux-x86_64-2.7/avocado_varianter_yaml_to_mux/mux.py -> build/bdist.linux-x86_64/egg/avocado_varianter_yaml_to_mux
+copying build/lib.linux-x86_64-2.7/avocado_varianter_yaml_to_mux/__init__.py -> build/bdist.linux-x86_64/egg/avocado_varianter_yaml_to_mux
+byte-compiling build/bdist.linux-x86_64/egg/avocado_varianter_yaml_to_mux/mux.py to mux.pyc
+byte-compiling build/bdist.linux-x86_64/egg/avocado_varianter_yaml_to_mux/__init__.py to __init__.pyc
+creating build/bdist.linux-x86_64/egg/EGG-INFO
+copying avocado_framework_plugin_varianter_yaml_to_mux.egg-info/PKG-INFO -> build/bdist.linux-x86_64/egg/EGG-INFO
+copying avocado_framework_plugin_varianter_yaml_to_mux.egg-info/SOURCES.txt -> build/bdist.linux-x86_64/egg/EGG-INFO
+copying avocado_framework_plugin_varianter_yaml_to_mux.egg-info/dependency_links.txt -> build/bdist.linux-x86_64/egg/EGG-INFO
+copying avocado_framework_plugin_varianter_yaml_to_mux.egg-info/entry_points.txt -> build/bdist.linux-x86_64/egg/EGG-INFO
+copying avocado_framework_plugin_varianter_yaml_to_mux.egg-info/requires.txt -> build/bdist.linux-x86_64/egg/EGG-INFO
+copying avocado_framework_plugin_varianter_yaml_to_mux.egg-info/top_level.txt -> build/bdist.linux-x86_64/egg/EGG-INFO
+zip_safe flag not set; analyzing archive contents...
+creating dist
+creating 'dist/avocado_framework_plugin_varianter_yaml_to_mux-59.0-py2.7.egg' and adding 'build/bdist.linux-x86_64/egg' to it
+removing 'build/bdist.linux-x86_64/egg' (and everything under it)
+Processing avocado_framework_plugin_varianter_yaml_to_mux-59.0-py2.7.egg
+Copying avocado_framework_plugin_varianter_yaml_to_mux-59.0-py2.7.egg to /usr/local/lib/python2.7/dist-packages
+Adding avocado-framework-plugin-varianter-yaml-to-mux 59.0 to easy-install.pth file
+
+Installed /usr/local/lib/python2.7/dist-packages/avocado_framework_plugin_varianter_yaml_to_mux-59.0-py2.7.egg
+Processing dependencies for avocado-framework-plugin-varianter-yaml-to-mux==59.0
+Searching for PyYAML==3.12
+Best match: PyYAML 3.12
+Adding PyYAML 3.12 to easy-install.pth file
+
+Using /usr/lib/python2.7/dist-packages
+Searching for avocado-framework==59.0
+Best match: avocado-framework 59.0
+Processing avocado_framework-59.0-py2.7.egg
+avocado-framework 59.0 is already the active version in easy-install.pth
+Installing avocado script to /usr/local/bin
+Installing avocado-rest-client script to /usr/local/bin
+
+Using /usr/local/lib/python2.7/dist-packages/avocado_framework-59.0-py2.7.egg
+Searching for setuptools==39.0.1
+Best match: setuptools 39.0.1
+Adding setuptools 39.0.1 to easy-install.pth file
+Installing easy_install script to /usr/local/bin
+Installing easy_install-3.6 script to /usr/local/bin
+
+Using /usr/local/lib/python2.7/dist-packages
+Searching for six==1.10.0
+Best match: six 1.10.0
+Adding six 1.10.0 to easy-install.pth file
+
+Using /usr/lib/python2.7/dist-packages
+Searching for stevedore==1.28.0
+Best match: stevedore 1.28.0
+Adding stevedore 1.28.0 to easy-install.pth file
+
+Using /usr/local/lib/python2.7/dist-packages
+Searching for pbr==3.1.1
+Best match: pbr 3.1.1
+Adding pbr 3.1.1 to easy-install.pth file
+Installing pbr script to /usr/local/bin
+
+Using /usr/local/lib/python2.7/dist-packages
+Finished processing dependencies for avocado-framework-plugin-varianter-yaml-to-mux==59.0
+Cloning into 'avocado-misc-tests'...
++ ./rebootresource.sh jenkins@leseidlb950

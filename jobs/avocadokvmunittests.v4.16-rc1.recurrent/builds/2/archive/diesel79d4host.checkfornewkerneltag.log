@@ -1,0 +1,13 @@
++ set -e
++ mkdir -p kernel
++ cd kernel
++ rm -f linux-4.16.0-rc1-jenkins_4.16.0-rc1-jenkins-1_amd64.changes linux-4.16.0-rc1-jenkins_4.16.0-rc1-jenkins-1.debian.tar.gz linux-4.16.0-rc1-jenkins_4.16.0-rc1-jenkins-1.dsc linux-4.16.0-rc1-jenkins_4.16.0-rc1-jenkins.orig.tar.gz linux-headers-4.16.0-rc1-jenkins_4.16.0-rc1-jenkins-1_amd64.deb linux-image-4.16.0-rc1-jenkins_4.16.0-rc1-jenkins-1_amd64.deb linux-libc-dev_4.16.0-rc1-jenkins-1_amd64.deb
++ '[' '!' -d linux ']'
++ cd linux
++ git fetch --all --tags
+Fetching origin
++ '[' 2 -eq 2 ']'
++ latestkerneltag=v4.16-rc1
+++ cat latestkerneltag
++ '[' v4.16-rc1 '!=' v4.16-rc1 ']'
++ exit 1

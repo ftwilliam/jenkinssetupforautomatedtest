@@ -1,0 +1,24 @@
+Started by user unknown or anonymous
+Building in workspace /var/lib/jenkins/workspace/avocadoltp.ondemand2
+[WS-CLEANUP] Deleting project workspace...
+[WS-CLEANUP] Done
+[avocadoltp.ondemand2] $ /bin/sh -xe /tmp/jenkins5153788717752416531.sh
++ RESOURCES=sosmachine1
+++ echo avocadoltp.ondemand2
+++ grep -oP '(?<=\.)v.+\..+(?=\.)'
+++ :
++ KERNVER=
++ TIMEOUT=3600
++ for R in ${RESOURCES}
++ wait
++ continue
++ echo -n 'Kernel Release: '
++ for R in ${RESOURCES}
++ '[' -f sosmachine1.kernelrelease ']'
++ truncate --size=-2 kernelreleases
+++ cat kernelreleases
++ echo '[Kernel' 'Release]'
+[Kernel Release]
+Archiving artifacts
+[description-setter] Could not determine description.
+Finished: SUCCESS

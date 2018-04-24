@@ -1,0 +1,11 @@
++ set -e
++ [[ https://github.com/torvalds/linux.git = \D\I\S\T\R\O ]]
++ mkdir -p kernel
++ cd kernel
++ '[' '!' -d linux ']'
++ cd linux
++ git remote set-url origin https://github.com/torvalds/linux.git
++ git fetch --all --tags
+Fetching origin
+fatal: unable to access 'https://github.com/torvalds/linux.git/': transfer closed with outstanding read data remaining
+error: Could not fetch origin

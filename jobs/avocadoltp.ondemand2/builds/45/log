@@ -1,0 +1,42 @@
+Started by user [8mha:////4M5O53X5QONrb+aF7d3XuO6Y0FqwaEK30o3y1qqs3uiMAAAAmR+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyeEgZe/dLi1CL9pKLy/PyUYgAEKGTnwgAAAA==[0mWoods, Brian
+Building in workspace /var/lib/jenkins/workspace/avocadoltp.ondemand2
+[WS-CLEANUP] Deleting project workspace...
+[WS-CLEANUP] Done
+[avocadoltp.ondemand2] $ /bin/sh -xe /tmp/jenkins4931311475706978851.sh
++ RESOURCES=sos-avocado-os0
+++ echo avocadoltp.ondemand2
+++ grep -oP '(?<=\.)v.+\..+(?=\.)'
+++ :
++ KERNVER=
++ TIMEOUT=3600
++ AVO_RV=()
++ (( I=0 ))
++ (( I<1 ))
++ R=sos-avocado-os0
++ AVO_RV[$I]=424242
++ (( I++ ))
++ (( I<1 ))
++ wait
++ RV=0
++ ssh -q jenkins@sos-avocado-os0 './checkfornewkerneltag.sh https://github.com/torvalds/linux.git CURRENT'
++ RV=2
++ '[' 2 -eq 1 ']'
++ '[' 2 -eq 2 ']'
++ continue
++ echo -n 'Kernel Release: '
++ for R in ${RESOURCES}
++ '[' -f sos-avocado-os0.kernelrelease ']'
++ echo -n 'avocado RV per host: '
+avocado RV per host: + (( I=0 ))
++ (( I<1 ))
++ '[' '424242[0]' -eq 424242 ']'
+/tmp/jenkins4931311475706978851.sh: line 65: [: 424242[0]: integer expression expected
++ echo -n 'sos-avocado-os0=424242[0] '
+sos-avocado-os0=424242[0] + (( I++ ))
++ (( I<1 ))
+++ cat kernelreleases
++ echo '[Kernel' Release: ']'
+[Kernel Release: ]
+Archiving artifacts
+[description-setter] Could not determine description.
+Finished: SUCCESS

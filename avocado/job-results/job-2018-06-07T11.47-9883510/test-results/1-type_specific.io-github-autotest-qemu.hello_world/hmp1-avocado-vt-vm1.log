@@ -1,0 +1,145 @@
+2018-06-07 16:47:57: (qemu) 
+2018-06-07 16:47:57: help
+2018-06-07 16:47:57: acl_add aclname match allow|deny [index] -- add a match rule to the access control list
+2018-06-07 16:47:57: acl_policy aclname allow|deny -- set default access control list policy
+2018-06-07 16:47:57: acl_remove aclname match -- remove a match rule from the access control list
+2018-06-07 16:47:57: acl_reset aclname -- reset the access control list
+2018-06-07 16:47:57: acl_show aclname -- list rules in the access control list
+2018-06-07 16:47:57: balloon target -- request VM to change its memory allocation (in MB)
+2018-06-07 16:47:57: block_job_cancel [-f] device -- stop an active background block operation (use -f
+2018-06-07 16:47:57: 			 if the operation is currently paused)
+2018-06-07 16:47:57: block_job_complete device -- stop an active background block operation
+2018-06-07 16:47:57: block_job_pause device -- pause an active background block operation
+2018-06-07 16:47:57: block_job_resume device -- resume a paused background block operation
+2018-06-07 16:47:57: block_job_set_speed device speed -- set maximum speed for a background block operation
+2018-06-07 16:47:57: block_passwd block_passwd device password -- set the password of encrypted block devices
+2018-06-07 16:47:57: block_resize device size -- resize a block image
+2018-06-07 16:47:57: block_set_io_throttle device bps bps_rd bps_wr iops iops_rd iops_wr -- change I/O throttle limits for a block drive
+2018-06-07 16:47:57: block_stream device [speed [base]] -- copy data from a backing file into a block device
+2018-06-07 16:47:57: boot_set bootdevice -- define new values for the boot device list
+2018-06-07 16:47:57: change device filename [format [read-only-mode]] -- change a removable medium, optional format
+2018-06-07 16:47:57: chardev-add args -- add chardev
+2018-06-07 16:47:57: chardev-change id args -- change chardev
+2018-06-07 16:47:57: chardev-remove id -- remove chardev
+2018-06-07 16:47:57: chardev-send-break id -- send a break on chardev
+2018-06-07 16:47:57: client_migrate_info protocol hostname port tls-port cert-subject -- set migration information for remote display
+2018-06-07 16:47:57: closefd closefd name -- close a file descriptor previously passed via SCM rights
+2018-06-07 16:47:57: commit device|all -- commit changes to the disk images (if -snapshot is used) or backing files
+2018-06-07 16:47:57: cpu index -- set the default CPU
+2018-06-07 16:47:57: cpu-add id -- add cpu
+2018-06-07 16:47:57: c|cont  -- resume emulation
+2018-06-07 16:47:57: delvm tag|id -- delete a VM snapshot from its tag or id
+2018-06-07 16:47:57: device_add driver[,prop=value][,...] -- add device, like -device on the command line
+2018-06-07 16:47:57: device_del device -- remove device
+2018-06-07 16:47:57: drive_add [-n] [[<domain>:]<bus>:]<slot>
+2018-06-07 16:47:57: [file=file][,if=type][,bus=n]
+2018-06-07 16:47:57: [,unit=m][,media=d][,index=i]
+2018-06-07 16:47:57: [,cyls=c,heads=h,secs=s[,trans=t]]
+2018-06-07 16:47:57: [,snapshot=on|off][,cache=on|off]
+2018-06-07 16:47:57: [,readonly=on|off][,copy-on-read=on|off] -- add drive to PCI storage controller
+2018-06-07 16:47:57: drive_backup [-n] [-f] [-c] device target [format] -- initiates a point-in-time
+2018-06-07 16:47:57: 			copy for a device. The device's contents are
+2018-06-07 16:47:57: 			copied to the new image file, excluding data that
+2018-06-07 16:47:57: 			is written after the command is started.
+2018-06-07 16:47:57: 			The -n flag requests QEMU to reuse the image found
+2018-06-07 16:47:57: 			in new-image-file, instead of recreating it from scratch.
+2018-06-07 16:47:57: 			The -f flag requests QEMU to copy the whole disk,
+2018-06-07 16:47:57: 			so that the result does not need a backing file.
+2018-06-07 16:47:57: 			The -c flag requests QEMU to compress backup data
+2018-06-07 16:47:57: 			(if the target format supports it).
+2018-06-07 16:47:57: 			
+2018-06-07 16:47:57: drive_del device -- remove host block device
+2018-06-07 16:47:57: drive_mirror [-n] [-f] device target [format] -- initiates live storage
+2018-06-07 16:47:57: 			migration for a device. The device's contents are
+2018-06-07 16:47:57: 			copied to the new image file, including data that
+2018-06-07 16:47:57: 			is written after the command is started.
+2018-06-07 16:47:57: 			The -n flag requests QEMU to reuse the image found
+2018-06-07 16:47:57: 			in new-image-file, instead of recreating it from scratch.
+2018-06-07 16:47:57: 			The -f flag requests QEMU to copy the whole disk,
+2018-06-07 16:47:57: 			so that the result does not need a backing file.
+2018-06-07 16:47:57: 			
+2018-06-07 16:47:57: dump-guest-memory [-p] [-d] [-z|-l|-s] filename [begin length] -- dump guest memory into file 'filename'.
+2018-06-07 16:47:57: 			-p: do paging to get guest's memory mapping.
+2018-06-07 16:47:57: 			-d: return immediately (do not wait for completion).
+2018-06-07 16:47:57: 			-z: dump in kdump-compressed format, with zlib compression.
+2018-06-07 16:47:57: 			-l: dump in kdump-compressed format, with lzo compression.
+2018-06-07 16:47:57: 			-s: dump in kdump-compressed format, with snappy compression.
+2018-06-07 16:47:57: 			begin: the starting physical address.
+2018-06-07 16:47:57: 			length: the memory size, in bytes.
+2018-06-07 16:47:57: eject [-f] device -- eject a removable medium (use -f to force it)
+2018-06-07 16:47:57: expire_password protocol time -- set spice/vnc password expire-time
+2018-06-07 16:47:57: gdbserver [device] -- start gdbserver on given device (default 'tcp::1234'), stop with 'none'
+2018-06-07 16:47:57: getfd getfd name -- receive a file descriptor via SCM rights and assign it a name
+2018-06-07 16:47:57: gpa2hpa addr -- print the host physical address corresponding to a guest physical address
+2018-06-07 16:47:57: gpa2hva addr -- print the host virtual address corresponding to a guest physical address
+2018-06-07 16:47:57: help|? [cmd] -- show the help
+2018-06-07 16:47:57: host_net_add tap|user|socket|vde|netmap|bridge|vhost-user|dump [options] -- add host VLAN client (deprecated, use netdev_add instead)
+2018-06-07 16:47:57: host_net_remove vlan_id name -- remove host VLAN client (deprecated, use netdev_del instead)
+2018-06-07 16:47:57: hostfwd_add [vlan_id name] [tcp|udp]:[hostaddr]:hostport-[guestaddr]:guestport -- redirect TCP or UDP connections from host to guest (requires -net user)
+2018-06-07 16:47:57: hostfwd_remove [vlan_id name] [tcp|udp]:[hostaddr]:hostport -- remove host-to-guest TCP or UDP redirection
+2018-06-07 16:47:57: i /fmt addr -- I/O port read
+2018-06-07 16:47:57: info [subcommand] -- show various information about the system state
+2018-06-07 16:47:57: loadvm tag|id -- restore a VM snapshot from its tag or id
+2018-06-07 16:47:57: log item1[,...] -- activate logging of the specified items
+2018-06-07 16:47:57: logfile filename -- output logs to 'filename'
+2018-06-07 16:47:57: mce [-b] cpu bank status mcgstatus addr misc -- inject a MCE on the given CPU [and broadcast to other CPUs with -b option]
+2018-06-07 16:47:57: memsave addr size file -- save to disk virtual memory dump starting at 'addr' of size 'size'
+2018-06-07 16:47:57: migrate [-d] [-b] [-i] uri -- migrate to URI (using -d to not wait for completion)
+2018-06-07 16:47:57: 			 -b for migration without shared storage with full copy of disk
+2018-06-07 16:47:57: 			 -i for migration without shared storage with incremental copy of disk (base image shared between src and destination)
+2018-06-07 16:47:57: migrate_cancel  -- cancel the current VM migration
+2018-06-07 16:47:57: migrate_continue state -- Continue migration from the given paused state
+2018-06-07 16:47:57: migrate_incoming uri -- Continue an incoming migration from an -incoming defer
+2018-06-07 16:47:57: migrate_set_cache_size value -- set cache size (in bytes) for XBZRLE migrations,the cache size will be rounded down to the nearest power of 2.
+2018-06-07 16:47:57: The cache size affects the number of cache misses.In case of a high cache miss ratio you need to increase the cache size
+2018-06-07 16:47:57: migrate_set_capability capability state -- Enable/Disable the usage of a capability for migration
+2018-06-07 16:47:57: migrate_set_downtime value -- set maximum tolerated downtime (in seconds) for migrations
+2018-06-07 16:47:57: migrate_set_parameter parameter value -- Set the parameter for migration
+2018-06-07 16:47:57: migrate_set_speed value -- set maximum speed (in bytes) for migrations. Defaults to MB if no size suffix is specified, ie. B/K/M/G/T
+2018-06-07 16:47:57: migrate_start_postcopy  -- Followup to a migration command to switch the migration to postcopy mode. The postcopy-ram capability must be set before the original migration command.
+2018-06-07 16:47:57: mouse_button state -- change mouse button state (1=L, 2=M, 4=R)
+2018-06-07 16:47:57: mouse_move dx dy [dz] -- send mouse move events
+2018-06-07 16:47:57: mouse_set index -- set which mouse device receives events
+2018-06-07 16:47:57: nbd_server_add nbd_server_add [-w] device -- export a block device via NBD
+2018-06-07 16:47:57: nbd_server_start nbd_server_start [-a] [-w] host:port -- serve block devices on the given host and port
+2018-06-07 16:47:57: nbd_server_stop nbd_server_stop -- stop serving block devices using the NBD protocol
+2018-06-07 16:47:57: netdev_add [user|tap|socket|vde|bridge|hubport|netmap|vhost-user],id=str[,prop=value][,...] -- add host network device
+2018-06-07 16:47:57: netdev_del id -- remove host network device
+2018-06-07 16:47:57: nmi  -- inject an NMI
+2018-06-07 16:47:57: o /fmt addr value -- I/O port write
+2018-06-07 16:47:57: object_add [qom-type=]type,id=str[,prop=value][,...] -- create QOM object
+2018-06-07 16:47:57: object_del id -- destroy QOM object
+2018-06-07 16:47:57: pcie_aer_inject_error [-a] [-c] id <error_status> [<tlp header> [<tlp header prefix>]] -- inject pcie aer error
+2018-06-07 16:47:57: 			 -a for advisory non fatal error
+2018-06-07 16:47:57: 			 -c for correctable error
+2018-06-07 16:47:57: 			<id> = qdev device id
+2018-06-07 16:47:57: 			<error_status> = error string or 32bit
+2018-06-07 16:47:57: 			<tlb header> = 32bit x 4
+2018-06-07 16:47:57: 			<tlb header prefix> = 32bit x 4
+2018-06-07 16:47:57: pmemsave addr size file -- save to disk physical memory dump starting at 'addr' of size 'size'
+2018-06-07 16:47:57: p|print /fmt expr -- print expression value (use $reg for CPU register access)
+2018-06-07 16:47:57: qemu-io [device] "[command]" -- run a qemu-io command on a block device
+2018-06-07 16:47:57: qom-list path -- list QOM properties
+2018-06-07 16:47:57: qom-set path property value -- set QOM property
+2018-06-07 16:47:57: q|quit  -- quit the emulator
+2018-06-07 16:47:57: ringbuf_read device size -- Read from a ring buffer character device
+2018-06-07 16:47:57: ringbuf_write device data -- Write to a ring buffer character device
+2018-06-07 16:47:57: savevm [tag|id] -- save a VM snapshot. If no tag or id are provided, a new snapshot is created
+2018-06-07 16:47:57: screendump filename -- save screen into PPM image 'filename'
+2018-06-07 16:47:57: sendkey keys [hold_ms] -- send keys to the VM (e.g. 'sendkey ctrl-alt-f1', default hold time=100 ms)
+2018-06-07 16:47:57: set_link name on|off -- change the link status of a network adapter
+2018-06-07 16:47:57: set_password protocol password action-if-connected -- set spice/vnc password
+2018-06-07 16:47:57: singlestep [on|off] -- run emulation in singlestep mode or switch to normal mode
+2018-06-07 16:47:57: snapshot_blkdev [-n] device [new-image-file] [format] -- initiates a live snapshot
+2018-06-07 16:47:57: 			of device. If a new image file is specified, the
+2018-06-07 16:47:57: 			new image file will become the new root image.
+2018-06-07 16:47:57: 			If format is specified, the snapshot file will
+2018-06-07 16:47:57: 			be created in that format.
+2018-06-07 16:47:57: 			The default format is qcow2.  The -n flag requests QEMU
+2018-06-07 16:47:57: 			to reuse the image found in new-image-file, instead of
+2018-06-07 16:47:57: 			recreating it from scratch.
+2018-06-07 16:47:57: snapshot_blkdev_internal device name -- take an internal snapshot of device.
+2018-06-07 16:47:57: 			The format of the image used by device must
+2018-06-07 16:47:57: 			support it, such as qcow2.
+2018-06-07 16:47:57: 			
+2018-06-07 16:47:57: sna

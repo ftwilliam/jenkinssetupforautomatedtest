@@ -1,0 +1,37 @@
+Started by user [8mha:////4FqkCksSARbySc15RUTa15KLDuDohiBDNYbuyYSsWMPyAAAAlR+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzmEgZO/dLi1CL9xNwUAAxcekO+AAAA[0mamd
+Building in workspace /var/lib/jenkins/workspace/avocadoltp.ondemand
+[WS-CLEANUP] Deleting project workspace...
+[WS-CLEANUP] Done
+[avocadoltp.ondemand] $ /bin/sh -xe /tmp/jenkins6747579272961351158.sh
++ RESOURCES=sos-alaska-00
+++ echo avocadoltp.ondemand
+++ grep -oP '(?<=\.)v.+\..+(?=\.)'
+++ :
++ KERNVER=
++ TIMEOUT=3600
++ for R in ${RESOURCES}
++ wait
++ ssh -q jenkins@sos-alaska-00 './checkfornewkerneltag.sh https://github.com/torvalds/linux.git'
+++ ssh -q jenkins@sos-alaska-00 'uname -r'
++ echo 'sos-alaska-00: 4.15.0-22-generic'
++ timeout -sKILL 3600 ssh -q jenkins@sos-alaska-00
++ :
++ '[' 0 -eq 0 ']'
+++ cat sos-alaska-00.ssh.log
+++ fgrep 'JOB LOG'
+++ grep -oP '(?<=: ).+$'
++ AVOCADO_LOG_PATH=/home/jenkins/avocado/job-results/job-2018-05-25T17.06-a3afefe/job.log
++ scp jenkins@sos-alaska-00:/home/jenkins/avocado/job-results/job-2018-05-25T17.06-a3afefe/job.log sos-alaska-00.avocado.log
++ echo -n 'Kernel Release: '
++ for R in ${RESOURCES}
++ '[' -f sos-alaska-00.kernelrelease ']'
+++ cat sos-alaska-00.kernelrelease
+++ grep -oP '.+(?=-jenkins)'
++ echo -n ', '
++ truncate --size=-2 kernelreleases
+++ cat kernelreleases
++ echo '[Kernel' Release: ']'
+[Kernel Release: ]
+Archiving artifacts
+[description-setter] Could not determine description.
+Finished: SUCCESS

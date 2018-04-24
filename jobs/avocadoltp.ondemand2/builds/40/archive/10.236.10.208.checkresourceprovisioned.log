@@ -1,0 +1,152 @@
++ cd /var/lib/jenkins
++ ./checkresourceprovisioned.new.sh 10.236.10.208
++ set -e
++ ping -c 1 10.236.10.208
++ RV=0
++ ssh -q -o PasswordAuthentication=no -o StrictHostKeyChecking=no jenkins@10.236.10.208 'test ! -f checkfornewkerneltag.sh'
++ (( RV == 1 ))
++ ssh-keygen -R 10.236.10.208
++ ssh -q -o PasswordAuthentication=no -o StrictHostKeyChecking=no root@10.236.10.208 :
+++ ./what_distro_remote.sh root@10.236.10.208
++ distro=ubuntu-18.04
++ [[ ubuntu-18.04 = \u\b\u\n\t\u\-* ]]
++ ssh -q root@10.236.10.208
+Welcome to Ubuntu 18.04 LTS (GNU/Linux 4.15.0-22-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  System information as of Wed Jun  6 20:20:59 UTC 2018
+
+  System load:  0.1                Processes:          986
+  Usage of /:   32.2% of 78.24GB   Users logged in:    1
+  Memory usage: 1%                 IP address for br0: 10.236.10.208
+  Swap usage:   0%
+
+ * Meltdown, Spectre and Ubuntu: What are the attack vectors,
+   how the fixes work, and everything else you need to know
+   - https://ubu.one/u2Know
+
+ * Canonical Livepatch is available for installation.
+   - Reduce system reboots and improve kernel security. Activate at:
+     https://ubuntu.com/livepatch
+
+23 packages can be updated.
+0 updates are security updates.
+
+
+mesg: ttyname failed: Inappropriate ioctl for device
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+bison is already the newest version (2:3.0.4.dfsg-1build1).
+build-essential is already the newest version (12.4ubuntu1).
+flex is already the newest version (2.6.4-6).
+htop is already the newest version (2.1.0-3).
+libelf-dev is already the newest version (0.170-0.4).
+libssl-dev is already the newest version (1.1.0g-2ubuntu4).
+net-tools is already the newest version (1.60+git20161116.90da8a0-1ubuntu1).
+rpm is already the newest version (4.14.1+dfsg1-2).
+git is already the newest version (1:2.17.1-1ubuntu0.1).
+ifupdown is already the newest version (0.8.17ubuntu1.1).
+The following package was automatically installed and is no longer required:
+  grub-pc-bin
+Use 'apt autoremove' to remove it.
+0 upgraded, 0 newly installed, 0 to remove and 23 not upgraded.
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+lib32z1 is already the newest version (1:1.2.11.dfsg-0ubuntu2).
+lib32z1-dev is already the newest version (1:1.2.11.dfsg-0ubuntu2).
+arping is already the newest version (2.19-4).
+The following package was automatically installed and is no longer required:
+  grub-pc-bin
+Use 'apt autoremove' to remove it.
+0 upgraded, 0 newly installed, 0 to remove and 23 not upgraded.
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+acpica-tools is already the newest version (20180105-1).
+nasm is already the newest version (2.13.02-0.1).
+libncurses5-dev is already the newest version (6.1-1ubuntu1.18.04).
+uuid-dev is already the newest version (2.31.1-0.4ubuntu3.1).
+The following package was automatically installed and is no longer required:
+  grub-pc-bin
+Use 'apt autoremove' to remove it.
+0 upgraded, 0 newly installed, 0 to remove and 23 not upgraded.
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+bridge-utils is already the newest version (1.5-15ubuntu1).
+golang is already the newest version (2:1.10~4ubuntu1).
+liblzma-dev is already the newest version (5.2.2-1.3).
+libyaml-dev is already the newest version (0.1.7-2ubuntu3).
+openvswitch-switch is already the newest version (2.9.0-0ubuntu1).
+python-dev is already the newest version (2.7.15~rc1-1).
+python-networkx is already the newest version (1.11-1ubuntu2).
+libvirt-dev is already the newest version (4.0.0-1ubuntu8.1).
+python-pip is already the newest version (9.0.1-2.3~ubuntu1).
+The following package was automatically installed and is no longer required:
+  grub-pc-bin
+Use 'apt autoremove' to remove it.
+0 upgraded, 0 newly installed, 0 to remove and 23 not upgraded.
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+libpopt-dev is already the newest version (1.16-11).
+libblkid-dev is already the newest version (2.31.1-0.4ubuntu3.1).
+The following package was automatically installed and is no longer required:
+  grub-pc-bin
+Use 'apt autoremove' to remove it.
+0 upgraded, 0 newly installed, 0 to remove and 23 not upgraded.
+Requirement already satisfied: snakefood in /usr/local/lib/python2.7/dist-packages
+Requirement already satisfied: pynacl in /usr/local/lib/python2.7/dist-packages
+Requirement already satisfied: netifaces in /usr/local/lib/python2.7/dist-packages
+Requirement already satisfied: libvirt-python in /usr/local/lib/python2.7/dist-packages
+Requirement already satisfied: six in /usr/lib/python2.7/dist-packages (from pynacl)
+Requirement already satisfied: cffi>=1.4.1 in /usr/local/lib/python2.7/dist-packages (from pynacl)
+Requirement already satisfied: pycparser in /usr/local/lib/python2.7/dist-packages (from cffi>=1.4.1->pynacl)
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Package 'apparmor' is not installed, so not removed
+Package 'ufw' is not installed, so not removed
+Package 'whoopsie' is not installed, so not removed
+Package 'apport' is not installed, so not removed
+The following package was automatically installed and is no longer required:
+  grub-pc-bin
+Use 'apt autoremove' to remove it.
+0 upgraded, 0 newly installed, 0 to remove and 23 not upgraded.
+Generating grub configuration file ...
+Found linux image: /boot/vmlinuz-4.15.0-22-generic
+Found initrd image: /boot/initrd.img-4.15.0-22-generic
+Found linux image: /boot/vmlinuz-4.15.0-20-generic
+Found initrd image: /boot/initrd.img-4.15.0-20-generic
+Adding boot menu entry for EFI firmware configuration
+done
+Synchronizing state of unattended-upgrades.service with SysV service script with /lib/systemd/systemd-sysv-install.
+Executing: /lib/systemd/systemd-sysv-install disable unattended-upgrades
+Failed to disable unit: Unit file network-manager.service does not exist.
+Failed to disable unit: Unit file network-manager.service does not exist.
+Synchronizing state of networking.service with SysV service script with /lib/systemd/systemd-sysv-install.
+Executing: /lib/systemd/systemd-sysv-install enable networking
+fatal: destination path 'grubby' already exists and is not an empty directory.

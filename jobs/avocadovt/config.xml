@@ -1,0 +1,137 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<project>
+  <actions/>
+  <description></description>
+  <keepDependencies>false</keepDependencies>
+  <properties>
+    <org.jenkins.plugins.lockableresources.RequiredResourcesProperty plugin="lockable-resources@2.2"/>
+    <hudson.model.ParametersDefinitionProperty>
+      <parameterDefinitions>
+        <hudson.model.StringParameterDefinition>
+          <name>KERNELREPO</name>
+          <description>Git repository to use when cloning the kernel.</description>
+          <defaultValue>https://github.com/torvalds/linux.git</defaultValue>
+          <trim>false</trim>
+        </hudson.model.StringParameterDefinition>
+        <hudson.model.StringParameterDefinition>
+          <name>QEMUREPO</name>
+          <description>Git repository to use when cloning qemu.</description>
+          <defaultValue>https://github.com/qemu/qemu.git</defaultValue>
+          <trim>false</trim>
+        </hudson.model.StringParameterDefinition>
+        <hudson.model.StringParameterDefinition>
+          <name>KERNELTAG</name>
+          <description>Kernel tag to use</description>
+          <defaultValue>v4.16-rc2</defaultValue>
+          <trim>false</trim>
+        </hudson.model.StringParameterDefinition>
+        <hudson.model.StringParameterDefinition>
+          <name>QEMUTAG</name>
+          <description>Qemu tag to use</description>
+          <defaultValue>v2.11.1</defaultValue>
+          <trim>false</trim>
+        </hudson.model.StringParameterDefinition>
+        <hudson.model.StringParameterDefinition>
+          <name>RESOURCES</name>
+          <description>Space separated list of hostnames onto which to run the test</description>
+          <defaultValue>leseidlb950host</defaultValue>
+          <trim>false</trim>
+        </hudson.model.StringParameterDefinition>
+      </parameterDefinitions>
+    </hudson.model.ParametersDefinitionProperty>
+  </properties>
+  <scm class="hudson.scm.NullSCM"/>
+  <canRoam>true</canRoam>
+  <disabled>false</disabled>
+  <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
+  <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
+  <triggers/>
+  <concurrentBuild>false</concurrentBuild>
+  <builders>
+    <hudson.tasks.Shell>
+      <command># Get list of resources locked by this build.
+RESOURCES=${RESOURCES:-$(cd ${JENKINS_HOME} &amp;&amp; ./resourceslockedby.py ${JOB_BASE_NAME}#${BUILD_NUMBER})}
+
+# Kernel git repository to use:
+KERNELREPO=${KERNELREPO:-&quot;https://github.com/torvalds/linux.git&quot;}
+
+# QEMU git repository to use:
+QEMUREPO=${QEMUREPO:-&quot;https://github.com/qemu/qemu.git&quot;}
+
+# Kernel version to use.
+KERNELTAG=${KERNELTAG:-$(echo ${JOB_BASE_NAME} | grep -oP &apos;(?&lt;=\.)v.+\..+(?=\.)&apos; || :;)}
+
+# Qemu version to use.
+QEMUTAG=${QEMUTAG:-&quot;v2.11.1&quot;}
+
+TIMEOUT=1800
+
+# Run test on each resource.
+for R in ${RESOURCES}; do
+	# In order to execute in parallel, each
+	# ressource test run within its own subshell.
+	(
+		# Insure resource provisioned for test.
+		if ! (cd ${JENKINS_HOME} &amp;&amp; ./checkresourceprovisioned.sh ${R}) &amp;&gt; ${R}.checkresourceprovisioned.log; then
+			# Continue on to the next resource if
+			# the provision-check fail on this resource.
+			continue
+		fi
+		# Check if a new kernel need to be installed.
+		if ssh -q jenkins@${R} &quot;./checkfornewkerneltag.sh ${KERNELREPO}&quot; ${KERNELTAG} &amp;&gt; ${R}.checkfornewkerneltag.log; then
+			# Get the version built.
+			kernbuilt=$(ssh -q jenkins@${R} ls kernel/linux-image* | grep -oP &quot;(?&lt;=linux-image-).+(?=-jenkins_)&quot;)
+			# Reboot resource into kernel version built.
+			(cd ${JENKINS_HOME} &amp;&amp; ./rebootresource.sh jenkins@${R} ${kernbuilt} &amp;&gt; /dev/null)
+		fi
+		echo &quot;${R}: $(ssh -q jenkins@${R} &apos;uname -r&apos;)&quot; &gt; ${R}.kernelrelease
+		# Check if a new qemu need to be installed.
+		ssh -q jenkins@${R} &quot;./checkfornewqemutag.sh ${QEMUREPO}&quot; ${QEMUTAG} &amp;&gt; ${R}.checkfornewqemutag.log || :;
+		# Run test.
+        timeout -sKILL ${TIMEOUT} ssh -q jenkins@${R} sudo avocado --config avocado.conf.d/vt-migration.conf run type_specific.io-github-autotest-qemu.migrate.default.tcp &amp;&gt; ${R}.ssh.log || :;
+        #if [ ${PIPESTATUS[0]} -eq 0 ]; then
+			AVOCADO_LOG_PATH=$(cat ${R}.ssh.log | fgrep &apos;JOB LOG&apos; | grep -oP &apos;(?&lt;=: ).+$&apos;)
+			scp jenkins@${R}:${AVOCADO_LOG_PATH} ${R}.avocado.log
+		#fi
+	) &amp;
+done
+
+# Wait for all subshells.
+wait
+
+# Generate &quot;Kernel Release:&quot; line for
+# the &quot;Set Build Description&quot; plugin.
+echo -n &quot;Kernel Release: &quot; &gt; kernelreleases
+for R in ${RESOURCES}; do
+	if [ -f ${R}.kernelrelease ]; then
+		echo -n &quot;$(cat ${R}.kernelrelease 2&gt;/dev/null | grep -oP &apos;.+(?=-jenkins)&apos;), &quot; &gt;&gt; kernelreleases
+	fi
+done
+truncate --size=-2 kernelreleases
+echo [$(cat kernelreleases)]
+</command>
+    </hudson.tasks.Shell>
+  </builders>
+  <publishers>
+    <hudson.tasks.ArtifactArchiver>
+      <artifacts>*.log</artifacts>
+      <allowEmptyArchive>false</allowEmptyArchive>
+      <onlyIfSuccessful>false</onlyIfSuccessful>
+      <fingerprint>false</fingerprint>
+      <defaultExcludes>true</defaultExcludes>
+      <caseSensitive>true</caseSensitive>
+    </hudson.tasks.ArtifactArchiver>
+    <hudson.plugins.descriptionsetter.DescriptionSetterPublisher plugin="description-setter@1.10">
+      <regexp>(?&lt;=\[Kernel Release: ).+(?=\])</regexp>
+      <regexpForFailed></regexpForFailed>
+      <setForMatrix>false</setForMatrix>
+    </hudson.plugins.descriptionsetter.DescriptionSetterPublisher>
+  </publishers>
+  <buildWrappers>
+    <hudson.plugins.ws__cleanup.PreBuildCleanup plugin="ws-cleanup@0.34">
+      <deleteDirs>false</deleteDirs>
+      <cleanupParameter></cleanupParameter>
+      <externalDelete></externalDelete>
+    </hudson.plugins.ws__cleanup.PreBuildCleanup>
+  </buildWrappers>
+</project>

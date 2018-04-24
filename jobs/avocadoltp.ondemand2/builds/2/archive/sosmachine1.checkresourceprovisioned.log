@@ -1,0 +1,11 @@
++ cd /var/lib/jenkins
++ ./checkresourceprovisioned.new.sh sosmachine1
++ set -e
++ ping -c 1 sosmachine1
++ ssh -q -o PasswordAuthentication=no -o StrictHostKeyChecking=no jenkins@sosmachine1 'test ! -f checkfornewkerneltag.sh'
++ '[' 255 -eq 1 ']'
++ ssh-keygen -R sosmachine1
++ ssh -q -o PasswordAuthentication=no -o StrictHostKeyChecking=no root@sosmachine1 :
++ scp what_distro.sh root@sosmachine1:
+++ ./what_distro.sh root@
++ distro='failed to ID distro'

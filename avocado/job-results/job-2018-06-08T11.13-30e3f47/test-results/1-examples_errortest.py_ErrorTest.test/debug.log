@@ -1,0 +1,16 @@
+16:13:30 ERROR| 
+16:13:30 ERROR| Reproduced traceback from: /usr/local/lib/python2.7/dist-packages/avocado_framework-58.0-py2.7.egg/avocado/core/test.py:834
+16:13:30 ERROR| Traceback (most recent call last):
+16:13:30 ERROR|   File "/usr/share/avocado/tests/examples/errortest.py", line 19, in test
+16:13:30 ERROR|     self.error('This should end with ERROR.')
+16:13:30 ERROR|   File "/usr/local/lib/python2.7/dist-packages/avocado_framework-58.0-py2.7.egg/avocado/core/test.py", line 1041, in error
+16:13:30 ERROR|     raise exceptions.TestError(message)
+16:13:30 ERROR| TestError: This should end with ERROR.
+16:13:30 ERROR| 
+16:13:30 DEBUG| Local variables:
+16:13:30 DEBUG|  -> self <class 'errortest.ErrorTest'>: 1-examples/errortest.py:ErrorTest.test
+16:13:30 DEBUG| DATA (filename=output.expected) => NOT FOUND (data sources: variant, test, file)
+16:13:30 DEBUG| DATA (filename=stdout.expected) => NOT FOUND (data sources: variant, test, file)
+16:13:30 DEBUG| DATA (filename=stderr.expected) => NOT FOUND (data sources: variant, test, file)
+16:13:30 ERROR| ERROR 1-examples/errortest.py:ErrorTest.test -> TestError: This should end with ERROR.
+16:13:30 INFO | 

@@ -1,0 +1,626 @@
++ cd /var/lib/jenkins
++ ./checkresourceprovisioned.new.sh 10.236.10.208
++ set -e
++ ping -c 1 10.236.10.208
++ ssh -q -o PasswordAuthentication=no -o StrictHostKeyChecking=no jenkins@10.236.10.208 'test ! -f checkfornewkerneltag.sh'
++ '[' 255 -eq 1 ']'
++ ssh-keygen -R 10.236.10.208
++ ssh -q -o PasswordAuthentication=no -o StrictHostKeyChecking=no root@10.236.10.208 :
++ ./ssh-copy-id.expect root@10.236.10.208
+spawn ssh-copy-id -o StrictHostKeyChecking=no root@10.236.10.208
+/bin/ssh-copy-id: INFO: Source of key(s) to be installed: "/var/lib/jenkins/.ssh/id_rsa.pub"
+/bin/ssh-copy-id: INFO: attempting to log in with the new key(s), to filter out any that are already installed
+/bin/ssh-copy-id: INFO: 1 key(s) remain to be installed -- if you are prompted now it is to install the new keys
+root@10.236.10.208's password: 
+
+Number of key(s) added: 1
+
+Now try logging into the machine, with:   "ssh -o 'StrictHostKeyChecking=no' 'root@10.236.10.208'"
+and check to make sure that only the key(s) you wanted were added.
+
+++ ./what_distro.sh root@10.236.10.208
++ distro=rhel-7.5
++ '[' rhel-7.5 = ubuntu-16.04 ']'
++ '[' rhel-7.5 = ubuntu-17.10 ']'
++ '[' rhel-7.5 = ubuntu-18.04 ']'
++ '[' rhel-7.5 = ubuntu-18.04 ']'
++ '[' rhel-7.5 = sles-12.3 ']'
++ '[' rhel-7.5 = rhel-7.5 ']'
++ ssh -q root@10.236.10.208
+--2018-05-24 15:02:27--  http://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+Resolving dl.fedoraproject.org (dl.fedoraproject.org)... 209.132.181.23, 209.132.181.25, 209.132.181.24
+Connecting to dl.fedoraproject.org (dl.fedoraproject.org)|209.132.181.23|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 15080 (15K) [application/x-rpm]
+Saving to: ‘epel-release-latest-7.noarch.rpm’
+
+     0K .......... ....                                       100%  284K=0.05s
+
+2018-05-24 15:02:27 (284 KB/s) - ‘epel-release-latest-7.noarch.rpm’ saved [15080/15080]
+
+warning: epel-release-latest-7.noarch.rpm: Header V3 RSA/SHA256 Signature, key ID 352c64e5: NOKEY
+Preparing...                          ########################################
+Updating / installing...
+epel-release-7-11                     ########################################
+Loaded plugins: langpacks, product-id, search-disabled-repos, subscription-
+              : manager
+This system is not registered with an entitlement server. You can use subscription-manager to register.
+There is no installed groups file.
+Maybe run: yum groups mark convert (see man yum)
+No packages in any requested group available to install or update
+Warning: Group development does not have any packages to install.
+Maybe run: yum groups mark install (see man yum)
+Loaded plugins: langpacks, product-id, search-disabled-repos, subscription-
+              : manager
+This system is not registered with an entitlement server. You can use subscription-manager to register.
+Package gcc-4.8.5-28.el7.x86_64 already installed and latest version
+No package libvirt-glib-devel available.
+Resolving Dependencies
+--> Running transaction check
+---> Package libvirt-devel.x86_64 0:3.9.0-14.el7 will be installed
+---> Package xz-devel.x86_64 0:5.2.2-1.el7 will be installed
+--> Finished Dependency Resolution
+
+Dependencies Resolved
+
+================================================================================
+ Package             Arch         Version             Repository           Size
+================================================================================
+Installing:
+ libvirt-devel       x86_64       3.9.0-14.el7        iso_rhel_repo       329 k
+ xz-devel            x86_64       5.2.2-1.el7         iso_rhel_repo        46 k
+
+Transaction Summary
+================================================================================
+Install  2 Packages
+
+Total download size: 375 k
+Installed size: 2.2 M
+Downloading packages:
+--------------------------------------------------------------------------------
+Total                                              3.8 MB/s | 375 kB  00:00     
+Running transaction check
+Running transaction test
+Transaction test succeeded
+Running transaction
+Warning: RPMDB altered outside of yum.
+  Installing : libvirt-devel-3.9.0-14.el7.x86_64                            1/2 
+  Installing : xz-devel-5.2.2-1.el7.x86_64                                  2/2 
+  Verifying  : xz-devel-5.2.2-1.el7.x86_64                                  1/2 
+  Verifying  : libvirt-devel-3.9.0-14.el7.x86_64                            2/2 
+
+Installed:
+  libvirt-devel.x86_64 0:3.9.0-14.el7       xz-devel.x86_64 0:5.2.2-1.el7      
+
+Complete!
+Loaded plugins: langpacks, product-id, search-disabled-repos, subscription-
+              : manager
+This system is not registered with an entitlement server. You can use subscription-manager to register.
+Package git-1.8.3.1-13.el7.x86_64 already installed and latest version
+Package bison-3.0.4-1.el7.x86_64 already installed and latest version
+Package flex-2.5.37-3.el7.x86_64 already installed and latest version
+Package net-tools-2.0-0.22.20131004git.el7.x86_64 already installed and latest version
+Resolving Dependencies
+--> Running transaction check
+---> Package elfutils-libelf-devel.x86_64 0:0.170-4.el7 will be installed
+--> Processing Dependency: pkgconfig(zlib) for package: elfutils-libelf-devel-0.170-4.el7.x86_64
+---> Package openssl-devel.x86_64 1:1.0.2k-12.el7 will be installed
+--> Processing Dependency: krb5-devel(x86-64) for package: 1:openssl-devel-1.0.2k-12.el7.x86_64
+--> Running transaction check
+---> Package krb5-devel.x86_64 0:1.15.1-18.el7 will be installed
+--> Processing Dependency: libkadm5(x86-64) = 1.15.1-18.el7 for package: krb5-devel-1.15.1-18.el7.x86_64
+--> Processing Dependency: keyutils-libs-devel for package: krb5-devel-1.15.1-18.el7.x86_64
+--> Processing Dependency: libselinux-devel for package: krb5-devel-1.15.1-18.el7.x86_64
+--> Processing Dependency: libverto-devel for package: krb5-devel-1.15.1-18.el7.x86_64
+--> Processing Dependency: libcom_err-devel for package: krb5-devel-1.15.1-18.el7.x86_64
+---> Package zlib-devel.x86_64 0:1.2.7-17.el7 will be installed
+--> Running transaction check
+---> Package keyutils-libs-devel.x86_64 0:1.5.8-3.el7 will be installed
+---> Package libcom_err-devel.x86_64 0:1.42.9-11.el7 will be installed
+---> Package libkadm5.x86_64 0:1.15.1-18.el7 will be installed
+---> Package libselinux-devel.x86_64 0:2.5-12.el7 will be installed
+--> Processing Dependency: libsepol-devel(x86-64) >= 2.5-6 for package: libselinux-devel-2.5-12.el7.x86_64
+--> Processing Dependency: pkgconfig(libpcre) for package: libselinux-devel-2.5-12.el7.x86_64
+--> Processing Dependency: pkgconfig(libsepol) for package: libselinux-devel-2.5-12.el7.x86_64
+---> Package libverto-devel.x86_64 0:0.2.5-4.el7 will be installed
+--> Running transaction check
+---> Package libsepol-devel.x86_64 0:2.5-8.1.el7 will be installed
+---> Package pcre-devel.x86_64 0:8.32-17.el7 will be installed
+--> Finished Dependency Resolution
+
+Dependencies Resolved
+
+================================================================================
+ Package                  Arch      Version              Repository        Size
+================================================================================
+Installing:
+ elfutils-libelf-devel    x86_64    0.170-4.el7          iso_rhel_repo     38 k
+ openssl-devel            x86_64    1:1.0.2k-12.el7      iso_rhel_repo    1.5 M
+Installing for dependencies:
+ keyutils-libs-devel      x86_64    1.5.8-3.el7          iso_rhel_repo     37 k
+ krb5-devel               x86_64    1.15.1-18.el7        iso_rhel_repo    269 k
+ libcom_err-devel         x86_64    1.42.9-11.el7        iso_rhel_repo     31 k
+ libkadm5                 x86_64    1.15.1-18.el7        iso_rhel_repo    175 k
+ libselinux-devel         x86_64    2.5-12.el7           iso_rhel_repo    186 k
+ libsepol-devel           x86_64    2.5-8.1.el7          iso_rhel_repo     77 k
+ libverto-devel           x86_64    0.2.5-4.el7          iso_rhel_repo     12 k
+ pcre-devel               x86_64    8.32-17.el7          iso_rhel_repo    480 k
+ zlib-devel               x86_64    1.2.7-17.el7         iso_rhel_repo     50 k
+
+Transaction Summary
+================================================================================
+Install  2 Packages (+9 Dependent packages)
+
+Total download size: 2.8 M
+Installed size: 6.1 M
+Downloading packages:
+--------------------------------------------------------------------------------
+Total                                               14 MB/s | 2.8 MB  00:00     
+Running transaction check
+Running transaction test
+Transaction test succeeded
+Running transaction
+  Installing : zlib-devel-1.2.7-17.el7.x86_64                              1/11 
+  Installing : libcom_err-devel-1.42.9-11.el7.x86_64                       2/11 
+  Installing : libsepol-devel-2.5-8.1.el7.x86_64                           3/11 
+  Installing : pcre-devel-8.32-17.el7.x86_64                               4/11 
+  Installing : libselinux-devel-2.5-12.el7.x86_64                          5/11 
+  Installing : libverto-devel-0.2.5-4.el7.x86_64                           6/11 
+  Installing : keyutils-libs-devel-1.5.8-3.el7.x86_64                      7/11 
+  Installing : libkadm5-1.15.1-18.el7.x86_64                               8/11 
+  Installing : krb5-devel-1.15.1-18.el7.x86_64                             9/11 
+  Installing : 1:openssl-devel-1.0.2k-12.el7.x86_64                       10/11 
+  Installing : elfutils-libelf-devel-0.170-4.el7.x86_64                   11/11 
+  Verifying  : krb5-devel-1.15.1-18.el7.x86_64                             1/11 
+  Verifying  : zlib-devel-1.2.7-17.el7.x86_64                              2/11 
+  Verifying  : libkadm5-1.15.1-18.el7.x86_64                               3/11 
+  Verifying  : keyutils-libs-devel-1.5.8-3.el7.x86_64                      4/11 
+  Verifying  : libverto-devel-0.2.5-4.el7.x86_64                           5/11 
+  Verifying  : libselinux-devel-2.5-12.el7.x86_64                          6/11 
+  Verifying  : pcre-devel-8.32-17.el7.x86_64                               7/11 
+  Verifying  : libsepol-devel-2.5-8.1.el7.x86_64                           8/11 
+  Verifying  : elfutils-libelf-devel-0.170-4.el7.x86_64                    9/11 
+  Verifying  : libcom_err-devel-1.42.9-11.el7.x86_64                      10/11 
+  Verifying  : 1:openssl-devel-1.0.2k-12.el7.x86_64                       11/11 
+
+Installed:
+  elfutils-libelf-devel.x86_64 0:0.170-4.el7                                    
+  openssl-devel.x86_64 1:1.0.2k-12.el7                                          
+
+Dependency Installed:
+  keyutils-libs-devel.x86_64 0:1.5.8-3.el7  krb5-devel.x86_64 0:1.15.1-18.el7   
+  libcom_err-devel.x86_64 0:1.42.9-11.el7   libkadm5.x86_64 0:1.15.1-18.el7     
+  libselinux-devel.x86_64 0:2.5-12.el7      libsepol-devel.x86_64 0:2.5-8.1.el7 
+  libverto-devel.x86_64 0:0.2.5-4.el7       pcre-devel.x86_64 0:8.32-17.el7     
+  zlib-devel.x86_64 0:1.2.7-17.el7         
+
+Complete!
+Loaded plugins: langpacks, product-id, search-disabled-repos, subscription-
+              : manager
+This system is not registered with an entitlement server. You can use subscription-manager to register.
+Package rpm-4.11.3-32.el7.x86_64 already installed and latest version
+No package acpica-tools available.
+Resolving Dependencies
+--> Running transaction check
+---> Package libuuid-devel.x86_64 0:2.23.2-52.el7 will be installed
+---> Package nasm.x86_64 0:2.10.07-7.el7 will be installed
+---> Package ncurses-devel.x86_64 0:5.9-14.20130511.el7_4 will be installed
+---> Package python-devel.x86_64 0:2.7.5-68.el7 will be installed
+--> Finished Dependency Resolution
+
+Dependencies Resolved
+
+================================================================================
+ Package           Arch       Version                   Repository         Size
+================================================================================
+Installing:
+ libuuid-devel     x86_64     2.23.2-52.el7             iso_rhel_repo      90 k
+ nasm              x86_64     2.10.07-7.el7             iso_rhel_repo     402 k
+ ncurses-devel     x86_64     5.9-14.20130511.el7_4     iso_rhel_repo     713 k
+ python-devel      x86_64     2.7.5-68.el7              iso_rhel_repo     397 k
+
+Transaction Summary
+================================================================================
+Install  4 Packages
+
+Total download size: 1.6 M
+Installed size: 4.6 M
+Downloading packages:
+--------------------------------------------------------------------------------
+Total                                               13 MB/s | 1.6 MB  00:00     
+Running transaction check
+Running transaction test
+Transaction test succeeded
+Running transaction
+  Installing : ncurses-devel-5.9-14.20130511.el7_4.x86_64                   1/4 
+  Installing : libuuid-devel-2.23.2-52.el7.x86_64                           2/4 
+  Installing : nasm-2.10.07-7.el7.x86_64                                    3/4 
+  Installing : python-devel-2.7.5-68.el7.x86_64                             4/4 
+  Verifying  : python-devel-2.7.5-68.el7.x86_64                             1/4 
+  Verifying  : nasm-2.10.07-7.el7.x86_64                                    2/4 
+  Verifying  : libuuid-devel-2.23.2-52.el7.x86_64                           3/4 
+  Verifying  : ncurses-devel-5.9-14.20130511.el7_4.x86_64                   4/4 
+
+Installed:
+  libuuid-devel.x86_64 0:2.23.2-52.el7                                          
+  nasm.x86_64 0:2.10.07-7.el7                                                   
+  ncurses-devel.x86_64 0:5.9-14.20130511.el7_4                                  
+  python-devel.x86_64 0:2.7.5-68.el7                                            
+
+Complete!
+Loaded plugins: langpacks, product-id, search-disabled-repos, subscription-
+              : manager
+This system is not registered with an entitlement server. You can use subscription-manager to register.
+Package bridge-utils-1.5-9.el7.x86_64 already installed and latest version
+Resolving Dependencies
+--> Running transaction check
+---> Package yaml-cpp-devel.x86_64 1:0.5.1-1.el7.2 will be installed
+--> Processing Dependency: yaml-cpp(x86-64) = 1:0.5.1-1.el7.2 for package: 1:yaml-cpp-devel-0.5.1-1.el7.2.x86_64
+--> Processing Dependency: boost-devel for package: 1:yaml-cpp-devel-0.5.1-1.el7.2.x86_64
+--> Processing Dependency: libyaml-cpp.so.0.5()(64bit) for package: 1:yaml-cpp-devel-0.5.1-1.el7.2.x86_64
+--> Running transaction check
+---> Package boost-devel.x86_64 0:1.53.0-27.el7 will be installed
+--> Processing Dependency: boost(x86-64) = 1.53.0-27.el7 for package: boost-devel-1.53.0-27.el7.x86_64
+--> Processing Dependency: libboost_math_c99l.so.1.53.0()(64bit) for package: boost-devel-1.53.0-27.el7.x86_64
+--> Processing Dependency: libboost_math_tr1f-mt.so.1.53.0()(64bit) for package: boost-devel-1.53.0-27.el7.x86_64
+--> Processing Dependency: libboost_filesystem-mt.so.1.53.0()(64bit) for package: boost-devel-1.53.0-27.el7.x86_64
+--> Processing Dependency: libboost_context-mt.so.1.53.0()(64bit) for package: boost-devel-1.53.0-27.el7.x86_64
+--> Processing Dependency: libboost_signals.so.1.53.0()(64bit) for package: boost-devel-1.53.0-27.el7.x86_64
+--> Processing Dependency: libboost_graph.so.1.53.0()(64bit) for package: boost-devel-1.53.0-27.el7.x86_64
+--> Processing Dependency: libboost_math_c99l-mt.so.1.53.0()(64bit) for package: boost-devel-1.53.0-27.el7.x86_64
+--> Processing Dependency: libboost_random.so.1.53.0()(64bit) for package: boost-devel-1.53.0-27.el7.x86_64
+--> Processing Dependency: libboost_timer-mt.so.1.53.0()(64bit) for package: boost-devel-1.53.0-27.el7.x86_64
+--> Processing Dependency: libboost_math_tr1l-mt.so.1.53.0()(64bit) for package: boost-devel-1.53.0-27.el7.x86_64
+--> Processing Dependency: libboost_signals-mt.so.1.53.0()(64bit) for package: boost-devel-1.53.0-27.el7.x86_64
+--> Processing Dependency: libboost_math_tr1f.so.1.53.0()(64bit) for package: boost-devel-1.53.0-27.el7.x86_64
+--> Processing Dependency: libboost_wave-mt.so.1.53.0()(64bit) for package: boost-devel-1.53.0-27.el7.x86_64
+--> Processing Dependency: libboost_wave.so.1.53.0()(64bit) for package: boost-devel-1.53.0-27.el7.x86_64
+--> Processing Dependency: libboost_iostreams.so.1.53.0()(64bit) for package: boost-devel-1.53.0-27.el7.x86_64
+--> Processing Dependency: libboost_math_tr1l.so.1.53.0()(64bit) for package: boost-devel-1.53.0-27.el7.x86_64
+--> Processing Dependency: libboost_unit_test_framework.so.1.53.0()(64bit) for package: boost-devel-1.53.0-27.el7.x86_64
+--> Processing Dependency: libboost_serialization-mt.so.1.53.0()(64bit) for package: boost-devel-1.53.0-27.el7.x86_64
+--> Processing Dependency: libboost_chrono.so.1.53.0()(64bit) for package: boost-devel-1.53.0-27.el7.x86_64
+--> Processing Dependency: libboost_program_options-mt.so.1.53.0()(64bit) for package: boost-devel-1.53.0-27.el7.x86_64
+--> Processing Dependency: libboost_program_options.so.1.53.0()(64bit) for package: boost-devel-1.53.0-27.el7.x86_64
+--> Processing Dependency: libboost_wserialization-mt.so.1.53.0()(64bit) for package: boost-devel-1.53.0-27.el7.x86_64
+--> Processing Dependency: libboost_serialization.so.1.53.0()(64bit) for package: boost-devel-1.53.0-27.el7.x86_64
+--> Processing Dependency: libboost_math_c99.so.1.53.0()(64bit) for package: boost-devel-1.53.0-27.el7.x86_64
+--> Processing Dependency: libboost_math_tr1.so.1.53.0()(64bit) for package: boost-devel-1.53.0-27.el7.x86_64
+--> Processing Dependency: libboost_math_c99f-mt.so.1.53.0()(64bit) for package: boost-devel-1.53.0-27.el7.x86_64
+--> Processing Dependency: libboost_prg_exec_monitor-mt.so.1.53.0()(64bit) for package: boost-devel-1.53.0-27.el7.x86_64
+--> Processing Dependency: libboost_iostreams-mt.so.1.53.0()(64bit) for package: boost-devel-1.53.0-27.el7.x86_64
+--> Processing Dependency: libboost_python.so.1.53.0()(64bit) for package: boost-devel-1.53.0-27.el7.x86_64
+--> Processing Dependency: libboost_math_c99f.so.1.53.0()(64bit) for package: boost-devel-1.53.0-27.el7.x86_64
+--> Processing Dependency: libboost_filesystem.so.1.53.0()(64bit) for package: boost-devel-1.53.0-27.el7.x86_64
+--> Processing Dependency: libboost_graph-mt.so.1.53.0()(64bit) for package: boost-devel-1.53.0-27.el7.x86_64
+--> Processing Dependency: libboost_wserialization.so.1.53.0()(64bit) for package: boost-devel-1.53.0-27.el7.x86_64
+--> Processing Dependency: libboost_random-mt.so.1.53.0()(64bit) for package: boost-devel-1.53.0-27.el7.x86_64
+--> Processing Dependency: libboost_unit_test_framework-mt.so.1.53.0()(64bit) for package: boost-devel-1.53.0-27.el7.x86_64
+--> Processing Dependency: libboost_chrono-mt.so.1.53.0()(64bit) for package: boost-devel-1.53.0-27.el7.x86_64
+--> Processing Dependency: libboost_atomic-mt.so.1.53.0()(64bit) for package: boost-devel-1.53.0-27.el7.x86_64
+--> Processing Dependency: libboost_locale-mt.so.1.53.0()(64bit) for package: boost-devel-1.53.0-27.el7.x86_64
+--> Processing Dependency: libboost_timer.so.1.53.0()(64bit) for package: boost-devel-1.53.0-27.el7.x86_64
+--> Processing Dependency: libboost_regex-mt.so.1.53.0()(64bit) for package: boost-devel-1.53.0-27.el7.x86_64
+--> Processing Dependency: libboost_math_c99-mt.so.1.53.0()(64bit) for package: boost-devel-1.53.0-27.el7.x86_64
+--> Processing Dependency: libboost_regex.so.1.53.0()(64bit) for package: boost-devel-1.53.0-27.el7.x86_64
+--> Processing Dependency: libboost_math_tr1-mt.so.1.53.0()(64bit) for package: boost-devel-1.53.0-27.el7.x86_64
+--> Processing Dependency: libboost_context.so.1.53.0()(64bit) for package: boost-devel-1.53.0-27.el7.x86_64
+--> Processing Dependency: libboost_python-mt.so.1.53.0()(64bit) for package: boost-devel-1.53.0-27.el7.x86_64
+--> Processing Dependency: libboost_prg_exec_monitor.so.1.53.0()(64bit) for package: boost-devel-1.53.0-27.el7.x86_64
+---> Package yaml-cpp.x86_64 1:0.5.1-1.el7.2 will be installed
+--> Running transaction check
+---> Package boost.x86_64 0:1.53.0-27.el7 will be installed
+---> Package boost-atomic.x86_64 0:1.53.0-27.el7 will be installed
+---> Package boost-chrono.x86_64 0:1.53.0-27.el7 will be installed
+---> Package boost-context.x86_64 0:1.53.0-27.el7 will be installed
+---> Package boost-filesystem.x86_64 0:1.53.0-27.el7 will be installed
+---> Package boost-graph.x86_64 0:1.53.0-27.el7 will be installed
+---> Package boost-iostreams.x86_64 0:1.53.0-27.el7 will be installed
+---> Package boost-locale.x86_64 0:1.53.0-27.el7 will be installed
+---> Package boost-math.x86_64 0:1.53.0-27.el7 will be installed
+---> Package boost-program-options.x86_64 0:1.53.0-27.el7 will be installed
+---> Package boost-python.x86_64 0:1.53.0-27.el7 will be installed
+---> Package boost-random.x86_64 0:1.53.0-27.el7 will be installed
+---> Package boost-regex.x86_64 0:1.53.0-27.el7 will be installed
+---> Package boost-serialization.x86_64 0:1.53.0-27.el7 will be installed
+---> Package boost-signals.x86_64 0:1.53.0-27.el7 will be installed
+---> Package boost-test.x86_64 0:1.53.0-27.el7 will be installed
+---> Package boost-timer.x86_64 0:1.53.0-27.el7 will be installed
+---> Package boost-wave.x86_64 0:1.53.0-27.el7 will be installed
+--> Finished Dependency Resolution
+
+Dependencies Resolved
+
+================================================================================
+ Package                  Arch      Version              Repository        Size
+================================================================================
+Installing:
+ yaml-cpp-devel           x86_64    1:0.5.1-1.el7.2      epel              26 k
+Installing for dependencies:
+ boost                    x86_64    1.53.0-27.el7        iso_rhel_repo     33 k
+ boost-atomic             x86_64    1.53.0-27.el7        iso_rhel_repo     35 k
+ boost-chrono             x86_64    1.53.0-27.el7        iso_rhel_repo     44 k
+ boost-context            x86_64    1.53.0-27.el7        iso_rhel_repo     36 k
+ boost-devel              x86_64    1.53.0-27.el7        iso_rhel_repo    7.0 M
+ boost-filesystem         x86_64    1.53.0-27.el7        iso_rhel_repo     68 k
+ boost-graph              x86_64    1.53.0-27.el7        iso_rhel_repo    136 k
+ boost-iostreams          x86_64    1.53.0-27.el7        iso_rhel_repo     61 k
+ boost-locale             x86_64    1.53.0-27.el7        iso_rhel_repo    251 k
+ boost-math               x86_64    1.53.0-27.el7        iso_rhel_repo    334 k
+ boost-program-options    x86_64    1.53.0-27.el7        iso_rhel_repo    156 k
+ boost-python             x86_64    1.53.0-27.el7        iso_rhel_repo    129 k
+ boost-random             x86_64    1.53.0-27.el7        iso_rhel_repo     39 k
+ boost-regex              x86_64    1.53.0-27.el7        iso_rhel_repo    300 k
+ boost-serialization      x86_64    1.53.0-27.el7        iso_rhel_repo    169 k
+ boost-signals            x86_64    1.53.0-27.el7        iso_rhel_repo     60 k
+ boost-test               x86_64    1.53.0-27.el7        iso_rhel_repo    223 k
+ boost-timer              x86_64    1.53.0-27.el7        iso_rhel_repo     43 k
+ boost-wave               x86_64    1.53.0-27.el7        iso_rhel_repo    210 k
+ yaml-cpp                 x86_64    1:0.5.1-1.el7.2      epel             176 k
+
+Transaction Summary
+================================================================================
+Install  1 Package (+20 Dependent packages)
+
+Total download size: 9.4 M
+Installed size: 98 M
+Downloading packages:
+warning: /var/cache/yum/x86_64/7Server/epel/packages/yaml-cpp-0.5.1-1.el7.2.x86_64.rpm: Header V3 RSA/SHA256 Signature, key ID 352c64e5: NOKEY
+Public key for yaml-cpp-0.5.1-1.el7.2.x86_64.rpm is not installed
+--------------------------------------------------------------------------------
+Total                                               13 MB/s | 9.4 MB  00:00     
+Retrieving key from file:///etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-7
+Importing GPG key 0x352C64E5:
+ Userid     : "Fedora EPEL (7) <epel@fedoraproject.org>"
+ Fingerprint: 91e9 7d7c 4a5e 96f1 7f3e 888f 6a2f aea2 352c 64e5
+ Package    : epel-release-7-11.noarch (installed)
+ From       : /etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-7
+Running transaction check
+Running transaction test
+Transaction test succeeded
+Running transaction
+  Installing : boost-chrono-1.53.0-27.el7.x86_64                           1/21 
+  Installing : boost-filesystem-1.53.0-27.el7.x86_64                       2/21 
+  Installing : boost-regex-1.53.0-27.el7.x86_64                            3/21 
+  Installing : boost-graph-1.53.0-27.el7.x86_64                            4/21 
+  Installing : boost-wave-1.53.0-27.el7.x86_64                             5/21 
+  Installing : boost-timer-1.53.0-27.el7.x86_64                            6/21 
+  Installing : boost-locale-1.53.0-27.el7.x86_64                           7/21 
+  Installing : boost-python-1.53.0-27.el7.x86_64                           8/21 
+  Installing : boost-atomic-1.53.0-27.el7.x86_64                           9/21 
+  Installing : boost-program-options-1.53.0-27.el7.x86_64                 10/21 
+  Installing : boost-random-1.53.0-27.el7.x86_64                          11/21 
+  Installing : boost-iostreams-1.53.0-27.el7.x86_64                       12/21 
+  Installing : boost-math-1.53.0-27.el7.x86_64                            13/21 
+  Installing : boost-serialization-1.53.0-27.el7.x86_64                   14/21 
+  Installing : boost-test-1.53.0-27.el7.x86_64                            15/21 
+  Installing : boost-context-1.53.0-27.el7.x86_64                         16/21 
+  Installing : boost-signals-1.53.0-27.el7.x86_64                         17/21 
+  Installing : boost-1.53.0-27.el7.x86_64                                 18/21 
+  Installing : boost-devel-1.53.0-27.el7.x86_64                           19/21 
+  Installing : 1:yaml-cpp-0.5.1-1.el7.2.x86_64                            20/21 
+  Installing : 1:yaml-cpp-devel-0.5.1-1.el7.2.x86_64                      21/21 
+  Verifying  : 1:yaml-cpp-devel-0.5.1-1.el7.2.x86_64                       1/21 
+  Verifying  : boost-graph-1.53.0-27.el7.x86_64                            2/21 
+  Verifying  : boost-signals-1.53.0-27.el7.x86_64                          3/21 
+  Verifying  : boost-chrono-1.53.0-27.el7.x86_64                           4/21 
+  Verifying  : boost-context-1.53.0-27.el7.x86_64                          5/21 
+  Verifying  : boost-devel-1.53.0-27.el7.x86_64                            6/21 
+  Verifying  : boost-timer-1.53.0-27.el7.x86_64                            7/21 
+  Verifying  : boost-regex-1.53.0-27.el7.x86_64                            8/21 
+  Verifying  : boost-test-1.53.0-27.el7.x86_64                             9/21 
+  Verifying  : boost-serialization-1.53.0-27.el7.x86_64                   10/21 
+  Verifying  : boost-locale-1.53.0-27.el7.x86_64                          11/21 
+  Verifying  : boost-wave-1.53.0-27.el7.x86_64                            12/21 
+  Verifying  : boost-math-1.53.0-27.el7.x86_64                            13/21 
+  Verifying  : boost-1.53.0-27.el7.x86_64                                 14/21 
+  Verifying  : boost-iostreams-1.53.0-27.el7.x86_64                       15/21 
+  Verifying  : boost-random-1.53.0-27.el7.x86_64                          16/21 
+  Verifying  : boost-program-options-1.53.0-27.el7.x86_64                 17/21 
+  Verifying  : 1:yaml-cpp-0.5.1-1.el7.2.x86_64                            18/21 
+  Verifying  : boost-filesystem-1.53.0-27.el7.x86_64                      19/21 
+  Verifying  : boost-atomic-1.53.0-27.el7.x86_64                          20/21 
+  Verifying  : boost-python-1.53.0-27.el7.x86_64                          21/21 
+
+Installed:
+  yaml-cpp-devel.x86_64 1:0.5.1-1.el7.2                                         
+
+Dependency Installed:
+  boost.x86_64 0:1.53.0-27.el7                                                  
+  boost-atomic.x86_64 0:1.53.0-27.el7                                           
+  boost-chrono.x86_64 0:1.53.0-27.el7                                           
+  boost-context.x86_64 0:1.53.0-27.el7                                          
+  boost-devel.x86_64 0:1.53.0-27.el7                                            
+  boost-filesystem.x86_64 0:1.53.0-27.el7                                       
+  boost-graph.x86_64 0:1.53.0-27.el7                                            
+  boost-iostreams.x86_64 0:1.53.0-27.el7                                        
+  boost-locale.x86_64 0:1.53.0-27.el7                                           
+  boost-math.x86_64 0:1.53.0-27.el7                                             
+  boost-program-options.x86_64 0:1.53.0-27.el7                                  
+  boost-python.x86_64 0:1.53.0-27.el7                                           
+  boost-random.x86_64 0:1.53.0-27.el7                                           
+  boost-regex.x86_64 0:1.53.0-27.el7                                            
+  boost-serialization.x86_64 0:1.53.0-27.el7                                    
+  boost-signals.x86_64 0:1.53.0-27.el7                                          
+  boost-test.x86_64 0:1.53.0-27.el7                                             
+  boost-timer.x86_64 0:1.53.0-27.el7                                            
+  boost-wave.x86_64 0:1.53.0-27.el7                                             
+  yaml-cpp.x86_64 1:0.5.1-1.el7.2                                               
+
+Complete!
+Loaded plugins: langpacks, product-id, search-disabled-repos, subscription-
+              : manager
+This system is not registered with an entitlement server. You can use subscription-manager to register.
+Resolving Dependencies
+--> Running transaction check
+---> Package python-pyudev.noarch 0:0.15-9.el7 will be erased
+--> Processing Dependency: python-pyudev for package: 1:python-blivet-0.61.15.69-1.el7.noarch
+--> Processing Dependency: python-pyudev for package: tuned-2.9.0-1.el7.noarch
+--> Processing Dependency: python-pyudev for package: python-rtslib-2.1.fb63-5.el7.noarch
+--> Running transaction check
+---> Package python-blivet.noarch 1:0.61.15.69-1.el7 will be erased
+--> Processing Dependency: python-blivet >= 1:0.61.15.60 for package: anaconda-core-21.48.22.134-1.el7.x86_64
+---> Package python-rtslib.noarch 0:2.1.fb63-5.el7 will be erased
+--> Processing Dependency: python-rtslib >= 2.1.fb41 for package: targetcli-2.1.fb46-1.el7.noarch
+---> Package tuned.noarch 0:2.9.0-1.el7 will be erased
+--> Running transaction check
+---> Package anaconda-core.x86_64 0:21.48.22.134-1.el7 will be erased
+--> Processing Dependency: anaconda-core = 21.48.22.134-1.el7 for package: anaconda-gui-21.48.22.134-1.el7.x86_64
+--> Processing Dependency: anaconda-core = 21.48.22.134-1.el7 for package: anaconda-tui-21.48.22.134-1.el7.x86_64
+---> Package targetcli.noarch 0:2.1.fb46-1.el7 will be erased
+--> Running transaction check
+---> Package anaconda-gui.x86_64 0:21.48.22.134-1.el7 will be erased
+--> Processing Dependency: anaconda-gui >= 21.48.22.102 for package: initial-setup-gui-0.3.9.43-1.el7.x86_64
+---> Package anaconda-tui.x86_64 0:21.48.22.134-1.el7 will be erased
+--> Processing Dependency: anaconda-tui >= 21.48.22.102 for package: initial-setup-0.3.9.43-1.el7.x86_64
+--> Running transaction check
+---> Package initial-setup.x86_64 0:0.3.9.43-1.el7 will be erased
+---> Package initial-setup-gui.x86_64 0:0.3.9.43-1.el7 will be erased
+--> Processing Dependency: initial-setup-gui >= 0.3.9.24-1 for package: subscription-manager-initial-setup-addon-1.20.10-1.el7.x86_64
+--> Running transaction check
+---> Package subscription-manager-initial-setup-addon.x86_64 0:1.20.10-1.el7 will be erased
+--> Finished Dependency Resolution
+
+Dependencies Resolved
+
+================================================================================
+ Package                          Arch   Version            Repository     Size
+================================================================================
+Removing:
+ python-pyudev                    noarch 0.15-9.el7         @anaconda/7.5 236 k
+Removing for dependencies:
+ anaconda-core                    x86_64 21.48.22.134-1.el7 @anaconda/7.5 8.1 M
+ anaconda-gui                     x86_64 21.48.22.134-1.el7 @anaconda/7.5 1.4 M
+ anaconda-tui                     x86_64 21.48.22.134-1.el7 @anaconda/7.5 436 k
+ initial-setup                    x86_64 0.3.9.43-1.el7     @anaconda/7.5 221 k
+ initial-setup-gui                x86_64 0.3.9.43-1.el7     @anaconda/7.5  32 k
+ python-blivet                    noarch 1:0.61.15.69-1.el7 @anaconda/7.5 3.0 M
+ python-rtslib                    noarch 2.1.fb63-5.el7     @anaconda/7.5 682 k
+ subscription-manager-initial-setup-addon
+                                  x86_64 1.20.10-1.el7      @anaconda/7.5  46 k
+ targetcli                        noarch 2.1.fb46-1.el7     @anaconda/7.5 224 k
+ tuned                            noarch 2.9.0-1.el7        @anaconda/7.5 722 k
+
+Transaction Summary
+================================================================================
+Remove  1 Package (+10 Dependent packages)
+
+Installed size: 15 M
+Downloading packages:
+Running transaction check
+Running transaction test
+Transaction test succeeded
+Running transaction
+  Erasing    : subscription-manager-initial-setup-addon-1.20.10-1.el7.x    1/11 
+  Erasing    : initial-setup-gui-0.3.9.43-1.el7.x86_64                     2/11 
+  Erasing    : anaconda-gui-21.48.22.134-1.el7.x86_64                      3/11 
+  Erasing    : initial-setup-0.3.9.43-1.el7.x86_64                         4/11 
+  Erasing    : anaconda-tui-21.48.22.134-1.el7.x86_64                      5/11 
+  Erasing    : anaconda-core-21.48.22.134-1.el7.x86_64                     6/11 
+  Erasing    : 1:python-blivet-0.61.15.69-1.el7.noarch                     7/11 
+  Erasing    : targetcli-2.1.fb46-1.el7.noarch                             8/11 
+  Erasing    : python-rtslib-2.1.fb63-5.el7.noarch                         9/11 
+  Erasing    : tuned-2.9.0-1.el7.noarch                                   10/11 
+warning: /etc/tuned/profile_mode saved as /etc/tuned/profile_mode.rpmsave
+warning: /etc/tuned/active_profile saved as /etc/tuned/active_profile.rpmsave
+  Erasing    : python-pyudev-0.15-9.el7.noarch                            11/11 
+  Verifying  : anaconda-gui-21.48.22.134-1.el7.x86_64                      1/11 
+  Verifying  : anaconda-core-21.48.22.134-1.el7.x86_64                     2/11 
+  Verifying  : anaconda-tui-21.48.22.134-1.el7.x86_64                      3/11 
+  Verifying  : initial-setup-0.3.9.43-1.el7.x86_64                         4/11 
+  Verifying  : initial-setup-gui-0.3.9.43-1.el7.x86_64                     5/11 
+  Verifying  : python-pyudev-0.15-9.el7.noarch                             6/11 
+  Verifying  : python-rtslib-2.1.fb63-5.el7.noarch                         7/11 
+  Verifying  : tuned-2.9.0-1.el7.noarch                                    8/11 
+  Verifying  : 1:python-blivet-0.61.15.69-1.el7.noarch                     9/11 
+  Verifying  : targetcli-2.1.fb46-1.el7.noarch                            10/11 
+  Verifying  : subscription-manager-initial-setup-addon-1.20.10-1.el7.x   11/11 
+
+Removed:
+  python-pyudev.noarch 0:0.15-9.el7                                             
+
+Dependency Removed:
+  anaconda-core.x86_64 0:21.48.22.134-1.el7                                     
+  anaconda-gui.x86_64 0:21.48.22.134-1.el7                                      
+  anaconda-tui.x86_64 0:21.48.22.134-1.el7                                      
+  initial-setup.x86_64 0:0.3.9.43-1.el7                                         
+  initial-setup-gui.x86_64 0:0.3.9.43-1.el7                                     
+  python-blivet.noarch 1:0.61.15.69-1.el7                                       
+  python-rtslib.noarch 0:2.1.fb63-5.el7                                         
+  subscription-manager-initial-setup-addon.x86_64 0:1.20.10-1.el7               
+  targetcli.noarch 0:2.1.fb46-1.el7                                             
+  tuned.noarch 0:2.9.0-1.el7                                                    
+
+Complete!
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0 12 1603k   12  207k    0     0   720k      0  0:00:02 --:--:--  0:00:02  720k100 1603k  100 1603k    0     0  3269k      0 --:--:-- --:--:-- --:--:-- 3266k
+Collecting pip
+  Downloading https://files.pythonhosted.org/packages/0f/74/ecd13431bcc456ed390b44c8a6e917c1820365cbebcb6a8974d1cd045ab4/pip-10.0.1-py2.py3-none-any.whl (1.3MB)
+Collecting wheel
+  Downloading https://files.pythonhosted.org/packages/81/30/e935244ca6165187ae8be876b6316ae201b71485538ffac1d718843025a9/wheel-0.31.1-py2.py3-none-any.whl (41kB)
+Installing collected packages: pip, wheel
+Successfully installed pip-10.0.1 wheel-0.31.1
+Collecting snakefood
+  Downloading https://files.pythonhosted.org/packages/64/56/f81ce3eaf20ba3a1cd22c0c59ac171cb65187ebdaa1c6983d1f6e0876c93/snakefood-1.4.tar.gz (1.1MB)
+Collecting pynacl
+  Downloading https://files.pythonhosted.org/packages/80/3d/d709b9fbd69e21dd3a4d34eb690c5484094699e03b7447bc7eb173cfd7b6/PyNaCl-1.2.1-cp27-cp27mu-manylinux1_x86_64.whl (696kB)
+Collecting netifaces
+  Downloading https://files.pythonhosted.org/packages/70/dd/411bb4cda549136cf9ff5dbd4f33f898fd90b25ac73fd4ea42a3d3e8fd15/netifaces-0.10.7-cp27-cp27mu-manylinux1_x86_64.whl
+Collecting libvirt-python
+  Downloading https://files.pythonhosted.org/packages/43/28/281cc618b9169b1137a42beaaa016845a0859c76544c9864cf96266920b5/libvirt-python-4.3.0.tar.gz (187kB)
+Collecting networkx
+  Downloading https://files.pythonhosted.org/packages/11/42/f951cc6838a4dff6ce57211c4d7f8444809ccbe2134179950301e5c4c83c/networkx-2.1.zip (1.6MB)
+Requirement already satisfied: six in /usr/lib/python2.7/site-packages (from pynacl) (1.9.0)
+Collecting cffi>=1.4.1 (from pynacl)
+  Downloading https://files.pythonhosted.org/packages/14/dd/3e7a1e1280e7d767bd3fa15791759c91ec19058ebe31217fe66f3e9a8c49/cffi-1.11.5-cp27-cp27mu-manylinux1_x86_64.whl (407kB)
+Collecting decorator>=4.1.0 (from networkx)
+  Downloading https://files.pythonhosted.org/packages/bc/bb/a24838832ba35baf52f32ab1a49b906b5f82fb7c76b2f6a7e35e140bac30/decorator-4.3.0-py2.py3-none-any.whl
+Collecting pycparser (from cffi>=1.4.1->pynacl)
+  Downloading https://files.pythonhosted.org/packages/8c/2d/aad7f16146f4197a11f8e91fb81df177adcc2073d36a17b1491fd09df6ed/pycparser-2.18.tar.gz (245kB)
+Building wheels for collected packages: snakefood, libvirt-python, networkx, pycparser
+  Running setup.py bdist_wheel for snakefood: started
+  Running setup.py bdist_wheel for snakefood: finished with status 'done'
+  Stored in directory: /root/.cache/pip/wheels/8c/be/d3/f7139b8e21ce4f399781b887d90c2b4e6a37d9f10c4514951d
+  Running setup.py bdist_wheel for libvirt-python: started
+  Running setup.py bdist_wheel for libvirt-python: finished with status 'done'
+  Stored in directory: /root/.cache/pip/wheels/39/e8/c4/b5e5b31a8e2537982c4c7dd4f8b238fb4112d6aebec51d8a46
+  Running setup.py bdist_wheel for networkx: started
+  Running setup.py bdist_wheel for networkx: finished with status 'done'
+  Stored in directory: /root/.cache/pip/wheels/44/c0/34/6f98693a554301bdb405f8d65d95bbcd3e50180cbfdd98a94e
+  Running setup.py bdist_wheel for pycparser: started
+  Running setup.py bdist_wheel for pycparser: finished with status 'done'
+  Stored in directory: /root/.cache/pip/wheels/c0/a1/27/5ba234bd77ea5a290cbf6d675259ec52293193467a12ef1f46
+Successfully built snakefood libvirt-python networkx pycparser
+Installing collected packages: snakefood, pycparser, cffi, pynacl, netifaces, libvirt-python, decorator, networkx
+  Found existing installation: decorator 3.4.0
+    Uninstalling decorator-3.4.0:
+      Successfully uninstalled decorator-3.4.0
+Successfully installed cffi-1.11.5 decorator-4.3.0 libvirt-python-4.3.0 netifaces-0.10.7 networkx-2.1 pycparser-2.18 pynacl-1.2.1 snakefood-1.4
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0 37  126M   37 47.2M    0     0  46.2M      0  0:00:02  0:00:01  0:00:01 46.2M 92  126M   92  116M    0     0  58.2M      0  0:00:02  0:00:02 --:--:-- 58.2M100  126M  100  126M    0     0  58.1M      0  0:00:02  0:00:02 --:--:-- 58.1M
+Generating grub configuration file ...
+Found linux image: /boot/vmlinuz-3.10.0-862.el7.x86_64
+Found initrd image: /boot/initramfs-3.10.0-862.el7.x86_64.img
+Found linux image: /boot/vmlinuz-0-rescue-25a751195a664553900f11cadf1ba78b
+Found initrd image: /boot/initramfs-0-rescue-25a751195a664553900f11cadf1ba78b.img
+Found Ubuntu 18.04 LTS (18.04) on /dev/sda2
+Found SUSE Linux Enterprise Server 12 (x86_64) on /dev/sdc3
+Found Ubuntu 18.04 LTS (18.04) on /dev/sdd3
+done
+Generating grub configuration file ...
+Found linux image: /boot/vmlinuz-3.10.0-862.el7.x86_64
+Found initrd image: /boot/initramfs-3.10.0-862.el7.x86_64.img
+Found linux image: /boot/vmlinuz-0-rescue-25a751195a664553900f11cadf1ba78b
+Found initrd image: /boot/initramfs-0-rescue-25a751195a664553900f11cadf1ba78b.img
+Found Ubuntu 18.04 LTS (18.04) on /dev/sda2
+Found SUSE Linux Enterprise Server 12 (x86_64) on /dev/sdc3
+Found Ubuntu 18.04 LTS (18.04) on /dev/sdd3
+done
++ ssh -q root@10.236.10.208 'cat > /etc/skel/.nanorc'
++ '[' rhel-7.5 = ubuntu-16.04 ']'
++ '[' rhel-7.5 = ubuntu-17.10 ']'
++ '[' rhel-7.5 = ubuntu-18.04 ']'
++ ssh -q root@10.236.10.208 'useradd -m -s /bin/bash -G wheel jenkins && echo jenkins:amd123 | chpasswd'
+useradd: user 'jenkins' already exists

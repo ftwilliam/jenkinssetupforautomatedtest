@@ -1,0 +1,83 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<build>
+  <actions>
+    <hudson.model.CauseAction>
+      <causeBag class="linked-hash-map">
+        <entry>
+          <hudson.model.Cause_-UpstreamCause>
+            <upstreamProject>avocadoperfbench.starship</upstreamProject>
+            <upstreamUrl>job/avocadoperfbench.starship/</upstreamUrl>
+            <upstreamBuild>10</upstreamBuild>
+            <upstreamCauses>
+              <hudson.model.Cause_-UpstreamCause>
+                <upstreamProject>avocadoltp.starship</upstreamProject>
+                <upstreamUrl>job/avocadoltp.starship/</upstreamUrl>
+                <upstreamBuild>8</upstreamBuild>
+                <upstreamCauses>
+                  <hudson.model.Cause_-UpstreamCause>
+                    <upstreamProject>avocadokernbench.starship</upstreamProject>
+                    <upstreamUrl>job/avocadokernbench.starship/</upstreamUrl>
+                    <upstreamBuild>6</upstreamBuild>
+                    <upstreamCauses>
+                      <hudson.model.Cause_-UpstreamCause>
+                        <upstreamProject>avocadointerbench.starship</upstreamProject>
+                        <upstreamUrl>job/avocadointerbench.starship/</upstreamUrl>
+                        <upstreamBuild>4</upstreamBuild>
+                        <upstreamCauses>
+                          <hudson.triggers.TimerTrigger_-TimerTriggerCause/>
+                        </upstreamCauses>
+                      </hudson.model.Cause_-UpstreamCause>
+                    </upstreamCauses>
+                  </hudson.model.Cause_-UpstreamCause>
+                </upstreamCauses>
+              </hudson.model.Cause_-UpstreamCause>
+            </upstreamCauses>
+          </hudson.model.Cause_-UpstreamCause>
+          <int>1</int>
+        </entry>
+      </causeBag>
+    </hudson.model.CauseAction>
+    <org.jenkins.plugins.lockableresources.actions.LockedResourcesBuildAction plugin="lockable-resources@2.2">
+      <lockedResources>
+        <org.jenkins.plugins.lockableresources.actions.LockedResourcesBuildAction_-ResourcePOJO>
+          <name>sos-dsldbg-00</name>
+          <description>Family17h</description>
+        </org.jenkins.plugins.lockableresources.actions.LockedResourcesBuildAction_-ResourcePOJO>
+      </lockedResources>
+    </org.jenkins.plugins.lockableresources.actions.LockedResourcesBuildAction>
+    <org.jvnet.hudson.plugins.DownstreamBuildViewAction plugin="downstream-buildview@1.9">
+      <downstreamBuilds class="concurrent-hash-map">
+        <entry>
+          <string>avocadosleeptest.starship</string>
+          <int>0</int>
+        </entry>
+      </downstreamBuilds>
+    </org.jvnet.hudson.plugins.DownstreamBuildViewAction>
+    <hudson.plugins.descriptionsetter.DescriptionSetterAction plugin="description-setter@1.10">
+      <description>sos-dsldbg-00: 4.16.0-amdsos-build3+</description>
+    </hudson.plugins.descriptionsetter.DescriptionSetterAction>
+    <hudson.model.ParametersAction>
+      <safeParameters class="sorted-set"/>
+      <parameters>
+        <hudson.model.StringParameterValue>
+          <name>DESCRIPTION_SETTER_DESCRIPTION</name>
+          <value>sos-dsldbg-00: 4.16.0-amdsos-build3+</value>
+        </hudson.model.StringParameterValue>
+      </parameters>
+      <parameterDefinitionNames class="empty-list"/>
+    </hudson.model.ParametersAction>
+  </actions>
+  <queueId>727</queueId>
+  <timestamp>1528654348209</timestamp>
+  <startTime>1528654348230</startTime>
+  <result>SUCCESS</result>
+  <description>sos-dsldbg-00: 4.16.0-amdsos-build3+</description>
+  <duration>181889</duration>
+  <charset>UTF-8</charset>
+  <keepLog>false</keepLog>
+  <builtOn></builtOn>
+  <workspace>/var/lib/jenkins/workspace/avocadormaptest.starship</workspace>
+  <hudsonVersion>2.126</hudsonVersion>
+  <scm class="hudson.scm.NullChangeLogParser"/>
+  <culprits class="com.google.common.collect.EmptyImmutableSortedSet"/>
+</build>

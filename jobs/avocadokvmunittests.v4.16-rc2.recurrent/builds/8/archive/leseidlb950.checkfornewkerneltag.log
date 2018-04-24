@@ -1,0 +1,13 @@
++ set -e
++ mkdir -p kernel
++ cd kernel
++ rm -f 'linux-*'
++ '[' '!' -d linux ']'
++ cd linux
++ git fetch --all --tags
+Fetching origin
++ '[' 2 -eq 2 ']'
++ latestkerneltag=v4.16-rc2
+++ cat latestkerneltag
++ '[' v4.16-rc2 '!=' v4.16-rc2 ']'
++ exit 1

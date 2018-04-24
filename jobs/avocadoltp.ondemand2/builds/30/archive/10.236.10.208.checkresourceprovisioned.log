@@ -1,0 +1,27 @@
++ cd /var/lib/jenkins
++ ./checkresourceprovisioned.new.sh 10.236.10.208
++ set -e
++ ping -c 1 10.236.10.208
++ RV=0
++ ssh -q -o PasswordAuthentication=no -o StrictHostKeyChecking=no jenkins@10.236.10.208 'test ! -f checkfornewkerneltag.sh'
++ RV=1
++ (( RV == 1 ))
+++ ./what_distro_remote.sh root@10.236.10.208
++ distro=sles-12.3
++ [[ sles-12.3 = \u\b\u\n\t\u\-* ]]
++ [[ sles-12.3 = \d\e\b\i\a\n-* ]]
++ scp checkfornewkerneltag_rpm.sh jenkins@10.236.10.208:checkfornewkerneltag.sh
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@    WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!     @
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+IT IS POSSIBLE THAT SOMEONE IS DOING SOMETHING NASTY!
+Someone could be eavesdropping on you right now (man-in-the-middle attack)!
+It is also possible that a host key has just been changed.
+The fingerprint for the ECDSA key sent by the remote host is
+SHA256:A0284NRdEbPeS9Rijekvv2svZiFALR5t9JkvvjHM27g.
+Please contact your system administrator.
+Add correct host key in /var/lib/jenkins/.ssh/known_hosts to get rid of this message.
+Offending ECDSA key in /var/lib/jenkins/.ssh/known_hosts:13
+ECDSA host key for 10.236.10.208 has changed and you have requested strict checking.
+Host key verification failed.
+lost connection

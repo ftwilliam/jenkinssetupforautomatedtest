@@ -1,0 +1,43 @@
+Started by user [8mha:////4FqkCksSARbySc15RUTa15KLDuDohiBDNYbuyYSsWMPyAAAAlR+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzmEgZO/dLi1CL9xNwUAAxcekO+AAAA[0mamd
+[lockable-resources] acquired lock on []
+Building in workspace /var/lib/jenkins/workspace/avocadokvmunittests
+[WS-CLEANUP] Deleting project workspace...
+[WS-CLEANUP] Done
+[avocadokvmunittests] $ /bin/sh -xe /tmp/jenkins7385520037691607539.sh
++ RESOURCES=sosmachine2
++ KERNELREPO=https://github.com/torvalds/linux.git
++ QEMUREPO=https://github.com/qemu/qemu.git
++ KERNELTAG=v4.16-rc2
++ QEMUTAG=v2.11.1
++ TIMEOUT=1800
++ for R in ${RESOURCES}
++ wait
++ ssh -q jenkins@sosmachine2 './checkfornewkerneltag.sh https://github.com/torvalds/linux.git' v4.16-rc2
+++ ssh -q jenkins@sosmachine2 ls 'kernel/linux-image*'
+++ grep -oP '(?<=linux-image-).+(?=-jenkins_)'
++ kernbuilt=4.16.0-rc2
++ cd /var/lib/jenkins
++ ./rebootresource.sh jenkins@sosmachine2 4.16.0-rc2
+++ ssh -q jenkins@sosmachine2 'uname -r'
++ echo 'sosmachine2: 4.16.0-rc2-jenkins'
++ ssh -q jenkins@sosmachine2 './checkfornewqemutag.sh https://github.com/qemu/qemu.git' v2.11.1
++ timeout -sKILL 1800 ssh -q jenkins@sosmachine2 sudo ./avocado/contrib/testsuites/run-kvm-unit-test.sh
++ :
+++ cat sosmachine2.ssh.log
+++ fgrep 'JOB LOG'
+++ grep -oP '(?<=: ).+$'
++ AVOCADO_LOG_PATH=/home/jenkins/avocado/job-results/job-2018-04-10T19.38-c2265a6/job.log
++ scp jenkins@sosmachine2:/home/jenkins/avocado/job-results/job-2018-04-10T19.38-c2265a6/job.log sosmachine2.avocado.log
++ echo -n 'Kernel Release: '
++ for R in ${RESOURCES}
++ '[' -f sosmachine2.kernelrelease ']'
+++ cat sosmachine2.kernelrelease
+++ grep -oP '.+(?=-jenkins)'
++ echo -n 'sosmachine2: 4.16.0-rc2, '
++ truncate --size=-2 kernelreleases
+++ cat kernelreleases
++ echo '[Kernel' Release: sosmachine2: '4.16.0-rc2]'
+[Kernel Release: sosmachine2: 4.16.0-rc2]
+Archiving artifacts
+[description-setter] Description set: sosmachine2: 4.16.0-rc2
+Finished: SUCCESS

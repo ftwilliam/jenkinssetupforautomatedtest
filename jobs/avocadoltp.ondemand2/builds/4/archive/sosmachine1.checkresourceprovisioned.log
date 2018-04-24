@@ -1,0 +1,20 @@
++ cd /var/lib/jenkins
++ ./checkresourceprovisioned.new.sh sosmachine1
++ set -e
++ ping -c 1 sosmachine1
++ ssh -q -o PasswordAuthentication=no -o StrictHostKeyChecking=no jenkins@sosmachine1 'test ! -f checkfornewkerneltag.sh'
++ '[' 255 -eq 1 ']'
++ ssh-keygen -R sosmachine1
++ ssh -q -o PasswordAuthentication=no -o StrictHostKeyChecking=no root@sosmachine1 :
++ scp what_distro.sh root@sosmachine1:
+++ ./what_distro.sh root@sosmachine1
++ distro='distro: ubuntu-17.10'
++ '[' 'distro: ubuntu-17.10' = ubuntu-16.04 ']'
++ '[' 'distro: ubuntu-17.10' = ubuntu-17.10 ']'
++ '[' 'distro: ubuntu-17.10' = ubuntu-18.04 ']'
++ '[' 'distro: ubuntu-17.10' = ubuntu-18.04 ']'
++ '[' 'distro: ubuntu-17.10' = sles-12.3 ']'
++ '[' 'distro: ubuntu-17.10' = rhel-7.5 ']'
++ echo 'distro no found, exiting'
+distro no found, exiting
++ exit 1

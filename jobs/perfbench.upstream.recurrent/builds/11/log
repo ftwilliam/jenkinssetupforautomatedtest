@@ -1,0 +1,67 @@
+Started by timer
+[lockable-resources] acquired lock on [diesel84e2host, diesel7ac4host, diesel79d4host]
+Building in workspace /var/lib/jenkins/workspace/perfbench
+[WS-CLEANUP] Deleting project workspace...
+[WS-CLEANUP] Done
+[perfbench] $ /bin/sh -xe /tmp/jenkins4255311129820515871.sh
+++ cd /var/lib/jenkins
+++ ./resourceslockedby.py perfbench#11
++ RESOURCES='diesel84e2host
+diesel7ac4host
+diesel79d4host'
++ :
++ for R in ${RESOURCES}
++ echo -n '"diesel84e2host",'
++ for R in ${RESOURCES}
++ echo -n '"diesel7ac4host",'
++ for R in ${RESOURCES}
++ echo -n '"diesel79d4host",'
++ truncate --size=-1 plot.csv
++ echo
++ ITERATIONS=100000
++ S='$'
++ for R in ${RESOURCES}
++ ssh -q jenkins@diesel84e2host :
++ echo -n ,
++ continue
++ for R in ${RESOURCES}
++ ssh -q jenkins@diesel7ac4host :
++ echo -n ,
++ continue
++ for R in ${RESOURCES}
++ ssh -q jenkins@diesel79d4host :
++ ssh -q jenkins@diesel79d4host './installnewkernel.sh &>/dev/null'
+++ ssh -q jenkins@diesel79d4host 'uname -r'
++ echo Kernel Release: diesel79d4host: 4.16.0-rc3-jenkins
+Kernel Release: diesel79d4host: 4.16.0-rc3-jenkins
++ ssh -q jenkins@diesel79d4host 'time -p perf bench sched messaging -p -g $(getconf _NPROCESSORS_ONLN) -l 100000'
++ tee diesel79d4host.ssh.log
+# Running 'sched/messaging' benchmark:
+# 20 sender and receiver processes per group
+# 96 groups == 3840 processes run
+
+     Total time: 315.525 [sec]
+real 315.97
+user 1939.53
+sys 27557.10
++ '[' 0 -eq 0 ']'
+++ bc -l
++++ cat diesel79d4host.ssh.log
++++ fgrep 'Total time:'
++++ grep -oP '(?<=Total time: )[0-9.]+(?= \[)'
+++ echo '(315.525' '/100000)*1000'
++ plotval=3.15525000000000000000
++ '[' -f diesel79d4host.prevplotval ']'
+++ bc -l
++++ cat diesel79d4host.prevplotval
+++ echo '(3.04798274169921875000+3.15525000000000000000)/2'
++ plotval=3.10161637084960937500
++ echo -n 3.10161637084960937500
++ echo -n 3.10161637084960937500,
++ truncate --size=-1 plot.csv
++ echo
+Archiving artifacts
+Recording plot data
+[description-setter] Description set: diesel79d4host: 4.16.0-rc3
+[lockable-resources] released lock on [diesel84e2host, diesel7ac4host, diesel79d4host]
+Finished: SUCCESS

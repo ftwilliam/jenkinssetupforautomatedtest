@@ -1,0 +1,6 @@
+#!/usr/bin/expect -f
+
+spawn ssh-copy-id -o StrictHostKeyChecking=no $argv
+expect "password:"
+send "amd123\n"
+expect eof

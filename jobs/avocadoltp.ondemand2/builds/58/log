@@ -1,0 +1,66 @@
+Started by user [8mha:////4M5O53X5QONrb+aF7d3XuO6Y0FqwaEK30o3y1qqs3uiMAAAAmR+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyeEgZe/dLi1CL9pKLy/PyUYgAEKGTnwgAAAA==[0mWoods, Brian
+Building in workspace /var/lib/jenkins/workspace/avocadoltp.ondemand2
+[WS-CLEANUP] Deleting project workspace...
+[WS-CLEANUP] Done
+[avocadoltp.ondemand2] $ /bin/sh -xe /tmp/jenkins214122726135059281.sh
++ RESOURCES=10.236.10.208
+++ grep -oP '(?<=\.)v.+\..+(?=\.)'
+++ echo avocadoltp.ondemand2
+++ :
++ KERNVER=
++ TIMEOUT=3600
++ AVO_RV=()
+++ cat /var/lib/jenkins/.ssh/id_rsa.pub
++ SSHKEY='ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDLouAeFsxExPwW0TBUwWU52qTIiDQHiAX4AXtBHWCDiDl4FBnlKLbPxXGnByoSXvMS/BIdxX9j4E+yXZTCf+EvgOUm2fAe7lIwGyhLhItdPPgQQJ++Dax5YYvM2h5YCEHmwDfD0hB1bofrvXi3/z83LvEbEj3+HWF2xPw0PmPsO815XlG7WvIwVBZ1DbQU9I+cBCvqZM7F+KbGSEG5NpRx1F2Tj2u3EzciC5DoEP62vAa8VjATTmC/Yo+pcxBhdfoqlrCZD008dT47FxMV38nFYtJw7o0M56TQpNOg6MhP9K72f7PDHDjIxoqv+we9mYCk1l4S3ATBm5MnSaiVsNfH jenkins@avocado-server'
++ (( I=0 ))
++ (( I<1 ))
++ (( I++ ))
++ (( I<1 ))
++ wait
++ R=10.236.10.208
++ AVO_RV[$I]=424242
++ [[ ! -z http://sos-repos.amd.com/updated_disk_images/build4/rhel-7.5_build4.img.bz2 ]]
++ '['
+/tmp/jenkins214122726135059281.sh: line 28: [: missing `]'
++ RV=0
++ ssh -q jenkins@10.236.10.208 './checkfornewkerneltag.sh CURRENT v4.16-rc2'
++ '[' 0 -eq 1 ']'
++ '[' 0 -eq 2 ']'
++ echo -n '10.236.10.208: '
++ ssh -q jenkins@10.236.10.208 'uname -r'
++ AVO_RV[$I]=0
++ avocado run --remote-hostname 10.236.10.208 --remote-username root --job-timeout 1h --failfast off --job-results-dir 10.236.10.208/avocado_log/ examples/sleeptest.py
+Failed to load plugin from module "avocado_vt.plugins.vt_list": EnvironmentError("Bootstrap missing. Execute 'avocado vt-bootstrap' or disable this plugin to get rid of this message",)
+Failed to load plugin from module "avocado_vt.plugins.vt": EnvironmentError("Bootstrap missing. Execute 'avocado vt-bootstrap' or disable this plugin to get rid of this message",)
+JOB ID     : 057b280e45980ac4df8f5680d81c3c5bdf697b3a
+JOB LOG    : /var/lib/jenkins/workspace/avocadoltp.ondemand2/10.236.10.208/avocado_log/job-2018-06-13T17.20-057b280/job.log
+LOGIN      : root@10.236.10.208:22 (TIMEOUT: 60 seconds)
+ (1/1) examples/sleeptest.py:SleepTest.test:  PASS (1.50 s)
+RESULTS    : PASS 1 | ERROR 0 | FAIL 0 | SKIP 0 | WARN 0 | INTERRUPT 0 | CANCEL 0
+JOB TIME   : 9.04 s
+JOB HTML   : /var/lib/jenkins/workspace/avocadoltp.ondemand2/10.236.10.208/avocado_log/job-2018-06-13T17.20-057b280/results.html
++ [[ ! -z http://sos-repos.amd.com/updated_disk_images/build4/rhel-7.5_build4.img.bz2 ]]
++ ssh root@10.236.10.208 './efiboot_multitool.pl pop'
++ ./rebootresource.sh root@10.236.10.208
+/tmp/jenkins214122726135059281.sh: line 68: ./rebootresource.sh: No such file or directory
++ echo -n 'avocado RV per host: '
+avocado RV per host: + (( I=0 ))
++ (( I<1 ))
++ '[' '[0]' -eq 424242 ']'
+/tmp/jenkins214122726135059281.sh: line 81: [: [0]: integer expression expected
++ echo -n '10.236.10.208=[0] '
+10.236.10.208=[0] + (( I++ ))
++ (( I<1 ))
++ echo -n 'Kernel Release: '
++ for R in ${RESOURCES}
++ '[' -f 10.236.10.208.kernelrelease ']'
+++ cat 10.236.10.208.kernelrelease
++ echo -n '10.236.10.208: 4.17.0-jenkins'
++ echo -n '  '
++ truncate --size=-2 kernelreleases
+++ cat kernelreleases
++ echo '[Kernel' Release: 10.236.10.208: '4.17.0-jenkins]'
+[Kernel Release: 10.236.10.208: 4.17.0-jenkins]
+Archiving artifacts
+[description-setter] Description set: 10.236.10.208: 4.17.0-jenkins
+Finished: SUCCESS

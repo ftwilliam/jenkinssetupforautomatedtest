@@ -1,0 +1,51 @@
++ set -e
++ '[' 0 -eq 0 ']'
++ ./checkfornewkerneldeb.sh
++ sudo wget -O /etc/apt/sources.list.d/sos_ubuntu.list http://sos-repos/scripts/sos_ubuntu.list
+--2018-06-16 10:42:03--  http://sos-repos/scripts/sos_ubuntu.list
+Resolving sos-repos (sos-repos)... 10.236.113.165
+Connecting to sos-repos (sos-repos)|10.236.113.165|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 75
+Saving to: ‘/etc/apt/sources.list.d/sos_ubuntu.list’
+
+     0K                                                       100% 4.48M=0s
+
+2018-06-16 10:42:03 (4.48 MB/s) - ‘/etc/apt/sources.list.d/sos_ubuntu.list’ saved [75/75]
+
++ sudo apt update
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Ign:1 http://sos-repos/repos/sos_ubuntu stable InRelease
+Hit:2 http://sos-repos/repos/sos_ubuntu stable Release
+Ign:3 http://sos-repos/repos/sos_ubuntu stable Release.gpg
+Hit:4 http://us.archive.ubuntu.com/ubuntu bionic InRelease
+Get:5 http://security.ubuntu.com/ubuntu bionic-security InRelease [83.2 kB]
+Get:6 http://us.archive.ubuntu.com/ubuntu bionic-updates InRelease [83.2 kB]
+Get:7 http://us.archive.ubuntu.com/ubuntu bionic-backports InRelease [74.6 kB]
+Fetched 241 kB in 1s (191 kB/s)
+Reading package lists...
+Building dependency tree...
+Reading state information...
+13 packages can be upgraded. Run 'apt list --upgradable' to see them.
+++ apt-cache search linux-image
+++ awk '-F - ' '{print $1}'
+++ fgrep amdsos
+++ sort -V
+++ tail -n1
++ linuximage=linux-image-4.16.0-amdsos-build4+
++ '[' -n linux-image-4.16.0-amdsos-build4+ ']'
++ sudo apt install linux-image-4.16.0-amdsos-build4+
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+linux-image-4.16.0-amdsos-build4+ is already the newest version (4.16.0-amdsos-build4+-1).
+0 upgraded, 0 newly installed, 0 to remove and 13 not upgraded.
+++ echo linux-image-4.16.0-amdsos-build4+
+++ grep -oP '(?<=linux-image-).+'
++ sudo grubby --set-default /boot/vmlinuz-4.16.0-amdsos-build4+
++ exit 0

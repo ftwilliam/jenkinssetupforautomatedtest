@@ -1,0 +1,19 @@
+Started by user unknown or anonymous
+Building in workspace /var/lib/jenkins/workspace/avocadoltp.ondemand2
+[WS-CLEANUP] Deleting project workspace...
+[WS-CLEANUP] Done
+[avocadoltp.ondemand2] $ /bin/sh -xe /tmp/jenkins4943938648220689442.sh
++ RESOURCES=10.236.11.98
+++ grep -oP '(?<=\.)v.+\..+(?=\.)'
+++ echo avocadoltp.ondemand2
+++ :
++ KERNVER=
++ TIMEOUT=3600
++ for R in ${RESOURCES}
++ wait
++ ssh -q jenkins@10.236.11.98 './checkfornewkerneltag.sh https://github.com/torvalds/linux.git'
+Build was aborted
+Aborted by [8mha:////4M5O53X5QONrb+aF7d3XuO6Y0FqwaEK30o3y1qqs3uiMAAAAmR+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyeEgZe/dLi1CL9pKLy/PyUYgAEKGTnwgAAAA==[0mWoods, Brian
+Archiving artifacts
+[description-setter] Description set: 
+Finished: ABORTED

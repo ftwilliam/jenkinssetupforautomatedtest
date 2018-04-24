@@ -1,0 +1,28 @@
+Started by timer
+[lockable-resources] acquired lock on [diesel8a87host]
+Building in workspace /var/lib/jenkins/workspace/avocadosysbench.upstream.recurrent
+[WS-CLEANUP] Deleting project workspace...
+[WS-CLEANUP] Done
+[avocadosysbench.upstream.recurrent] $ /bin/sh -xe /tmp/jenkins9172635522817239237.sh
+++ cd /var/lib/jenkins
+++ ./resourceslockedby.py avocadosysbench.upstream.recurrent#72
++ RESOURCES=diesel8a87host
+++ echo avocadosysbench.upstream.recurrent
+++ grep -oP '(?<=\.)v.+\..+(?=\.)'
+++ :
++ KERNVER=
++ TIMEOUT=3600
++ for R in ${RESOURCES}
++ wait
++ continue
++ echo -n 'Kernel Release: '
++ for R in ${RESOURCES}
++ '[' -f diesel8a87host.kernelrelease ']'
++ truncate --size=-2 kernelreleases
+++ cat kernelreleases
++ echo '[Kernel' 'Release]'
+[Kernel Release]
+Archiving artifacts
+[description-setter] Could not determine description.
+[lockable-resources] released lock on [diesel8a87host]
+Finished: SUCCESS

@@ -1,0 +1,57 @@
+12:06:35 output     L0655 DEBUG| [sos-avocado-os0] Executing task 'run'
+12:06:35 transport  L1636 DEBUG| starting thread (client mode): 0x5a13e810L
+12:06:35 transport  L1636 DEBUG| Local version/idstring: SSH-2.0-paramiko_2.2.1
+12:06:35 transport  L1636 DEBUG| Remote version/idstring: SSH-2.0-OpenSSH_7.6p1 Ubuntu-4
+12:06:35 transport  L1636 INFO | Connected (version 2.0, client OpenSSH_7.6p1)
+12:06:35 transport  L1636 DEBUG| kex algos:[u'curve25519-sha256', u'curve25519-sha256@libssh.org', u'ecdh-sha2-nistp256', u'ecdh-sha2-nistp384', u'ecdh-sha2-nistp521', u'diffie-hellman-group-exchange-sha256', u'diffie-hellman-group16-sha512', u'diffie-hellman-group18-sha512', u'diffie-hellman-group14-sha256', u'diffie-hellman-group14-sha1'] server key:[u'ssh-rsa', u'rsa-sha2-512', u'rsa-sha2-256', u'ecdsa-sha2-nistp256', u'ssh-ed25519'] client encrypt:[u'chacha20-poly1305@openssh.com', u'aes128-ctr', u'aes192-ctr', u'aes256-ctr', u'aes128-gcm@openssh.com', u'aes256-gcm@openssh.com'] server encrypt:[u'chacha20-poly1305@openssh.com', u'aes128-ctr', u'aes192-ctr', u'aes256-ctr', u'aes128-gcm@openssh.com', u'aes256-gcm@openssh.com'] client mac:[u'umac-64-etm@openssh.com', u'umac-128-etm@openssh.com', u'hmac-sha2-256-etm@openssh.com', u'hmac-sha2-512-etm@openssh.com', u'hmac-sha1-etm@openssh.com', u'umac-64@openssh.com', u'umac-128@openssh.com', u'hmac-sha2-256', u'hmac-sha2-512', u'hmac-sha1'] server mac:[u'umac-64-etm@openssh.com', u'umac-128-etm@openssh.com', u'hmac-sha2-256-etm@openssh.com', u'hmac-sha2-512-etm@openssh.com', u'hmac-sha1-etm@openssh.com', u'umac-64@openssh.com', u'umac-128@openssh.com', u'hmac-sha2-256', u'hmac-sha2-512', u'hmac-sha1'] client compress:[u'none', u'zlib@openssh.com'] server compress:[u'none', u'zlib@openssh.com'] client lang:[u''] server lang:[u''] kex follows?False
+12:06:35 transport  L1636 DEBUG| Kex agreed: ecdh-sha2-nistp256
+12:06:35 transport  L1636 DEBUG| HostKey agreed: ssh-ed25519
+12:06:35 transport  L1636 DEBUG| Cipher agreed: aes128-ctr
+12:06:35 transport  L1636 DEBUG| MAC agreed: hmac-sha2-256
+12:06:35 transport  L1636 DEBUG| Compression agreed: none
+12:06:35 transport  L1636 DEBUG| kex engine KexNistp256 specified hash_algo <built-in function openssl_sha256>
+12:06:35 transport  L1636 DEBUG| Switch to new keys ...
+12:06:35 transport  L1636 DEBUG| Adding ssh-ed25519 host key for sos-avocado-os0: 164c79ee244db42b6ac723896fab2093
+12:06:35 transport  L1636 DEBUG| Trying discovered key 1f153d0e977ae0d33cdf2ebfe8b44f44 in /var/lib/jenkins/.ssh/id_rsa
+12:06:35 transport  L1636 DEBUG| userauth is OK
+12:06:35 transport  L1636 INFO | Authentication (publickey) successful!
+12:06:35 channel    L1183 DEBUG| [chan 0] Max packet in: 32768 bytes
+12:06:36 transport  L1636 DEBUG| Received global request "hostkeys-00@openssh.com"
+12:06:36 transport  L1636 DEBUG| Rejecting "hostkeys-00@openssh.com" global request from server.
+12:06:36 channel    L1183 DEBUG| [chan 0] Max packet out: 32768 bytes
+12:06:36 transport  L1636 DEBUG| Secsh channel 0 opened.
+12:06:36 channel    L1183 DEBUG| [chan 0] Sesch channel 0 request ok
+12:06:36 channel    L1183 DEBUG| [chan 0] EOF received (0)
+12:06:36 channel    L1183 DEBUG| [chan 0] EOF sent (0)
+12:06:36 output     L0655 DEBUG| [sos-avocado-os0] Executing task 'run'
+12:06:36 channel    L1183 DEBUG| [chan 1] Max packet in: 32768 bytes
+12:06:36 channel    L1183 DEBUG| [chan 1] Max packet out: 32768 bytes
+12:06:36 transport  L1636 DEBUG| Secsh channel 1 opened.
+12:06:36 channel    L1183 DEBUG| [chan 1] Sesch channel 1 request ok
+12:06:36 channel    L1183 DEBUG| [chan 1] EOF received (1)
+12:06:36 channel    L1183 DEBUG| [chan 1] EOF sent (1)
+12:06:36 output     L0655 DEBUG| [sos-avocado-os0] Executing task 'run'
+12:06:36 channel    L1183 DEBUG| [chan 2] Max packet in: 32768 bytes
+12:06:36 channel    L1183 DEBUG| [chan 2] Max packet out: 32768 bytes
+12:06:36 transport  L1636 DEBUG| Secsh channel 2 opened.
+12:06:36 channel    L1183 DEBUG| [chan 2] Sesch channel 2 request ok
+12:08:23 output     L0655 DEBUG| q
+12:17:33 channel    L1183 DEBUG| [chan 2] EOF received (2)
+12:17:33 channel    L1183 DEBUG| [chan 2] EOF sent (2)
+12:17:33 output     L0655 DEBUG| [sos-avocado-os0] Executing task 'receive_files'
+12:17:33 channel    L1183 DEBUG| [chan 3] Max packet in: 32768 bytes
+12:17:33 channel    L1183 DEBUG| [chan 3] Max packet out: 32768 bytes
+12:17:33 transport  L1636 DEBUG| Secsh channel 3 opened.
+12:17:33 channel    L1183 DEBUG| [chan 3] Sesch channel 3 request ok
+12:17:33 sftp       L0131 INFO | [chan 3] Opened sftp connection (server version 3)
+12:17:33 sftp       L0131 DEBUG| [chan 3] normalize('.')
+12:17:33 sftp       L0131 DEBUG| [chan 3] stat('/root/avocado/job-results/job-2018-06-07T17.06-6b4fd9a.zip')
+12:17:33 output     L0655 DEBUG| [sos-avocado-os0] download: /var/lib/jenkins/onmand_test_hello_world/job-2018-06-07T12.06-6b4fd9a/job-2018-06-07T17.06-6b4fd9a.zip <- /root/avocado/job-results/job-2018-06-07T17.06-6b4fd9a.zip
+12:17:33 sftp       L0131 DEBUG| [chan 3] stat('/root/avocado/job-results/job-2018-06-07T17.06-6b4fd9a.zip')
+12:17:33 sftp       L0131 DEBUG| [chan 3] open('/root/avocado/job-results/job-2018-06-07T17.06-6b4fd9a.zip', 'rb')
+12:17:33 sftp       L0131 DEBUG| [chan 3] open('/root/avocado/job-results/job-2018-06-07T17.06-6b4fd9a.zip', 'rb') -> 00000000
+12:17:33 sftp       L0131 DEBUG| [chan 3] close(00000000)
+12:17:33 sftp       L0131 INFO | [chan 3] sftp session closed.
+12:17:33 channel    L1183 DEBUG| [chan 3] EOF sent (3)
+12:17:33 channel    L1183 DEBUG| [chan 3] EOF received (3)
+12:17:34 transport  L1636 DEBUG| EOF in transport thread

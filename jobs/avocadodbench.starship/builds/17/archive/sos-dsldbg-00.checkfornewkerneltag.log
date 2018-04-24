@@ -1,0 +1,71 @@
++ set -e
++ '[' 0 -eq 0 ']'
++ ./checkfornewkerneldeb.sh
++ sudo wget -O /etc/apt/sources.list.d/sos_ubuntu.list http://sos-repos/scripts/sos_ubuntu.list
+--2018-06-18 10:14:34--  http://sos-repos/scripts/sos_ubuntu.list
+Resolving sos-repos (sos-repos)... 10.236.113.165
+Connecting to sos-repos (sos-repos)|10.236.113.165|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 75
+Saving to: ‘/etc/apt/sources.list.d/sos_ubuntu.list’
+
+     0K                                                       100% 4.38M=0s
+
+2018-06-18 10:14:34 (4.38 MB/s) - ‘/etc/apt/sources.list.d/sos_ubuntu.list’ saved [75/75]
+
++ sudo apt update
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Ign:1 http://sos-repos/repos/sos_ubuntu stable InRelease
+Hit:2 http://sos-repos/repos/sos_ubuntu stable Release
+Ign:3 http://sos-repos/repos/sos_ubuntu stable Release.gpg
+Hit:4 http://us.archive.ubuntu.com/ubuntu bionic InRelease
+Get:5 http://us.archive.ubuntu.com/ubuntu bionic-updates InRelease [83.2 kB]
+Get:6 http://security.ubuntu.com/ubuntu bionic-security InRelease [83.2 kB]
+Get:7 http://us.archive.ubuntu.com/ubuntu bionic-backports InRelease [74.6 kB]
+Get:8 http://us.archive.ubuntu.com/ubuntu bionic-updates/main i386 Packages [132 kB]
+Get:9 http://us.archive.ubuntu.com/ubuntu bionic-updates/main amd64 Packages [146 kB]
+Get:10 http://us.archive.ubuntu.com/ubuntu bionic-updates/main Translation-en [56.9 kB]
+Get:11 http://us.archive.ubuntu.com/ubuntu bionic-updates/main amd64 DEP-11 Metadata [112 kB]
+Get:12 http://us.archive.ubuntu.com/ubuntu bionic-updates/main DEP-11 48x48 Icons [25.1 kB]
+Get:13 http://us.archive.ubuntu.com/ubuntu bionic-updates/main DEP-11 64x64 Icons [44.5 kB]
+Get:14 http://us.archive.ubuntu.com/ubuntu bionic-updates/main DEP-11 128x128 Icons [101 kB]
+Get:15 http://us.archive.ubuntu.com/ubuntu bionic-updates/universe i386 Packages [84.3 kB]
+Get:16 http://us.archive.ubuntu.com/ubuntu bionic-updates/universe amd64 Packages [84.5 kB]
+Get:17 http://us.archive.ubuntu.com/ubuntu bionic-updates/universe amd64 DEP-11 Metadata [120 kB]
+Get:18 http://us.archive.ubuntu.com/ubuntu bionic-updates/universe DEP-11 48x48 Icons [126 kB]
+Get:19 http://us.archive.ubuntu.com/ubuntu bionic-updates/universe DEP-11 64x64 Icons [202 kB]
+Get:20 http://us.archive.ubuntu.com/ubuntu bionic-updates/universe DEP-11 128x128 Icons [521 kB]
+Get:21 http://us.archive.ubuntu.com/ubuntu bionic-backports/universe amd64 DEP-11 Metadata [5,096 B]
+Get:22 http://security.ubuntu.com/ubuntu bionic-security/main amd64 Packages [99.7 kB]
+Get:23 http://security.ubuntu.com/ubuntu bionic-security/main i386 Packages [86.2 kB]
+Get:24 http://security.ubuntu.com/ubuntu bionic-security/main amd64 DEP-11 Metadata [204 B]
+Get:25 http://security.ubuntu.com/ubuntu bionic-security/universe i386 Packages [32.6 kB]
+Get:26 http://security.ubuntu.com/ubuntu bionic-security/universe amd64 Packages [32.7 kB]
+Get:27 http://security.ubuntu.com/ubuntu bionic-security/universe amd64 DEP-11 Metadata [2,452 B]
+Fetched 2,254 kB in 2s (1,298 kB/s)
+Reading package lists...
+Building dependency tree...
+Reading state information...
+17 packages can be upgraded. Run 'apt list --upgradable' to see them.
+++ awk '-F - ' '{print $1}'
+++ apt-cache search linux-image
+++ fgrep amdsos
+++ sort -V
+++ tail -n1
++ linuximage=linux-image-4.16.0-amdsos-build4+
++ '[' -n linux-image-4.16.0-amdsos-build4+ ']'
++ sudo apt install linux-image-4.16.0-amdsos-build4+
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+linux-image-4.16.0-amdsos-build4+ is already the newest version (4.16.0-amdsos-build4+-1).
+0 upgraded, 0 newly installed, 0 to remove and 17 not upgraded.
+++ echo linux-image-4.16.0-amdsos-build4+
+++ grep -oP '(?<=linux-image-).+'
++ sudo grubby --set-default /boot/vmlinuz-4.16.0-amdsos-build4+
++ exit 0

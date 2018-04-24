@@ -1,0 +1,43 @@
+Started by timer
+[lockable-resources] acquired lock on [sos-dsldbg-00]
+Building in workspace /var/lib/jenkins/workspace/avocadointerbench.starship
+[WS-CLEANUP] Deleting project workspace...
+[WS-CLEANUP] Done
+[avocadointerbench.starship] $ /bin/sh -xe /tmp/jenkins5556509518807614001.sh
+++ cd /var/lib/jenkins
+++ ./resourceslockedby.py avocadointerbench.starship#2
++ RESOURCES=sos-dsldbg-00
+++ echo avocadointerbench.starship
+++ grep -oP '(?<=\.)v.+\..+(?=\.)'
+++ :
++ KERNVER=
++ TIMEOUT=3600
++ for R in ${RESOURCES}
++ wait
++ ssh -q jenkins@sos-dsldbg-00 ./checkfornewkerneltag.sh
++ '[' -n '' ']'
++ cd /var/lib/jenkins
++ ./rebootresource.sh jenkins@sos-dsldbg-00
+++ ssh -q jenkins@sos-dsldbg-00 'uname -r'
++ echo 'sos-dsldbg-00: 4.16.0-amdsos-build3+'
++ timeout -sKILL 3600 ssh -q jenkins@sos-dsldbg-00
++ '[' 0 -eq 0 ']'
+++ cat sos-dsldbg-00.ssh.log
+++ fgrep 'JOB LOG'
+++ grep -oP '(?<=: ).+$'
++ AVOCADO_LOG_PATH=/home/jenkins/avocado/job-results/job-2018-06-09T12.26-5bb5556/job.log
++ scp jenkins@sos-dsldbg-00:/home/jenkins/avocado/job-results/job-2018-06-09T12.26-5bb5556/job.log sos-dsldbg-00.avocado.log
++ echo -n 'Kernel Release: '
++ for R in ${RESOURCES}
++ '[' -f sos-dsldbg-00.kernelrelease ']'
+++ cat sos-dsldbg-00.kernelrelease
++ echo -n 'sos-dsldbg-00: 4.16.0-amdsos-build3+, '
++ truncate --size=-2 kernelreleases
+++ cat kernelreleases
++ echo '[Kernel' Release: sos-dsldbg-00: '4.16.0-amdsos-build3+]'
+[Kernel Release: sos-dsldbg-00: 4.16.0-amdsos-build3+]
+Archiving artifacts
+[description-setter] Description set: sos-dsldbg-00: 4.16.0-amdsos-build3+
+[lockable-resources] released lock on [sos-dsldbg-00]
+Triggering a new build of [8mha:////4EIFeNbwhBExzGC/E4WV9Qnb/AnTYIEsfiPDk8ia6wj1AAAAqx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzJEgZ5/az8JP3EsvzkxJT87NSivKTUvOQMveKSxKLijMwCfQAeaSvh1AAAAA==[0mavocadokernbench.starship
+Finished: SUCCESS

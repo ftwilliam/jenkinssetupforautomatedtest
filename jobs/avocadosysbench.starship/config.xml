@@ -1,0 +1,125 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<project>
+  <actions/>
+  <description></description>
+  <keepDependencies>false</keepDependencies>
+  <properties>
+    <org.jenkins.plugins.lockableresources.RequiredResourcesProperty plugin="lockable-resources@2.2">
+      <labelName>Starship</labelName>
+    </org.jenkins.plugins.lockableresources.RequiredResourcesProperty>
+  </properties>
+  <scm class="hudson.scm.NullSCM"/>
+  <canRoam>true</canRoam>
+  <disabled>false</disabled>
+  <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
+  <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
+  <triggers>
+    <jenkins.triggers.ReverseBuildTrigger>
+      <spec></spec>
+      <upstreamProjects>avocadostress.starship</upstreamProjects>
+      <threshold>
+        <name>SUCCESS</name>
+        <ordinal>0</ordinal>
+        <color>BLUE</color>
+        <completeBuild>true</completeBuild>
+      </threshold>
+    </jenkins.triggers.ReverseBuildTrigger>
+  </triggers>
+  <concurrentBuild>false</concurrentBuild>
+  <builders>
+    <hudson.tasks.Shell>
+      <command># Get list of resources locked by this build.
+RESOURCES=${RESOURCES:-$(cd ${JENKINS_HOME} &amp;&amp; ./resourceslockedby.py ${JOB_BASE_NAME}#${BUILD_NUMBER})}
+
+# Kernel version to use.
+KERNVER=${KERNVER:-$(echo ${JOB_BASE_NAME} | grep -oP &apos;(?&lt;=\.)v.+\..+(?=\.)&apos; || :;)}
+
+TIMEOUT=3600
+
+# Run test on each resource.
+for R in ${RESOURCES}; do
+	# In order to execute in parallel, each
+	# ressource test run within its own subshell.
+	(
+		# Reboot resource.
+		(cd ${JENKINS_HOME} &amp;&amp; ./rebootresource.sh jenkins@${R} &amp;&gt; /dev/null)
+		
+		echo &quot;${R}: $(ssh -q jenkins@${R} &apos;uname -r&apos;)&quot; &gt; ${R}.kernelrelease
+		timeout -sKILL ${TIMEOUT} ssh -q jenkins@${R} &amp;&gt; ${R}.ssh.log &lt;&lt;-EOF || :;
+			set -e
+			cat &gt; ${JOB_BASE_NAME}.yaml &lt;&lt;-NESTEDEOF
+				max-time: null
+				max-request: null
+				url-link: &apos;https://github.com/akopytov/sysbench.git&apos;
+				fixlink: &apos;https://github.com/PPC64/LuaJIT.git&apos;
+				fixdir: &apos;/third_party/luajit/luajit/&apos;
+				#Comment out branch if you want to checkout master.
+				branch: &apos;0.4&apos;
+				tests:
+				types: !mux
+				cpu:
+				type: &apos;cpu&apos;
+				cpu-max-prime: 50000
+				threads:
+				type: &apos;threads&apos;
+				threads-locks: 1
+				additional_params: !mux
+				min:
+				num-threads: 80
+				max:
+				num-threads: 120
+			NESTEDEOF
+			sudo avocado run ./avocado-misc-tests/generic/sysbench.py -m ${JOB_BASE_NAME}.yaml
+		EOF
+		if [ ${PIPESTATUS[0]} -eq 0 ]; then
+			AVOCADO_LOG_PATH=$(cat ${R}.ssh.log | fgrep &apos;JOB LOG&apos; | grep -oP &apos;(?&lt;=: ).+$&apos;)
+			scp jenkins@${R}:${AVOCADO_LOG_PATH} ${R}.avocado.log
+		fi
+	) &amp;
+done
+
+# Wait for all subshells.
+wait
+
+# Generate &quot;Kernel Release:&quot; line for
+# the &quot;Set Build Description&quot; plugin.
+echo -n &quot;Kernel Release: &quot; &gt; kernelreleases
+for R in ${RESOURCES}; do
+	if [ -f ${R}.kernelrelease ]; then
+		echo -n &quot;$(cat ${R}.kernelrelease 2&gt;/dev/null), &quot; &gt;&gt; kernelreleases
+	fi
+done
+truncate --size=-2 kernelreleases
+echo [$(cat kernelreleases)]
+</command>
+    </hudson.tasks.Shell>
+  </builders>
+  <publishers>
+    <hudson.tasks.ArtifactArchiver>
+      <artifacts>*.log</artifacts>
+      <allowEmptyArchive>false</allowEmptyArchive>
+      <onlyIfSuccessful>false</onlyIfSuccessful>
+      <fingerprint>false</fingerprint>
+      <defaultExcludes>true</defaultExcludes>
+      <caseSensitive>true</caseSensitive>
+    </hudson.tasks.ArtifactArchiver>
+    <hudson.plugins.descriptionsetter.DescriptionSetterPublisher plugin="description-setter@1.10">
+      <regexp>(?&lt;=\[Kernel Release: ).+(?=\])</regexp>
+      <regexpForFailed></regexpForFailed>
+      <setForMatrix>false</setForMatrix>
+    </hudson.plugins.descriptionsetter.DescriptionSetterPublisher>
+  </publishers>
+  <buildWrappers>
+    <hudson.plugins.ws__cleanup.PreBuildCleanup plugin="ws-cleanup@0.34">
+      <patterns>
+        <hudson.plugins.ws__cleanup.Pattern>
+          <pattern>*.prevplotval</pattern>
+          <type>EXCLUDE</type>
+        </hudson.plugins.ws__cleanup.Pattern>
+      </patterns>
+      <deleteDirs>false</deleteDirs>
+      <cleanupParameter></cleanupParameter>
+      <externalDelete></externalDelete>
+    </hudson.plugins.ws__cleanup.PreBuildCleanup>
+  </buildWrappers>
+</project>

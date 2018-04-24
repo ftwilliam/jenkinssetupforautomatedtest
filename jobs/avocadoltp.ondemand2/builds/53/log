@@ -1,0 +1,47 @@
+Started by user [8mha:////4M5O53X5QONrb+aF7d3XuO6Y0FqwaEK30o3y1qqs3uiMAAAAmR+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyeEgZe/dLi1CL9pKLy/PyUYgAEKGTnwgAAAA==[0mWoods, Brian
+Building in workspace /var/lib/jenkins/workspace/avocadoltp.ondemand2
+[WS-CLEANUP] Deleting project workspace...
+[WS-CLEANUP] Done
+[avocadoltp.ondemand2] $ /bin/sh -xe /tmp/jenkins2335235002100437244.sh
++ RESOURCES='10.236.10.208 sos-avocado-os0'
+++ echo avocadoltp.ondemand2
+++ grep -oP '(?<=\.)v.+\..+(?=\.)'
+++ :
++ KERNVER=
++ TIMEOUT=3600
++ AVO_RV=()
++ (( I=0 ))
++ (( I<1 ))
++ (( I++ ))
++ (( I<1 ))
++ wait
++ R='10.236.10.208 sos-avocado-os0'
++ AVO_RV[$I]=424242
++ RV=0
++ ssh -q jenkins@10.236.10.208 sos-avocado-os0 './checkfornewkerneltag.sh CURRENT v4.16-rc2'
++ RV=127
++ '[' 127 -eq 1 ']'
++ '[' 127 -eq 2 ']'
++ echo -n '10.236.10.208 sos-avocado-os0: '
++ ssh -q jenkins@10.236.10.208 sos-avocado-os0 'uname -r'
+bash: sos-avocado-os0: command not found
++ echo -n 'avocado RV per host: '
+avocado RV per host: + (( I=0 ))
++ (( I<1 ))
++ '[' '[0]' -eq 424242 ']'
+/tmp/jenkins2335235002100437244.sh: line 59: [: [0]: integer expression expected
++ echo -n '10.236.10.208 sos-avocado-os0=[0] '
+10.236.10.208 sos-avocado-os0=[0] + (( I++ ))
++ (( I<1 ))
++ echo -n 'Kernel Release: '
++ for R in ${RESOURCES}
++ '[' -f 10.236.10.208.kernelrelease ']'
++ for R in ${RESOURCES}
++ '[' -f sos-avocado-os0.kernelrelease ']'
++ truncate --size=-2 kernelreleases
+++ cat kernelreleases
++ echo '[Kernel' 'Release]'
+[Kernel Release]
+Archiving artifacts
+[description-setter] Could not determine description.
+Finished: SUCCESS

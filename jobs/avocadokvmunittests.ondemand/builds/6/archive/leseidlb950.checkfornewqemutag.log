@@ -1,0 +1,13 @@
++ set -e
++ '[' '!' -d qemu ']'
++ cd qemu
++ git remote set-url origin https://github.com/qemu/qemu.git
++ git fetch --all --tags
+Fetching origin
++ '[' 2 -eq 2 -a -n v2.11.0 ']'
++ latestqemutag=v2.11.0
+++ cat latestqemutag
++ '[' v2.11.0 '!=' v2.11.1 ']'
++ git checkout -b v2.11.0 origin/v2.11.0
+fatal: 'origin/v2.11.0' is not a commit and a branch 'v2.11.0' cannot be created from it
++ exit 1

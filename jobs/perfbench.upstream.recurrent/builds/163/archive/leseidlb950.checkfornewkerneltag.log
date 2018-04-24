@@ -1,0 +1,15 @@
++ set -e
++ mkdir -p kernel
++ cd kernel
++ rm -f 'linux-*'
++ '[' '!' -d linux ']'
++ cd linux
++ git fetch --all --tags
+Fetching origin
+From https://github.com/torvalds/linux
+   69f39c570561..ea9b5ee31078  master     -> origin/master
+++ git describe --tags --abbrev=0 origin/master
++ latestkerneltag=v4.16-rc4
+++ cat latestkerneltag
++ '[' v4.16-rc4 '!=' v4.16-rc4 ']'
++ exit 1

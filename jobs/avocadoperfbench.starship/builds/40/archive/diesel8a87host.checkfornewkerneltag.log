@@ -1,0 +1,79 @@
++ set -e
++ '[' 0 -eq 0 ']'
++ ./checkfornewkerneldeb.sh
++ sudo wget -O /etc/apt/sources.list.d/sos_ubuntu.list http://sos-repos/scripts/sos_ubuntu.list
+--2018-07-07 11:03:50--  http://sos-repos/scripts/sos_ubuntu.list
+Resolving sos-repos (sos-repos)... 10.236.113.165
+Connecting to sos-repos (sos-repos)|10.236.113.165|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 75
+Saving to: ‘/etc/apt/sources.list.d/sos_ubuntu.list’
+
+     0K                                                       100% 7.54M=0s
+
+2018-07-07 11:03:50 (7.54 MB/s) - ‘/etc/apt/sources.list.d/sos_ubuntu.list’ saved [75/75]
+
++ sudo apt update
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Ign:1 http://sos-repos/repos/sos_ubuntu stable InRelease
+Hit:2 http://sos-repos/repos/sos_ubuntu stable Release
+Ign:3 http://sos-repos/repos/sos_ubuntu stable Release.gpg
+Hit:4 http://us.archive.ubuntu.com/ubuntu artful InRelease
+Get:5 http://security.ubuntu.com/ubuntu artful-security InRelease [83.2 kB]
+Get:6 http://us.archive.ubuntu.com/ubuntu artful-updates InRelease [88.7 kB]
+Get:7 http://us.archive.ubuntu.com/ubuntu artful-backports InRelease [74.6 kB]
+Fetched 247 kB in 1s (232 kB/s)
+Reading package lists...
+Building dependency tree...
+Reading state information...
+77 packages can be upgraded. Run 'apt list --upgradable' to see them.
+++ apt-cache search linux-image
+++ awk '-F - ' '{print $1}'
+++ fgrep amdsos
+++ sort -V
+++ tail -n1
++ linuximage=linux-image-4.16.0-amdsos-build5+
++ '[' -n linux-image-4.16.0-amdsos-build5+ ']'
++ sudo apt install linux-image-4.16.0-amdsos-build5+
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+linux-image-4.16.0-amdsos-build5+ is already the newest version (4.16.0-amdsos-build5+-1).
+The following packages were automatically installed and are no longer required:
+  linux-headers-4.13.0-21 linux-headers-4.13.0-21-generic
+  linux-image-4.13.0-21-generic linux-image-extra-4.13.0-21-generic
+Use 'sudo apt autoremove' to remove them.
+0 upgraded, 0 newly installed, 0 to remove and 77 not upgraded.
++ sudo apt remove -y '*-jenkins'
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Package 'python-jenkins' is not installed, so not removed
+Package 'python3-jenkins' is not installed, so not removed
+Package 'linux-image-4.18.0-rc3-jenkins' is not installed, so not removed
+Package 'linux-image-4.18.0-rc2-jenkins' is not installed, so not removed
+Package 'linux-image-4.17.0-jenkins' is not installed, so not removed
+Package 'linux-image-4.17.0-rc5-jenkins' is not installed, so not removed
+Package 'linux-image-4.17.0-rc6-jenkins' is not installed, so not removed
+Package 'linux-image-4.17.0-rc7-jenkins' is not installed, so not removed
+Package 'linux-image-4.18.0-rc1-jenkins' is not installed, so not removed
+Package 'linux-image-4.16.0-rc2-jenkins' is not installed, so not removed
+Package 'linux-image-4.17.0-rc3-jenkins' is not installed, so not removed
+Package 'linux-image-4.17.0-rc4-jenkins' is not installed, so not removed
+The following packages were automatically installed and are no longer required:
+  linux-headers-4.13.0-21 linux-headers-4.13.0-21-generic
+  linux-image-4.13.0-21-generic linux-image-extra-4.13.0-21-generic
+Use 'sudo apt autoremove' to remove them.
+0 upgraded, 0 newly installed, 0 to remove and 77 not upgraded.
+++ echo linux-image-4.16.0-amdsos-build5+
+++ grep -oP '(?<=linux-image-).+'
++ sudo grubby --set-default /boot/vmlinuz-4.16.0-amdsos-build5+
++ exit 0

@@ -1,0 +1,37 @@
+Started by user [8mha:////4FqkCksSARbySc15RUTa15KLDuDohiBDNYbuyYSsWMPyAAAAlR+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzmEgZO/dLi1CL9xNwUAAxcekO+AAAA[0mamd
+[lockable-resources] acquired lock on [diesel79d4host]
+Building in workspace /var/lib/jenkins/workspace/avocadokvmunittests.v4.16-rc1.
+[WS-CLEANUP] Deleting project workspace...
+[avocadokvmunittests.v4.16-rc1.] $ /bin/sh -xe /tmp/jenkins1767754710052180403.sh
+++ cd /var/lib/jenkins
+++ ./resourceslockedby.py avocadokvmunittests.v4.16-rc1.#1
++ RESOURCES=diesel79d4host
+++ echo avocadokvmunittests.v4.16-rc1.
+++ grep -oP '(?<=\.)v.+\..+(?=\.)'
++ KERNVER=v4.16-rc1
++ TIMEOUT=1800
++ for R in ${RESOURCES}
++ wait
++ ssh -q jenkins@diesel79d4host './checkfornewkerneltag.sh https://github.com/torvalds/linux.git' v4.16-rc1
+++ ssh -q jenkins@diesel79d4host ls 'kernel/linux-image*'
+++ grep -oP '(?<=linux-image-).+(?=-jenkins_)'
++ kernbuilt=4.16.0-rc1
++ cd /var/lib/jenkins
++ ./rebootresource.sh jenkins@diesel79d4host 4.16.0-rc1
+++ ssh -q jenkins@diesel79d4host 'uname -r'
++ echo 'diesel79d4host: 4.16.0-rc1-jenkins'
++ timeout -sKILL 1800 ssh -q jenkins@diesel79d4host sudo ./avocado/contrib/testsuites/run-kvm-unit-test.sh
++ echo -n 'Kernel Release: '
++ for R in ${RESOURCES}
++ '[' -f diesel79d4host.kernelrelease ']'
+++ cat diesel79d4host.kernelrelease
+++ grep -oP '.+(?=-jenkins)'
++ echo -n 'diesel79d4host: 4.16.0-rc1, '
++ truncate --size=-2 kernelreleases
+++ cat kernelreleases
++ echo '[Kernel' Release: diesel79d4host: '4.16.0-rc1]'
+[Kernel Release: diesel79d4host: 4.16.0-rc1]
+Archiving artifacts
+[description-setter] Description set: diesel79d4host: 4.16.0-rc1
+[lockable-resources] released lock on [diesel79d4host]
+Finished: SUCCESS

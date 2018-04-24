@@ -1,0 +1,68 @@
+Started by user [8mha:////4FqkCksSARbySc15RUTa15KLDuDohiBDNYbuyYSsWMPyAAAAlR+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzmEgZO/dLi1CL9xNwUAAxcekO+AAAA[0mamd
+[lockable-resources] acquired lock on [diesel79d4host, leseidlb950]
+Building in workspace /var/lib/jenkins/workspace/avocadofiotest
+[WS-CLEANUP] Deleting project workspace...
+[WS-CLEANUP] Done
+[avocadofiotest] $ /bin/sh -xe /tmp/jenkins7673963675278881943.sh
+++ cd /var/lib/jenkins
+++ ./resourceslockedby.py avocadofiotest#5
++ RESOURCES='diesel79d4host
+leseidlb950'
+++ echo avocadofiotest
+++ grep -oP '(?<=\.)v.+\..+(?=\.)'
+++ :
++ KERNVER=
++ TIMEOUT=1800
++ for R in ${RESOURCES}
++ for R in ${RESOURCES}
++ wait
++ ssh -q jenkins@leseidlb950 './checkfornewkerneltag.sh https://github.com/torvalds/linux.git'
++ ssh -q jenkins@diesel79d4host './checkfornewkerneltag.sh https://github.com/torvalds/linux.git'
+++ ssh -q jenkins@diesel79d4host ls 'kernel/linux-image*'
+++ grep -oP '(?<=linux-image-).+(?=-jenkins_)'
++ kernbuilt=4.16.0-rc4
++ cd /var/lib/jenkins
++ ./rebootresource.sh jenkins@diesel79d4host 4.16.0-rc4
+++ ssh -q jenkins@diesel79d4host 'uname -r'
++ echo 'diesel79d4host: 4.16.0-rc4-jenkins'
++ timeout -sKILL 1800 ssh -q jenkins@diesel79d4host
++ '[' 0 -eq 0 ']'
+++ cat diesel79d4host.ssh.log
+++ fgrep 'JOB LOG'
+++ grep -oP '(?<=: ).+$'
++ AVOCADO_LOG_PATH=/var/lib/jenkins/avocado/job-results/job-2018-03-08T14.39-7ec3591/job.log
++ scp jenkins@diesel79d4host:/var/lib/jenkins/avocado/job-results/job-2018-03-08T14.39-7ec3591/job.log diesel79d4host.avocado.log
+ssh: Could not resolve hostname diesel79d4host: Name or service not known
+++ ssh -q jenkins@leseidlb950 ls 'kernel/linux-image*'
+++ grep -oP '(?<=linux-image-).+(?=-jenkins_)'
++ kernbuilt=4.16.0-rc4
++ cd /var/lib/jenkins
++ ./rebootresource.sh jenkins@leseidlb950 4.16.0-rc4
+++ ssh -q jenkins@leseidlb950 'uname -r'
++ echo 'leseidlb950: 4.16.0-rc4-jenkins'
++ timeout -sKILL 1800 ssh -q jenkins@leseidlb950
++ '[' 0 -eq 0 ']'
+++ cat leseidlb950.ssh.log
+++ fgrep 'JOB LOG'
+++ grep -oP '(?<=: ).+$'
++ AVOCADO_LOG_PATH=/home/jenkins/avocado/job-results/job-2018-03-08T15.05-6369a06/job.log
++ scp jenkins@leseidlb950:/home/jenkins/avocado/job-results/job-2018-03-08T15.05-6369a06/job.log leseidlb950.avocado.log
++ echo -n 'Kernel Release: '
++ for R in ${RESOURCES}
++ '[' -f diesel79d4host.kernelrelease ']'
+++ cat diesel79d4host.kernelrelease
+++ grep -oP '.+(?=-jenkins)'
++ echo -n 'diesel79d4host: 4.16.0-rc4, '
++ for R in ${RESOURCES}
++ '[' -f leseidlb950.kernelrelease ']'
+++ cat leseidlb950.kernelrelease
+++ grep -oP '.+(?=-jenkins)'
++ echo -n 'leseidlb950: 4.16.0-rc4, '
++ truncate --size=-2 kernelreleases
+++ cat kernelreleases
++ echo '[Kernel' Release: diesel79d4host: 4.16.0-rc4, leseidlb950: '4.16.0-rc4]'
+[Kernel Release: diesel79d4host: 4.16.0-rc4, leseidlb950: 4.16.0-rc4]
+Archiving artifacts
+[description-setter] Description set: diesel79d4host: 4.16.0-rc4, leseidlb950: 4.16.0-rc4
+[lockable-resources] released lock on [diesel79d4host, leseidlb950]
+Finished: SUCCESS

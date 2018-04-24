@@ -1,0 +1,21 @@
++ cd /var/lib/jenkins
++ ./checkresourceprovisioned.new.sh sos-avocado-os0
++ set -e
++ ping -c 1 sos-avocado-os0
++ ssh -q -o PasswordAuthentication=no -o StrictHostKeyChecking=no jenkins@sos-avocado-os0 'test ! -f checkfornewkerneltag.sh'
++ '[' 255 -eq 1 ']'
++ ssh-keygen -R sos-avocado-os0
++ ssh -q -o PasswordAuthentication=no -o StrictHostKeyChecking=no root@sos-avocado-os0 :
+++ ./what_distro.sh root@sos-avocado-os0
++ distro=sles-12.3
++ '[' sles-12.3 = ubuntu-16.04 ']'
++ '[' sles-12.3 = ubuntu-17.10 ']'
++ '[' sles-12.3 = ubuntu-18.04 ']'
++ '[' sles-12.3 = ubuntu-18.04 ']'
++ '[' sles-12.3 = sles-12.3 ']'
++ ssh -q root@sos-avocado-os0
+Last failed login: Mon May 21 17:47:20 CDT 2018 from 10.236.105.240 on ssh:notty
+There were 3 failed login attempts since the last successful login.
+Adding repository 'dvd 1 repo' [...done]
+Repository named 'dvd1_repo' already exists. Please use another alias.
+Repository priorities are without effect. All enabled repositories share the same priority.

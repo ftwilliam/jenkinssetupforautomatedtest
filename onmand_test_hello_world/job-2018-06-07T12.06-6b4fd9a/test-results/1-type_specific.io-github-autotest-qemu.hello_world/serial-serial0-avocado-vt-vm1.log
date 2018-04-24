@@ -1,0 +1,813 @@
+2018-06-07 17:06:42: [H[J[1;1H[H[J[1;1H
+2018-06-07 17:06:43: [    0.000000] random: get_random_bytes called from start_kernel+0x42/0x4e6 with crng_init=0
+2018-06-07 17:06:43: [    0.000000] Linux version 4.13.9-300.fc27.x86_64 (mockbuild@bkernel01.phx2.fedoraproject.org) (gcc version 7.2.1 20170915 (Red Hat 7.2.1-2) (GCC)) #1 SMP Mon Oct 23 13:41:58 UTC 2017
+2018-06-07 17:06:43: [    0.000000] Command line: BOOT_IMAGE=/boot/vmlinuz-4.13.9-300.fc27.x86_64 root=UUID=ba419b80-2653-4f9b-af33-4966d1045fe6 ro console=tty0 console=ttyS0,115200 console=ttyS0
+2018-06-07 17:06:43: [    0.000000] x86/fpu: Supporting XSAVE feature 0x001: 'x87 floating point registers'
+2018-06-07 17:06:43: [    0.000000] x86/fpu: Supporting XSAVE feature 0x002: 'SSE registers'
+2018-06-07 17:06:43: [    0.000000] x86/fpu: Supporting XSAVE feature 0x004: 'AVX registers'
+2018-06-07 17:06:43: [    0.000000] x86/fpu: xstate_offset[2]:  576, xstate_sizes[2]:  256
+2018-06-07 17:06:43: [    0.000000] x86/fpu: Enabled xstate features 0x7, context size is 832 bytes, using 'standard' format.
+2018-06-07 17:06:43: [    0.000000] e820: BIOS-provided physical RAM map:
+2018-06-07 17:06:43: [    0.000000] BIOS-e820: [mem 0x0000000000000000-0x000000000009fbff] usable
+2018-06-07 17:06:43: [    0.000000] BIOS-e820: [mem 0x000000000009fc00-0x000000000009ffff] reserved
+2018-06-07 17:06:43: [    0.000000] BIOS-e820: [mem 0x00000000000f0000-0x00000000000fffff] reserved
+2018-06-07 17:06:43: [    0.000000] BIOS-e820: [mem 0x0000000000100000-0x000000003ffd8fff] usable
+2018-06-07 17:06:43: [    0.000000] BIOS-e820: [mem 0x000000003ffd9000-0x000000003fffffff] reserved
+2018-06-07 17:06:43: [    0.000000] BIOS-e820: [mem 0x00000000feffc000-0x00000000feffffff] reserved
+2018-06-07 17:06:43: [    0.000000] BIOS-e820: [mem 0x00000000fffc0000-0x00000000ffffffff] reserved
+2018-06-07 17:06:43: [    0.000000] NX (Execute Disable) protection: active
+2018-06-07 17:06:43: [    0.000000] random: fast init done
+2018-06-07 17:06:43: [    0.000000] SMBIOS 2.8 present.
+2018-06-07 17:06:43: [    0.000000] DMI: QEMU Standard PC (i440FX + PIIX, 1996), BIOS 1.10.2-1ubuntu1 04/01/2014
+2018-06-07 17:06:43: [    0.000000] Hypervisor detected: KVM
+2018-06-07 17:06:43: [    0.000000] tsc: Fast TSC calibration using PIT
+2018-06-07 17:06:43: [    0.000000] e820: last_pfn = 0x3ffd9 max_arch_pfn = 0x400000000
+2018-06-07 17:06:43: [    0.000000] x86/PAT: Configuration [0-7]: WB  WC  UC- UC  WB  WC  UC- WT
+2018-06-07 17:06:43: [    0.000000] found SMP MP-table at [mem 0x000f6a60-0x000f6a6f] mapped at [ffff8d0a000f6a60]
+2018-06-07 17:06:43: [    0.000000] Using GB pages for direct mapping
+2018-06-07 17:06:43: [    0.000000] RAMDISK: [mem 0x36749000-0x3739cfff]
+2018-06-07 17:06:43: [    0.000000] ACPI: Early table checksum verification disabled
+2018-06-07 17:06:43: [    0.000000] ACPI: RSDP 0x00000000000F6840 000014 (v00 BOCHS )
+2018-06-07 17:06:43: [    0.000000] ACPI: RSDT 0x000000003FFE1670 000030 (v01 BOCHS  BXPCRSDT 00000001 BXPC 00000001)
+2018-06-07 17:06:43: [    0.000000] ACPI: FACP 0x000000003FFE14C4 000074 (v01 BOCHS  BXPCFACP 00000001 BXPC 00000001)
+2018-06-07 17:06:43: [    0.000000] ACPI: DSDT 0x000000003FFE0040 001484 (v01 BOCHS  BXPCDSDT 00000001 BXPC 00000001)
+2018-06-07 17:06:43: [    0.000000] ACPI: FACS 0x000000003FFE0000 000040
+2018-06-07 17:06:43: [    0.000000] ACPI: APIC 0x000000003FFE15B8 000080 (v01 BOCHS  BXPCAPIC 00000001 BXPC 00000001)
+2018-06-07 17:06:43: [    0.000000] ACPI: HPET 0x000000003FFE1638 000038 (v01 BOCHS  BXPCHPET 00000001 BXPC 00000001)
+2018-06-07 17:06:43: [    0.000000] No NUMA configuration found
+2018-06-07 17:06:43: [    0.000000] Faking a node at [mem 0x0000000000000000-0x000000003ffd8fff]
+2018-06-07 17:06:43: [    0.000000] NODE_DATA(0) allocated [mem 0x3ffae000-0x3ffd8fff]
+2018-06-07 17:06:43: [    0.000000] kvm-clock: Using msrs 4b564d01 and 4b564d00
+2018-06-07 17:06:43: [    0.000000] kvm-clock: cpu 0, msr 0:3ff2e001, primary cpu clock
+2018-06-07 17:06:43: [    0.000000] kvm-clock: using sched offset of 919907283 cycles
+2018-06-07 17:06:43: [    0.000000] clocksource: kvm-clock: mask: 0xffffffffffffffff max_cycles: 0x1cd42e4dffb, max_idle_ns: 881590591483 ns
+2018-06-07 17:06:43: [    0.000000] Zone ranges:
+2018-06-07 17:06:43: [    0.000000]   DMA      [mem 0x0000000000001000-0x0000000000ffffff]
+2018-06-07 17:06:43: [    0.000000]   DMA32    [mem 0x0000000001000000-0x000000003ffd8fff]
+2018-06-07 17:06:43: [    0.000000]   Normal   empty
+2018-06-07 17:06:43: [    0.000000]   Device   empty
+2018-06-07 17:06:43: [    0.000000] Movable zone start for each node
+2018-06-07 17:06:43: [    0.000000] Early memory node ranges
+2018-06-07 17:06:43: [    0.000000]   node   0: [mem 0x0000000000001000-0x000000000009efff]
+2018-06-07 17:06:43: [    0.000000]   node   0: [mem 0x0000000000100000-0x000000003ffd8fff]
+2018-06-07 17:06:43: [    0.000000] Initmem setup node 0 [mem 0x0000000000001000-0x000000003ffd8fff]
+2018-06-07 17:06:43: [    0.000000] ACPI: PM-Timer IO Port: 0x608
+2018-06-07 17:06:43: [    0.000000] ACPI: LAPIC_NMI (acpi_id[0xff] dfl dfl lint[0x1])
+2018-06-07 17:06:43: [    0.000000] IOAPIC[0]: apic_id 0, version 17, address 0xfec00000, GSI 0-23
+2018-06-07 17:06:43: [    0.000000] ACPI: INT_SRC_OVR (bus 0 bus_irq 0 global_irq 2 dfl dfl)
+2018-06-07 17:06:43: [    0.000000] ACPI: INT_SRC_OVR (bus 0 bus_irq 5 global_irq 5 high level)
+2018-06-07 17:06:43: [    0.000000] ACPI: INT_SRC_OVR (bus 0 bus_irq 9 global_irq 9 high level)
+2018-06-07 17:06:43: [    0.000000] ACPI: INT_SRC_OVR (bus 0 bus_irq 10 global_irq 10 high level)
+2018-06-07 17:06:43: [    0.000000] ACPI: INT_SRC_OVR (bus 0 bus_irq 11 global_irq 11 high level)
+2018-06-07 17:06:43: [    0.000000] Using ACPI (MADT) for SMP configuration information
+2018-06-07 17:06:43: [    0.000000] ACPI: HPET id: 0x8086a201 base: 0xfed00000
+2018-06-07 17:06:43: [    0.000000] smpboot: Allowing 2 CPUs, 0 hotplug CPUs
+2018-06-07 17:06:43: [    0.000000] PM: Registered nosave memory: [mem 0x00000000-0x00000fff]
+2018-06-07 17:06:43: [    0.000000] PM: Registered nosave memory: [mem 0x0009f000-0x0009ffff]
+2018-06-07 17:06:43: [    0.000000] PM: Registered nosave memory: [mem 0x000a0000-0x000effff]
+2018-06-07 17:06:43: [    0.000000] PM: Registered nosave memory: [mem 0x000f0000-0x000fffff]
+2018-06-07 17:06:43: [    0.000000] e820: [mem 0x40000000-0xfeffbfff] available for PCI devices
+2018-06-07 17:06:43: [    0.000000] Booting paravirtualized kernel on KVM
+2018-06-07 17:06:43: [    0.000000] clocksource: refined-jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 1910969940391419 ns
+2018-06-07 17:06:43: [    0.000000] setup_percpu: NR_CPUS:8192 nr_cpumask_bits:2 nr_cpu_ids:2 nr_node_ids:1
+2018-06-07 17:06:43: [    0.000000] percpu: Embedded 37 pages/cpu @ffff8d0a3fc00000 s112600 r8192 d30760 u1048576
+2018-06-07 17:06:43: [    0.000000] KVM setup async PF for cpu 0
+2018-06-07 17:06:43: [    0.000000] kvm-stealtime: cpu 0, msr 3fc0d940
+2018-06-07 17:06:43: [    0.000000] Built 1 zonelists in Node order, mobility grouping on.  Total pages: 257890
+2018-06-07 17:06:43: [    0.000000] Policy zone: DMA32
+2018-06-07 17:06:43: [    0.000000] Kernel command line: BOOT_IMAGE=/boot/vmlinuz-4.13.9-300.fc27.x86_64 root=UUID=ba419b80-2653-4f9b-af33-4966d1045fe6 ro console=tty0 console=ttyS0,115200 console=ttyS0
+2018-06-07 17:06:43: [    0.000000] PID hash table entries: 4096 (order: 3, 32768 bytes)
+2018-06-07 17:06:43: [    0.000000] Memory: 996772K/1048028K available (8836K kernel code, 2404K rwdata, 3760K rodata, 2224K init, 1976K bss, 51256K reserved, 0K cma-reserved)
+2018-06-07 17:06:43: [    0.000000] SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=2, Nodes=1
+2018-06-07 17:06:43: [    0.000000] ftrace: allocating 34945 entries in 137 pages
+2018-06-07 17:06:43: [    0.001000] Hierarchical RCU implementation.
+2018-06-07 17:06:43: [    0.001000] 	RCU restricting CPUs from NR_CPUS=8192 to nr_cpu_ids=2.
+2018-06-07 17:06:43: [    0.001000] 	Tasks RCU enabled.
+2018-06-07 17:06:43: [    0.001000] RCU: Adjusting geometry for rcu_fanout_leaf=16, nr_cpu_ids=2
+2018-06-07 17:06:43: [    0.001000] NR_IRQS: 524544, nr_irqs: 440, preallocated irqs: 16
+2018-06-07 17:06:43: [    0.001000] 	Offload RCU callbacks from CPUs: .
+2018-06-07 17:06:43: [    0.001000] Console: colour VGA+ 80x25
+2018-06-07 17:06:43: [    0.001000] console [tty0] enabled
+2018-06-07 17:06:43: [    0.001000] console [ttyS0] enabled
+2018-06-07 17:06:43: [    0.001000] clocksource: hpet: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 19112604467 ns
+2018-06-07 17:06:43: [    0.001006] tsc: Detected 1996.250 MHz processor
+2018-06-07 17:06:43: [    0.002007] tsc: Marking TSC unstable due to TSCs unsynchronized
+2018-06-07 17:06:43: [    0.003003] Calibrating delay loop (skipped) preset value.. 3992.50 BogoMIPS (lpj=1996250)
+2018-06-07 17:06:43: [    0.004004] pid_max: default: 32768 minimum: 301
+2018-06-07 17:06:43: [    0.005015] ACPI: Core revision 20170531
+2018-06-07 17:06:43: [    0.007067] ACPI: 1 ACPI AML tables successfully acquired and loaded
+2018-06-07 17:06:43: [    0.008037] Security Framework initialized
+2018-06-07 17:06:43: [    0.009004] Yama: becoming mindful.
+2018-06-07 17:06:43: [    0.010006] SELinux:  Initializing.
+2018-06-07 17:06:43: [    0.011443] Dentry cache hash table entries: 131072 (order: 8, 1048576 bytes)
+2018-06-07 17:06:43: [    0.012059] Inode-cache hash table entries: 65536 (order: 7, 524288 bytes)
+2018-06-07 17:06:43: [    0.013013] Mount-cache hash table entries: 2048 (order: 2, 16384 bytes)
+2018-06-07 17:06:43: [    0.014006] Mountpoint-cache hash table entries: 2048 (order: 2, 16384 bytes)
+2018-06-07 17:06:43: [    0.015231] mce: CPU supports 10 MCE banks
+2018-06-07 17:06:43: [    0.016053] Last level iTLB entries: 4KB 512, 2MB 1024, 4MB 512
+2018-06-07 17:06:43: [    0.017004] Last level dTLB entries: 4KB 512, 2MB 255, 4MB 127, 1GB 0
+2018-06-07 17:06:43: [    0.018101] Freeing SMP alternatives memory: 32K
+2018-06-07 17:06:43: [    0.020375] smpboot: Max logical packages: 2
+2018-06-07 17:06:43: [    0.021172] x2apic enabled
+2018-06-07 17:06:43: [    0.022004] Switched APIC routing to physical x2apic.
+2018-06-07 17:06:43: [    0.024000] ..TIMER: vector=0x30 apic1=0 pin1=2 apic2=-1 pin2=-1
+2018-06-07 17:06:43: [    0.024000] smpboot: CPU0: AMD Opteron 62xx class CPU (family: 0x15, model: 0x1, stepping: 0x2)
+2018-06-07 17:06:43: [    0.024059] Performance Events: AMD PMU driver.
+2018-06-07 17:06:43: [    0.025005] ... version:                0
+2018-06-07 17:06:43: [    0.026002] ... bit width:              48
+2018-06-07 17:06:43: [    0.027002] ... generic registers:      4
+2018-06-07 17:06:43: [    0.028003] ... value mask:             0000ffffffffffff
+2018-06-07 17:06:43: [    0.029002] ... max period:             00007fffffffffff
+2018-06-07 17:06:43: [    0.030002] ... fixed-purpose events:   0
+2018-06-07 17:06:43: [    0.031002] ... event mask:             000000000000000f
+2018-06-07 17:06:43: [    0.032049] Hierarchical SRCU implementation.
+2018-06-07 17:06:43: [    0.034420] smp: Bringing up secondary CPUs ...
+2018-06-07 17:06:43: [    0.036051] x86: Booting SMP configuration:
+2018-06-07 17:06:43: [    0.037002] .... node  #0, CPUs:      #1
+2018-06-07 17:06:43: [    0.001000] kvm-clock: cpu 1, msr 0:3ff2e041, secondary cpu clock
+2018-06-07 17:06:43: [    0.046060] KVM setup async PF for cpu 1
+2018-06-07 17:06:43: [    0.047000] kvm-stealtime: cpu 1, msr 3fd0d940
+2018-06-07 17:06:43: [    0.051024] smp: Brought up 1 node, 2 CPUs
+2018-06-07 17:06:43: [    0.052015] smpboot: Total of 2 processors activated (7985.00 BogoMIPS)
+2018-06-07 17:06:43: [    0.054142] devtmpfs: initialized
+2018-06-07 17:06:43: [    0.056076] x86/mm: Memory block size: 128MB
+2018-06-07 17:06:43: [    0.058049] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 1911260446275000 ns
+2018-06-07 17:06:43: [    0.059015] futex hash table entries: 512 (order: 3, 32768 bytes)
+2018-06-07 17:06:43: [    0.060099] pinctrl core: initialized pinctrl subsystem
+2018-06-07 17:06:43: [    0.061177] RTC time: 17:06:43, date: 06/07/18
+2018-06-07 17:06:43: [    0.062161] NET: Registered protocol family 16
+2018-06-07 17:06:43: [    0.063178] cpuidle: using governor menu
+2018-06-07 17:06:43: [    0.064011] PCCT header not found.
+2018-06-07 17:06:43: [    0.068258] ACPI: bus type PCI registered
+2018-06-07 17:06:43: [    0.069005] acpiphp: ACPI Hot Plug PCI Controller Driver version: 0.5
+2018-06-07 17:06:43: [    0.071197] PCI: Using configuration type 1 for base access
+2018-06-07 17:06:43: [    0.072003] PCI: Using configuration type 1 for extended access
+2018-06-07 17:06:43: [    0.074649] HugeTLB registered 1.00 GiB page size, pre-allocated 0 pages
+2018-06-07 17:06:43: [    0.075004] HugeTLB registered 2.00 MiB page size, pre-allocated 0 pages
+2018-06-07 17:06:43: [    0.077064] ACPI: Added _OSI(Module Device)
+2018-06-07 17:06:43: [    0.078004] ACPI: Added _OSI(Processor Device)
+2018-06-07 17:06:43: [    0.079002] ACPI: Added _OSI(3.0 _SCP Extensions)
+2018-06-07 17:06:43: [    0.080004] ACPI: Added _OSI(Processor Aggregator Device)
+2018-06-07 17:06:43: [    0.083203] ACPI: Interpreter enabled
+2018-06-07 17:06:43: [    0.084020] ACPI: (supports S0 S3 S4 S5)
+2018-06-07 17:06:43: [    0.085003] ACPI: Using IOAPIC for interrupt routing
+2018-06-07 17:06:43: [    0.086016] PCI: Using host bridge windows from ACPI; if necessary, use "pci=nocrs" and report a bug
+2018-06-07 17:06:43: [    0.089621] ACPI: PCI Root Bridge [PCI0] (domain 0000 [bus 00-ff])
+2018-06-07 17:06:43: [    0.090008] acpi PNP0A03:00: _OSC: OS supports [ExtendedConfig ASPM ClockPM Segments MSI]
+2018-06-07 17:06:43: [    0.091007] acpi PNP0A03:00: _OSC failed (AE_NOT_FOUND); disabling ASPM
+2018-06-07 17:06:43: [    0.092265] acpiphp: Slot [3] registered
+2018-06-07 17:06:43: [    0.093042] acpiphp: Slot [4] registered
+2018-06-07 17:06:43: [    0.094042] acpiphp: Slot [5] registered
+2018-06-07 17:06:43: [    0.095040] acpiphp: Slot [6] registered
+2018-06-07 17:06:43: [    0.096041] acpiphp: Slot [7] registered
+2018-06-07 17:06:43: [    0.097040] acpiphp: Slot [8] registered
+2018-06-07 17:06:43: [    0.098039] acpiphp: Slot [9] registered
+2018-06-07 17:06:43: [    0.099041] acpiphp: Slot [10] registered
+2018-06-07 17:06:43: [    0.100026] acpiphp: Slot [11] registered
+2018-06-07 17:06:43: [    0.101033] acpiphp: Slot [12] registered
+2018-06-07 17:06:43: [    0.102039] acpiphp: Slot [13] registered
+2018-06-07 17:06:43: [    0.103040] acpiphp: Slot [14] registered
+2018-06-07 17:06:43: [    0.104025] acpiphp: Slot [15] registered
+2018-06-07 17:06:43: [    0.105039] acpiphp: Slot [16] registered
+2018-06-07 17:06:43: [    0.107009] acpiphp: Slot [17] registered
+2018-06-07 17:06:43: [    0.108033] acpiphp: Slot [18] registered
+2018-06-07 17:06:43: [    0.109032] acpiphp: Slot [19] registered
+2018-06-07 17:06:43: [    0.110032] acpiphp: Slot [20] registered
+2018-06-07 17:06:43: [    0.111031] acpiphp: Slot [21] registered
+2018-06-07 17:06:43: [    0.112025] acpiphp: Slot [22] registered
+2018-06-07 17:06:43: [    0.113041] acpiphp: Slot [23] registered
+2018-06-07 17:06:43: [    0.114048] acpiphp: Slot [24] registered
+2018-06-07 17:06:43: [    0.115035] acpiphp: Slot [25] registered
+2018-06-07 17:06:43: [    0.116038] acpiphp: Slot [26] registered
+2018-06-07 17:06:43: [    0.117041] acpiphp: Slot [27] registered
+2018-06-07 17:06:43: [    0.118023] acpiphp: Slot [28] registered
+2018-06-07 17:06:43: [    0.119046] acpiphp: Slot [30] registered
+2018-06-07 17:06:43: [    0.120041] acpiphp: Slot [31] registered
+2018-06-07 17:06:43: [    0.121026] PCI host bridge to bus 0000:00
+2018-06-07 17:06:43: [    0.122005] pci_bus 0000:00: root bus resource [io  0x0000-0x0cf7 window]
+2018-06-07 17:06:43: [    0.123003] pci_bus 0000:00: root bus resource [io  0x0d00-0xffff window]
+2018-06-07 17:06:43: [    0.124005] pci_bus 0000:00: root bus resource [mem 0x000a0000-0x000bffff window]
+2018-06-07 17:06:43: [    0.125004] pci_bus 0000:00: root bus resource [mem 0x40000000-0xfebfffff window]
+2018-06-07 17:06:43: [    0.126003] pci_bus 0000:00: root bus resource [mem 0x100000000-0x17fffffff window]
+2018-06-07 17:06:43: [    0.127004] pci_bus 0000:00: root bus resource [bus 00-ff]
+2018-06-07 17:06:43: [    0.137004] pci 0000:00:01.1: legacy IDE quirk: reg 0x10: [io  0x01f0-0x01f7]
+2018-06-07 17:06:43: [    0.138003] pci 0000:00:01.1: legacy IDE quirk: reg 0x14: [io  0x03f6]
+2018-06-07 17:06:43: [    0.139004] pci 0000:00:01.1: legacy IDE quirk: reg 0x18: [io  0x0170-0x0177]
+2018-06-07 17:06:43: [    0.140004] pci 0000:00:01.1: legacy IDE quirk: reg 0x1c: [io  0x0376]
+2018-06-07 17:06:43: [    0.143076] pci 0000:00:01.3: quirk: [io  0x0600-0x063f] claimed by PIIX4 ACPI
+2018-06-07 17:06:43: [    0.144025] pci 0000:00:01.3: quirk: [io  0x0700-0x070f] claimed by PIIX4 SMB
+2018-06-07 17:06:44: [    0.203251] ACPI: PCI Interrupt Link [LNKA] (IRQs 5 *10 11)
+2018-06-07 17:06:44: [    0.205059] ACPI: PCI Interrupt Link [LNKB] (IRQs 5 *10 11)
+2018-06-07 17:06:44: [    0.206113] ACPI: PCI Interrupt Link [LNKC] (IRQs 5 10 *11)
+2018-06-07 17:06:44: [    0.207096] ACPI: PCI Interrupt Link [LNKD] (IRQs 5 10 *11)
+2018-06-07 17:06:44: [    0.208079] ACPI: PCI Interrupt Link [LNKS] (IRQs *9)
+2018-06-07 17:06:44: [    0.209248] ACPI: Enabled 2 GPEs in block 00 to 0F
+2018-06-07 17:06:44: [    0.210125] pci 0000:00:02.0: vgaarb: setting as boot VGA device
+2018-06-07 17:06:44: [    0.211000] pci 0000:00:02.0: vgaarb: VGA device added: decodes=io+mem,owns=io+mem,locks=none
+2018-06-07 17:06:44: [    0.211006] pci 0000:00:02.0: vgaarb: bridge control possible
+2018-06-07 17:06:44: [    0.212002] vgaarb: loaded
+2018-06-07 17:06:44: [    0.213159] SCSI subsystem initialized
+2018-06-07 17:06:44: [    0.214084] ACPI: bus type USB registered
+2018-06-07 17:06:44: [    0.215022] usbcore: registered new interface driver usbfs
+2018-06-07 17:06:44: [    0.216011] usbcore: registered new interface driver hub
+2018-06-07 17:06:44: [    0.217023] usbcore: registered new device driver usb
+2018-06-07 17:06:44: [    0.218064] EDAC MC: Ver: 3.0.0
+2018-06-07 17:06:44: [    0.220427] PCI: Using ACPI for IRQ routing
+2018-06-07 17:06:44: [    0.221523] NetLabel: Initializing
+2018-06-07 17:06:44: [    0.222004] NetLabel:  domain hash size = 128
+2018-06-07 17:06:44: [    0.223001] NetLabel:  protocols = UNLABELED CIPSOv4 CALIPSO
+2018-06-07 17:06:44: [    0.224022] NetLabel:  unlabeled traffic allowed by default
+2018-06-07 17:06:44: [    0.225605] hpet0: at MMIO 0xfed00000, IRQs 2, 8, 0
+2018-06-07 17:06:44: [    0.226005] hpet0: 3 comparators, 64-bit 100.000000 MHz counter
+2018-06-07 17:06:44: [    0.231091] clocksource: Switched to clocksource kvm-clock
+2018-06-07 17:06:44: [    0.245068] VFS: Disk quotas dquot_6.6.0
+2018-06-07 17:06:44: [    0.247129] VFS: Dquot-cache hash table entries: 512 (order 0, 4096 bytes)
+2018-06-07 17:06:44: [    0.250112] pnp: PnP ACPI init
+2018-06-07 17:06:44: [    0.252447] pnp: PnP ACPI: found 5 devices
+2018-06-07 17:06:44: [    0.263098] clocksource: acpi_pm: mask: 0xffffff max_cycles: 0xffffff, max_idle_ns: 2085701024 ns
+2018-06-07 17:06:44: [    0.267374] NET: Registered protocol family 2
+2018-06-07 17:06:44: [    0.269799] TCP established hash table entries: 8192 (order: 4, 65536 bytes)
+2018-06-07 17:06:44: [    0.272778] TCP bind hash table entries: 8192 (order: 5, 131072 bytes)
+2018-06-07 17:06:44: [    0.275887] TCP: Hash tables configured (established 8192 bind 8192)
+2018-06-07 17:06:44: [    0.278930] UDP hash table entries: 512 (order: 2, 16384 bytes)
+2018-06-07 17:06:44: [    0.281943] UDP-Lite hash table entries: 512 (order: 2, 16384 bytes)
+2018-06-07 17:06:44: [    0.284989] NET: Registered protocol family 1
+2018-06-07 17:06:44: [    0.287407] pci 0000:00:00.0: Limiting direct PCI/PCI transfers
+2018-06-07 17:06:44: [    0.290423] pci 0000:00:01.0: PIIX3: Enabling Passive Release
+2018-06-07 17:06:44: [    0.293163] pci 0000:00:01.0: Activating ISA DMA hang workarounds
+2018-06-07 17:06:44: [    0.296349] pci 0000:00:02.0: Video device with shadowed ROM at [mem 0x000c0000-0x000dffff]
+2018-06-07 17:06:44: [    0.315687] ACPI: PCI Interrupt Link [LNKA] enabled at IRQ 10
+2018-06-07 17:06:44: [    0.347859] ACPI: PCI Interrupt Link [LNKB] enabled at IRQ 11
+2018-06-07 17:06:44: [    0.379931] ACPI: PCI Interrupt Link [LNKC] enabled at IRQ 11
+2018-06-07 17:06:44: [    0.411945] ACPI: PCI Interrupt Link [LNKD] enabled at IRQ 10
+2018-06-07 17:06:44: [    0.429545] Unpacking initramfs...
+2018-06-07 17:06:44: [    0.609558] Freeing initrd memory: 12624K
+2018-06-07 17:06:44: [    0.612083] clocksource: tsc: mask: 0xffffffffffffffff max_cycles: 0x398caf77d7a, max_idle_ns: 881590459467 ns
+2018-06-07 17:06:44: [    0.617668] audit: initializing netlink subsys (disabled)
+2018-06-07 17:06:44: [    0.621911] audit: type=2000 audit(1528391203.507:1): state=initialized audit_enabled=0 res=1
+2018-06-07 17:06:44: [    0.622320] Initialise system trusted keyrings
+2018-06-07 17:06:44: [    0.622334] Key type blacklist registered
+2018-06-07 17:06:44: [    0.622368] workingset: timestamp_bits=36 max_order=18 bucket_order=0
+2018-06-07 17:06:44: [    0.623905] zbud: loaded
+2018-06-07 17:06:44: [    0.769339] NET: Registered protocol family 38
+2018-06-07 17:06:44: [    0.773062] Key type asymmetric registered
+2018-06-07 17:06:44: [    0.776480] Asymmetric key parser 'x509' registered
+2018-06-07 17:06:44: [    0.780310] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 248)
+2018-06-07 17:06:44: [    0.786386] io scheduler noop registered
+2018-06-07 17:06:44: [    0.789446] io scheduler deadline registered
+2018-06-07 17:06:44: [    0.792833] io scheduler cfq registered (default)
+2018-06-07 17:06:44: [    0.796472] io scheduler mq-deadline registered
+2018-06-07 17:06:44: [    0.800277] atomic64_test: passed for x86-64 platform with CX8 and with SSE
+2018-06-07 17:06:44: [    0.805359] input: Power Button as /devices/LNXSYSTM:00/LNXPWRBN:00/input/input0
+2018-06-07 17:06:44: [    0.811941] ACPI: Power Button [PWRF]
+2018-06-07 17:06:44: [    0.816417] GHES: HEST is not enabled!
+2018-06-07 17:06:44: [    0.823426] Serial: 8250/16550 driver, 32 ports, IRQ sharing enabled
+2018-06-07 17:06:44: [    0.856051] 00:04: ttyS0 at I/O 0x3f8 (irq = 4, base_baud = 115200) is a 16550A
+2018-06-07 17:06:44: [    0.865318] Non-volatile memory driver v1.3
+2018-06-07 17:06:44: [    0.869096] Linux agpgart interface v0.103
+2018-06-07 17:06:44: [    0.873743] scsi host0: ata_piix
+2018-06-07 17:06:44: [    0.876385] scsi host1: ata_piix
+2018-06-07 17:06:44: [    0.879093] ata1: PATA max MWDMA2 cmd 0x1f0 ctl 0x3f6 bmdma 0xc0c0 irq 14
+2018-06-07 17:06:44: [    0.882650] ata2: PATA max MWDMA2 cmd 0x170 ctl 0x376 bmdma 0xc0c8 irq 15
+2018-06-07 17:06:44: [    0.886433] libphy: Fixed MDIO Bus: probed
+2018-06-07 17:06:44: [    0.889806] ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+2018-06-07 17:06:44: [    0.893699] ehci-pci: EHCI PCI platform driver
+2018-06-07 17:06:44: [    0.914082] ehci-pci 0000:00:1d.7: EHCI Host Controller
+2018-06-07 17:06:44: [    0.916778] ehci-pci 0000:00:1d.7: new USB bus registered, assigned bus number 1
+2018-06-07 17:06:44: [    0.922619] ehci-pci 0000:00:1d.7: irq 10, io mem 0xfeb93000
+2018-06-07 17:06:44: [    0.934071] ehci-pci 0000:00:1d.7: USB 2.0 started, EHCI 1.00
+2018-06-07 17:06:44: [    0.937559] usb usb1: New USB device found, idVendor=1d6b, idProduct=0002
+2018-06-07 17:06:44: [    0.941316] usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+2018-06-07 17:06:44: [    0.952380] usb usb1: Product: EHCI Host Controller
+2018-06-07 17:06:44: [    0.958076] usb usb1: Manufacturer: Linux 4.13.9-300.fc27.x86_64 ehci_hcd
+2018-06-07 17:06:44: [    0.964160] usb usb1: SerialNumber: 0000:00:1d.7
+2018-06-07 17:06:44: [    0.968571] hub 1-0:1.0: USB hub found
+2018-06-07 17:06:44: [    0.971483] hub 1-0:1.0: 6 ports detected
+2018-06-07 17:06:44: [    0.975276] ohci_hcd: USB 1.1 'Open' Host Controller (OHCI) Driver
+2018-06-07 17:06:44: [    0.979423] ohci-pci: OHCI PCI platform driver
+2018-06-07 17:06:44: [    0.990066] uhci_hcd: USB Universal Host Controller Interface driver
+2018-06-07 17:06:44: [    1.022473] uhci_hcd 0000:00:1d.0: UHCI Host Controller
+2018-06-07 17:06:44: [    1.030953] uhci_hcd 0000:00:1d.0: new USB bus registered, assigned bus number 2
+2018-06-07 17:06:44: [    1.043598] uhci_hcd 0000:00:1d.0: detected 2 ports
+2018-06-07 17:06:44: [    1.048024] uhci_hcd 0000:00:1d.0: irq 10, io base 0x0000c060
+2018-06-07 17:06:44: [    1.059331] usb usb2: New USB device found, idVendor=1d6b, idProduct=0001
+2018-06-07 17:06:44: [    1.073490] usb usb2: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+2018-06-07 17:06:44: [    1.082494] usb usb2: Product: UHCI Host Controller
+2018-06-07 17:06:44: [    1.090427] usb usb2: Manufacturer: Linux 4.13.9-300.fc27.x86_64 uhci_hcd
+2018-06-07 17:06:44: [    1.095740] usb usb2: SerialNumber: 0000:00:1d.0
+2018-06-07 17:06:44: [    1.100069] hub 2-0:1.0: USB hub found
+2018-06-07 17:06:44: [    1.104130] hub 2-0:1.0: 2 ports detected
+2018-06-07 17:06:44: [    1.126628] uhci_hcd 0000:00:1d.2: UHCI Host Controller
+2018-06-07 17:06:44: [    1.137709] uhci_hcd 0000:00:1d.2: new USB bus registered, assigned bus number 3
+2018-06-07 17:06:45: [    1.143659] uhci_hcd 0000:00:1d.2: detected 2 ports
+2018-06-07 17:06:45: [    1.155634] uhci_hcd 0000:00:1d.2: irq 11, io base 0x0000c080
+2018-06-07 17:06:45: [    1.159716] usb usb3: New USB device found, idVendor=1d6b, idProduct=0001
+2018-06-07 17:06:45: [    1.173193] usb usb3: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+2018-06-07 17:06:45: [    1.187140] usb usb3: Product: UHCI Host Controller
+2018-06-07 17:06:45: [    1.190679] usb usb3: Manufacturer: Linux 4.13.9-300.fc27.x86_64 uhci_hcd
+2018-06-07 17:06:45: [    1.195207] usb usb3: SerialNumber: 0000:00:1d.2
+2018-06-07 17:06:45: [    1.205782] hub 3-0:1.0: USB hub found
+2018-06-07 17:06:45: [    1.209213] hub 3-0:1.0: 2 ports detected
+2018-06-07 17:06:45: [    1.241366] uhci_hcd 0000:00:1d.4: UHCI Host Controller
+2018-06-07 17:06:45: [    1.245172] uhci_hcd 0000:00:1d.4: new USB bus registered, assigned bus number 4
+2018-06-07 17:06:45: [    1.250604] uhci_hcd 0000:00:1d.4: detected 2 ports
+2018-06-07 17:06:45: [    1.253758] uhci_hcd 0000:00:1d.4: irq 11, io base 0x0000c0a0
+2018-06-07 17:06:45: [    1.257860] usb usb4: New USB device found, idVendor=1d6b, idProduct=0001
+2018-06-07 17:06:45: [    1.262493] usb usb4: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+2018-06-07 17:06:45: [    1.275735] usb usb4: Product: UHCI Host Controller
+2018-06-07 17:06:45: [    1.280253] usb usb4: Manufacturer: Linux 4.13.9-300.fc27.x86_64 uhci_hcd
+2018-06-07 17:06:45: [    1.285525] usb usb4: SerialNumber: 0000:00:1d.4
+2018-06-07 17:06:45: [    1.289404] hub 4-0:1.0: USB hub found
+2018-06-07 17:06:45: [    1.292658] hub 4-0:1.0: 2 ports detected
+2018-06-07 17:06:45: [    1.296127] usbcore: registered new interface driver usbserial
+2018-06-07 17:06:45: [    1.300182] usbcore: registered new interface driver usbserial_generic
+2018-06-07 17:06:45: [    1.312889] usbserial: USB Serial support registered for generic
+2018-06-07 17:06:45: [    1.316897] i8042: PNP: PS/2 Controller [PNP0303:KBD,PNP0f13:MOU] at 0x60,0x64 irq 1,12
+2018-06-07 17:06:45: [    1.333047] serio: i8042 KBD port at 0x60,0x64 irq 1
+2018-06-07 17:06:45: [    1.336712] serio: i8042 AUX port at 0x60,0x64 irq 12
+2018-06-07 17:06:45: [    1.341081] usb 1-1: new high-speed USB device number 2 using ehci-pci
+2018-06-07 17:06:45: [    1.352154] mousedev: PS/2 mouse device common for all mice
+2018-06-07 17:06:45: [    1.357180] rtc_cmos 00:00: RTC can wake from S4
+2018-06-07 17:06:45: [    1.362428] rtc_cmos 00:00: rtc core: registered rtc_cmos as rtc0
+2018-06-07 17:06:45: [    1.366757] rtc_cmos 00:00: alarms up to one day, y3k, 114 bytes nvram, hpet irqs
+2018-06-07 17:06:45: [    1.373160] input: AT Translated Set 2 keyboard as /devices/platform/i8042/serio0/input/input1
+2018-06-07 17:06:45: [    1.377174] device-mapper: uevent: version 1.0.3
+2018-06-07 17:06:45: [    1.377265] device-mapper: ioctl: 4.37.0-ioctl (2017-09-20) initialised: dm-devel@redhat.com
+2018-06-07 17:06:45: [    1.384162] hidraw: raw HID events driver (C) Jiri Kosina
+2018-06-07 17:06:45: [    1.384211] usbcore: registered new interface driver usbhid
+2018-06-07 17:06:45: [    1.384212] usbhid: USB HID core driver
+2018-06-07 17:06:45: [    1.384299] drop_monitor: Initializing network drop monitor service
+2018-06-07 17:06:45: [    1.384396] ip_tables: (C) 2000-2006 Netfilter Core Team
+2018-06-07 17:06:45: [    1.414852] Initializing XFRM netlink socket
+2018-06-07 17:06:45: [    1.414957] NET: Registered protocol family 10
+2018-06-07 17:06:45: [    1.421755] Segment Routing with IPv6
+2018-06-07 17:06:45: [    1.421779] mip6: Mobile IPv6
+2018-06-07 17:06:45: [    1.421781] NET: Registered protocol family 17
+2018-06-07 17:06:45: [    1.465185] RAS: Correctable Errors collector initialized.
+2018-06-07 17:06:45: [    1.469107] AVX version of gcm_enc/dec engaged.
+2018-06-07 17:06:45: [    1.472652] AES CTR mode by8 optimization enabled
+2018-06-07 17:06:45: [    1.485311] input: VirtualPS/2 VMware VMMouse as /devices/platform/i8042/serio1/input/input4
+2018-06-07 17:06:45: [    1.493470] sched_clock: Marking stable (1493009537, 0)->(2489450539, -996441002)
+2018-06-07 17:06:45: [    1.506236] input: VirtualPS/2 VMware VMMouse as /devices/platform/i8042/serio1/input/input3
+2018-06-07 17:06:45: [    1.506359] registered taskstats version 1
+2018-06-07 17:06:45: [    1.506369] Loading compiled-in X.509 certificates
+2018-06-07 17:06:45: [    1.546109] Loaded X.509 cert 'Fedora kernel signing key: 7bf71b7aa6845adff2b1cf1f1968839d5134fb7e'
+2018-06-07 17:06:45: [    1.554881] zswap: loaded using pool lzo/zbud
+2018-06-07 17:06:45: [    1.560735] usb 1-1: New USB device found, idVendor=0627, idProduct=0001
+2018-06-07 17:06:45: [    1.564243] usb 1-1: New USB device strings: Mfr=1, Product=3, SerialNumber=5
+2018-06-07 17:06:45: [    1.567985] usb 1-1: Product: QEMU USB Tablet
+2018-06-07 17:06:45: [    1.570855] usb 1-1: Manufacturer: QEMU
+2018-06-07 17:06:45: [    1.573781] usb 1-1: SerialNumber: 42
+2018-06-07 17:06:45: [    1.576246] Key type big_key registered
+2018-06-07 17:06:45: [    1.578119] Key type encrypted registered
+2018-06-07 17:06:45: [    1.579233]   Magic number: 6:393:137
+2018-06-07 17:06:45: [    1.579248] usb usb4-port2: hash matches
+2018-06-07 17:06:45: [    1.581480] rtc_cmos 00:00: setting system clock to 2018-06-07 17:06:44 UTC (1528391204)
+2018-06-07 17:06:45: [    1.621980] input: QEMU QEMU USB Tablet as /devices/pci0000:00/0000:00:1d.7/usb1/1-1/1-1:1.0/0003:0627:0001.0001/input/input5
+2018-06-07 17:06:45: [    1.644148] hid-generic 0003:0627:0001.0001: input,hidraw0: USB HID v0.01 Mouse [QEMU QEMU USB Tablet] on usb-0000:00:1d.7-1/input0
+2018-06-07 17:06:45: [    1.646127] Freeing unused kernel memory: 2224K
+2018-06-07 17:06:45: [    1.646128] Write protecting the kernel read-only data: 14336k
+2018-06-07 17:06:45: [    1.666840] Freeing unused kernel memory: 1392K
+2018-06-07 17:06:45: [    1.671793] Freeing unused kernel memory: 336K
+2018-06-07 17:06:45: [    1.677638] x86/mm: Checked W+X mappings: passed, no W+X pages found.
+2018-06-07 17:06:45: [    1.682351] rodata_test: all tests were successful
+2018-06-07 17:06:45: [    1.692130] systemd[1]: systemd 234 running in system mode. (+PAM +AUDIT +SELINUX +IMA -APPARMOR +SMACK +SYSVINIT +UTMP +LIBCRYPTSETUP +GCRYPT +GNUTLS +ACL +XZ +LZ4 +SECCOMP +BLKID +ELFUTILS +KMOD -IDN2 +IDN default-hierarchy=hybrid)
+2018-06-07 17:06:45: [    1.705690] systemd[1]: Detected virtualization kvm.
+2018-06-07 17:06:45: [    1.709748] systemd[1]: Detected architecture x86-64.
+2018-06-07 17:06:45: [    1.713536] systemd[1]: Running in initial RAM disk.
+2018-06-07 17:06:45: 
+2018-06-07 17:06:45: Welcome to [0;34mFedora 27 (Twenty Seven) dracut-046-5.fc27 (Initramfs)[0m!
+2018-06-07 17:06:45: 
+2018-06-07 17:06:45: [    1.720521] systemd[1]: Set hostname to <atest-guest>.
+2018-06-07 17:06:45: [    1.778232] systemd[1]: Listening on Journal Audit Socket.
+2018-06-07 17:06:45: [[0;32m  OK  [0m] Listening on Journal Audit Socket.
+2018-06-07 17:06:45: [    1.783653] systemd[1]: Started Dispatch Password Requests to Console Directory Watch.
+2018-06-07 17:06:45: [[0;32m  OK  [0m] Started Dispatch Password Requests to Console Directory Watch.
+2018-06-07 17:06:45: [    1.799892] systemd[1]: Reached target Timers.
+2018-06-07 17:06:45: [[0;32m  OK  [0m] Reached target Timers.
+2018-06-07 17:06:45: [    1.812945] systemd[1]: Listening on udev Control Socket.
+2018-06-07 17:06:45: [[0;32m  OK  [0m] Listening on udev Control Socket.
+2018-06-07 17:06:45: [    1.819374] systemd[1]: Created slice System Slice.
+2018-06-07 17:06:45: [[0;32m  OK  [0m] Created slice System Slice.
+2018-06-07 17:06:45: [[0;32m  OK  [0m] Reached target Swap.
+2018-06-07 17:06:45: [[0;32m  OK  [0m] Listening on Journal Socket (/dev/log).
+2018-06-07 17:06:45: [[0;32m  OK  [0m] Reached target Local File Systems.
+2018-06-07 17:06:45: [[0;32m  OK  [0m] Listening on Journal Socket.
+2018-06-07 17:06:45:          Starting Create Volatile Files and Directories...
+2018-06-07 17:06:45:          Starting Create list of required stce nodes for the current kernel...
+2018-06-07 17:06:45:          Starting Journal Service...
+2018-06-07 17:06:45: [[0;32m  OK  [0m] Reached target Slices.
+2018-06-07 17:06:45:          Starting Apply Kernel Variables...
+2018-06-07 17:06:45: [[0;32m  OK  [0m] Listening on udev Kernel Socket.
+2018-06-07 17:06:45: [[0;32m  OK  [0m] Reached target Sockets.
+2018-06-07 17:06:45: [[0;32m  OK  [0m] Reached target Paths.
+2018-06-07 17:06:45: [[0;32m  OK  [0m] Started Create Volatile Files and Directories.
+2018-06-07 17:06:45: [    1.892601] audit: type=1130 audit(1528391204.813:2): pid=1 uid=0 auid=4294967295 ses=4294967295 subj=kernel msg='unit=systemd-tmpfiles-setup comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+2018-06-07 17:06:45: [[0;32m  OK  [0m] Started Create list of required stavice nodes for the current kernel.
+2018-06-07 17:06:45: [    1.919878] audit: type=1130 audit(1528391204.840:3): pid=1 uid=0 auid=4294967295 ses=4294967295 subj=kernel msg='unit=kmod-static-nodes comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+2018-06-07 17:06:45: [[0;32m  OK  [0m] Started Apply Kernel Variables.
+2018-06-07 17:06:45: [    1.944092] audit: type=1130 audit(1528391204.864:4): pid=1 uid=0 auid=4294967295 ses=4294967295 subj=kernel msg='unit=systemd-sysctl comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+2018-06-07 17:06:45: [[0;32m  OK  [0m] Started Journal Service.
+2018-06-07 17:06:45: [    1.969224] audit: type=1130 audit(1528391204.889:5): pid=1 uid=0 auid=4294967295 ses=4294967295 subj=kernel msg='unit=systemd-journald comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+2018-06-07 17:06:45:          Starting Create Static Device Nodes in /dev...
+2018-06-07 17:06:45: [[0;32m  OK  [0m] Started Create Static Device Nodes in /dev.
+2018-06-07 17:06:45: [    1.995292] audit: type=1130 audit(1528391204.915:6): pid=1 uid=0 auid=4294967295 ses=4294967295 subj=kernel msg='unit=systemd-tmpfiles-setup-dev comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+2018-06-07 17:06:45:          Starting udev Kernel Device Manager...
+2018-06-07 17:06:45: [[0;32m  OK  [0m] Started udev Kernel Device Manager.
+2018-06-07 17:06:45: [    2.033226] audit: type=1130 audit(1528391204.953:7): pid=1 uid=0 auid=4294967295 ses=4294967295 subj=kernel msg='unit=systemd-udevd comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+2018-06-07 17:06:45:          Starting udev Coldplug all Devices...
+2018-06-07 17:06:45:          Mounting Kernel Configuration File System...
+2018-06-07 17:06:45: [[0;32m  OK  [0m] Mounted Kernel Configuration File System.
+2018-06-07 17:06:45: [[0;32m  OK  [0m] Started udev Coldplug all Devices.
+2018-06-07 17:06:45: [    2.107081] audit: type=1130 audit(1528391205.027:8): pid=1 uid=0 auid=4294967295 ses=4294967295 subj=kernel msg='unit=systemd-udev-trigger comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+2018-06-07 17:06:45: [[0;32m  OK  [0m] Reached target System Initialization.
+2018-06-07 17:06:45: [[0;32m  OK  [0m] Reached target Basic System.
+2018-06-07 17:06:45: [[0;32m  OK  [0m] Reached target Remote File Systems (Pre).
+2018-06-07 17:06:45: [[0;32m  OK  [0m] Reached target Remote File Systems.
+2018-06-07 17:06:46: [    2.252655]  vda: vda1
+2018-06-07 17:06:46: [[0;32m  OK  [0m] Found device /dev/disk/by-uuid/ba419b80-2653-4f9b-af33-4966d1045fe6.
+2018-06-07 17:06:46: [[0;32m  OK  [0m] Reached target Initrd Root Device.
+2018-06-07 17:06:46:          Starting File System Check on /dev/b80-2653-4f9b-af33-4966d1045fe6...
+2018-06-07 17:06:46: [[0;32m  OK  [0m] Started File System Check on /dev/d19b80-2653-4f9b-af33-4966d1045fe6.
+2018-06-07 17:06:46: [    2.350104] audit: type=1130 audit(1528391205.270:9): pid=1 uid=0 auid=4294967295 ses=4294967295 subj=kernel msg='unit=systemd-fsck-root comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+2018-06-07 17:06:46:          Mounting /sysroot...
+2018-06-07 17:06:46: [    2.367756] EXT4-fs (vda1): INFO: recovery required on readonly filesystem
+2018-06-07 17:06:46: [    2.379481] EXT4-fs (vda1): write access will be enabled during recovery
+2018-06-07 17:06:46: [    2.657290] EXT4-fs (vda1): orphan cleanup on readonly fs
+2018-06-07 17:06:46: [    2.657348] EXT4-fs (vda1): 1 orphan inode deleted
+2018-06-07 17:06:46: [    2.657349] EXT4-fs (vda1): recovery complete
+2018-06-07 17:06:46: [    2.733298] EXT4-fs (vda1): mounted filesystem with ordered data mode. Opts: (null)
+2018-06-07 17:06:46: [[0;32m  OK  [0m] Mounted /sysroot.
+2018-06-07 17:06:46: [[0;32m  OK  [0m] Reached target Initrd Root File System.
+2018-06-07 17:06:46:          Starting Reload Configuration from the Real Root...
+2018-06-07 17:06:46: [[0;32m  OK  [0m] Started Reload Configuration from the Real Root.
+2018-06-07 17:06:46: [    2.825901] audit: type=1130 audit(1528391205.746:10): pid=1 uid=0 auid=4294967295 ses=4294967295 subj=kernel msg='unit=initrd-parse-etc comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+2018-06-07 17:06:46: [[0;32m  OK  [0m] Reached target Initrd File Systems.
+2018-06-07 17:06:46: [[0;32m  OK  [0m] Reached target Initrd Default Target.
+2018-06-07 17:06:46:          Starting Cleaning Up and Shutting Down Daemons...
+2018-06-07 17:06:46: [[0;32m  OK  [0m] Stopped target Timers.
+2018-06-07 17:06:46: [[0;32m  OK  [0m] Stopped target Initrd Default Target.
+2018-06-07 17:06:46: [[0;32m  OK  [0m] Stopped target Basic System.
+2018-06-07 17:06:46: [[0;32m  OK  [0m] Stopped target Slices.
+2018-06-07 17:06:46: [[0;32m  OK  [0m] Stopped target Paths.
+2018-06-07 17:06:46: [[0;32m  OK  [0m] Stopped Dispatch Password Requests to Console Directory Watch.
+2018-06-07 17:06:46: [[0;32m  OK  [0m] Stopped target System Initialization.
+2018-06-07 17:06:46: [[0;32m  OK  [0m] Stopped Create Volatile Files and Directories.
+2018-06-07 17:06:46: [[0;32m  OK  [0m] Stopped target Local File Systems.
+2018-06-07 17:06:46: [[0;32m  OK  [0m] Stopped Apply Kernel Variables.
+2018-06-07 17:06:46: [[0;32m  OK  [0m] Stopped udev Coldplug all Devices.
+2018-06-07 17:06:46: [[0;32m  OK  [0m] Stopped target Swap.
+2018-06-07 17:06:46: [[0;32m  OK  [0m] Stopped target Sockets.
+2018-06-07 17:06:46: [[0;32m  OK  [0m] Stopped target Initrd Root Device.
+2018-06-07 17:06:46:          Stopping udev Kernel Device Manager...
+2018-06-07 17:06:46: [[0;32m  OK  [0m] Stopped target Remote File Systems.
+2018-06-07 17:06:46: [[0;32m  OK  [0m] Stopped target Remote File Systems (Pre).
+2018-06-07 17:06:46: [[0;32m  OK  [0m] Started Cleaning Up and Shutting Down Daemons.
+2018-06-07 17:06:46: [[0;32m  OK  [0m] Stopped udev Kernel Device Manager.
+2018-06-07 17:06:46: [[0;32m  OK  [0m] Stopped Create Static Device Nodes in /dev.
+2018-06-07 17:06:46: [[0;32m  OK  [0m] Stopped Create list of required stavice nodes for the current kernel.
+2018-06-07 17:06:46: [[0;32m  OK  [0m] Closed udev Control Socket.
+2018-06-07 17:06:46: [[0;32m  OK  [0m] Closed udev Kernel Socket.
+2018-06-07 17:06:46:          Starting Cleanup udevd DB...
+2018-06-07 17:06:46: [[0;32m  OK  [0m] Started Cleanup udevd DB.
+2018-06-07 17:06:46: [[0;32m  OK  [0m] Reached target Switch Root.
+2018-06-07 17:06:46:          Starting Switch Root...
+2018-06-07 17:06:46: [    2.951568] systemd-journald[183]: Received SIGTERM from PID 1 (systemd).
+2018-06-07 17:06:46: [    2.963302] systemd: 16 output lines suppressed due to ratelimiting
+2018-06-07 17:06:46: 
+2018-06-07 17:06:46: Welcome to [0;34mFedora 27 (Twenty Seven)[0m!
+2018-06-07 17:06:46: 
+2018-06-07 17:06:46: [[0;32m  OK  [0m] Stopped Switch Root.
+2018-06-07 17:06:46: [[0;32m  OK  [0m] Stopped Journal Service.
+2018-06-07 17:06:46:          Starting Journal Service...
+2018-06-07 17:06:46: [[0;32m  OK  [0m] Stopped File System Check on Root Device.
+2018-06-07 17:06:46: [[0;32m  OK  [0m] Listening on /dev/initctl Compatibility Named Pipe.
+2018-06-07 17:06:46: [[0;32m  OK  [0m] Created slice system-getty.slice.
+2018-06-07 17:06:46:          Starting Remount Root and Kernel File Systems...
+2018-06-07 17:06:46: [[0;32m  OK  [0m] Started Forward Password Requests to Wall Directory Watch.
+2018-06-07 17:06:46:          Starting Create list of required stce nodes for the current kernel...
+2018-06-07 17:06:46: [[0;32m  OK  [0m] Listening on udev Kernel Socket.
+2018-06-07 17:06:46: [[0;32m  OK  [0m] Created slice system-serial\x2dgetty.slice.
+2018-06-07 17:06:46: [[0;32m  OK  [0m] Listening on udev Control Socket.
+2018-06-07 17:06:46:          Mounting Kernel Debug File System...
+2018-06-07 17:06:46: [[0;32m  OK  [0m] Created slice system-sshd\x2dkeygen.slice.
+2018-06-07 17:06:46: [[0;32m  OK  [0m] Set up automount Arbitrary Executabrmats File System Automount Point.
+2018-06-07 17:06:46: [    3.094874] EXT4-fs (vda1): re-mounted. Opts: (null)
+2018-06-07 17:06:46: [[0;32m  OK  [0m] Listening on Process Core Dump Socket.
+2018-06-07 17:06:46: [[0;32m  OK  [0m] Created slice User and Session Slice.
+2018-06-07 17:06:46: [[0;32m  OK  [0m] Reached target Slices.
+2018-06-07 17:06:46: [[0;32m  OK  [0m] Started Dispatch Password Requests to Console Directory Watch.
+2018-06-07 17:06:46: [[0;32m  OK  [0m] Reached target Paths.
+2018-06-07 17:06:46: [[0;32m  OK  [0m] Reached target Local Encrypted Volumes.
+2018-06-07 17:06:46:          Mounting Huge Pages File System...
+2018-06-07 17:06:46:          Starting Apply Kernel Variables...
+2018-06-07 17:06:46: [[0;32m  OK  [0m] Reached target Swap.
+2018-06-07 17:06:46:          Mounting POSIX Message Queue File System...
+2018-06-07 17:06:46: [[0;32m  OK  [0m] Stopped target Switch Root.
+2018-06-07 17:06:46: [[0;32m  OK  [0m] Stopped target Initrd Root File System.
+2018-06-07 17:06:46: [[0;32m  OK  [0m] Stopped target Initrd File Systems.
+2018-06-07 17:06:46: [[0;32m  OK  [0m] Reached target Remote File Systems.
+2018-06-07 17:06:46: [[0;32m  OK  [0m] Mounted Kernel Debug File System.
+2018-06-07 17:06:46: [[0;32m  OK  [0m] Mounted POSIX Message Queue File System.
+2018-06-07 17:06:46: [[0;32m  OK  [0m] Mounted Huge Pages File System.
+2018-06-07 17:06:46: [[0;32m  OK  [0m] Started Journal Service.
+2018-06-07 17:06:47: [[0;32m  OK  [0m] Started Remount Root and Kernel File Systems.
+2018-06-07 17:06:47: [[0;32m  OK  [0m] Started Create list of required stavice nodes for the current kernel.
+2018-06-07 17:06:47: [[0;32m  OK  [0m] Started Apply Kernel Variables.
+2018-06-07 17:06:47:          Starting udev Coldplug all Devices...
+2018-06-07 17:06:47:          Starting Create Static Device Nodes in /dev...
+2018-06-07 17:06:47:          Starting Configure read-only root support...
+2018-06-07 17:06:47:          Starting Flush Journal to Persistent Storage...
+2018-06-07 17:06:47: [    3.176795] systemd-journald[268]: Received request to flush runtime journal from PID 1
+2018-06-07 17:06:47: [[0;32m  OK  [0m] Started Create Static Device Nodes in /dev.
+2018-06-07 17:06:47:          Starting udev Kernel Device Manager...
+2018-06-07 17:06:47: [[0;32m  OK  [0m] Reached target Local File Systems (Pre).
+2018-06-07 17:06:47: [[0;32m  OK  [0m] Started Configure read-only root support.
+2018-06-07 17:06:47: [[0;32m  OK  [0m] Reached target Local File Systems.
+2018-06-07 17:06:47:          Starting Restore /run/initramfs on shutdown...
+2018-06-07 17:06:47:          Starting Load/Save Random Seed...
+2018-06-07 17:06:47: [[0;32m  OK  [0m] Started Restore /run/initramfs on shutdown.
+2018-06-07 17:06:47: [[0;32m  OK  [0m] Started Load/Save Random Seed.
+2018-06-07 17:06:47: [[0;32m  OK  [0m] Started udev Kernel Device Manager.
+2018-06-07 17:06:47: [[0;32m  OK  [0m] Started udev Coldplug all Devices.
+2018-06-07 17:06:47: [    3.238158] systemd-journald[268]: File /var/log/journal/e3f07d0fa43d462e9c9d162e6b1fda1a/system.journal corrupted or uncleanly shut down, renaming and replacing.
+2018-06-07 17:06:47: [    3.299897] piix4_smbus 0000:00:01.3: SMBus Host Controller at 0x700, revision 0
+2018-06-07 17:06:47: [[0;32m  OK  [0m] Started Flush Journal to Persistent Storage.
+2018-06-07 17:06:47:          Starting Create Volatile Files and Directories...
+2018-06-07 17:06:47: [[0;32m  OK  [0m] Found device /dev/ttyS0.
+2018-06-07 17:06:47: [[0;32m  OK  [0m] Started Create Volatile Files and Directories.
+2018-06-07 17:06:47:          Starting Update UTMP about System Boot/Shutdown...
+2018-06-07 17:06:47: [[0;32m  OK  [0m] Started Update UTMP about System Boot/Shutdown.
+2018-06-07 17:06:47: [[0;32m  OK  [0m] Reached target System Initialization.
+2018-06-07 17:06:47: [    3.400543] ppdev: user-space parallel port driver
+2018-06-07 17:06:47: [[0;32m  OK  [0m] Listening on SSSD Secrets Service responder socket.
+2018-06-07 17:06:47: [[0;32m  OK  [0m] Listening on D-Bus System Message Bus Socket.
+2018-06-07 17:06:47: [[0;32m  OK  [0m] Listening on SSSD Kerberos Cache Manager responder socket.
+2018-06-07 17:06:47: [[0;32m  OK  [0m] Reached target Sockets.
+2018-06-07 17:06:47: [[0;32m  OK  [0m] Started Daily Cleanup of Temporary Directories.
+2018-06-07 17:06:47: [[0;32m  OK  [0m] Started dnf makecache timer.
+2018-06-07 17:06:47: [[0;32m  OK  [0m] Reached target Timers.
+2018-06-07 17:06:47: [[0;32m  OK  [0m] Reached target Basic System.
+2018-06-07 17:06:47:          Starting System Security Services Daemon...
+2018-06-07 17:06:47: [[0;32m  OK  [0m] Started D-Bus System Message Bus.
+2018-06-07 17:06:47:          Starting firewalld - dynamic firewall daemon...
+2018-06-07 17:06:47:          Starting NTP client/server...
+2018-06-07 17:06:47: [[0;32m  OK  [0m] Reached target sshd-keygen.target.
+2018-06-07 17:06:47: [[0;32m  OK  [0m] Started NTP client/server.
+2018-06-07 17:06:47: [    3.486731] [drm] Found bochs VGA, ID 0xb0c0.
+2018-06-07 17:06:47: [    3.490243] [drm] Framebuffer size 16384 kB @ 0xfd000000, mmio @ 0xfeb90000.
+2018-06-07 17:06:47: [    3.510913] virtio_net virtio1 ens4: renamed from eth0
+2018-06-07 17:06:47: [    3.517783] [TTM] Zone  kernel: Available graphics memory: 506690 kiB
+2018-06-07 17:06:47: [    3.517784] [TTM] Initializing pool allocator
+2018-06-07 17:06:47: [    3.517787] [TTM] Initializing DMA pool allocator
+2018-06-07 17:06:47: [    3.572287] kvm: Nested Virtualization enabled
+2018-06-07 17:06:47: [    3.576315] MCE: In-kernel MCE decoding enabled.
+2018-06-07 17:06:47: [    3.610123] fbcon: bochsdrmfb (fb0) is primary device
+2018-06-07 17:06:47: [    3.711643] Console: switching to colour frame buffer device 128x48
+2018-06-07 17:06:47: [    3.796511] bochs-drm 0000:00:02.0: fb0: bochsdrmfb frame buffer device
+2018-06-07 17:06:47: [    3.808031] [drm] Initialized bochs-drm 1.0.0 20130925 for 0000:00:02.0 on minor 0
+2018-06-07 17:06:47: [[0;32m  OK  [0m] Started firewalld - dynamic firewall daemon.
+2018-06-07 17:06:47: [[0;32m  OK  [0m] Reached target Network (Pre).
+2018-06-07 17:06:47:          Starting Network Manager...
+2018-06-07 17:06:47: [    4.023905] ip6_tables: (C) 2000-2006 Netfilter Core Team
+2018-06-07 17:06:47: [[0;32m  OK  [0m] Started System Security Services Daemon.
+2018-06-07 17:06:47: [[0;32m  OK  [0m] Reached target User and Group Name Lookups.
+2018-06-07 17:06:47:          Starting Login Service...
+2018-06-07 17:06:47: [[0;32m  OK  [0m] Started Network Manager.
+2018-06-07 17:06:47: [[0;32m  OK  [0m] Reached target Network.
+2018-06-07 17:06:47: [    4.093932] Ebtables v2.0 registered
+2018-06-07 17:06:47:          Starting OpenSSH server daemon...
+2018-06-07 17:06:47:          Starting Permit User Sessions...
+2018-06-07 17:06:47:          Starting Network Manager Script Dispatcher Service...
+2018-06-07 17:06:47: [[0;32m  OK  [0m] Started Permit User Sessions.
+2018-06-07 17:06:47: [[0;32m  OK  [0m] Started Getty on tty1.
+2018-06-07 17:06:47: [[0;32m  OK  [0m] Started Serial Getty on ttyS0.
+2018-06-07 17:06:47: [[0;32m  OK  [0m] Reached target Login Prompts.
+2018-06-07 17:06:47: [[0;32m  OK  [0m] Started OpenSSH server daemon.
+2018-06-07 17:06:47: [[0;32m  OK  [0m] Started Login Service.
+2018-06-07 17:06:48: [[0;32m  OK  [0m] Started Network Manager Script Dispatcher Service.
+2018-06-07 17:06:48:          Starting Hostname Service...
+2018-06-07 17:06:48: [[0;32m  OK  [0m] Reached target Multi-User System.
+2018-06-07 17:06:48:          Starting Update UTMP about System Runlevel Changes...
+2018-06-07 17:06:48: [[0;32m  OK  [0m] Started Update UTMP about System Runlevel Changes.
+2018-06-07 17:06:48: [    4.170813] nf_conntrack version 0.5.0 (8192 buckets, 32768 max)
+2018-06-07 17:06:48: [[0;32m  OK  [0m] Started Hostname Service.
+2018-06-07 17:06:48: [    4.218805] IPv6: ADDRCONF(NETDEV_UP): ens4: link is not ready
+2018-06-07 17:06:48: [    4.289886] bridge: filtering via arp/ip/ip6tables is no longer available by default. Update your scripts to load br_netfilter if you need this.
+2018-06-07 17:06:48: [    4.318676] Netfilter messages via NETLINK v0.30.
+2018-06-07 17:06:48: [    4.328143] ip_set: protocol 6
+2018-06-07 17:06:49: 
+2018-06-07 17:06:49: Fedora 27 (Twenty Seven)
+2018-06-07 17:06:49: Kernel 4.13.9-300.fc27.x86_64 on an x86_64 (ttyS0)
+2018-06-07 17:06:49: 
+2018-06-07 17:06:49: atest-guest login:
+2018-06-07 17:06:58: [   15.014731] kauditd_printk_skb: 206 callbacks suppressed
+2018-06-07 17:06:58: [   15.014733] audit: type=1131 audit(1528391217.934:117): pid=1 uid=0 auid=4294967295 ses=4294967295 subj=kernel msg='unit=NetworkManager-dispatcher comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+2018-06-07 17:07:18: [   34.211767] audit: type=1131 audit(1528391237.132:118): pid=1 uid=0 auid=4294967295 ses=4294967295 subj=kernel msg='unit=systemd-hostnamed comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+2018-06-07 17:07:33: [   50.049117] audit: type=1325 audit(1528391252.969:119): table=filter family=2 entries=82
+2018-06-07 17:07:33: [   50.052936] audit: type=1300 audit(1528391252.969:119): arch=c000003e syscall=54 success=yes exit=0 a0=3 a1=0 a2=40 a3=55931bc91920 items=0 ppid=321 pid=512 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="iptables-restor" exe="/usr/sbin/xtables-multi" subj=kernel key=(null)
+2018-06-07 17:07:33: [   50.065580] audit: type=1327 audit(1528391252.969:119): proctitle=2F7573722F7362696E2F69707461626C65732D726573746F7265002D2D776169743D32002D6E
+2018-06-07 17:07:33: [   50.071652] audit: type=1325 audit(1528391252.969:120): table=nat family=2 entries=52
+2018-06-07 17:07:33: [   50.075387] audit: type=1300 audit(1528391252.969:120): arch=c000003e syscall=54 success=yes exit=0 a0=3 a1=0 a2=40 a3=55931bc91920 items=0 ppid=321 pid=512 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="iptables-restor" exe="/usr/sbin/xtables-multi" subj=kernel key=(null)
+2018-06-07 17:07:33: [   50.088822] audit: type=1327 audit(1528391252.969:120): proctitle=2F7573722F7362696E2F69707461626C65732D726573746F7265002D2D776169743D32002D6E
+2018-06-07 17:07:33: [   50.099157] audit: type=1325 audit(1528391252.969:121): table=mangle family=2 entries=40
+2018-06-07 17:07:33: [   50.102591] audit: type=1300 audit(1528391252.969:121): arch=c000003e syscall=54 success=yes exit=0 a0=3 a1=0 a2=40 a3=55931bc8bc30 items=0 ppid=321 pid=512 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="iptables-restor" exe="/usr/sbin/xtables-multi" subj=kernel key=(null)
+2018-06-07 17:07:33: [   50.122130] audit: type=1327 audit(1528391252.969:121): proctitle=2F7573722F7362696E2F69707461626C65732D726573746F7265002D2D776169743D32002D6E
+2018-06-07 17:07:33: [   50.134049] audit: type=1325 audit(1528391252.969:122): table=raw family=2 entries=28
+2018-06-07 17:08:18: [   95.034552] kauditd_printk_skb: 38 callbacks suppressed
+2018-06-07 17:08:18: [   95.034553] audit: type=1325 audit(1528391297.954:135): table=filter family=2 entries=82
+2018-06-07 17:08:18: [   95.042841] audit: type=1300 audit(1528391297.954:135): arch=c000003e syscall=54 success=yes exit=0 a0=3 a1=0 a2=40 a3=560ecb1fd920 items=0 ppid=321 pid=523 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="iptables-restor" exe="/usr/sbin/xtables-multi" subj=kernel key=(null)
+2018-06-07 17:08:18: [   95.061854] audit: type=1327 audit(1528391297.954:135): proctitle=2F7573722F7362696E2F69707461626C65732D726573746F7265002D2D776169743D32002D6E
+2018-06-07 17:08:18: [   95.068880] audit: type=1325 audit(1528391297.959:136): table=nat family=2 entries=52
+2018-06-07 17:08:18: [   95.073725] audit: type=1300 audit(1528391297.959:136): arch=c000003e syscall=54 success=yes exit=0 a0=3 a1=0 a2=40 a3=560ecb1fd920 items=0 ppid=321 pid=523 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="iptables-restor" exe="/usr/sbin/xtables-multi" subj=kernel key=(null)
+2018-06-07 17:08:18: [   95.092328] audit: type=1327 audit(1528391297.959:136): proctitle=2F7573722F7362696E2F69707461626C65732D726573746F7265002D2D776169743D32002D6E
+2018-06-07 17:08:18: [   95.101974] audit: type=1325 audit(1528391297.959:137): table=mangle family=2 entries=40
+2018-06-07 17:08:18: [   95.107494] audit: type=1300 audit(1528391297.959:137): arch=c000003e syscall=54 success=yes exit=0 a0=3 a1=0 a2=40 a3=560ecb1f7c30 items=0 ppid=321 pid=523 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="iptables-restor" exe="/usr/sbin/xtables-multi" subj=kernel key=(null)
+2018-06-07 17:08:19: [   95.319577] audit: type=1327 audit(1528391297.959:137): proctitle=2F7573722F7362696E2F69707461626C65732D726573746F7265002D2D776169743D32002D6E
+2018-06-07 17:08:19: [   95.461373] audit: type=1325 audit(1528391297.959:138): table=raw family=2 entries=28
+2018-06-07 17:09:04: [  141.035967] kauditd_printk_skb: 38 callbacks suppressed
+2018-06-07 17:09:04: [  141.035969] audit: type=1325 audit(1528391343.956:151): table=filter family=2 entries=82
+2018-06-07 17:09:05: [  141.182640] audit: type=1300 audit(1528391343.956:151): arch=c000003e syscall=54 success=yes exit=0 a0=3 a1=0 a2=40 a3=55fdc8154920 items=0 ppid=321 pid=533 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="iptables-restor" exe="/usr/sbin/xtables-multi" subj=kernel key=(null)
+2018-06-07 17:09:05: [  141.407089] audit: type=1327 audit(1528391343.956:151): proctitle=2F7573722F7362696E2F69707461626C65732D726573746F7265002D2D776169743D32002D6E
+2018-06-07 17:09:05: [  141.552108] audit: type=1325 audit(1528391343.956:152): table=nat family=2 entries=52
+2018-06-07 17:09:05: [  141.621347] audit: type=1300 audit(1528391343.956:152): arch=c000003e syscall=54 success=yes exit=0 a0=3 a1=0 a2=40 a3=55fdc8154920 items=0 ppid=321 pid=533 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="iptables-restor" exe="/usr/sbin/xtables-multi" subj=kernel key=(null)
+2018-06-07 17:09:05: [  141.848201] audit: type=1327 audit(1528391343.956:152): proctitle=2F7573722F7362696E2F69707461626C65732D726573746F7265002D2D776169743D32002D6E
+2018-06-07 17:09:05: [  141.983353] audit: type=1325 audit(1528391343.956:153): table=mangle family=2 entries=40
+2018-06-07 17:09:05: [  142.061537] audit: type=1300 audit(1528391343.956:153): arch=c000003e syscall=54 success=yes exit=0 a0=3 a1=0 a2=40 a3=55fdc814ec30 items=0 ppid=321 pid=533 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="iptables-restor" exe="/usr/sbin/xtables-multi" subj=kernel key=(null)
+2018-06-07 17:09:06: [  142.281257] audit: type=1327 audit(1528391343.956:153): proctitle=2F7573722F7362696E2F69707461626C65732D726573746F7265002D2D776169743D32002D6E
+2018-06-07 17:09:06: [  142.433054] audit: type=1325 audit(1528391343.956:154): table=raw family=2 entries=28
+2018-06-07 17:09:50: [  187.049922] kauditd_printk_skb: 38 callbacks suppressed
+2018-06-07 17:09:51: [  187.049924] audit: type=1325 audit(1528391389.969:167): table=filter family=2 entries=82
+2018-06-07 17:09:51: [  187.192869] audit: type=1300 audit(1528391389.969:167): arch=c000003e syscall=54 success=yes exit=0 a0=3 a1=0 a2=40 a3=563bd9cc8920 items=0 ppid=321 pid=543 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="iptables-restor" exe="/usr/sbin/xtables-multi" subj=kernel key=(null)
+2018-06-07 17:09:51: [  187.434571] audit: type=1327 audit(1528391389.969:167): proctitle=2F7573722F7362696E2F69707461626C65732D726573746F7265002D2D776169743D32002D6E
+2018-06-07 17:09:51: [  187.582490] audit: type=1325 audit(1528391389.969:168): table=nat family=2 entries=52
+2018-06-07 17:09:51: [  187.664365] audit: type=1300 audit(1528391389.969:168): arch=c000003e syscall=54 success=yes exit=0 a0=3 a1=0 a2=40 a3=563bd9cc8920 items=0 ppid=321 pid=543 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="iptables-restor" exe="/usr/sbin/xtables-multi" subj=kernel key=(null)
+2018-06-07 17:09:51: [  187.879071] audit: type=1327 audit(1528391389.969:168): proctitle=2F7573722F7362696E2F69707461626C65732D726573746F7265002D2D776169743D32002D6E
+2018-06-07 17:09:51: [  188.027778] audit: type=1325 audit(1528391389.969:169): table=mangle family=2 entries=40
+2018-06-07 17:09:51: [  188.104057] audit: type=1300 audit(1528391389.969:169): arch=c000003e syscall=54 success=yes exit=0 a0=3 a1=0 a2=40 a3=563bd9cc2c30 items=0 ppid=321 pid=543 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="iptables-restor" exe="/usr/sbin/xtables-multi" subj=kernel key=(null)
+2018-06-07 17:09:52: [  188.321639] audit: type=1327 audit(1528391389.969:169): proctitle=2F7573722F7362696E2F69707461626C65732D726573746F7265002D2D776169743D32002D6E
+2018-06-07 17:09:52: [  188.465315] audit: type=1325 audit(1528391389.969:170): table=raw family=2 entries=28
+2018-06-07 17:12:52: 
+2018-06-07 17:12:52: Fedora 27 (Twenty Seven)
+2018-06-07 17:12:52: Kernel 4.13.9-300.fc27.x86_64 on an x86_64 (ttyS0)
+2018-06-07 17:12:52: 
+2018-06-07 17:12:52: atest-guest login:
+2018-06-07 17:12:53: root
+2018-06-07 17:12:53: Password:
+2018-06-07 17:12:53: 
+2018-06-07 17:12:53: [  369.672752] kauditd_printk_skb: 14 callbacks suppressed
+2018-06-07 17:12:53: [  369.672755] audit: type=1100 audit(1528391572.592:175): pid=381 uid=0 auid=4294967295 ses=4294967295 subj=kernel msg='op=PAM:authentication grantors=pam_unix acct="root" exe="/usr/bin/login" hostname=atest-guest addr=? terminal=ttyS0 res=success'
+2018-06-07 17:12:53: [  369.862635] audit: type=1101 audit(1528391572.593:176): pid=381 uid=0 auid=4294967295 ses=4294967295 subj=kernel msg='op=PAM:accounting grantors=pam_unix acct="root" exe="/usr/bin/login" hostname=atest-guest addr=? terminal=ttyS0 res=success'
+2018-06-07 17:12:53: [  370.060878] audit: type=1103 audit(1528391572.594:177): pid=381 uid=0 auid=4294967295 ses=4294967295 subj=kernel msg='op=PAM:setcred grantors=pam_unix acct="root" exe="/usr/bin/login" hostname=atest-guest addr=? terminal=ttyS0 res=success'
+2018-06-07 17:12:54: [  370.268064] audit: type=1006 audit(1528391572.594:178): pid=381 uid=0 subj=kernel old-auid=4294967295 auid=0 tty=ttyS0 old-ses=4294967295 ses=1 res=1
+2018-06-07 17:12:54: [  370.489540] audit: type=1101 audit(1528391573.409:179): pid=547 uid=0 auid=4294967295 ses=4294967295 subj=kernel msg='op=PAM:accounting grantors=pam_unix acct="root" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+2018-06-07 17:12:54: [  370.699437] audit: type=1006 audit(1528391573.409:180): pid=547 uid=0 subj=kernel old-auid=4294967295 auid=0 tty=(none) old-ses=4294967295 ses=2 res=1
+2018-06-07 17:12:54: [  370.914810] audit: type=1105 audit(1528391573.410:181): pid=547 uid=0 auid=0 ses=2 subj=kernel msg='op=PAM:session_open grantors=pam_selinux,pam_selinux,pam_loginuid,pam_keyinit,pam_limits,pam_systemd,pam_unix acct="root" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+2018-06-07 17:12:55: [  371.261413] audit: type=1130 audit(1528391574.180:182): pid=1 uid=0 auid=4294967295 ses=4294967295 subj=kernel msg='unit=user@0 comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+2018-06-07 17:12:55: Last login: Thu [  371.478275] audit: type=1105 audit(1528391574.398:183): pid=381 uid=0 auid=0 ses=1 subj=kernel msg='op=PAM:session_open grantors=pam_selinux,pam_loginuid,pam_console,pam_selinux,pam_namespace,pam_keyinit,pam_keyinit,pam_limits,pam_systemd,pam_unix,pam_lastlog acct="root" exe="/usr/bin/login" hostname=atest-guest addr=? terminal=ttyS0 res=success'
+2018-06-07 17:12:55: Jun  7 12:54:11 on ttyS0
+2018-06-07 17:12:55: [  371.803279] audit: type=1110 audit(1528391574.398:184): pid=381 uid=0 auid=0 ses=1 subj=kernel msg='op=PAM:setcred grantors=pam_unix acct="root" exe="/usr/bin/login" hostname=atest-guest addr=? terminal=ttyS0 res=success'
+2018-06-07 17:12:56: [root@atest-guest ~]#
+2018-06-07 17:12:56: echo %OS%
+2018-06-07 17:12:56: %OS%
+2018-06-07 17:12:56: [root@atest-guest ~]#
+2018-06-07 17:12:56: ifconfig -a
+2018-06-07 17:12:56: ens4: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+2018-06-07 17:12:56:         ether 9a:ae:af:b0:b1:b2  txqueuelen 1000  (Ethernet)
+2018-06-07 17:12:56:         RX packets 0  bytes 0 (0.0 B)
+2018-06-07 17:12:56:         RX errors 0  dropped 0  overruns 0  frame 0
+2018-06-07 17:12:56:         TX packets 49  bytes 8376 (8.1 KiB)
+2018-06-07 17:12:56:         TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+2018-06-07 17:12:56: 
+2018-06-07 17:12:56: lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+2018-06-07 17:12:56:         inet 127.0.0.1  netmask 255.0.0.0
+2018-06-07 17:12:56:         inet6 ::1  prefixlen 128  scopeid 0x10<host>
+2018-06-07 17:12:56:         loop  txqueuelen 1000  (Local Loopback)
+2018-06-07 17:12:56:         RX packets 0  bytes 0 (0.0 B)
+2018-06-07 17:12:56:         RX errors 0  dropped 0  overruns 0  frame 0
+2018-06-07 17:12:56:         TX packets 0  bytes 0 (0.0 B)
+2018-06-07 17:12:56:         TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+2018-06-07 17:12:56: 
+2018-06-07 17:12:56: [root@atest-guest ~]#
+2018-06-07 17:12:56: ip link | grep -B1 '' -i
+2018-06-07 17:12:56: 1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN mode DEFAULT group default qlen 1000
+2018-06-07 17:12:56:     link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+2018-06-07 17:12:56: 2: ens4: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UP mode DEFAULT group default qlen 1000
+2018-06-07 17:12:56:     link/ether 9a:ae:af:b0:b1:b2 brd ff:ff:ff:ff:ff:ff
+2018-06-07 17:12:56: [root@atest-guest ~]#
+2018-06-07 17:12:56: test -d /sys/class/net/ens4
+2018-06-07 17:12:56: [root@atest-guest ~]#
+2018-06-07 17:12:56: echo $?
+2018-06-07 17:12:56: 0
+2018-06-07 17:12:56: [root@atest-guest ~]#
+2018-06-07 17:12:57: cat /sys/class/net/ens4/address
+2018-06-07 17:12:57: 9a:ae:af:b0:b1:b2
+2018-06-07 17:12:57: [root@atest-guest ~]#
+2018-06-07 17:12:57: ifconfig ens4 || ip address show ens4
+2018-06-07 17:12:57: ens4: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+2018-06-07 17:12:57:         ether 9a:ae:af:b0:b1:b2  txqueuelen 1000  (Ethernet)
+2018-06-07 17:12:57:         RX packets 0  bytes 0 (0.0 B)
+2018-06-07 17:12:57:         RX errors 0  dropped 0  overruns 0  frame 0
+2018-06-07 17:12:57:         TX packets 49  bytes 8376 (8.1 KiB)
+2018-06-07 17:12:57:         TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+2018-06-07 17:12:57: 
+2018-06-07 17:12:57: [root@atest-guest ~]#
+2018-06-07 17:12:57: (Process terminated with status 0)
+2018-06-07 17:13:07: 
+2018-06-07 17:13:07: [root@atest-guest ~]#
+2018-06-07 17:13:08: ipconfig || ifconfig
+2018-06-07 17:13:08: -bash: ipconfig: command not found
+2018-06-07 17:13:08: ens4: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+2018-06-07 17:13:08:         ether 9a:ae:af:b0:b1:b2  txqueuelen 1000  (Ethernet)
+2018-06-07 17:13:08:         RX packets 0  bytes 0 (0.0 B)
+2018-06-07 17:13:08:         RX errors 0  dropped 0  overruns 0  frame 0
+2018-06-07 17:13:08:         TX packets 49  bytes 8376 (8.1 KiB)
+2018-06-07 17:13:08:         TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+2018-06-07 17:13:08: 
+2018-06-07 17:13:08: lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+2018-06-07 17:13:08:         inet 127.0.0.1  netmask 255.0.0.0
+2018-06-07 17:13:08:         inet6 ::1  prefixlen 128  scopeid 0x10<host>
+2018-06-07 17:13:08:         loop  txqueuelen 1000  (Local Loopback)
+2018-06-07 17:13:08:         RX packets 0  bytes 0 (0.0 B)
+2018-06-07 17:13:08:         RX errors 0  dropped 0  overruns 0  frame 0
+2018-06-07 17:13:08:         TX packets 0  bytes 0 (0.0 B)
+2018-06-07 17:13:08:         TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+2018-06-07 17:13:08: 
+2018-06-07 17:13:08: [root@atest-guest ~]#
+2018-06-07 17:13:08: ip route || route print
+2018-06-07 17:13:08: [root@atest-guest ~]#
+2018-06-07 17:13:08: (Process terminated with status 0)
+2018-06-07 17:17:19: 
+2018-06-07 17:17:19: [root@atest-guest ~]#
+2018-06-07 17:17:20: echo %OS%
+2018-06-07 17:17:20: %OS%
+2018-06-07 17:17:20: [root@atest-guest ~]#
+2018-06-07 17:17:20: ifconfig -a
+2018-06-07 17:17:20: ens4: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+2018-06-07 17:17:20:         inet6 fe80::98ae:afff:feb0:b1b2  prefixlen 64  scopeid 0x20<link>
+2018-06-07 17:17:20:         ether 9a:ae:af:b0:b1:b2  txqueuelen 1000  (Ethernet)
+2018-06-07 17:17:20:         RX packets 0  bytes 0 (0.0 B)
+2018-06-07 17:17:20:         RX errors 0  dropped 0  overruns 0  frame 0
+2018-06-07 17:17:20:         TX packets 98  bytes 16780 (16.3 KiB)
+2018-06-07 17:17:20:         TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+2018-06-07 17:17:20: 
+2018-06-07 17:17:20: lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+2018-06-07 17:17:20:         inet 127.0.0.1  netmask 255.0.0.0
+2018-06-07 17:17:20:         inet6 ::1  prefixlen 128  scopeid 0x10<host>
+2018-06-07 17:17:20:         loop  txqueuelen 1000  (Local Loopback)
+2018-06-07 17:17:20:         RX packets 0  bytes 0 (0.0 B)
+2018-06-07 17:17:20:         RX errors 0  dropped 0  overruns 0  frame 0
+2018-06-07 17:17:20:         TX packets 0  bytes 0 (0.0 B)
+2018-06-07 17:17:20:         TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+2018-06-07 17:17:20: 
+2018-06-07 17:17:20: [root@atest-guest ~]#
+2018-06-07 17:17:20: ip link | grep -B1 '' -i
+2018-06-07 17:17:20: 1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN mode DEFAULT group default qlen 1000
+2018-06-07 17:17:20:     link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+2018-06-07 17:17:20: 2: ens4: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UP mode DEFAULT group default qlen 1000
+2018-06-07 17:17:20:     link/ether 9a:ae:af:b0:b1:b2 brd ff:ff:ff:ff:ff:ff
+2018-06-07 17:17:20: [root@atest-guest ~]#
+2018-06-07 17:17:20: test -d /sys/class/net/ens4
+2018-06-07 17:17:20: [root@atest-guest ~]#
+2018-06-07 17:17:20: echo $?
+2018-06-07 17:17:20: 0
+2018-06-07 17:17:20: [root@atest-guest ~]#
+2018-06-07 17:17:20: cat /sys/class/net/ens4/address
+2018-06-07 17:17:20: 9a:ae:af:b0:b1:b2
+2018-06-07 17:17:20: [root@atest-guest ~]#
+2018-06-07 17:17:20: ifconfig ens4 || ip address show ens4
+2018-06-07 17:17:20: ens4: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+2018-06-07 17:17:20:         inet6 fe80::98ae:afff:feb0:b1b2  prefixlen 64  scopeid 0x20<link>
+2018-06-07 17:17:20:         ether 9a:ae:af:b0:b1:b2  txqueuelen 1000  (Ethernet)
+2018-06-07 17:17:20:         RX packets 0  bytes 0 (0.0 B)
+2018-06-07 17:17:20:         RX errors 0  dropped 0  overruns 0  frame 0
+2018-06-07 17:17:20:         TX packets 98  bytes 16780 (16.3 KiB)
+2018-06-07 17:17:20:         TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+2018-06-07 17:17:20: 
+2018-06-07 17:17:20: [root@atest-guest ~]#
+2018-06-07 17:17:20: (Process terminated with status 0)
+2018-06-07 17:17:31: 
+2018-06-07 17:17:31: [root@atest-guest ~]#
+2018-06-07 17:17:32: ipconfig || ifconfig
+2018-06-07 17:17:32: -bash: ipconfig: command not found
+2018-06-07 17:17:32: ens4: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+2018-06-07 17:17:32:         inet6 fe80::98ae:afff:feb0:b1b2  prefixlen 64  scopeid 0x20<link>
+2018-06-07 17:17:32:         ether 9a:ae:af:b0:b1:b2  txqueuelen 1000  (Ethernet)
+2018-06-07 17:17:32:         RX packets 0  bytes 0 (0.0 B)
+2018-06-07 17:17:32:         RX errors 0  dropped 0  overruns 0  frame 0
+2018-06-07 17:17:32:         TX packets 99  bytes 16842 (16.4 KiB)
+2018-06-07 17:17:32:         TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+2018-06-07 17:17:32: 
+2018-06-07 17:17:32: lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+2018-06-07 17:17:32:         inet 127.0.0.1  netmask 255.0.0.0
+2018-06-07 17:17:32:         inet6 ::1  prefixlen 128  scopeid 0x10<host>
+2018-06-07 17:17:32:         loop  txqueuelen 1000  (Local Loopback)
+2018-06-07 17:17:32:         RX packets 0  bytes 0 (0.0 B)
+2018-06-07 17:17:32:         RX errors 0  dropped 0  overruns 0  frame 0
+2018-06-07 17:17:32:         TX packets 0  bytes 0 (0.0 B)
+2018-06-07 17:17:32:         TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+2018-06-07 17:17:32: 
+2018-06-07 17:17:32: [root@atest-guest ~]#
+2018-06-07 17:17:32: ip route || route print
+2018-06-07 17:17:32: [root@atest-guest ~]#
+2018-06-07 17:17:32: (Process terminated with status 0)

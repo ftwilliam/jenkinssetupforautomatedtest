@@ -1,0 +1,54 @@
+Started by user [8mha:////4FqkCksSARbySc15RUTa15KLDuDohiBDNYbuyYSsWMPyAAAAlR+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzmEgZO/dLi1CL9xNwUAAxcekO+AAAA[0mamd
+[lockable-resources] acquired lock on [leseidlb950]
+Building in workspace /var/lib/jenkins/workspace/perbench.v4.15-rc6.
+[WS-CLEANUP] Deleting project workspace...
+[perbench.v4.15-rc6.] $ /bin/sh -xe /tmp/jenkins9132202974846797381.sh
+++ cd /var/lib/jenkins
+++ ./resourceslockedby.py perbench.v4.15-rc6.#1
++ RESOURCES=leseidlb950
++ :
++ for R in ${RESOURCES}
++ echo -n '"leseidlb950",'
++ truncate --size=-1 plot.csv
++ echo
+++ echo perbench.v4.15-rc6.
+++ grep -oP '(?<=\.)v.+\..+(?=\.)'
++ KERNVER=v4.15-rc6
++ TIMEOUT=1800
++ ITERATIONS=4096
++ for R in ${RESOURCES}
++ wait
++ ssh -q jenkins@leseidlb950 './checkfornewkerneltag.sh https://github.com/torvalds/linux.git' v4.15-rc6
+++ ssh -q jenkins@leseidlb950 'uname -r'
++ echo 'leseidlb950: 4.14.0-rc8-jenkins'
++ timeout -sKILL 1800 ssh -q jenkins@leseidlb950 'time -p perf bench sched messaging -p -g 200 -l 4096'
++ '[' 0 -eq 0 ']'
+++ bc -l
++++ cat leseidlb950.ssh.log
++++ fgrep 'Total time:'
++++ grep -oP '(?<=Total time: )[0-9.]+(?= \[)'
+++ echo '(81.778' '*1000)' /4096
++ plotval=19.96533203125000000000
++ '[' -f leseidlb950.prevplotval ']'
++ echo -n 19.96533203125000000000
++ echo -n 19.96533203125000000000
++ echo -n 'Kernel Release: '
++ for R in ${RESOURCES}
++ '[' -f leseidlb950.kernelrelease ']'
+++ cat leseidlb950.kernelrelease
+++ grep -oP '.+(?=-jenkins)'
++ echo -n 'leseidlb950: 4.14.0-rc8, '
++ truncate --size=-2 kernelreleases
+++ cat kernelreleases
++ echo '[Kernel' Release: leseidlb950: '4.14.0-rc8]'
+[Kernel Release: leseidlb950: 4.14.0-rc8]
++ for R in ${RESOURCES}
+++ cat leseidlb950.plotval
++ echo -n 19.96533203125000000000,
++ truncate --size=-1 plot.csv
++ echo
+Archiving artifacts
+Recording plot data
+[description-setter] Description set: leseidlb950: 4.14.0-rc8
+[lockable-resources] released lock on [leseidlb950]
+Finished: SUCCESS

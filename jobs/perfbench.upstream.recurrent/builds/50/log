@@ -1,0 +1,86 @@
+Started by user [8mha:////4FqkCksSARbySc15RUTa15KLDuDohiBDNYbuyYSsWMPyAAAAlR+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzmEgZO/dLi1CL9xNwUAAxcekO+AAAA[0mamd
+[lockable-resources] acquired lock on [diesel84e2host, diesel7ac4host, diesel79d4host]
+Building in workspace /var/lib/jenkins/workspace/perfbench
+[WS-CLEANUP] Deleting project workspace...
+[WS-CLEANUP] Done
+[perfbench] $ /bin/sh -xe /tmp/jenkins66677973667997129.sh
+++ cd /var/lib/jenkins
+++ ./resourceslockedby.py perfbench#50
++ RESOURCES='diesel84e2host
+diesel7ac4host
+diesel79d4host'
++ :
++ for R in ${RESOURCES}
++ echo -n '"diesel84e2host",'
++ for R in ${RESOURCES}
++ echo -n '"diesel7ac4host",'
++ for R in ${RESOURCES}
++ echo -n '"diesel79d4host",'
++ truncate --size=-1 plot.csv
++ echo
++ TIMEOUT=1800
++ ITERATIONS=100000
++ S='$'
++ for R in ${RESOURCES}
++ for R in ${RESOURCES}
++ for R in ${RESOURCES}
++ ssh -q jenkins@diesel84e2host :
++ wait
++ ssh -q jenkins@diesel7ac4host :
++ ssh -q jenkins@diesel79d4host :
++ continue
++ continue
++ ssh -q jenkins@diesel79d4host './checkfornewkerneltag.sh https://github.com/torvalds/linux.git'
++ cd /var/lib/jenkins
++ ./rebootresource.sh jenkins@diesel79d4host
+Connection to diesel79d4host closed by remote host.
+++ ssh -q jenkins@diesel79d4host 'uname -r'
++ echo 'diesel79d4host: 4.16.0-rc3-jenkins'
++ ssh -q jenkins@diesel79d4host 'timeout -sKILL 1800 time -p perf bench sched messaging -p -g $(getconf _NPROCESSORS_ONLN) -l 100000'
+real 295.27
+user 1741.71
+sys 25275.54
++ '[' 0 -eq 0 ']'
+++ bc -l
++++ cat diesel79d4host.ssh.log
++++ fgrep 'Total time:'
++++ grep -oP '(?<=Total time: )[0-9.]+(?= \[)'
+++ echo '(294.493' '/100000)*1000'
++ plotval=2.94493000000000000000
++ '[' -f diesel79d4host.prevplotval ']'
+++ bc -l
++++ cat diesel79d4host.prevplotval
+++ echo '(2.89812093595840831943+2.94493000000000000000)/2'
++ plotval=2.92152546797920415971
++ echo -n 2.92152546797920415971
++ echo -n 2.92152546797920415971
++ echo -n 'Kernel Release: '
++ for R in ${RESOURCES}
++ '[' -f diesel84e2host.kernelrelease ']'
++ for R in ${RESOURCES}
++ '[' -f diesel7ac4host.kernelrelease ']'
++ for R in ${RESOURCES}
++ '[' -f diesel79d4host.kernelrelease ']'
+++ cat diesel79d4host.kernelrelease
+++ grep -oP '.+(?=-jenkins)'
++ echo -n 'diesel79d4host: 4.16.0-rc3, '
++ truncate --size=-2 kernelreleases
+++ cat kernelreleases
++ echo '[Kernel' Release: diesel79d4host: '4.16.0-rc3]'
+[Kernel Release: diesel79d4host: 4.16.0-rc3]
++ for R in ${RESOURCES}
+++ cat diesel84e2host.plotval
++ echo -n ,
++ for R in ${RESOURCES}
+++ cat diesel7ac4host.plotval
++ echo -n ,
++ for R in ${RESOURCES}
+++ cat diesel79d4host.plotval
++ echo -n 2.92152546797920415971,
++ truncate --size=-1 plot.csv
++ echo
+Archiving artifacts
+Recording plot data
+[description-setter] Description set: diesel79d4host: 4.16.0-rc3
+[lockable-resources] released lock on [diesel84e2host, diesel7ac4host, diesel79d4host]
+Finished: SUCCESS

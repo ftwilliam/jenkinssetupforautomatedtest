@@ -1,0 +1,62 @@
+Started by user [8mha:////4FqkCksSARbySc15RUTa15KLDuDohiBDNYbuyYSsWMPyAAAAlR+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzmEgZO/dLi1CL9xNwUAAxcekO+AAAA[0mamd
+Building in workspace /var/lib/jenkins/workspace/avocadoltp.ondemand
+[WS-CLEANUP] Deleting project workspace...
+[WS-CLEANUP] Done
+[avocadoltp.ondemand] $ /bin/sh -xe /tmp/jenkins3873916626694570597.sh
++ RESOURCES='sosmachine3 sosmachine2'
+++ echo avocadoltp.ondemand
+++ grep -oP '(?<=\.)v.+\..+(?=\.)'
+++ :
++ KERNVER=
++ TIMEOUT=3600
++ for R in ${RESOURCES}
++ for R in ${RESOURCES}
++ wait
++ ssh -q jenkins@sosmachine2 './checkfornewkerneltag.sh https://github.com/torvalds/linux.git'
++ ssh -q jenkins@sosmachine3 './checkfornewkerneltag.sh https://github.com/torvalds/linux.git'
+++ ssh -q jenkins@sosmachine3 ls 'kernel/linux-image*'
+++ grep -oP '(?<=linux-image-).+(?=-jenkins_)'
++ kernbuilt=4.17.0-rc4
++ cd /var/lib/jenkins
++ ./rebootresource.sh jenkins@sosmachine3 4.17.0-rc4
+++ ssh -q jenkins@sosmachine3 'uname -r'
++ echo 'sosmachine3: 4.17.0-rc4-jenkins'
++ timeout -sKILL 3600 ssh -q jenkins@sosmachine3
++ '[' 0 -eq 0 ']'
+++ cat sosmachine3.ssh.log
+++ fgrep 'JOB LOG'
+++ grep -oP '(?<=: ).+$'
++ AVOCADO_LOG_PATH=/home/jenkins/avocado/job-results/job-2018-05-07T15.46-70f3998/job.log
++ scp jenkins@sosmachine3:/home/jenkins/avocado/job-results/job-2018-05-07T15.46-70f3998/job.log sosmachine3.avocado.log
+++ ssh -q jenkins@sosmachine2 ls 'kernel/linux-image*'
+++ grep -oP '(?<=linux-image-).+(?=-jenkins_)'
++ kernbuilt=4.17.0-rc4
++ cd /var/lib/jenkins
++ ./rebootresource.sh jenkins@sosmachine2 4.17.0-rc4
+++ ssh -q jenkins@sosmachine2 'uname -r'
++ echo 'sosmachine2: 4.17.0-rc4-jenkins'
++ timeout -sKILL 3600 ssh -q jenkins@sosmachine2
++ '[' 0 -eq 0 ']'
+++ cat sosmachine2.ssh.log
+++ fgrep 'JOB LOG'
+++ grep -oP '(?<=: ).+$'
++ AVOCADO_LOG_PATH=/home/jenkins/avocado/job-results/job-2018-05-07T16.42-c41246d/job.log
++ scp jenkins@sosmachine2:/home/jenkins/avocado/job-results/job-2018-05-07T16.42-c41246d/job.log sosmachine2.avocado.log
++ echo -n 'Kernel Release: '
++ for R in ${RESOURCES}
++ '[' -f sosmachine3.kernelrelease ']'
+++ cat sosmachine3.kernelrelease
+++ grep -oP '.+(?=-jenkins)'
++ echo -n 'sosmachine3: 4.17.0-rc4, '
++ for R in ${RESOURCES}
++ '[' -f sosmachine2.kernelrelease ']'
+++ cat sosmachine2.kernelrelease
+++ grep -oP '.+(?=-jenkins)'
++ echo -n 'sosmachine2: 4.17.0-rc4, '
++ truncate --size=-2 kernelreleases
+++ cat kernelreleases
++ echo '[Kernel' Release: sosmachine3: 4.17.0-rc4, sosmachine2: '4.17.0-rc4]'
+[Kernel Release: sosmachine3: 4.17.0-rc4, sosmachine2: 4.17.0-rc4]
+Archiving artifacts
+[description-setter] Description set: sosmachine3: 4.17.0-rc4, sosmachine2: 4.17.0-rc4
+Finished: SUCCESS

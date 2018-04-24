@@ -1,0 +1,16 @@
+16:13:04 ERROR| 
+16:13:04 ERROR| Reproduced traceback from: /usr/local/lib/python2.7/dist-packages/avocado_framework-58.0-py2.7.egg/avocado/core/test.py:834
+16:13:04 ERROR| Traceback (most recent call last):
+16:13:04 ERROR|   File "/usr/share/avocado/tests/examples/failtest.py", line 19, in test
+16:13:04 ERROR|     self.fail('This test is supposed to fail')
+16:13:04 ERROR|   File "/usr/local/lib/python2.7/dist-packages/avocado_framework-58.0-py2.7.egg/avocado/core/test.py", line 1029, in fail
+16:13:04 ERROR|     raise exceptions.TestFail(message)
+16:13:04 ERROR| TestFail: This test is supposed to fail
+16:13:04 ERROR| 
+16:13:04 DEBUG| Local variables:
+16:13:04 DEBUG|  -> self <class 'failtest.FailTest'>: 1-examples/failtest.py:FailTest.test
+16:13:04 DEBUG| DATA (filename=output.expected) => NOT FOUND (data sources: variant, test, file)
+16:13:04 DEBUG| DATA (filename=stdout.expected) => NOT FOUND (data sources: variant, test, file)
+16:13:04 DEBUG| DATA (filename=stderr.expected) => NOT FOUND (data sources: variant, test, file)
+16:13:04 ERROR| FAIL 1-examples/failtest.py:FailTest.test -> TestFail: This test is supposed to fail
+16:13:04 INFO | 

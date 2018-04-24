@@ -1,0 +1,62 @@
+Started by user [8mha:////4FqkCksSARbySc15RUTa15KLDuDohiBDNYbuyYSsWMPyAAAAlR+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzmEgZO/dLi1CL9xNwUAAxcekO+AAAA[0mamd
+[lockable-resources] acquired lock on []
+Building in workspace /var/lib/jenkins/workspace/avocadoperfbench.ondemand
+[WS-CLEANUP] Deleting project workspace...
+[WS-CLEANUP] Done
+[avocadoperfbench.ondemand] $ /bin/sh -xe /tmp/jenkins4393501602831372845.sh
++ RESOURCES=diesel8a87host
++ :
++ for R in ${RESOURCES}
++ echo -n '"diesel8a87host",'
++ truncate --size=-1 plot.csv
++ echo
+++ echo avocadoperfbench.ondemand
+++ grep -oP '(?<=\.)v.+\..+(?=\.)'
+++ :
++ KERNVER=
++ TIMEOUT=1800
++ ITERATIONS=1
++ for R in ${RESOURCES}
++ wait
++ ssh -q jenkins@diesel8a87host './checkfornewkerneltag.sh https://github.com/torvalds/linux.git'
+++ ssh -q jenkins@diesel8a87host 'uname -r'
++ echo 'diesel8a87host: 4.17.0-rc5-jenkins'
++ timeout -sKILL 1800 ssh -q jenkins@diesel8a87host
++ '[' 0 -eq 0 ']'
+++ cat diesel8a87host.ssh.log
+++ fgrep 'JOB LOG'
+++ grep -oP '(?<=: ).+$'
++ AVOCADO_LOG_PATH=/home/jenkins/avocado/job-results/job-2018-05-15T11.56-f9493e1/job.log
++ scp jenkins@diesel8a87host:/home/jenkins/avocado/job-results/job-2018-05-15T11.56-f9493e1/job.log diesel8a87host.avocado.log
+++ bc -l
++++ cat diesel8a87host.avocado.log
++++ fgrep 'Time Taken:'
++++ grep -oP '(?<=Time Taken:)[0-9.]+$'
+++ echo 3.169 /1
++ plotval=3.16900000000000000000
++ '[' -f diesel8a87host.prevplotval ']'
+++ bc -l
++++ cat diesel8a87host.prevplotval
+++ echo '(3.08100000000000000000+3.16900000000000000000)/2'
++ plotval=3.12500000000000000000
++ echo -n 3.12500000000000000000
++ echo -n 3.12500000000000000000
++ echo -n 'Kernel Release: '
++ for R in ${RESOURCES}
++ '[' -f diesel8a87host.kernelrelease ']'
+++ cat diesel8a87host.kernelrelease
+++ grep -oP '.+(?=-jenkins)'
++ echo -n 'diesel8a87host: 4.17.0-rc5, '
++ truncate --size=-2 kernelreleases
+++ cat kernelreleases
++ echo '[Kernel' Release: diesel8a87host: '4.17.0-rc5]'
+[Kernel Release: diesel8a87host: 4.17.0-rc5]
++ for R in ${RESOURCES}
+++ cat diesel8a87host.plotval
++ echo -n 3.12500000000000000000,
++ truncate --size=-1 plot.csv
++ echo
+Archiving artifacts
+Recording plot data
+[description-setter] Description set: diesel8a87host: 4.17.0-rc5
+Finished: SUCCESS

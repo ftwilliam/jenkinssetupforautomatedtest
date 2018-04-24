@@ -1,0 +1,97 @@
+Started by timer
+[lockable-resources] acquired lock on [diesel8a87host]
+Building in workspace /var/lib/jenkins/workspace/avocadokernbench.upstream.recurrent
+[WS-CLEANUP] Deleting project workspace...
+[WS-CLEANUP] Done
+[avocadokernbench.upstream.recurrent] $ /bin/sh -xe /tmp/jenkins5182471679303734329.sh
+++ cd /var/lib/jenkins
+++ ./resourceslockedby.py avocadokernbench.upstream.recurrent#70
++ RESOURCES=diesel8a87host
++ :
++ for R in ${RESOURCES}
++ echo -n '"diesel8a87host.user",'
++ echo -n '"diesel8a87host.system",'
++ echo -n '"diesel8a87host.elapsed",'
++ truncate --size=-1 plot.csv
++ echo
+++ echo avocadokernbench.upstream.recurrent
+++ grep -oP '(?<=\.)v.+\..+(?=\.)'
+++ :
++ KERNVER=
++ TIMEOUT=1800
++ ITERATIONS=1
++ for R in ${RESOURCES}
++ wait
++ ssh -q jenkins@diesel8a87host './checkfornewkerneltag.sh https://github.com/torvalds/linux.git'
+++ ssh -q jenkins@diesel8a87host 'uname -r'
++ echo 'diesel8a87host: 4.17.0-rc7-jenkins'
++ timeout -sKILL 1800 ssh -q jenkins@diesel8a87host
++ '[' 0 -eq 0 ']'
+++ cat diesel8a87host.ssh.log
+++ fgrep 'JOB LOG'
+++ grep -oP '(?<=: ).+$'
++ AVOCADO_LOG_PATH=/home/jenkins/avocado/job-results/job-2018-06-13T14.54-ea0eb6b/job.log
++ scp jenkins@diesel8a87host:/home/jenkins/avocado/job-results/job-2018-06-13T14.54-ea0eb6b/job.log diesel8a87host.avocado.log
+++ ssh -q jenkins@diesel8a87host grep -c '^processor' /proc/cpuinfo
++ CPUCNT=128
+++ bc -l
++++ cat diesel8a87host.avocado.log
++++ fgrep 'User '
++++ grep -oP '(?<= : )[0-9.]+$'
+++ echo '(5718.51' / '1)' / 128
++ userplotval=44.67585937500000000000
+++ bc -l
++++ cat diesel8a87host.avocado.log
++++ fgrep 'System '
++++ grep -oP '(?<= : )[0-9.]+$'
+++ echo '(2038.17' / '1)' / 128
++ systemplotval=15.92320312500000000000
+++ bc -l
++++ cat diesel8a87host.avocado.log
++++ fgrep 'Elapsed '
++++ grep -oP '(?<= : )[0-9.]+$'
+++ echo 260.51 / 1
++ elapsedplotval=260.51000000000000000000
++ '[' -f diesel8a87host.user.prevplotval ']'
+++ bc -l
++++ cat diesel8a87host.user.prevplotval
+++ echo '(44.48374506143387407064+44.67585937500000000000)/2'
++ userplotval=44.57980221821693703532
+++ bc -l
++++ cat diesel8a87host.system.prevplotval
+++ echo '(14.83627594348392449319+15.92320312500000000000)/2'
++ systemplotval=15.37973953424196224659
+++ bc -l
++++ cat diesel8a87host.elapsed.prevplotval
+++ echo '(110.10291770830750465393+260.51000000000000000000)/2'
++ elapsedplotval=185.30645885415375232696
++ echo -n 44.57980221821693703532
++ echo -n 15.37973953424196224659
++ echo -n 185.30645885415375232696
++ echo -n 44.57980221821693703532
++ echo -n 15.37973953424196224659
++ echo -n 185.30645885415375232696
++ echo -n 'Kernel Release: '
++ for R in ${RESOURCES}
++ '[' -f diesel8a87host.kernelrelease ']'
+++ cat diesel8a87host.kernelrelease
+++ grep -oP '.+(?=-jenkins)'
++ echo -n 'diesel8a87host: 4.17.0-rc7, '
++ truncate --size=-2 kernelreleases
+++ cat kernelreleases
++ echo '[Kernel' Release: diesel8a87host: '4.17.0-rc7]'
+[Kernel Release: diesel8a87host: 4.17.0-rc7]
++ for R in ${RESOURCES}
+++ cat diesel8a87host.user.plotval
++ echo -n 44.57980221821693703532,
+++ cat diesel8a87host.system.plotval
++ echo -n 15.37973953424196224659,
+++ cat diesel8a87host.elapsed.plotval
++ echo -n 185.30645885415375232696,
++ truncate --size=-1 plot.csv
++ echo
+Archiving artifacts
+Recording plot data
+[description-setter] Description set: diesel8a87host: 4.17.0-rc7
+[lockable-resources] released lock on [diesel8a87host]
+Finished: SUCCESS

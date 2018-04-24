@@ -1,0 +1,76 @@
+Started by upstream project "[8mha:////4KLEW2l8TRLc9D+sUGMqO8H5b5aXKzLSzjMsy/Q0tlymAAAAox+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyREgYp/az8JP2S1OKSYr3iksSi4ozMAjCjRB8APZdZ9M8AAAA=[0mtests.starship.start" build number [8mha:////4IrcDURAKvqFm6m+IHlN5bX3n7Guu1arUlgPPhop3xRaAAAAox+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLQIwSBmn9rPwk/ZLU4pJiveKSxKLijMwCMKNE3wQAJjWZcdAAAAA=[0m4
+originally caused by:
+ Started by timer
+[lockable-resources] acquired lock on [sos-dsldbg-00]
+Building in workspace /var/lib/jenkins/workspace/avocadodbench.starship
+[WS-CLEANUP] Deleting project workspace...
+[WS-CLEANUP] Done
+[avocadodbench.starship] $ /bin/sh -xe /tmp/jenkins5101104908213926332.sh
+++ cd /var/lib/jenkins
+++ ./resourceslockedby.py avocadodbench.starship#12
++ RESOURCES=sos-dsldbg-00
++ :
++ for R in ${RESOURCES}
++ echo -n '"sos-dsldbg-00",'
++ truncate --size=-1 plot.csv
++ echo
+++ echo avocadodbench.starship
+++ grep -oP '(?<=\.)v.+\..+(?=\.)'
+++ :
++ KERNVER=
++ TIMEOUT=1800
++ ITERATIONS=1
++ for R in ${RESOURCES}
++ wait
++ ssh -q jenkins@sos-dsldbg-00 ./checkfornewkerneltag.sh
++ '[' -n '' ']'
++ cd /var/lib/jenkins
++ ./rebootresource.sh jenkins@sos-dsldbg-00
+++ ssh -q jenkins@sos-dsldbg-00 'uname -r'
++ echo 'sos-dsldbg-00: 4.16.0-amdsos-build4+'
++ timeout -sKILL 1800 ssh -q jenkins@sos-dsldbg-00
++ '[' 0 -eq 0 ']'
+++ cat sos-dsldbg-00.ssh.log
+++ fgrep 'JOB LOG'
+++ grep -oP '(?<=: ).+$'
++ AVOCADO_LOG_PATH=/home/jenkins/avocado/job-results/job-2018-06-13T10.18-826baab/job.log
++ scp jenkins@sos-dsldbg-00:/home/jenkins/avocado/job-results/job-2018-06-13T10.18-826baab/job.log sos-dsldbg-00.avocado.log
++ bc -l
+++ cat sos-dsldbg-00.avocado.log
+++ fgrep -m1 'Throughput '
+++ grep -oP '(?<=Throughput )[0-9.]+'
++ echo 9787.57 /1
+9787.57000000000000000000
+++ bc -l
++++ cat sos-dsldbg-00.avocado.log
++++ fgrep -m1 'Throughput '
++++ grep -oP '(?<=Throughput )[0-9.]+'
+++ echo 9787.57 /1
++ plotval=9787.57000000000000000000
++ '[' -f sos-dsldbg-00.prevplotval ']'
+++ bc -l
++++ cat sos-dsldbg-00.prevplotval
+++ echo '(9152.93808593750000000000+9787.57000000000000000000)/2'
++ plotval=9470.25404296875000000000
++ echo -n 9470.25404296875000000000
++ echo -n 9470.25404296875000000000
++ echo -n 'Kernel Release: '
++ for R in ${RESOURCES}
++ '[' -f sos-dsldbg-00.kernelrelease ']'
+++ cat sos-dsldbg-00.kernelrelease
++ echo -n 'sos-dsldbg-00: 4.16.0-amdsos-build4+, '
++ truncate --size=-2 kernelreleases
+++ cat kernelreleases
++ echo '[Kernel' Release: sos-dsldbg-00: '4.16.0-amdsos-build4+]'
+[Kernel Release: sos-dsldbg-00: 4.16.0-amdsos-build4+]
++ for R in ${RESOURCES}
+++ cat sos-dsldbg-00.plotval
++ echo -n 9470.25404296875000000000,
++ truncate --size=-1 plot.csv
++ echo
+Archiving artifacts
+Recording plot data
+[description-setter] Description set: sos-dsldbg-00: 4.16.0-amdsos-build4+
+[lockable-resources] released lock on [sos-dsldbg-00]
+Triggering a new build of [8mha:////4EoQXCCvCL1ZAUvbxERBMTGFvdw8yZlTD18gs9e3mwThAAAAqB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzxEgZZ/az8JP3EsvzkxJT8tEygouISveKSxKLijMwCfQAg0vi80gAAAA==[0mavocadofiotest.starship
+Finished: SUCCESS

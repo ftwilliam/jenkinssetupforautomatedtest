@@ -1,0 +1,37 @@
+Started by user unknown or anonymous
+Building in workspace /var/lib/jenkins/workspace/avocadoltp.ondemand2
+[WS-CLEANUP] Deleting project workspace...
+[WS-CLEANUP] Done
+[avocadoltp.ondemand2] $ /bin/sh -xe /tmp/jenkins1752289789950591226.sh
++ RESOURCES=sos-avocado-os0
+++ echo avocadoltp.ondemand2
+++ grep -oP '(?<=\.)v.+\..+(?=\.)'
+++ :
++ KERNVER=
++ TIMEOUT=3600
++ for R in ${RESOURCES}
++ wait
++ ssh -q jenkins@sos-avocado-os0 './checkfornewkerneltag.sh https://github.com/torvalds/linux.git'
+++ ssh -q jenkins@sos-avocado-os0 'uname -r'
++ echo 'sos-avocado-os0: 4.4.73-5-default'
++ timeout -sKILL 3600 ssh -q jenkins@sos-avocado-os0
++ '[' 0 -eq 0 ']'
+++ cat sos-avocado-os0.ssh.log
+++ fgrep 'JOB LOG'
+++ grep -oP '(?<=: ).+$'
++ AVOCADO_LOG_PATH=/root/avocado/job-results/job-2018-05-21T18.11-f4f937d/job.log
++ scp jenkins@sos-avocado-os0:/root/avocado/job-results/job-2018-05-21T18.11-f4f937d/job.log sos-avocado-os0.avocado.log
+scp: /root/avocado/job-results/job-2018-05-21T18.11-f4f937d/job.log: Permission denied
++ echo -n 'Kernel Release: '
++ for R in ${RESOURCES}
++ '[' -f sos-avocado-os0.kernelrelease ']'
+++ cat sos-avocado-os0.kernelrelease
+++ grep -oP '.+(?=-jenkins)'
++ echo -n ', '
++ truncate --size=-2 kernelreleases
+++ cat kernelreleases
++ echo '[Kernel' Release: ']'
+[Kernel Release: ]
+Archiving artifacts
+[description-setter] Could not determine description.
+Finished: SUCCESS

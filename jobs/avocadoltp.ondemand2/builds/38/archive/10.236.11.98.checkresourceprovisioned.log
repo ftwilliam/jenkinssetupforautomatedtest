@@ -1,0 +1,14 @@
++ cd /var/lib/jenkins
++ ./checkresourceprovisioned.new.sh 10.236.11.98
++ set -e
++ ping -c 1 10.236.11.98
++ RV=0
++ ssh -q -o PasswordAuthentication=no -o StrictHostKeyChecking=no jenkins@10.236.11.98 'test ! -f checkfornewkerneltag.sh'
++ RV=1
++ (( RV == 1 ))
+++ ./what_distro_remote.sh root@10.236.11.98
++ distro=ubuntu-18.04
++ [[ ubuntu-18.04 = \u\b\u\n\t\u\-* ]]
++ scp checkfornewkerneltag_deb.sh jenkins@10.236.11.98:checkfornewkerneltag.sh
++ scp checkfornewqemutag.sh jenkins@10.236.11.98:
++ exit

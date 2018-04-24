@@ -1,0 +1,1295 @@
+2018-05-26 14:25:07,606 extension        L0189 DEBUG| found extension EntryPoint.parse('journal = avocado.plugins.journal:JournalResult')
+2018-05-26 14:25:07,606 extension        L0189 DEBUG| found extension EntryPoint.parse('tap = avocado.plugins.tap:TAPResult')
+2018-05-26 14:25:07,607 extension        L0189 DEBUG| found extension EntryPoint.parse('human = avocado.plugins.human:Human')
+2018-05-26 14:25:07,607 extension        L0189 DEBUG| found extension EntryPoint.parse('vt-joblock = avocado_vt.plugins.vt_joblock:VTJobLock')
+2018-05-26 14:25:07,608 extension        L0189 DEBUG| found extension EntryPoint.parse('teststmpdir = avocado.plugins.teststmpdir:TestsTmpDir')
+2018-05-26 14:25:07,609 extension        L0189 DEBUG| found extension EntryPoint.parse('jobscripts = avocado.plugins.jobscripts:JobScripts')
+2018-05-26 14:25:07,609 extension        L0189 DEBUG| found extension EntryPoint.parse('human = avocado.plugins.human:HumanJob')
+2018-05-26 14:25:07,615 extension        L0189 DEBUG| found extension EntryPoint.parse('yaml_to_mux = avocado_varianter_yaml_to_mux:YamlToMux')
+2018-05-26 14:25:07,617 sysinfo          L0392 DEBUG| File /etc/avocado/sysinfo/commands does not exist.
+2018-05-26 14:25:07,617 sysinfo          L0403 DEBUG| File /etc/avocado/sysinfo/files does not exist.
+2018-05-26 14:25:07,617 sysinfo          L0430 DEBUG| File /etc/avocado/sysinfo/profilers does not exist.
+2018-05-26 14:25:07,628 job              L0327 INFO | Command line: /usr/local/bin/avocado run ./avocado-misc-tests/generic/sysbench.py -m avocadosysbench.upstream.recurrent.yaml
+2018-05-26 14:25:07,628 job              L0328 INFO | 
+2018-05-26 14:25:07,628 job              L0362 INFO | Avocado version: 58.0
+2018-05-26 14:25:07,629 job              L0363 INFO | 
+2018-05-26 14:25:07,629 job              L0367 INFO | Config files read (in order):
+2018-05-26 14:25:07,629 job              L0369 INFO | /usr/local/lib/python2.7/dist-packages/avocado_framework-58.0-py2.7.egg/avocado/etc/avocado/avocado.conf
+2018-05-26 14:25:07,629 job              L0369 INFO | /usr/local/lib/python2.7/dist-packages/avocado_framework-58.0-py2.7.egg/avocado/etc/avocado/conf.d/result_upload.conf
+2018-05-26 14:25:07,629 job              L0369 INFO | /usr/local/lib/python2.7/dist-packages/avocado_framework-58.0-py2.7.egg/avocado/etc/avocado/conf.d/gdb.conf
+2018-05-26 14:25:07,629 job              L0369 INFO | /usr/local/lib/python2.7/dist-packages/avocado_framework-58.0-py2.7.egg/avocado/etc/avocado/conf.d/jobscripts.conf
+2018-05-26 14:25:07,629 job              L0369 INFO | /usr/local/lib/python2.7/dist-packages/avocado_framework-58.0-py2.7.egg/avocado/etc/avocado/conf.d/resultsdb.conf
+2018-05-26 14:25:07,629 job              L0369 INFO | /home/jenkins/.config/avocado/avocado.conf
+2018-05-26 14:25:07,629 job              L0374 INFO | 
+2018-05-26 14:25:07,629 job              L0376 INFO | Avocado config:
+2018-05-26 14:25:07,630 job              L0385 INFO | Section.Key                              Value
+2018-05-26 14:25:07,630 job              L0385 INFO | datadir.paths.base_dir                   /var/lib/avocado
+2018-05-26 14:25:07,631 job              L0385 INFO | datadir.paths.test_dir                   /usr/share/avocado/tests
+2018-05-26 14:25:07,631 job              L0385 INFO | datadir.paths.data_dir                   /var/lib/avocado/data
+2018-05-26 14:25:07,631 job              L0385 INFO | datadir.paths.logs_dir                   ~/avocado/job-results
+2018-05-26 14:25:07,631 job              L0385 INFO | sysinfo.collect.enabled                  True
+2018-05-26 14:25:07,631 job              L0385 INFO | sysinfo.collect.commands_timeout         -1
+2018-05-26 14:25:07,631 job              L0385 INFO | sysinfo.collect.installed_packages       False
+2018-05-26 14:25:07,631 job              L0385 INFO | sysinfo.collect.profiler                 False
+2018-05-26 14:25:07,631 job              L0385 INFO | sysinfo.collect.locale                   C
+2018-05-26 14:25:07,631 job              L0385 INFO | sysinfo.collect.per_test                 False
+2018-05-26 14:25:07,631 job              L0385 INFO | sysinfo.collectibles.commands            /etc/avocado/sysinfo/commands
+2018-05-26 14:25:07,631 job              L0385 INFO | sysinfo.collectibles.files               /etc/avocado/sysinfo/files
+2018-05-26 14:25:07,631 job              L0385 INFO | sysinfo.collectibles.profilers           /etc/avocado/sysinfo/profilers
+2018-05-26 14:25:07,631 job              L0385 INFO | runner.output.colored                    True
+2018-05-26 14:25:07,631 job              L0385 INFO | runner.output.utf8                       
+2018-05-26 14:25:07,632 job              L0385 INFO | remoter.behavior.reject_unknown_hosts    False
+2018-05-26 14:25:07,632 job              L0385 INFO | remoter.behavior.disable_known_hosts     False
+2018-05-26 14:25:07,632 job              L0385 INFO | job.output.loglevel                      debug
+2018-05-26 14:25:07,632 job              L0385 INFO | restclient.connection.hostname           localhost
+2018-05-26 14:25:07,632 job              L0385 INFO | restclient.connection.port               9405
+2018-05-26 14:25:07,632 job              L0385 INFO | restclient.connection.username           
+2018-05-26 14:25:07,632 job              L0385 INFO | restclient.connection.password           
+2018-05-26 14:25:07,632 job              L0385 INFO | plugins.disable                          []
+2018-05-26 14:25:07,632 job              L0385 INFO | plugins.skip_broken_plugin_notification  []
+2018-05-26 14:25:07,632 job              L0385 INFO | plugins.loaders                          ['file', '@DEFAULT']
+2018-05-26 14:25:07,632 job              L0385 INFO | gdb.paths.gdb                            /usr/bin/gdb
+2018-05-26 14:25:07,632 job              L0385 INFO | gdb.paths.gdbserver                      /usr/bin/gdbserver
+2018-05-26 14:25:07,632 job              L0385 INFO | plugins.jobscripts.pre                   /etc/avocado/scripts/job/pre.d/
+2018-05-26 14:25:07,632 job              L0385 INFO | plugins.jobscripts.post                  /etc/avocado/scripts/job/post.d/
+2018-05-26 14:25:07,633 job              L0385 INFO | plugins.jobscripts.warn_non_existing_dir False
+2018-05-26 14:25:07,633 job              L0385 INFO | plugins.jobscripts.warn_non_zero_status  True
+2018-05-26 14:25:07,633 job              L0386 INFO | 
+2018-05-26 14:25:07,633 job              L0389 INFO | Avocado Data Directories:
+2018-05-26 14:25:07,633 job              L0390 INFO | 
+2018-05-26 14:25:07,633 job              L0391 INFO | base     /var/lib/avocado
+2018-05-26 14:25:07,633 job              L0392 INFO | tests    /usr/share/avocado/tests
+2018-05-26 14:25:07,634 job              L0393 INFO | data     /var/lib/avocado/data
+2018-05-26 14:25:07,634 job              L0394 INFO | logs     /home/jenkins/avocado/job-results/job-2018-05-26T14.25-47dae87
+2018-05-26 14:25:07,634 job              L0395 INFO | 
+2018-05-26 14:25:07,634 job              L0401 INFO | Multiplex tree representation:
+2018-05-26 14:25:07,634 job              L0401 INFO |  \-- run
+2018-05-26 14:25:07,635 job              L0401 INFO |       |-- max-time
+2018-05-26 14:25:07,635 job              L0401 INFO |       |-- max-request
+2018-05-26 14:25:07,635 job              L0401 INFO |       |-- tests
+2018-05-26 14:25:07,635 job              L0401 INFO |       |-- types
+2018-05-26 14:25:07,635 job              L0401 INFO |       |-- cpu
+2018-05-26 14:25:07,635 job              L0401 INFO |       |-- threads
+2018-05-26 14:25:07,635 job              L0401 INFO |       |-- additional_params
+2018-05-26 14:25:07,635 job              L0401 INFO |       |-- min
+2018-05-26 14:25:07,635 job              L0401 INFO |       \-- max
+2018-05-26 14:25:07,635 job              L0401 INFO | 
+2018-05-26 14:25:07,635 job              L0401 INFO | Multiplex variants (1):
+2018-05-26 14:25:07,635 job              L0401 INFO | Variant additional_params-cpu-max-max-request-max-time-min-tests-threads-types-cbf1:    /run/max-time, /run/max-request, /run/tests, /run/types, /run/cpu, /run/threads, /run/additional_params, /run/min, /run/max
+2018-05-26 14:25:07,635 job              L0405 INFO | Temporary dir: /var/tmp/avocado_bBdfEa
+2018-05-26 14:25:07,635 job              L0406 INFO | 
+2018-05-26 14:25:07,635 job              L0319 INFO | Job ID: 47dae87ea0d91554ea7b7c2076ece6652dca6b11
+2018-05-26 14:25:07,636 job              L0322 INFO | 
+2018-05-26 14:25:07,870 sysinfo          L0392 DEBUG| File /etc/avocado/sysinfo/commands does not exist.
+2018-05-26 14:25:07,871 sysinfo          L0403 DEBUG| File /etc/avocado/sysinfo/files does not exist.
+2018-05-26 14:25:07,871 sysinfo          L0430 DEBUG| File /etc/avocado/sysinfo/profilers does not exist.
+2018-05-26 14:25:07,886 parameters       L0146 DEBUG| PARAMS (key=timeout, path=*, default=None) => None
+2018-05-26 14:25:07,886 test             L0382 INFO | START 1-./avocado-misc-tests/generic/sysbench.py:Sysbench.test;additional_params-cpu-max-max-request-max-time-min-tests-threads-types-cbf1
+2018-05-26 14:25:07,887 test             L0403 DEBUG| Test metadata:
+2018-05-26 14:25:07,887 test             L0404 DEBUG|   filename: /home/jenkins/avocado-misc-tests/generic/sysbench.py
+2018-05-26 14:25:08,156 test             L0286 DEBUG| DATA (filename=output.expected) => NOT FOUND (data sources: variant, test, file)
+2018-05-26 14:25:08,160 process          L0523 INFO | Running 'which sysbench'
+2018-05-26 14:25:08,168 process          L0367 DEBUG| [stdout] /usr/bin/sysbench
+2018-05-26 14:25:08,168 process          L0605 INFO | Command 'which sysbench' finished with 0 after 0.00195598602295s
+2018-05-26 14:25:08,202 parameters       L0146 DEBUG| PARAMS (key=max-time, path=*, default=None) => None
+2018-05-26 14:25:08,203 parameters       L0146 DEBUG| PARAMS (key=max-request, path=*, default=None) => None
+2018-05-26 14:25:08,203 parameters       L0146 DEBUG| PARAMS (key=num-threads, path=*, default=2) => 120
+2018-05-26 14:25:08,203 parameters       L0146 DEBUG| PARAMS (key=type, path=*, default=cpu) => 'threads'
+2018-05-26 14:25:08,204 parameters       L0146 DEBUG| PARAMS (key=cpu-max-prime, path=*, default=100) => 50000
+2018-05-26 14:25:08,204 parameters       L0146 DEBUG| PARAMS (key=threads-locks, path=*, default=None) => 1
+2018-05-26 14:25:08,204 process          L0523 INFO | Running 'dmesg -c '
+2018-05-26 14:25:08,222 process          L0367 DEBUG| [stdout] [80297.648953] perf: interrupt took too long (2891 > 2500), lowering kernel.perf_event_max_sample_rate to 69000
+2018-05-26 14:25:08,223 process          L0605 INFO | Command 'dmesg -c ' finished with 0 after 0.0122029781342s
+2018-05-26 14:25:08,223 process          L0367 DEBUG| [stdout] [80305.277892] perf: interrupt took too long (3916 > 3613), lowering kernel.perf_event_max_sample_rate to 51000
+2018-05-26 14:25:08,224 process          L0367 DEBUG| [stdout] [80321.017772] perf: interrupt took too long (5129 > 4895), lowering kernel.perf_event_max_sample_rate to 38750
+2018-05-26 14:25:08,224 process          L0367 DEBUG| [stdout] [80336.242298] perf: interrupt took too long (6446 > 6411), lowering kernel.perf_event_max_sample_rate to 31000
+2018-05-26 14:25:08,224 process          L0367 DEBUG| [stdout] [80359.078438] perf: interrupt took too long (8114 > 8057), lowering kernel.perf_event_max_sample_rate to 24500
+2018-05-26 14:25:08,224 process          L0367 DEBUG| [stdout] [80384.904152] perf: interrupt took too long (10634 > 10142), lowering kernel.perf_event_max_sample_rate to 18750
+2018-05-26 14:25:08,225 process          L0367 DEBUG| [stdout] [89306.347803] usb 1-1: new low-speed USB device number 10 using xhci_hcd
+2018-05-26 14:25:08,225 process          L0367 DEBUG| [stdout] [89306.531143] usb 1-1: New USB device found, idVendor=046d, idProduct=c03d, bcdDevice=20.00
+2018-05-26 14:25:08,225 process          L0367 DEBUG| [stdout] [89306.534268] usb 1-1: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+2018-05-26 14:25:08,225 process          L0367 DEBUG| [stdout] [89306.537140] usb 1-1: Product: USB-PS/2 Optical Mouse
+2018-05-26 14:25:08,225 process          L0367 DEBUG| [stdout] [89306.539922] usb 1-1: Manufacturer: Logitech
+2018-05-26 14:25:08,225 process          L0367 DEBUG| [stdout] [89306.565924] input: Logitech USB-PS/2 Optical Mouse as /devices/pci0000:00/0000:00:07.1/0000:02:00.3/usb1/1-1/1-1:1.0/0003:046D:C03D.000D/input/input14
+2018-05-26 14:25:08,226 process          L0367 DEBUG| [stdout] [89306.571538] hid-generic 0003:046D:C03D.000D: input,hidraw0: USB HID v1.10 Mouse [Logitech USB-PS/2 Optical Mouse] on usb-0000:02:00.3-1/input0
+2018-05-26 14:25:08,226 process          L0367 DEBUG| [stdout] [89306.703759] usb 1-2: new low-speed USB device number 11 using xhci_hcd
+2018-05-26 14:25:08,226 process          L0367 DEBUG| [stdout] [89306.886114] usb 1-2: New USB device found, idVendor=413c, idProduct=2113, bcdDevice= 1.08
+2018-05-26 14:25:08,226 process          L0367 DEBUG| [stdout] [89306.889351] usb 1-2: New USB device strings: Mfr=0, Product=2, SerialNumber=0
+2018-05-26 14:25:08,227 process          L0367 DEBUG| [stdout] [89306.892157] usb 1-2: Product: Dell KB216 Wired Keyboard
+2018-05-26 14:25:08,227 process          L0367 DEBUG| [stdout] [89306.983826] input: Dell KB216 Wired Keyboard as /devices/pci0000:00/0000:00:07.1/0000:02:00.3/usb1/1-2/1-2:1.0/0003:413C:2113.000E/input/input15
+2018-05-26 14:25:08,227 process          L0367 DEBUG| [stdout] [89307.048166] hid-generic 0003:413C:2113.000E: input,hidraw1: USB HID v1.11 Keyboard [Dell KB216 Wired Keyboard] on usb-0000:02:00.3-2/input0
+2018-05-26 14:25:08,227 process          L0367 DEBUG| [stdout] [89307.070505] input: Dell KB216 Wired Keyboard as /devices/pci0000:00/0000:00:07.1/0000:02:00.3/usb1/1-2/1-2:1.1/0003:413C:2113.000F/input/input16
+2018-05-26 14:25:08,227 process          L0367 DEBUG| [stdout] [89307.128052] hid-generic 0003:413C:2113.000F: input,hidraw2: USB HID v1.11 Device [Dell KB216 Wired Keyboard] on usb-0000:02:00.3-2/input1
+2018-05-26 14:25:08,227 process          L0367 DEBUG| [stdout] [89313.604650] usb 1-1: USB disconnect, device number 10
+2018-05-26 14:25:08,228 process          L0367 DEBUG| [stdout] [89313.799686] usb 1-2: USB disconnect, device number 11
+2018-05-26 14:25:08,228 process          L0367 DEBUG| [stdout] [89336.147394] usb 1-1: new low-speed USB device number 12 using xhci_hcd
+2018-05-26 14:25:08,228 process          L0367 DEBUG| [stdout] [89336.330213] usb 1-1: New USB device found, idVendor=046d, idProduct=c03d, bcdDevice=20.00
+2018-05-26 14:25:08,228 process          L0367 DEBUG| [stdout] [89336.333482] usb 1-1: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+2018-05-26 14:25:08,228 process          L0367 DEBUG| [stdout] [89336.336484] usb 1-1: Product: USB-PS/2 Optical Mouse
+2018-05-26 14:25:08,229 process          L0367 DEBUG| [stdout] [89336.339150] usb 1-1: Manufacturer: Logitech
+2018-05-26 14:25:08,229 process          L0367 DEBUG| [stdout] [89336.365671] input: Logitech USB-PS/2 Optical Mouse as /devices/pci0000:00/0000:00:07.1/0000:02:00.3/usb1/1-1/1-1:1.0/0003:046D:C03D.0010/input/input17
+2018-05-26 14:25:08,229 process          L0367 DEBUG| [stdout] [89336.371210] hid-generic 0003:046D:C03D.0010: input,hidraw0: USB HID v1.10 Mouse [Logitech USB-PS/2 Optical Mouse] on usb-0000:02:00.3-1/input0
+2018-05-26 14:25:08,229 process          L0367 DEBUG| [stdout] [89336.503394] usb 1-2: new low-speed USB device number 13 using xhci_hcd
+2018-05-26 14:25:08,229 process          L0367 DEBUG| [stdout] [89336.685216] usb 1-2: New USB device found, idVendor=413c, idProduct=2113, bcdDevice= 1.08
+2018-05-26 14:25:08,229 process          L0367 DEBUG| [stdout] [89336.688354] usb 1-2: New USB device strings: Mfr=0, Product=2, SerialNumber=0
+2018-05-26 14:25:08,230 process          L0367 DEBUG| [stdout] [89336.691089] usb 1-2: Product: Dell KB216 Wired Keyboard
+2018-05-26 14:25:08,230 process          L0367 DEBUG| [stdout] [89336.775742] input: Dell KB216 Wired Keyboard as /devices/pci0000:00/0000:00:07.1/0000:02:00.3/usb1/1-2/1-2:1.0/0003:413C:2113.0011/input/input18
+2018-05-26 14:25:08,230 process          L0367 DEBUG| [stdout] [89336.839743] hid-generic 0003:413C:2113.0011: input,hidraw1: USB HID v1.11 Keyboard [Dell KB216 Wired Keyboard] on usb-0000:02:00.3-2/input0
+2018-05-26 14:25:08,230 process          L0367 DEBUG| [stdout] [89336.857583] input: Dell KB216 Wired Keyboard as /devices/pci0000:00/0000:00:07.1/0000:02:00.3/usb1/1-2/1-2:1.1/0003:413C:2113.0012/input/input19
+2018-05-26 14:25:08,231 process          L0367 DEBUG| [stdout] [89336.923656] hid-generic 0003:413C:2113.0012: input,hidraw2: USB HID v1.11 Device [Dell KB216 Wired Keyboard] on usb-0000:02:00.3-2/input1
+2018-05-26 14:25:08,231 process          L0367 DEBUG| [stdout] [89492.503704] usb 1-1: USB disconnect, device number 12
+2018-05-26 14:25:08,231 process          L0367 DEBUG| [stdout] [89492.713364] usb 1-2: USB disconnect, device number 13
+2018-05-26 14:25:08,231 process          L0367 DEBUG| [stdout] [89514.461053] usb 1-1: new low-speed USB device number 14 using xhci_hcd
+2018-05-26 14:25:08,231 process          L0367 DEBUG| [stdout] [89514.644354] usb 1-1: New USB device found, idVendor=046d, idProduct=c03d, bcdDevice=20.00
+2018-05-26 14:25:08,231 process          L0367 DEBUG| [stdout] [89514.647419] usb 1-1: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+2018-05-26 14:25:08,232 process          L0367 DEBUG| [stdout] [89514.650175] usb 1-1: Product: USB-PS/2 Optical Mouse
+2018-05-26 14:25:08,232 process          L0367 DEBUG| [stdout] [89514.652806] usb 1-1: Manufacturer: Logitech
+2018-05-26 14:25:08,232 process          L0367 DEBUG| [stdout] [89514.686012] input: Logitech USB-PS/2 Optical Mouse as /devices/pci0000:00/0000:00:07.1/0000:02:00.3/usb1/1-1/1-1:1.0/0003:046D:C03D.0013/input/input20
+2018-05-26 14:25:08,232 process          L0367 DEBUG| [stdout] [89514.691332] hid-generic 0003:046D:C03D.0013: input,hidraw0: USB HID v1.10 Mouse [Logitech USB-PS/2 Optical Mouse] on usb-0000:02:00.3-1/input0
+2018-05-26 14:25:08,232 process          L0367 DEBUG| [stdout] [89514.821022] usb 1-2: new low-speed USB device number 15 using xhci_hcd
+2018-05-26 14:25:08,233 process          L0367 DEBUG| [stdout] [89515.003357] usb 1-2: New USB device found, idVendor=413c, idProduct=2113, bcdDevice= 1.08
+2018-05-26 14:25:08,233 process          L0367 DEBUG| [stdout] [89515.006308] usb 1-2: New USB device strings: Mfr=0, Product=2, SerialNumber=0
+2018-05-26 14:25:08,233 process          L0367 DEBUG| [stdout] [89515.009017] usb 1-2: Product: Dell KB216 Wired Keyboard
+2018-05-26 14:25:08,233 process          L0367 DEBUG| [stdout] [89515.111951] input: Dell KB216 Wired Keyboard as /devices/pci0000:00/0000:00:07.1/0000:02:00.3/usb1/1-2/1-2:1.0/0003:413C:2113.0014/input/input21
+2018-05-26 14:25:08,233 process          L0367 DEBUG| [stdout] [89515.177443] hid-generic 0003:413C:2113.0014: input,hidraw1: USB HID v1.11 Keyboard [Dell KB216 Wired Keyboard] on usb-0000:02:00.3-2/input0
+2018-05-26 14:25:08,233 process          L0367 DEBUG| [stdout] [89515.200663] input: Dell KB216 Wired Keyboard as /devices/pci0000:00/0000:00:07.1/0000:02:00.3/usb1/1-2/1-2:1.1/0003:413C:2113.0015/input/input22
+2018-05-26 14:25:08,234 process          L0367 DEBUG| [stdout] [89515.261264] hid-generic 0003:413C:2113.0015: input,hidraw2: USB HID v1.11 Device [Dell KB216 Wired Keyboard] on usb-0000:02:00.3-2/input1
+2018-05-26 14:25:08,234 process          L0367 DEBUG| [stdout] [89669.112375] usb 1-1: USB disconnect, device number 14
+2018-05-26 14:25:08,234 process          L0367 DEBUG| [stdout] [89669.351105] usb 1-2: USB disconnect, device number 15
+2018-05-26 14:25:08,234 process          L0367 DEBUG| [stdout] [89677.046976] usb 1-1: new low-speed USB device number 16 using xhci_hcd
+2018-05-26 14:25:08,234 process          L0367 DEBUG| [stdout] [89677.233488] usb 1-1: New USB device found, idVendor=046d, idProduct=c03d, bcdDevice=20.00
+2018-05-26 14:25:08,234 process          L0367 DEBUG| [stdout] [89677.240290] usb 1-1: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+2018-05-26 14:25:08,235 process          L0367 DEBUG| [stdout] [89677.246376] usb 1-1: Product: USB-PS/2 Optical Mouse
+2018-05-26 14:25:08,235 process          L0367 DEBUG| [stdout] [89677.252392] usb 1-1: Manufacturer: Logitech
+2018-05-26 14:25:08,235 process          L0367 DEBUG| [stdout] [89677.281398] usb 1-1: can't set config #1, error -71
+2018-05-26 14:25:08,235 process          L0367 DEBUG| [stdout] [89677.427026] usb 1-1: USB disconnect, device number 16
+2018-05-26 14:25:08,235 process          L0367 DEBUG| [stdout] [89683.414872] usb 1-1: new low-speed USB device number 17 using xhci_hcd
+2018-05-26 14:25:08,235 process          L0367 DEBUG| [stdout] [89683.601514] usb 1-1: New USB device found, idVendor=046d, idProduct=c03d, bcdDevice=20.00
+2018-05-26 14:25:08,235 process          L0367 DEBUG| [stdout] [89683.607236] usb 1-1: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+2018-05-26 14:25:08,235 process          L0367 DEBUG| [stdout] [89683.612457] usb 1-1: Product: USB-PS/2 Optical Mouse
+2018-05-26 14:25:08,235 process          L0367 DEBUG| [stdout] [89683.617743] usb 1-1: Manufacturer: Logitech
+2018-05-26 14:25:08,235 process          L0367 DEBUG| [stdout] [89683.646521] input: Logitech USB-PS/2 Optical Mouse as /devices/pci0000:00/0000:00:07.1/0000:02:00.3/usb1/1-1/1-1:1.0/0003:046D:C03D.0016/input/input23
+2018-05-26 14:25:08,235 process          L0367 DEBUG| [stdout] [89683.647091] hid-generic 0003:046D:C03D.0016: input,hidraw0: USB HID v1.10 Mouse [Logitech USB-PS/2 Optical Mouse] on usb-0000:02:00.3-1/input0
+2018-05-26 14:25:08,235 process          L0367 DEBUG| [stdout] [89683.774869] usb 1-2: new low-speed USB device number 18 using xhci_hcd
+2018-05-26 14:25:08,235 process          L0367 DEBUG| [stdout] [89683.960511] usb 1-2: New USB device found, idVendor=413c, idProduct=2113, bcdDevice= 1.08
+2018-05-26 14:25:08,236 process          L0367 DEBUG| [stdout] [89683.967129] usb 1-2: New USB device strings: Mfr=0, Product=2, SerialNumber=0
+2018-05-26 14:25:08,236 process          L0367 DEBUG| [stdout] [89683.973219] usb 1-2: Product: Dell KB216 Wired Keyboard
+2018-05-26 14:25:08,236 process          L0367 DEBUG| [stdout] [89684.072986] input: Dell KB216 Wired Keyboard as /devices/pci0000:00/0000:00:07.1/0000:02:00.3/usb1/1-2/1-2:1.0/0003:413C:2113.0017/input/input24
+2018-05-26 14:25:08,236 process          L0367 DEBUG| [stdout] [89684.143874] hid-generic 0003:413C:2113.0017: input,hidraw1: USB HID v1.11 Keyboard [Dell KB216 Wired Keyboard] on usb-0000:02:00.3-2/input0
+2018-05-26 14:25:08,236 process          L0367 DEBUG| [stdout] [89684.175459] input: Dell KB216 Wired Keyboard as /devices/pci0000:00/0000:00:07.1/0000:02:00.3/usb1/1-2/1-2:1.1/0003:413C:2113.0018/input/input25
+2018-05-26 14:25:08,236 process          L0367 DEBUG| [stdout] [89684.247254] hid-generic 0003:413C:2113.0018: input,hidraw2: USB HID v1.11 Device [Dell KB216 Wired Keyboard] on usb-0000:02:00.3-2/input1
+2018-05-26 14:25:08,236 process          L0367 DEBUG| [stdout] [89688.944424] usb 1-1: USB disconnect, device number 17
+2018-05-26 14:25:08,236 process          L0367 DEBUG| [stdout] [89689.158734] usb 1-2: USB disconnect, device number 18
+2018-05-26 14:25:08,236 process          L0367 DEBUG| [stdout] [89696.626637] usb 1-1: new low-speed USB device number 19 using xhci_hcd
+2018-05-26 14:25:08,236 process          L0367 DEBUG| [stdout] [89696.809498] usb 1-1: New USB device found, idVendor=046d, idProduct=c03d, bcdDevice=20.00
+2018-05-26 14:25:08,236 process          L0367 DEBUG| [stdout] [89696.812744] usb 1-1: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+2018-05-26 14:25:08,236 process          L0367 DEBUG| [stdout] [89696.815632] usb 1-1: Product: USB-PS/2 Optical Mouse
+2018-05-26 14:25:08,237 process          L0367 DEBUG| [stdout] [89696.818497] usb 1-1: Manufacturer: Logitech
+2018-05-26 14:25:08,237 process          L0367 DEBUG| [stdout] [89696.846054] input: Logitech USB-PS/2 Optical Mouse as /devices/pci0000:00/0000:00:07.1/0000:02:00.3/usb1/1-1/1-1:1.0/0003:046D:C03D.0019/input/input26
+2018-05-26 14:25:08,237 process          L0367 DEBUG| [stdout] [89696.851868] hid-generic 0003:046D:C03D.0019: input,hidraw0: USB HID v1.10 Mouse [Logitech USB-PS/2 Optical Mouse] on usb-0000:02:00.3-1/input0
+2018-05-26 14:25:08,237 process          L0367 DEBUG| [stdout] [89696.982570] usb 1-2: new low-speed USB device number 20 using xhci_hcd
+2018-05-26 14:25:08,237 process          L0367 DEBUG| [stdout] [89697.164501] usb 1-2: New USB device found, idVendor=413c, idProduct=2113, bcdDevice= 1.08
+2018-05-26 14:25:08,237 process          L0367 DEBUG| [stdout] [89697.167735] usb 1-2: New USB device strings: Mfr=0, Product=2, SerialNumber=0
+2018-05-26 14:25:08,237 process          L0367 DEBUG| [stdout] [89697.170618] usb 1-2: Product: Dell KB216 Wired Keyboard
+2018-05-26 14:25:08,237 process          L0367 DEBUG| [stdout] [89697.256102] input: Dell KB216 Wired Keyboard as /devices/pci0000:00/0000:00:07.1/0000:02:00.3/usb1/1-2/1-2:1.0/0003:413C:2113.001A/input/input27
+2018-05-26 14:25:08,237 process          L0367 DEBUG| [stdout] [89697.319055] hid-generic 0003:413C:2113.001A: input,hidraw1: USB HID v1.11 Keyboard [Dell KB216 Wired Keyboard] on usb-0000:02:00.3-2/input0
+2018-05-26 14:25:08,237 process          L0367 DEBUG| [stdout] [89697.336934] input: Dell KB216 Wired Keyboard as /devices/pci0000:00/0000:00:07.1/0000:02:00.3/usb1/1-2/1-2:1.1/0003:413C:2113.001B/input/input28
+2018-05-26 14:25:08,237 process          L0367 DEBUG| [stdout] [89697.402911] hid-generic 0003:413C:2113.001B: input,hidraw2: USB HID v1.11 Device [Dell KB216 Wired Keyboard] on usb-0000:02:00.3-2/input1
+2018-05-26 14:25:08,237 process          L0367 DEBUG| [stdout] [89697.895436] usb 1-1: USB disconnect, device number 19
+2018-05-26 14:25:08,238 process          L0367 DEBUG| [stdout] [89698.118650] usb 1-2: USB disconnect, device number 20
+2018-05-26 14:25:08,238 process          L0367 DEBUG| [stdout] [89715.350363] usb 1-1: new low-speed USB device number 21 using xhci_hcd
+2018-05-26 14:25:08,238 process          L0367 DEBUG| [stdout] [89715.533512] usb 1-1: New USB device found, idVendor=046d, idProduct=c03d, bcdDevice=20.00
+2018-05-26 14:25:08,238 process          L0367 DEBUG| [stdout] [89715.536904] usb 1-1: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+2018-05-26 14:25:08,238 process          L0367 DEBUG| [stdout] [89715.540079] usb 1-1: Product: USB-PS/2 Optical Mouse
+2018-05-26 14:25:08,238 process          L0367 DEBUG| [stdout] [89715.543180] usb 1-1: Manufacturer: Logitech
+2018-05-26 14:25:08,238 process          L0367 DEBUG| [stdout] [89715.574123] input: Logitech USB-PS/2 Optical Mouse as /devices/pci0000:00/0000:00:07.1/0000:02:00.3/usb1/1-1/1-1:1.0/0003:046D:C03D.001C/input/input29
+2018-05-26 14:25:08,238 process          L0367 DEBUG| [stdout] [89715.580292] hid-generic 0003:046D:C03D.001C: input,hidraw0: USB HID v1.10 Mouse [Logitech USB-PS/2 Optical Mouse] on usb-0000:02:00.3-1/input0
+2018-05-26 14:25:08,238 process          L0367 DEBUG| [stdout] [89715.714391] usb 1-2: new low-speed USB device number 22 using xhci_hcd
+2018-05-26 14:25:08,238 process          L0367 DEBUG| [stdout] [89715.896516] usb 1-2: New USB device found, idVendor=413c, idProduct=2113, bcdDevice= 1.08
+2018-05-26 14:25:08,238 process          L0367 DEBUG| [stdout] [89715.899952] usb 1-2: New USB device strings: Mfr=0, Product=2, SerialNumber=0
+2018-05-26 14:25:08,238 process          L0367 DEBUG| [stdout] [89715.903171] usb 1-2: Product: Dell KB216 Wired Keyboard
+2018-05-26 14:25:08,238 process          L0367 DEBUG| [stdout] [89716.025445] usb 1-2: can't set config #1, error -71
+2018-05-26 14:25:08,239 process          L0367 DEBUG| [stdout] [89716.028401] usb 1-1: USB disconnect, device number 21
+2018-05-26 14:25:08,239 process          L0367 DEBUG| [stdout] [89716.214414] usb 1-2: USB disconnect, device number 22
+2018-05-26 14:25:08,239 process          L0367 DEBUG| [stdout] [89946.891310] usb 1-1: new low-speed USB device number 23 using xhci_hcd
+2018-05-26 14:25:08,239 process          L0367 DEBUG| [stdout] [89947.074617] usb 1-1: New USB device found, idVendor=046d, idProduct=c03d, bcdDevice=20.00
+2018-05-26 14:25:08,239 process          L0367 DEBUG| [stdout] [89947.077834] usb 1-1: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+2018-05-26 14:25:08,239 process          L0367 DEBUG| [stdout] [89947.080699] usb 1-1: Product: USB-PS/2 Optical Mouse
+2018-05-26 14:25:08,239 process          L0367 DEBUG| [stdout] [89947.083536] usb 1-1: Manufacturer: Logitech
+2018-05-26 14:25:08,239 process          L0367 DEBUG| [stdout] [89947.110310] input: Logitech USB-PS/2 Optical Mouse as /devices/pci0000:00/0000:00:07.1/0000:02:00.3/usb1/1-1/1-1:1.0/0003:046D:C03D.001D/input/input30
+2018-05-26 14:25:08,239 process          L0367 DEBUG| [stdout] [89947.115957] hid-generic 0003:046D:C03D.001D: input,hidraw0: USB HID v1.10 Mouse [Logitech USB-PS/2 Optical Mouse] on usb-0000:02:00.3-1/input0
+2018-05-26 14:25:08,239 process          L0367 DEBUG| [stdout] [89947.247302] usb 1-2: new low-speed USB device number 24 using xhci_hcd
+2018-05-26 14:25:08,239 process          L0367 DEBUG| [stdout] [89947.429699] usb 1-2: New USB device found, idVendor=413c, idProduct=2113, bcdDevice= 1.08
+2018-05-26 14:25:08,239 process          L0367 DEBUG| [stdout] [89947.432970] usb 1-2: New USB device strings: Mfr=0, Product=2, SerialNumber=0
+2018-05-26 14:25:08,240 process          L0367 DEBUG| [stdout] [89947.435979] usb 1-2: Product: Dell KB216 Wired Keyboard
+2018-05-26 14:25:08,240 process          L0367 DEBUG| [stdout] [89947.528242] input: Dell KB216 Wired Keyboard as /devices/pci0000:00/0000:00:07.1/0000:02:00.3/usb1/1-2/1-2:1.0/0003:413C:2113.001E/input/input31
+2018-05-26 14:25:08,240 process          L0367 DEBUG| [stdout] [89947.591707] hid-generic 0003:413C:2113.001E: input,hidraw1: USB HID v1.11 Keyboard [Dell KB216 Wired Keyboard] on usb-0000:02:00.3-2/input0
+2018-05-26 14:25:08,240 process          L0367 DEBUG| [stdout] [89947.615024] input: Dell KB216 Wired Keyboard as /devices/pci0000:00/0000:00:07.1/0000:02:00.3/usb1/1-2/1-2:1.1/0003:413C:2113.001F/input/input32
+2018-05-26 14:25:08,240 process          L0367 DEBUG| [stdout] [89947.671506] hid-generic 0003:413C:2113.001F: input,hidraw2: USB HID v1.11 Device [Dell KB216 Wired Keyboard] on usb-0000:02:00.3-2/input1
+2018-05-26 14:25:08,240 process          L0367 DEBUG| [stdout] [89949.604992] usb 1-1: USB disconnect, device number 23
+2018-05-26 14:25:08,240 process          L0367 DEBUG| [stdout] [89949.799302] usb 1-2: USB disconnect, device number 24
+2018-05-26 14:25:08,240 process          L0367 DEBUG| [stdout] [90030.746196] usb 1-1: new low-speed USB device number 25 using xhci_hcd
+2018-05-26 14:25:08,240 process          L0367 DEBUG| [stdout] [90030.928704] usb 1-1: New USB device found, idVendor=046d, idProduct=c03d, bcdDevice=20.00
+2018-05-26 14:25:08,240 process          L0367 DEBUG| [stdout] [90030.932067] usb 1-1: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+2018-05-26 14:25:08,240 process          L0367 DEBUG| [stdout] [90030.935058] usb 1-1: Product: USB-PS/2 Optical Mouse
+2018-05-26 14:25:08,240 process          L0367 DEBUG| [stdout] [90030.937875] usb 1-1: Manufacturer: Logitech
+2018-05-26 14:25:08,241 process          L0367 DEBUG| [stdout] [90030.966426] input: Logitech USB-PS/2 Optical Mouse as /devices/pci0000:00/0000:00:07.1/0000:02:00.3/usb1/1-1/1-1:1.0/0003:046D:C03D.0020/input/input33
+2018-05-26 14:25:08,241 process          L0367 DEBUG| [stdout] [90030.972067] hid-generic 0003:046D:C03D.0020: input,hidraw0: USB HID v1.10 Mouse [Logitech USB-PS/2 Optical Mouse] on usb-0000:02:00.3-1/input0
+2018-05-26 14:25:08,241 process          L0367 DEBUG| [stdout] [90031.102190] usb 1-2: new low-speed USB device number 26 using xhci_hcd
+2018-05-26 14:25:08,241 process          L0367 DEBUG| [stdout] [90031.283765] usb 1-2: New USB device found, idVendor=413c, idProduct=2113, bcdDevice= 1.08
+2018-05-26 14:25:08,241 process          L0367 DEBUG| [stdout] [90031.287074] usb 1-2: New USB device strings: Mfr=0, Product=2, SerialNumber=0
+2018-05-26 14:25:08,241 process          L0367 DEBUG| [stdout] [90031.290133] usb 1-2: Product: Dell KB216 Wired Keyboard
+2018-05-26 14:25:08,241 process          L0367 DEBUG| [stdout] [90031.400328] input: Dell KB216 Wired Keyboard as /devices/pci0000:00/0000:00:07.1/0000:02:00.3/usb1/1-2/1-2:1.0/0003:413C:2113.0021/input/input34
+2018-05-26 14:25:08,241 process          L0367 DEBUG| [stdout] [90031.462518] hid-generic 0003:413C:2113.0021: input,hidraw1: USB HID v1.11 Keyboard [Dell KB216 Wired Keyboard] on usb-0000:02:00.3-2/input0
+2018-05-26 14:25:08,241 process          L0367 DEBUG| [stdout] [90031.480072] input: Dell KB216 Wired Keyboard as /devices/pci0000:00/0000:00:07.1/0000:02:00.3/usb1/1-2/1-2:1.1/0003:413C:2113.0022/input/input35
+2018-05-26 14:25:08,241 process          L0367 DEBUG| [stdout] [90031.542412] hid-generic 0003:413C:2113.0022: input,hidraw2: USB HID v1.11 Device [Dell KB216 Wired Keyboard] on usb-0000:02:00.3-2/input1
+2018-05-26 14:25:08,241 process          L0367 DEBUG| [stdout] [90031.916178] usb 1-1: USB disconnect, device number 25
+2018-05-26 14:25:08,241 process          L0367 DEBUG| [stdout] [90032.134212] usb 1-2: USB disconnect, device number 26
+2018-05-26 14:25:08,241 process          L0367 DEBUG| [stdout] [90151.776578] usb 1-1: new low-speed USB device number 27 using xhci_hcd
+2018-05-26 14:25:08,242 process          L0367 DEBUG| [stdout] [90372.661696] usb 1-1: new low-speed USB device number 28 using xhci_hcd
+2018-05-26 14:25:08,242 process          L0367 DEBUG| [stdout] [90372.849100] usb 1-1: New USB device found, idVendor=046d, idProduct=c03d, bcdDevice=20.00
+2018-05-26 14:25:08,242 process          L0367 DEBUG| [stdout] [90372.856345] usb 1-1: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+2018-05-26 14:25:08,242 process          L0367 DEBUG| [stdout] [90372.862986] usb 1-1: Product: USB-PS/2 Optical Mouse
+2018-05-26 14:25:08,242 process          L0367 DEBUG| [stdout] [90372.868894] usb 1-1: Manufacturer: Logitech
+2018-05-26 14:25:08,242 process          L0367 DEBUG| [stdout] [90372.903068] input: Logitech USB-PS/2 Optical Mouse as /devices/pci0000:00/0000:00:07.1/0000:02:00.3/usb1/1-1/1-1:1.0/0003:046D:C03D.0023/input/input36
+2018-05-26 14:25:08,242 process          L0367 DEBUG| [stdout] [90372.913400] hid-generic 0003:046D:C03D.0023: input,hidraw0: USB HID v1.10 Mouse [Logitech USB-PS/2 Optical Mouse] on usb-0000:02:00.3-1/input0
+2018-05-26 14:25:08,242 process          L0367 DEBUG| [stdout] [90373.049687] usb 1-2: new low-speed USB device number 29 using xhci_hcd
+2018-05-26 14:25:08,242 process          L0367 DEBUG| [stdout] [90373.185875] usb 1-2: Device not responding to setup address.
+2018-05-26 14:25:08,242 process          L0367 DEBUG| [stdout] [90373.397885] usb 1-2: Device not responding to setup address.
+2018-05-26 14:25:08,243 process          L0367 DEBUG| [stdout] [90373.609684] usb 1-2: device not accepting address 29, error -71
+2018-05-26 14:25:08,243 process          L0367 DEBUG| [stdout] [90374.373861] usb 1-1: USB disconnect, device number 28
+2018-05-26 14:25:08,243 process          L0367 DEBUG| [stdout] [124874.239415] LTP: starting abs01
+2018-05-26 14:25:08,243 process          L0367 DEBUG| [stdout] [124874.243453] LTP: starting atof01
+2018-05-26 14:25:08,243 process          L0367 DEBUG| [stdout] [124874.249781] LTP: starting float_bessel (cd $LTPROOT/testcases/bin; float_bessel -v)
+2018-05-26 14:25:08,243 process          L0367 DEBUG| [stdout] [124875.111553] LTP: starting float_exp_log (cd $LTPROOT/testcases/bin; float_exp_log -v)
+2018-05-26 14:25:08,243 process          L0367 DEBUG| [stdout] [124875.708960] LTP: starting float_iperb (cd $LTPROOT/testcases/bin; float_iperb -v)
+2018-05-26 14:25:08,243 process          L0367 DEBUG| [stdout] [124875.944351] LTP: starting float_power (cd $LTPROOT/testcases/bin; float_power -v)
+2018-05-26 14:25:08,243 process          L0367 DEBUG| [stdout] [124876.460282] LTP: starting float_trigo (cd $LTPROOT/testcases/bin; float_trigo -v)
+2018-05-26 14:25:08,243 process          L0367 DEBUG| [stdout] [124877.036491] LTP: starting fptest01
+2018-05-26 14:25:08,243 process          L0367 DEBUG| [stdout] [124877.043727] LTP: starting fptest02
+2018-05-26 14:25:08,243 process          L0367 DEBUG| [stdout] [124877.052507] LTP: starting nextafter01
+2018-05-26 14:25:08,244 process          L0367 DEBUG| [stdout] [124877.056421] LTP: starting fsx-linux (export TCbin=$LTPROOT/testcases/bin;fsxtest02 10000)
+2018-05-26 14:25:08,244 process          L0367 DEBUG| [stdout] [124877.332884] LTP: starting pipeio_1 (pipeio -T pipeio_1 -c 5 -s 4090 -i 100 -b -f x80)
+2018-05-26 14:25:08,244 process          L0367 DEBUG| [stdout] [124877.344235] LTP: starting pipeio_3 (pipeio -T pipeio_3 -c 5 -s 4090 -i 100 -u -b -f x80)
+2018-05-26 14:25:08,244 process          L0367 DEBUG| [stdout] [124877.355952] LTP: starting pipeio_4 (pipeio -T pipeio_4 -c 5 -s 4090 -i 100 -u -f x80)
+2018-05-26 14:25:08,244 process          L0367 DEBUG| [stdout] [124877.368167] LTP: starting pipeio_5 (pipeio -T pipeio_5 -c 5 -s 5000 -i 10 -b -f x80)
+2018-05-26 14:25:08,244 process          L0367 DEBUG| [stdout] [124877.374785] LTP: starting pipeio_6 (pipeio -T pipeio_6 -c 5 -s 5000 -i 10 -b -u -f x80)
+2018-05-26 14:25:08,244 process          L0367 DEBUG| [stdout] [124877.380743] LTP: starting pipeio_8 (pipeio -T pipeio_8 -c 5 -s 5000 -i 10 -u -f x80)
+2018-05-26 14:25:08,244 process          L0367 DEBUG| [stdout] [124877.386968] LTP: starting sem01
+2018-05-26 14:25:08,244 process          L0367 DEBUG| [stdout] [124877.414111] LTP: starting sem02
+2018-05-26 14:25:08,244 process          L0367 DEBUG| [stdout] [124897.418078] LTP: starting abort01
+2018-05-26 14:25:08,244 process          L0367 DEBUG| [stdout] [124897.428517] LTP: starting accept01
+2018-05-26 14:25:08,244 process          L0367 DEBUG| [stdout] [124897.432143] LTP: starting access01
+2018-05-26 14:25:08,244 process          L0367 DEBUG| [stdout] [124897.480034] LTP: starting access02
+2018-05-26 14:25:08,245 process          L0367 DEBUG| [stdout] [124897.507875] LTP: starting access03
+2018-05-26 14:25:08,245 process          L0367 DEBUG| [stdout] [124897.511141] LTP: starting access04
+2018-05-26 14:25:08,245 process          L0367 DEBUG| [stdout] [124897.545234] LTP: starting acct01
+2018-05-26 14:25:08,245 process          L0367 DEBUG| [stdout] [124897.548999] Process accounting resumed
+2018-05-26 14:25:08,245 process          L0367 DEBUG| [stdout] [124900.384670] EXT4-fs (loop1): mounting ext2 file system using the ext4 subsystem
+2018-05-26 14:25:08,245 process          L0367 DEBUG| [stdout] [124900.421433] EXT4-fs (loop1): mounted filesystem without journal. Opts: (null)
+2018-05-26 14:25:08,245 process          L0367 DEBUG| [stdout] [124900.496408] EXT4-fs (loop1): re-mounted. Opts: (null)
+2018-05-26 14:25:08,245 process          L0367 DEBUG| [stdout] [124900.537180] LTP: starting adjtimex01
+2018-05-26 14:25:08,245 process          L0367 DEBUG| [stdout] [124900.539626] LTP: starting adjtimex02
+2018-05-26 14:25:08,245 process          L0367 DEBUG| [stdout] [124900.542982] LTP: starting alarm02
+2018-05-26 14:25:08,245 process          L0367 DEBUG| [stdout] [124900.545713] LTP: starting alarm03
+2018-05-26 14:25:08,245 process          L0367 DEBUG| [stdout] [124900.548986] LTP: starting alarm05
+2018-05-26 14:25:08,245 process          L0367 DEBUG| [stdout] [124902.552387] LTP: starting alarm06
+2018-05-26 14:25:08,246 process          L0367 DEBUG| [stdout] [124905.557961] LTP: starting alarm07
+2018-05-26 14:25:08,246 process          L0367 DEBUG| [stdout] [124910.559107] LTP: starting asyncio02
+2018-05-26 14:25:08,246 process          L0367 DEBUG| [stdout] [124910.565788] LTP: starting bind01
+2018-05-26 14:25:08,246 process          L0367 DEBUG| [stdout] [124910.568781] LTP: starting bind02
+2018-05-26 14:25:08,246 process          L0367 DEBUG| [stdout] [124910.572250] LTP: starting brk01
+2018-05-26 14:25:08,246 process          L0367 DEBUG| [stdout] [124910.575670] LTP: starting capget01
+2018-05-26 14:25:08,246 process          L0367 DEBUG| [stdout] [124910.578282] LTP: starting capget02
+2018-05-26 14:25:08,246 process          L0367 DEBUG| [stdout] [124910.580742] LTP: starting capset01
+2018-05-26 14:25:08,246 process          L0367 DEBUG| [stdout] [124910.583258] LTP: starting capset02
+2018-05-26 14:25:08,246 process          L0367 DEBUG| [stdout] [124910.586529] LTP: starting chdir01
+2018-05-26 14:25:08,246 process          L0367 DEBUG| [stdout] [124910.589610] LTP: starting chdir01A (symlink01 -T chdir01)
+2018-05-26 14:25:08,246 process          L0367 DEBUG| [stdout] [124910.592763] LTP: starting chdir02
+2018-05-26 14:25:08,247 process          L0367 DEBUG| [stdout] [124910.595148] LTP: starting chdir03
+2018-05-26 14:25:08,247 process          L0367 DEBUG| [stdout] [124910.599478] LTP: starting chdir04
+2018-05-26 14:25:08,247 process          L0367 DEBUG| [stdout] [124910.602069] LTP: starting chmod01
+2018-05-26 14:25:08,247 process          L0367 DEBUG| [stdout] [124910.604844] LTP: starting chmod01A (symlink01 -T chmod01)
+2018-05-26 14:25:08,247 process          L0367 DEBUG| [stdout] [124910.607796] LTP: starting chmod02
+2018-05-26 14:25:08,247 process          L0367 DEBUG| [stdout] [124910.610530] LTP: starting chmod03
+2018-05-26 14:25:08,247 process          L0367 DEBUG| [stdout] [124910.613697] LTP: starting chmod04
+2018-05-26 14:25:08,247 process          L0367 DEBUG| [stdout] [124910.616411] LTP: starting chmod05
+2018-05-26 14:25:08,247 process          L0367 DEBUG| [stdout] [124910.619779] LTP: starting chmod06
+2018-05-26 14:25:08,247 process          L0367 DEBUG| [stdout] [124910.644406] LTP: starting chmod07
+2018-05-26 14:25:08,247 process          L0367 DEBUG| [stdout] [124910.647757] LTP: starting chown01
+2018-05-26 14:25:08,247 process          L0367 DEBUG| [stdout] [124910.650454] LTP: starting chown02
+2018-05-26 14:25:08,247 process          L0367 DEBUG| [stdout] [124910.653144] LTP: starting chown03
+2018-05-26 14:25:08,248 process          L0367 DEBUG| [stdout] [124910.656243] LTP: starting chown04
+2018-05-26 14:25:08,248 process          L0367 DEBUG| [stdout] [124911.163553] EXT4-fs (loop1): mounting ext2 file system using the ext4 subsystem
+2018-05-26 14:25:08,248 process          L0367 DEBUG| [stdout] [124911.165806] EXT4-fs (loop1): mounted filesystem without journal. Opts: (null)
+2018-05-26 14:25:08,248 process          L0367 DEBUG| [stdout] [124911.212133] LTP: starting chown05
+2018-05-26 14:25:08,248 process          L0367 DEBUG| [stdout] [124911.214866] LTP: starting chroot01
+2018-05-26 14:25:08,248 process          L0367 DEBUG| [stdout] [124911.218013] LTP: starting chroot02
+2018-05-26 14:25:08,248 process          L0367 DEBUG| [stdout] [124911.220944] LTP: starting chroot03
+2018-05-26 14:25:08,248 process          L0367 DEBUG| [stdout] [124911.223647] LTP: starting chroot04
+2018-05-26 14:25:08,248 process          L0367 DEBUG| [stdout] [124911.226811] LTP: starting clone01
+2018-05-26 14:25:08,248 process          L0367 DEBUG| [stdout] [124911.229456] LTP: starting clone02
+2018-05-26 14:25:08,248 process          L0367 DEBUG| [stdout] [124911.232505] LTP: starting clone03
+2018-05-26 14:25:08,248 process          L0367 DEBUG| [stdout] [124911.235297] LTP: starting clone04
+2018-05-26 14:25:08,249 process          L0367 DEBUG| [stdout] [124911.237344] LTP: starting clone05
+2018-05-26 14:25:08,249 process          L0367 DEBUG| [stdout] [124911.347434] LTP: starting clone06
+2018-05-26 14:25:08,249 process          L0367 DEBUG| [stdout] [124911.350100] LTP: starting clone07
+2018-05-26 14:25:08,249 process          L0367 DEBUG| [stdout] [124911.352637] LTP: starting clone08
+2018-05-26 14:25:08,249 process          L0367 DEBUG| [stdout] [124911.357193] LTP: starting close01
+2018-05-26 14:25:08,249 process          L0367 DEBUG| [stdout] [124911.359682] LTP: starting close02
+2018-05-26 14:25:08,249 process          L0367 DEBUG| [stdout] [124911.361684] LTP: starting close08
+2018-05-26 14:25:08,249 process          L0367 DEBUG| [stdout] [124911.363729] LTP: starting confstr01
+2018-05-26 14:25:08,249 process          L0367 DEBUG| [stdout] [124911.365660] LTP: starting connect01
+2018-05-26 14:25:08,249 process          L0367 DEBUG| [stdout] [124911.368350] LTP: starting creat01
+2018-05-26 14:25:08,249 process          L0367 DEBUG| [stdout] [124911.370848] LTP: starting creat03
+2018-05-26 14:25:08,249 process          L0367 DEBUG| [stdout] [124911.373054] LTP: starting creat04
+2018-05-26 14:25:08,249 process          L0367 DEBUG| [stdout] [124911.377318] LTP: starting creat05
+2018-05-26 14:25:08,250 process          L0367 DEBUG| [stdout] [124911.417114] LTP: starting creat06
+2018-05-26 14:25:08,250 process          L0367 DEBUG| [stdout] [124911.456008] LTP: starting creat07
+2018-05-26 14:25:08,250 process          L0367 DEBUG| [stdout] [124911.464829] LTP: starting creat08
+2018-05-26 14:25:08,250 process          L0367 DEBUG| [stdout] [124911.468316] LTP: starting dup01
+2018-05-26 14:25:08,250 process          L0367 DEBUG| [stdout] [124911.470669] LTP: starting dup02
+2018-05-26 14:25:08,250 process          L0367 DEBUG| [stdout] [124911.473049] LTP: starting dup03
+2018-05-26 14:25:08,250 process          L0367 DEBUG| [stdout] [124911.477975] LTP: starting dup04
+2018-05-26 14:25:08,250 process          L0367 DEBUG| [stdout] [124911.480278] LTP: starting dup05
+2018-05-26 14:25:08,250 process          L0367 DEBUG| [stdout] [124911.482723] LTP: starting dup06
+2018-05-26 14:25:08,250 process          L0367 DEBUG| [stdout] [124911.485768] LTP: starting dup07
+2018-05-26 14:25:08,250 process          L0367 DEBUG| [stdout] [124911.487807] LTP: starting dup201
+2018-05-26 14:25:08,250 process          L0367 DEBUG| [stdout] [124911.493357] LTP: starting dup202
+2018-05-26 14:25:08,250 process          L0367 DEBUG| [stdout] [124911.495838] LTP: starting dup203
+2018-05-26 14:25:08,251 process          L0367 DEBUG| [stdout] [124911.498397] LTP: starting dup204
+2018-05-26 14:25:08,251 process          L0367 DEBUG| [stdout] [124911.500710] LTP: starting dup205
+2018-05-26 14:25:08,251 process          L0367 DEBUG| [stdout] [124911.503611] LTP: starting epoll_ctl01
+2018-05-26 14:25:08,251 process          L0367 DEBUG| [stdout] [124911.506342] LTP: starting epoll_ctl02
+2018-05-26 14:25:08,251 process          L0367 DEBUG| [stdout] [124911.509126] LTP: starting epoll_wait01
+2018-05-26 14:25:08,251 process          L0367 DEBUG| [stdout] [124911.513265] LTP: starting epoll_wait02
+2018-05-26 14:25:08,251 process          L0367 DEBUG| [stdout] [124919.853547] LTP: starting epoll_wait03
+2018-05-26 14:25:08,251 process          L0367 DEBUG| [stdout] [124919.855750] LTP: starting epoll_pwait01
+2018-05-26 14:25:08,251 process          L0367 DEBUG| [stdout] [124919.958851] LTP: starting execl01
+2018-05-26 14:25:08,251 process          L0367 DEBUG| [stdout] [124919.962464] LTP: starting execle01
+2018-05-26 14:25:08,251 process          L0367 DEBUG| [stdout] [124919.965749] LTP: starting execlp01
+2018-05-26 14:25:08,251 process          L0367 DEBUG| [stdout] [124919.968988] LTP: starting execv01
+2018-05-26 14:25:08,252 process          L0367 DEBUG| [stdout] [124919.972345] LTP: starting execve01
+2018-05-26 14:25:08,252 process          L0367 DEBUG| [stdout] [124919.975389] LTP: starting execve02
+2018-05-26 14:25:08,252 process          L0367 DEBUG| [stdout] [124919.982714] LTP: starting execve03
+2018-05-26 14:25:08,252 process          L0367 DEBUG| [stdout] [124919.987759] LTP: starting execve04
+2018-05-26 14:25:08,252 process          L0367 DEBUG| [stdout] [124920.023157] LTP: starting execve05 (execve05 20 $LTPROOT/testcases/bin/execve05 $LTPROOT/testcases/bin/execve05 4)
+2018-05-26 14:25:08,252 process          L0367 DEBUG| [stdout] [124920.111641] LTP: starting execvp01
+2018-05-26 14:25:08,252 process          L0367 DEBUG| [stdout] [124920.114526] LTP: starting exit01
+2018-05-26 14:25:08,252 process          L0367 DEBUG| [stdout] [124920.116850] LTP: starting exit02
+2018-05-26 14:25:08,252 process          L0367 DEBUG| [stdout] [124920.120108] LTP: starting fchdir01
+2018-05-26 14:25:08,252 process          L0367 DEBUG| [stdout] [124920.122391] LTP: starting fchdir02
+2018-05-26 14:25:08,252 process          L0367 DEBUG| [stdout] [124920.124604] LTP: starting fchdir03
+2018-05-26 14:25:08,252 process          L0367 DEBUG| [stdout] [124920.128211] LTP: starting fchmod01
+2018-05-26 14:25:08,252 process          L0367 DEBUG| [stdout] [124920.130640] LTP: starting fchmod02
+2018-05-26 14:25:08,253 process          L0367 DEBUG| [stdout] [124920.132998] LTP: starting fchmod03
+2018-05-26 14:25:08,253 process          L0367 DEBUG| [stdout] [124920.135902] LTP: starting fchmod04
+2018-05-26 14:25:08,253 process          L0367 DEBUG| [stdout] [124920.138293] LTP: starting fchmod05
+2018-05-26 14:25:08,253 process          L0367 DEBUG| [stdout] [124920.141241] LTP: starting fchmod06
+2018-05-26 14:25:08,253 process          L0367 DEBUG| [stdout] [124920.180619] LTP: starting fchmod07
+2018-05-26 14:25:08,253 process          L0367 DEBUG| [stdout] [124920.183049] LTP: starting fchown01
+2018-05-26 14:25:08,253 process          L0367 DEBUG| [stdout] [124920.185566] LTP: starting fchown02
+2018-05-26 14:25:08,253 process          L0367 DEBUG| [stdout] [124920.188022] LTP: starting fchown03
+2018-05-26 14:25:08,253 process          L0367 DEBUG| [stdout] [124920.190900] LTP: starting fchown04
+2018-05-26 14:25:08,253 process          L0367 DEBUG| [stdout] [124920.656150] EXT4-fs (loop1): mounting ext2 file system using the ext4 subsystem
+2018-05-26 14:25:08,253 process          L0367 DEBUG| [stdout] [124920.691043] EXT4-fs (loop1): mounted filesystem without journal. Opts: (null)
+2018-05-26 14:25:08,253 process          L0367 DEBUG| [stdout] [124920.757642] EXT4-fs (loop1): re-mounted. Opts: (null)
+2018-05-26 14:25:08,254 process          L0367 DEBUG| [stdout] [124920.796569] LTP: starting fchown05
+2018-05-26 14:25:08,254 process          L0367 DEBUG| [stdout] [124920.799217] LTP: starting fcntl01
+2018-05-26 14:25:08,254 process          L0367 DEBUG| [stdout] [124920.801955] LTP: starting fcntl02
+2018-05-26 14:25:08,254 process          L0367 DEBUG| [stdout] [124920.805045] LTP: starting fcntl03
+2018-05-26 14:25:08,254 process          L0367 DEBUG| [stdout] [124920.808067] LTP: starting fcntl04
+2018-05-26 14:25:08,254 process          L0367 DEBUG| [stdout] [124920.811090] LTP: starting fcntl05
+2018-05-26 14:25:08,254 process          L0367 DEBUG| [stdout] [124920.813595] LTP: starting fcntl06
+2018-05-26 14:25:08,254 process          L0367 DEBUG| [stdout] [124920.816099] LTP: starting fcntl07
+2018-05-26 14:25:08,254 process          L0367 DEBUG| [stdout] [124920.822985] LTP: starting fcntl08
+2018-05-26 14:25:08,254 process          L0367 DEBUG| [stdout] [124920.824735] LTP: starting fcntl09
+2018-05-26 14:25:08,254 process          L0367 DEBUG| [stdout] [124920.826349] LTP: starting fcntl10
+2018-05-26 14:25:08,254 process          L0367 DEBUG| [stdout] [124920.828110] LTP: starting fcntl11
+2018-05-26 14:25:08,254 process          L0367 DEBUG| [stdout] [124920.831361] LTP: starting fcntl12
+2018-05-26 14:25:08,255 process          L0367 DEBUG| [stdout] [124920.835327] LTP: starting fcntl13
+2018-05-26 14:25:08,255 process          L0367 DEBUG| [stdout] [124920.836674] LTP: starting fcntl14
+2018-05-26 14:25:08,255 process          L0367 DEBUG| [stdout] [124926.286126] LTP: starting fcntl15
+2018-05-26 14:25:08,255 process          L0367 DEBUG| [stdout] [124936.291427] LTP: starting fcntl17
+2018-05-26 14:25:08,255 process          L0367 DEBUG| [stdout] [124936.295321] LTP: starting fcntl18
+2018-05-26 14:25:08,255 process          L0367 DEBUG| [stdout] [124936.299171] LTP: starting fcntl19
+2018-05-26 14:25:08,255 process          L0367 DEBUG| [stdout] [124936.302854] LTP: starting fcntl20
+2018-05-26 14:25:08,255 process          L0367 DEBUG| [stdout] [124936.306304] LTP: starting fcntl21
+2018-05-26 14:25:08,255 process          L0367 DEBUG| [stdout] [124936.310128] LTP: starting fcntl22
+2018-05-26 14:25:08,255 process          L0367 DEBUG| [stdout] [124936.313032] LTP: starting fcntl23
+2018-05-26 14:25:08,255 process          L0367 DEBUG| [stdout] [124936.315246] LTP: starting fcntl24
+2018-05-26 14:25:08,255 process          L0367 DEBUG| [stdout] [124936.317802] LTP: starting fcntl25
+2018-05-26 14:25:08,256 process          L0367 DEBUG| [stdout] [124936.320262] LTP: starting fcntl26
+2018-05-26 14:25:08,256 process          L0367 DEBUG| [stdout] [124936.322532] LTP: starting fcntl29
+2018-05-26 14:25:08,256 process          L0367 DEBUG| [stdout] [124936.325108] LTP: starting fcntl30
+2018-05-26 14:25:08,256 process          L0367 DEBUG| [stdout] [124936.326615] LTP: starting fcntl31
+2018-05-26 14:25:08,256 process          L0367 DEBUG| [stdout] [124936.330352] LTP: starting fcntl32
+2018-05-26 14:25:08,256 process          L0367 DEBUG| [stdout] [124936.332037] LTP: starting fcntl33
+2018-05-26 14:25:08,256 process          L0367 DEBUG| [stdout] [124936.337456] LTP: starting fdatasync01
+2018-05-26 14:25:08,256 process          L0367 DEBUG| [stdout] [124936.384704] LTP: starting fdatasync02
+2018-05-26 14:25:08,256 process          L0367 DEBUG| [stdout] [124936.386816] LTP: starting flock01
+2018-05-26 14:25:08,256 process          L0367 DEBUG| [stdout] [124936.389381] LTP: starting flock02
+2018-05-26 14:25:08,256 process          L0367 DEBUG| [stdout] [124936.391560] LTP: starting flock03
+2018-05-26 14:25:08,256 process          L0367 DEBUG| [stdout] [124936.427132] LTP: starting flock04
+2018-05-26 14:25:08,256 process          L0367 DEBUG| [stdout] [124936.430424] LTP: starting flock05
+2018-05-26 14:25:08,257 process          L0367 DEBUG| [stdout] [124936.433743] LTP: starting flock06
+2018-05-26 14:25:08,257 process          L0367 DEBUG| [stdout] [124936.436091] LTP: starting fmtmsg01
+2018-05-26 14:25:08,257 process          L0367 DEBUG| [stdout] [124936.438903] LTP: starting fork01
+2018-05-26 14:25:08,257 process          L0367 DEBUG| [stdout] [124936.441641] LTP: starting fork02
+2018-05-26 14:25:08,257 process          L0367 DEBUG| [stdout] [124936.444009] LTP: starting fork03
+2018-05-26 14:25:08,257 process          L0367 DEBUG| [stdout] [124936.445793] LTP: starting fork04
+2018-05-26 14:25:08,257 process          L0367 DEBUG| [stdout] [124936.448491] LTP: starting fork05
+2018-05-26 14:25:08,257 process          L0367 DEBUG| [stdout] [124936.450154] LTP: starting fork06
+2018-05-26 14:25:08,257 process          L0367 DEBUG| [stdout] [124936.651945] LTP: starting fork07
+2018-05-26 14:25:08,257 process          L0367 DEBUG| [stdout] [124937.664324] LTP: starting fork08
+2018-05-26 14:25:08,257 process          L0367 DEBUG| [stdout] [124938.667651] LTP: starting fork09
+2018-05-26 14:25:08,257 process          L0367 DEBUG| [stdout] [124938.699198] LTP: starting fork10
+2018-05-26 14:25:08,257 process          L0367 DEBUG| [stdout] [124938.702276] LTP: starting fork11
+2018-05-26 14:25:08,258 process          L0367 DEBUG| [stdout] [124938.727808] LTP: starting fpathconf01
+2018-05-26 14:25:08,258 process          L0367 DEBUG| [stdout] [124938.730183] LTP: starting fstat01
+2018-05-26 14:25:08,258 process          L0367 DEBUG| [stdout] [124938.732320] LTP: starting fstat02
+2018-05-26 14:25:08,258 process          L0367 DEBUG| [stdout] [124938.735279] LTP: starting fstat03
+2018-05-26 14:25:08,258 process          L0367 DEBUG| [stdout] [124938.737570] LTP: starting fstat05
+2018-05-26 14:25:08,258 process          L0367 DEBUG| [stdout] [124938.740500] LTP: starting fstatfs01
+2018-05-26 14:25:08,258 process          L0367 DEBUG| [stdout] [124938.742853] LTP: starting fstatfs02
+2018-05-26 14:25:08,258 process          L0367 DEBUG| [stdout] [124938.745182] LTP: starting fsync01
+2018-05-26 14:25:08,258 process          L0367 DEBUG| [stdout] [124939.287867] EXT4-fs (loop1): mounting ext2 file system using the ext4 subsystem
+2018-05-26 14:25:08,258 process          L0367 DEBUG| [stdout] [124939.323404] EXT4-fs (loop1): mounted filesystem without journal. Opts: (null)
+2018-05-26 14:25:08,258 process          L0367 DEBUG| [stdout] [124940.391841] EXT4-fs (loop1): mounting ext3 file system using the ext4 subsystem
+2018-05-26 14:25:08,258 process          L0367 DEBUG| [stdout] [124940.425958] EXT4-fs (loop1): mounted filesystem with ordered data mode. Opts: (null)
+2018-05-26 14:25:08,259 process          L0367 DEBUG| [stdout] [124941.722808] EXT4-fs (loop1): mounted filesystem with ordered data mode. Opts: (null)
+2018-05-26 14:25:08,259 process          L0367 DEBUG| [stdout] [124948.488415] LTP: starting fsync02
+2018-05-26 14:25:08,259 process          L0367 DEBUG| [stdout] [124950.238526] LTP: starting fsync03
+2018-05-26 14:25:08,259 process          L0367 DEBUG| [stdout] [124950.241225] LTP: starting ftruncate01
+2018-05-26 14:25:08,259 process          L0367 DEBUG| [stdout] [124950.243634] LTP: starting ftruncate02
+2018-05-26 14:25:08,259 process          L0367 DEBUG| [stdout] [124950.246198] LTP: starting ftruncate03
+2018-05-26 14:25:08,259 process          L0367 DEBUG| [stdout] [124950.248728] LTP: starting ftruncate04
+2018-05-26 14:25:08,259 process          L0367 DEBUG| [stdout] [124950.807791] EXT4-fs (loop1): mounting ext2 file system using the ext4 subsystem
+2018-05-26 14:25:08,259 process          L0367 DEBUG| [stdout] [124950.842783] EXT4-fs (loop1): mounted filesystem without journal. Opts: (null)
+2018-05-26 14:25:08,259 process          L0367 DEBUG| [stdout] [124950.875945] EXT4-fs (loop1): re-mounted. Opts: (null)
+2018-05-26 14:25:08,259 process          L0367 DEBUG| [stdout] [124951.018856] LTP: starting getcontext01
+2018-05-26 14:25:08,259 process          L0367 DEBUG| [stdout] [124951.020425] LTP: starting getcwd01
+2018-05-26 14:25:08,259 process          L0367 DEBUG| [stdout] [124951.022647] LTP: starting getcwd02
+2018-05-26 14:25:08,260 process          L0367 DEBUG| [stdout] [124951.024764] LTP: starting getcwd03
+2018-05-26 14:25:08,260 process          L0367 DEBUG| [stdout] [124951.027595] LTP: starting getcwd04
+2018-05-26 14:25:08,260 process          L0367 DEBUG| [stdout] [124956.030294] LTP: starting getdents01
+2018-05-26 14:25:08,260 process          L0367 DEBUG| [stdout] [124956.033169] LTP: starting getdents02
+2018-05-26 14:25:08,260 process          L0367 DEBUG| [stdout] [124956.035335] LTP: starting getdomainname01
+2018-05-26 14:25:08,260 process          L0367 DEBUG| [stdout] [124956.036979] LTP: starting getdtablesize01
+2018-05-26 14:25:08,260 process          L0367 DEBUG| [stdout] [124956.040220] LTP: starting getegid01
+2018-05-26 14:25:08,260 process          L0367 DEBUG| [stdout] [124956.042164] LTP: starting geteuid01
+2018-05-26 14:25:08,260 process          L0367 DEBUG| [stdout] [124956.044562] LTP: starting geteuid02
+2018-05-26 14:25:08,260 process          L0367 DEBUG| [stdout] [124956.046566] LTP: starting getgid01
+2018-05-26 14:25:08,260 process          L0367 DEBUG| [stdout] [124956.047869] LTP: starting getgid03
+2018-05-26 14:25:08,260 process          L0367 DEBUG| [stdout] [124956.049502] LTP: starting getgroups01
+2018-05-26 14:25:08,260 process          L0367 DEBUG| [stdout] [124956.051107] LTP: starting getgroups03
+2018-05-26 14:25:08,261 process          L0367 DEBUG| [stdout] [124956.052850] LTP: starting gethostid01
+2018-05-26 14:25:08,261 process          L0367 DEBUG| [stdout] [124956.058436] LTP: starting gethostname01
+2018-05-26 14:25:08,261 process          L0367 DEBUG| [stdout] [124956.060384] LTP: starting getitimer01
+2018-05-26 14:25:08,261 process          L0367 DEBUG| [stdout] [124956.061758] LTP: starting getitimer02
+2018-05-26 14:25:08,261 process          L0367 DEBUG| [stdout] [124956.064200] LTP: starting getitimer03
+2018-05-26 14:25:08,261 process          L0367 DEBUG| [stdout] [124956.065585] LTP: starting getpeername01
+2018-05-26 14:25:08,261 process          L0367 DEBUG| [stdout] [124956.067139] LTP: starting getpgid01
+2018-05-26 14:25:08,261 process          L0367 DEBUG| [stdout] [124956.069706] LTP: starting getpgid02
+2018-05-26 14:25:08,261 process          L0367 DEBUG| [stdout] [124956.071864] LTP: starting getpgrp01
+2018-05-26 14:25:08,261 process          L0367 DEBUG| [stdout] [124956.074241] LTP: starting getpid01
+2018-05-26 14:25:08,261 process          L0367 DEBUG| [stdout] [124956.076523] LTP: starting getpid02
+2018-05-26 14:25:08,261 process          L0367 DEBUG| [stdout] [124956.078744] LTP: starting getppid01
+2018-05-26 14:25:08,262 process          L0367 DEBUG| [stdout] [124956.080624] LTP: starting getppid02
+2018-05-26 14:25:08,262 process          L0367 DEBUG| [stdout] [124956.082561] LTP: starting getpriority01
+2018-05-26 14:25:08,262 process          L0367 DEBUG| [stdout] [124956.086792] LTP: starting getpriority02
+2018-05-26 14:25:08,262 process          L0367 DEBUG| [stdout] [124956.088955] LTP: starting getresgid01
+2018-05-26 14:25:08,262 process          L0367 DEBUG| [stdout] [124956.091448] LTP: starting getresgid02
+2018-05-26 14:25:08,262 process          L0367 DEBUG| [stdout] [124956.094375] LTP: starting getresgid03
+2018-05-26 14:25:08,262 process          L0367 DEBUG| [stdout] [124956.097113] LTP: starting getresuid01
+2018-05-26 14:25:08,262 process          L0367 DEBUG| [stdout] [124956.099219] LTP: starting getresuid02
+2018-05-26 14:25:08,262 process          L0367 DEBUG| [stdout] [124956.102028] LTP: starting getresuid03
+2018-05-26 14:25:08,262 process          L0367 DEBUG| [stdout] [124956.104834] LTP: starting getrlimit01
+2018-05-26 14:25:08,262 process          L0367 DEBUG| [stdout] [124956.107246] LTP: starting getrlimit02
+2018-05-26 14:25:08,262 process          L0367 DEBUG| [stdout] [124956.109425] LTP: starting getrusage01
+2018-05-26 14:25:08,262 process          L0367 DEBUG| [stdout] [124956.111139] LTP: starting getrusage02
+2018-05-26 14:25:08,263 process          L0367 DEBUG| [stdout] [124956.112629] LTP: starting getsid01
+2018-05-26 14:25:08,263 process          L0367 DEBUG| [stdout] [124956.114606] LTP: starting getsid02
+2018-05-26 14:25:08,263 process          L0367 DEBUG| [stdout] [124956.116492] LTP: starting getsockname01
+2018-05-26 14:25:08,263 process          L0367 DEBUG| [stdout] [124956.118690] LTP: starting getsockopt01
+2018-05-26 14:25:08,263 process          L0367 DEBUG| [stdout] [124956.120328] LTP: starting gettimeofday01
+2018-05-26 14:25:08,263 process          L0367 DEBUG| [stdout] [124956.121770] LTP: starting gettimeofday02
+2018-05-26 14:25:08,263 process          L0367 DEBUG| [stdout] [124966.124429] LTP: starting getuid01
+2018-05-26 14:25:08,263 process          L0367 DEBUG| [stdout] [124966.126242] LTP: starting getuid03
+2018-05-26 14:25:08,263 process          L0367 DEBUG| [stdout] [124966.128961] LTP: starting ioctl (test_ioctl)
+2018-05-26 14:25:08,263 process          L0367 DEBUG| [stdout] [124966.935045] LTP: starting ioperm01
+2018-05-26 14:25:08,263 process          L0367 DEBUG| [stdout] [124966.937159] LTP: starting ioperm02
+2018-05-26 14:25:08,263 process          L0367 DEBUG| [stdout] [124966.939895] LTP: starting iopl01
+2018-05-26 14:25:08,263 process          L0367 DEBUG| [stdout] [124966.941883] LTP: starting iopl02
+2018-05-26 14:25:08,264 process          L0367 DEBUG| [stdout] [124966.944620] LTP: starting kill01
+2018-05-26 14:25:08,264 process          L0367 DEBUG| [stdout] [124966.946561] LTP: starting kill02
+2018-05-26 14:25:08,264 process          L0367 DEBUG| [stdout] [124976.949699] LTP: starting kill03
+2018-05-26 14:25:08,264 process          L0367 DEBUG| [stdout] [124976.952087] LTP: starting kill04
+2018-05-26 14:25:08,264 process          L0367 DEBUG| [stdout] [124976.954190] LTP: starting kill05
+2018-05-26 14:25:08,264 process          L0367 DEBUG| [stdout] [124977.958804] LTP: starting kill06
+2018-05-26 14:25:08,264 process          L0367 DEBUG| [stdout] [124977.961856] LTP: starting kill07
+2018-05-26 14:25:08,264 process          L0367 DEBUG| [stdout] [124978.964965] LTP: starting kill08
+2018-05-26 14:25:08,264 process          L0367 DEBUG| [stdout] [124978.968083] LTP: starting kill09
+2018-05-26 14:25:08,264 process          L0367 DEBUG| [stdout] [124978.970217] LTP: starting kill10
+2018-05-26 14:25:08,264 process          L0367 DEBUG| [stdout] [124979.976292] LTP: starting kill11
+2018-05-26 14:25:08,264 process          L0367 DEBUG| [stdout] [124979.997020] LTP: starting kill12
+2018-05-26 14:25:08,264 process          L0367 DEBUG| [stdout] [124980.003236] LTP: starting lchown01
+2018-05-26 14:25:08,265 process          L0367 DEBUG| [stdout] [124980.005364] LTP: starting lchown02
+2018-05-26 14:25:08,265 process          L0367 DEBUG| [stdout] [124980.008410] LTP: starting lchown03
+2018-05-26 14:25:08,265 process          L0367 DEBUG| [stdout] [124980.443393] EXT4-fs (loop1): mounting ext2 file system using the ext4 subsystem
+2018-05-26 14:25:08,265 process          L0367 DEBUG| [stdout] [124980.445500] EXT4-fs (loop1): mounted filesystem without journal. Opts: (null)
+2018-05-26 14:25:08,265 process          L0367 DEBUG| [stdout] [124980.491926] LTP: starting lgetxattr01
+2018-05-26 14:25:08,265 process          L0367 DEBUG| [stdout] [124980.495284] LTP: starting lgetxattr02
+2018-05-26 14:25:08,265 process          L0367 DEBUG| [stdout] [124980.498851] LTP: starting link01 (symlink01 -T link01)
+2018-05-26 14:25:08,265 process          L0367 DEBUG| [stdout] [124980.501656] LTP: starting link02
+2018-05-26 14:25:08,265 process          L0367 DEBUG| [stdout] [124980.503820] LTP: starting link03
+2018-05-26 14:25:08,265 process          L0367 DEBUG| [stdout] [124980.506172] LTP: starting link04
+2018-05-26 14:25:08,265 process          L0367 DEBUG| [stdout] [124980.508466] LTP: starting link05
+2018-05-26 14:25:08,265 process          L0367 DEBUG| [stdout] [124980.532144] LTP: starting link06
+2018-05-26 14:25:08,266 process          L0367 DEBUG| [stdout] [124980.534428] LTP: starting link07
+2018-05-26 14:25:08,266 process          L0367 DEBUG| [stdout] [124980.537290] LTP: starting link08
+2018-05-26 14:25:08,266 process          L0367 DEBUG| [stdout] [124980.555961] LTP: starting listen01
+2018-05-26 14:25:08,266 process          L0367 DEBUG| [stdout] [124980.558316] LTP: starting llistxattr01
+2018-05-26 14:25:08,266 process          L0367 DEBUG| [stdout] [124980.560647] LTP: starting llistxattr02
+2018-05-26 14:25:08,266 process          L0367 DEBUG| [stdout] [124980.563655] LTP: starting llistxattr03
+2018-05-26 14:25:08,266 process          L0367 DEBUG| [stdout] [124980.566969] LTP: starting llseek01
+2018-05-26 14:25:08,266 process          L0367 DEBUG| [stdout] [124980.569607] LTP: starting llseek02
+2018-05-26 14:25:08,266 process          L0367 DEBUG| [stdout] [124980.571741] LTP: starting llseek03
+2018-05-26 14:25:08,266 process          L0367 DEBUG| [stdout] [124980.573804] LTP: starting lseek01
+2018-05-26 14:25:08,266 process          L0367 DEBUG| [stdout] [124980.576675] LTP: starting lseek02
+2018-05-26 14:25:08,266 process          L0367 DEBUG| [stdout] [124980.579287] LTP: starting lseek07
+2018-05-26 14:25:08,266 process          L0367 DEBUG| [stdout] [124980.582445] LTP: starting lseek11
+2018-05-26 14:25:08,267 process          L0367 DEBUG| [stdout] [124981.393772] LTP: starting lstat01A (symlink01 -T lstat01)
+2018-05-26 14:25:08,267 process          L0367 DEBUG| [stdout] [124981.395860] LTP: starting lstat01
+2018-05-26 14:25:08,267 process          L0367 DEBUG| [stdout] [124981.398448] LTP: starting lstat02
+2018-05-26 14:25:08,267 process          L0367 DEBUG| [stdout] [124981.401624] LTP: starting lstat03
+2018-05-26 14:25:08,267 process          L0367 DEBUG| [stdout] [124981.403543] LTP: starting mallopt01
+2018-05-26 14:25:08,267 process          L0367 DEBUG| [stdout] [124981.404964] LTP: starting memset01
+2018-05-26 14:25:08,267 process          L0367 DEBUG| [stdout] [124981.407087] LTP: starting memcmp01
+2018-05-26 14:25:08,267 process          L0367 DEBUG| [stdout] [124981.407889] LTP: starting memcpy01
+2018-05-26 14:25:08,267 process          L0367 DEBUG| [stdout] [124981.408650] LTP: starting mlockall01
+2018-05-26 14:25:08,267 process          L0367 DEBUG| [stdout] [124981.410910] LTP: starting mlockall02
+2018-05-26 14:25:08,267 process          L0367 DEBUG| [stdout] [124981.412121] LTP: starting mlockall03
+2018-05-26 14:25:08,267 process          L0367 DEBUG| [stdout] [124981.413246] LTP: starting mkdir02
+2018-05-26 14:25:08,268 process          L0367 DEBUG| [stdout] [124981.417479] LTP: starting mkdir03
+2018-05-26 14:25:08,268 process          L0367 DEBUG| [stdout] [124981.447905] LTP: starting mkdir04
+2018-05-26 14:25:08,268 process          L0367 DEBUG| [stdout] [124981.452244] LTP: starting mkdir05
+2018-05-26 14:25:08,268 process          L0367 DEBUG| [stdout] [124981.455848] LTP: starting mkdir05A (symlink01 -T mkdir05)
+2018-05-26 14:25:08,268 process          L0367 DEBUG| [stdout] [124981.458605] LTP: starting mkdir09
+2018-05-26 14:25:08,268 process          L0367 DEBUG| [stdout] [124991.462949] LTP: starting mknod01
+2018-05-26 14:25:08,268 process          L0367 DEBUG| [stdout] [124991.465792] LTP: starting mknod02
+2018-05-26 14:25:08,268 process          L0367 DEBUG| [stdout] [124991.469529] LTP: starting mknod03
+2018-05-26 14:25:08,268 process          L0367 DEBUG| [stdout] [124991.472916] LTP: starting mknod04
+2018-05-26 14:25:08,268 process          L0367 DEBUG| [stdout] [124991.476076] LTP: starting mknod05
+2018-05-26 14:25:08,268 process          L0367 DEBUG| [stdout] [124991.478866] LTP: starting mknod06
+2018-05-26 14:25:08,268 process          L0367 DEBUG| [stdout] [124991.481433] LTP: starting mknod07
+2018-05-26 14:25:08,268 process          L0367 DEBUG| [stdout] [124992.095155] EXT4-fs (loop1): mounting ext2 file system using the ext4 subsystem
+2018-05-26 14:25:08,269 process          L0367 DEBUG| [stdout] [124992.097023] EXT4-fs (loop1): mounted filesystem without journal. Opts: (null)
+2018-05-26 14:25:08,269 process          L0367 DEBUG| [stdout] [124992.155547] LTP: starting mknod08
+2018-05-26 14:25:08,269 process          L0367 DEBUG| [stdout] [124992.158747] LTP: starting mknod09
+2018-05-26 14:25:08,269 process          L0367 DEBUG| [stdout] [124992.161175] LTP: starting mlock01
+2018-05-26 14:25:08,269 process          L0367 DEBUG| [stdout] [124992.169709] LTP: starting mlock02
+2018-05-26 14:25:08,269 process          L0367 DEBUG| [stdout] [124992.172639] LTP: starting qmm01 (mmap001 -m 1)
+2018-05-26 14:25:08,269 process          L0367 DEBUG| [stdout] [124992.205607] LTP: starting mmap01
+2018-05-26 14:25:08,269 process          L0367 DEBUG| [stdout] [124992.243914] LTP: starting mmap02
+2018-05-26 14:25:08,269 process          L0367 DEBUG| [stdout] [124992.246581] LTP: starting mmap03
+2018-05-26 14:25:08,269 process          L0367 DEBUG| [stdout] [124992.249276] LTP: starting mmap04
+2018-05-26 14:25:08,269 process          L0367 DEBUG| [stdout] [124992.251979] LTP: starting mmap05
+2018-05-26 14:25:08,269 process          L0367 DEBUG| [stdout] [124992.254112] LTP: starting mmap06
+2018-05-26 14:25:08,269 process          L0367 DEBUG| [stdout] [124992.256179] LTP: starting mmap07
+2018-05-26 14:25:08,270 process          L0367 DEBUG| [stdout] [124992.258478] LTP: starting mmap08
+2018-05-26 14:25:08,270 process          L0367 DEBUG| [stdout] [124992.260796] LTP: starting mmap09
+2018-05-26 14:25:08,270 process          L0367 DEBUG| [stdout] [124992.263307] LTP: starting mmap16
+2018-05-26 14:25:08,270 process          L0367 DEBUG| [stdout] [124992.515447] EXT4-fs (loop1): mounted filesystem with ordered data mode. Opts: nodelalloc
+2018-05-26 14:25:08,270 process          L0367 DEBUG| [stdout] [124994.079022] LTP: starting modify_ldt01
+2018-05-26 14:25:08,270 process          L0367 DEBUG| [stdout] [124994.081191] LTP: starting modify_ldt02
+2018-05-26 14:25:08,270 process          L0367 DEBUG| [stdout] [124994.083790] LTP: starting modify_ldt03
+2018-05-26 14:25:08,270 process          L0367 DEBUG| [stdout] [124994.086167] LTP: starting mprotect01
+2018-05-26 14:25:08,270 process          L0367 DEBUG| [stdout] [124994.088530] LTP: starting mprotect02
+2018-05-26 14:25:08,270 process          L0367 DEBUG| [stdout] [124994.092486] LTP: starting mprotect03
+2018-05-26 14:25:08,270 process          L0367 DEBUG| [stdout] [124994.095408] LTP: starting mprotect04
+2018-05-26 14:25:08,270 process          L0367 DEBUG| [stdout] [124994.098218] LTP: starting mremap01
+2018-05-26 14:25:08,271 process          L0367 DEBUG| [stdout] [124994.256445] LTP: starting mremap02
+2018-05-26 14:25:08,271 process          L0367 DEBUG| [stdout] [124994.258667] LTP: starting mremap03
+2018-05-26 14:25:08,271 process          L0367 DEBUG| [stdout] [124994.261122] LTP: starting mremap04
+2018-05-26 14:25:08,271 process          L0367 DEBUG| [stdout] [124994.263762] LTP: starting msgctl01
+2018-05-26 14:25:08,271 process          L0367 DEBUG| [stdout] [124994.266477] LTP: starting msgctl02
+2018-05-26 14:25:08,271 process          L0367 DEBUG| [stdout] [124994.269016] LTP: starting msgctl03
+2018-05-26 14:25:08,271 process          L0367 DEBUG| [stdout] [124994.271266] LTP: starting msgctl04
+2018-05-26 14:25:08,271 process          L0367 DEBUG| [stdout] [124994.274194] LTP: starting msgctl05
+2018-05-26 14:25:08,271 process          L0367 DEBUG| [stdout] [124994.277289] LTP: starting msgctl06
+2018-05-26 14:25:08,271 process          L0367 DEBUG| [stdout] [124994.279245] LTP: starting msgctl07
+2018-05-26 14:25:08,271 process          L0367 DEBUG| [stdout] [125014.282623] LTP: starting msgctl08
+2018-05-26 14:25:08,271 process          L0367 DEBUG| [stdout] [125014.628490] LTP: starting msgctl09
+2018-05-26 14:25:08,271 process          L0367 DEBUG| [stdout] [125014.731505] LTP: starting msgget01
+2018-05-26 14:25:08,272 process          L0367 DEBUG| [stdout] [125014.734084] LTP: starting msgget02
+2018-05-26 14:25:08,272 process          L0367 DEBUG| [stdout] [125014.737594] LTP: starting msgget03
+2018-05-26 14:25:08,272 process          L0367 DEBUG| [stdout] [125014.790877] LTP: starting msgrcv01
+2018-05-26 14:25:08,272 process          L0367 DEBUG| [stdout] [125014.794032] LTP: starting msgrcv02
+2018-05-26 14:25:08,272 process          L0367 DEBUG| [stdout] [125014.797065] LTP: starting msgrcv03
+2018-05-26 14:25:08,272 process          L0367 DEBUG| [stdout] [125014.799688] LTP: starting msgrcv04
+2018-05-26 14:25:08,272 process          L0367 DEBUG| [stdout] [125014.802170] LTP: starting msgrcv05
+2018-05-26 14:25:08,272 process          L0367 DEBUG| [stdout] [125014.815203] LTP: starting msgrcv06
+2018-05-26 14:25:08,272 process          L0367 DEBUG| [stdout] [125014.827977] LTP: starting msgrcv07
+2018-05-26 14:25:08,272 process          L0367 DEBUG| [stdout] [125014.830846] LTP: starting msgrcv08
+2018-05-26 14:25:08,272 process          L0367 DEBUG| [stdout] [125014.833272] LTP: starting msgsnd01
+2018-05-26 14:25:08,272 process          L0367 DEBUG| [stdout] [125014.836116] LTP: starting msgsnd02
+2018-05-26 14:25:08,273 process          L0367 DEBUG| [stdout] [125014.840334] LTP: starting msgsnd05
+2018-05-26 14:25:08,273 process          L0367 DEBUG| [stdout] [125014.854109] LTP: starting msgsnd06
+2018-05-26 14:25:08,273 process          L0367 DEBUG| [stdout] [125014.867038] LTP: starting msync01
+2018-05-26 14:25:08,273 process          L0367 DEBUG| [stdout] [125014.868591] LTP: starting msync02
+2018-05-26 14:25:08,273 process          L0367 DEBUG| [stdout] [125014.869713] LTP: starting msync03
+2018-05-26 14:25:08,273 process          L0367 DEBUG| [stdout] [125014.870901] LTP: starting munlock01
+2018-05-26 14:25:08,273 process          L0367 DEBUG| [stdout] [125014.879592] LTP: starting munlock02
+2018-05-26 14:25:08,273 process          L0367 DEBUG| [stdout] [125014.883256] LTP: starting munlockall01
+2018-05-26 14:25:08,273 process          L0367 DEBUG| [stdout] [125014.885126] LTP: starting munlockall02
+2018-05-26 14:25:08,273 process          L0367 DEBUG| [stdout] [125014.887471] LTP: starting munmap01
+2018-05-26 14:25:08,273 process          L0367 DEBUG| [stdout] [125014.889288] LTP: starting munmap02
+2018-05-26 14:25:08,273 process          L0367 DEBUG| [stdout] [125014.891344] LTP: starting munmap03
+2018-05-26 14:25:08,273 process          L0367 DEBUG| [stdout] [125014.893104] LTP: starting nanosleep01
+2018-05-26 14:25:08,274 process          L0367 DEBUG| [stdout] [125023.232411] LTP: starting nanosleep02
+2018-05-26 14:25:08,274 process          L0367 DEBUG| [stdout] [125024.235348] LTP: starting nanosleep03
+2018-05-26 14:25:08,274 process          L0367 DEBUG| [stdout] [125025.237865] LTP: starting nanosleep04
+2018-05-26 14:25:08,274 process          L0367 DEBUG| [stdout] [125025.239988] LTP: starting nftw01
+2018-05-26 14:25:08,274 process          L0367 DEBUG| [stdout] [125025.251036] LTP: starting nftw6401
+2018-05-26 14:25:08,274 process          L0367 DEBUG| [stdout] [125025.261268] LTP: starting nice01
+2018-05-26 14:25:08,274 process          L0367 DEBUG| [stdout] [125025.263932] LTP: starting nice02
+2018-05-26 14:25:08,274 process          L0367 DEBUG| [stdout] [125025.266178] LTP: starting nice03
+2018-05-26 14:25:08,274 process          L0367 DEBUG| [stdout] [125025.268835] LTP: starting nice04
+2018-05-26 14:25:08,274 process          L0367 DEBUG| [stdout] [125025.272008] LTP: starting open01
+2018-05-26 14:25:08,274 process          L0367 DEBUG| [stdout] [125025.274862] LTP: starting open01A (symlink01 -T open01)
+2018-05-26 14:25:08,274 process          L0367 DEBUG| [stdout] [125025.277161] LTP: starting open02
+2018-05-26 14:25:08,275 process          L0367 DEBUG| [stdout] [125025.280279] LTP: starting open03
+2018-05-26 14:25:08,275 process          L0367 DEBUG| [stdout] [125025.282425] LTP: starting open04
+2018-05-26 14:25:08,275 process          L0367 DEBUG| [stdout] [125025.309644] LTP: starting open05
+2018-05-26 14:25:08,275 process          L0367 DEBUG| [stdout] [125025.313192] LTP: starting open06
+2018-05-26 14:25:08,275 process          L0367 DEBUG| [stdout] [125025.315501] LTP: starting open07
+2018-05-26 14:25:08,275 process          L0367 DEBUG| [stdout] [125025.318392] LTP: starting open08
+2018-05-26 14:25:08,275 process          L0367 DEBUG| [stdout] [125025.321237] LTP: starting open09
+2018-05-26 14:25:08,275 process          L0367 DEBUG| [stdout] [125025.323710] LTP: starting open10
+2018-05-26 14:25:08,275 process          L0367 DEBUG| [stdout] [125025.327049] LTP: starting open11
+2018-05-26 14:25:08,275 process          L0367 DEBUG| [stdout] [125025.328185] LTP: starting open12
+2018-05-26 14:25:08,275 process          L0367 DEBUG| [stdout] [125025.782682] EXT4-fs (loop1): mounting ext2 file system using the ext4 subsystem
+2018-05-26 14:25:08,275 process          L0367 DEBUG| [stdout] [125025.816602] EXT4-fs (loop1): mounted filesystem without journal. Opts: (null)
+2018-05-26 14:25:08,275 process          L0367 DEBUG| [stdout] [125026.935221] LTP: starting open13
+2018-05-26 14:25:08,276 process          L0367 DEBUG| [stdout] [125026.937681] LTP: starting mincore01
+2018-05-26 14:25:08,276 process          L0367 DEBUG| [stdout] [125026.940279] LTP: starting madvise01
+2018-05-26 14:25:08,276 process          L0367 DEBUG| [stdout] [125026.944393] Injecting memory failure for pfn 0x83f537 at process virtual address 0x7f4a92580000
+2018-05-26 14:25:08,276 process          L0367 DEBUG| [stdout] [125026.946172] Memory failure: 0x83f537: recovery action for clean LRU page: Recovered
+2018-05-26 14:25:08,276 process          L0367 DEBUG| [stdout] [125026.947361] Injecting memory failure for pfn 0x76596f at process virtual address 0x7f4a92581000
+2018-05-26 14:25:08,276 process          L0367 DEBUG| [stdout] [125026.948847] Memory failure: 0x76596f: recovery action for clean LRU page: Recovered
+2018-05-26 14:25:08,276 process          L0367 DEBUG| [stdout] [125026.949902] Injecting memory failure for pfn 0x80b5af at process virtual address 0x7f4a92582000
+2018-05-26 14:25:08,276 process          L0367 DEBUG| [stdout] [125026.951433] Memory failure: 0x80b5af: recovery action for clean LRU page: Recovered
+2018-05-26 14:25:08,276 process          L0367 DEBUG| [stdout] [125026.952554] Injecting memory failure for pfn 0x80b5a4 at process virtual address 0x7f4a92583000
+2018-05-26 14:25:08,276 process          L0367 DEBUG| [stdout] [125026.954086] Memory failure: 0x80b5a4: recovery action for clean LRU page: Recovered
+2018-05-26 14:25:08,276 process          L0367 DEBUG| [stdout] [125026.955007] Injecting memory failure for pfn 0x5ea6de at process virtual address 0x7f4a92584000
+2018-05-26 14:25:08,276 process          L0367 DEBUG| [stdout] [125026.956130] Memory failure: 0x5ea6de: recovery action for clean LRU page: Recovered
+2018-05-26 14:25:08,277 process          L0367 DEBUG| [stdout] [125026.956976] Injecting memory failure for pfn 0x80b5ad at process virtual address 0x7f4a92585000
+2018-05-26 14:25:08,277 process          L0367 DEBUG| [stdout] [125026.958104] Memory failure: 0x80b5ad: recovery action for clean LRU page: Recovered
+2018-05-26 14:25:08,277 process          L0367 DEBUG| [stdout] [125026.959098] Injecting memory failure for pfn 0x80b5aa at process virtual address 0x7f4a92586000
+2018-05-26 14:25:08,277 process          L0367 DEBUG| [stdout] [125026.960269] Memory failure: 0x80b5aa: recovery action for clean LRU page: Recovered
+2018-05-26 14:25:08,277 process          L0367 DEBUG| [stdout] [125026.961163] Injecting memory failure for pfn 0x60902f at process virtual address 0x7f4a92587000
+2018-05-26 14:25:08,277 process          L0367 DEBUG| [stdout] [125026.962358] Memory failure: 0x60902f: recovery action for clean LRU page: Recovered
+2018-05-26 14:25:08,277 process          L0367 DEBUG| [stdout] [125026.963422] Injecting memory failure for pfn 0x6acf3a at process virtual address 0x7f4a92588000
+2018-05-26 14:25:08,277 process          L0367 DEBUG| [stdout] [125026.964655] Memory failure: 0x6acf3a: recovery action for clean LRU page: Recovered
+2018-05-26 14:25:08,277 process          L0367 DEBUG| [stdout] [125026.965608] Injecting memory failure for pfn 0x81d442 at process virtual address 0x7f4a92589000
+2018-05-26 14:25:08,277 process          L0367 DEBUG| [stdout] [125026.966984] Memory failure: 0x81d442: recovery action for clean LRU page: Recovered
+2018-05-26 14:25:08,277 process          L0367 DEBUG| [stdout] [125026.991570] LTP: starting madvise02
+2018-05-26 14:25:08,277 process          L0367 DEBUG| [stdout] [125027.002686] LTP: starting pathconf01
+2018-05-26 14:25:08,277 process          L0367 DEBUG| [stdout] [125027.005754] LTP: starting pause01
+2018-05-26 14:25:08,278 process          L0367 DEBUG| [stdout] [125027.010977] LTP: starting pause02
+2018-05-26 14:25:08,278 process          L0367 DEBUG| [stdout] [125027.024182] LTP: starting pause03
+2018-05-26 14:25:08,278 process          L0367 DEBUG| [stdout] [125027.037447] LTP: starting personality01
+2018-05-26 14:25:08,278 process          L0367 DEBUG| [stdout] [125027.046668] LTP: starting pipe01
+2018-05-26 14:25:08,278 process          L0367 DEBUG| [stdout] [125027.050238] LTP: starting pipe02
+2018-05-26 14:25:08,278 process          L0367 DEBUG| [stdout] [125027.054008] LTP: starting pipe03
+2018-05-26 14:25:08,278 process          L0367 DEBUG| [stdout] [125027.057206] LTP: starting pipe04
+2018-05-26 14:25:08,278 process          L0367 DEBUG| [stdout] [125027.061003] LTP: starting pipe05
+2018-05-26 14:25:08,278 process          L0367 DEBUG| [stdout] [125027.063987] LTP: starting pipe06
+2018-05-26 14:25:08,278 process          L0367 DEBUG| [stdout] [125027.069171] LTP: starting pipe07
+2018-05-26 14:25:08,278 process          L0367 DEBUG| [stdout] [125027.073070] LTP: starting pipe08
+2018-05-26 14:25:08,278 process          L0367 DEBUG| [stdout] [125027.075659] LTP: starting pipe09
+2018-05-26 14:25:08,279 process          L0367 DEBUG| [stdout] [125027.079136] LTP: starting pipe10
+2018-05-26 14:25:08,279 process          L0367 DEBUG| [stdout] [125027.082056] LTP: starting pipe11
+2018-05-26 14:25:08,279 process          L0367 DEBUG| [stdout] [125027.095015] LTP: starting poll01
+2018-05-26 14:25:08,279 process          L0367 DEBUG| [stdout] [125027.098496] LTP: starting prctl01
+2018-05-26 14:25:08,279 process          L0367 DEBUG| [stdout] [125027.102123] LTP: starting prctl02
+2018-05-26 14:25:08,279 process          L0367 DEBUG| [stdout] [125027.105273] LTP: starting pread01
+2018-05-26 14:25:08,279 process          L0367 DEBUG| [stdout] [125027.107853] LTP: starting pread02
+2018-05-26 14:25:08,279 process          L0367 DEBUG| [stdout] [125027.110546] LTP: starting pread03
+2018-05-26 14:25:08,279 process          L0367 DEBUG| [stdout] [125027.113152] LTP: starting preadv01
+2018-05-26 14:25:08,279 process          L0367 DEBUG| [stdout] [125027.116451] LTP: starting preadv02
+2018-05-26 14:25:08,279 process          L0367 DEBUG| [stdout] [125027.120160] LTP: starting preadv03
+2018-05-26 14:25:08,279 process          L0367 DEBUG| [stdout] [125027.618708] EXT4-fs (loop1): mounting ext2 file system using the ext4 subsystem
+2018-05-26 14:25:08,279 process          L0367 DEBUG| [stdout] [125027.653207] EXT4-fs (loop1): mounted filesystem without journal. Opts: (null)
+2018-05-26 14:25:08,280 process          L0367 DEBUG| [stdout] [125028.370704] EXT4-fs (loop1): mounting ext3 file system using the ext4 subsystem
+2018-05-26 14:25:08,280 process          L0367 DEBUG| [stdout] [125028.404301] EXT4-fs (loop1): mounted filesystem with ordered data mode. Opts: (null)
+2018-05-26 14:25:08,280 process          L0367 DEBUG| [stdout] [125029.089171] EXT4-fs (loop1): mounted filesystem with ordered data mode. Opts: (null)
+2018-05-26 14:25:08,280 process          L0367 DEBUG| [stdout] [125034.575172] LTP: starting profil01
+2018-05-26 14:25:08,280 process          L0367 DEBUG| [stdout] [125039.577975] LTP: starting pselect01
+2018-05-26 14:25:08,280 process          L0367 DEBUG| [stdout] [125047.922801] LTP: starting pselect02
+2018-05-26 14:25:08,280 process          L0367 DEBUG| [stdout] [125047.926023] LTP: starting pselect03
+2018-05-26 14:25:08,280 process          L0367 DEBUG| [stdout] [125047.929939] LTP: starting ptrace01
+2018-05-26 14:25:08,280 process          L0367 DEBUG| [stdout] [125047.933618] LTP: starting ptrace02
+2018-05-26 14:25:08,280 process          L0367 DEBUG| [stdout] [125047.937227] LTP: starting ptrace03
+2018-05-26 14:25:08,280 process          L0367 DEBUG| [stdout] [125047.940399] LTP: starting ptrace05
+2018-05-26 14:25:08,280 process          L0367 DEBUG| [stdout] [125047.956084] LTP: starting pwrite01
+2018-05-26 14:25:08,280 process          L0367 DEBUG| [stdout] [125047.958946] LTP: starting pwrite02
+2018-05-26 14:25:08,281 process          L0367 DEBUG| [stdout] [125047.962104] LTP: starting pwrite04
+2018-05-26 14:25:08,281 process          L0367 DEBUG| [stdout] [125047.964495] LTP: starting pwrite01_64
+2018-05-26 14:25:08,281 process          L0367 DEBUG| [stdout] [125047.967469] LTP: starting pwrite02_64
+2018-05-26 14:25:08,281 process          L0367 DEBUG| [stdout] [125047.970641] LTP: starting pwrite04_64
+2018-05-26 14:25:08,281 process          L0367 DEBUG| [stdout] [125047.972736] LTP: starting pwritev01
+2018-05-26 14:25:08,281 process          L0367 DEBUG| [stdout] [125047.975559] LTP: starting pwritev02
+2018-05-26 14:25:08,281 process          L0367 DEBUG| [stdout] [125047.978602] LTP: starting pwritev03
+2018-05-26 14:25:08,281 process          L0367 DEBUG| [stdout] [125048.482446] EXT4-fs (loop1): mounting ext2 file system using the ext4 subsystem
+2018-05-26 14:25:08,281 process          L0367 DEBUG| [stdout] [125048.517269] EXT4-fs (loop1): mounted filesystem without journal. Opts: (null)
+2018-05-26 14:25:08,281 process          L0367 DEBUG| [stdout] [125049.262437] EXT4-fs (loop1): mounting ext3 file system using the ext4 subsystem
+2018-05-26 14:25:08,281 process          L0367 DEBUG| [stdout] [125049.294368] EXT4-fs (loop1): mounted filesystem with ordered data mode. Opts: (null)
+2018-05-26 14:25:08,281 process          L0367 DEBUG| [stdout] [125049.929344] EXT4-fs (loop1): mounted filesystem with ordered data mode. Opts: (null)
+2018-05-26 14:25:08,282 process          L0367 DEBUG| [stdout] [125055.454863] LTP: starting read01
+2018-05-26 14:25:08,282 process          L0367 DEBUG| [stdout] [125055.458703] LTP: starting read02
+2018-05-26 14:25:08,282 process          L0367 DEBUG| [stdout] [125055.463136] LTP: starting read03
+2018-05-26 14:25:08,282 process          L0367 DEBUG| [stdout] [125055.465774] LTP: starting read04
+2018-05-26 14:25:08,282 process          L0367 DEBUG| [stdout] [125055.469112] LTP: starting readdir01
+2018-05-26 14:25:08,282 process          L0367 DEBUG| [stdout] [125055.472070] LTP: starting readdir02
+2018-05-26 14:25:08,282 process          L0367 DEBUG| [stdout] [125055.474084] LTP: starting readdir21
+2018-05-26 14:25:08,282 process          L0367 DEBUG| [stdout] [125055.476089] LTP: starting readlink01A (symlink01 -T readlink01)
+2018-05-26 14:25:08,282 process          L0367 DEBUG| [stdout] [125055.480551] LTP: starting readlink01
+2018-05-26 14:25:08,282 process          L0367 DEBUG| [stdout] [125055.485087] LTP: starting readlink03
+2018-05-26 14:25:08,282 process          L0367 DEBUG| [stdout] [125055.489220] LTP: starting readv01
+2018-05-26 14:25:08,282 process          L0367 DEBUG| [stdout] [125055.491385] LTP: starting readv02
+2018-05-26 14:25:08,282 process          L0367 DEBUG| [stdout] [125055.493790] LTP: starting readv03
+2018-05-26 14:25:08,283 process          L0367 DEBUG| [stdout] [125055.496247] LTP: starting reboot01
+2018-05-26 14:25:08,283 process          L0367 DEBUG| [stdout] [125055.498131] LTP: starting reboot02
+2018-05-26 14:25:08,283 process          L0367 DEBUG| [stdout] [125055.500634] LTP: starting recv01
+2018-05-26 14:25:08,283 process          L0367 DEBUG| [stdout] [125055.503564] LTP: starting recvfrom01
+2018-05-26 14:25:08,283 process          L0367 DEBUG| [stdout] [125055.506748] LTP: starting recvmsg01
+2018-05-26 14:25:08,283 process          L0367 DEBUG| [stdout] [125055.509693] LTP: starting removexattr01
+2018-05-26 14:25:08,283 process          L0367 DEBUG| [stdout] [125055.512338] LTP: starting removexattr02
+2018-05-26 14:25:08,283 process          L0367 DEBUG| [stdout] [125055.514981] LTP: starting rename01
+2018-05-26 14:25:08,283 process          L0367 DEBUG| [stdout] [125055.517547] LTP: starting rename01A (symlink01 -T rename01)
+2018-05-26 14:25:08,283 process          L0367 DEBUG| [stdout] [125055.520464] LTP: starting rename02
+2018-05-26 14:25:08,283 process          L0367 DEBUG| [stdout] [125055.523215] LTP: starting rename03
+2018-05-26 14:25:08,283 process          L0367 DEBUG| [stdout] [125055.526248] LTP: starting rename04
+2018-05-26 14:25:08,284 process          L0367 DEBUG| [stdout] [125055.528667] LTP: starting rename05
+2018-05-26 14:25:08,284 process          L0367 DEBUG| [stdout] [125055.530881] LTP: starting rename06
+2018-05-26 14:25:08,284 process          L0367 DEBUG| [stdout] [125055.533701] LTP: starting rename07
+2018-05-26 14:25:08,284 process          L0367 DEBUG| [stdout] [125055.536111] LTP: starting rename08
+2018-05-26 14:25:08,284 process          L0367 DEBUG| [stdout] [125055.538797] LTP: starting rename09
+2018-05-26 14:25:08,284 process          L0367 DEBUG| [stdout] [125055.543458] LTP: starting rename10
+2018-05-26 14:25:08,284 process          L0367 DEBUG| [stdout] [125055.546164] LTP: starting rename11
+2018-05-26 14:25:08,284 process          L0367 DEBUG| [stdout] [125056.090358] EXT4-fs (loop1): mounting ext2 file system using the ext4 subsystem
+2018-05-26 14:25:08,284 process          L0367 DEBUG| [stdout] [125056.123910] EXT4-fs (loop1): mounted filesystem without journal. Opts: (null)
+2018-05-26 14:25:08,284 process          L0367 DEBUG| [stdout] [125060.804385] EXT4-fs (loop1): re-mounted. Opts: (null)
+2018-05-26 14:25:08,284 process          L0367 DEBUG| [stdout] [125060.837930] EXT4-fs (loop1): re-mounted. Opts: (null)
+2018-05-26 14:25:08,284 process          L0367 DEBUG| [stdout] [125060.955945] LTP: starting rename12
+2018-05-26 14:25:08,284 process          L0367 DEBUG| [stdout] [125060.960423] LTP: starting rename13
+2018-05-26 14:25:08,285 process          L0367 DEBUG| [stdout] [125060.963500] LTP: starting rename14
+2018-05-26 14:25:08,285 process          L0367 DEBUG| [stdout] [125065.967272] LTP: starting request_key01
+2018-05-26 14:25:08,285 process          L0367 DEBUG| [stdout] [125065.970810] LTP: starting request_key02
+2018-05-26 14:25:08,285 process          L0367 DEBUG| [stdout] [125067.974256] LTP: starting rmdir01
+2018-05-26 14:25:08,285 process          L0367 DEBUG| [stdout] [125067.978134] LTP: starting rmdir02
+2018-05-26 14:25:08,285 process          L0367 DEBUG| [stdout] [125067.998974] LTP: starting rmdir03
+2018-05-26 14:25:08,285 process          L0367 DEBUG| [stdout] [125068.003361] LTP: starting rmdir03A (symlink01 -T rmdir03)
+2018-05-26 14:25:08,285 process          L0367 DEBUG| [stdout] [125068.006260] LTP: starting sbrk01
+2018-05-26 14:25:08,285 process          L0367 DEBUG| [stdout] [125068.008417] LTP: starting sbrk02
+2018-05-26 14:25:08,285 process          L0367 DEBUG| [stdout] [125068.012559] LTP: starting sbrk03
+2018-05-26 14:25:08,285 process          L0367 DEBUG| [stdout] [125068.015473] LTP: starting sched_get_priority_max01
+2018-05-26 14:25:08,285 process          L0367 DEBUG| [stdout] [125068.016960] LTP: starting sched_get_priority_max02
+2018-05-26 14:25:08,285 process          L0367 DEBUG| [stdout] [125068.018209] LTP: starting sched_get_priority_min01
+2018-05-26 14:25:08,286 process          L0367 DEBUG| [stdout] [125068.019187] LTP: starting sched_get_priority_min02
+2018-05-26 14:25:08,286 process          L0367 DEBUG| [stdout] [125068.020433] LTP: starting sched_getparam01
+2018-05-26 14:25:08,286 process          L0367 DEBUG| [stdout] [125068.021555] LTP: starting sched_getparam02
+2018-05-26 14:25:08,286 process          L0367 DEBUG| [stdout] [125068.023264] LTP: starting sched_getparam03
+2018-05-26 14:25:08,286 process          L0367 DEBUG| [stdout] [125068.024634] LTP: starting sched_rr_get_interval01
+2018-05-26 14:25:08,286 process          L0367 DEBUG| [stdout] [125068.025863] LTP: starting sched_rr_get_interval02
+2018-05-26 14:25:08,286 process          L0367 DEBUG| [stdout] [125068.027319] LTP: starting sched_rr_get_interval03
+2018-05-26 14:25:08,286 process          L0367 DEBUG| [stdout] [125068.028699] LTP: starting sched_setparam01
+2018-05-26 14:25:08,286 process          L0367 DEBUG| [stdout] [125068.029852] LTP: starting sched_setparam02
+2018-05-26 14:25:08,286 process          L0367 DEBUG| [stdout] [125068.030937] LTP: starting sched_setparam03
+2018-05-26 14:25:08,286 process          L0367 DEBUG| [stdout] [125068.043434] LTP: starting sched_setparam04
+2018-05-26 14:25:08,286 process          L0367 DEBUG| [stdout] [125068.045146] LTP: starting sched_setparam05
+2018-05-26 14:25:08,287 process          L0367 DEBUG| [stdout] [125068.047623] LTP: starting sched_getscheduler01
+2018-05-26 14:25:08,287 process          L0367 DEBUG| [stdout] [125068.048883] LTP: starting sched_getscheduler02
+2018-05-26 14:25:08,287 process          L0367 DEBUG| [stdout] [125068.051181] LTP: starting sched_setscheduler01
+2018-05-26 14:25:08,287 process          L0367 DEBUG| [stdout] [125068.053280] LTP: starting sched_setscheduler02
+2018-05-26 14:25:08,287 process          L0367 DEBUG| [stdout] [125068.056386] LTP: starting sched_setscheduler03
+2018-05-26 14:25:08,287 process          L0367 DEBUG| [stdout] [125068.060247] LTP: starting sched_yield01
+2018-05-26 14:25:08,287 process          L0367 DEBUG| [stdout] [125068.062705] LTP: starting select01
+2018-05-26 14:25:08,287 process          L0367 DEBUG| [stdout] [125068.066943] LTP: starting select02
+2018-05-26 14:25:08,287 process          L0367 DEBUG| [stdout] [125068.068436] LTP: starting select03
+2018-05-26 14:25:08,287 process          L0367 DEBUG| [stdout] [125068.070201] LTP: starting select04
+2018-05-26 14:25:08,287 process          L0367 DEBUG| [stdout] [125076.421900] LTP: starting semctl01
+2018-05-26 14:25:08,287 process          L0367 DEBUG| [stdout] [125076.982174] LTP: starting semctl02
+2018-05-26 14:25:08,287 process          L0367 DEBUG| [stdout] [125076.985265] LTP: starting semctl03
+2018-05-26 14:25:08,288 process          L0367 DEBUG| [stdout] [125076.987375] LTP: starting semctl04
+2018-05-26 14:25:08,288 process          L0367 DEBUG| [stdout] [125076.990522] LTP: starting semctl05
+2018-05-26 14:25:08,288 process          L0367 DEBUG| [stdout] [125076.992638] LTP: starting semctl06
+2018-05-26 14:25:08,288 process          L0367 DEBUG| [stdout] [125077.004763] LTP: starting semctl07
+2018-05-26 14:25:08,288 process          L0367 DEBUG| [stdout] [125077.006502] LTP: starting semget01
+2018-05-26 14:25:08,288 process          L0367 DEBUG| [stdout] [125077.008251] LTP: starting semget02
+2018-05-26 14:25:08,288 process          L0367 DEBUG| [stdout] [125077.010338] LTP: starting semget03
+2018-05-26 14:25:08,288 process          L0367 DEBUG| [stdout] [125077.012050] LTP: starting semget05
+2018-05-26 14:25:08,288 process          L0367 DEBUG| [stdout] [125077.049968] LTP: starting semget06
+2018-05-26 14:25:08,288 process          L0367 DEBUG| [stdout] [125077.051792] LTP: starting semop01
+2018-05-26 14:25:08,288 process          L0367 DEBUG| [stdout] [125077.053554] LTP: starting semop02
+2018-05-26 14:25:08,288 process          L0367 DEBUG| [stdout] [125077.055704] LTP: starting semop03
+2018-05-26 14:25:08,288 process          L0367 DEBUG| [stdout] [125077.057395] LTP: starting semop04
+2018-05-26 14:25:08,289 process          L0367 DEBUG| [stdout] [125077.059043] LTP: starting semop05
+2018-05-26 14:25:08,289 process          L0367 DEBUG| [stdout] [125077.093324] LTP: starting send01
+2018-05-26 14:25:08,289 process          L0367 DEBUG| [stdout] [125077.095188] LTP: starting sendfile02
+2018-05-26 14:25:08,289 process          L0367 DEBUG| [stdout] [125077.097850] LTP: starting sendfile03
+2018-05-26 14:25:08,289 process          L0367 DEBUG| [stdout] [125077.100084] LTP: starting sendmsg01
+2018-05-26 14:25:08,289 process          L0367 DEBUG| [stdout] [125077.104791] LTP: starting sendto01
+2018-05-26 14:25:08,289 process          L0367 DEBUG| [stdout] [125077.107297] LTP: starting setdomainname01
+2018-05-26 14:25:08,289 process          L0367 DEBUG| [stdout] [125077.108892] LTP: starting setdomainname02
+2018-05-26 14:25:08,289 process          L0367 DEBUG| [stdout] [125077.110862] LTP: starting setdomainname03
+2018-05-26 14:25:08,289 process          L0367 DEBUG| [stdout] [125077.112197] LTP: starting setfsgid01
+2018-05-26 14:25:08,289 process          L0367 DEBUG| [stdout] [125077.113209] LTP: starting setfsgid02
+2018-05-26 14:25:08,289 process          L0367 DEBUG| [stdout] [125077.114518] LTP: starting setfsgid03
+2018-05-26 14:25:08,289 process          L0367 DEBUG| [stdout] [125077.115693] LTP: starting setfsuid01
+2018-05-26 14:25:08,290 process          L0367 DEBUG| [stdout] [125077.116641] LTP: starting setfsuid02
+2018-05-26 14:25:08,290 process          L0367 DEBUG| [stdout] [125077.117828] LTP: starting setfsuid03
+2018-05-26 14:25:08,290 process          L0367 DEBUG| [stdout] [125077.119128] LTP: starting setfsuid04
+2018-05-26 14:25:08,290 process          L0367 DEBUG| [stdout] [125077.122870] LTP: starting setgid01
+2018-05-26 14:25:08,290 process          L0367 DEBUG| [stdout] [125077.124517] LTP: starting setgid02
+2018-05-26 14:25:08,290 process          L0367 DEBUG| [stdout] [125077.127068] LTP: starting setgid03
+2018-05-26 14:25:08,290 process          L0367 DEBUG| [stdout] [125077.128369] LTP: starting setegid01
+2018-05-26 14:25:08,290 process          L0367 DEBUG| [stdout] [125077.129555] LTP: starting setegid02
+2018-05-26 14:25:08,290 process          L0367 DEBUG| [stdout] [125077.130909] LTP: starting setgroups01
+2018-05-26 14:25:08,290 process          L0367 DEBUG| [stdout] [125077.131949] LTP: starting setgroups02
+2018-05-26 14:25:08,290 process          L0367 DEBUG| [stdout] [125077.133175] LTP: starting setgroups03
+2018-05-26 14:25:08,290 process          L0367 DEBUG| [stdout] [125077.134498] LTP: starting setgroups04
+2018-05-26 14:25:08,291 process          L0367 DEBUG| [stdout] [125077.135606] LTP: starting sethostname01
+2018-05-26 14:25:08,291 process          L0367 DEBUG| [stdout] [125077.136622] LTP: starting sethostname02
+2018-05-26 14:25:08,291 process          L0367 DEBUG| [stdout] [125077.137621] LTP: starting sethostname03
+2018-05-26 14:25:08,291 process          L0367 DEBUG| [stdout] [125077.138979] LTP: starting setitimer01
+2018-05-26 14:25:08,291 process          L0367 DEBUG| [stdout] [125077.139937] LTP: starting setitimer02
+2018-05-26 14:25:08,291 process          L0367 DEBUG| [stdout] [125077.140872] LTP: starting setitimer03
+2018-05-26 14:25:08,291 process          L0367 DEBUG| [stdout] [125077.141840] LTP: starting setpgid01
+2018-05-26 14:25:08,291 process          L0367 DEBUG| [stdout] [125077.143256] LTP: starting setpgid02
+2018-05-26 14:25:08,291 process          L0367 DEBUG| [stdout] [125077.144964] LTP: starting setpgid03
+2018-05-26 14:25:08,291 process          L0367 DEBUG| [stdout] [125077.209544] LTP: starting setpgrp01
+2018-05-26 14:25:08,291 process          L0367 DEBUG| [stdout] [125077.212204] LTP: starting setpgrp02
+2018-05-26 14:25:08,291 process          L0367 DEBUG| [stdout] [125077.214610] LTP: starting setpriority01
+2018-05-26 14:25:08,291 process          L0367 DEBUG| [stdout] [125078.124556] LTP: starting setpriority02
+2018-05-26 14:25:08,292 process          L0367 DEBUG| [stdout] [125078.129314] LTP: starting setregid01
+2018-05-26 14:25:08,292 process          L0367 DEBUG| [stdout] [125078.131362] LTP: starting setregid02
+2018-05-26 14:25:08,292 process          L0367 DEBUG| [stdout] [125078.134033] LTP: starting setregid03
+2018-05-26 14:25:08,292 process          L0367 DEBUG| [stdout] [125078.137041] LTP: starting setregid04
+2018-05-26 14:25:08,292 process          L0367 DEBUG| [stdout] [125078.139691] LTP: starting setresgid01
+2018-05-26 14:25:08,292 process          L0367 DEBUG| [stdout] [125078.142242] LTP: starting setresgid02
+2018-05-26 14:25:08,292 process          L0367 DEBUG| [stdout] [125078.144584] LTP: starting setresgid03
+2018-05-26 14:25:08,292 process          L0367 DEBUG| [stdout] [125078.146986] LTP: starting setresgid04
+2018-05-26 14:25:08,292 process          L0367 DEBUG| [stdout] [125078.149463] LTP: starting setresuid01
+2018-05-26 14:25:08,292 process          L0367 DEBUG| [stdout] [125078.151748] LTP: starting setresuid02
+2018-05-26 14:25:08,292 process          L0367 DEBUG| [stdout] [125078.154376] LTP: starting setresuid03
+2018-05-26 14:25:08,292 process          L0367 DEBUG| [stdout] [125078.156928] LTP: starting setresuid04
+2018-05-26 14:25:08,292 process          L0367 DEBUG| [stdout] [125078.159671] LTP: starting setresuid05
+2018-05-26 14:25:08,293 process          L0367 DEBUG| [stdout] [125078.162386] LTP: starting setreuid01
+2018-05-26 14:25:08,293 process          L0367 DEBUG| [stdout] [125078.164174] LTP: starting setreuid02
+2018-05-26 14:25:08,293 process          L0367 DEBUG| [stdout] [125078.165797] LTP: starting setreuid03
+2018-05-26 14:25:08,293 process          L0367 DEBUG| [stdout] [125078.167815] LTP: starting setreuid04
+2018-05-26 14:25:08,293 process          L0367 DEBUG| [stdout] [125078.170625] LTP: starting setreuid05
+2018-05-26 14:25:08,293 process          L0367 DEBUG| [stdout] [125078.173389] LTP: starting setreuid06
+2018-05-26 14:25:08,293 process          L0367 DEBUG| [stdout] [125078.175049] LTP: starting setreuid07
+2018-05-26 14:25:08,293 process          L0367 DEBUG| [stdout] [125078.178022] LTP: starting setrlimit01
+2018-05-26 14:25:08,293 process          L0367 DEBUG| [stdout] [125078.182163] LTP: starting setrlimit02
+2018-05-26 14:25:08,293 process          L0367 DEBUG| [stdout] [125078.185366] LTP: starting setrlimit03
+2018-05-26 14:25:08,293 process          L0367 DEBUG| [stdout] [125078.188182] LTP: starting setsid01
+2018-05-26 14:25:08,293 process          L0367 DEBUG| [stdout] [125079.191583] LTP: starting setsockopt01
+2018-05-26 14:25:08,294 process          L0367 DEBUG| [stdout] [125079.193493] LTP: starting settimeofday01
+2018-05-26 14:25:08,294 process          L0367 DEBUG| [stdout] [125079.196260] LTP: starting settimeofday02
+2018-05-26 14:25:08,294 process          L0367 DEBUG| [stdout] [125079.199470] LTP: starting setuid01
+2018-05-26 14:25:08,294 process          L0367 DEBUG| [stdout] [125079.202881] LTP: starting setuid03
+2018-05-26 14:25:08,294 process          L0367 DEBUG| [stdout] [125079.205950] LTP: starting setuid04
+2018-05-26 14:25:08,294 process          L0367 DEBUG| [stdout] [125079.209694] LTP: starting shmat01
+2018-05-26 14:25:08,294 process          L0367 DEBUG| [stdout] [125079.213367] shmat01[122282]: segfault at 7f17db591000 ip 0000559c603538a9 sp 00007fffb0e891e0 error 6 in shmat01[559c6034f000+19000]
+2018-05-26 14:25:08,294 process          L0367 DEBUG| [stdout] [125079.215912] LTP: starting shmat02
+2018-05-26 14:25:08,294 process          L0367 DEBUG| [stdout] [125079.219780] LTP: starting shmctl01
+2018-05-26 14:25:08,294 process          L0367 DEBUG| [stdout] [125080.304124] LTP: starting shmctl02
+2018-05-26 14:25:08,294 process          L0367 DEBUG| [stdout] [125080.307171] LTP: starting shmctl03
+2018-05-26 14:25:08,294 process          L0367 DEBUG| [stdout] [125080.310677] LTP: starting shmctl04
+2018-05-26 14:25:08,294 process          L0367 DEBUG| [stdout] [125080.313079] LTP: starting shmdt01
+2018-05-26 14:25:08,295 process          L0367 DEBUG| [stdout] [125080.315633] LTP: starting shmdt02
+2018-05-26 14:25:08,295 process          L0367 DEBUG| [stdout] [125080.317725] LTP: starting shmget01
+2018-05-26 14:25:08,295 process          L0367 DEBUG| [stdout] [125080.319306] LTP: starting shmget02
+2018-05-26 14:25:08,295 process          L0367 DEBUG| [stdout] [125080.321740] LTP: starting shmget03
+2018-05-26 14:25:08,295 process          L0367 DEBUG| [stdout] [125080.337686] LTP: starting shmget04
+2018-05-26 14:25:08,295 process          L0367 DEBUG| [stdout] [125080.340495] LTP: starting shmget05
+2018-05-26 14:25:08,295 process          L0367 DEBUG| [stdout] [125080.344414] LTP: starting sigaction01
+2018-05-26 14:25:08,295 process          L0367 DEBUG| [stdout] [125080.346925] LTP: starting sigaction02
+2018-05-26 14:25:08,295 process          L0367 DEBUG| [stdout] [125080.349282] LTP: starting sigaltstack01
+2018-05-26 14:25:08,295 process          L0367 DEBUG| [stdout] [125080.351481] LTP: starting sigaltstack02
+2018-05-26 14:25:08,295 process          L0367 DEBUG| [stdout] [125080.353295] LTP: starting sighold02
+2018-05-26 14:25:08,295 process          L0367 DEBUG| [stdout] [125080.396285] LTP: starting signal01
+2018-05-26 14:25:08,295 process          L0367 DEBUG| [stdout] [125080.400488] LTP: starting signal02
+2018-05-26 14:25:08,296 process          L0367 DEBUG| [stdout] [125080.402803] LTP: starting signal03
+2018-05-26 14:25:08,296 process          L0367 DEBUG| [stdout] [125080.405153] LTP: starting signal04
+2018-05-26 14:25:08,296 process          L0367 DEBUG| [stdout] [125080.407102] LTP: starting signal05
+2018-05-26 14:25:08,296 process          L0367 DEBUG| [stdout] [125080.408939] LTP: starting signal06
+2018-05-26 14:25:08,296 process          L0367 DEBUG| [stdout] [125081.257346] LTP: starting sigpending02
+2018-05-26 14:25:08,296 process          L0367 DEBUG| [stdout] [125081.260161] LTP: starting sigprocmask01
+2018-05-26 14:25:08,296 process          L0367 DEBUG| [stdout] [125081.262590] LTP: starting sigrelse01
+2018-05-26 14:25:08,296 process          L0367 DEBUG| [stdout] [125081.265997] LTP: starting sigsuspend01
+2018-05-26 14:25:08,296 process          L0367 DEBUG| [stdout] [125086.271911] LTP: starting socket01
+2018-05-26 14:25:08,296 process          L0367 DEBUG| [stdout] [125086.290747] LTP: starting socketcall01
+2018-05-26 14:25:08,296 process          L0367 DEBUG| [stdout] [125086.292419] LTP: starting socketcall02
+2018-05-26 14:25:08,296 process          L0367 DEBUG| [stdout] [125086.294372] LTP: starting socketcall03
+2018-05-26 14:25:08,297 process          L0367 DEBUG| [stdout] [125086.296290] LTP: starting socketcall04
+2018-05-26 14:25:08,297 process          L0367 DEBUG| [stdout] [125086.297941] LTP: starting socketpair01
+2018-05-26 14:25:08,297 process          L0367 DEBUG| [stdout] [125086.310967] LTP: starting sockioctl01
+2018-05-26 14:25:08,297 process          L0367 DEBUG| [stdout] [125086.313049] LTP: starting stat01
+2018-05-26 14:25:08,297 process          L0367 DEBUG| [stdout] [125086.315740] LTP: starting stat02
+2018-05-26 14:25:08,297 process          L0367 DEBUG| [stdout] [125086.318073] LTP: starting stat03
+2018-05-26 14:25:08,297 process          L0367 DEBUG| [stdout] [125086.321095] LTP: starting stat04 (symlink01 -T stat04)
+2018-05-26 14:25:08,297 process          L0367 DEBUG| [stdout] [125086.323220] LTP: starting stat05
+2018-05-26 14:25:08,297 process          L0367 DEBUG| [stdout] [125086.324886] LTP: starting stat06
+2018-05-26 14:25:08,297 process          L0367 DEBUG| [stdout] [125086.326532] LTP: starting statfs01
+2018-05-26 14:25:08,297 process          L0367 DEBUG| [stdout] [125086.328627] LTP: starting statfs02
+2018-05-26 14:25:08,297 process          L0367 DEBUG| [stdout] [125086.331065] LTP: starting statfs03
+2018-05-26 14:25:08,297 process          L0367 DEBUG| [stdout] [125086.334358] LTP: starting statvfs01
+2018-05-26 14:25:08,298 process          L0367 DEBUG| [stdout] [125086.336519] LTP: starting statvfs02
+2018-05-26 14:25:08,298 process          L0367 DEBUG| [stdout] [125086.338991] LTP: starting string01
+2018-05-26 14:25:08,298 process          L0367 DEBUG| [stdout] [125086.341579] LTP: starting swapoff01
+2018-05-26 14:25:08,298 process          L0367 DEBUG| [stdout] [125087.078560] Adding 65532k swap on ./swapfile01.  Priority:-3 extents:1 across:65532k FS
+2018-05-26 14:25:08,298 process          L0367 DEBUG| [stdout] [125087.140567] LTP: starting swapoff02
+2018-05-26 14:25:08,298 process          L0367 DEBUG| [stdout] [125087.143735] LTP: starting swapon01
+2018-05-26 14:25:08,298 process          L0367 DEBUG| [stdout] [125087.182779] Adding 36k swap on ./swapfile01.  Priority:-3 extents:1 across:36k FS
+2018-05-26 14:25:08,298 process          L0367 DEBUG| [stdout] [125087.207794] LTP: starting swapon02
+2018-05-26 14:25:08,298 process          L0367 DEBUG| [stdout] [125087.283729] Adding 36k swap on alreadyused.  Priority:-3 extents:1 across:36k FS
+2018-05-26 14:25:08,298 process          L0367 DEBUG| [stdout] [125087.285003] Unable to find swap-space signature
+2018-05-26 14:25:08,298 process          L0367 DEBUG| [stdout] [125087.315896] LTP: starting swapon03
+2018-05-26 14:25:08,298 process          L0367 DEBUG| [stdout] [125087.351055] Adding 36k swap on swapfile02.  Priority:-3 extents:1 across:36k FS
+2018-05-26 14:25:08,298 process          L0367 DEBUG| [stdout] [125087.384598] Adding 36k swap on swapfile03.  Priority:-4 extents:1 across:36k FS
+2018-05-26 14:25:08,299 process          L0367 DEBUG| [stdout] [125087.418345] Adding 36k swap on swapfile04.  Priority:-5 extents:1 across:36k FS
+2018-05-26 14:25:08,299 process          L0367 DEBUG| [stdout] [125087.460229] Adding 36k swap on swapfile05.  Priority:-6 extents:1 across:36k FS
+2018-05-26 14:25:08,299 process          L0367 DEBUG| [stdout] [125087.493899] Adding 36k swap on swapfile06.  Priority:-7 extents:1 across:36k FS
+2018-05-26 14:25:08,299 process          L0367 DEBUG| [stdout] [125087.527521] Adding 36k swap on swapfile07.  Priority:-8 extents:1 across:36k FS
+2018-05-26 14:25:08,299 process          L0367 DEBUG| [stdout] [125087.561243] Adding 36k swap on swapfile08.  Priority:-9 extents:1 across:36k FS
+2018-05-26 14:25:08,299 process          L0367 DEBUG| [stdout] [125087.594937] Adding 36k swap on swapfile09.  Priority:-10 extents:1 across:36k FS
+2018-05-26 14:25:08,299 process          L0367 DEBUG| [stdout] [125087.628519] Adding 36k swap on swapfile10.  Priority:-11 extents:1 across:36k FS
+2018-05-26 14:25:08,299 process          L0367 DEBUG| [stdout] [125087.662252] Adding 36k swap on swapfile11.  Priority:-12 extents:1 across:36k FS
+2018-05-26 14:25:08,299 process          L0367 DEBUG| [stdout] [125087.695774] Adding 36k swap on swapfile12.  Priority:-13 extents:1 across:36k FS
+2018-05-26 14:25:08,299 process          L0367 DEBUG| [stdout] [125087.737890] Adding 36k swap on swapfile13.  Priority:-14 extents:1 across:36k FS
+2018-05-26 14:25:08,299 process          L0367 DEBUG| [stdout] [125087.771654] Adding 36k swap on swapfile14.  Priority:-15 extents:1 across:36k FS
+2018-05-26 14:25:08,299 process          L0367 DEBUG| [stdout] [125087.805227] Adding 36k swap on swapfile15.  Priority:-16 extents:1 across:36k FS
+2018-05-26 14:25:08,300 process          L0367 DEBUG| [stdout] [125087.838914] Adding 36k swap on swapfile16.  Priority:-17 extents:1 across:36k FS
+2018-05-26 14:25:08,300 process          L0367 DEBUG| [stdout] [125087.873683] Adding 36k swap on swapfile17.  Priority:-18 extents:1 across:36k FS
+2018-05-26 14:25:08,300 process          L0367 DEBUG| [stdout] [125087.915737] Adding 36k swap on swapfile18.  Priority:-19 extents:1 across:36k FS
+2018-05-26 14:25:08,300 process          L0367 DEBUG| [stdout] [125087.949438] Adding 36k swap on swapfile19.  Priority:-20 extents:1 across:36k FS
+2018-05-26 14:25:08,300 process          L0367 DEBUG| [stdout] [125087.983094] Adding 36k swap on swapfile20.  Priority:-21 extents:1 across:36k FS
+2018-05-26 14:25:08,300 process          L0367 DEBUG| [stdout] [125088.025153] Adding 36k swap on swapfile21.  Priority:-22 extents:1 across:36k FS
+2018-05-26 14:25:08,300 process          L0367 DEBUG| [stdout] [125088.050509] Adding 36k swap on swapfile22.  Priority:-23 extents:1 across:36k FS
+2018-05-26 14:25:08,300 process          L0367 DEBUG| [stdout] [125088.084127] Adding 36k swap on swapfile23.  Priority:-24 extents:1 across:36k FS
+2018-05-26 14:25:08,300 process          L0367 DEBUG| [stdout] [125088.117839] Adding 36k swap on swapfile24.  Priority:-25 extents:1 across:36k FS
+2018-05-26 14:25:08,300 process          L0367 DEBUG| [stdout] [125088.159848] Adding 36k swap on swapfile25.  Priority:-26 extents:1 across:36k FS
+2018-05-26 14:25:08,300 process          L0367 DEBUG| [stdout] [125088.193572] Adding 36k swap on swapfile26.  Priority:-27 extents:1 across:36k FS
+2018-05-26 14:25:08,300 process          L0367 DEBUG| [stdout] [125088.227266] Adding 36k swap on swapfile27.  Priority:-28 extents:1 across:36k FS
+2018-05-26 14:25:08,300 process          L0367 DEBUG| [stdout] [125088.269179] Adding 36k swap on swapfile28.  Priority:-29 extents:1 across:36k FS
+2018-05-26 14:25:08,301 process          L0367 DEBUG| [stdout] [125088.302894] Adding 36k swap on swapfile29.  Priority:-30 extents:1 across:36k FS
+2018-05-26 14:25:08,301 process          L0367 DEBUG| [stdout] [125089.185916] LTP: starting symlink01
+2018-05-26 14:25:08,301 process          L0367 DEBUG| [stdout] [125089.191829] LTP: starting symlink02
+2018-05-26 14:25:08,301 process          L0367 DEBUG| [stdout] [125089.194724] LTP: starting symlink03
+2018-05-26 14:25:08,301 process          L0367 DEBUG| [stdout] [125089.198195] LTP: starting symlink04
+2018-05-26 14:25:08,301 process          L0367 DEBUG| [stdout] [125089.200675] LTP: starting symlink05
+2018-05-26 14:25:08,301 process          L0367 DEBUG| [stdout] [125089.202989] LTP: starting sync01
+2018-05-26 14:25:08,301 process          L0367 DEBUG| [stdout] [125089.387181] LTP: starting sync02
+2018-05-26 14:25:08,301 process          L0367 DEBUG| [stdout] [125089.666068] LTP: starting syscall01
+2018-05-26 14:25:08,301 process          L0367 DEBUG| [stdout] [125089.669156] LTP: starting sysconf01
+2018-05-26 14:25:08,301 process          L0367 DEBUG| [stdout] [125089.671306] LTP: starting sysctl01
+2018-05-26 14:25:08,301 process          L0367 DEBUG| [stdout] [125089.674127] LTP: starting sysctl03
+2018-05-26 14:25:08,302 process          L0367 DEBUG| [stdout] [125089.678162] LTP: starting sysctl04
+2018-05-26 14:25:08,302 process          L0367 DEBUG| [stdout] [125089.681203] LTP: starting sysfs01
+2018-05-26 14:25:08,302 process          L0367 DEBUG| [stdout] [125089.683186] LTP: starting sysfs02
+2018-05-26 14:25:08,302 process          L0367 DEBUG| [stdout] [125089.685341] LTP: starting sysfs03
+2018-05-26 14:25:08,302 process          L0367 DEBUG| [stdout] [125089.687300] LTP: starting sysfs04
+2018-05-26 14:25:08,302 process          L0367 DEBUG| [stdout] [125089.689298] LTP: starting sysfs05
+2018-05-26 14:25:08,302 process          L0367 DEBUG| [stdout] [125089.690987] LTP: starting sysfs06
+2018-05-26 14:25:08,302 process          L0367 DEBUG| [stdout] [125089.692909] LTP: starting sysinfo01
+2018-05-26 14:25:08,302 process          L0367 DEBUG| [stdout] [125089.694805] LTP: starting sysinfo02
+2018-05-26 14:25:08,302 process          L0367 DEBUG| [stdout] [125089.696734] LTP: starting syslog01
+2018-05-26 14:25:08,302 process          L0367 DEBUG| [stdout] [125095.777858] LTP: starting syslog02
+2018-05-26 14:25:08,302 process          L0367 DEBUG| [stdout] [125130.083703] LTP: starting syslog03
+2018-05-26 14:25:08,302 process          L0367 DEBUG| [stdout] [125136.164925] LTP: starting syslog04
+2018-05-26 14:25:08,303 process          L0367 DEBUG| [stdout] [125142.250016] LTP: starting syslog05
+2018-05-26 14:25:08,303 process          L0367 DEBUG| [stdout] [125168.340031] LTP: starting syslog06
+2018-05-26 14:25:08,303 process          L0367 DEBUG| [stdout] [125172.419929] LTP: starting syslog07
+2018-05-26 14:25:08,303 process          L0367 DEBUG| [stdout] [125178.531188] LTP: starting syslog08
+2018-05-26 14:25:08,303 process          L0367 DEBUG| [stdout] [125200.768444] LTP: starting syslog09
+2018-05-26 14:25:08,303 process          L0367 DEBUG| [stdout] [125206.856631] LTP: starting syslog10
+2018-05-26 14:25:08,303 process          L0367 DEBUG| [stdout] [125212.946607] LTP: starting syslog11
+2018-05-26 14:25:08,303 process          L0367 DEBUG| [stdout] [125212.949147] LTP: starting syslog12
+2018-05-26 14:25:08,303 process          L0367 DEBUG| [stdout] [125212.951741] LTP: starting times01
+2018-05-26 14:25:08,303 process          L0367 DEBUG| [stdout] [125212.953814] LTP: starting times03
+2018-05-26 14:25:08,303 process          L0367 DEBUG| [stdout] [125220.258570] LTP: starting truncate01
+2018-05-26 14:25:08,303 process          L0367 DEBUG| [stdout] [125220.260984] LTP: starting truncate02
+2018-05-26 14:25:08,304 process          L0367 DEBUG| [stdout] [125220.263413] LTP: starting truncate03
+2018-05-26 14:25:08,304 process          L0367 DEBUG| [stdout] [125220.265343] LTP: starting umask01
+2018-05-26 14:25:08,304 process          L0367 DEBUG| [stdout] [125220.280530] LTP: starting uname01
+2018-05-26 14:25:08,304 process          L0367 DEBUG| [stdout] [125220.281880] LTP: starting uname02
+2018-05-26 14:25:08,304 process          L0367 DEBUG| [stdout] [125220.282543] LTP: starting uname03
+2018-05-26 14:25:08,304 process          L0367 DEBUG| [stdout] [125220.283746] LTP: starting unlink01 (symlink01 -T unlink01)
+2018-05-26 14:25:08,304 process          L0367 DEBUG| [stdout] [125220.284953] LTP: starting unlink05
+2018-05-26 14:25:08,304 process          L0367 DEBUG| [stdout] [125220.286771] LTP: starting unlink07
+2018-05-26 14:25:08,304 process          L0367 DEBUG| [stdout] [125220.289054] LTP: starting unlink08
+2018-05-26 14:25:08,304 process          L0367 DEBUG| [stdout] [125220.293117] LTP: starting umount2_01
+2018-05-26 14:25:08,304 process          L0367 DEBUG| [stdout] [125220.713775] EXT4-fs (loop1): mounting ext2 file system using the ext4 subsystem
+2018-05-26 14:25:08,304 process          L0367 DEBUG| [stdout] [125220.742122] EXT4-fs (loop1): mounted filesystem without journal. Opts: (null)
+2018-05-26 14:25:08,304 process          L0367 DEBUG| [stdout] [125220.929728] EXT4-fs (loop1): mounting ext2 file system using the ext4 subsystem
+2018-05-26 14:25:08,305 process          L0367 DEBUG| [stdout] [125220.959057] EXT4-fs (loop1): mounted filesystem without journal. Opts: (null)
+2018-05-26 14:25:08,305 process          L0367 DEBUG| [stdout] [125221.062136] LTP: starting umount2_02
+2018-05-26 14:25:08,305 process          L0367 DEBUG| [stdout] [125221.525708] EXT4-fs (loop1): mounting ext2 file system using the ext4 subsystem
+2018-05-26 14:25:08,305 process          L0367 DEBUG| [stdout] [125221.560650] EXT4-fs (loop1): mounted filesystem without journal. Opts: (null)
+2018-05-26 14:25:08,305 process          L0367 DEBUG| [stdout] [125221.642300] LTP: starting umount2_03
+2018-05-26 14:25:08,305 process          L0367 DEBUG| [stdout] [125222.101811] EXT4-fs (loop1): mounting ext2 file system using the ext4 subsystem
+2018-05-26 14:25:08,305 process          L0367 DEBUG| [stdout] [125222.137204] EXT4-fs (loop1): mounted filesystem without journal. Opts: (null)
+2018-05-26 14:25:08,305 process          L0367 DEBUG| [stdout] [125222.245671] EXT4-fs (loop1): mounting ext2 file system using the ext4 subsystem
+2018-05-26 14:25:08,305 process          L0367 DEBUG| [stdout] [125222.280469] EXT4-fs (loop1): mounted filesystem without journal. Opts: (null)
+2018-05-26 14:25:08,305 process          L0367 DEBUG| [stdout] [125222.370265] LTP: starting ustat01
+2018-05-26 14:25:08,305 process          L0367 DEBUG| [stdout] [125222.372706] LTP: starting ustat02
+2018-05-26 14:25:08,305 process          L0367 DEBUG| [stdout] [125222.375291] LTP: starting utime01
+2018-05-26 14:25:08,305 process          L0367 DEBUG| [stdout] [125226.378586] LTP: starting utime01A (symlink01 -T utime01)
+2018-05-26 14:25:08,306 process          L0367 DEBUG| [stdout] [125226.381589] LTP: starting utime02
+2018-05-26 14:25:08,306 process          L0367 DEBUG| [stdout] [125230.385744] LTP: starting utime03
+2018-05-26 14:25:08,306 process          L0367 DEBUG| [stdout] [125234.390113] LTP: starting utime04
+2018-05-26 14:25:08,306 process          L0367 DEBUG| [stdout] [125234.392771] LTP: starting utime05
+2018-05-26 14:25:08,306 process          L0367 DEBUG| [stdout] [125234.396118] LTP: starting utime06
+2018-05-26 14:25:08,306 process          L0367 DEBUG| [stdout] [125234.829609] EXT4-fs (loop1): mounting ext2 file system using the ext4 subsystem
+2018-05-26 14:25:08,306 process          L0367 DEBUG| [stdout] [125234.832243] EXT4-fs (loop1): mounted filesystem without journal. Opts: (null)
+2018-05-26 14:25:08,306 process          L0367 DEBUG| [stdout] [125234.898116] LTP: starting vfork01
+2018-05-26 14:25:08,306 process          L0367 DEBUG| [stdout] [125234.901062] LTP: starting vfork02
+2018-05-26 14:25:08,306 process          L0367 DEBUG| [stdout] [125234.903655] LTP: starting vhangup01
+2018-05-26 14:25:08,306 process          L0367 DEBUG| [stdout] [125234.907315] LTP: starting vhangup02
+2018-05-26 14:25:08,306 process          L0367 DEBUG| [stdout] [125234.911821] LTP: starting wait01
+2018-05-26 14:25:08,306 process          L0367 DEBUG| [stdout] [125234.914712] LTP: starting wait02
+2018-05-26 14:25:08,307 process          L0367 DEBUG| [stdout] [125235.917702] LTP: starting wait401
+2018-05-26 14:25:08,307 process          L0367 DEBUG| [stdout] [125235.921187] LTP: starting wait402
+2018-05-26 14:25:08,307 process          L0367 DEBUG| [stdout] [125235.923087] LTP: starting waitpid01
+2018-05-26 14:25:08,307 process          L0367 DEBUG| [stdout] [125235.926276] LTP: starting waitpid02
+2018-05-26 14:25:08,307 process          L0367 DEBUG| [stdout] [125235.929211] LTP: starting waitpid03
+2018-05-26 14:25:08,307 process          L0367 DEBUG| [stdout] [125235.934142] LTP: starting waitpid04
+2018-05-26 14:25:08,307 process          L0367 DEBUG| [stdout] [125235.936581] LTP: starting waitpid05
+2018-05-26 14:25:08,307 process          L0367 DEBUG| [stdout] [125235.949021] LTP: starting waitpid06
+2018-05-26 14:25:08,307 process          L0367 DEBUG| [stdout] [125235.954912] LTP: starting waitpid07
+2018-05-26 14:25:08,307 process          L0367 DEBUG| [stdout] [125235.960469] LTP: starting waitpid08
+2018-05-26 14:25:08,307 process          L0367 DEBUG| [stdout] [125235.966262] LTP: starting waitpid09
+2018-05-26 14:25:08,307 process          L0367 DEBUG| [stdout] [125235.971415] LTP: starting waitpid10
+2018-05-26 14:25:08,307 process          L0367 DEBUG| [stdout] [125237.977498] LTP: starting waitpid11
+2018-05-26 14:25:08,308 process          L0367 DEBUG| [stdout] [125237.983492] LTP: starting waitpid12
+2018-05-26 14:25:08,308 process          L0367 DEBUG| [stdout] [125237.989135] LTP: starting waitpid13
+2018-05-26 14:25:08,308 process          L0367 DEBUG| [stdout] [125237.994638] LTP: starting write01
+2018-05-26 14:25:08,308 process          L0367 DEBUG| [stdout] [125238.041598] LTP: starting write03
+2018-05-26 14:25:08,308 process          L0367 DEBUG| [stdout] [125238.043921] LTP: starting write04
+2018-05-26 14:25:08,308 process          L0367 DEBUG| [stdout] [125238.046597] LTP: starting write05
+2018-05-26 14:25:08,308 process          L0367 DEBUG| [stdout] [125238.049370] LTP: starting writev01
+2018-05-26 14:25:08,308 process          L0367 DEBUG| [stdout] [125238.051595] LTP: starting writev02
+2018-05-26 14:25:08,308 process          L0367 DEBUG| [stdout] [125238.053143] LTP: starting writev05
+2018-05-26 14:25:08,308 process          L0367 DEBUG| [stdout] [125238.055006] LTP: starting writev06
+2018-05-26 14:25:08,308 process          L0367 DEBUG| [stdout] [125238.056519] LTP: starting writev07
+2018-05-26 14:25:08,308 process          L0367 DEBUG| [stdout] [125238.059336] LTP: starting mm01 (mmap001 -m 10000)
+2018-05-26 14:25:08,309 process          L0367 DEBUG| [stdout] [125238.512348] LTP: starting mm02 (mmap001)
+2018-05-26 14:25:08,309 process          L0367 DEBUG| [stdout] [125238.610324] LTP: starting mtest01 (mtest01 -p80)
+2018-05-26 14:25:08,309 process          L0367 DEBUG| [stdout] [125238.615635] LTP: starting mtest01w (mtest01 -p80 -w)
+2018-05-26 14:25:08,309 process          L0367 DEBUG| [stdout] [125244.088954] LTP: starting mtest05 (mmstress)
+2018-05-26 14:25:08,309 process          L0367 DEBUG| [stdout] [125244.731444] LTP: starting mtest06 (mmap1 -x 0.05)
+2018-05-26 14:25:08,309 process          L0367 DEBUG| [stdout] [125424.733489] LTP: starting mem01
+2018-05-26 14:25:08,309 process          L0367 DEBUG| [stdout] [125425.560729] LTP: starting mem02
+2018-05-26 14:25:08,309 process          L0367 DEBUG| [stdout] [125425.776943] LTP: starting page01
+2018-05-26 14:25:08,309 process          L0367 DEBUG| [stdout] [125426.789375] LTP: starting page02
+2018-05-26 14:25:08,309 process          L0367 DEBUG| [stdout] [125427.794426] LTP: starting data_space
+2018-05-26 14:25:08,309 process          L0367 DEBUG| [stdout] [125427.974019] LTP: starting stack_space
+2018-05-26 14:25:08,309 process          L0367 DEBUG| [stdout] [125428.165761] LTP: starting shmt02
+2018-05-26 14:25:08,309 process          L0367 DEBUG| [stdout] [125428.167268] LTP: starting shmt03
+2018-05-26 14:25:08,310 process          L0367 DEBUG| [stdout] [125428.168459] LTP: starting shmt04
+2018-05-26 14:25:08,310 process          L0367 DEBUG| [stdout] [125428.170941] LTP: starting shmt05
+2018-05-26 14:25:08,310 process          L0367 DEBUG| [stdout] [125428.172983] LTP: starting shmt06
+2018-05-26 14:25:08,310 process          L0367 DEBUG| [stdout] [125428.175063] LTP: starting shmt07
+2018-05-26 14:25:08,310 process          L0367 DEBUG| [stdout] [125428.177154] LTP: starting shmt08
+2018-05-26 14:25:08,310 process          L0367 DEBUG| [stdout] [125428.179435] LTP: starting shmt09
+2018-05-26 14:25:08,310 process          L0367 DEBUG| [stdout] [125428.181335] LTP: starting shmt10
+2018-05-26 14:25:08,310 process          L0367 DEBUG| [stdout] [125428.186578] LTP: starting pth_str01
+2018-05-26 14:25:08,310 process          L0367 DEBUG| [stdout] [125428.196745] LTP: starting pth_str02 (pth_str02 -n1000)
+2018-05-26 14:25:08,310 process          L0367 DEBUG| [stdout] [125428.302034] LTP: starting pth_str03
+2018-05-26 14:25:08,310 process          L0367 DEBUG| [stdout] [125428.312131] LTP: starting nptl01
+2018-05-26 14:25:08,310 process          L0367 DEBUG| [stdout] [125435.096668] LTP: starting pty01
+2018-05-26 14:25:08,310 process          L0367 DEBUG| [stdout] [125445.106062] LTP: starting ptem01
+2018-05-26 14:25:08,311 process          L0367 DEBUG| [stdout] [125445.109429] LTP: starting hangup01
+2018-05-26 14:25:08,311 process          L0367 DEBUG| [stdout] [125446.112401] LTP: starting gf01 (growfiles -W gf01 -b -e 1 -u -i 0 -L 20 -w -C 1 -l -I r -T 10 glseek20 glseek20.2)
+2018-05-26 14:25:08,311 process          L0367 DEBUG| [stdout] [125484.788033] LTP: starting gf02 (growfiles -W gf02 -b -e 1 -L 10 -i 100 -I p -S 2 -u -f gf03_)
+2018-05-26 14:25:08,311 process          L0367 DEBUG| [stdout] [125484.818091] LTP: starting gf03 (growfiles -W gf03 -b -e 1 -g 1 -i 1 -S 150 -u -f gf05_)
+2018-05-26 14:25:08,311 process          L0367 DEBUG| [stdout] [125484.831598] LTP: starting gf06 (growfiles -W gf06 -b -e 1 -u -r 1-5000 -R 0--1 -i 0 -L 30 -C 1 g_rand10 g_rand10.2)
+2018-05-26 14:25:08,311 process          L0367 DEBUG| [stdout] [125515.257903] LTP: starting gf07 (growfiles -W gf07 -b -e 1 -u -r 1-5000 -R 0--2 -i 0 -L 30 -C 1 -I p g_rand13 g_rand13.2)
+2018-05-26 14:25:08,311 process          L0367 DEBUG| [stdout] [125546.260166] LTP: starting gf10 (growfiles -W gf10 -b -e 1 -u -r 1-5000 -i 0 -L 30 -C 1 -I l g_lio14 g_lio14.2)
+2018-05-26 14:25:08,311 process          L0367 DEBUG| [stdout] [125577.355180] LTP: starting gf11 (growfiles -W gf11 -b -e 1 -u -r 1-5000 -i 0 -L 30 -C 1 -I L g_lio15 g_lio15.2)
+2018-05-26 14:25:08,311 process          L0367 DEBUG| [stdout] [125608.364282] LTP: starting gf12 (mkfifo gffifo17; growfiles -b -W gf12 -e 1 -u -i 0 -L 30 gffifo17)
+2018-05-26 14:25:08,311 process          L0367 DEBUG| [stdout] [125639.255168] LTP: starting gf13 (mkfifo gffifo18; growfiles -b -W gf13 -e 1 -u -i 0 -L 30 -I r -r 1-4096 gffifo18)
+2018-05-26 14:25:08,311 process          L0367 DEBUG| [stdout] [125670.254334] LTP: starting gf14 (growfiles -W gf14 -b -e 1 -u -i 0 -L 20 -w -l -C 1 -T 10 glseek19 glseek19.2)
+2018-05-26 14:25:08,311 process          L0367 DEBUG| [stdout] [125714.474823] LTP: starting gf15 (growfiles -W gf15 -b -e 1 -u -r 1-49600 -I r -u -i 0 -L 120 Lgfile1)
+2018-05-26 14:25:08,312 process          L0367 DEBUG| [stdout] [125765.056100] LTP: starting gf17 (growfiles -W gf17 -b -e 1 -i 0 -L 120 -u -g 5000 -T 100 -t 499990 -l -C 10 -c 1000 -S 10 -f Lgf03_)
+2018-05-26 14:25:08,312 process          L0367 DEBUG| [stdout] [125888.051190] LTP: starting gf18 (growfiles -W gf18 -b -e 1 -i 0 -L 120 -w -u -r 10-5000 -I r -l -S 2 -f Lgf04_)
+2018-05-26 14:25:08,312 process          L0367 DEBUG| [stdout] [125906.938772] LTP: starting gf19 (growfiles -W gf19 -b -e 1 -g 5000 -i 500 -t 49900 -T10 -c9 -I p -o O_RDWR,O_CREAT,O_TRUNC -u -f gf08i_)
+2018-05-26 14:25:08,312 process          L0367 DEBUG| [stdout] [125907.201719] LTP: starting gf20 (growfiles -W gf20 -D 0 -b -i 0 -L 60 -u -B 1000b -e 1 -r 1-256000:512 -R 512-256000 -T 4 gfbigio-$$)
+2018-05-26 14:25:08,312 process          L0367 DEBUG| [stdout] [125967.257433] LTP: starting gf23 (growfiles -W gf23 -D 0 -b -i 0 -L 60 -u -B 1000b -e 1 -r 512-64000:1024 -R 1-384000 -T 4 gf-inf-$$)
+2018-05-26 14:25:08,312 process          L0367 DEBUG| [stdout] [125982.893934] LTP: starting gf24 (growfiles -W gf24 -D 0 -b -i 0 -L 60 -u -B 1000b -e 1 -g 20480 gf-jbld-$$)
+2018-05-26 14:25:08,312 process          L0367 DEBUG| [stdout] [125982.915234] LTP: starting gf25 (growfiles -W gf25 -D 0 -b -i 0 -L 60 -u -B 1000b -e 1 -r 1024000-2048000:2048 -R 4095-2048000 -T 1 gf-large-gs-$$)
+2018-05-26 14:25:08,312 process          L0367 DEBUG| [stdout] [125982.954707] LTP: starting gf26 (growfiles -W gf26 -D 0 -b -i 0 -L 60 -u -B 1000b -e 1 -r 128-32768:128 -R 512-64000 -T 4 gfsmallio-$$)
+2018-05-26 14:25:08,312 process          L0367 DEBUG| [stdout] [126034.208891] LTP: starting gf27 (growfiles -W gf27 -b -D 0 -w -g 8b -C 1 -b -i 1000 -u gfsparse-1-$$)
+2018-05-26 14:25:08,312 process          L0367 DEBUG| [stdout] [126034.256493] LTP: starting gf30 (growfiles -W gf30 -D 0 -b -i 0 -L 60 -u -B 1000b -e 1 -o O_RDWR,O_CREAT,O_SYNC -g 20480 -T 10 -t 20480 gf-sync-$$)
+2018-05-26 14:25:08,312 process          L0367 DEBUG| [stdout] [126035.134787] LTP: starting rwtest01 (export LTPROOT; rwtest -N rwtest01 -c -q -i 60s  -f sync 10%25000:rw-sync-$$)
+2018-05-26 14:25:08,312 process          L0367 DEBUG| [stdout] [126099.507081] LTP: starting rwtest02 (export LTPROOT; rwtest -N rwtest02 -c -q -i 60s  -f buffered 10%25000:rw-buffered-$$)
+2018-05-26 14:25:08,313 process          L0367 DEBUG| [stdout] [126160.266058] LTP: starting rwtest03 (export LTPROOT; rwtest -N rwtest03 -c -q -i 60s -n 2  -f buffered -s mmread,mmwrite -m random -Dv 10%25000:mm-buff-$$)
+2018-05-26 14:25:08,313 process          L0367 DEBUG| [stdout] [126222.497307] LTP: starting rwtest04 (export LTPROOT; rwtest -N rwtest04 -c -q -i 60s -n 2  -f sync -s mmread,mmwrite -m random -Dv 10%25000:mm-sync-$$)
+2018-05-26 14:25:08,313 process          L0367 DEBUG| [stdout] [126284.489120] LTP: starting rwtest05 (export LTPROOT; rwtest -N rwtest05 -c -q -i 50 -T 64b 500b:/tmp/rwtest01%s)
+2018-05-26 14:25:08,313 process          L0367 DEBUG| [stdout] [151416.190267] usb 1-1: new low-speed USB device number 31 using xhci_hcd
+2018-05-26 14:25:08,313 process          L0367 DEBUG| [stdout] [151416.377329] usb 1-1: New USB device found, idVendor=046d, idProduct=c03d, bcdDevice=20.00
+2018-05-26 14:25:08,313 process          L0367 DEBUG| [stdout] [151416.383770] usb 1-1: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+2018-05-26 14:25:08,313 process          L0367 DEBUG| [stdout] [151416.389579] usb 1-1: Product: USB-PS/2 Optical Mouse
+2018-05-26 14:25:08,313 process          L0367 DEBUG| [stdout] [151416.394959] usb 1-1: Manufacturer: Logitech
+2018-05-26 14:25:08,313 process          L0367 DEBUG| [stdout] [151416.431502] input: Logitech USB-PS/2 Optical Mouse as /devices/pci0000:00/0000:00:07.1/0000:02:00.3/usb1/1-1/1-1:1.0/0003:046D:C03D.0024/input/input37
+2018-05-26 14:25:08,313 process          L0367 DEBUG| [stdout] [151416.441354] hid-generic 0003:046D:C03D.0024: input,hidraw0: USB HID v1.10 Mouse [Logitech USB-PS/2 Optical Mouse] on usb-0000:02:00.3-1/input0
+2018-05-26 14:25:08,313 process          L0367 DEBUG| [stdout] [151416.578253] usb 1-2: new low-speed USB device number 32 using xhci_hcd
+2018-05-26 14:25:08,313 process          L0367 DEBUG| [stdout] [151416.764376] usb 1-2: New USB device found, idVendor=413c, idProduct=2113, bcdDevice= 1.08
+2018-05-26 14:25:08,314 process          L0367 DEBUG| [stdout] [151416.771953] usb 1-2: New USB device strings: Mfr=0, Product=2, SerialNumber=0
+2018-05-26 14:25:08,314 process          L0367 DEBUG| [stdout] [151416.778821] usb 1-2: Product: Dell KB216 Wired Keyboard
+2018-05-26 14:25:08,314 process          L0367 DEBUG| [stdout] [151416.889547] input: Dell KB216 Wired Keyboard as /devices/pci0000:00/0000:00:07.1/0000:02:00.3/usb1/1-2/1-2:1.0/0003:413C:2113.0025/input/input38
+2018-05-26 14:25:08,314 process          L0367 DEBUG| [stdout] [151416.962975] hid-generic 0003:413C:2113.0025: input,hidraw1: USB HID v1.11 Keyboard [Dell KB216 Wired Keyboard] on usb-0000:02:00.3-2/input0
+2018-05-26 14:25:08,314 process          L0367 DEBUG| [stdout] [151416.995240] input: Dell KB216 Wired Keyboard as /devices/pci0000:00/0000:00:07.1/0000:02:00.3/usb1/1-2/1-2:1.1/0003:413C:2113.0026/input/input39
+2018-05-26 14:25:08,314 process          L0367 DEBUG| [stdout] [151417.066766] hid-generic 0003:413C:2113.0026: input,hidraw2: USB HID v1.11 Device [Dell KB216 Wired Keyboard] on usb-0000:02:00.3-2/input1
+2018-05-26 14:25:08,314 process          L0367 DEBUG| [stdout] [151425.719930] usb 1-1: USB disconnect, device number 31
+2018-05-26 14:25:08,314 process          L0367 DEBUG| [stdout] [151425.946185] usb 1-2: USB disconnect, device number 32
+2018-05-26 14:25:08,314 process          L0367 DEBUG| [stdout] [152434.856587] usb 1-1: new low-speed USB device number 33 using xhci_hcd
+2018-05-26 14:25:08,314 process          L0367 DEBUG| [stdout] [152434.988668] usb 1-1: Device not responding to setup address.
+2018-05-26 14:25:08,314 process          L0367 DEBUG| [stdout] [152435.196685] usb 1-1: Device not responding to setup address.
+2018-05-26 14:25:08,314 process          L0367 DEBUG| [stdout] [152435.404580] usb 1-1: device not accepting address 33, error -71
+2018-05-26 14:25:08,314 process          L0367 DEBUG| [stdout] [153888.261246] usb 1-1: new low-speed USB device number 35 using xhci_hcd
+2018-05-26 14:25:08,315 process          L0367 DEBUG| [stdout] [153888.440185] usb 1-1: New USB device found, idVendor=046d, idProduct=c03d, bcdDevice=20.00
+2018-05-26 14:25:08,315 process          L0367 DEBUG| [stdout] [153888.440778] usb 1-1: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+2018-05-26 14:25:08,315 process          L0367 DEBUG| [stdout] [153888.441183] usb 1-1: Product: USB-PS/2 Optical Mouse
+2018-05-26 14:25:08,315 process          L0367 DEBUG| [stdout] [153888.441458] usb 1-1: Manufacturer: Logitech
+2018-05-26 14:25:08,315 process          L0367 DEBUG| [stdout] [153888.472930] input: Logitech USB-PS/2 Optical Mouse as /devices/pci0000:00/0000:00:07.1/0000:02:00.3/usb1/1-1/1-1:1.0/0003:046D:C03D.0027/input/input40
+2018-05-26 14:25:08,315 process          L0367 DEBUG| [stdout] [153888.473990] hid-generic 0003:046D:C03D.0027: input,hidraw0: USB HID v1.10 Mouse [Logitech USB-PS/2 Optical Mouse] on usb-0000:02:00.3-1/input0
+2018-05-26 14:25:08,315 process          L0367 DEBUG| [stdout] [153888.601248] usb 1-2: new low-speed USB device number 36 using xhci_hcd
+2018-05-26 14:25:08,315 process          L0367 DEBUG| [stdout] [153888.783243] usb 1-2: New USB device found, idVendor=413c, idProduct=2113, bcdDevice= 1.08
+2018-05-26 14:25:08,315 process          L0367 DEBUG| [stdout] [153888.783780] usb 1-2: New USB device strings: Mfr=0, Product=2, SerialNumber=0
+2018-05-26 14:25:08,315 process          L0367 DEBUG| [stdout] [153888.784286] usb 1-2: Product: Dell KB216 Wired Keyboard
+2018-05-26 14:25:08,315 process          L0367 DEBUG| [stdout] [153888.890735] input: Dell KB216 Wired Keyboard as /devices/pci0000:00/0000:00:07.1/0000:02:00.3/usb1/1-2/1-2:1.0/0003:413C:2113.0028/input/input41
+2018-05-26 14:25:08,315 process          L0367 DEBUG| [stdout] [153888.949620] hid-generic 0003:413C:2113.0028: input,hidraw1: USB HID v1.11 Keyboard [Dell KB216 Wired Keyboard] on usb-0000:02:00.3-2/input0
+2018-05-26 14:25:08,316 process          L0367 DEBUG| [stdout] [153888.966674] input: Dell KB216 Wired Keyboard as /devices/pci0000:00/0000:00:07.1/0000:02:00.3/usb1/1-2/1-2:1.1/0003:413C:2113.0029/input/input42
+2018-05-26 14:25:08,316 process          L0367 DEBUG| [stdout] [153889.025534] hid-generic 0003:413C:2113.0029: input,hidraw2: USB HID v1.11 Device [Dell KB216 Wired Keyboard] on usb-0000:02:00.3-2/input1
+2018-05-26 14:25:08,316 process          L0367 DEBUG| [stdout] [153889.368984] usb 1-1: USB disconnect, device number 35
+2018-05-26 14:25:08,316 process          L0367 DEBUG| [stdout] [153889.561266] usb 1-2: USB disconnect, device number 36
+2018-05-26 14:25:08,316 process          L0367 DEBUG| [stdout] [154031.263411] usb 1-1: new low-speed USB device number 37 using xhci_hcd
+2018-05-26 14:25:08,316 process          L0367 DEBUG| [stdout] [154031.446429] usb 1-1: New USB device found, idVendor=046d, idProduct=c03d, bcdDevice=20.00
+2018-05-26 14:25:08,316 process          L0367 DEBUG| [stdout] [154031.447045] usb 1-1: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+2018-05-26 14:25:08,316 process          L0367 DEBUG| [stdout] [154031.447598] usb 1-1: Product: USB-PS/2 Optical Mouse
+2018-05-26 14:25:08,316 process          L0367 DEBUG| [stdout] [154031.448027] usb 1-1: Manufacturer: Logitech
+2018-05-26 14:25:08,316 process          L0367 DEBUG| [stdout] [154031.473642] input: Logitech USB-PS/2 Optical Mouse as /devices/pci0000:00/0000:00:07.1/0000:02:00.3/usb1/1-1/1-1:1.0/0003:046D:C03D.002A/input/input43
+2018-05-26 14:25:08,316 process          L0367 DEBUG| [stdout] [154031.475081] hid-generic 0003:046D:C03D.002A: input,hidraw0: USB HID v1.10 Mouse [Logitech USB-PS/2 Optical Mouse] on usb-0000:02:00.3-1/input0
+2018-05-26 14:25:08,316 process          L0367 DEBUG| [stdout] [154031.603418] usb 1-2: new low-speed USB device number 38 using xhci_hcd
+2018-05-26 14:25:08,316 process          L0367 DEBUG| [stdout] [154031.785401] usb 1-2: New USB device found, idVendor=413c, idProduct=2113, bcdDevice= 1.08
+2018-05-26 14:25:08,317 process          L0367 DEBUG| [stdout] [154031.786044] usb 1-2: New USB device strings: Mfr=0, Product=2, SerialNumber=0
+2018-05-26 14:25:08,317 process          L0367 DEBUG| [stdout] [154031.786585] usb 1-2: Product: Dell KB216 Wired Keyboard
+2018-05-26 14:25:08,317 process          L0367 DEBUG| [stdout] [154031.899790] input: Dell KB216 Wired Keyboard as /devices/pci0000:00/0000:00:07.1/0000:02:00.3/usb1/1-2/1-2:1.0/0003:413C:2113.002B/input/input44
+2018-05-26 14:25:08,317 process          L0367 DEBUG| [stdout] [154031.960176] hid-generic 0003:413C:2113.002B: input,hidraw1: USB HID v1.11 Keyboard [Dell KB216 Wired Keyboard] on usb-0000:02:00.3-2/input0
+2018-05-26 14:25:08,317 process          L0367 DEBUG| [stdout] [154031.979428] input: Dell KB216 Wired Keyboard as /devices/pci0000:00/0000:00:07.1/0000:02:00.3/usb1/1-2/1-2:1.1/0003:413C:2113.002C/input/input45
+2018-05-26 14:25:08,317 process          L0367 DEBUG| [stdout] [154032.051942] hid-generic 0003:413C:2113.002C: input,hidraw2: USB HID v1.11 Device [Dell KB216 Wired Keyboard] on usb-0000:02:00.3-2/input1
+2018-05-26 14:25:08,317 process          L0367 DEBUG| [stdout] [154033.427315] usb 1-1: USB disconnect, device number 37
+2018-05-26 14:25:08,317 process          L0367 DEBUG| [stdout] [154033.627432] usb 1-2: USB disconnect, device number 38
+2018-05-26 14:25:08,317 process          L0367 DEBUG| [stdout] [154132.017998] usb 1-1: new low-speed USB device number 39 using xhci_hcd
+2018-05-26 14:25:08,317 process          L0367 DEBUG| [stdout] [154132.150087] usb 1-1: Device not responding to setup address.
+2018-05-26 14:25:08,317 process          L0367 DEBUG| [stdout] [154132.358079] usb 1-1: Device not responding to setup address.
+2018-05-26 14:25:08,317 process          L0367 DEBUG| [stdout] [154132.565996] usb 1-1: device not accepting address 39, error -71
+2018-05-26 14:25:08,318 process          L0367 DEBUG| [stdout] [154622.127486] usb 1-1: new low-speed USB device number 41 using xhci_hcd
+2018-05-26 14:25:08,318 process          L0367 DEBUG| [stdout] [154622.310769] usb 1-1: New USB device found, idVendor=046d, idProduct=c03d, bcdDevice=20.00
+2018-05-26 14:25:08,318 process          L0367 DEBUG| [stdout] [154622.313923] usb 1-1: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+2018-05-26 14:25:08,318 process          L0367 DEBUG| [stdout] [154622.316979] usb 1-1: Product: USB-PS/2 Optical Mouse
+2018-05-26 14:25:08,318 process          L0367 DEBUG| [stdout] [154622.319741] usb 1-1: Manufacturer: Logitech
+2018-05-26 14:25:08,318 process          L0367 DEBUG| [stdout] [154622.353590] input: Logitech USB-PS/2 Optical Mouse as /devices/pci0000:00/0000:00:07.1/0000:02:00.3/usb1/1-1/1-1:1.0/0003:046D:C03D.002D/input/input46
+2018-05-26 14:25:08,318 process          L0367 DEBUG| [stdout] [154622.359441] hid-generic 0003:046D:C03D.002D: input,hidraw0: USB HID v1.10 Mouse [Logitech USB-PS/2 Optical Mouse] on usb-0000:02:00.3-1/input0
+2018-05-26 14:25:08,318 process          L0367 DEBUG| [stdout] [154622.491475] usb 1-2: new low-speed USB device number 42 using xhci_hcd
+2018-05-26 14:25:08,318 process          L0367 DEBUG| [stdout] [154622.673769] usb 1-2: New USB device found, idVendor=413c, idProduct=2113, bcdDevice= 1.08
+2018-05-26 14:25:08,318 process          L0367 DEBUG| [stdout] [154622.677201] usb 1-2: New USB device strings: Mfr=0, Product=2, SerialNumber=0
+2018-05-26 14:25:08,318 process          L0367 DEBUG| [stdout] [154622.680179] usb 1-2: Product: Dell KB216 Wired Keyboard
+2018-05-26 14:25:08,318 process          L0367 DEBUG| [stdout] [154622.779339] input: Dell KB216 Wired Keyboard as /devices/pci0000:00/0000:00:07.1/0000:02:00.3/usb1/1-2/1-2:1.0/0003:413C:2113.002E/input/input47
+2018-05-26 14:25:08,318 process          L0367 DEBUG| [stdout] [154622.843865] hid-generic 0003:413C:2113.002E: input,hidraw1: USB HID v1.11 Keyboard [Dell KB216 Wired Keyboard] on usb-0000:02:00.3-2/input0
+2018-05-26 14:25:08,319 process          L0367 DEBUG| [stdout] [154622.867121] input: Dell KB216 Wired Keyboard as /devices/pci0000:00/0000:00:07.1/0000:02:00.3/usb1/1-2/1-2:1.1/0003:413C:2113.002F/input/input48
+2018-05-26 14:25:08,319 process          L0367 DEBUG| [stdout] [154622.927700] hid-generic 0003:413C:2113.002F: input,hidraw2: USB HID v1.11 Device [Dell KB216 Wired Keyboard] on usb-0000:02:00.3-2/input1
+2018-05-26 14:25:08,319 process          L0367 DEBUG| [stdout] [154622.973181] usb 1-1: USB disconnect, device number 41
+2018-05-26 14:25:08,319 process          L0367 DEBUG| [stdout] [154623.227498] usb 1-2: USB disconnect, device number 42
+2018-05-26 14:25:08,319 process          L0367 DEBUG| [stdout] [154838.420682] usb 1-1: new low-speed USB device number 43 using xhci_hcd
+2018-05-26 14:25:08,319 process          L0367 DEBUG| [stdout] [154838.608000] usb 1-1: New USB device found, idVendor=046d, idProduct=c03d, bcdDevice=20.00
+2018-05-26 14:25:08,319 process          L0367 DEBUG| [stdout] [154838.615254] usb 1-1: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+2018-05-26 14:25:08,319 process          L0367 DEBUG| [stdout] [154838.621843] usb 1-1: Product: USB-PS/2 Optical Mouse
+2018-05-26 14:25:08,319 process          L0367 DEBUG| [stdout] [154838.627803] usb 1-1: Manufacturer: Logitech
+2018-05-26 14:25:08,319 process          L0367 DEBUG| [stdout] [154838.658149] input: Logitech USB-PS/2 Optical Mouse as /devices/pci0000:00/0000:00:07.1/0000:02:00.3/usb1/1-1/1-1:1.0/0003:046D:C03D.0030/input/input49
+2018-05-26 14:25:08,319 process          L0367 DEBUG| [stdout] [154838.725066] hid-generic 0003:046D:C03D.0030: input,hidraw0: USB HID v1.10 Mouse [Logitech USB-PS/2 Optical Mouse] on usb-0000:02:00.3-1/input0
+2018-05-26 14:25:08,319 process          L0367 DEBUG| [stdout] [154838.864721] usb 1-2: new low-speed USB device number 44 using xhci_hcd
+2018-05-26 14:25:08,319 process          L0367 DEBUG| [stdout] [154839.632879] usb 1-1: USB disconnect, device number 43
+2018-05-26 14:25:08,320 process          L0367 DEBUG| [stdout] [155348.505895] usb 1-1: new low-speed USB device number 45 using xhci_hcd
+2018-05-26 14:25:08,320 process          L0367 DEBUG| [stdout] [155348.692414] usb 1-1: New USB device found, idVendor=046d, idProduct=c03d, bcdDevice=20.00
+2018-05-26 14:25:08,320 process          L0367 DEBUG| [stdout] [155348.699349] usb 1-1: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+2018-05-26 14:25:08,320 process          L0367 DEBUG| [stdout] [155348.705586] usb 1-1: Product: USB-PS/2 Optical Mouse
+2018-05-26 14:25:08,320 process          L0367 DEBUG| [stdout] [155348.711304] usb 1-1: Manufacturer: Logitech
+2018-05-26 14:25:08,320 process          L0367 DEBUG| [stdout] [155348.746514] input: Logitech USB-PS/2 Optical Mouse as /devices/pci0000:00/0000:00:07.1/0000:02:00.3/usb1/1-1/1-1:1.0/0003:046D:C03D.0031/input/input50
+2018-05-26 14:25:08,320 process          L0367 DEBUG| [stdout] [155348.814241] hid-generic 0003:046D:C03D.0031: input,hidraw0: USB HID v1.10 Mouse [Logitech USB-PS/2 Optical Mouse] on usb-0000:02:00.3-1/input0
+2018-05-26 14:25:08,320 process          L0367 DEBUG| [stdout] [155348.949887] usb 1-2: new low-speed USB device number 46 using xhci_hcd
+2018-05-26 14:25:08,320 process          L0367 DEBUG| [stdout] [155349.136470] usb 1-2: New USB device found, idVendor=413c, idProduct=2113, bcdDevice= 1.08
+2018-05-26 14:25:08,320 process          L0367 DEBUG| [stdout] [155349.143689] usb 1-2: New USB device strings: Mfr=0, Product=2, SerialNumber=0
+2018-05-26 14:25:08,320 process          L0367 DEBUG| [stdout] [155349.150294] usb 1-2: Product: Dell KB216 Wired Keyboard
+2018-05-26 14:25:08,320 process          L0367 DEBUG| [stdout] [155349.244645] input: Dell KB216 Wired Keyboard as /devices/pci0000:00/0000:00:07.1/0000:02:00.3/usb1/1-2/1-2:1.0/0003:413C:2113.0032/input/input51
+2018-05-26 14:25:08,321 process          L0367 DEBUG| [stdout] [155349.314787] hid-generic 0003:413C:2113.0032: input,hidraw1: USB HID v1.11 Keyboard [Dell KB216 Wired Keyboard] on usb-0000:02:00.3-2/input0
+2018-05-26 14:25:08,321 process          L0367 DEBUG| [stdout] [155349.346478] input: Dell KB216 Wired Keyboard as /devices/pci0000:00/0000:00:07.1/0000:02:00.3/usb1/1-2/1-2:1.1/0003:413C:2113.0033/input/input52
+2018-05-26 14:25:08,321 process          L0367 DEBUG| [stdout] [155349.418250] hid-generic 0003:413C:2113.0033: input,hidraw2: USB HID v1.11 Device [Dell KB216 Wired Keyboard] on usb-0000:02:00.3-2/input1
+2018-05-26 14:25:08,321 process          L0367 DEBUG| [stdout] [155350.029536] usb 1-1: USB disconnect, device number 45
+2018-05-26 14:25:08,321 process          L0367 DEBUG| [stdout] [155350.233925] usb 1-2: USB disconnect, device number 46
+2018-05-26 14:25:08,321 process          L0367 DEBUG| [stdout] [155901.830421] usb 1-1: new low-speed USB device number 47 using xhci_hcd
+2018-05-26 14:25:08,321 process          L0367 DEBUG| [stdout] [155902.013831] usb 1-1: New USB device found, idVendor=046d, idProduct=c03d, bcdDevice=20.00
+2018-05-26 14:25:08,321 process          L0367 DEBUG| [stdout] [155902.017243] usb 1-1: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+2018-05-26 14:25:08,321 process          L0367 DEBUG| [stdout] [155902.020340] usb 1-1: Product: USB-PS/2 Optical Mouse
+2018-05-26 14:25:08,321 process          L0367 DEBUG| [stdout] [155902.023291] usb 1-1: Manufacturer: Logitech
+2018-05-26 14:25:08,321 process          L0367 DEBUG| [stdout] [155902.050622] input: Logitech USB-PS/2 Optical Mouse as /devices/pci0000:00/0000:00:07.1/0000:02:00.3/usb1/1-1/1-1:1.0/0003:046D:C03D.0034/input/input53
+2018-05-26 14:25:08,321 process          L0367 DEBUG| [stdout] [155902.056984] hid-generic 0003:046D:C03D.0034: input,hidraw0: USB HID v1.10 Mouse [Logitech USB-PS/2 Optical Mouse] on usb-0000:02:00.3-1/input0
+2018-05-26 14:25:08,321 process          L0367 DEBUG| [stdout] [155902.186404] usb 1-2: new low-speed USB device number 48 using xhci_hcd
+2018-05-26 14:25:08,322 process          L0367 DEBUG| [stdout] [155902.950690] usb 1-1: USB disconnect, device number 47
+2018-05-26 14:25:08,322 process          L0367 DEBUG| [stdout] [158741.932380] usb 1-1: new low-speed USB device number 49 using xhci_hcd
+2018-05-26 14:25:08,361 process          L0523 INFO | Running 'sysbench --test=threads --thread-locks=1 --num-threads=120 run'
+2018-05-26 14:25:08,376 process          L0367 DEBUG| [stderr] WARNING: the --test option is deprecated. You can pass a script name or path on the command line without any options.
+2018-05-26 14:25:08,376 process          L0367 DEBUG| [stdout] WARNING: --num-threads is deprecated, use --threads instead
+2018-05-26 14:25:08,377 process          L0367 DEBUG| [stdout] sysbench 1.0.8 (using system LuaJIT 2.0.4)
+2018-05-26 14:25:08,377 process          L0367 DEBUG| [stdout] 
+2018-05-26 14:25:08,377 process          L0367 DEBUG| [stdout] Running the test with following options:
+2018-05-26 14:25:08,378 process          L0367 DEBUG| [stdout] Number of threads: 120
+2018-05-26 14:25:08,378 process          L0367 DEBUG| [stdout] Initializing random number generator from current time
+2018-05-26 14:25:08,378 process          L0367 DEBUG| [stdout] 
+2018-05-26 14:25:08,378 process          L0367 DEBUG| [stdout] 
+2018-05-26 14:25:08,379 process          L0367 DEBUG| [stdout] Initializing worker threads...
+2018-05-26 14:25:08,379 process          L0367 DEBUG| [stdout] 
+2018-05-26 14:25:08,380 process          L0367 DEBUG| [stdout] Threads started!
+2018-05-26 14:25:08,381 process          L0367 DEBUG| [stdout] 
+2018-05-26 14:25:18,445 process          L0367 DEBUG| [stdout] 
+2018-05-26 14:25:18,445 process          L0367 DEBUG| [stdout] General statistics:
+2018-05-26 14:25:18,446 process          L0367 DEBUG| [stdout]     total time:                          10.0616s
+2018-05-26 14:25:18,446 process          L0367 DEBUG| [stdout]     total number of events:              7413
+2018-05-26 14:25:18,446 process          L0367 DEBUG| [stdout] 
+2018-05-26 14:25:18,446 process          L0367 DEBUG| [stdout] Latency (ms):
+2018-05-26 14:25:18,446 process          L0367 DEBUG| [stdout]          min:                                 59.82
+2018-05-26 14:25:18,446 process          L0367 DEBUG| [stdout]          avg:                                162.52
+2018-05-26 14:25:18,446 process          L0367 DEBUG| [stdout]          max:                                466.83
+2018-05-26 14:25:18,446 process          L0367 DEBUG| [stdout]          95th percentile:                    390.30
+2018-05-26 14:25:18,446 process          L0367 DEBUG| [stdout]          sum:                            1204785.79
+2018-05-26 14:25:18,446 process          L0367 DEBUG| [stdout] 
+2018-05-26 14:25:18,447 process          L0367 DEBUG| [stdout] Threads fairness:
+2018-05-26 14:25:18,447 process          L0367 DEBUG| [stdout]     events (avg/stddev):           61.7750/1.11
+2018-05-26 14:25:18,447 process          L0367 DEBUG| [stdout]     execution time (avg/stddev):   10.0399/0.02
+2018-05-26 14:25:18,447 process          L0367 DEBUG| [stdout] 
+2018-05-26 14:25:18,459 process          L0605 INFO | Command 'sysbench --test=threads --thread-locks=1 --num-threads=120 run' finished with 0 after 10.0927901268s
+2018-05-26 14:25:18,495 process          L0523 INFO | Running 'dmesg'
+2018-05-26 14:25:18,502 process          L0605 INFO | Command 'dmesg' finished with 0 after 0.000868082046509s
+2018-05-26 14:25:18,502 test             L0286 DEBUG| DATA (filename=output.expected) => NOT FOUND (data sources: variant, test, file)
+2018-05-26 14:25:18,502 test             L0286 DEBUG| DATA (filename=stdout.expected) => NOT FOUND (data sources: variant, test, file)
+2018-05-26 14:25:18,502 test             L0286 DEBUG| DATA (filename=stderr.expected) => NOT FOUND (data sources: variant, test, file)
+2018-05-26 14:25:18,508 test             L1017 INFO | PASS 1-./avocado-misc-tests/generic/sysbench.py:Sysbench.test;additional_params-cpu-max-max-request-max-time-min-tests-threads-types-cbf1
+2018-05-26 14:25:18,508 test             L1000 INFO | 
+2018-05-26 14:25:18,955 job              L0483 INFO | Test results available in /home/jenkins/avocado/job-results/job-2018-05-26T14.25-47dae87

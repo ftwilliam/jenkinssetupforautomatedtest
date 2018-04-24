@@ -1,0 +1,498 @@
+2018-07-15 04:51:05,029 extension        L0189 DEBUG| found extension EntryPoint.parse('journal = avocado.plugins.journal:JournalResult')
+2018-07-15 04:51:05,029 extension        L0189 DEBUG| found extension EntryPoint.parse('tap = avocado.plugins.tap:TAPResult')
+2018-07-15 04:51:05,030 extension        L0189 DEBUG| found extension EntryPoint.parse('human = avocado.plugins.human:Human')
+2018-07-15 04:51:05,030 extension        L0189 DEBUG| found extension EntryPoint.parse('vt-joblock = avocado_vt.plugins.vt_joblock:VTJobLock')
+2018-07-15 04:51:05,032 extension        L0189 DEBUG| found extension EntryPoint.parse('teststmpdir = avocado.plugins.teststmpdir:TestsTmpDir')
+2018-07-15 04:51:05,032 extension        L0189 DEBUG| found extension EntryPoint.parse('jobscripts = avocado.plugins.jobscripts:JobScripts')
+2018-07-15 04:51:05,033 extension        L0189 DEBUG| found extension EntryPoint.parse('human = avocado.plugins.human:HumanJob')
+2018-07-15 04:51:05,037 extension        L0189 DEBUG| found extension EntryPoint.parse('yaml_to_mux = avocado_varianter_yaml_to_mux:YamlToMux')
+2018-07-15 04:51:05,040 sysinfo          L0392 DEBUG| File /etc/avocado/sysinfo/commands does not exist.
+2018-07-15 04:51:05,040 sysinfo          L0403 DEBUG| File /etc/avocado/sysinfo/files does not exist.
+2018-07-15 04:51:05,040 sysinfo          L0430 DEBUG| File /etc/avocado/sysinfo/profilers does not exist.
+2018-07-15 04:51:05,051 job              L0327 INFO | Command line: /usr/local/bin/avocado run avocado-misc-tests/io/disk/dbench.py -m avocadodbench.upstream.recurrent.yaml
+2018-07-15 04:51:05,051 job              L0328 INFO | 
+2018-07-15 04:51:05,052 job              L0362 INFO | Avocado version: 58.0
+2018-07-15 04:51:05,052 job              L0363 INFO | 
+2018-07-15 04:51:05,052 job              L0367 INFO | Config files read (in order):
+2018-07-15 04:51:05,052 job              L0369 INFO | /usr/local/lib/python2.7/dist-packages/avocado_framework-58.0-py2.7.egg/avocado/etc/avocado/avocado.conf
+2018-07-15 04:51:05,052 job              L0369 INFO | /usr/local/lib/python2.7/dist-packages/avocado_framework-58.0-py2.7.egg/avocado/etc/avocado/conf.d/result_upload.conf
+2018-07-15 04:51:05,052 job              L0369 INFO | /usr/local/lib/python2.7/dist-packages/avocado_framework-58.0-py2.7.egg/avocado/etc/avocado/conf.d/gdb.conf
+2018-07-15 04:51:05,052 job              L0369 INFO | /usr/local/lib/python2.7/dist-packages/avocado_framework-58.0-py2.7.egg/avocado/etc/avocado/conf.d/jobscripts.conf
+2018-07-15 04:51:05,052 job              L0369 INFO | /usr/local/lib/python2.7/dist-packages/avocado_framework-58.0-py2.7.egg/avocado/etc/avocado/conf.d/resultsdb.conf
+2018-07-15 04:51:05,052 job              L0369 INFO | /home/jenkins/.config/avocado/avocado.conf
+2018-07-15 04:51:05,052 job              L0374 INFO | 
+2018-07-15 04:51:05,053 job              L0376 INFO | Avocado config:
+2018-07-15 04:51:05,054 job              L0385 INFO | Section.Key                              Value
+2018-07-15 04:51:05,054 job              L0385 INFO | datadir.paths.base_dir                   /var/lib/avocado
+2018-07-15 04:51:05,055 job              L0385 INFO | datadir.paths.test_dir                   /usr/share/avocado/tests
+2018-07-15 04:51:05,055 job              L0385 INFO | datadir.paths.data_dir                   /var/lib/avocado/data
+2018-07-15 04:51:05,055 job              L0385 INFO | datadir.paths.logs_dir                   ~/avocado/job-results
+2018-07-15 04:51:05,055 job              L0385 INFO | sysinfo.collect.enabled                  True
+2018-07-15 04:51:05,055 job              L0385 INFO | sysinfo.collect.commands_timeout         -1
+2018-07-15 04:51:05,055 job              L0385 INFO | sysinfo.collect.installed_packages       False
+2018-07-15 04:51:05,055 job              L0385 INFO | sysinfo.collect.profiler                 False
+2018-07-15 04:51:05,055 job              L0385 INFO | sysinfo.collect.locale                   C
+2018-07-15 04:51:05,055 job              L0385 INFO | sysinfo.collect.per_test                 False
+2018-07-15 04:51:05,055 job              L0385 INFO | sysinfo.collectibles.commands            /etc/avocado/sysinfo/commands
+2018-07-15 04:51:05,056 job              L0385 INFO | sysinfo.collectibles.files               /etc/avocado/sysinfo/files
+2018-07-15 04:51:05,056 job              L0385 INFO | sysinfo.collectibles.profilers           /etc/avocado/sysinfo/profilers
+2018-07-15 04:51:05,056 job              L0385 INFO | runner.output.colored                    True
+2018-07-15 04:51:05,056 job              L0385 INFO | runner.output.utf8                       
+2018-07-15 04:51:05,056 job              L0385 INFO | remoter.behavior.reject_unknown_hosts    False
+2018-07-15 04:51:05,056 job              L0385 INFO | remoter.behavior.disable_known_hosts     False
+2018-07-15 04:51:05,056 job              L0385 INFO | job.output.loglevel                      debug
+2018-07-15 04:51:05,056 job              L0385 INFO | restclient.connection.hostname           localhost
+2018-07-15 04:51:05,056 job              L0385 INFO | restclient.connection.port               9405
+2018-07-15 04:51:05,057 job              L0385 INFO | restclient.connection.username           
+2018-07-15 04:51:05,057 job              L0385 INFO | restclient.connection.password           
+2018-07-15 04:51:05,057 job              L0385 INFO | plugins.disable                          []
+2018-07-15 04:51:05,057 job              L0385 INFO | plugins.skip_broken_plugin_notification  []
+2018-07-15 04:51:05,057 job              L0385 INFO | plugins.loaders                          ['file', '@DEFAULT']
+2018-07-15 04:51:05,057 job              L0385 INFO | gdb.paths.gdb                            /usr/bin/gdb
+2018-07-15 04:51:05,057 job              L0385 INFO | gdb.paths.gdbserver                      /usr/bin/gdbserver
+2018-07-15 04:51:05,057 job              L0385 INFO | plugins.jobscripts.pre                   /etc/avocado/scripts/job/pre.d/
+2018-07-15 04:51:05,057 job              L0385 INFO | plugins.jobscripts.post                  /etc/avocado/scripts/job/post.d/
+2018-07-15 04:51:05,057 job              L0385 INFO | plugins.jobscripts.warn_non_existing_dir False
+2018-07-15 04:51:05,058 job              L0385 INFO | plugins.jobscripts.warn_non_zero_status  True
+2018-07-15 04:51:05,058 job              L0386 INFO | 
+2018-07-15 04:51:05,058 job              L0389 INFO | Avocado Data Directories:
+2018-07-15 04:51:05,058 job              L0390 INFO | 
+2018-07-15 04:51:05,058 job              L0391 INFO | base     /var/lib/avocado
+2018-07-15 04:51:05,059 job              L0392 INFO | tests    /usr/share/avocado/tests
+2018-07-15 04:51:05,059 job              L0393 INFO | data     /var/lib/avocado/data
+2018-07-15 04:51:05,059 job              L0394 INFO | logs     /home/jenkins/avocado/job-results/job-2018-07-15T04.51-dd70541
+2018-07-15 04:51:05,059 job              L0395 INFO | 
+2018-07-15 04:51:05,060 job              L0401 INFO | Multiplex tree representation:
+2018-07-15 04:51:05,060 job              L0401 INFO |  \-- run
+2018-07-15 04:51:05,060 job              L0401 INFO |       |-- runargs
+2018-07-15 04:51:05,060 job              L0401 INFO |       |-- default
+2018-07-15 04:51:05,060 job              L0401 INFO |       \-- nprocs
+2018-07-15 04:51:05,060 job              L0401 INFO | 
+2018-07-15 04:51:05,060 job              L0401 INFO | Multiplex variants (1):
+2018-07-15 04:51:05,060 job              L0401 INFO | Variant default-nprocs-runargs-3cfc:    /run/runargs, /run/default, /run/nprocs
+2018-07-15 04:51:05,060 job              L0405 INFO | Temporary dir: /var/tmp/avocado_EbJJRw
+2018-07-15 04:51:05,061 job              L0406 INFO | 
+2018-07-15 04:51:05,061 job              L0319 INFO | Job ID: dd70541429ccb4b48f398f56d221ed024dd10e93
+2018-07-15 04:51:05,061 job              L0322 INFO | 
+2018-07-15 04:51:05,325 sysinfo          L0392 DEBUG| File /etc/avocado/sysinfo/commands does not exist.
+2018-07-15 04:51:05,326 sysinfo          L0403 DEBUG| File /etc/avocado/sysinfo/files does not exist.
+2018-07-15 04:51:05,326 sysinfo          L0430 DEBUG| File /etc/avocado/sysinfo/profilers does not exist.
+2018-07-15 04:51:05,340 parameters       L0146 DEBUG| PARAMS (key=timeout, path=*, default=None) => None
+2018-07-15 04:51:05,341 test             L0382 INFO | START 1-avocado-misc-tests/io/disk/dbench.py:Dbench.test;default-nprocs-runargs-3cfc
+2018-07-15 04:51:05,342 test             L0403 DEBUG| Test metadata:
+2018-07-15 04:51:05,342 test             L0404 DEBUG|   filename: /home/jenkins/avocado-misc-tests/io/disk/dbench.py
+2018-07-15 04:51:05,558 test             L0286 DEBUG| DATA (filename=output.expected) => NOT FOUND (data sources: variant, test, file)
+2018-07-15 04:51:05,594 software_manager L0845 DEBUG| apt-get version: 1.5.1
+2018-07-15 04:51:05,595 process          L0523 INFO | Running '/usr/bin/dpkg -s gdebi-core'
+2018-07-15 04:51:05,651 process          L0367 DEBUG| [stdout] Package: gdebi-core
+2018-07-15 04:51:05,652 process          L0605 INFO | Command '/usr/bin/dpkg -s gdebi-core' finished with 0 after 0.0498991012573s
+2018-07-15 04:51:05,652 process          L0367 DEBUG| [stdout] Status: install ok installed
+2018-07-15 04:51:05,653 process          L0367 DEBUG| [stdout] Priority: optional
+2018-07-15 04:51:05,653 process          L0367 DEBUG| [stdout] Section: admin
+2018-07-15 04:51:05,653 process          L0367 DEBUG| [stdout] Installed-Size: 855
+2018-07-15 04:51:05,653 process          L0367 DEBUG| [stdout] Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+2018-07-15 04:51:05,653 process          L0367 DEBUG| [stdout] Architecture: all
+2018-07-15 04:51:05,653 process          L0367 DEBUG| [stdout] Source: gdebi
+2018-07-15 04:51:05,653 process          L0367 DEBUG| [stdout] Version: 0.9.5.7+nmu1ubuntu3
+2018-07-15 04:51:05,653 process          L0367 DEBUG| [stdout] Depends: python3:any (>= 3.3.2-2~), python3-apt, python3-debian, file
+2018-07-15 04:51:05,653 process          L0367 DEBUG| [stdout] Suggests: xz-utils | xz-lzma
+2018-07-15 04:51:05,653 process          L0367 DEBUG| [stdout] Description: simple tool to install deb files
+2018-07-15 04:51:05,654 process          L0367 DEBUG| [stdout]  gdebi lets you install local deb packages resolving and installing
+2018-07-15 04:51:05,654 process          L0367 DEBUG| [stdout]  its dependencies. apt does the same, but only for remote (http, ftp)
+2018-07-15 04:51:05,654 process          L0367 DEBUG| [stdout]  located packages.
+2018-07-15 04:51:05,654 process          L0367 DEBUG| [stdout]  .
+2018-07-15 04:51:05,654 process          L0367 DEBUG| [stdout]  It can also resolve build-depends of local debian/control files.
+2018-07-15 04:51:05,654 process          L0367 DEBUG| [stdout]  .
+2018-07-15 04:51:05,654 process          L0367 DEBUG| [stdout]  This package contains the libraries and command-line utility.
+2018-07-15 04:51:05,654 process          L0367 DEBUG| [stdout] Original-Maintainer: Ubuntu Developers <ubuntu-dev-team@lists.alioth.debian.org>
+2018-07-15 04:51:05,686 process          L0523 INFO | Running '/usr/bin/dpkg -s gcc'
+2018-07-15 04:51:05,744 process          L0367 DEBUG| [stdout] Package: gcc
+2018-07-15 04:51:05,744 process          L0605 INFO | Command '/usr/bin/dpkg -s gcc' finished with 0 after 0.0508501529694s
+2018-07-15 04:51:05,745 process          L0367 DEBUG| [stdout] Status: install ok installed
+2018-07-15 04:51:05,745 process          L0367 DEBUG| [stdout] Priority: optional
+2018-07-15 04:51:05,745 process          L0367 DEBUG| [stdout] Section: devel
+2018-07-15 04:51:05,745 process          L0367 DEBUG| [stdout] Installed-Size: 50
+2018-07-15 04:51:05,746 process          L0367 DEBUG| [stdout] Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+2018-07-15 04:51:05,746 process          L0367 DEBUG| [stdout] Architecture: amd64
+2018-07-15 04:51:05,746 process          L0367 DEBUG| [stdout] Source: gcc-defaults (1.173ubuntu1)
+2018-07-15 04:51:05,746 process          L0367 DEBUG| [stdout] Version: 4:7.2.0-1ubuntu1
+2018-07-15 04:51:05,746 process          L0367 DEBUG| [stdout] Provides: c-compiler
+2018-07-15 04:51:05,747 process          L0367 DEBUG| [stdout] Depends: cpp (>= 4:7.2.0-1ubuntu1), gcc-7 (>= 7.2.0-1~)
+2018-07-15 04:51:05,747 process          L0367 DEBUG| [stdout] Recommends: libc6-dev | libc-dev
+2018-07-15 04:51:05,747 process          L0367 DEBUG| [stdout] Suggests: gcc-multilib, make, manpages-dev, autoconf, automake, libtool, flex, bison, gdb, gcc-doc
+2018-07-15 04:51:05,747 process          L0367 DEBUG| [stdout] Conflicts: gcc-doc (<< 1:2.95.3)
+2018-07-15 04:51:05,747 process          L0367 DEBUG| [stdout] Description: GNU C compiler
+2018-07-15 04:51:05,748 process          L0367 DEBUG| [stdout]  This is the GNU C compiler, a fairly portable optimizing compiler for C.
+2018-07-15 04:51:05,748 process          L0367 DEBUG| [stdout]  .
+2018-07-15 04:51:05,748 process          L0367 DEBUG| [stdout]  This is a dependency package providing the default GNU C compiler.
+2018-07-15 04:51:05,748 process          L0367 DEBUG| [stdout] Original-Maintainer: Debian GCC Maintainers <debian-gcc@lists.debian.org>
+2018-07-15 04:51:05,925 parameters       L0146 DEBUG| PARAMS (key=patch, path=*, default=dbench_startup.patch) => 'dbench_startup.patch'
+2018-07-15 04:51:05,926 process          L0523 INFO | Running 'patch -p1 < /home/jenkins/avocado-misc-tests/io/disk/dbench.py.data/dbench_startup.patch'
+2018-07-15 04:51:05,935 process          L0367 DEBUG| [stdout] patching file Makefile.in
+2018-07-15 04:51:05,936 process          L0367 DEBUG| [stdout] patching file dbench.c
+2018-07-15 04:51:05,936 process          L0367 DEBUG| [stdout] patching file dbench.h
+2018-07-15 04:51:05,936 process          L0605 INFO | Command 'patch -p1 < /home/jenkins/avocado-misc-tests/io/disk/dbench.py.data/dbench_startup.patch' finished with 0 after 0.00439500808716s
+2018-07-15 04:51:05,995 process          L0523 INFO | Running './configure'
+2018-07-15 04:51:06,157 process          L0367 DEBUG| [stdout] configure: Configuring dbench
+2018-07-15 04:51:06,158 process          L0367 DEBUG| [stdout] checking for gcc... gcc
+2018-07-15 04:51:06,258 process          L0367 DEBUG| [stdout] checking for C compiler default output file name... a.out
+2018-07-15 04:51:06,263 process          L0367 DEBUG| [stdout] checking whether the C compiler works... yes
+2018-07-15 04:51:06,264 process          L0367 DEBUG| [stdout] checking whether we are cross compiling... no
+2018-07-15 04:51:06,324 process          L0367 DEBUG| [stdout] checking for suffix of executables... 
+2018-07-15 04:51:06,375 process          L0367 DEBUG| [stdout] checking for suffix of object files... o
+2018-07-15 04:51:06,427 process          L0367 DEBUG| [stdout] checking whether we are using the GNU C compiler... yes
+2018-07-15 04:51:06,477 process          L0367 DEBUG| [stdout] checking whether gcc accepts -g... yes
+2018-07-15 04:51:06,545 process          L0367 DEBUG| [stdout] checking for gcc option to accept ANSI C... none needed
+2018-07-15 04:51:06,627 process          L0367 DEBUG| [stdout] checking how to run the C preprocessor... gcc -E
+2018-07-15 04:51:06,687 process          L0367 DEBUG| [stdout] checking for a BSD-compatible install... /usr/bin/install -c
+2018-07-15 04:51:06,750 process          L0367 DEBUG| [stdout] checking for dirent.h that defines DIR... yes
+2018-07-15 04:51:06,827 process          L0367 DEBUG| [stdout] checking for library containing opendir... none required
+2018-07-15 04:51:06,886 process          L0367 DEBUG| [stdout] checking whether time.h and sys/time.h may both be included... yes
+2018-07-15 04:51:06,948 process          L0367 DEBUG| [stdout] checking for sys/wait.h that is POSIX.1 compatible... yes
+2018-07-15 04:51:06,952 process          L0367 DEBUG| [stdout] checking for egrep... grep -E
+2018-07-15 04:51:07,146 process          L0367 DEBUG| [stdout] checking for ANSI C header files... yes
+2018-07-15 04:51:07,214 process          L0367 DEBUG| [stdout] checking for sys/types.h... yes
+2018-07-15 04:51:07,282 process          L0367 DEBUG| [stdout] checking for sys/stat.h... yes
+2018-07-15 04:51:07,356 process          L0367 DEBUG| [stdout] checking for stdlib.h... yes
+2018-07-15 04:51:07,436 process          L0367 DEBUG| [stdout] checking for string.h... yes
+2018-07-15 04:51:07,513 process          L0367 DEBUG| [stdout] checking for memory.h... yes
+2018-07-15 04:51:07,587 process          L0367 DEBUG| [stdout] checking for strings.h... yes
+2018-07-15 04:51:07,666 process          L0367 DEBUG| [stdout] checking for inttypes.h... yes
+2018-07-15 04:51:07,746 process          L0367 DEBUG| [stdout] checking for stdint.h... yes
+2018-07-15 04:51:07,827 process          L0367 DEBUG| [stdout] checking for unistd.h... yes
+2018-07-15 04:51:07,912 process          L0367 DEBUG| [stdout] checking ctype.h usability... yes
+2018-07-15 04:51:07,940 process          L0367 DEBUG| [stdout] checking ctype.h presence... yes
+2018-07-15 04:51:07,942 process          L0367 DEBUG| [stdout] checking for ctype.h... yes
+2018-07-15 04:51:07,956 process          L0367 DEBUG| [stdout] checking for strings.h... (cached) yes
+2018-07-15 04:51:07,970 process          L0367 DEBUG| [stdout] checking for stdlib.h... (cached) yes
+2018-07-15 04:51:07,985 process          L0367 DEBUG| [stdout] checking for string.h... (cached) yes
+2018-07-15 04:51:08,065 process          L0367 DEBUG| [stdout] checking sys/vfs.h usability... yes
+2018-07-15 04:51:08,091 process          L0367 DEBUG| [stdout] checking sys/vfs.h presence... yes
+2018-07-15 04:51:08,093 process          L0367 DEBUG| [stdout] checking for sys/vfs.h... yes
+2018-07-15 04:51:08,175 process          L0367 DEBUG| [stdout] checking sys/statvfs.h usability... yes
+2018-07-15 04:51:08,200 process          L0367 DEBUG| [stdout] checking sys/statvfs.h presence... yes
+2018-07-15 04:51:08,202 process          L0367 DEBUG| [stdout] checking for sys/statvfs.h... yes
+2018-07-15 04:51:08,217 process          L0367 DEBUG| [stdout] checking for stdint.h... (cached) yes
+2018-07-15 04:51:08,285 process          L0367 DEBUG| [stdout] checking sys/attributes.h usability... no
+2018-07-15 04:51:08,312 process          L0367 DEBUG| [stdout] checking sys/attributes.h presence... no
+2018-07-15 04:51:08,314 process          L0367 DEBUG| [stdout] checking for sys/attributes.h... no
+2018-07-15 04:51:08,377 process          L0367 DEBUG| [stdout] checking attr/xattr.h usability... no
+2018-07-15 04:51:08,404 process          L0367 DEBUG| [stdout] checking attr/xattr.h presence... no
+2018-07-15 04:51:08,407 process          L0367 DEBUG| [stdout] checking for attr/xattr.h... no
+2018-07-15 04:51:08,479 process          L0367 DEBUG| [stdout] checking sys/xattr.h usability... yes
+2018-07-15 04:51:08,509 process          L0367 DEBUG| [stdout] checking sys/xattr.h presence... yes
+2018-07-15 04:51:08,511 process          L0367 DEBUG| [stdout] checking for sys/xattr.h... yes
+2018-07-15 04:51:08,578 process          L0367 DEBUG| [stdout] checking sys/extattr.h usability... no
+2018-07-15 04:51:08,605 process          L0367 DEBUG| [stdout] checking sys/extattr.h presence... no
+2018-07-15 04:51:08,608 process          L0367 DEBUG| [stdout] checking for sys/extattr.h... no
+2018-07-15 04:51:08,684 process          L0367 DEBUG| [stdout] checking sys/uio.h usability... yes
+2018-07-15 04:51:08,713 process          L0367 DEBUG| [stdout] checking sys/uio.h presence... yes
+2018-07-15 04:51:08,715 process          L0367 DEBUG| [stdout] checking for sys/uio.h... yes
+2018-07-15 04:51:08,797 process          L0367 DEBUG| [stdout] checking sys/mount.h usability... yes
+2018-07-15 04:51:08,825 process          L0367 DEBUG| [stdout] checking sys/mount.h presence... yes
+2018-07-15 04:51:08,827 process          L0367 DEBUG| [stdout] checking for sys/mount.h... yes
+2018-07-15 04:51:08,920 process          L0367 DEBUG| [stdout] checking for fdatasync... yes
+2018-07-15 04:51:09,003 process          L0367 DEBUG| [stdout] checking for library containing getxattr... none required
+2018-07-15 04:51:09,074 process          L0367 DEBUG| [stdout] checking for library containing socket... none required
+2018-07-15 04:51:09,153 process          L0367 DEBUG| [stdout] checking for library containing gethostbyname... none required
+2018-07-15 04:51:09,241 process          L0367 DEBUG| [stdout] checking for getxattr... yes
+2018-07-15 04:51:09,330 process          L0367 DEBUG| [stdout] checking for lgetxattr... yes
+2018-07-15 04:51:09,425 process          L0367 DEBUG| [stdout] checking for fgetxattr... yes
+2018-07-15 04:51:09,508 process          L0367 DEBUG| [stdout] checking for listxattr... yes
+2018-07-15 04:51:09,590 process          L0367 DEBUG| [stdout] checking for llistxattr... yes
+2018-07-15 04:51:09,687 process          L0367 DEBUG| [stdout] checking for flistxattr... yes
+2018-07-15 04:51:09,781 process          L0367 DEBUG| [stdout] checking for removexattr... yes
+2018-07-15 04:51:09,870 process          L0367 DEBUG| [stdout] checking for lremovexattr... yes
+2018-07-15 04:51:09,960 process          L0367 DEBUG| [stdout] checking for fremovexattr... yes
+2018-07-15 04:51:10,048 process          L0367 DEBUG| [stdout] checking for setxattr... yes
+2018-07-15 04:51:10,142 process          L0367 DEBUG| [stdout] checking for lsetxattr... yes
+2018-07-15 04:51:10,230 process          L0367 DEBUG| [stdout] checking for fsetxattr... yes
+2018-07-15 04:51:10,322 process          L0367 DEBUG| [stdout] checking for attr_get... no
+2018-07-15 04:51:10,407 process          L0367 DEBUG| [stdout] checking for attr_list... no
+2018-07-15 04:51:10,489 process          L0367 DEBUG| [stdout] checking for attr_set... no
+2018-07-15 04:51:10,571 process          L0367 DEBUG| [stdout] checking for attr_remove... no
+2018-07-15 04:51:10,651 process          L0367 DEBUG| [stdout] checking for attr_getf... no
+2018-07-15 04:51:10,738 process          L0367 DEBUG| [stdout] checking for attr_listf... no
+2018-07-15 04:51:10,820 process          L0367 DEBUG| [stdout] checking for attr_setf... no
+2018-07-15 04:51:10,904 process          L0367 DEBUG| [stdout] checking for attr_removef... no
+2018-07-15 04:51:10,989 process          L0367 DEBUG| [stdout] checking for extattr_delete_fd... no
+2018-07-15 04:51:11,072 process          L0367 DEBUG| [stdout] checking for extattr_delete_file... no
+2018-07-15 04:51:11,148 process          L0367 DEBUG| [stdout] checking for extattr_delete_link... no
+2018-07-15 04:51:11,232 process          L0367 DEBUG| [stdout] checking for extattr_get_fd... no
+2018-07-15 04:51:11,312 process          L0367 DEBUG| [stdout] checking for extattr_get_file... no
+2018-07-15 04:51:11,395 process          L0367 DEBUG| [stdout] checking for extattr_get_link... no
+2018-07-15 04:51:11,474 process          L0367 DEBUG| [stdout] checking for extattr_list_fd... no
+2018-07-15 04:51:11,559 process          L0367 DEBUG| [stdout] checking for extattr_list_file... no
+2018-07-15 04:51:11,645 process          L0367 DEBUG| [stdout] checking for extattr_list_link... no
+2018-07-15 04:51:11,731 process          L0367 DEBUG| [stdout] checking for extattr_set_fd... no
+2018-07-15 04:51:11,811 process          L0367 DEBUG| [stdout] checking for extattr_set_file... no
+2018-07-15 04:51:11,890 process          L0367 DEBUG| [stdout] checking for extattr_set_link... no
+2018-07-15 04:51:11,977 process          L0367 DEBUG| [stdout] checking for snprintf... yes
+2018-07-15 04:51:12,071 process          L0367 DEBUG| [stdout] checking for vsnprintf... yes
+2018-07-15 04:51:12,169 process          L0367 DEBUG| [stdout] checking for asprintf... yes
+2018-07-15 04:51:12,261 process          L0367 DEBUG| [stdout] checking for vasprintf... yes
+2018-07-15 04:51:12,350 process          L0367 DEBUG| [stdout] checking for va_copy... yes
+2018-07-15 04:51:12,371 process          L0367 DEBUG| [stdout] configure: creating ./config.status
+2018-07-15 04:51:12,580 process          L0367 DEBUG| [stdout] config.status: creating Makefile
+2018-07-15 04:51:12,592 process          L0367 DEBUG| [stdout] config.status: creating config.h
+2018-07-15 04:51:12,710 process          L0605 INFO | Command './configure' finished with 0 after 6.70758295059s
+2018-07-15 04:51:12,768 process          L0523 INFO | Running 'make'
+2018-07-15 04:51:12,778 process          L0367 DEBUG| [stdout] gcc -g -O2 -Wall -W -I. -DVERSION=\"3.04\" -DDATADIR=\"/usr/local/share\"   -c -o fileio.o fileio.c
+2018-07-15 04:51:12,779 process          L0367 DEBUG| [stdout] gcc -g -O2 -Wall -W -I. -DVERSION=\"3.04\" -DDATADIR=\"/usr/local/share\"   -c -o util.o util.c
+2018-07-15 04:51:12,779 process          L0367 DEBUG| [stdout] gcc -g -O2 -Wall -W -I. -DVERSION=\"3.04\" -DDATADIR=\"/usr/local/share\"   -c -o dbench.o dbench.c
+2018-07-15 04:51:12,779 process          L0367 DEBUG| [stdout] gcc -g -O2 -Wall -W -I. -DVERSION=\"3.04\" -DDATADIR=\"/usr/local/share\"   -c -o child.o child.c
+2018-07-15 04:51:12,780 process          L0367 DEBUG| [stdout] gcc -g -O2 -Wall -W -I. -DVERSION=\"3.04\" -DDATADIR=\"/usr/local/share\"   -c -o system.o system.c
+2018-07-15 04:51:12,780 process          L0367 DEBUG| [stdout] gcc -g -O2 -Wall -W -I. -DVERSION=\"3.04\" -DDATADIR=\"/usr/local/share\"   -c -o snprintf.o snprintf.c
+2018-07-15 04:51:12,781 process          L0367 DEBUG| [stdout] gcc -g -O2 -Wall -W -I. -DVERSION=\"3.04\" -DDATADIR=\"/usr/local/share\"   -c -o sockio.o sockio.c
+2018-07-15 04:51:12,781 process          L0367 DEBUG| [stdout] gcc -g -O2 -Wall -W -I. -DVERSION=\"3.04\" -DDATADIR=\"/usr/local/share\"   -c -o socklib.o socklib.c
+2018-07-15 04:51:12,782 process          L0367 DEBUG| [stdout] gcc -g -O2 -Wall -W -I. -DVERSION=\"3.04\" -DDATADIR=\"/usr/local/share\"   -c -o tbench_srv.o tbench_srv.c
+2018-07-15 04:51:12,814 process          L0367 DEBUG| [stderr] snprintf.c: In function ‘dopr’:
+2018-07-15 04:51:12,814 process          L0367 DEBUG| [stderr] snprintf.c:319:11: warning: this statement may fall through [-Wimplicit-fallthrough=]
+2018-07-15 04:51:12,815 process          L0367 DEBUG| [stderr]      flags |= DP_F_UP;
+2018-07-15 04:51:12,815 process          L0367 DEBUG| [stderr]            ^
+2018-07-15 04:51:12,815 process          L0367 DEBUG| [stderr] snprintf.c:320:4: note: here
+2018-07-15 04:51:12,815 process          L0367 DEBUG| [stderr]     case 'x':
+2018-07-15 04:51:12,815 process          L0367 DEBUG| [stderr]     ^~~~
+2018-07-15 04:51:12,816 process          L0367 DEBUG| [stderr] snprintf.c:341:11: warning: this statement may fall through [-Wimplicit-fallthrough=]
+2018-07-15 04:51:12,816 process          L0367 DEBUG| [stderr]      flags |= DP_F_UP;
+2018-07-15 04:51:12,816 process          L0367 DEBUG| [stderr]            ^
+2018-07-15 04:51:12,816 process          L0367 DEBUG| [stderr] snprintf.c:342:4: note: here
+2018-07-15 04:51:12,816 process          L0367 DEBUG| [stderr]     case 'e':
+2018-07-15 04:51:12,816 process          L0367 DEBUG| [stderr]     ^~~~
+2018-07-15 04:51:12,816 process          L0367 DEBUG| [stderr] snprintf.c:350:11: warning: this statement may fall through [-Wimplicit-fallthrough=]
+2018-07-15 04:51:12,817 process          L0367 DEBUG| [stderr]      flags |= DP_F_UP;
+2018-07-15 04:51:12,817 process          L0367 DEBUG| [stderr]            ^
+2018-07-15 04:51:12,817 process          L0367 DEBUG| [stderr] snprintf.c:351:4: note: here
+2018-07-15 04:51:12,817 process          L0367 DEBUG| [stderr]     case 'g':
+2018-07-15 04:51:12,817 process          L0367 DEBUG| [stderr]     ^~~~
+2018-07-15 04:51:12,833 process          L0367 DEBUG| [stderr] child.c: In function ‘child_run’:
+2018-07-15 04:51:12,834 process          L0367 DEBUG| [stderr] child.c:50:2: warning: ignoring return value of ‘asprintf’, declared with attribute warn_unused_result [-Wunused-result]
+2018-07-15 04:51:12,834 process          L0367 DEBUG| [stderr]   asprintf(&cname,"client%d", child->id);
+2018-07-15 04:51:12,834 process          L0367 DEBUG| [stderr]   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2018-07-15 04:51:12,834 process          L0367 DEBUG| [stderr] child.c:95:4: warning: ignoring return value of ‘asprintf’, declared with attribute warn_unused_result [-Wunused-result]
+2018-07-15 04:51:12,834 process          L0367 DEBUG| [stderr]     asprintf(&fname, "%s%s", child->directory, params[1]);
+2018-07-15 04:51:12,834 process          L0367 DEBUG| [stderr]     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2018-07-15 04:51:12,834 process          L0367 DEBUG| [stderr] child.c:98:4: warning: ignoring return value of ‘asprintf’, declared with attribute warn_unused_result [-Wunused-result]
+2018-07-15 04:51:12,834 process          L0367 DEBUG| [stderr]     asprintf(&fname2, "%s%s", child->directory, params[2]);
+2018-07-15 04:51:12,835 process          L0367 DEBUG| [stderr]     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2018-07-15 04:51:12,838 process          L0367 DEBUG| [stderr] tbench_srv.c: In function ‘listener’:
+2018-07-15 04:51:12,839 process          L0367 DEBUG| [stderr] tbench_srv.c:72:26: warning: pointer targets in passing argument 3 of ‘accept’ differ in signedness [-Wpointer-sign]
+2018-07-15 04:51:12,839 process          L0367 DEBUG| [stderr]    fd = accept(sock,&addr,&in_addrlen);
+2018-07-15 04:51:12,839 process          L0367 DEBUG| [stderr]                           ^
+2018-07-15 04:51:12,839 process          L0367 DEBUG| [stderr] In file included from dbench.h:32:0,
+2018-07-15 04:51:12,839 process          L0367 DEBUG| [stderr]                  from tbench_srv.c:20:
+2018-07-15 04:51:12,839 process          L0367 DEBUG| [stderr] /usr/include/x86_64-linux-gnu/sys/socket.h:232:12: note: expected ‘socklen_t * restrict {aka unsigned int * restrict}’ but argument is of type ‘int *’
+2018-07-15 04:51:12,840 process          L0367 DEBUG| [stderr]  extern int accept (int __fd, __SOCKADDR_ARG __addr,
+2018-07-15 04:51:12,840 process          L0367 DEBUG| [stderr]             ^~~~~~
+2018-07-15 04:51:12,840 process          L0367 DEBUG| [stderr] fileio.c: In function ‘nb_cleanup’:
+2018-07-15 04:51:12,840 process          L0367 DEBUG| [stderr] fileio.c:417:2: warning: ignoring return value of ‘asprintf’, declared with attribute warn_unused_result [-Wunused-result]
+2018-07-15 04:51:12,840 process          L0367 DEBUG| [stderr]   asprintf(&dname, "%s/clients/client%d", child->directory, child->id);
+2018-07-15 04:51:12,841 process          L0367 DEBUG| [stderr]   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2018-07-15 04:51:12,841 process          L0367 DEBUG| [stderr] fileio.c:421:2: warning: ignoring return value of ‘asprintf’, declared with attribute warn_unused_result [-Wunused-result]
+2018-07-15 04:51:12,841 process          L0367 DEBUG| [stderr]   asprintf(&dname, "%s%s", child->directory, "/clients");
+2018-07-15 04:51:12,841 process          L0367 DEBUG| [stderr]   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2018-07-15 04:51:12,841 process          L0367 DEBUG| [stderr] fileio.c: In function ‘nb_deltree’:
+2018-07-15 04:51:12,841 process          L0367 DEBUG| [stderr] fileio.c:430:2: warning: ignoring return value of ‘asprintf’, declared with attribute warn_unused_result [-Wunused-result]
+2018-07-15 04:51:12,841 process          L0367 DEBUG| [stderr]   asprintf(&path, "/bin/rm -rf %s", dname);
+2018-07-15 04:51:12,842 process          L0367 DEBUG| [stderr]   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2018-07-15 04:51:12,842 process          L0367 DEBUG| [stderr] fileio.c:431:2: warning: ignoring return value of ‘system’, declared with attribute warn_unused_result [-Wunused-result]
+2018-07-15 04:51:12,842 process          L0367 DEBUG| [stderr]   system(path);
+2018-07-15 04:51:12,842 process          L0367 DEBUG| [stderr]   ^~~~~~~~~~~~
+2018-07-15 04:51:12,895 process          L0367 DEBUG| [stdout] gcc -o tbench_srv util.o tbench_srv.o socklib.o 
+2018-07-15 04:51:13,044 process          L0367 DEBUG| [stdout] gcc -pthread -o dbench fileio.o util.o dbench.o child.o system.o snprintf.o 
+2018-07-15 04:51:13,044 process          L0367 DEBUG| [stdout] gcc -pthread -o tbench sockio.o util.o dbench.o child.o socklib.o snprintf.o 
+2018-07-15 04:51:13,076 process          L0605 INFO | Command 'make' finished with 0 after 0.300372838974s
+2018-07-15 04:51:13,076 parameters       L0146 DEBUG| PARAMS (key=dir, path=*, default=.) => '.'
+2018-07-15 04:51:13,077 parameters       L0146 DEBUG| PARAMS (key=nprocs, path=*, default=None) => None
+2018-07-15 04:51:13,077 parameters       L0146 DEBUG| PARAMS (key=seconds, path=*, default=60) => 70
+2018-07-15 04:51:13,077 parameters       L0146 DEBUG| PARAMS (key=args, path=*, default=) => ''
+2018-07-15 04:51:13,078 process          L0523 INFO | Running '/var/tmp/avocado_fNbfzE/dbench-3.04/dbench 128  -D . -c /var/tmp/avocado_fNbfzE/dbench-3.04/client.txt -t 70'
+2018-07-15 04:51:14,206 process          L0367 DEBUG| [stdout] dbench version 3.04 - Copyright Andrew Tridgell 1999-2004
+2018-07-15 04:51:14,207 process          L0367 DEBUG| [stdout] 
+2018-07-15 04:51:14,207 process          L0367 DEBUG| [stdout] Running for 70 seconds with load '/var/tmp/avocado_fNbfzE/dbench-3.04/client.txt' and minimum warmup 14 secs
+2018-07-15 04:51:14,208 process          L0367 DEBUG| [stdout] 128 clients started
+2018-07-15 04:51:14,208 process          L0367 DEBUG| [stdout]  128      8332  7973.70 MB/sec  warmup   1 sec   
+2018-07-15 04:51:15,206 process          L0367 DEBUG| [stdout]  128     21539  8543.65 MB/sec  warmup   2 sec   
+2018-07-15 04:51:16,207 process          L0367 DEBUG| [stdout]  128     34791  8736.56 MB/sec  warmup   3 sec   
+2018-07-15 04:51:17,207 process          L0367 DEBUG| [stdout]  128     48119  8856.62 MB/sec  warmup   4 sec   
+2018-07-15 04:51:18,207 process          L0367 DEBUG| [stdout]  128     61697  8951.17 MB/sec  warmup   5 sec   
+2018-07-15 04:51:19,207 process          L0367 DEBUG| [stdout]  128     75160  9009.05 MB/sec  warmup   6 sec   
+2018-07-15 04:51:20,207 process          L0367 DEBUG| [stdout]  128     88860  9075.58 MB/sec  warmup   7 sec   
+2018-07-15 04:51:21,207 process          L0367 DEBUG| [stdout]  128    102730  9138.04 MB/sec  warmup   8 sec   
+2018-07-15 04:51:22,207 process          L0367 DEBUG| [stdout]  128    116509  9177.91 MB/sec  warmup   9 sec   
+2018-07-15 04:51:23,208 process          L0367 DEBUG| [stdout]  128    125868  8906.21 MB/sec  warmup  10 sec   
+2018-07-15 04:51:24,208 process          L0367 DEBUG| [stdout]  128    139274  8936.96 MB/sec  warmup  11 sec   
+2018-07-15 04:51:25,208 process          L0367 DEBUG| [stdout]  128    152429  8949.49 MB/sec  warmup  12 sec   
+2018-07-15 04:51:26,208 process          L0367 DEBUG| [stdout]  128    165726  8965.89 MB/sec  warmup  13 sec   
+2018-07-15 04:51:28,208 process          L0367 DEBUG| [stdout]  128    192473  9273.60 MB/sec  execute   1 sec   
+2018-07-15 04:51:29,209 process          L0367 DEBUG| [stdout]  128    206252  9373.35 MB/sec  execute   2 sec   
+2018-07-15 04:51:30,210 process          L0367 DEBUG| [stdout]  128    220075  9425.84 MB/sec  execute   3 sec   
+2018-07-15 04:51:31,210 process          L0367 DEBUG| [stdout]  128    233543  9398.16 MB/sec  execute   4 sec   
+2018-07-15 04:51:32,210 process          L0367 DEBUG| [stdout]  128    247041  9377.39 MB/sec  execute   5 sec   
+2018-07-15 04:51:33,211 process          L0367 DEBUG| [stdout]  128    257521  9021.65 MB/sec  execute   6 sec   
+2018-07-15 04:51:34,211 process          L0367 DEBUG| [stdout]  128    271069  9064.76 MB/sec  execute   7 sec   
+2018-07-15 04:51:35,211 process          L0367 DEBUG| [stdout]  128    284689  9107.91 MB/sec  execute   8 sec   
+2018-07-15 04:51:36,211 process          L0367 DEBUG| [stdout]  128    298249  9133.20 MB/sec  execute   9 sec   
+2018-07-15 04:51:37,211 process          L0367 DEBUG| [stdout]  128    311773  9156.44 MB/sec  execute  10 sec   
+2018-07-15 04:51:38,211 process          L0367 DEBUG| [stdout]  128    325075  9157.33 MB/sec  execute  11 sec   
+2018-07-15 04:51:39,212 process          L0367 DEBUG| [stdout]  128    338285  9154.96 MB/sec  execute  12 sec   
+2018-07-15 04:51:40,212 process          L0367 DEBUG| [stdout]  128    351653  9158.42 MB/sec  execute  13 sec   
+2018-07-15 04:51:41,212 process          L0367 DEBUG| [stdout]  128    365021  9166.04 MB/sec  execute  14 sec   
+2018-07-15 04:51:42,214 process          L0367 DEBUG| [stdout]  128    378478  9170.71 MB/sec  execute  15 sec   
+2018-07-15 04:51:43,214 process          L0367 DEBUG| [stdout]  128    391870  9176.77 MB/sec  execute  16 sec   
+2018-07-15 04:51:44,214 process          L0367 DEBUG| [stdout]  128    405526  9187.40 MB/sec  execute  17 sec   
+2018-07-15 04:51:45,214 process          L0367 DEBUG| [stdout]  128    419143  9199.81 MB/sec  execute  18 sec   
+2018-07-15 04:51:46,215 process          L0367 DEBUG| [stdout]  128    432823  9212.82 MB/sec  execute  19 sec   
+2018-07-15 04:51:47,216 process          L0367 DEBUG| [stdout]  128    445413  9194.14 MB/sec  execute  20 sec   
+2018-07-15 04:51:48,216 process          L0367 DEBUG| [stdout]  128    454526  9070.21 MB/sec  execute  21 sec   
+2018-07-15 04:51:49,216 process          L0367 DEBUG| [stdout]  128    466193  9052.16 MB/sec  execute  22 sec   
+2018-07-15 04:51:50,217 process          L0367 DEBUG| [stdout]  128    479791  9078.72 MB/sec  execute  23 sec   
+2018-07-15 04:51:51,217 process          L0367 DEBUG| [stdout]  128    494133  9118.36 MB/sec  execute  24 sec   
+2018-07-15 04:51:52,217 process          L0367 DEBUG| [stdout]  128    507234  9126.92 MB/sec  execute  25 sec   
+2018-07-15 04:51:53,217 process          L0367 DEBUG| [stdout]  128    516970  9038.94 MB/sec  execute  26 sec   
+2018-07-15 04:51:54,218 process          L0367 DEBUG| [stdout]  128    529492  9032.77 MB/sec  execute  27 sec   
+2018-07-15 04:51:55,219 process          L0367 DEBUG| [stdout]  128    542458  9029.67 MB/sec  execute  28 sec   
+2018-07-15 04:51:56,219 process          L0367 DEBUG| [stdout]  128    555324  9025.77 MB/sec  execute  29 sec   
+2018-07-15 04:51:57,220 process          L0367 DEBUG| [stdout]  128    568082  9018.33 MB/sec  execute  30 sec   
+2018-07-15 04:51:58,220 process          L0367 DEBUG| [stdout]  128    580835  9009.87 MB/sec  execute  31 sec   
+2018-07-15 04:51:59,221 process          L0367 DEBUG| [stdout]  128    593558  9003.62 MB/sec  execute  32 sec   
+2018-07-15 04:52:00,220 process          L0367 DEBUG| [stdout]  128    606493  9000.45 MB/sec  execute  33 sec   
+2018-07-15 04:52:01,221 process          L0367 DEBUG| [stdout]  128    619431  8998.91 MB/sec  execute  34 sec   
+2018-07-15 04:52:02,225 process          L0367 DEBUG| [stdout]  128    632308  8993.64 MB/sec  execute  35 sec   
+2018-07-15 04:52:03,225 process          L0367 DEBUG| [stdout]  128    644792  8982.96 MB/sec  execute  36 sec   
+2018-07-15 04:52:04,226 process          L0367 DEBUG| [stdout]  128    657460  8977.16 MB/sec  execute  37 sec   
+2018-07-15 04:52:05,227 process          L0367 DEBUG| [stdout]  128    670368  8974.76 MB/sec  execute  38 sec   
+2018-07-15 04:52:06,227 process          L0367 DEBUG| [stdout]  128    683148  8971.67 MB/sec  execute  39 sec   
+2018-07-15 04:52:07,227 process          L0367 DEBUG| [stdout]  128    695972  8967.57 MB/sec  execute  40 sec   
+2018-07-15 04:52:08,228 process          L0367 DEBUG| [stdout]  128    708277  8956.17 MB/sec  execute  41 sec   
+2018-07-15 04:52:09,228 process          L0367 DEBUG| [stdout]  128    720667  8946.29 MB/sec  execute  42 sec   
+2018-07-15 04:52:10,231 process          L0367 DEBUG| [stdout]  128    733122  8938.23 MB/sec  execute  43 sec   
+2018-07-15 04:52:11,231 process          L0367 DEBUG| [stdout]  128    745626  8931.08 MB/sec  execute  44 sec   
+2018-07-15 04:52:12,231 process          L0367 DEBUG| [stdout]  128    758202  8925.40 MB/sec  execute  45 sec   
+2018-07-15 04:52:13,231 process          L0367 DEBUG| [stdout]  128    770717  8918.87 MB/sec  execute  46 sec   
+2018-07-15 04:52:14,232 process          L0367 DEBUG| [stdout]  128    783659  8918.25 MB/sec  execute  47 sec   
+2018-07-15 04:52:15,232 process          L0367 DEBUG| [stdout]  128    796372  8915.86 MB/sec  execute  48 sec   
+2018-07-15 04:52:16,232 process          L0367 DEBUG| [stdout]  128    809050  8913.18 MB/sec  execute  49 sec   
+2018-07-15 04:52:17,232 process          L0367 DEBUG| [stdout]  128    821802  8909.98 MB/sec  execute  50 sec   
+2018-07-15 04:52:18,232 process          L0367 DEBUG| [stdout]  128    832695  8883.32 MB/sec  execute  51 sec   
+2018-07-15 04:52:19,232 process          L0367 DEBUG| [stdout]  128    845251  8878.53 MB/sec  execute  52 sec   
+2018-07-15 04:52:20,235 process          L0367 DEBUG| [stdout]  128    857923  8878.77 MB/sec  execute  53 sec   
+2018-07-15 04:52:21,234 process          L0367 DEBUG| [stdout]  128    870339  8875.03 MB/sec  execute  54 sec   
+2018-07-15 04:52:22,235 process          L0367 DEBUG| [stdout]  128    882347  8867.84 MB/sec  execute  55 sec   
+2018-07-15 04:52:23,235 process          L0367 DEBUG| [stdout]  128    893931  8855.68 MB/sec  execute  56 sec   
+2018-07-15 04:52:24,235 process          L0367 DEBUG| [stdout]  128    905722  8847.12 MB/sec  execute  57 sec   
+2018-07-15 04:52:25,237 process          L0367 DEBUG| [stdout]  128    918046  8843.37 MB/sec  execute  58 sec   
+2018-07-15 04:52:26,237 process          L0367 DEBUG| [stdout]  128    930263  8839.17 MB/sec  execute  59 sec   
+2018-07-15 04:52:27,237 process          L0367 DEBUG| [stdout]  128    942760  8838.86 MB/sec  execute  60 sec   
+2018-07-15 04:52:28,238 process          L0367 DEBUG| [stdout]  128    955557  8841.18 MB/sec  execute  61 sec   
+2018-07-15 04:52:29,239 process          L0367 DEBUG| [stdout]  128    967816  8838.67 MB/sec  execute  62 sec   
+2018-07-15 04:52:30,239 process          L0367 DEBUG| [stdout]  128    980043  8834.72 MB/sec  execute  63 sec   
+2018-07-15 04:52:31,239 process          L0367 DEBUG| [stdout]  128    992455  8831.75 MB/sec  execute  64 sec   
+2018-07-15 04:52:32,241 process          L0367 DEBUG| [stdout]  128   1005194  8831.84 MB/sec  execute  65 sec   
+2018-07-15 04:52:33,241 process          L0367 DEBUG| [stdout]  128   1017659  8829.34 MB/sec  execute  66 sec   
+2018-07-15 04:52:34,240 process          L0367 DEBUG| [stdout]  128   1030246  8827.78 MB/sec  execute  67 sec   
+2018-07-15 04:52:35,243 process          L0367 DEBUG| [stdout]  128   1042938  8827.12 MB/sec  execute  68 sec   
+2018-07-15 04:52:36,243 process          L0367 DEBUG| [stdout]  128   1055830  8826.88 MB/sec  execute  69 sec   
+2018-07-15 04:52:37,243 process          L0367 DEBUG| [stdout]  128   1068655  8827.36 MB/sec  cleanup  70 sec   
+2018-07-15 04:52:37,375 process          L0367 DEBUG| [stdout]  128   1068655  8810.65 MB/sec  cleanup  70 sec   
+2018-07-15 04:52:37,376 process          L0605 INFO | Command '/var/tmp/avocado_fNbfzE/dbench-3.04/dbench 128  -D . -c /var/tmp/avocado_fNbfzE/dbench-3.04/client.txt -t 70' finished with 0 after 84.2922341824s
+2018-07-15 04:52:37,377 process          L0367 DEBUG| [stdout] 
+2018-07-15 04:52:37,377 process          L0367 DEBUG| [stdout] Throughput 8827.38 MB/sec 128 procs
+2018-07-15 04:52:37,457 process          L0523 INFO | Running '/var/tmp/avocado_fNbfzE/dbench-3.04/dbench 128  -D . -c /var/tmp/avocado_fNbfzE/dbench-3.04/client.txt -t 70'
+2018-07-15 04:52:38,579 process          L0367 DEBUG| [stdout] dbench version 3.04 - Copyright Andrew Tridgell 1999-2004
+2018-07-15 04:52:38,580 process          L0367 DEBUG| [stdout] 
+2018-07-15 04:52:38,581 process          L0367 DEBUG| [stdout] Running for 70 seconds with load '/var/tmp/avocado_fNbfzE/dbench-3.04/client.txt' and minimum warmup 14 secs
+2018-07-15 04:52:38,581 process          L0367 DEBUG| [stdout] 128 clients started
+2018-07-15 04:52:38,581 process          L0367 DEBUG| [stdout]  128      8773  8277.67 MB/sec  warmup   1 sec   
+2018-07-15 04:52:39,579 process          L0367 DEBUG| [stdout]  128     22661  8929.93 MB/sec  warmup   2 sec   
+2018-07-15 04:52:40,580 process          L0367 DEBUG| [stdout]  128     36294  9073.19 MB/sec  warmup   3 sec   
+2018-07-15 04:52:41,580 process          L0367 DEBUG| [stdout]  128     49564  9109.03 MB/sec  warmup   4 sec   
+2018-07-15 04:52:42,580 process          L0367 DEBUG| [stdout]  128     63117  9146.65 MB/sec  warmup   5 sec   
+2018-07-15 04:52:43,581 process          L0367 DEBUG| [stdout]  128     76861  9204.29 MB/sec  warmup   6 sec   
+2018-07-15 04:52:44,581 process          L0367 DEBUG| [stdout]  128     91038  9285.28 MB/sec  warmup   7 sec   
+2018-07-15 04:52:45,581 process          L0367 DEBUG| [stdout]  128    105271  9355.20 MB/sec  warmup   8 sec   
+2018-07-15 04:52:46,581 process          L0367 DEBUG| [stdout]  128    119719  9423.11 MB/sec  warmup   9 sec   
+2018-07-15 04:52:47,582 process          L0367 DEBUG| [stdout]  128    133900  9459.53 MB/sec  warmup  10 sec   
+2018-07-15 04:52:48,583 process          L0367 DEBUG| [stdout]  128    148069  9486.38 MB/sec  warmup  11 sec   
+2018-07-15 04:52:49,581 process          L0367 DEBUG| [stdout]  128    162195  9510.27 MB/sec  warmup  12 sec   
+2018-07-15 04:52:50,582 process          L0367 DEBUG| [stdout]  128    176419  9536.04 MB/sec  warmup  13 sec   
+2018-07-15 04:52:52,582 process          L0367 DEBUG| [stdout]  128    205091  9835.63 MB/sec  execute   1 sec   
+2018-07-15 04:52:53,584 process          L0367 DEBUG| [stdout]  128    218944  9704.37 MB/sec  execute   2 sec   
+2018-07-15 04:52:54,583 process          L0367 DEBUG| [stdout]  128    233414  9792.65 MB/sec  execute   3 sec   
+2018-07-15 04:52:55,583 process          L0367 DEBUG| [stdout]  128    247822  9838.33 MB/sec  execute   4 sec   
+2018-07-15 04:52:56,583 process          L0367 DEBUG| [stdout]  128    262241  9857.18 MB/sec  execute   5 sec   
+2018-07-15 04:52:57,583 process          L0367 DEBUG| [stdout]  128    275207  9710.31 MB/sec  execute   6 sec   
+2018-07-15 04:52:58,583 process          L0367 DEBUG| [stdout]  128    286999  9486.44 MB/sec  execute   7 sec   
+2018-07-15 04:52:59,583 process          L0367 DEBUG| [stdout]  128    301476  9550.67 MB/sec  execute   8 sec   
+2018-07-15 04:53:00,584 process          L0367 DEBUG| [stdout]  128    316004  9601.37 MB/sec  execute   9 sec   
+2018-07-15 04:53:01,584 process          L0367 DEBUG| [stdout]  128    330514  9639.70 MB/sec  execute  10 sec   
+2018-07-15 04:53:02,585 process          L0367 DEBUG| [stdout]  128    344986  9670.28 MB/sec  execute  11 sec   
+2018-07-15 04:53:03,584 process          L0367 DEBUG| [stdout]  128    359069  9680.80 MB/sec  execute  12 sec   
+2018-07-15 04:53:04,585 process          L0367 DEBUG| [stdout]  128    373470  9697.95 MB/sec  execute  13 sec   
+2018-07-15 04:53:05,585 process          L0367 DEBUG| [stdout]  128    387802  9708.47 MB/sec  execute  14 sec   
+2018-07-15 04:53:06,585 process          L0367 DEBUG| [stdout]  128    402365  9731.36 MB/sec  execute  15 sec   
+2018-07-15 04:53:07,585 process          L0367 DEBUG| [stdout]  128    415249  9679.64 MB/sec  execute  16 sec   
+2018-07-15 04:53:08,585 process          L0367 DEBUG| [stdout]  128    426425  9564.27 MB/sec  execute  17 sec   
+2018-07-15 04:53:09,585 process          L0367 DEBUG| [stdout]  128    440606  9578.18 MB/sec  execute  18 sec   
+2018-07-15 04:53:10,586 process          L0367 DEBUG| [stdout]  128    453450  9550.54 MB/sec  execute  19 sec   
+2018-07-15 04:53:11,586 process          L0367 DEBUG| [stdout]  128    464724  9490.16 MB/sec  execute  20 sec   
+2018-07-15 04:53:12,586 process          L0367 DEBUG| [stdout]  128    477507  9470.20 MB/sec  execute  21 sec   
+2018-07-15 04:53:13,586 process          L0367 DEBUG| [stdout]  128    488126  9380.24 MB/sec  execute  22 sec   
+2018-07-15 04:53:14,587 process          L0367 DEBUG| [stdout]  128    503238  9429.49 MB/sec  execute  23 sec   
+2018-07-15 04:53:15,589 process          L0367 DEBUG| [stdout]  128    517934  9470.45 MB/sec  execute  24 sec   
+2018-07-15 04:53:16,589 process          L0367 DEBUG| [stdout]  128    532326  9494.44 MB/sec  execute  25 sec   
+2018-07-15 04:53:17,589 process          L0367 DEBUG| [stdout]  128    545211  9487.67 MB/sec  execute  26 sec   
+2018-07-15 04:53:18,589 process          L0367 DEBUG| [stdout]  128    558820  9483.71 MB/sec  execute  27 sec   
+2018-07-15 04:53:19,589 process          L0367 DEBUG| [stdout]  128    572362  9479.63 MB/sec  execute  28 sec   
+2018-07-15 04:53:20,589 process          L0367 DEBUG| [stdout]  128    586086  9479.83 MB/sec  execute  29 sec   
+2018-07-15 04:53:21,590 process          L0367 DEBUG| [stdout]  128    599753  9478.18 MB/sec  execute  30 sec   
+2018-07-15 04:53:22,591 process          L0367 DEBUG| [stdout]  128    613498  9477.57 MB/sec  execute  31 sec   
+2018-07-15 04:53:23,591 process          L0367 DEBUG| [stdout]  128    626948  9471.81 MB/sec  execute  32 sec   
+2018-07-15 04:53:24,591 process          L0367 DEBUG| [stdout]  128    640989  9478.48 MB/sec  execute  33 sec   
+2018-07-15 04:53:25,591 process          L0367 DEBUG| [stdout]  128    655058  9485.22 MB/sec  execute  34 sec   
+2018-07-15 04:53:26,593 process          L0367 DEBUG| [stdout]  128    669166  9491.21 MB/sec  execute  35 sec   
+2018-07-15 04:53:27,592 process          L0367 DEBUG| [stdout]  128    682955  9491.57 MB/sec  execute  36 sec   
+2018-07-15 04:53:28,592 process          L0367 DEBUG| [stdout]  128    696623  9490.33 MB/sec  execute  37 sec   
+2018-07-15 04:53:29,594 process          L0367 DEBUG| [stdout]  128    710367  9490.63 MB/sec  execute  38 sec   
+2018-07-15 04:53:30,593 process          L0367 DEBUG| [stdout]  128    724112  9490.29 MB/sec  execute  39 sec   
+2018-07-15 04:53:31,593 process          L0367 DEBUG| [stdout]  128    737724  9487.93 MB/sec  execute  40 sec   
+2018-07-15 04:53:32,593 process          L0367 DEBUG| [stdout]  128    751345  9484.43 MB/sec  execute  41 sec   
+2018-07-15 04:53:33,594 process          L0367 DEBUG| [stdout]  128    764864  9482.57 MB/sec  execute  42 sec   
+2018-07-15 04:53:34,594 process          L0367 DEBUG| [stdout]  128    778830  9485.63 MB/sec  execute  43 sec   
+2018-07-15 04:53:35,594 process          L0367 DEBUG| [stdout]  128    792800  9488.93 MB/sec  execute  44 sec   
+2018-07-15 04:53:36,595 process          L0367 DEBUG| [stdout]  128    806600  9489.36 MB/sec  execute  45 sec   
+2018-07-15 04:53:37,595 process          L0367 DEBUG| [stdout]  128    819865  9482.97 MB/sec  execute  46 sec   
+2018-07-15 04:53:38,595 process          L0367 DEBUG| [stdout]  128    832573  9469.96 MB/sec  execute  47 sec   
+2018-07-15 04:53:39,595 process          L0367 DEBUG| [stdout]  128    846039  9467.68 MB/sec  execute  48 sec   
+2018-07-15 04:53:40,595 process          L0367 DEBUG| [stdout]  128    859009  9460.29 MB/sec  execute  49 sec   
+2018-07-15 04:53:41,596 process          L0367 DEBUG| [stdout]  128    872098  9453.74 MB/sec  execute  50 sec   
+2018-07-15 04:53:42,596 process          L0367 DEBUG| [stdout]  128    884935  9446.05 MB/sec  execute  51 sec   
+2018-07-15 04:53:43,596 process          L0367 DEBUG| [stdout]  128    898138  9444.06 MB/sec  execute  52 sec   
+2018-07-15 04:53:44,597 process          L0367 DEBUG| [stdout]  128    912120  9450.10 MB/sec  execute  53 sec   
+2018-07-15 04:53:45,597 process          L0367 DEBUG| [stdout]  128    925593  9450.43 MB/sec  execute  54 sec   
+2018-07-15 04:53:46,597 process          L0367 DEBUG| [stdout]  128    939106  9449.91 MB/sec  execute  55 sec   
+2018-07-15 04:53:47,597 process          L0367 DEBUG| [stdout]  128    952643  9449.15 MB/sec  execute  56 sec   
+2018-07-15 04:53:48,597 process          L0367 DEBUG| [stdout]  128    966315  9451.65 MB/sec  execute  57 sec   
+2018-07-15 04:53:49,597 process          L0367 DEBUG| [stdout]  128    979950  9452.80 MB/sec  execute  58 sec   
+2018-07-15 04:53:50,597 process          L0367 DEBUG| [stdout]  128    993235  9451.67 MB/sec  execute  59 sec   
+2018-07-15 04:53:51,598 process          L0367 DEBUG| [stdout]  128   1006634  9451.65 MB/sec  execute  60 sec   
+2018-07-15 04:53:52,598 process          L0367 DEBUG| [stdout]  128   1018426  9430.57 MB/sec  execute  61 sec   
+2018-07-15 04:53:53,599 process          L0367 DEBUG| [stdout]  128   1027187  9377.13 MB/sec  execute  62 sec   
+2018-07-15 04:53:54,599 process          L0367 DEBUG| [stdout]  128   1040950  9379.18 MB/sec  execute  63 sec   
+2018-07-15 04:53:55,599 process          L0367 DEBUG| [stdout]  128   1054756  9381.19 MB/sec  execute  64 sec   
+2018-07-15 04:53:56,600 process          L0367 DEBUG| [stdout]  128   1068583  9383.45 MB/sec  execute  65 sec   
+2018-07-15 04:53:57,603 process          L0367 DEBUG| [stdout]  128   1082344  9384.75 MB/sec  execute  66 sec   
+2018-07-15 04:53:58,603 process          L0367 DEBUG| [stdout]  128   1095762  9383.47 MB/sec  execute  67 sec   
+2018-07-15 04:53:59,603 process          L0367 DEBUG| [stdout]  128   1109228  9381.71 MB/sec  execute  68 sec   
+2018-07-15 04:54:00,604 process          L0367 DEBUG| [stdout]  128   1122617  9380.01 MB/sec  execute  69 sec   
+2018-07-15 04:54:01,604 process          L0367 DEBUG| [stdout]  128   1136062  9377.92 MB/sec  cleanup  70 sec   
+2018-07-15 04:54:01,720 process          L0367 DEBUG| [stdout]  128   1136062  9362.42 MB/sec  cleanup  70 sec   
+2018-07-15 04:54:01,720 process          L0605 INFO | Command '/var/tmp/avocado_fNbfzE/dbench-3.04/dbench 128  -D . -c /var/tmp/avocado_fNbfzE/dbench-3.04/client.txt -t 70' finished with 0 after 84.254308939s
+2018-07-15 04:54:01,721 process          L0367 DEBUG| [stdout] 
+2018-07-15 04:54:01,721 process          L0367 DEBUG| [stdout] Throughput 9377.94 MB/sec 128 procs
+2018-07-15 04:54:01,807 test             L0286 DEBUG| DATA (filename=output.expected) => NOT FOUND (data sources: variant, test, file)
+2018-07-15 04:54:01,807 test             L0286 DEBUG| DATA (filename=stdout.expected) => NOT FOUND (data sources: variant, test, file)
+2018-07-15 04:54:01,808 test             L0286 DEBUG| DATA (filename=stderr.expected) => NOT FOUND (data sources: variant, test, file)
+2018-07-15 04:54:01,822 test             L1017 INFO | PASS 1-avocado-misc-tests/io/disk/dbench.py:Dbench.test;default-nprocs-runargs-3cfc
+2018-07-15 04:54:01,822 test             L1000 INFO | 
+2018-07-15 04:54:02,022 job              L0483 INFO | Test results available in /home/jenkins/avocado/job-results/job-2018-07-15T04.51-dd70541

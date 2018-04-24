@@ -1,0 +1,17 @@
++ set -e
++ '[' 1 -eq 0 ']'
++ mkdir -p kernel
++ cd kernel
++ '[' '!' -d linux ']'
++ cd linux
++ git remote set-url origin https://github.com/torvalds/linux.git
++ git fetch --all --tags
+Fetching origin
+From https://github.com/torvalds/linux
+   c2b58149d21f..624434af256a  master     -> origin/master
++ '[' 1 -eq 2 -a -n '' ']'
+++ git describe --tags --abbrev=0 origin/master
++ latestkerneltag=v4.18-rc3
+++ cat latestkerneltag
++ '[' v4.18-rc3 '!=' v4.18-rc3 ']'
++ exit 1

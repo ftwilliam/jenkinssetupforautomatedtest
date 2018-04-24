@@ -1,0 +1,40 @@
+Started by user [8mha:////4M5O53X5QONrb+aF7d3XuO6Y0FqwaEK30o3y1qqs3uiMAAAAmR+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyeEgZe/dLi1CL9pKLy/PyUYgAEKGTnwgAAAA==[0mWoods, Brian
+Building in workspace /var/lib/jenkins/workspace/avocadoltp.ondemand2
+[WS-CLEANUP] Deleting project workspace...
+[WS-CLEANUP] Done
+[avocadoltp.ondemand2] $ /bin/sh -xe /tmp/jenkins2219984719128365575.sh
++ RESOURCES=10.236.10.208
+++ echo avocadoltp.ondemand2
+++ grep -oP '(?<=\.)v.+\..+(?=\.)'
+++ :
++ KERNVER=
++ TIMEOUT=3600
++ AVO_RV=()
+++ cat /var/lib/jenkins/.ssh/id_rsa.pub
++ SSHKEY='ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDLouAeFsxExPwW0TBUwWU52qTIiDQHiAX4AXtBHWCDiDl4FBnlKLbPxXGnByoSXvMS/BIdxX9j4E+yXZTCf+EvgOUm2fAe7lIwGyhLhItdPPgQQJ++Dax5YYvM2h5YCEHmwDfD0hB1bofrvXi3/z83LvEbEj3+HWF2xPw0PmPsO815XlG7WvIwVBZ1DbQU9I+cBCvqZM7F+KbGSEG5NpRx1F2Tj2u3EzciC5DoEP62vAa8VjATTmC/Yo+pcxBhdfoqlrCZD008dT47FxMV38nFYtJw7o0M56TQpNOg6MhP9K72f7PDHDjIxoqv+we9mYCk1l4S3ATBm5MnSaiVsNfH jenkins@avocado-server'
++ (( I=0 ))
++ (( I<1 ))
++ (( I++ ))
++ (( I<1 ))
++ wait
++ R=10.236.10.208
++ AVO_RV[$I]=424242
++ continue
++ echo -n 'avocado RV per host: '
+avocado RV per host: + (( I=0 ))
++ (( I<1 ))
++ '[' '[0]' -eq 424242 ']'
+/tmp/jenkins2219984719128365575.sh: line 81: [: [0]: integer expression expected
++ echo -n '10.236.10.208=[0] '
+10.236.10.208=[0] + (( I++ ))
++ (( I<1 ))
++ echo -n 'Kernel Release: '
++ for R in ${RESOURCES}
++ '[' -f 10.236.10.208.kernelrelease ']'
++ truncate --size=-2 kernelreleases
+++ cat kernelreleases
++ echo '[Kernel' 'Release]'
+[Kernel Release]
+Archiving artifacts
+[description-setter] Could not determine description.
+Finished: SUCCESS

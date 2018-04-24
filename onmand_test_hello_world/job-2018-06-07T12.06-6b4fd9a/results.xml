@@ -1,0 +1,412 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite errors="1" failures="0" name="avocado" skipped="0" tests="1" time="654.153299809" timestamp="2018-06-07 12:17:33.981128">
+	<testcase classname="&lt;unknown&gt;" name="1-type_specific.io-github-autotest-qemu.hello_world" time="654.153299809">
+		<error message="No ipv4 DHCP lease for MAC 9a:ae:af:b0:b1:b2" type="&lt;unknown&gt;">
+<![CDATA[<unknown>]]>		</error>
+		<system-out>
+<![CDATA[17:06:38 INFO | Avocado-VT 'unknown'
+17:06:38 DEBUG| Test parameters:
+17:06:38 DEBUG|     _name_map_file = {'subtests.cfg': '(subtest=type_specific).(subtest=io-github-autotest-qemu).(subtest=hello_world)', 'guest-hw.cfg': 'bridge.default_bios.no_virtio_rng.(image_backend=filesystem).no_9p_export.smallpages.no_pci_assignable.qcow2.virtio_blk.smp2.virtio_net', 'host-os.cfg': 'Host.Host_Ubuntu.m18.u04.Host_arch_x86_64', 'guest-os.cfg': 'Guest.Linux.JeOS.27.x86_64', 'machines.cfg': 'i440fx', 'tests.cfg': 'qemu_kvm_jeos_quick'}
+17:06:38 DEBUG|     _short_name_map_file = {'subtests.cfg': 'type_specific.io-github-autotest-qemu.hello_world', 'guest-hw.cfg': 'bridge.default_bios.no_virtio_rng.filesystem.no_9p_export.smallpages.no_pci_assignable.qcow2.virtio_blk.smp2.virtio_net', 'host-os.cfg': 'Host.Host_Ubuntu.m18.u04.Host_arch_x86_64', 'guest-os.cfg': 'Guest.Linux.JeOS.27.x86_64', 'machines.cfg': 'i440fx', 'tests.cfg': 'qemu_kvm_jeos_quick'}
+17:06:38 DEBUG|     auto_cpu_model = yes
+17:06:38 DEBUG|     backup_dir = images/
+17:06:38 DEBUG|     backup_image = no
+17:06:38 DEBUG|     backup_image_before_testing = yes
+17:06:38 DEBUG|     backup_image_on_check_error = no
+17:06:38 DEBUG|     boot_menu = off
+17:06:38 DEBUG|     boot_once = c
+17:06:38 DEBUG|     boot_order = cdn
+17:06:38 DEBUG|     boot_path = images/pxeboot
+17:06:38 DEBUG|     catch_monitor = catch_monitor
+17:06:38 DEBUG|     cd_format = ide
+17:06:38 DEBUG|     cdrom_check_cdrom_pattern = /dev/cdrom-\w+|/dev/cdrom\d*
+17:06:38 DEBUG|     cdrom_get_cdrom_cmd = ls /dev/cdrom*
+17:06:38 DEBUG|     cdrom_info_cmd = cat /proc/sys/dev/cdrom/info
+17:06:38 DEBUG|     cdrom_test_cmd = dd if=%s of=/dev/null bs=1 count=1
+17:06:38 DEBUG|     cdroms = cd1
+17:06:38 DEBUG|     check_image = yes
+17:06:38 DEBUG|     cmds_installed_host = 
+17:06:38 DEBUG|     connect_uri = default
+17:06:38 DEBUG|     convert_ppm_files_to_png = no
+17:06:38 DEBUG|     cpu_chk_cmd = grep -c "^processor\b" /proc/cpuinfo
+17:06:38 DEBUG|     cpu_model_flags = 
+17:06:38 DEBUG|     dep = []
+17:06:38 DEBUG|     display = vnc
+17:06:38 DEBUG|     drive_format = virtio
+17:06:38 DEBUG|     drive_index_cd1 = 1
+17:06:38 DEBUG|     drive_index_image1 = 0
+17:06:38 DEBUG|     drive_rerror_image1 = 
+17:06:38 DEBUG|     drive_werror_image1 = 
+17:06:38 DEBUG|     enable_msix_vectors = yes
+17:06:38 DEBUG|     enable_pvpanic = yes
+17:06:38 DEBUG|     encode_video_files = yes
+17:06:38 DEBUG|     file_transfer_client = scp
+17:06:38 DEBUG|     file_transfer_port = 22
+17:06:38 DEBUG|     flexible_nic_index = no
+17:06:38 DEBUG|     guest_dmesg_ignore = False
+17:06:38 DEBUG|     guest_dmesg_level = 3
+17:06:38 DEBUG|     guest_port_remote_shell = 22
+17:06:38 DEBUG|     id = type_specific.io-github-autotest-qemu.hello_world
+17:06:38 DEBUG|     image_backend = filesystem
+17:06:38 DEBUG|     image_boot = yes
+17:06:38 DEBUG|     image_chain = 
+17:06:38 DEBUG|     image_clone_command = cp --reflink=auto %s %s
+17:06:38 DEBUG|     image_format = qcow2
+17:06:38 DEBUG|     image_name = images/jeos-27-x86_64
+17:06:38 DEBUG|     image_raw_device = no
+17:06:38 DEBUG|     image_remove_command = rm -rf %s
+17:06:38 DEBUG|     image_size = 10G
+17:06:38 DEBUG|     image_unbootable_pattern = Hard Disk.*not a bootable disk
+17:06:38 DEBUG|     image_verify_bootable = yes
+17:06:38 DEBUG|     images = image1
+17:06:38 DEBUG|     inactivity_treshold = 1800
+17:06:38 DEBUG|     inactivity_watcher = log
+17:06:38 DEBUG|     indirect_image_blacklist = /dev/hda[\d]* /dev/sda[\d]* /dev/sg0 /dev/md0
+17:06:38 DEBUG|     install_virtio = no
+17:06:38 DEBUG|     ioport_pvpanic = 0x505
+17:06:38 DEBUG|     keep_ppm_files = no
+17:06:38 DEBUG|     keep_ppm_files_on_error = no
+17:06:38 DEBUG|     keep_screendumps = yes
+17:06:38 DEBUG|     keep_screendumps_on_error = yes
+17:06:38 DEBUG|     keep_video_files = yes
+17:06:38 DEBUG|     keep_video_files_on_error = yes
+17:06:38 DEBUG|     kill_timeout = 60
+17:06:38 DEBUG|     kill_unresponsive_vms = yes
+17:06:38 DEBUG|     kill_vm = yes
+17:06:38 DEBUG|     kill_vm_before_test = no
+17:06:38 DEBUG|     kill_vm_gracefully = yes
+17:06:38 DEBUG|     local_ip = ENTER.YOUR.LOCAL.EXAMPLE.COM
+17:06:38 DEBUG|     local_pwd = 
+17:06:38 DEBUG|     login_timeout = 360
+17:06:38 DEBUG|     machine_type = pc
+17:06:38 DEBUG|     main_vm = avocado-vt-vm1
+17:06:38 DEBUG|     malloc_perturb = yes
+17:06:38 DEBUG|     mem = 1024
+17:06:38 DEBUG|     mem_chk_cmd = dmidecode -t 17 | awk -F: '/Size/ {print $2}'
+17:06:38 DEBUG|     mem_chk_cur_cmd = grep MemTotal /proc/meminfo
+17:06:38 DEBUG|     mem_chk_re_str = [^\$]([0-9]+)
+17:06:38 DEBUG|     memballoon_model = virtio
+17:06:38 DEBUG|     migrate_dest_host = ENTER.YOUR.DEST.EXAMPLE.COM
+17:06:38 DEBUG|     migrate_dest_pwd = PASSWORD.DEST.EXAMPLE
+17:06:38 DEBUG|     migrate_load_vms = 
+17:06:38 DEBUG|     migrate_main_vm = avocado-vt-vm1
+17:06:38 DEBUG|     migrate_port = 49152
+17:06:38 DEBUG|     migrate_proto = tcp
+17:06:38 DEBUG|     migrate_shared_storage = SHARED_IMAGE.EXAMPLE
+17:06:38 DEBUG|     migrate_source_host = ENTER.YOUR.SOURCE.EXAMPLE.COM
+17:06:38 DEBUG|     migrate_source_pwd = PASSWORD.SOURCE.EXAMPLE
+17:06:38 DEBUG|     migrate_vms = 
+17:06:38 DEBUG|     monitor_type = human
+17:06:38 DEBUG|     monitors = hmp1
+17:06:38 DEBUG|     name = qemu_kvm_jeos_quick.bridge.default_bios.no_virtio_rng.(image_backend=filesystem).no_9p_export.smallpages.no_pci_assignable.qcow2.virtio_blk.smp2.virtio_net.Guest.Linux.JeOS.27.x86_64.i440fx.Host.Host_Ubuntu.m18.u04.Host_arch_x86_64.(subtest=type_specific).(subtest=io-github-autotest-qemu).(subtest=hello_world)
+17:06:38 DEBUG|     netdev_peer_re = \s{2,}(.*?): .*?\\\s(.*?):
+17:06:38 DEBUG|     netdst = virbr0
+17:06:38 DEBUG|     nettype = bridge
+17:06:38 DEBUG|     nic_model = virtio
+17:06:38 DEBUG|     nics = nic1
+17:06:38 DEBUG|     os_type = linux
+17:06:38 DEBUG|     os_variant = fedora27
+17:06:38 DEBUG|     other_tests_dirs = 
+17:06:38 DEBUG|     password = 123456
+17:06:38 DEBUG|     paused_after_start_vm = no
+17:06:38 DEBUG|     pci_assignable = no
+17:06:38 DEBUG|     profilers = kvm_stat
+17:06:38 DEBUG|     provider = io-github-autotest-qemu
+17:06:38 DEBUG|     qemu_binary = /usr/bin/kvm
+17:06:38 DEBUG|     qemu_dst_binary = /usr/bin/kvm
+17:06:38 DEBUG|     qemu_img_binary = /usr/bin/qemu-img
+17:06:38 DEBUG|     qemu_io_binary = /usr/bin/qemu-io
+17:06:38 DEBUG|     reboot_command = shutdown -r now
+17:06:38 DEBUG|     redirs = remote_shell
+17:06:38 DEBUG|     remote_ip = ENTER.YOUR.REMOTE.EXAMPLE.COM
+17:06:38 DEBUG|     remote_pwd = 
+17:06:38 DEBUG|     remote_user = root
+17:06:38 DEBUG|     restore_image = no
+17:06:38 DEBUG|     restore_image_after_testing = yes
+17:06:38 DEBUG|     restore_image_on_check_error = no
+17:06:38 DEBUG|     run_tcpdump = yes
+17:06:38 DEBUG|     screendump_delay = 5
+17:06:38 DEBUG|     screendump_quality = 30
+17:06:38 DEBUG|     screendump_temp_dir = /dev/shm
+17:06:38 DEBUG|     screendump_verbose = no
+17:06:38 DEBUG|     serials = serial0
+17:06:38 DEBUG|     shell_client = ssh
+17:06:38 DEBUG|     shell_linesep = \n
+17:06:38 DEBUG|     shell_port = 22
+17:06:38 DEBUG|     shortname = qcow2.virtio_blk.smp2.virtio_net.Guest.JeOS.27.x86_64.io-github-autotest-qemu.hello_world
+17:06:38 DEBUG|     shutdown_command = shutdown -h now
+17:06:38 DEBUG|     skip_cluster_leak_warn = no
+17:06:38 DEBUG|     skip_image_check_during_running = no
+17:06:38 DEBUG|     skip_image_processing = no
+17:06:38 DEBUG|     sleep_time = 5
+17:06:38 DEBUG|     smp = 2
+17:06:38 DEBUG|     start_vm = yes
+17:06:38 DEBUG|     status_test_command = echo $?
+17:06:38 DEBUG|     store_vm_register = yes
+17:06:38 DEBUG|     strict_mode = no
+17:06:38 DEBUG|     subtest = io-github-autotest-qemu.hello_world
+17:06:38 DEBUG|     take_regular_screendumps = yes
+17:06:38 DEBUG|     test_timeout = 14400
+17:06:38 DEBUG|     type = hello_world
+17:06:38 DEBUG|     url_auto_ip = 
+17:06:38 DEBUG|     usb_bus = usb1.0
+17:06:38 DEBUG|     usb_controller = ehci
+17:06:38 DEBUG|     usb_devices = tablet1
+17:06:38 DEBUG|     usb_max_port = 6
+17:06:38 DEBUG|     usb_type = ich9-usb-ehci1
+17:06:38 DEBUG|     usb_type_tablet1 = usb-tablet
+17:06:38 DEBUG|     usb_type_usb1 = ich9-usb-ehci1
+17:06:38 DEBUG|     usbs = usb1
+17:06:38 DEBUG|     use_autostart = no
+17:06:38 DEBUG|     use_check_cpu = yes
+17:06:38 DEBUG|     use_debug = yes
+17:06:38 DEBUG|     use_no_reboot = no
+17:06:38 DEBUG|     use_os_type = yes
+17:06:38 DEBUG|     use_os_variant = no
+17:06:38 DEBUG|     use_virt_install_wait = no
+17:06:38 DEBUG|     used_cpus = 2
+17:06:38 DEBUG|     used_mem = 512
+17:06:38 DEBUG|     username = root
+17:06:38 DEBUG|     vcpu_thread_pattern = thread_id.?[:|=]\s*(\d+)
+17:06:38 DEBUG|     verify_guest_dmesg = yes
+17:06:38 DEBUG|     verify_host_dmesg = yes
+17:06:38 DEBUG|     vfd_size = 1440k
+17:06:38 DEBUG|     vga = std
+17:06:38 DEBUG|     virt_install_wait_time = 300
+17:06:38 DEBUG|     virt_test_type = qemu
+17:06:38 DEBUG|     virtinstall_extra_args = 
+17:06:38 DEBUG|     vm_arch_name = x86_64
+17:06:38 DEBUG|     vm_register_delay = 5
+17:06:38 DEBUG|     vm_type = qemu
+17:06:38 DEBUG|     vms = avocado-vt-vm1
+17:06:38 DEBUG|     vnc_autoport = yes
+17:06:38 DEBUG| Searching for test modules that match 'type = hello_world' and 'provider = io-github-autotest-qemu' on this cartesian dict
+17:06:38 DEBUG| Found subtest module /var/lib/avocado/data/avocado-vt/test-providers.d/downloads/io-github-autotest-qemu/qemu/tests/hello_world.py
+17:06:38 WARNI| Creating new, empty env file
+17:06:39 DEBUG| Detected CPU vendor as 'AuthenticAMD'
+17:06:39 DEBUG| KVM version: 4.15.0-22-generic
+17:06:39 DEBUG| KVM userspace version: 2.11.1 (Debian 1:2.11+dfsg-1ubuntu7.2)
+17:06:39 WARNI| Libvirtd service is not available in host, utils_libvirtd module will not function normally
+17:06:39 INFO | Running 'true'
+17:06:39 INFO | Command 'true' finished with 0 after 0.00112390518188s
+17:06:39 INFO | Running 'ps -o comm 1'
+17:06:39 DEBUG| [stdout] COMMAND
+17:06:39 INFO | Command 'ps -o comm 1' finished with 0 after 0.0277209281921s
+17:06:39 DEBUG| [stdout] systemd
+17:06:39 DEBUG| Image backup /var/lib/avocado/data/avocado-vt/images/jeos-27-x86_64.qcow2.backup already exists, skipping...
+17:06:39 DEBUG| Generating random mac address for nic
+17:06:39 INFO | Running '/usr/sbin/ovs-vswitchd --version'
+17:06:39 DEBUG| [stdout] ovs-vswitchd (Open vSwitch) 2.9.0
+17:06:39 INFO | Command '/usr/sbin/ovs-vswitchd --version' finished with 0 after 0.00235390663147s
+17:06:39 INFO | Running '/usr/sbin/ovs-vswitchd --version'
+17:06:39 DEBUG| [stdout] ovs-vswitchd (Open vSwitch) 2.9.0
+17:06:39 INFO | Command '/usr/sbin/ovs-vswitchd --version' finished with 0 after 0.0022349357605s
+17:06:39 DEBUG| Adding VM avocado-vt-vm1 NIC ifname t0-O9VHcV to bridge virbr0
+17:06:40 DEBUG| Detected CPU vendor as 'AuthenticAMD'
+17:06:40 WARNI| Set vcpu_threads to 1 for AMD cpu.
+17:06:40 DEBUG| qemu will run in KVM mode
+17:06:40 DEBUG| Devices of avocado-vt-vm1: [t'PREFIX',t'qemu',t'-S',t'vmname',t'machine',t'i440FX',t'PIIX4_PM',t'PIIX3',t'piix3-ide',t'fdc',t'nodefaults',t'VGA-std',t'HMP-hmp1',t'HMP-catch_monitor',idSoC7qC,t'SER-serial0',t'isa-log',usb1,usb1.0,usb1.1,usb1.2,drive_image1,image1,idH6X3FQ,t'NET-bridge',t'mem',t'smp',t'cpu',usb-tablet1,t'tcp-redir',t'display',t'rtc',t'bootmenu',t'kvm']
+17:06:40 DEBUG| Buses of avocado-vt-vm1
+  drive_image1(QDrive): {drive:image1}
+  usb1.0(ehci): {1:usb-tablet1}
+  floppy(floppy): [None,None]
+  ide(ide): [None,None,None,None]
+  _PCI_CHASSIS_NR(None): {}
+  _PCI_CHASSIS(None): {}
+  pci.0(PCI): {0x0-0x0:t'i440FX',0x1-0x0:t'PIIX3',0x1-0x1:t'piix3-ide',0x1-0x3:t'PIIX4_PM',0x1d-0x0:usb1.0,0x1d-0x2:usb1.1,0x1d-0x4:usb1.2,0x1d-0x7:usb1,0x2-0x0:t'VGA-std',0x3-0x0:image1,0x4-0x0:idH6X3FQ}
+17:06:40 INFO | Running qemu command (reformatted):
+MALLOC_PERTURB_=1  /usr/bin/kvm \
+    -S  \
+    -name 'avocado-vt-vm1' \
+    -machine pc  \
+    -nodefaults  \
+    -vga std  \
+    -chardev socket,id=hmp_id_hmp1,path=/var/tmp/avocado_PAW_ZH/monitor-hmp1-20180607-170639-iobcU3Qk,server,nowait \
+    -mon chardev=hmp_id_hmp1,mode=readline  \
+    -chardev socket,id=hmp_id_catch_monitor,path=/var/tmp/avocado_PAW_ZH/monitor-catch_monitor-20180607-170639-iobcU3Qk,server,nowait \
+    -mon chardev=hmp_id_catch_monitor,mode=readline \
+    -device pvpanic,ioport=0x505,id=idSoC7qC  \
+    -chardev socket,id=serial_id_serial0,path=/var/tmp/avocado_PAW_ZH/serial-serial0-20180607-170639-iobcU3Qk,server,nowait \
+    -device isa-serial,chardev=serial_id_serial0  \
+    -chardev socket,id=seabioslog_id_20180607-170639-iobcU3Qk,path=/var/tmp/avocado_PAW_ZH/seabios-20180607-170639-iobcU3Qk,server,nowait \
+    -device isa-debugcon,chardev=seabioslog_id_20180607-170639-iobcU3Qk,iobase=0x402 \
+    -device ich9-usb-ehci1,id=usb1,addr=0x1d.7,multifunction=on,bus=pci.0 \
+    -device ich9-usb-uhci1,id=usb1.0,multifunction=on,masterbus=usb1.0,addr=0x1d.0,firstport=0,bus=pci.0 \
+    -device ich9-usb-uhci2,id=usb1.1,multifunction=on,masterbus=usb1.0,addr=0x1d.2,firstport=2,bus=pci.0 \
+    -device ich9-usb-uhci3,id=usb1.2,multifunction=on,masterbus=usb1.0,addr=0x1d.4,firstport=4,bus=pci.0 \
+    -drive id=drive_image1,if=none,format=qcow2,file=/var/lib/avocado/data/avocado-vt/images/jeos-27-x86_64.qcow2 \
+    -device virtio-blk-pci,id=image1,drive=drive_image1,bootindex=0,bus=pci.0,addr=0x3 \
+    -device virtio-net-pci,mac=9a:ae:af:b0:b1:b2,id=idH6X3FQ,vectors=4,netdev=id89OKgt,bus=pci.0,addr=0x4  \
+    -netdev tap,id=id89OKgt,fd=19 \
+    -m 1024  \
+    -smp 2,maxcpus=2,cores=1,threads=1,sockets=2  \
+    -cpu 'Opteron_G4' \
+    -device usb-tablet,id=usb-tablet1,bus=usb1.0,port=1  \
+    -vnc :0  \
+    -rtc base=utc,clock=host  \
+    -boot menu=off,strict=off,order=cdn,once=c \
+    -enable-kvm
+17:06:40 INFO | [qemu output] qemu-system-x86_64: -netdev tap,id=id89OKgt,fd=19: TUNGETIFF ioctl() failed: Bad file descriptor
+17:06:40 INFO | [qemu output] TUNSETOFFLOAD ioctl() failed: Bad file descriptor
+17:06:40 INFO | [qemu output] qemu-system-x86_64: warning: host doesn't support requested feature: CPUID.80000001H:ECX.xop [bit 11]
+17:06:40 INFO | [qemu output] qemu-system-x86_64: warning: host doesn't support requested feature: CPUID.80000001H:ECX.fma4 [bit 16]
+17:06:40 INFO | [qemu output] qemu-system-x86_64: warning: host doesn't support requested feature: CPUID.80000001H:ECX.xop [bit 11]
+17:06:40 INFO | [qemu output] qemu-system-x86_64: warning: host doesn't support requested feature: CPUID.80000001H:ECX.fma4 [bit 16]
+17:06:41 INFO | Created qemu process with parent PID 37497
+17:06:41 INFO | Connecting to monitor '<virttest.qemu_monitor.HumanMonitor> hmp1'
+17:06:41 DEBUG| (monitor avocado-vt-vm1.hmp1) Sending command 'help set_link' 
+17:06:41 DEBUG| Send command: help set_link
+17:06:41 DEBUG| (monitor avocado-vt-vm1.hmp1) Response to 'help set_link'
+17:06:41 DEBUG| (monitor avocado-vt-vm1.hmp1)    set_link name on|off -- change the link status of a network adapter
+17:06:41 INFO | Connecting to monitor '<virttest.qemu_monitor.HumanMonitor> catch_monitor'
+17:06:41 DEBUG| (monitor avocado-vt-vm1.catch_monitor) Sending command 'help set_link' 
+17:06:41 DEBUG| Send command: help set_link
+17:06:41 DEBUG| (monitor avocado-vt-vm1.catch_monitor) Response to 'help set_link'
+17:06:41 DEBUG| (monitor avocado-vt-vm1.catch_monitor)    set_link name on|off -- change the link status of a network adapter
+17:06:41 DEBUG| VM appears to be alive with PID 37499
+17:06:41 DEBUG| (monitor avocado-vt-vm1.hmp1) Sending command 'info cpus' 
+17:06:41 DEBUG| Send command: info cpus
+17:06:41 DEBUG| (monitor avocado-vt-vm1.hmp1) Response to 'info cpus'
+17:06:41 DEBUG| (monitor avocado-vt-vm1.hmp1)    * CPU #0: pc=0x00000000fffffff0 thread_id=37503
+17:06:41 DEBUG| (monitor avocado-vt-vm1.hmp1)      CPU #1: pc=0x00000000fffffff0 thread_id=37504
+17:06:41 DEBUG| (monitor avocado-vt-vm1.hmp1) Sending command 'cont' 
+17:06:41 DEBUG| Send command: cont
+17:06:41 INFO | Context: Get the main VM
+17:06:41 WARNI| Unable to read serial console
+17:06:41 WARNI| Unable to read serial console
+17:06:41 DEBUG| Attempting to log into 'avocado-vt-vm1' (timeout 360s)
+17:12:42 DEBUG| Attempting to log into 'avocado-vt-vm1' via serial console (timeout 360s)
+17:12:56 DEBUG| Sending command: echo %OS%
+17:12:56 DEBUG| Sending command (safe): ifconfig -a
+17:12:56 DEBUG| Sending command (safe): ip link | grep -B1 '' -i
+17:12:56 DEBUG| Sending command: test -d /sys/class/net/ens4
+17:12:56 DEBUG| Sending command: echo $?
+17:12:57 DEBUG| Sending command: cat /sys/class/net/ens4/address
+17:12:57 DEBUG| Sending command (safe): ifconfig ens4 || ip address show ens4
+17:12:57 WARNI| No VM's NIC got IP address
+17:12:57 WARNI| Unable to read serial console
+17:12:57 WARNI| Unable to read serial console
+17:13:08 DEBUG| Sending command: ipconfig || ifconfig
+17:13:08 DEBUG| Sending command: ip route || route print
+17:13:08 ERROR| Guest network status:
+ -bash: ipconfig: command not found
+ens4: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        ether 9a:ae:af:b0:b1:b2  txqueuelen 1000  (Ethernet)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 49  bytes 8376 (8.1 KiB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (Local Loopback)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 0  bytes 0 (0.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+
+Guest route table:
+ 
+17:13:08 ERROR| 
+17:13:08 ERROR| Reproduced traceback from: /usr/local/lib/python2.7/dist-packages/avocado_plugins_vt-58.0-py2.7.egg/avocado_vt/test.py:407
+17:13:08 ERROR| Traceback (most recent call last):
+17:13:08 ERROR|   File "/usr/local/lib/python2.7/dist-packages/avocado_plugins_vt-58.0-py2.7.egg/virttest/error_context.py", line 135, in new_fn
+17:13:08 ERROR|     return fn(*args, **kwargs)
+17:13:08 ERROR|   File "/var/lib/avocado/data/avocado-vt/test-providers.d/downloads/io-github-autotest-qemu/qemu/tests/hello_world.py", line 44, in run
+17:13:08 ERROR|     session = vm.wait_for_login(timeout=timeout)
+17:13:08 ERROR|   File "/usr/local/lib/python2.7/dist-packages/avocado_plugins_vt-58.0-py2.7.egg/virttest/virt_vm.py", line 1083, in wait_for_login
+17:13:08 ERROR|     ip_version=self.ip_version)
+17:13:08 ERROR|   File "/usr/local/lib/python2.7/dist-packages/avocado_plugins_vt-58.0-py2.7.egg/virttest/error_context.py", line 135, in new_fn
+17:13:08 ERROR|     return fn(*args, **kwargs)
+17:13:08 ERROR|   File "/usr/local/lib/python2.7/dist-packages/avocado_plugins_vt-58.0-py2.7.egg/virttest/virt_vm.py", line 795, in wait_for_get_address
+17:13:08 ERROR|     ipaddr = self.get_address(nic_index, ip_version)
+17:13:08 ERROR|   File "/usr/local/lib/python2.7/dist-packages/avocado_plugins_vt-58.0-py2.7.egg/virttest/virt_vm.py", line 666, in get_address
+17:13:08 ERROR|     return self._get_address(nic, ip_version)
+17:13:08 ERROR|   File "/usr/local/lib/python2.7/dist-packages/avocado_plugins_vt-58.0-py2.7.egg/virttest/virt_vm.py", line 704, in _get_address
+17:13:08 ERROR|     raise VMIPAddressMissingError(mac, ip_version)
+17:13:08 ERROR| VMIPAddressMissingError: No ipv4 DHCP lease for MAC 9a:ae:af:b0:b1:b2
+17:13:08 ERROR| 
+17:13:08 DEBUG| Attempting to log into 'avocado-vt-vm1' (timeout 240s)
+17:17:09 DEBUG| Attempting to log into 'avocado-vt-vm1' via serial console (timeout 240s)
+17:17:20 DEBUG| Sending command: echo %OS%
+17:17:20 DEBUG| Sending command (safe): ifconfig -a
+17:17:20 DEBUG| Sending command (safe): ip link | grep -B1 '' -i
+17:17:20 DEBUG| Sending command: test -d /sys/class/net/ens4
+17:17:20 DEBUG| Sending command: echo $?
+17:17:20 DEBUG| Sending command: cat /sys/class/net/ens4/address
+17:17:20 DEBUG| Sending command (safe): ifconfig ens4 || ip address show ens4
+17:17:20 DEBUG| Updated HWADDR (9a:ae:af:b0:b1:b2_6)<->(fe80::98ae:afff:feb0:b1b2) IP pair into address cache
+17:17:20 WARNI| Unable to read serial console
+17:17:20 WARNI| Unable to read serial console
+17:17:32 DEBUG| Sending command: ipconfig || ifconfig
+17:17:32 DEBUG| Sending command: ip route || route print
+17:17:32 ERROR| Guest network status:
+ -bash: ipconfig: command not found
+ens4: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet6 fe80::98ae:afff:feb0:b1b2  prefixlen 64  scopeid 0x20<link>
+        ether 9a:ae:af:b0:b1:b2  txqueuelen 1000  (Ethernet)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 99  bytes 16842 (16.4 KiB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (Local Loopback)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 0  bytes 0 (0.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+
+Guest route table:
+ 
+17:17:32 ERROR| 
+17:17:32 ERROR| Reproduced traceback from: /usr/local/lib/python2.7/dist-packages/avocado_plugins_vt-58.0-py2.7.egg/avocado_vt/test.py:427
+17:17:32 ERROR| Traceback (most recent call last):
+17:17:32 ERROR|   File "/usr/local/lib/python2.7/dist-packages/avocado_plugins_vt-58.0-py2.7.egg/virttest/error_context.py", line 135, in new_fn
+17:17:32 ERROR|     return fn(*args, **kwargs)
+17:17:32 ERROR|   File "/usr/local/lib/python2.7/dist-packages/avocado_plugins_vt-58.0-py2.7.egg/virttest/env_process.py", line 946, in postprocess
+17:17:32 ERROR|     vm.verify_dmesg(dmesg_log_file=guest_dmesg_log_file)
+17:17:32 ERROR|   File "/usr/local/lib/python2.7/dist-packages/avocado_plugins_vt-58.0-py2.7.egg/virttest/virt_vm.py", line 883, in verify_dmesg
+17:17:32 ERROR|     session = self.wait_for_login()
+17:17:32 ERROR|   File "/usr/local/lib/python2.7/dist-packages/avocado_plugins_vt-58.0-py2.7.egg/virttest/virt_vm.py", line 1083, in wait_for_login
+17:17:32 ERROR|     ip_version=self.ip_version)
+17:17:32 ERROR|   File "/usr/local/lib/python2.7/dist-packages/avocado_plugins_vt-58.0-py2.7.egg/virttest/error_context.py", line 135, in new_fn
+17:17:32 ERROR|     return fn(*args, **kwargs)
+17:17:32 ERROR|   File "/usr/local/lib/python2.7/dist-packages/avocado_plugins_vt-58.0-py2.7.egg/virttest/virt_vm.py", line 795, in wait_for_get_address
+17:17:32 ERROR|     ipaddr = self.get_address(nic_index, ip_version)
+17:17:32 ERROR|   File "/usr/local/lib/python2.7/dist-packages/avocado_plugins_vt-58.0-py2.7.egg/virttest/virt_vm.py", line 666, in get_address
+17:17:32 ERROR|     return self._get_address(nic, ip_version)
+17:17:32 ERROR|   File "/usr/local/lib/python2.7/dist-packages/avocado_plugins_vt-58.0-py2.7.egg/virttest/virt_vm.py", line 704, in _get_address
+17:17:32 ERROR|     raise VMIPAddressMissingError(mac, ip_version)
+17:17:32 ERROR| VMIPAddressMissingError: No ipv4 DHCP lease for MAC 9a:ae:af:b0:b1:b2
+17:17:32 ERROR| 
+17:17:32 ERROR| Exception raised during postprocessing: No ipv4 DHCP lease for MAC 9a:ae:af:b0:b1:b2
+17:17:32 ERROR| 
+17:17:32 ERROR| Reproduced traceback from: /usr/local/lib/python2.7/dist-packages/avocado_framework-58.0-py2.7.egg/avocado/core/test.py:834
+17:17:32 ERROR| Traceback (most recent call last):
+17:17:32 ERROR|   File "/usr/local/lib/python2.7/dist-packages/avocado_plugins_vt-58.0-py2.7.egg/avocado_vt/test.py", line 270, in runTest
+17:17:32 ERROR|     raise self.__status  # pylint: disable=E0702
+17:17:32 ERROR| VMIPAddressMissingError: No ipv4 DHCP lease for MAC 9a:ae:af:b0:b1:b2
+17:17:32 ERROR| 
+17:17:32 DEBUG| Local variables:
+17:17:32 DEBUG|  -> self <class 'avocado_vt.test.VirtTest'>: 1-type_specific.io-github-autotest-qemu.hello_world
+17:17:32 DEBUG| DATA (filename=output.expected) => NOT FOUND (data sources: variant, test, file)
+17:17:32 DEBUG| DATA (filename=stdout.expected) => NOT FOUND (data sources: variant, test, file)
+17:17:32 DEBUG| DATA (filename=stderr.expected) => NOT FOUND (data sources: variant, test, file)
+17:17:32 ERROR| Traceback (most recent call last):
+
+17:17:32 ERROR|   File "/usr/local/lib/python2.7/dist-packages/avocado_framework-58.0-py2.7.egg/avocado/core/test.py", line 932, in _run_avocado
+    raise test_exception
+
+17:17:32 ERROR| VMIPAddressMissingError: No ipv4 DHCP lease for MAC 9a:ae:af:b0:b1:b2
+
+17:17:32 ERROR| ERROR 1-type_specific.io-github-autotest-qemu.hello_world -> VMIPAddressMissingError: No ipv4 DHCP lease for MAC 9a:ae:af:b0:b1:b2
+17:17:32 INFO | 
+]]>		</system-out>
+	</testcase>
+</testsuite>

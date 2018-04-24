@@ -1,0 +1,9 @@
++ cd /var/lib/jenkins
++ ./checkresourceprovisioned.new.sh 10.236.10.208
++ set -e
++ false
++ '[' '' = ubuntu-16.04 ']'
++ '[' '' = ubuntu-17.10 ']'
++ '[' '' = ubuntu-18.04 ']'
++ ssh -q root@10.236.10.208 'useradd -m -s /bin/bash -G wheel jenkins && echo jenkins:amd123 | chpasswd'
+useradd: user 'jenkins' already exists

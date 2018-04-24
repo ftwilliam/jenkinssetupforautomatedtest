@@ -1,0 +1,9 @@
++ cd /var/lib/jenkins
++ ./checkresourceprovisioned.sh sosmachine3
++ set -e
++ ping -c 1 sosmachine3
++ ssh -q -o PasswordAuthentication=no -o StrictHostKeyChecking=no jenkins@sosmachine3 'test ! -f checkfornewkerneltag.sh'
++ '[' 1 -eq 1 ']'
++ scp checkfornewkerneltag.sh jenkins@sosmachine3:
++ scp checkfornewqemutag.sh jenkins@sosmachine3:
++ exit

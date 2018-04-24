@@ -1,0 +1,43 @@
+Started by user unknown or anonymous
+[lockable-resources] acquired lock on []
+Building in workspace /var/lib/jenkins/workspace/avocadokvmunittests.ondemand
+[WS-CLEANUP] Deleting project workspace...
+[WS-CLEANUP] Done
+[avocadokvmunittests.ondemand] $ /bin/sh -xe /tmp/jenkins375611746916418218.sh
++ RESOURCES=diesel8a87host
++ KERNELREPO=https://github.com/torvalds/linux.git
++ QEMUREPO=https://github.com/qemu/qemu.git
++ KERNELTAG=v4.16-rc2
++ QEMUTAG=v2.11.1
++ TIMEOUT=1800
++ for R in ${RESOURCES}
++ wait
++ ssh -q jenkins@diesel8a87host './checkfornewkerneltag.sh https://github.com/torvalds/linux.git' v4.16-rc2
+++ ssh -q jenkins@diesel8a87host ls 'kernel/linux-image*'
+++ grep -oP '(?<=linux-image-).+(?=-jenkins_)'
++ kernbuilt=4.16.0-rc2
++ cd /var/lib/jenkins
++ ./rebootresource.sh jenkins@diesel8a87host 4.16.0-rc2
+++ ssh -q jenkins@diesel8a87host 'uname -r'
++ echo 'diesel8a87host: 4.16.0-rc2-jenkins'
++ ssh -q jenkins@diesel8a87host './checkfornewqemutag.sh https://github.com/qemu/qemu.git' v2.11.1
++ timeout -sKILL 1800 ssh -q jenkins@diesel8a87host sudo ./avocado/contrib/testsuites/run-kvm-unit-test.sh
++ :
+++ cat diesel8a87host.ssh.log
+++ fgrep 'JOB LOG'
+++ grep -oP '(?<=: ).+$'
++ AVOCADO_LOG_PATH=/home/jenkins/avocado/job-results/job-2018-05-04T13.58-20ffb1c/job.log
++ scp jenkins@diesel8a87host:/home/jenkins/avocado/job-results/job-2018-05-04T13.58-20ffb1c/job.log diesel8a87host.avocado.log
++ echo -n 'Kernel Release: '
++ for R in ${RESOURCES}
++ '[' -f diesel8a87host.kernelrelease ']'
+++ cat diesel8a87host.kernelrelease
+++ grep -oP '.+(?=-jenkins)'
++ echo -n 'diesel8a87host: 4.16.0-rc2, '
++ truncate --size=-2 kernelreleases
+++ cat kernelreleases
++ echo '[Kernel' Release: diesel8a87host: '4.16.0-rc2]'
+[Kernel Release: diesel8a87host: 4.16.0-rc2]
+Archiving artifacts
+[description-setter] Description set: diesel8a87host: 4.16.0-rc2
+Finished: SUCCESS

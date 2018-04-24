@@ -1,0 +1,55 @@
+Started by user [8mha:////4M5O53X5QONrb+aF7d3XuO6Y0FqwaEK30o3y1qqs3uiMAAAAmR+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyeEgZe/dLi1CL9pKLy/PyUYgAEKGTnwgAAAA==[0mWoods, Brian
+Building in workspace /var/lib/jenkins/workspace/avocadoltp.ondemand2
+[WS-CLEANUP] Deleting project workspace...
+[WS-CLEANUP] Done
+[avocadoltp.ondemand2] $ /bin/sh -xe /tmp/jenkins6096629057304793752.sh
++ RESOURCES=sos-avocado-os0
+++ echo avocadoltp.ondemand2
+++ grep -oP '(?<=\.)v.+\..+(?=\.)'
+++ :
++ KERNVER=
++ TIMEOUT=3600
++ AVO_RV=()
++ (( I=0 ))
++ (( I<1 ))
++ (( I++ ))
++ (( I<1 ))
++ wait
++ R=sos-avocado-os0
++ AVO_RV[$I]=424242
++ RV=0
++ ssh -q jenkins@sos-avocado-os0 './checkfornewkerneltag.sh CURRENT v4.16-rc2'
++ '[' 0 -eq 1 ']'
++ '[' 0 -eq 2 ']'
++ echo -n 'sos-avocado-os0: '
++ ssh -q jenkins@sos-avocado-os0 'uname -r'
++ AVO_RV[$I]=0
++ avocado run --remote-hostname sos-avocado-os0 --remote-username root --job-timeout 1h --failfast off --job-results-dir sos-avocado-os0/avocado_log/ examples/sleeptest.py
+Failed to load plugin from module "avocado_vt.plugins.vt_list": EnvironmentError("Bootstrap missing. Execute 'avocado vt-bootstrap' or disable this plugin to get rid of this message",)
+Failed to load plugin from module "avocado_vt.plugins.vt": EnvironmentError("Bootstrap missing. Execute 'avocado vt-bootstrap' or disable this plugin to get rid of this message",)
+JOB ID     : 4b33a3967f53187ad168eff58ee12d5d080b986e
+JOB LOG    : /var/lib/jenkins/workspace/avocadoltp.ondemand2/sos-avocado-os0/avocado_log/job-2018-06-08T13.51-4b33a39/job.log
+LOGIN      : root@sos-avocado-os0:22 (TIMEOUT: 60 seconds)
+ (1/1) examples/sleeptest.py:SleepTest.test:  PASS (1.06 s)
+RESULTS    : PASS 1 | ERROR 0 | FAIL 0 | SKIP 0 | WARN 0 | INTERRUPT 0 | CANCEL 0
+JOB TIME   : 3.95 s
+JOB HTML   : /var/lib/jenkins/workspace/avocadoltp.ondemand2/sos-avocado-os0/avocado_log/job-2018-06-08T13.51-4b33a39/results.html
++ echo -n 'avocado RV per host: '
+avocado RV per host: + (( I=0 ))
++ (( I<1 ))
++ '[' '[0]' -eq 424242 ']'
+/tmp/jenkins6096629057304793752.sh: line 59: [: [0]: integer expression expected
++ echo -n 'sos-avocado-os0=[0] '
+sos-avocado-os0=[0] + (( I++ ))
++ (( I<1 ))
++ echo -n 'Kernel Release: '
++ for R in ${RESOURCES}
++ '[' -f sos-avocado-os0.kernelrelease ']'
+++ cat sos-avocado-os0.kernelrelease
++ echo -n 'sos-avocado-os0: 4.17.0-jenkins'
+++ cat kernelreleases
++ echo '[Kernel' Release: sos-avocado-os0: '4.17.0-jenkins]'
+[Kernel Release: sos-avocado-os0: 4.17.0-jenkins]
+Archiving artifacts
+[description-setter] Description set: sos-avocado-os0: 4.17.0-jenkins
+Finished: SUCCESS

@@ -1,0 +1,327 @@
+Started by user [8mha:////4M5O53X5QONrb+aF7d3XuO6Y0FqwaEK30o3y1qqs3uiMAAAAmR+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyeEgZe/dLi1CL9pKLy/PyUYgAEKGTnwgAAAA==[0mWoods, Brian
+Building in workspace /var/lib/jenkins/workspace/avocadoltp.ondemand2
+[WS-CLEANUP] Deleting project workspace...
+[WS-CLEANUP] Done
+[avocadoltp.ondemand2] $ /bin/sh -xe /tmp/jenkins1708793877612870245.sh
++ RESOURCES=sos-avocado-os0
+++ echo avocadoltp.ondemand2
+++ grep -oP '(?<=\.)v.+\..+(?=\.)'
+++ :
++ KERNVER=
++ TIMEOUT=3600
++ AVO_RV=()
++ (( I=0 ))
++ (( I<1 ))
++ (( I++ ))
++ (( I<1 ))
++ wait
++ R=sos-avocado-os0
++ AVO_RV[$I]=424242
++ RV=0
++ ssh -q jenkins@sos-avocado-os0 './checkfornewkerneltag.sh CURRENT https://github.com/torvalds/linux.git'
++ '[' 0 -eq 1 ']'
++ '[' 0 -eq 2 ']'
++ AVO_RV[$I]=0
++ avocado run --remote-host sos-avocado-os0 --remote-user root --job-timeout 1h --failfast off --job-results-dir sos-avocado-os0/avocado_log/ examples/sleeptest.py
+Failed to load plugin from module "avocado_vt.plugins.vt_list": EnvironmentError("Bootstrap missing. Execute 'avocado vt-bootstrap' or disable this plugin to get rid of this message",)
+Failed to load plugin from module "avocado_vt.plugins.vt": EnvironmentError("Bootstrap missing. Execute 'avocado vt-bootstrap' or disable this plugin to get rid of this message",)
+usage: avocado run [-h] [-d] [--force-job-id UNIQUE_JOB_ID]
+                   [--job-results-dir DIRECTORY] [--job-timeout SECONDS]
+                   [--failfast {on,off}] [--keep-tmp {on,off}]
+                   [--ignore-missing-references {on,off}] [--sysinfo {on,off}]
+                   [--execution-order {tests-per-variant,variants-per-test}]
+                   [-s] [--show-job-log]
+                   [--store-logging-stream [STREAM[:LEVEL] [STREAM[:LEVEL]
+                   ...]]] [--output-check-record {none,all,stdout,stderr}]
+                   [--output-check {on,off}]
+                   [--loaders [LOADERS [LOADERS ...]]]
+                   [--external-runner EXECUTABLE]
+                   [--external-runner-chdir {runner,test}]
+                   [--external-runner-testdir DIRECTORY]
+                   [--filter-by-tags TAGS] [--filter-by-tags-include-empty]
+                   [--env-keep ENV_KEEP]
+                   [--gdb-run-bin EXECUTABLE[:BREAKPOINT]]
+                   [--gdb-prerun-commands EXECUTABLE:COMMANDS]
+                   [--gdb-coredump {on,off}] [--html FILE] [--open-browser]
+                   [--html-job-result {on,off}] [--journal] [--json FILE]
+                   [--json-job-result {on,off}]
+                   [--remote-hostname REMOTE_HOSTNAME]
+                   [--remote-port REMOTE_PORT]
+                   [--remote-username REMOTE_USERNAME]
+                   [--remote-password REMOTE_PASSWORD]
+                   [--remote-key-file REMOTE_KEY_FILE]
+                   [--remote-timeout SECONDS] [--replay REPLAY_JOBID]
+                   [--replay-test-status REPLAY_TESTSTATUS]
+                   [--replay-ignore REPLAY_IGNORE] [--replay-resume]
+                   [--resultsdb-api RESULTSDB_API]
+                   [--resultsdb-logs RESULTSDB_LOGS] [--tap FILE]
+                   [--tap-job-result {on,off}] [--vm-domain VM_DOMAIN]
+                   [--vm-hypervisor-uri VM_HYPERVISOR_URI]
+                   [--vm-hostname VM_HOSTNAME] [--vm-port VM_PORT]
+                   [--vm-username VM_USERNAME] [--vm-password VM_PASSWORD]
+                   [--vm-key-file VM_KEY_FILE] [--vm-cleanup]
+                   [--vm-timeout SECONDS] [--wrapper SCRIPT[:EXECUTABLE]]
+                   [--xunit FILE] [--xunit-job-result {on,off}]
+                   [-m [FILE [FILE ...]]]
+                   [--mux-filter-only [MUX_FILTER_ONLY [MUX_FILTER_ONLY ...]]]
+                   [--mux-filter-out [MUX_FILTER_OUT [MUX_FILTER_OUT ...]]]
+                   [--mux-path [MUX_PATH [MUX_PATH ...]]]
+                   [--mux-inject [MUX_INJECT [MUX_INJECT ...]]]
+                   [--multiplex [FILE [FILE ...]]]
+                   [--filter-only [FILTER_ONLY [FILTER_ONLY ...]]]
+                   [--filter-out [FILTER_OUT [FILTER_OUT ...]]] [-z]
+                   [TEST_REFERENCE [TEST_REFERENCE ...]]
+
+positional arguments:
+  TEST_REFERENCE        List of test references (aliases or paths)
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -d, --dry-run         Instead of running the test only list them and log
+                        their params.
+  --force-job-id UNIQUE_JOB_ID
+                        Forces the use of a particular job ID. Used internally
+                        when interacting with an avocado server. You should
+                        not use this option unless you know exactly what
+                        you're doing
+  --job-results-dir DIRECTORY
+                        Forces to use of an alternate job results directory.
+  --job-timeout SECONDS
+                        Set the maximum amount of time (in SECONDS) that tests
+                        are allowed to execute. Values <= zero means "no
+                        timeout". You can also use suffixes, like: s
+                        (seconds), m (minutes), h (hours).
+  --failfast {on,off}   Enable or disable the job interruption on first failed
+                        test.
+  --keep-tmp {on,off}   Keep job temporary files (useful for avocado
+                        debugging). Defaults to off.
+  --ignore-missing-references {on,off}
+                        Force the job execution, even if some of the test
+                        references are not resolved to tests.
+  --sysinfo {on,off}    Enable or disable system information (hardware
+                        details, profilers, etc.). Current: on
+  --execution-order {tests-per-variant,variants-per-test}
+                        Defines the order of iterating through test suite and
+                        test variants
+
+output and result format:
+  -s, --silent          Silence stdout
+  --show-job-log        Display only the job log on stdout. Useful for test
+                        debugging purposes. No output will be displayed if you
+                        also specify --silent
+  --store-logging-stream [STREAM[:LEVEL] [STREAM[:LEVEL] ...]]
+                        Store given logging STREAMs in
+                        $JOB_RESULTS_DIR/$STREAM.$LEVEL.
+  --html FILE           Enable HTML output to the FILE where the result should
+                        be written. The value - (output to stdout) is not
+                        supported since not all HTML resources can be embedded
+                        into a single file (page resources will be copied to
+                        the output file dir)
+  --open-browser        Open the generated report on your preferred browser.
+                        This works even if --html was not explicitly passed,
+                        since an HTML report is always generated on the job
+                        results dir. Current: False
+  --html-job-result {on,off}
+                        Enables default HTML result in the job results
+                        directory. File will be located at
+                        "html/results.html".
+  --journal             Records test status changes (for use with avocado-
+                        journal-replay and avocado-server)
+  --json FILE           Enable JSON result format and write it to FILE. Use
+                        '-' to redirect to the standard output.
+  --json-job-result {on,off}
+                        Enables default JSON result in the job results
+                        directory. File will be named "results.json".
+  --tap FILE            Enable TAP result output and write it to FILE. Use '-'
+                        to redirect to the standard output.
+  --tap-job-result {on,off}
+                        Enables default TAP result in the job results
+                        directory. File will be named "results.tap".
+  --xunit FILE          Enable xUnit result format and write it to FILE. Use
+                        '-' to redirect to the standard output.
+  --xunit-job-result {on,off}
+                        Enables default xUnit result in the job results
+                        directory. File will be named "results.xml".
+  -z, --archive         Archive (ZIP) files generated by tests
+
+output check arguments:
+  --output-check-record {none,all,stdout,stderr}
+                        Record output streams of your tests to reference files
+                        (valid options: none (do not record output streams),
+                        all (record both stdout and stderr), stdout (record
+                        only stderr), stderr (record only stderr). Current:
+                        none
+  --output-check {on,off}
+                        Enable or disable test output (stdout/stderr) check.
+                        If this option is off, no output will be checked, even
+                        if there are reference files present for the test.
+                        Current: on (output check enabled)
+
+loader options:
+  --loaders [LOADERS [LOADERS ...]]
+                        Overrides the priority of the test loaders. You can
+                        specify either @loader_name or TEST_TYPE. By default
+                        it tries all available loaders according to priority
+                        set in settings->plugins.loaders.
+  --external-runner EXECUTABLE
+                        Path to an specific test runner that allows the use of
+                        its own tests. This should be used for running tests
+                        that do not conform to Avocado' SIMPLE testinterface
+                        and can not run standalone. Note: the use of
+                        --external-runner overwrites the --loaders to
+                        "external_runner"
+  --external-runner-chdir {runner,test}
+                        Change directory before executing tests. This option
+                        may be necessary because of requirements and/or
+                        limitations of the external test runner. If the
+                        external runner requires to be run from its own base
+                        directory,use "runner" here. If the external runner
+                        runs tests based on files and requires to be run from
+                        the directory where those files are located, use
+                        "test" here and specify the test directory with the
+                        option "--external-runner-testdir". Defaults to "None"
+  --external-runner-testdir DIRECTORY
+                        Where test files understood by the external test
+                        runner are located in the filesystem. Obviously this
+                        assumes and only applies to external test runners that
+                        run tests from files
+
+filtering parameters:
+  --filter-by-tags TAGS
+                        Filter INSTRUMENTED tests based on ":avocado:
+                        tags=tag1,tag2" notation in their class docstring
+  --filter-by-tags-include-empty
+                        Include all tests without tags during filtering. This
+                        effectively means they will be kept in the test suite
+                        found previously to filtering.
+
+keep environment variables:
+  --env-keep ENV_KEEP   Keep environment variables in remote executions
+
+GNU Debugger support:
+  --gdb-run-bin EXECUTABLE[:BREAKPOINT]
+                        Run a given executable inside the GNU debugger,
+                        pausing at a given breakpoint (defaults to "main")
+  --gdb-prerun-commands EXECUTABLE:COMMANDS
+                        After loading an executable in GDB, but before
+                        actually running it, execute the GDB commands in the
+                        given file. EXECUTABLE is optional, if omitted
+                        COMMANDS will apply to all executables
+  --gdb-coredump {on,off}
+                        Automatically generate a core dump when the inferior
+                        process received a fatal signal such as SIGSEGV or
+                        SIGABRT
+
+test execution on a remote machine:
+  --remote-hostname REMOTE_HOSTNAME
+                        Specify the hostname to login on remote machine
+  --remote-port REMOTE_PORT
+                        Specify the port number to login on remote machine.
+                        Default: 22
+  --remote-username REMOTE_USERNAME
+                        Specify the username to login on remote machine.
+                        Default: jenkins
+  --remote-password REMOTE_PASSWORD
+                        Specify the password to login on remote machine
+  --remote-key-file REMOTE_KEY_FILE
+                        Specify an identity file with a private key instead of
+                        a password (Example: .pem files from Amazon EC2)
+  --remote-timeout SECONDS
+                        Amount of time (in seconds) to wait for a successful
+                        connection to the remote machine. Defaults to 60
+                        seconds.
+
+job replay:
+  --replay REPLAY_JOBID
+                        Replay a job identified by its (partial) hash id. Use
+                        "--replay latest" to replay the latest job.
+  --replay-test-status REPLAY_TESTSTATUS
+                        Filter tests to replay by test status
+  --replay-ignore REPLAY_IGNORE
+                        Ignore variants (variants) and/or configuration
+                        (config) from the source job
+  --replay-resume       Resume an interrupted job
+
+resultsdb options:
+  --resultsdb-api RESULTSDB_API
+                        Specify the resultsdb API url
+  --resultsdb-logs RESULTSDB_LOGS
+                        Specify the URL where the logs are published
+
+test execution on a Virtual Machine:
+  --vm-domain VM_DOMAIN
+                        Specify Libvirt Domain Name
+  --vm-hypervisor-uri VM_HYPERVISOR_URI
+                        Specify hypervisor URI driver connection. Current:
+                        qemu:///system
+  --vm-hostname VM_HOSTNAME
+                        Specify VM hostname to login. By default Avocado
+                        attempts to automatically find the VM IP address.
+  --vm-port VM_PORT     Specify the SSH port number to login on VM. Default:
+                        22
+  --vm-username VM_USERNAME
+                        Specify the username to login on VM. Default: jenkins
+  --vm-password VM_PASSWORD
+                        Specify the password to login on VM
+  --vm-key-file VM_KEY_FILE
+                        Specify an identity file with a private key instead of
+                        a password (Example: .pem files from Amazon EC2)
+  --vm-cleanup          Restore VM to a previous state, before running tests
+  --vm-timeout SECONDS  Amount of time (in seconds) to wait for a successful
+                        connection to the virtual machine. Defaults to 120
+                        seconds.
+
+wrapper support:
+  --wrapper SCRIPT[:EXECUTABLE]
+                        Use a script to wrap executables run by a test. The
+                        wrapper is either a path to a script (AKA a global
+                        wrapper) or a path to a script followed by colon
+                        symbol (:), plus a shell like glob to the target
+                        EXECUTABLE. Multiple wrapper options are allowed, but
+                        only one global wrapper can be defined.
+
+yaml to mux options:
+  -m [FILE [FILE ...]], --mux-yaml [FILE [FILE ...]]
+                        Location of one or more Avocado multiplex (.yaml)
+                        FILE(s) (order dependent)
+  --mux-filter-only [MUX_FILTER_ONLY [MUX_FILTER_ONLY ...]]
+                        Filter only path(s) from multiplexing
+  --mux-filter-out [MUX_FILTER_OUT [MUX_FILTER_OUT ...]]
+                        Filter out path(s) from multiplexing
+  --mux-path [MUX_PATH [MUX_PATH ...]]
+                        List of default paths used to determine path priority
+                        when querying for parameters
+  --mux-inject [MUX_INJECT [MUX_INJECT ...]]
+                        Inject [path:]key:node values into the final multiplex
+                        tree.
+
+yaml to mux options [deprecated]:
+  --multiplex [FILE [FILE ...]]
+                        DEPRECATED: Location of one or more Avocado multiplex
+                        (.yaml) FILE(s) (order dependent)
+  --filter-only [FILTER_ONLY [FILTER_ONLY ...]]
+                        DEPRECATED: Filter only path(s) from multiplexing (use
+                        --mux-filter-only instead)
+  --filter-out [FILTER_OUT [FILTER_OUT ...]]
+                        DEPRECATED: Filter out path(s) from multiplexing (use
+                        --mux-filter-out instead)
+
+avocado run: error: unrecognized arguments: --remote-host --remote-user root examples/sleeptest.py
++ AVO_RV[$I]=4
++ echo -n 'Kernel Release: '
++ for R in ${RESOURCES}
++ '[' -f sos-avocado-os0.kernelrelease ']'
++ echo -n 'avocado RV per host: '
+avocado RV per host: + (( I=0 ))
++ (( I<1 ))
++ '[' '[0]' -eq 424242 ']'
+/tmp/jenkins1708793877612870245.sh: line 65: [: [0]: integer expression expected
++ echo -n 'sos-avocado-os0=[0] '
+sos-avocado-os0=[0] + (( I++ ))
++ (( I<1 ))
+++ cat kernelreleases
++ echo '[Kernel' Release: ']'
+[Kernel Release: ]
+Archiving artifacts
+[description-setter] Could not determine description.
+Finished: SUCCESS

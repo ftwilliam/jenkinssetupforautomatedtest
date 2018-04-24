@@ -1,0 +1,55 @@
+Started by user [8mha:////4FqkCksSARbySc15RUTa15KLDuDohiBDNYbuyYSsWMPyAAAAlR+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzmEgZO/dLi1CL9xNwUAAxcekO+AAAA[0mamd
+[lockable-resources] acquired lock on [diesel84e2host, diesel7ac4host, diesel79d4host]
+Building in workspace /var/lib/jenkins/workspace/fsx
+[WS-CLEANUP] Deleting project workspace...
+[fsx] $ /bin/sh -xe /tmp/jenkins5628855686304328385.sh
+++ cd /var/lib/jenkins
+++ ./unlockedresources.py
++ RESOURCES='diesel84e2host
+diesel7ac4host
+diesel79d4host'
++ for R in ${RESOURCES}
+++ ssh -q jenkins@diesel84e2host 'uname -r'
++ echo Kernel Release:
+Kernel Release:
++ ssh -q jenkins@diesel84e2host
++ tee fsx.log
++ '[' 255 -eq 0 ']'
++ for R in ${RESOURCES}
+++ ssh -q jenkins@diesel7ac4host 'uname -r'
++ echo Kernel Release:
+Kernel Release:
++ ssh -q jenkins@diesel7ac4host
++ tee fsx.log
++ '[' 255 -eq 0 ']'
++ for R in ${RESOURCES}
+++ ssh -q jenkins@diesel79d4host 'uname -r'
++ echo Kernel Release: 4.16.0-rc3-jenkins
+Kernel Release: 4.16.0-rc3-jenkins
++ ssh -q jenkins@diesel79d4host
++ tee fsx.log
+Welcome to Ubuntu 17.10 (GNU/Linux 4.16.0-rc3-jenkins x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+
+152 packages can be updated.
+93 updates are security updates.
+
+JOB ID     : e6694b4a7f1aa30eddd7c9b9a05c4fa0d6352bfc
+JOB LOG    : /var/lib/jenkins/avocado/job-results/job-2018-02-28T07.55-e6694b4/job.log
+ (1/1) avocado-misc-tests/fs/fsx.py:Fsx.test:  PASS (7.27 s)
+RESULTS    : PASS 1 | ERROR 0 | FAIL 0 | SKIP 0 | WARN 0 | INTERRUPT 0 | CANCEL 0
+JOB TIME   : 7.93 s
++ '[' 0 -eq 0 ']'
+++ cat fsx.log
+++ srep 'JOB LOG'
+++ srep -a -p '#{: }*#{\n}'
++ AVOCADO_LOG_PATH=/var/lib/jenkins/avocado/job-results/job-2018-02-28T07.55-e6694b4/job.log
++ scp jenkins@diesel79d4host:/var/lib/jenkins/avocado/job-results/job-2018-02-28T07.55-e6694b4/job.log diesel79d4host.avocado.log
+Archiving artifacts
+[description-setter] Description set: 4.16.0-rc3
+[lockable-resources] released lock on [diesel84e2host, diesel7ac4host, diesel79d4host]
+Finished: SUCCESS

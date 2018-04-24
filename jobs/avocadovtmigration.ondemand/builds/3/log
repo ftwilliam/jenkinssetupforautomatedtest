@@ -1,0 +1,31 @@
+Started by user [8mha:////4FqkCksSARbySc15RUTa15KLDuDohiBDNYbuyYSsWMPyAAAAlR+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzmEgZO/dLi1CL9xNwUAAxcekO+AAAA[0mamd
+[lockable-resources] acquired lock on [leseidlb950]
+Building in workspace /var/lib/jenkins/workspace/avocadovtmigration
+[WS-CLEANUP] Deleting project workspace...
+[WS-CLEANUP] Done
+[avocadovtmigration] $ /bin/sh -xe /tmp/jenkins2438847479171715245.sh
+++ cd /var/lib/jenkins
+++ ./resourceslockedby.py avocadovtmigration#3
++ RESOURCES=leseidlb950
++ KERNELTAG=v4.16-rc2
++ TIMEOUT=1800
++ for R in ${RESOURCES}
++ wait
++ ssh -q jenkins@leseidlb950 './checkfornewkerneltag.sh https://github.com/torvalds/linux.git' v4.16-rc2
+++ ssh -q jenkins@leseidlb950 'uname -r'
++ echo 'leseidlb950: 4.16.0-rc2-jenkins'
++ ssh -q jenkins@leseidlb950 './checkfornewqemutag.sh https://github.com/qemu/qemu.git' v2.11.1
++ echo -n 'Kernel Release: '
++ for R in ${RESOURCES}
++ '[' -f leseidlb950.kernelrelease ']'
+++ cat leseidlb950.kernelrelease
+++ grep -oP '.+(?=-jenkins)'
++ echo -n 'leseidlb950: 4.16.0-rc2, '
++ truncate --size=-2 kernelreleases
+++ cat kernelreleases
++ echo '[Kernel' Release: leseidlb950: '4.16.0-rc2]'
+[Kernel Release: leseidlb950: 4.16.0-rc2]
+Archiving artifacts
+[description-setter] Description set: leseidlb950: 4.16.0-rc2
+[lockable-resources] released lock on [leseidlb950]
+Finished: SUCCESS

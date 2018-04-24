@@ -1,0 +1,41 @@
+Started by user [8mha:////4P5oqbiDCv/29AmYake8E+zpu/gy/ryniUjftzEVtlv7AAAAmB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAy+EgYe/dLi1CL98pLE3KRUAMN7XeHBAAAA[0mTambe, William
+Building in workspace /var/lib/jenkins/workspace/avocadosleeptest.ondemand
+[WS-CLEANUP] Deleting project workspace...
+[WS-CLEANUP] Done
+[avocadosleeptest.ondemand] $ /bin/sh -xe /tmp/jenkins8230564827416010018.sh
++ RESOURCES=sos-dsldbg-00
+++ echo avocadosleeptest.ondemand
+++ grep -oP '(?<=\.)v.+\..+(?=\.)'
+++ :
++ KERNVER=
++ TIMEOUT=3600
++ for R in ${RESOURCES}
++ wait
++ ssh -q jenkins@sos-dsldbg-00 ./checkfornewkerneltag.sh https://github.com/torvalds/linux.git
++ '[' -n https://github.com/torvalds/linux.git ']'
+++ ssh -q jenkins@sos-dsldbg-00 ls 'kernel/linux-image*'
+++ grep -oP '(?<=linux-image-).+(?=-jenkins_)'
++ kernbuilt=4.17.0
++ cd /var/lib/jenkins
++ ./rebootresource.sh jenkins@sos-dsldbg-00 4.17.0
+++ ssh -q jenkins@sos-dsldbg-00 'uname -r'
++ echo 'sos-dsldbg-00: 4.17.0-jenkins'
++ timeout -sKILL 3600 ssh -q jenkins@sos-dsldbg-00
++ '[' 0 -eq 0 ']'
+++ cat sos-dsldbg-00.ssh.log
+++ fgrep 'JOB LOG'
+++ grep -oP '(?<=: ).+$'
++ AVOCADO_LOG_PATH=/home/jenkins/avocado/job-results/job-2018-06-07T13.31-0952ece/job.log
++ scp jenkins@sos-dsldbg-00:/home/jenkins/avocado/job-results/job-2018-06-07T13.31-0952ece/job.log sos-dsldbg-00.avocado.log
++ echo -n 'Kernel Release: '
++ for R in ${RESOURCES}
++ '[' -f sos-dsldbg-00.kernelrelease ']'
+++ cat sos-dsldbg-00.kernelrelease
++ echo -n 'sos-dsldbg-00: 4.17.0-jenkins, '
++ truncate --size=-2 kernelreleases
+++ cat kernelreleases
++ echo '[Kernel' Release: sos-dsldbg-00: '4.17.0-jenkins]'
+[Kernel Release: sos-dsldbg-00: 4.17.0-jenkins]
+Archiving artifacts
+[description-setter] Description set: sos-dsldbg-00: 4.17.0-jenkins
+Finished: SUCCESS

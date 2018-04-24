@@ -1,0 +1,43 @@
+Started by timer
+[lockable-resources] acquired lock on [sos-dsldbg-00]
+Building in workspace /var/lib/jenkins/workspace/avocadormaptest.starship
+[WS-CLEANUP] Deleting project workspace...
+[WS-CLEANUP] Done
+[avocadormaptest.starship] $ /bin/sh -xe /tmp/jenkins2121810845104482795.sh
+++ cd /var/lib/jenkins
+++ ./resourceslockedby.py avocadormaptest.starship#3
++ RESOURCES=sos-dsldbg-00
+++ echo avocadormaptest.starship
+++ grep -oP '(?<=\.)v.+\..+(?=\.)'
+++ :
++ KERNVER=
++ TIMEOUT=1800
++ for R in ${RESOURCES}
++ wait
++ ssh -q jenkins@sos-dsldbg-00 ./checkfornewkerneltag.sh
++ '[' -n '' ']'
++ cd /var/lib/jenkins
++ ./rebootresource.sh jenkins@sos-dsldbg-00
+++ ssh -q jenkins@sos-dsldbg-00 'uname -r'
++ echo 'sos-dsldbg-00: 4.16.0-amdsos-build3+'
++ timeout -sKILL 1800 ssh -q jenkins@sos-dsldbg-00
++ '[' 0 -eq 0 ']'
+++ cat sos-dsldbg-00.ssh.log
+++ fgrep 'JOB LOG'
+++ grep -oP '(?<=: ).+$'
++ AVOCADO_LOG_PATH=/home/jenkins/avocado/job-results/job-2018-06-09T04.36-1ee6d3e/job.log
++ scp jenkins@sos-dsldbg-00:/home/jenkins/avocado/job-results/job-2018-06-09T04.36-1ee6d3e/job.log sos-dsldbg-00.avocado.log
++ echo -n 'Kernel Release: '
++ for R in ${RESOURCES}
++ '[' -f sos-dsldbg-00.kernelrelease ']'
+++ cat sos-dsldbg-00.kernelrelease
++ echo -n 'sos-dsldbg-00: 4.16.0-amdsos-build3+, '
++ truncate --size=-2 kernelreleases
+++ cat kernelreleases
++ echo '[Kernel' Release: sos-dsldbg-00: '4.16.0-amdsos-build3+]'
+[Kernel Release: sos-dsldbg-00: 4.16.0-amdsos-build3+]
+Archiving artifacts
+[description-setter] Description set: sos-dsldbg-00: 4.16.0-amdsos-build3+
+[lockable-resources] released lock on [sos-dsldbg-00]
+[8mha:////4B0zKtsZ0Ccj28iVHnrRN+/wPvPZDMtQ1qOw5/tB98zPAAAAqx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzJEgZ5/az8JP3EsvzkxJT84pzU1IKS1OISveKSxKLijMwCfQBgbrc21AAAAA==[0mavocadosleeptest.starship is disabled. Triggering skipped
+Finished: SUCCESS

@@ -1,0 +1,53 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+        <!-- Parent -->
+	 <parent>
+            <groupId>org.jenkins-ci.plugins</groupId>
+            <artifactId>plugin</artifactId>
+            <!-- Because of JENKINS-17030 -->
+            <version>1.517</version>
+         </parent>
+        <!-- Artifact Identification -->
+	<artifactId>upstream-downstream-view</artifactId>
+	<version>1.006</version>
+	<url>https://wiki.jenkins-ci.org/display/JENKINS/Upstream+Downstream+View+Plugin</url>
+	<packaging>hpi</packaging>
+	<name>Jenkins Upstream Downstream Column Plugin</name>
+	<description>Provides the new column view for Upstreamed/Downstreamed jobs</description>
+	<!--License information -->
+	<licenses>
+	  <license>
+            <name>The MIT license</name>
+            <url>http://www.opensource.org/licenses/mit-license.php</url>
+            <distribution>repo</distribution>
+	  </license>
+	</licenses>
+	<!--Source code storage information -->
+	<scm>
+	  <connection>scm:git:git://github.com/jenkinsci/upstream-downstream-view-plugin.git</connection>
+	  <developerConnection>scm:git:ssh://git@github.com/jenkinsci/upstream-downstream-view-plugin.git</developerConnection>
+	  <url>https://github.com/jenkinsci/upstream-downstream-view-plugin</url>
+	  <tag>upstream-downstream-view-1.006</tag>
+        </scm>
+	<!--Dev Team information -->
+	<developers>
+	  <developer>
+	    <id>lvotypko</id>
+	    <name>Lucie Votypkova</name>
+	    <email>lvotypko@redhat.com</email>
+	  </developer>
+	</developers>
+
+        <repositories>
+          <repository>
+            <id>repo.jenkins-ci.org</id>
+            <url>http://repo.jenkins-ci.org/public/</url>
+          </repository>
+        </repositories>
+        <pluginRepositories>
+          <pluginRepository>
+            <id>repo.jenkins-ci.org</id>
+            <url>http://repo.jenkins-ci.org/public/</url>
+          </pluginRepository>
+        </pluginRepositories>
+</project>

@@ -1,0 +1,86 @@
+Started by timer
+[lockable-resources] acquired lock on [diesel79d4host, leseidlb950]
+Building in workspace /var/lib/jenkins/workspace/perfbench
+[WS-CLEANUP] Deleting project workspace...
+[WS-CLEANUP] Done
+[perfbench] $ /bin/sh -xe /tmp/jenkins561253808861765288.sh
+++ cd /var/lib/jenkins
+++ ./resourceslockedby.py perfbench#164
++ RESOURCES='diesel79d4host
+leseidlb950'
++ :
++ for R in ${RESOURCES}
++ echo -n '"diesel79d4host",'
++ for R in ${RESOURCES}
++ echo -n '"leseidlb950",'
++ truncate --size=-1 plot.csv
++ echo
++ TIMEOUT=1800
++ ITERATIONS=4096
++ for R in ${RESOURCES}
++ for R in ${RESOURCES}
++ wait
++ ssh -q jenkins@leseidlb950 './checkfornewkerneltag.sh https://github.com/torvalds/linux.git'
++ ssh -q jenkins@diesel79d4host './checkfornewkerneltag.sh https://github.com/torvalds/linux.git'
+++ ssh -q jenkins@leseidlb950 'uname -r'
++ echo 'leseidlb950: 4.16.0-rc4-jenkins'
++ timeout -sKILL 1800 ssh -q jenkins@leseidlb950 'time -p perf bench sched messaging -p -g 200 -l 4096'
+++ ssh -q jenkins@diesel79d4host 'uname -r'
++ echo 'diesel79d4host: 4.16.0-rc4-jenkins'
++ timeout -sKILL 1800 ssh -q jenkins@diesel79d4host 'time -p perf bench sched messaging -p -g 200 -l 4096'
++ '[' 0 -eq 0 ']'
+++ bc -l
++++ cat diesel79d4host.ssh.log
++++ fgrep 'Total time:'
++++ grep -oP '(?<=Total time: )[0-9.]+(?= \[)'
+++ echo '(30.535' '*1000)' /4096
++ plotval=7.45483398437500000000
++ '[' -f diesel79d4host.prevplotval ']'
+++ bc -l
++++ cat diesel79d4host.prevplotval
+++ echo '(7.11905273954803582118+7.45483398437500000000)/2'
++ plotval=7.28694336196151791059
++ echo -n 7.28694336196151791059
++ echo -n 7.28694336196151791059
++ '[' 0 -eq 0 ']'
+++ bc -l
++++ cat leseidlb950.ssh.log
++++ fgrep 'Total time:'
++++ grep -oP '(?<=Total time: )[0-9.]+(?= \[)'
+++ echo '(99.026' '*1000)' /4096
++ plotval=24.17626953125000000000
++ '[' -f leseidlb950.prevplotval ']'
+++ bc -l
++++ cat leseidlb950.prevplotval
+++ echo '(25.43009650077552080892+24.17626953125000000000)/2'
++ plotval=24.80318301601276040446
++ echo -n 24.80318301601276040446
++ echo -n 24.80318301601276040446
++ echo -n 'Kernel Release: '
++ for R in ${RESOURCES}
++ '[' -f diesel79d4host.kernelrelease ']'
+++ cat diesel79d4host.kernelrelease
+++ grep -oP '.+(?=-jenkins)'
++ echo -n 'diesel79d4host: 4.16.0-rc4, '
++ for R in ${RESOURCES}
++ '[' -f leseidlb950.kernelrelease ']'
+++ cat leseidlb950.kernelrelease
+++ grep -oP '.+(?=-jenkins)'
++ echo -n 'leseidlb950: 4.16.0-rc4, '
++ truncate --size=-2 kernelreleases
+++ cat kernelreleases
++ echo '[Kernel' Release: diesel79d4host: 4.16.0-rc4, leseidlb950: '4.16.0-rc4]'
+[Kernel Release: diesel79d4host: 4.16.0-rc4, leseidlb950: 4.16.0-rc4]
++ for R in ${RESOURCES}
+++ cat diesel79d4host.plotval
++ echo -n 7.28694336196151791059,
++ for R in ${RESOURCES}
+++ cat leseidlb950.plotval
++ echo -n 24.80318301601276040446,
++ truncate --size=-1 plot.csv
++ echo
+Archiving artifacts
+Recording plot data
+[description-setter] Description set: diesel79d4host: 4.16.0-rc4, leseidlb950: 4.16.0-rc4
+[lockable-resources] released lock on [diesel79d4host, leseidlb950]
+Finished: SUCCESS

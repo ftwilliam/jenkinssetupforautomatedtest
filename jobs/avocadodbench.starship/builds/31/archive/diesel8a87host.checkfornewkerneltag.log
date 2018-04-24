@@ -1,0 +1,132 @@
++ set -e
++ '[' 0 -eq 0 ']'
++ ./checkfornewkerneldeb.sh
++ sudo wget -O /etc/apt/sources.list.d/sos_ubuntu.list http://sos-repos/scripts/sos_ubuntu.list
+--2018-07-03 10:14:34--  http://sos-repos/scripts/sos_ubuntu.list
+Resolving sos-repos (sos-repos)... 10.236.113.165
+Connecting to sos-repos (sos-repos)|10.236.113.165|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 75
+Saving to: ‘/etc/apt/sources.list.d/sos_ubuntu.list’
+
+     0K                                                       100% 6.81M=0s
+
+2018-07-03 10:14:34 (6.81 MB/s) - ‘/etc/apt/sources.list.d/sos_ubuntu.list’ saved [75/75]
+
++ sudo apt update
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Ign:1 http://sos-repos/repos/sos_ubuntu stable InRelease
+Get:2 http://sos-repos/repos/sos_ubuntu stable Release [1,649 B]
+Ign:3 http://sos-repos/repos/sos_ubuntu stable Release.gpg
+Get:4 http://sos-repos/repos/sos_ubuntu stable/main amd64 Packages [1,857 B]
+Hit:5 http://us.archive.ubuntu.com/ubuntu artful InRelease
+Get:6 http://us.archive.ubuntu.com/ubuntu artful-updates InRelease [88.7 kB]
+Get:7 http://security.ubuntu.com/ubuntu artful-security InRelease [83.2 kB]
+Get:8 http://us.archive.ubuntu.com/ubuntu artful-backports InRelease [74.6 kB]
+Get:9 http://us.archive.ubuntu.com/ubuntu artful-updates/main i386 Packages [279 kB]
+Get:10 http://us.archive.ubuntu.com/ubuntu artful-updates/main amd64 Packages [285 kB]
+Get:11 http://us.archive.ubuntu.com/ubuntu artful-updates/main Translation-en [126 kB]
+Get:12 http://us.archive.ubuntu.com/ubuntu artful-updates/main amd64 DEP-11 Metadata [88.4 kB]
+Get:13 http://us.archive.ubuntu.com/ubuntu artful-updates/main DEP-11 64x64 Icons [50.0 kB]
+Get:14 http://us.archive.ubuntu.com/ubuntu artful-updates/universe amd64 Packages [121 kB]
+Get:15 http://us.archive.ubuntu.com/ubuntu artful-updates/universe i386 Packages [120 kB]
+Get:16 http://us.archive.ubuntu.com/ubuntu artful-updates/universe Translation-en [69.5 kB]
+Get:17 http://us.archive.ubuntu.com/ubuntu artful-updates/universe amd64 DEP-11 Metadata [84.7 kB]
+Get:18 http://us.archive.ubuntu.com/ubuntu artful-updates/universe DEP-11 64x64 Icons [111 kB]
+Get:19 http://us.archive.ubuntu.com/ubuntu artful-updates/multiverse amd64 DEP-11 Metadata [2,468 B]
+Get:20 http://us.archive.ubuntu.com/ubuntu artful-backports/universe amd64 DEP-11 Metadata [5,088 B]
+Get:21 http://security.ubuntu.com/ubuntu artful-security/main i386 Packages [184 kB]
+Get:22 http://security.ubuntu.com/ubuntu artful-security/main amd64 Packages [189 kB]
+Get:23 http://security.ubuntu.com/ubuntu artful-security/main Translation-en [81.8 kB]
+Get:24 http://security.ubuntu.com/ubuntu artful-security/main amd64 DEP-11 Metadata [32.7 kB]
+Get:25 http://security.ubuntu.com/ubuntu artful-security/main DEP-11 64x64 Icons [37.0 kB]
+Get:26 http://security.ubuntu.com/ubuntu artful-security/universe i386 Packages [68.8 kB]
+Get:27 http://security.ubuntu.com/ubuntu artful-security/universe amd64 Packages [69.2 kB]
+Get:28 http://security.ubuntu.com/ubuntu artful-security/universe Translation-en [42.6 kB]
+Get:29 http://security.ubuntu.com/ubuntu artful-security/universe amd64 DEP-11 Metadata [40.4 kB]
+Get:30 http://security.ubuntu.com/ubuntu artful-security/universe DEP-11 64x64 Icons [44.8 kB]
+Fetched 2,383 kB in 1s (1,372 kB/s)
+Reading package lists...
+Building dependency tree...
+Reading state information...
+74 packages can be upgraded. Run 'apt list --upgradable' to see them.
+++ apt-cache search linux-image
+++ awk '-F - ' '{print $1}'
+++ fgrep amdsos
+++ sort -V
+++ tail -n1
++ linuximage=linux-image-4.16.0-amdsos-build5+
++ '[' -n linux-image-4.16.0-amdsos-build5+ ']'
++ sudo apt install linux-image-4.16.0-amdsos-build5+
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following packages were automatically installed and are no longer required:
+  linux-headers-4.13.0-21 linux-headers-4.13.0-21-generic
+  linux-image-4.13.0-21-generic linux-image-extra-4.13.0-21-generic
+Use 'sudo apt autoremove' to remove them.
+The following NEW packages will be installed:
+  linux-image-4.16.0-amdsos-build5+
+0 upgraded, 1 newly installed, 0 to remove and 74 not upgraded.
+Need to get 53.4 MB of archives.
+After this operation, 244 MB of additional disk space will be used.
+Get:1 http://sos-repos/repos/sos_ubuntu stable/main amd64 linux-image-4.16.0-amdsos-build5+ amd64 4.16.0-amdsos-build5+-1 [53.4 MB]
+debconf: unable to initialize frontend: Dialog
+debconf: (Dialog frontend will not work on a dumb terminal, an emacs shell buffer, or without a controlling terminal.)
+debconf: falling back to frontend: Readline
+debconf: unable to initialize frontend: Readline
+debconf: (This frontend requires a controlling tty.)
+debconf: falling back to frontend: Teletype
+dpkg-preconfigure: unable to re-open stdin: 
+Fetched 53.4 MB in 0s (72.3 MB/s)
+Selecting previously unselected package linux-image-4.16.0-amdsos-build5+.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 294866 files and directories currently installed.)
+Preparing to unpack .../linux-image-4.16.0-amdsos-build5+_4.16.0-amdsos-build5+-1_amd64.deb ...
+Unpacking linux-image-4.16.0-amdsos-build5+ (4.16.0-amdsos-build5+-1) ...
+Setting up linux-image-4.16.0-amdsos-build5+ (4.16.0-amdsos-build5+-1) ...
+update-initramfs: Generating /boot/initrd.img-4.16.0-amdsos-build5+
+W: Possible missing firmware /lib/firmware/ast_dp501_fw.bin for module ast
+Generating grub configuration file ...
+Found linux image: /boot/vmlinuz-4.16.0-amdsos-build5+
+Found initrd image: /boot/initrd.img-4.16.0-amdsos-build5+
+Found linux image: /boot/vmlinuz-4.16.0-amdsos-build4+
+Found initrd image: /boot/initrd.img-4.16.0-amdsos-build4+
+Found linux image: /boot/vmlinuz-4.13.0-46-generic
+Found initrd image: /boot/initrd.img-4.13.0-46-generic
+Found linux image: /boot/vmlinuz-4.13.0-21-generic
+Found initrd image: /boot/initrd.img-4.13.0-21-generic
+Adding boot menu entry for EFI firmware configuration
+done
++ sudo apt remove -y '*-jenkins'
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Package 'python-jenkins' is not installed, so not removed
+Package 'python3-jenkins' is not installed, so not removed
+Package 'linux-image-4.18.0-rc3-jenkins' is not installed, so not removed
+Package 'linux-image-4.18.0-rc2-jenkins' is not installed, so not removed
+Package 'linux-image-4.17.0-jenkins' is not installed, so not removed
+Package 'linux-image-4.17.0-rc5-jenkins' is not installed, so not removed
+Package 'linux-image-4.17.0-rc6-jenkins' is not installed, so not removed
+Package 'linux-image-4.17.0-rc7-jenkins' is not installed, so not removed
+Package 'linux-image-4.18.0-rc1-jenkins' is not installed, so not removed
+Package 'linux-image-4.16.0-rc2-jenkins' is not installed, so not removed
+Package 'linux-image-4.17.0-rc3-jenkins' is not installed, so not removed
+Package 'linux-image-4.17.0-rc4-jenkins' is not installed, so not removed
+The following packages were automatically installed and are no longer required:
+  linux-headers-4.13.0-21 linux-headers-4.13.0-21-generic
+  linux-image-4.13.0-21-generic linux-image-extra-4.13.0-21-generic
+Use 'sudo apt autoremove' to remove them.
+0 upgraded, 0 newly installed, 0 to remove and 74 not upgraded.
+++ echo linux-image-4.16.0-amdsos-build5+
+++ grep -oP '(?<=linux-image-).+'
++ sudo grubby --set-default /boot/vmlinuz-4.16.0-amdsos-build5+
++ exit 0

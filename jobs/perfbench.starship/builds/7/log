@@ -1,0 +1,62 @@
+Started by timer
+[lockable-resources] acquired lock on [sos-dsldbg-00]
+Building in workspace /var/lib/jenkins/workspace/perfbench.starship
+[WS-CLEANUP] Deleting project workspace...
+[WS-CLEANUP] Done
+[perfbench.starship] $ /bin/sh -xe /tmp/jenkins1754178511100996987.sh
+++ cd /var/lib/jenkins
+++ ./resourceslockedby.py perfbench.starship#7
++ RESOURCES=sos-dsldbg-00
++ :
++ for R in ${RESOURCES}
++ echo -n '"sos-dsldbg-00",'
++ truncate --size=-1 plot.csv
++ echo
+++ echo perfbench.starship
+++ grep -oP '(?<=\.)v.+\..+(?=\.)'
+++ :
++ KERNVER=
++ TIMEOUT=1800
++ ITERATIONS=4096
++ for R in ${RESOURCES}
++ wait
++ ssh -q jenkins@sos-dsldbg-00 ./checkfornewkerneltag.sh
++ '[' -n '' ']'
++ cd /var/lib/jenkins
++ ./rebootresource.sh jenkins@sos-dsldbg-00
+++ ssh -q jenkins@sos-dsldbg-00 'uname -r'
++ echo 'sos-dsldbg-00: 4.16.0-amdsos-build3+'
++ timeout -sKILL 1800 ssh -q jenkins@sos-dsldbg-00 'time -p perf bench sched messaging -p -g 200 -l 4096'
++ '[' 0 -eq 0 ']'
+++ bc -l
++++ cat sos-dsldbg-00.ssh.log
++++ fgrep 'Total time:'
++++ grep -oP '(?<=Total time: )[0-9.]+(?= \[)'
+++ echo '(28.666' '*1000)' /4096
++ plotval=6.99853515625000000000
++ '[' -f sos-dsldbg-00.prevplotval ']'
+++ bc -l
++++ cat sos-dsldbg-00.prevplotval
+++ echo '(7.37559509277343750000+6.99853515625000000000)/2'
++ plotval=7.18706512451171875000
++ echo -n 7.18706512451171875000
++ echo -n 7.18706512451171875000
++ echo -n 'Kernel Release: '
++ for R in ${RESOURCES}
++ '[' -f sos-dsldbg-00.kernelrelease ']'
+++ cat sos-dsldbg-00.kernelrelease
++ echo -n 'sos-dsldbg-00: 4.16.0-amdsos-build3+, '
++ truncate --size=-2 kernelreleases
+++ cat kernelreleases
++ echo '[Kernel' Release: sos-dsldbg-00: '4.16.0-amdsos-build3+]'
+[Kernel Release: sos-dsldbg-00: 4.16.0-amdsos-build3+]
++ for R in ${RESOURCES}
+++ cat sos-dsldbg-00.plotval
++ echo -n 7.18706512451171875000,
++ truncate --size=-1 plot.csv
++ echo
+Archiving artifacts
+Recording plot data
+[description-setter] Description set: sos-dsldbg-00: 4.16.0-amdsos-build3+
+[lockable-resources] released lock on [sos-dsldbg-00]
+Finished: SUCCESS

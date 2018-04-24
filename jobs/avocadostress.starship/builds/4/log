@@ -1,0 +1,47 @@
+Started by upstream project "[8mha:////4B0zKtsZ0Ccj28iVHnrRN+/wPvPZDMtQ1qOw5/tB98zPAAAAqx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzJEgZ5/az8JP3EsvzkxJT84pzU1IKS1OISveKSxKLijMwCfQBgbrc21AAAAA==[0mavocadosleeptest.starship" build number [8mha:////4NJcXV9I6j6cKYT1cjW28d3iq6wip/GVpIsnj0A5s6qFAAAAqx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLQIwSBgX9rPwk/cSy/OTElPzinNTUgpLU4hK94pLEouKMzAJ9EwDrb8dy1QAAAA==[0m4
+originally caused by:
+ Started by upstream project "[8mha:////4Pc/Le37J8ONX+b5wtzvP8du/IciV7QtFrBpcluYsxM3AAAAqh+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyJEgY5/az8JP3EsvzkxJT8otzEgpLU4hK94pLEouKMzAJ9AP/uDKzTAAAA[0mavocadormaptest.starship" build number [8mha:////4LOBDZsyG+WWX8sB8pE5d1vboChcw93o9qod0qMLSt66AAAArB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAymEgYF/az8JP3EsvzkxJT8otzEgpLU4hK94pLEouKMzAJ9QzMAqIM/l9UAAAA=[0m16
+ originally caused by:
+  Started by timer
+[lockable-resources] acquired lock on [sos-dsldbg-00]
+Building in workspace /var/lib/jenkins/workspace/avocadostress.starship
+[WS-CLEANUP] Deleting project workspace...
+[WS-CLEANUP] Done
+[avocadostress.starship] $ /bin/sh -xe /tmp/jenkins6372717358447057016.sh
+++ cd /var/lib/jenkins
+++ ./resourceslockedby.py avocadostress.starship#4
++ RESOURCES=sos-dsldbg-00
+++ echo avocadostress.starship
+++ grep -oP '(?<=\.)v.+\..+(?=\.)'
+++ :
++ KERNVER=
++ TIMEOUT=3600
++ for R in ${RESOURCES}
++ wait
++ ssh -q jenkins@sos-dsldbg-00 ./checkfornewkerneltag.sh
++ '[' -n '' ']'
++ cd /var/lib/jenkins
++ ./rebootresource.sh jenkins@sos-dsldbg-00
+++ ssh -q jenkins@sos-dsldbg-00 'uname -r'
++ echo 'sos-dsldbg-00: 4.16.0-amdsos-build3+'
++ timeout -sKILL 3600 ssh -q jenkins@sos-dsldbg-00
++ '[' 0 -eq 0 ']'
+++ cat sos-dsldbg-00.ssh.log
+++ fgrep 'JOB LOG'
+++ grep -oP '(?<=: ).+$'
++ AVOCADO_LOG_PATH=/home/jenkins/avocado/job-results/job-2018-06-11T04.43-ac7a5b2/job.log
++ scp jenkins@sos-dsldbg-00:/home/jenkins/avocado/job-results/job-2018-06-11T04.43-ac7a5b2/job.log sos-dsldbg-00.avocado.log
++ echo -n 'Kernel Release: '
++ for R in ${RESOURCES}
++ '[' -f sos-dsldbg-00.kernelrelease ']'
+++ cat sos-dsldbg-00.kernelrelease
++ echo -n 'sos-dsldbg-00: 4.16.0-amdsos-build3+, '
++ truncate --size=-2 kernelreleases
+++ cat kernelreleases
++ echo '[Kernel' Release: sos-dsldbg-00: '4.16.0-amdsos-build3+]'
+[Kernel Release: sos-dsldbg-00: 4.16.0-amdsos-build3+]
+Archiving artifacts
+[description-setter] Description set: sos-dsldbg-00: 4.16.0-amdsos-build3+
+[lockable-resources] released lock on [sos-dsldbg-00]
+Triggering a new build of [8mha:////4Pf7HtcnXgtUhrbELatz8lHXT0/WFqgafI/KB/BgPRENAAAAqh+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyJEgY5/az8JP3EsvzkxJT84sripNS85Ay94pLEouKMzAJ9AMYK5B7TAAAA[0mavocadosysbench.starship
+Finished: SUCCESS

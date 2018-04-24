@@ -1,0 +1,23 @@
++ cd /var/lib/jenkins
++ ./checkresourceprovisioned.new.sh 10.236.10.208
++ set -e
++ ping -c 1 10.236.10.208
++ RV=0
++ ssh -q -o PasswordAuthentication=no -o StrictHostKeyChecking=no jenkins@10.236.10.208 'test ! -f checkfornewkerneltag.sh'
++ RV=255
++ (( RV == 1 ))
++ ssh-keygen -R 10.236.10.208
++ ssh -q -o PasswordAuthentication=no -o StrictHostKeyChecking=no root@10.236.10.208 :
+++ ./what_distro_remote.sh root@10.236.10.208
++ distro=sles-12.3
++ [[ sles-12.3 = \u\b\u\n\t\u\-* ]]
++ [[ sles-12.3 = \d\e\b\i\a\n\-* ]]
++ false
++ '[' sles-12.3 = sles-12.3 ']'
++ ssh -q root@10.236.10.208
+-bash: line 4: [: missing `]'
+grep: ]: No such file or directory
+Loading repository data...
+Reading installed packages...
+'Basis-Devel' not found in package names. Trying capabilities.
+No provider of 'Basis-Devel' found.

@@ -1,0 +1,1076 @@
+2018-06-05 14:25:09,868 extension        L0189 DEBUG| found extension EntryPoint.parse('journal = avocado.plugins.journal:JournalResult')
+2018-06-05 14:25:09,868 extension        L0189 DEBUG| found extension EntryPoint.parse('tap = avocado.plugins.tap:TAPResult')
+2018-06-05 14:25:09,869 extension        L0189 DEBUG| found extension EntryPoint.parse('human = avocado.plugins.human:Human')
+2018-06-05 14:25:09,869 extension        L0189 DEBUG| found extension EntryPoint.parse('vt-joblock = avocado_vt.plugins.vt_joblock:VTJobLock')
+2018-06-05 14:25:09,870 extension        L0189 DEBUG| found extension EntryPoint.parse('teststmpdir = avocado.plugins.teststmpdir:TestsTmpDir')
+2018-06-05 14:25:09,871 extension        L0189 DEBUG| found extension EntryPoint.parse('jobscripts = avocado.plugins.jobscripts:JobScripts')
+2018-06-05 14:25:09,871 extension        L0189 DEBUG| found extension EntryPoint.parse('human = avocado.plugins.human:HumanJob')
+2018-06-05 14:25:09,877 extension        L0189 DEBUG| found extension EntryPoint.parse('yaml_to_mux = avocado_varianter_yaml_to_mux:YamlToMux')
+2018-06-05 14:25:09,880 sysinfo          L0392 DEBUG| File /etc/avocado/sysinfo/commands does not exist.
+2018-06-05 14:25:09,880 sysinfo          L0403 DEBUG| File /etc/avocado/sysinfo/files does not exist.
+2018-06-05 14:25:09,880 sysinfo          L0430 DEBUG| File /etc/avocado/sysinfo/profilers does not exist.
+2018-06-05 14:25:09,890 job              L0327 INFO | Command line: /usr/local/bin/avocado run ./avocado-misc-tests/generic/sysbench.py -m avocadosysbench.upstream.recurrent.yaml
+2018-06-05 14:25:09,891 job              L0328 INFO | 
+2018-06-05 14:25:09,891 job              L0362 INFO | Avocado version: 58.0
+2018-06-05 14:25:09,891 job              L0363 INFO | 
+2018-06-05 14:25:09,891 job              L0367 INFO | Config files read (in order):
+2018-06-05 14:25:09,891 job              L0369 INFO | /usr/local/lib/python2.7/dist-packages/avocado_framework-58.0-py2.7.egg/avocado/etc/avocado/avocado.conf
+2018-06-05 14:25:09,891 job              L0369 INFO | /usr/local/lib/python2.7/dist-packages/avocado_framework-58.0-py2.7.egg/avocado/etc/avocado/conf.d/result_upload.conf
+2018-06-05 14:25:09,892 job              L0369 INFO | /usr/local/lib/python2.7/dist-packages/avocado_framework-58.0-py2.7.egg/avocado/etc/avocado/conf.d/gdb.conf
+2018-06-05 14:25:09,892 job              L0369 INFO | /usr/local/lib/python2.7/dist-packages/avocado_framework-58.0-py2.7.egg/avocado/etc/avocado/conf.d/jobscripts.conf
+2018-06-05 14:25:09,892 job              L0369 INFO | /usr/local/lib/python2.7/dist-packages/avocado_framework-58.0-py2.7.egg/avocado/etc/avocado/conf.d/resultsdb.conf
+2018-06-05 14:25:09,892 job              L0369 INFO | /home/jenkins/.config/avocado/avocado.conf
+2018-06-05 14:25:09,892 job              L0374 INFO | 
+2018-06-05 14:25:09,892 job              L0376 INFO | Avocado config:
+2018-06-05 14:25:09,894 job              L0385 INFO | Section.Key                              Value
+2018-06-05 14:25:09,895 job              L0385 INFO | datadir.paths.base_dir                   /var/lib/avocado
+2018-06-05 14:25:09,895 job              L0385 INFO | datadir.paths.test_dir                   /usr/share/avocado/tests
+2018-06-05 14:25:09,895 job              L0385 INFO | datadir.paths.data_dir                   /var/lib/avocado/data
+2018-06-05 14:25:09,895 job              L0385 INFO | datadir.paths.logs_dir                   ~/avocado/job-results
+2018-06-05 14:25:09,895 job              L0385 INFO | sysinfo.collect.enabled                  True
+2018-06-05 14:25:09,895 job              L0385 INFO | sysinfo.collect.commands_timeout         -1
+2018-06-05 14:25:09,895 job              L0385 INFO | sysinfo.collect.installed_packages       False
+2018-06-05 14:25:09,895 job              L0385 INFO | sysinfo.collect.profiler                 False
+2018-06-05 14:25:09,895 job              L0385 INFO | sysinfo.collect.locale                   C
+2018-06-05 14:25:09,895 job              L0385 INFO | sysinfo.collect.per_test                 False
+2018-06-05 14:25:09,896 job              L0385 INFO | sysinfo.collectibles.commands            /etc/avocado/sysinfo/commands
+2018-06-05 14:25:09,896 job              L0385 INFO | sysinfo.collectibles.files               /etc/avocado/sysinfo/files
+2018-06-05 14:25:09,896 job              L0385 INFO | sysinfo.collectibles.profilers           /etc/avocado/sysinfo/profilers
+2018-06-05 14:25:09,896 job              L0385 INFO | runner.output.colored                    True
+2018-06-05 14:25:09,896 job              L0385 INFO | runner.output.utf8                       
+2018-06-05 14:25:09,896 job              L0385 INFO | remoter.behavior.reject_unknown_hosts    False
+2018-06-05 14:25:09,896 job              L0385 INFO | remoter.behavior.disable_known_hosts     False
+2018-06-05 14:25:09,896 job              L0385 INFO | job.output.loglevel                      debug
+2018-06-05 14:25:09,896 job              L0385 INFO | restclient.connection.hostname           localhost
+2018-06-05 14:25:09,897 job              L0385 INFO | restclient.connection.port               9405
+2018-06-05 14:25:09,897 job              L0385 INFO | restclient.connection.username           
+2018-06-05 14:25:09,897 job              L0385 INFO | restclient.connection.password           
+2018-06-05 14:25:09,897 job              L0385 INFO | plugins.disable                          []
+2018-06-05 14:25:09,897 job              L0385 INFO | plugins.skip_broken_plugin_notification  []
+2018-06-05 14:25:09,897 job              L0385 INFO | plugins.loaders                          ['file', '@DEFAULT']
+2018-06-05 14:25:09,897 job              L0385 INFO | gdb.paths.gdb                            /usr/bin/gdb
+2018-06-05 14:25:09,897 job              L0385 INFO | gdb.paths.gdbserver                      /usr/bin/gdbserver
+2018-06-05 14:25:09,897 job              L0385 INFO | plugins.jobscripts.pre                   /etc/avocado/scripts/job/pre.d/
+2018-06-05 14:25:09,898 job              L0385 INFO | plugins.jobscripts.post                  /etc/avocado/scripts/job/post.d/
+2018-06-05 14:25:09,898 job              L0385 INFO | plugins.jobscripts.warn_non_existing_dir False
+2018-06-05 14:25:09,898 job              L0385 INFO | plugins.jobscripts.warn_non_zero_status  True
+2018-06-05 14:25:09,898 job              L0386 INFO | 
+2018-06-05 14:25:09,898 job              L0389 INFO | Avocado Data Directories:
+2018-06-05 14:25:09,898 job              L0390 INFO | 
+2018-06-05 14:25:09,898 job              L0391 INFO | base     /var/lib/avocado
+2018-06-05 14:25:09,899 job              L0392 INFO | tests    /usr/share/avocado/tests
+2018-06-05 14:25:09,899 job              L0393 INFO | data     /var/lib/avocado/data
+2018-06-05 14:25:09,899 job              L0394 INFO | logs     /home/jenkins/avocado/job-results/job-2018-06-05T14.25-4624dc9
+2018-06-05 14:25:09,899 job              L0395 INFO | 
+2018-06-05 14:25:09,900 job              L0401 INFO | Multiplex tree representation:
+2018-06-05 14:25:09,900 job              L0401 INFO |  \-- run
+2018-06-05 14:25:09,900 job              L0401 INFO |       |-- max-time
+2018-06-05 14:25:09,901 job              L0401 INFO |       |-- max-request
+2018-06-05 14:25:09,901 job              L0401 INFO |       |-- tests
+2018-06-05 14:25:09,901 job              L0401 INFO |       |-- types
+2018-06-05 14:25:09,901 job              L0401 INFO |       |-- cpu
+2018-06-05 14:25:09,901 job              L0401 INFO |       |-- threads
+2018-06-05 14:25:09,901 job              L0401 INFO |       |-- additional_params
+2018-06-05 14:25:09,901 job              L0401 INFO |       |-- min
+2018-06-05 14:25:09,901 job              L0401 INFO |       \-- max
+2018-06-05 14:25:09,901 job              L0401 INFO | 
+2018-06-05 14:25:09,901 job              L0401 INFO | Multiplex variants (1):
+2018-06-05 14:25:09,902 job              L0401 INFO | Variant additional_params-cpu-max-max-request-max-time-min-tests-threads-types-cbf1:    /run/max-time, /run/max-request, /run/tests, /run/types, /run/cpu, /run/threads, /run/additional_params, /run/min, /run/max
+2018-06-05 14:25:09,902 job              L0405 INFO | Temporary dir: /var/tmp/avocado_zRlLDP
+2018-06-05 14:25:09,902 job              L0406 INFO | 
+2018-06-05 14:25:09,902 job              L0319 INFO | Job ID: 4624dc9b3f0049f26ae9fb70b613e9d9004ff637
+2018-06-05 14:25:09,902 job              L0322 INFO | 
+2018-06-05 14:25:10,119 sysinfo          L0392 DEBUG| File /etc/avocado/sysinfo/commands does not exist.
+2018-06-05 14:25:10,120 sysinfo          L0403 DEBUG| File /etc/avocado/sysinfo/files does not exist.
+2018-06-05 14:25:10,120 sysinfo          L0430 DEBUG| File /etc/avocado/sysinfo/profilers does not exist.
+2018-06-05 14:25:10,133 parameters       L0146 DEBUG| PARAMS (key=timeout, path=*, default=None) => None
+2018-06-05 14:25:10,134 test             L0382 INFO | START 1-./avocado-misc-tests/generic/sysbench.py:Sysbench.test;additional_params-cpu-max-max-request-max-time-min-tests-threads-types-cbf1
+2018-06-05 14:25:10,134 test             L0403 DEBUG| Test metadata:
+2018-06-05 14:25:10,134 test             L0404 DEBUG|   filename: /home/jenkins/avocado-misc-tests/generic/sysbench.py
+2018-06-05 14:25:10,406 test             L0286 DEBUG| DATA (filename=output.expected) => NOT FOUND (data sources: variant, test, file)
+2018-06-05 14:25:10,410 process          L0523 INFO | Running 'which sysbench'
+2018-06-05 14:25:10,418 process          L0367 DEBUG| [stdout] /usr/bin/sysbench
+2018-06-05 14:25:10,419 process          L0605 INFO | Command 'which sysbench' finished with 0 after 0.00279593467712s
+2018-06-05 14:25:10,449 parameters       L0146 DEBUG| PARAMS (key=max-time, path=*, default=None) => None
+2018-06-05 14:25:10,450 parameters       L0146 DEBUG| PARAMS (key=max-request, path=*, default=None) => None
+2018-06-05 14:25:10,450 parameters       L0146 DEBUG| PARAMS (key=num-threads, path=*, default=2) => 120
+2018-06-05 14:25:10,450 parameters       L0146 DEBUG| PARAMS (key=type, path=*, default=cpu) => 'threads'
+2018-06-05 14:25:10,450 parameters       L0146 DEBUG| PARAMS (key=cpu-max-prime, path=*, default=100) => 50000
+2018-06-05 14:25:10,451 parameters       L0146 DEBUG| PARAMS (key=threads-locks, path=*, default=None) => 1
+2018-06-05 14:25:10,451 process          L0523 INFO | Running 'dmesg -c '
+2018-06-05 14:25:10,465 process          L0367 DEBUG| [stdout] [684768.735100] usb 1-1: new low-speed USB device number 2 using xhci_hcd
+2018-06-05 14:25:10,465 process          L0605 INFO | Command 'dmesg -c ' finished with 0 after 0.00867295265198s
+2018-06-05 14:25:10,466 process          L0367 DEBUG| [stdout] [684768.918134] usb 1-1: New USB device found, idVendor=046d, idProduct=c03d, bcdDevice=20.00
+2018-06-05 14:25:10,466 process          L0367 DEBUG| [stdout] [684768.921110] usb 1-1: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+2018-06-05 14:25:10,466 process          L0367 DEBUG| [stdout] [684768.923808] usb 1-1: Product: USB-PS/2 Optical Mouse
+2018-06-05 14:25:10,467 process          L0367 DEBUG| [stdout] [684768.926305] usb 1-1: Manufacturer: Logitech
+2018-06-05 14:25:10,467 process          L0367 DEBUG| [stdout] [684769.071096] usb 1-2: new low-speed USB device number 3 using xhci_hcd
+2018-06-05 14:25:10,467 process          L0367 DEBUG| [stdout] [684769.253233] usb 1-2: New USB device found, idVendor=413c, idProduct=2113, bcdDevice= 1.08
+2018-06-05 14:25:10,467 process          L0367 DEBUG| [stdout] [684769.256395] usb 1-2: New USB device strings: Mfr=0, Product=2, SerialNumber=0
+2018-06-05 14:25:10,467 process          L0367 DEBUG| [stdout] [684769.259203] usb 1-2: Product: Dell KB216 Wired Keyboard
+2018-06-05 14:25:10,468 process          L0367 DEBUG| [stdout] [684769.558421] hidraw: raw HID events driver (C) Jiri Kosina
+2018-06-05 14:25:10,468 process          L0367 DEBUG| [stdout] [684769.658500] usbcore: registered new interface driver usbhid
+2018-06-05 14:25:10,468 process          L0367 DEBUG| [stdout] [684769.661654] usbhid: USB HID core driver
+2018-06-05 14:25:10,468 process          L0367 DEBUG| [stdout] [684769.694118] input: Logitech USB-PS/2 Optical Mouse as /devices/pci0000:00/0000:00:07.1/0000:02:00.3/usb1/1-1/1-1:1.0/0003:046D:C03D.0001/input/input2
+2018-06-05 14:25:10,468 process          L0367 DEBUG| [stdout] [684769.700338] hid-generic 0003:046D:C03D.0001: input,hidraw0: USB HID v1.10 Mouse [Logitech USB-PS/2 Optical Mouse] on usb-0000:02:00.3-1/input0
+2018-06-05 14:25:10,469 process          L0367 DEBUG| [stdout] [684769.703139] input: Dell KB216 Wired Keyboard as /devices/pci0000:00/0000:00:07.1/0000:02:00.3/usb1/1-2/1-2:1.0/0003:413C:2113.0002/input/input3
+2018-06-05 14:25:10,469 process          L0367 DEBUG| [stdout] [684769.763432] hid-generic 0003:413C:2113.0002: input,hidraw1: USB HID v1.11 Keyboard [Dell KB216 Wired Keyboard] on usb-0000:02:00.3-2/input0
+2018-06-05 14:25:10,469 process          L0367 DEBUG| [stdout] [684769.769609] input: Dell KB216 Wired Keyboard as /devices/pci0000:00/0000:00:07.1/0000:02:00.3/usb1/1-2/1-2:1.1/0003:413C:2113.0003/input/input4
+2018-06-05 14:25:10,469 process          L0367 DEBUG| [stdout] [684769.835206] hid-generic 0003:413C:2113.0003: input,hidraw2: USB HID v1.11 Device [Dell KB216 Wired Keyboard] on usb-0000:02:00.3-2/input1
+2018-06-05 14:25:10,469 process          L0367 DEBUG| [stdout] [692574.621458] usb 1-1: USB disconnect, device number 2
+2018-06-05 14:25:10,469 process          L0367 DEBUG| [stdout] [692574.822121] usb 1-2: USB disconnect, device number 3
+2018-06-05 14:25:10,470 process          L0367 DEBUG| [stdout] [692620.093477] usb 1-1: new low-speed USB device number 4 using xhci_hcd
+2018-06-05 14:25:10,470 process          L0367 DEBUG| [stdout] [692620.276434] usb 1-1: New USB device found, idVendor=046d, idProduct=c03d, bcdDevice=20.00
+2018-06-05 14:25:10,470 process          L0367 DEBUG| [stdout] [692620.278542] usb 1-1: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+2018-06-05 14:25:10,470 process          L0367 DEBUG| [stdout] [692620.280524] usb 1-1: Product: USB-PS/2 Optical Mouse
+2018-06-05 14:25:10,471 process          L0367 DEBUG| [stdout] [692620.282285] usb 1-1: Manufacturer: Logitech
+2018-06-05 14:25:10,471 process          L0367 DEBUG| [stdout] [692620.315281] input: Logitech USB-PS/2 Optical Mouse as /devices/pci0000:00/0000:00:07.1/0000:02:00.3/usb1/1-1/1-1:1.0/0003:046D:C03D.0004/input/input5
+2018-06-05 14:25:10,471 process          L0367 DEBUG| [stdout] [692620.319419] hid-generic 0003:046D:C03D.0004: input,hidraw0: USB HID v1.10 Mouse [Logitech USB-PS/2 Optical Mouse] on usb-0000:02:00.3-1/input0
+2018-06-05 14:25:10,471 process          L0367 DEBUG| [stdout] [692620.449451] usb 1-2: new low-speed USB device number 5 using xhci_hcd
+2018-06-05 14:25:10,471 process          L0367 DEBUG| [stdout] [692620.631346] usb 1-2: New USB device found, idVendor=413c, idProduct=2113, bcdDevice= 1.08
+2018-06-05 14:25:10,471 process          L0367 DEBUG| [stdout] [692620.633858] usb 1-2: New USB device strings: Mfr=0, Product=2, SerialNumber=0
+2018-06-05 14:25:10,472 process          L0367 DEBUG| [stdout] [692620.636209] usb 1-2: Product: Dell KB216 Wired Keyboard
+2018-06-05 14:25:10,472 process          L0367 DEBUG| [stdout] [692620.740925] input: Dell KB216 Wired Keyboard as /devices/pci0000:00/0000:00:07.1/0000:02:00.3/usb1/1-2/1-2:1.0/0003:413C:2113.0005/input/input6
+2018-06-05 14:25:10,472 process          L0367 DEBUG| [stdout] [692620.805830] hid-generic 0003:413C:2113.0005: input,hidraw1: USB HID v1.11 Keyboard [Dell KB216 Wired Keyboard] on usb-0000:02:00.3-2/input0
+2018-06-05 14:25:10,472 process          L0367 DEBUG| [stdout] [692620.828714] input: Dell KB216 Wired Keyboard as /devices/pci0000:00/0000:00:07.1/0000:02:00.3/usb1/1-2/1-2:1.1/0003:413C:2113.0006/input/input7
+2018-06-05 14:25:10,472 process          L0367 DEBUG| [stdout] [692620.889702] hid-generic 0003:413C:2113.0006: input,hidraw2: USB HID v1.11 Device [Dell KB216 Wired Keyboard] on usb-0000:02:00.3-2/input1
+2018-06-05 14:25:10,472 process          L0367 DEBUG| [stdout] [692627.309007] usb 1-1: USB disconnect, device number 4
+2018-06-05 14:25:10,473 process          L0367 DEBUG| [stdout] [692627.525378] usb 1-2: USB disconnect, device number 5
+2018-06-05 14:25:10,473 process          L0367 DEBUG| [stdout] [692782.487301] usb 1-1: new low-speed USB device number 6 using xhci_hcd
+2018-06-05 14:25:10,473 process          L0367 DEBUG| [stdout] [692782.670564] usb 1-1: New USB device found, idVendor=046d, idProduct=c03d, bcdDevice=20.00
+2018-06-05 14:25:10,473 process          L0367 DEBUG| [stdout] [692782.673414] usb 1-1: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+2018-06-05 14:25:10,473 process          L0367 DEBUG| [stdout] [692782.676110] usb 1-1: Product: USB-PS/2 Optical Mouse
+2018-06-05 14:25:10,474 process          L0367 DEBUG| [stdout] [692782.678614] usb 1-1: Manufacturer: Logitech
+2018-06-05 14:25:10,474 process          L0367 DEBUG| [stdout] [692782.707153] input: Logitech USB-PS/2 Optical Mouse as /devices/pci0000:00/0000:00:07.1/0000:02:00.3/usb1/1-1/1-1:1.0/0003:046D:C03D.0007/input/input8
+2018-06-05 14:25:10,474 process          L0367 DEBUG| [stdout] [692782.712480] hid-generic 0003:046D:C03D.0007: input,hidraw0: USB HID v1.10 Mouse [Logitech USB-PS/2 Optical Mouse] on usb-0000:02:00.3-1/input0
+2018-06-05 14:25:10,474 process          L0367 DEBUG| [stdout] [692782.843295] usb 1-2: new low-speed USB device number 7 using xhci_hcd
+2018-06-05 14:25:10,474 process          L0367 DEBUG| [stdout] [692783.025567] usb 1-2: New USB device found, idVendor=413c, idProduct=2113, bcdDevice= 1.08
+2018-06-05 14:25:10,475 process          L0367 DEBUG| [stdout] [692783.028574] usb 1-2: New USB device strings: Mfr=0, Product=2, SerialNumber=0
+2018-06-05 14:25:10,475 process          L0367 DEBUG| [stdout] [692783.031449] usb 1-2: Product: Dell KB216 Wired Keyboard
+2018-06-05 14:25:10,475 process          L0367 DEBUG| [stdout] [692783.141136] input: Dell KB216 Wired Keyboard as /devices/pci0000:00/0000:00:07.1/0000:02:00.3/usb1/1-2/1-2:1.0/0003:413C:2113.0008/input/input9
+2018-06-05 14:25:10,475 process          L0367 DEBUG| [stdout] [692783.203636] hid-generic 0003:413C:2113.0008: input,hidraw1: USB HID v1.11 Keyboard [Dell KB216 Wired Keyboard] on usb-0000:02:00.3-2/input0
+2018-06-05 14:25:10,475 process          L0367 DEBUG| [stdout] [692783.225992] input: Dell KB216 Wired Keyboard as /devices/pci0000:00/0000:00:07.1/0000:02:00.3/usb1/1-2/1-2:1.1/0003:413C:2113.0009/input/input10
+2018-06-05 14:25:10,475 process          L0367 DEBUG| [stdout] [692783.291511] hid-generic 0003:413C:2113.0009: input,hidraw2: USB HID v1.11 Device [Dell KB216 Wired Keyboard] on usb-0000:02:00.3-2/input1
+2018-06-05 14:25:10,475 process          L0367 DEBUG| [stdout] [730809.339050] LTP: starting abs01
+2018-06-05 14:25:10,475 process          L0367 DEBUG| [stdout] [730809.343131] LTP: starting atof01
+2018-06-05 14:25:10,475 process          L0367 DEBUG| [stdout] [730809.347853] LTP: starting float_bessel (cd $LTPROOT/testcases/bin; float_bessel -v)
+2018-06-05 14:25:10,475 process          L0367 DEBUG| [stdout] [730810.110003] LTP: starting float_exp_log (cd $LTPROOT/testcases/bin; float_exp_log -v)
+2018-06-05 14:25:10,475 process          L0367 DEBUG| [stdout] [730810.702094] LTP: starting float_iperb (cd $LTPROOT/testcases/bin; float_iperb -v)
+2018-06-05 14:25:10,475 process          L0367 DEBUG| [stdout] [730810.923275] LTP: starting float_power (cd $LTPROOT/testcases/bin; float_power -v)
+2018-06-05 14:25:10,475 process          L0367 DEBUG| [stdout] [730811.412353] LTP: starting float_trigo (cd $LTPROOT/testcases/bin; float_trigo -v)
+2018-06-05 14:25:10,476 process          L0367 DEBUG| [stdout] [730811.969526] LTP: starting fptest01
+2018-06-05 14:25:10,476 process          L0367 DEBUG| [stdout] [730811.978454] LTP: starting fptest02
+2018-06-05 14:25:10,476 process          L0367 DEBUG| [stdout] [730811.986091] LTP: starting nextafter01
+2018-06-05 14:25:10,476 process          L0367 DEBUG| [stdout] [730811.990640] LTP: starting fsx-linux (export TCbin=$LTPROOT/testcases/bin;fsxtest02 10000)
+2018-06-05 14:25:10,476 process          L0367 DEBUG| [stdout] [730812.262489] LTP: starting pipeio_1 (pipeio -T pipeio_1 -c 5 -s 4090 -i 100 -b -f x80)
+2018-06-05 14:25:10,476 process          L0367 DEBUG| [stdout] [730812.275571] LTP: starting pipeio_3 (pipeio -T pipeio_3 -c 5 -s 4090 -i 100 -u -b -f x80)
+2018-06-05 14:25:10,476 process          L0367 DEBUG| [stdout] [730812.287917] LTP: starting pipeio_4 (pipeio -T pipeio_4 -c 5 -s 4090 -i 100 -u -f x80)
+2018-06-05 14:25:10,476 process          L0367 DEBUG| [stdout] [730812.300018] LTP: starting pipeio_5 (pipeio -T pipeio_5 -c 5 -s 5000 -i 10 -b -f x80)
+2018-06-05 14:25:10,476 process          L0367 DEBUG| [stdout] [730812.307029] LTP: starting pipeio_6 (pipeio -T pipeio_6 -c 5 -s 5000 -i 10 -b -u -f x80)
+2018-06-05 14:25:10,476 process          L0367 DEBUG| [stdout] [730812.313391] LTP: starting pipeio_8 (pipeio -T pipeio_8 -c 5 -s 5000 -i 10 -u -f x80)
+2018-06-05 14:25:10,476 process          L0367 DEBUG| [stdout] [730812.319619] LTP: starting sem01
+2018-06-05 14:25:10,476 process          L0367 DEBUG| [stdout] [730812.346369] LTP: starting sem02
+2018-06-05 14:25:10,477 process          L0367 DEBUG| [stdout] [730832.350759] LTP: starting abort01
+2018-06-05 14:25:10,477 process          L0367 DEBUG| [stdout] [730832.362105] LTP: starting accept01
+2018-06-05 14:25:10,477 process          L0367 DEBUG| [stdout] [730832.367229] LTP: starting access01
+2018-06-05 14:25:10,477 process          L0367 DEBUG| [stdout] [730832.411510] LTP: starting access02
+2018-06-05 14:25:10,477 process          L0367 DEBUG| [stdout] [730832.435989] LTP: starting access03
+2018-06-05 14:25:10,477 process          L0367 DEBUG| [stdout] [730832.442463] LTP: starting access04
+2018-06-05 14:25:10,477 process          L0367 DEBUG| [stdout] [730832.485044] LTP: starting acct01
+2018-06-05 14:25:10,477 process          L0367 DEBUG| [stdout] [730832.489204] Process accounting resumed
+2018-06-05 14:25:10,477 process          L0367 DEBUG| [stdout] [730833.020500] EXT4-fs (loop8): mounting ext2 file system using the ext4 subsystem
+2018-06-05 14:25:10,477 process          L0367 DEBUG| [stdout] [730833.067135] EXT4-fs (loop8): mounted filesystem without journal. Opts: (null)
+2018-06-05 14:25:10,477 process          L0367 DEBUG| [stdout] [730833.150445] EXT4-fs (loop8): re-mounted. Opts: (null)
+2018-06-05 14:25:10,477 process          L0367 DEBUG| [stdout] [730833.193036] LTP: starting adjtimex01
+2018-06-05 14:25:10,477 process          L0367 DEBUG| [stdout] [730833.196607] LTP: starting adjtimex02
+2018-06-05 14:25:10,478 process          L0367 DEBUG| [stdout] [730833.201008] LTP: starting alarm02
+2018-06-05 14:25:10,478 process          L0367 DEBUG| [stdout] [730833.204205] LTP: starting alarm03
+2018-06-05 14:25:10,478 process          L0367 DEBUG| [stdout] [730833.207997] LTP: starting alarm05
+2018-06-05 14:25:10,478 process          L0367 DEBUG| [stdout] [730835.212091] LTP: starting alarm06
+2018-06-05 14:25:10,478 process          L0367 DEBUG| [stdout] [730838.216734] LTP: starting alarm07
+2018-06-05 14:25:10,478 process          L0367 DEBUG| [stdout] [730843.218602] LTP: starting asyncio02
+2018-06-05 14:25:10,478 process          L0367 DEBUG| [stdout] [730843.225491] LTP: starting bind01
+2018-06-05 14:25:10,478 process          L0367 DEBUG| [stdout] [730843.228911] LTP: starting bind02
+2018-06-05 14:25:10,478 process          L0367 DEBUG| [stdout] [730843.232735] LTP: starting brk01
+2018-06-05 14:25:10,478 process          L0367 DEBUG| [stdout] [730843.236292] LTP: starting capget01
+2018-06-05 14:25:10,479 process          L0367 DEBUG| [stdout] [730843.239110] LTP: starting capget02
+2018-06-05 14:25:10,479 process          L0367 DEBUG| [stdout] [730843.241742] LTP: starting capset01
+2018-06-05 14:25:10,479 process          L0367 DEBUG| [stdout] [730843.244071] LTP: starting capset02
+2018-06-05 14:25:10,479 process          L0367 DEBUG| [stdout] [730843.246992] LTP: starting chdir01
+2018-06-05 14:25:10,479 process          L0367 DEBUG| [stdout] [730843.249467] LTP: starting chdir01A (symlink01 -T chdir01)
+2018-06-05 14:25:10,479 process          L0367 DEBUG| [stdout] [730843.252890] LTP: starting chdir02
+2018-06-05 14:25:10,479 process          L0367 DEBUG| [stdout] [730843.255454] LTP: starting chdir03
+2018-06-05 14:25:10,479 process          L0367 DEBUG| [stdout] [730843.259761] LTP: starting chdir04
+2018-06-05 14:25:10,479 process          L0367 DEBUG| [stdout] [730843.262415] LTP: starting chmod01
+2018-06-05 14:25:10,479 process          L0367 DEBUG| [stdout] [730843.265409] LTP: starting chmod01A (symlink01 -T chmod01)
+2018-06-05 14:25:10,479 process          L0367 DEBUG| [stdout] [730843.268680] LTP: starting chmod02
+2018-06-05 14:25:10,479 process          L0367 DEBUG| [stdout] [730843.271667] LTP: starting chmod03
+2018-06-05 14:25:10,479 process          L0367 DEBUG| [stdout] [730843.274733] LTP: starting chmod04
+2018-06-05 14:25:10,480 process          L0367 DEBUG| [stdout] [730843.277125] LTP: starting chmod05
+2018-06-05 14:25:10,480 process          L0367 DEBUG| [stdout] [730843.279355] LTP: starting chmod06
+2018-06-05 14:25:10,480 process          L0367 DEBUG| [stdout] [730843.312404] LTP: starting chmod07
+2018-06-05 14:25:10,480 process          L0367 DEBUG| [stdout] [730843.315787] LTP: starting chown01
+2018-06-05 14:25:10,480 process          L0367 DEBUG| [stdout] [730843.318359] LTP: starting chown02
+2018-06-05 14:25:10,480 process          L0367 DEBUG| [stdout] [730843.321132] LTP: starting chown03
+2018-06-05 14:25:10,480 process          L0367 DEBUG| [stdout] [730843.324516] LTP: starting chown04
+2018-06-05 14:25:10,480 process          L0367 DEBUG| [stdout] [730843.775503] EXT4-fs (loop8): mounting ext2 file system using the ext4 subsystem
+2018-06-05 14:25:10,480 process          L0367 DEBUG| [stdout] [730843.777688] EXT4-fs (loop8): mounted filesystem without journal. Opts: (null)
+2018-06-05 14:25:10,480 process          L0367 DEBUG| [stdout] [730843.832057] LTP: starting chown05
+2018-06-05 14:25:10,480 process          L0367 DEBUG| [stdout] [730843.835163] LTP: starting chroot01
+2018-06-05 14:25:10,480 process          L0367 DEBUG| [stdout] [730843.838462] LTP: starting chroot02
+2018-06-05 14:25:10,480 process          L0367 DEBUG| [stdout] [730843.841515] LTP: starting chroot03
+2018-06-05 14:25:10,481 process          L0367 DEBUG| [stdout] [730843.844308] LTP: starting chroot04
+2018-06-05 14:25:10,481 process          L0367 DEBUG| [stdout] [730843.847156] LTP: starting clone01
+2018-06-05 14:25:10,481 process          L0367 DEBUG| [stdout] [730843.849876] LTP: starting clone02
+2018-06-05 14:25:10,481 process          L0367 DEBUG| [stdout] [730843.852759] LTP: starting clone03
+2018-06-05 14:25:10,481 process          L0367 DEBUG| [stdout] [730843.855058] LTP: starting clone04
+2018-06-05 14:25:10,481 process          L0367 DEBUG| [stdout] [730843.857303] LTP: starting clone05
+2018-06-05 14:25:10,481 process          L0367 DEBUG| [stdout] [730843.968098] LTP: starting clone06
+2018-06-05 14:25:10,481 process          L0367 DEBUG| [stdout] [730843.970468] LTP: starting clone07
+2018-06-05 14:25:10,481 process          L0367 DEBUG| [stdout] [730843.972562] LTP: starting clone08
+2018-06-05 14:25:10,481 process          L0367 DEBUG| [stdout] [730843.976874] LTP: starting close01
+2018-06-05 14:25:10,481 process          L0367 DEBUG| [stdout] [730843.979233] LTP: starting close02
+2018-06-05 14:25:10,481 process          L0367 DEBUG| [stdout] [730843.981023] LTP: starting close08
+2018-06-05 14:25:10,482 process          L0367 DEBUG| [stdout] [730843.982984] LTP: starting confstr01
+2018-06-05 14:25:10,482 process          L0367 DEBUG| [stdout] [730843.984789] LTP: starting connect01
+2018-06-05 14:25:10,482 process          L0367 DEBUG| [stdout] [730843.987006] LTP: starting creat01
+2018-06-05 14:25:10,482 process          L0367 DEBUG| [stdout] [730843.990154] LTP: starting creat03
+2018-06-05 14:25:10,482 process          L0367 DEBUG| [stdout] [730843.993088] LTP: starting creat04
+2018-06-05 14:25:10,482 process          L0367 DEBUG| [stdout] [730843.997646] LTP: starting creat05
+2018-06-05 14:25:10,482 process          L0367 DEBUG| [stdout] [730844.034334] LTP: starting creat06
+2018-06-05 14:25:10,482 process          L0367 DEBUG| [stdout] [730844.060123] LTP: starting creat07
+2018-06-05 14:25:10,482 process          L0367 DEBUG| [stdout] [730844.069042] LTP: starting creat08
+2018-06-05 14:25:10,482 process          L0367 DEBUG| [stdout] [730844.072637] LTP: starting dup01
+2018-06-05 14:25:10,482 process          L0367 DEBUG| [stdout] [730844.074637] LTP: starting dup02
+2018-06-05 14:25:10,483 process          L0367 DEBUG| [stdout] [730844.076558] LTP: starting dup03
+2018-06-05 14:25:10,483 process          L0367 DEBUG| [stdout] [730844.080195] LTP: starting dup04
+2018-06-05 14:25:10,483 process          L0367 DEBUG| [stdout] [730844.082915] LTP: starting dup05
+2018-06-05 14:25:10,483 process          L0367 DEBUG| [stdout] [730844.085196] LTP: starting dup06
+2018-06-05 14:25:10,483 process          L0367 DEBUG| [stdout] [730844.088084] LTP: starting dup07
+2018-06-05 14:25:10,483 process          L0367 DEBUG| [stdout] [730844.090053] LTP: starting dup201
+2018-06-05 14:25:10,483 process          L0367 DEBUG| [stdout] [730844.094737] LTP: starting dup202
+2018-06-05 14:25:10,483 process          L0367 DEBUG| [stdout] [730844.097350] LTP: starting dup203
+2018-06-05 14:25:10,483 process          L0367 DEBUG| [stdout] [730844.100245] LTP: starting dup204
+2018-06-05 14:25:10,483 process          L0367 DEBUG| [stdout] [730844.102718] LTP: starting dup205
+2018-06-05 14:25:10,483 process          L0367 DEBUG| [stdout] [730844.105666] LTP: starting epoll_ctl01
+2018-06-05 14:25:10,483 process          L0367 DEBUG| [stdout] [730844.108411] LTP: starting epoll_ctl02
+2018-06-05 14:25:10,483 process          L0367 DEBUG| [stdout] [730844.110810] LTP: starting epoll_wait01
+2018-06-05 14:25:10,484 process          L0367 DEBUG| [stdout] [730844.115015] LTP: starting epoll_wait02
+2018-06-05 14:25:10,484 process          L0367 DEBUG| [stdout] [730852.456308] LTP: starting epoll_wait03
+2018-06-05 14:25:10,484 process          L0367 DEBUG| [stdout] [730852.458666] LTP: starting epoll_pwait01
+2018-06-05 14:25:10,484 process          L0367 DEBUG| [stdout] [730852.561878] LTP: starting execl01
+2018-06-05 14:25:10,484 process          L0367 DEBUG| [stdout] [730852.564513] LTP: starting execle01
+2018-06-05 14:25:10,484 process          L0367 DEBUG| [stdout] [730852.567583] LTP: starting execlp01
+2018-06-05 14:25:10,484 process          L0367 DEBUG| [stdout] [730852.570960] LTP: starting execv01
+2018-06-05 14:25:10,484 process          L0367 DEBUG| [stdout] [730852.574035] LTP: starting execve01
+2018-06-05 14:25:10,484 process          L0367 DEBUG| [stdout] [730852.576735] LTP: starting execve02
+2018-06-05 14:25:10,484 process          L0367 DEBUG| [stdout] [730852.584788] LTP: starting execve03
+2018-06-05 14:25:10,484 process          L0367 DEBUG| [stdout] [730852.589472] LTP: starting execve04
+2018-06-05 14:25:10,484 process          L0367 DEBUG| [stdout] [730852.639571] LTP: starting execve05 (execve05 20 $LTPROOT/testcases/bin/execve05 $LTPROOT/testcases/bin/execve05 4)
+2018-06-05 14:25:10,485 process          L0367 DEBUG| [stdout] [730852.734803] LTP: starting execvp01
+2018-06-05 14:25:10,485 process          L0367 DEBUG| [stdout] [730852.738360] LTP: starting exit01
+2018-06-05 14:25:10,485 process          L0367 DEBUG| [stdout] [730852.741001] LTP: starting exit02
+2018-06-05 14:25:10,485 process          L0367 DEBUG| [stdout] [730852.744368] LTP: starting fchdir01
+2018-06-05 14:25:10,485 process          L0367 DEBUG| [stdout] [730852.746715] LTP: starting fchdir02
+2018-06-05 14:25:10,485 process          L0367 DEBUG| [stdout] [730852.748499] LTP: starting fchdir03
+2018-06-05 14:25:10,485 process          L0367 DEBUG| [stdout] [730852.751686] LTP: starting fchmod01
+2018-06-05 14:25:10,485 process          L0367 DEBUG| [stdout] [730852.753894] LTP: starting fchmod02
+2018-06-05 14:25:10,485 process          L0367 DEBUG| [stdout] [730852.756842] LTP: starting fchmod03
+2018-06-05 14:25:10,485 process          L0367 DEBUG| [stdout] [730852.759534] LTP: starting fchmod04
+2018-06-05 14:25:10,485 process          L0367 DEBUG| [stdout] [730852.761784] LTP: starting fchmod05
+2018-06-05 14:25:10,485 process          L0367 DEBUG| [stdout] [730852.764584] LTP: starting fchmod06
+2018-06-05 14:25:10,486 process          L0367 DEBUG| [stdout] [730852.789913] LTP: starting fchmod07
+2018-06-05 14:25:10,486 process          L0367 DEBUG| [stdout] [730852.792431] LTP: starting fchown01
+2018-06-05 14:25:10,486 process          L0367 DEBUG| [stdout] [730852.794812] LTP: starting fchown02
+2018-06-05 14:25:10,486 process          L0367 DEBUG| [stdout] [730852.797058] LTP: starting fchown03
+2018-06-05 14:25:10,486 process          L0367 DEBUG| [stdout] [730852.799860] LTP: starting fchown04
+2018-06-05 14:25:10,486 process          L0367 DEBUG| [stdout] [730853.265468] EXT4-fs (loop8): mounting ext2 file system using the ext4 subsystem
+2018-06-05 14:25:10,486 process          L0367 DEBUG| [stdout] [730853.308845] EXT4-fs (loop8): mounted filesystem without journal. Opts: (null)
+2018-06-05 14:25:10,486 process          L0367 DEBUG| [stdout] [730853.392148] EXT4-fs (loop8): re-mounted. Opts: (null)
+2018-06-05 14:25:10,486 process          L0367 DEBUG| [stdout] [730853.441878] LTP: starting fchown05
+2018-06-05 14:25:10,486 process          L0367 DEBUG| [stdout] [730853.444565] LTP: starting fcntl01
+2018-06-05 14:25:10,486 process          L0367 DEBUG| [stdout] [730853.447441] LTP: starting fcntl02
+2018-06-05 14:25:10,487 process          L0367 DEBUG| [stdout] [730853.450600] LTP: starting fcntl03
+2018-06-05 14:25:10,487 process          L0367 DEBUG| [stdout] [730853.453678] LTP: starting fcntl04
+2018-06-05 14:25:10,487 process          L0367 DEBUG| [stdout] [730853.456554] LTP: starting fcntl05
+2018-06-05 14:25:10,487 process          L0367 DEBUG| [stdout] [730853.458862] LTP: starting fcntl06
+2018-06-05 14:25:10,487 process          L0367 DEBUG| [stdout] [730853.461050] LTP: starting fcntl07
+2018-06-05 14:25:10,487 process          L0367 DEBUG| [stdout] [730853.467924] LTP: starting fcntl08
+2018-06-05 14:25:10,487 process          L0367 DEBUG| [stdout] [730853.470626] LTP: starting fcntl09
+2018-06-05 14:25:10,487 process          L0367 DEBUG| [stdout] [730853.472990] LTP: starting fcntl10
+2018-06-05 14:25:10,487 process          L0367 DEBUG| [stdout] [730853.475441] LTP: starting fcntl11
+2018-06-05 14:25:10,487 process          L0367 DEBUG| [stdout] [730853.478734] LTP: starting fcntl12
+2018-06-05 14:25:10,487 process          L0367 DEBUG| [stdout] [730853.483537] LTP: starting fcntl13
+2018-06-05 14:25:10,487 process          L0367 DEBUG| [stdout] [730853.486020] LTP: starting fcntl14
+2018-06-05 14:25:10,487 process          L0367 DEBUG| [stdout] [730858.938934] LTP: starting fcntl15
+2018-06-05 14:25:10,488 process          L0367 DEBUG| [stdout] [730868.945081] LTP: starting fcntl17
+2018-06-05 14:25:10,488 process          L0367 DEBUG| [stdout] [730868.949143] LTP: starting fcntl18
+2018-06-05 14:25:10,488 process          L0367 DEBUG| [stdout] [730868.953449] LTP: starting fcntl19
+2018-06-05 14:25:10,488 process          L0367 DEBUG| [stdout] [730868.956731] LTP: starting fcntl20
+2018-06-05 14:25:10,488 process          L0367 DEBUG| [stdout] [730868.960647] LTP: starting fcntl21
+2018-06-05 14:25:10,488 process          L0367 DEBUG| [stdout] [730868.964040] LTP: starting fcntl22
+2018-06-05 14:25:10,488 process          L0367 DEBUG| [stdout] [730868.966892] LTP: starting fcntl23
+2018-06-05 14:25:10,488 process          L0367 DEBUG| [stdout] [730868.969381] LTP: starting fcntl24
+2018-06-05 14:25:10,488 process          L0367 DEBUG| [stdout] [730868.971909] LTP: starting fcntl25
+2018-06-05 14:25:10,488 process          L0367 DEBUG| [stdout] [730868.974410] LTP: starting fcntl26
+2018-06-05 14:25:10,488 process          L0367 DEBUG| [stdout] [730868.976663] LTP: starting fcntl29
+2018-06-05 14:25:10,488 process          L0367 DEBUG| [stdout] [730868.979109] LTP: starting fcntl30
+2018-06-05 14:25:10,489 process          L0367 DEBUG| [stdout] [730868.981316] LTP: starting fcntl31
+2018-06-05 14:25:10,489 process          L0367 DEBUG| [stdout] [730868.985223] LTP: starting fcntl32
+2018-06-05 14:25:10,489 process          L0367 DEBUG| [stdout] [730868.987540] LTP: starting fcntl33
+2018-06-05 14:25:10,489 process          L0367 DEBUG| [stdout] [730868.991898] LTP: starting fdatasync01
+2018-06-05 14:25:10,489 process          L0367 DEBUG| [stdout] [730869.035951] LTP: starting fdatasync02
+2018-06-05 14:25:10,489 process          L0367 DEBUG| [stdout] [730869.038202] LTP: starting flock01
+2018-06-05 14:25:10,489 process          L0367 DEBUG| [stdout] [730869.040687] LTP: starting flock02
+2018-06-05 14:25:10,489 process          L0367 DEBUG| [stdout] [730869.043151] LTP: starting flock03
+2018-06-05 14:25:10,489 process          L0367 DEBUG| [stdout] [730869.078347] LTP: starting flock04
+2018-06-05 14:25:10,489 process          L0367 DEBUG| [stdout] [730869.081398] LTP: starting flock05
+2018-06-05 14:25:10,489 process          L0367 DEBUG| [stdout] [730869.084529] LTP: starting flock06
+2018-06-05 14:25:10,489 process          L0367 DEBUG| [stdout] [730869.086623] LTP: starting fmtmsg01
+2018-06-05 14:25:10,489 process          L0367 DEBUG| [stdout] [730869.089170] LTP: starting fork01
+2018-06-05 14:25:10,490 process          L0367 DEBUG| [stdout] [730869.091647] LTP: starting fork02
+2018-06-05 14:25:10,490 process          L0367 DEBUG| [stdout] [730869.094163] LTP: starting fork03
+2018-06-05 14:25:10,490 process          L0367 DEBUG| [stdout] [730869.096171] LTP: starting fork04
+2018-06-05 14:25:10,490 process          L0367 DEBUG| [stdout] [730869.098673] LTP: starting fork05
+2018-06-05 14:25:10,490 process          L0367 DEBUG| [stdout] [730869.100839] LTP: starting fork06
+2018-06-05 14:25:10,490 process          L0367 DEBUG| [stdout] [730869.265507] LTP: starting fork07
+2018-06-05 14:25:10,490 process          L0367 DEBUG| [stdout] [730870.277357] LTP: starting fork08
+2018-06-05 14:25:10,490 process          L0367 DEBUG| [stdout] [730871.280643] LTP: starting fork09
+2018-06-05 14:25:10,490 process          L0367 DEBUG| [stdout] [730871.311484] LTP: starting fork10
+2018-06-05 14:25:10,490 process          L0367 DEBUG| [stdout] [730871.314477] LTP: starting fork11
+2018-06-05 14:25:10,491 process          L0367 DEBUG| [stdout] [730871.335243] LTP: starting fpathconf01
+2018-06-05 14:25:10,491 process          L0367 DEBUG| [stdout] [730871.337805] LTP: starting fstat01
+2018-06-05 14:25:10,491 process          L0367 DEBUG| [stdout] [730871.339744] LTP: starting fstat02
+2018-06-05 14:25:10,491 process          L0367 DEBUG| [stdout] [730871.341951] LTP: starting fstat03
+2018-06-05 14:25:10,491 process          L0367 DEBUG| [stdout] [730871.344086] LTP: starting fstat05
+2018-06-05 14:25:10,491 process          L0367 DEBUG| [stdout] [730871.346617] LTP: starting fstatfs01
+2018-06-05 14:25:10,491 process          L0367 DEBUG| [stdout] [730871.348692] LTP: starting fstatfs02
+2018-06-05 14:25:10,491 process          L0367 DEBUG| [stdout] [730871.350241] LTP: starting fsync01
+2018-06-05 14:25:10,491 process          L0367 DEBUG| [stdout] [730871.857221] EXT4-fs (loop8): mounting ext2 file system using the ext4 subsystem
+2018-06-05 14:25:10,491 process          L0367 DEBUG| [stdout] [730871.891420] EXT4-fs (loop8): mounted filesystem without journal. Opts: (null)
+2018-06-05 14:25:10,491 process          L0367 DEBUG| [stdout] [730872.973376] EXT4-fs (loop8): mounting ext3 file system using the ext4 subsystem
+2018-06-05 14:25:10,491 process          L0367 DEBUG| [stdout] [730873.010553] EXT4-fs (loop8): mounted filesystem with ordered data mode. Opts: (null)
+2018-06-05 14:25:10,491 process          L0367 DEBUG| [stdout] [730874.548109] EXT4-fs (loop8): mounted filesystem with ordered data mode. Opts: (null)
+2018-06-05 14:25:10,492 process          L0367 DEBUG| [stdout] [730881.505568] LTP: starting fsync02
+2018-06-05 14:25:10,492 process          L0367 DEBUG| [stdout] [730883.270555] LTP: starting fsync03
+2018-06-05 14:25:10,492 process          L0367 DEBUG| [stdout] [730883.273313] LTP: starting ftruncate01
+2018-06-05 14:25:10,492 process          L0367 DEBUG| [stdout] [730883.276151] LTP: starting ftruncate02
+2018-06-05 14:25:10,492 process          L0367 DEBUG| [stdout] [730883.278856] LTP: starting ftruncate03
+2018-06-05 14:25:10,492 process          L0367 DEBUG| [stdout] [730883.281189] LTP: starting ftruncate04
+2018-06-05 14:25:10,492 process          L0367 DEBUG| [stdout] [730883.776953] EXT4-fs (loop8): mounting ext2 file system using the ext4 subsystem
+2018-06-05 14:25:10,492 process          L0367 DEBUG| [stdout] [730883.811085] EXT4-fs (loop8): mounted filesystem without journal. Opts: (null)
+2018-06-05 14:25:10,492 process          L0367 DEBUG| [stdout] [730883.844298] EXT4-fs (loop8): re-mounted. Opts: (null)
+2018-06-05 14:25:10,492 process          L0367 DEBUG| [stdout] [730883.987160] LTP: starting getcontext01
+2018-06-05 14:25:10,492 process          L0367 DEBUG| [stdout] [730883.989594] LTP: starting getcwd01
+2018-06-05 14:25:10,492 process          L0367 DEBUG| [stdout] [730883.992636] LTP: starting getcwd02
+2018-06-05 14:25:10,492 process          L0367 DEBUG| [stdout] [730883.995674] LTP: starting getcwd03
+2018-06-05 14:25:10,493 process          L0367 DEBUG| [stdout] [730883.999157] LTP: starting getcwd04
+2018-06-05 14:25:10,493 process          L0367 DEBUG| [stdout] [730889.002582] LTP: starting getdents01
+2018-06-05 14:25:10,493 process          L0367 DEBUG| [stdout] [730889.005889] LTP: starting getdents02
+2018-06-05 14:25:10,493 process          L0367 DEBUG| [stdout] [730889.008905] LTP: starting getdomainname01
+2018-06-05 14:25:10,493 process          L0367 DEBUG| [stdout] [730889.011143] LTP: starting getdtablesize01
+2018-06-05 14:25:10,493 process          L0367 DEBUG| [stdout] [730889.015762] LTP: starting getegid01
+2018-06-05 14:25:10,493 process          L0367 DEBUG| [stdout] [730889.018100] LTP: starting geteuid01
+2018-06-05 14:25:10,493 process          L0367 DEBUG| [stdout] [730889.020939] LTP: starting geteuid02
+2018-06-05 14:25:10,493 process          L0367 DEBUG| [stdout] [730889.022763] LTP: starting getgid01
+2018-06-05 14:25:10,493 process          L0367 DEBUG| [stdout] [730889.024058] LTP: starting getgid03
+2018-06-05 14:25:10,493 process          L0367 DEBUG| [stdout] [730889.025708] LTP: starting getgroups01
+2018-06-05 14:25:10,493 process          L0367 DEBUG| [stdout] [730889.027588] LTP: starting getgroups03
+2018-06-05 14:25:10,494 process          L0367 DEBUG| [stdout] [730889.029562] LTP: starting gethostid01
+2018-06-05 14:25:10,494 process          L0367 DEBUG| [stdout] [730889.039853] LTP: starting gethostname01
+2018-06-05 14:25:10,494 process          L0367 DEBUG| [stdout] [730889.041633] LTP: starting getitimer01
+2018-06-05 14:25:10,494 process          L0367 DEBUG| [stdout] [730889.044126] LTP: starting getitimer02
+2018-06-05 14:25:10,494 process          L0367 DEBUG| [stdout] [730889.046501] LTP: starting getitimer03
+2018-06-05 14:25:10,494 process          L0367 DEBUG| [stdout] [730889.049014] LTP: starting getpeername01
+2018-06-05 14:25:10,494 process          L0367 DEBUG| [stdout] [730889.051180] LTP: starting getpgid01
+2018-06-05 14:25:10,494 process          L0367 DEBUG| [stdout] [730889.054205] LTP: starting getpgid02
+2018-06-05 14:25:10,494 process          L0367 DEBUG| [stdout] [730889.056232] LTP: starting getpgrp01
+2018-06-05 14:25:10,494 process          L0367 DEBUG| [stdout] [730889.058535] LTP: starting getpid01
+2018-06-05 14:25:10,494 process          L0367 DEBUG| [stdout] [730889.061562] LTP: starting getpid02
+2018-06-05 14:25:10,494 process          L0367 DEBUG| [stdout] [730889.064207] LTP: starting getppid01
+2018-06-05 14:25:10,494 process          L0367 DEBUG| [stdout] [730889.066749] LTP: starting getppid02
+2018-06-05 14:25:10,495 process          L0367 DEBUG| [stdout] [730889.069509] LTP: starting getpriority01
+2018-06-05 14:25:10,495 process          L0367 DEBUG| [stdout] [730889.072788] LTP: starting getpriority02
+2018-06-05 14:25:10,495 process          L0367 DEBUG| [stdout] [730889.076129] LTP: starting getresgid01
+2018-06-05 14:25:10,495 process          L0367 DEBUG| [stdout] [730889.078364] LTP: starting getresgid02
+2018-06-05 14:25:10,495 process          L0367 DEBUG| [stdout] [730889.081726] LTP: starting getresgid03
+2018-06-05 14:25:10,495 process          L0367 DEBUG| [stdout] [730889.084391] LTP: starting getresuid01
+2018-06-05 14:25:10,495 process          L0367 DEBUG| [stdout] [730889.087083] LTP: starting getresuid02
+2018-06-05 14:25:10,495 process          L0367 DEBUG| [stdout] [730889.089624] LTP: starting getresuid03
+2018-06-05 14:25:10,495 process          L0367 DEBUG| [stdout] [730889.091555] LTP: starting getrlimit01
+2018-06-05 14:25:10,495 process          L0367 DEBUG| [stdout] [730889.093468] LTP: starting getrlimit02
+2018-06-05 14:25:10,495 process          L0367 DEBUG| [stdout] [730889.095673] LTP: starting getrusage01
+2018-06-05 14:25:10,495 process          L0367 DEBUG| [stdout] [730889.097315] LTP: starting getrusage02
+2018-06-05 14:25:10,495 process          L0367 DEBUG| [stdout] [730889.098754] LTP: starting getsid01
+2018-06-05 14:25:10,496 process          L0367 DEBUG| [stdout] [730889.100961] LTP: starting getsid02
+2018-06-05 14:25:10,496 process          L0367 DEBUG| [stdout] [730889.102691] LTP: starting getsockname01
+2018-06-05 14:25:10,496 process          L0367 DEBUG| [stdout] [730889.105407] LTP: starting getsockopt01
+2018-06-05 14:25:10,496 process          L0367 DEBUG| [stdout] [730889.107063] LTP: starting gettimeofday01
+2018-06-05 14:25:10,496 process          L0367 DEBUG| [stdout] [730889.108987] LTP: starting gettimeofday02
+2018-06-05 14:25:10,496 process          L0367 DEBUG| [stdout] [730899.111431] LTP: starting getuid01
+2018-06-05 14:25:10,496 process          L0367 DEBUG| [stdout] [730899.113468] LTP: starting getuid03
+2018-06-05 14:25:10,496 process          L0367 DEBUG| [stdout] [730899.116421] LTP: starting ioctl (test_ioctl)
+2018-06-05 14:25:10,496 process          L0367 DEBUG| [stdout] [730899.876234] LTP: starting ioperm01
+2018-06-05 14:25:10,496 process          L0367 DEBUG| [stdout] [730899.878330] LTP: starting ioperm02
+2018-06-05 14:25:10,496 process          L0367 DEBUG| [stdout] [730899.880788] LTP: starting iopl01
+2018-06-05 14:25:10,496 process          L0367 DEBUG| [stdout] [730899.882389] LTP: starting iopl02
+2018-06-05 14:25:10,497 process          L0367 DEBUG| [stdout] [730899.884257] LTP: starting kill01
+2018-06-05 14:25:10,497 process          L0367 DEBUG| [stdout] [730899.886375] LTP: starting kill02
+2018-06-05 14:25:10,497 process          L0367 DEBUG| [stdout] [730909.889038] LTP: starting kill03
+2018-06-05 14:25:10,497 process          L0367 DEBUG| [stdout] [730909.891556] LTP: starting kill04
+2018-06-05 14:25:10,497 process          L0367 DEBUG| [stdout] [730909.893667] LTP: starting kill05
+2018-06-05 14:25:10,497 process          L0367 DEBUG| [stdout] [730911.898202] LTP: starting kill06
+2018-06-05 14:25:10,497 process          L0367 DEBUG| [stdout] [730911.901370] LTP: starting kill07
+2018-06-05 14:25:10,497 process          L0367 DEBUG| [stdout] [730912.904306] LTP: starting kill08
+2018-06-05 14:25:10,497 process          L0367 DEBUG| [stdout] [730912.907305] LTP: starting kill09
+2018-06-05 14:25:10,497 process          L0367 DEBUG| [stdout] [730912.909594] LTP: starting kill10
+2018-06-05 14:25:10,497 process          L0367 DEBUG| [stdout] [730913.915063] LTP: starting kill11
+2018-06-05 14:25:10,497 process          L0367 DEBUG| [stdout] [730913.936789] LTP: starting kill12
+2018-06-05 14:25:10,497 process          L0367 DEBUG| [stdout] [730913.942885] LTP: starting lchown01
+2018-06-05 14:25:10,498 process          L0367 DEBUG| [stdout] [730913.945340] LTP: starting lchown02
+2018-06-05 14:25:10,498 process          L0367 DEBUG| [stdout] [730913.948680] LTP: starting lchown03
+2018-06-05 14:25:10,498 process          L0367 DEBUG| [stdout] [730914.504615] EXT4-fs (loop8): mounting ext2 file system using the ext4 subsystem
+2018-06-05 14:25:10,498 process          L0367 DEBUG| [stdout] [730914.506750] EXT4-fs (loop8): mounted filesystem without journal. Opts: (null)
+2018-06-05 14:25:10,498 process          L0367 DEBUG| [stdout] [730914.525601] LTP: starting lgetxattr01
+2018-06-05 14:25:10,498 process          L0367 DEBUG| [stdout] [730914.528186] LTP: starting lgetxattr02
+2018-06-05 14:25:10,498 process          L0367 DEBUG| [stdout] [730914.531148] LTP: starting link01 (symlink01 -T link01)
+2018-06-05 14:25:10,498 process          L0367 DEBUG| [stdout] [730914.534041] LTP: starting link02
+2018-06-05 14:25:10,498 process          L0367 DEBUG| [stdout] [730914.536576] LTP: starting link03
+2018-06-05 14:25:10,498 process          L0367 DEBUG| [stdout] [730914.538748] LTP: starting link04
+2018-06-05 14:25:10,498 process          L0367 DEBUG| [stdout] [730914.540654] LTP: starting link05
+2018-06-05 14:25:10,498 process          L0367 DEBUG| [stdout] [730914.558481] LTP: starting link06
+2018-06-05 14:25:10,498 process          L0367 DEBUG| [stdout] [730914.560027] LTP: starting link07
+2018-06-05 14:25:10,499 process          L0367 DEBUG| [stdout] [730914.561912] LTP: starting link08
+2018-06-05 14:25:10,499 process          L0367 DEBUG| [stdout] [730914.584932] LTP: starting listen01
+2018-06-05 14:25:10,499 process          L0367 DEBUG| [stdout] [730914.586676] LTP: starting llistxattr01
+2018-06-05 14:25:10,499 process          L0367 DEBUG| [stdout] [730914.589466] LTP: starting llistxattr02
+2018-06-05 14:25:10,499 process          L0367 DEBUG| [stdout] [730914.592707] LTP: starting llistxattr03
+2018-06-05 14:25:10,499 process          L0367 DEBUG| [stdout] [730914.596107] LTP: starting llseek01
+2018-06-05 14:25:10,499 process          L0367 DEBUG| [stdout] [730914.598497] LTP: starting llseek02
+2018-06-05 14:25:10,499 process          L0367 DEBUG| [stdout] [730914.600746] LTP: starting llseek03
+2018-06-05 14:25:10,499 process          L0367 DEBUG| [stdout] [730914.602620] LTP: starting lseek01
+2018-06-05 14:25:10,499 process          L0367 DEBUG| [stdout] [730914.605396] LTP: starting lseek02
+2018-06-05 14:25:10,499 process          L0367 DEBUG| [stdout] [730914.608321] LTP: starting lseek07
+2018-06-05 14:25:10,499 process          L0367 DEBUG| [stdout] [730914.611370] LTP: starting lseek11
+2018-06-05 14:25:10,499 process          L0367 DEBUG| [stdout] [730915.203911] LTP: starting lstat01A (symlink01 -T lstat01)
+2018-06-05 14:25:10,500 process          L0367 DEBUG| [stdout] [730915.206612] LTP: starting lstat01
+2018-06-05 14:25:10,500 process          L0367 DEBUG| [stdout] [730915.209100] LTP: starting lstat02
+2018-06-05 14:25:10,500 process          L0367 DEBUG| [stdout] [730915.212636] LTP: starting lstat03
+2018-06-05 14:25:10,500 process          L0367 DEBUG| [stdout] [730915.216138] LTP: starting mallopt01
+2018-06-05 14:25:10,500 process          L0367 DEBUG| [stdout] [730915.218734] LTP: starting memset01
+2018-06-05 14:25:10,500 process          L0367 DEBUG| [stdout] [730915.221856] LTP: starting memcmp01
+2018-06-05 14:25:10,500 process          L0367 DEBUG| [stdout] [730915.223651] LTP: starting memcpy01
+2018-06-05 14:25:10,500 process          L0367 DEBUG| [stdout] [730915.225333] LTP: starting mlockall01
+2018-06-05 14:25:10,500 process          L0367 DEBUG| [stdout] [730915.228643] LTP: starting mlockall02
+2018-06-05 14:25:10,500 process          L0367 DEBUG| [stdout] [730915.230795] LTP: starting mlockall03
+2018-06-05 14:25:10,500 process          L0367 DEBUG| [stdout] [730915.232652] LTP: starting mkdir02
+2018-06-05 14:25:10,500 process          L0367 DEBUG| [stdout] [730915.236350] LTP: starting mkdir03
+2018-06-05 14:25:10,500 process          L0367 DEBUG| [stdout] [730915.265036] LTP: starting mkdir04
+2018-06-05 14:25:10,501 process          L0367 DEBUG| [stdout] [730915.269659] LTP: starting mkdir05
+2018-06-05 14:25:10,501 process          L0367 DEBUG| [stdout] [730915.273611] LTP: starting mkdir05A (symlink01 -T mkdir05)
+2018-06-05 14:25:10,501 process          L0367 DEBUG| [stdout] [730915.275134] LTP: starting mkdir09
+2018-06-05 14:25:10,501 process          L0367 DEBUG| [stdout] [730925.278489] LTP: starting mknod01
+2018-06-05 14:25:10,501 process          L0367 DEBUG| [stdout] [730925.281148] LTP: starting mknod02
+2018-06-05 14:25:10,501 process          L0367 DEBUG| [stdout] [730925.284462] LTP: starting mknod03
+2018-06-05 14:25:10,501 process          L0367 DEBUG| [stdout] [730925.287725] LTP: starting mknod04
+2018-06-05 14:25:10,501 process          L0367 DEBUG| [stdout] [730925.290969] LTP: starting mknod05
+2018-06-05 14:25:10,501 process          L0367 DEBUG| [stdout] [730925.294310] LTP: starting mknod06
+2018-06-05 14:25:10,501 process          L0367 DEBUG| [stdout] [730925.297057] LTP: starting mknod07
+2018-06-05 14:25:10,501 process          L0367 DEBUG| [stdout] [730926.004505] EXT4-fs (loop8): mounting ext2 file system using the ext4 subsystem
+2018-06-05 14:25:10,501 process          L0367 DEBUG| [stdout] [730926.006751] EXT4-fs (loop8): mounted filesystem without journal. Opts: (null)
+2018-06-05 14:25:10,502 process          L0367 DEBUG| [stdout] [730926.061096] LTP: starting mknod08
+2018-06-05 14:25:10,502 process          L0367 DEBUG| [stdout] [730926.064519] LTP: starting mknod09
+2018-06-05 14:25:10,502 process          L0367 DEBUG| [stdout] [730926.067154] LTP: starting mlock01
+2018-06-05 14:25:10,502 process          L0367 DEBUG| [stdout] [730926.075728] LTP: starting mlock02
+2018-06-05 14:25:10,502 process          L0367 DEBUG| [stdout] [730926.077623] LTP: starting qmm01 (mmap001 -m 1)
+2018-06-05 14:25:10,502 process          L0367 DEBUG| [stdout] [730926.115285] LTP: starting mmap01
+2018-06-05 14:25:10,502 process          L0367 DEBUG| [stdout] [730926.155557] LTP: starting mmap02
+2018-06-05 14:25:10,502 process          L0367 DEBUG| [stdout] [730926.158158] LTP: starting mmap03
+2018-06-05 14:25:10,502 process          L0367 DEBUG| [stdout] [730926.160757] LTP: starting mmap04
+2018-06-05 14:25:10,502 process          L0367 DEBUG| [stdout] [730926.163583] LTP: starting mmap05
+2018-06-05 14:25:10,502 process          L0367 DEBUG| [stdout] [730926.166039] LTP: starting mmap06
+2018-06-05 14:25:10,502 process          L0367 DEBUG| [stdout] [730926.168621] LTP: starting mmap07
+2018-06-05 14:25:10,502 process          L0367 DEBUG| [stdout] [730926.170691] LTP: starting mmap08
+2018-06-05 14:25:10,503 process          L0367 DEBUG| [stdout] [730926.172762] LTP: starting mmap09
+2018-06-05 14:25:10,503 process          L0367 DEBUG| [stdout] [730926.174753] LTP: starting mmap16
+2018-06-05 14:25:10,503 process          L0367 DEBUG| [stdout] [730926.516934] EXT4-fs (loop8): mounted filesystem with ordered data mode. Opts: nodelalloc
+2018-06-05 14:25:10,503 process          L0367 DEBUG| [stdout] [730928.279061] LTP: starting modify_ldt01
+2018-06-05 14:25:10,503 process          L0367 DEBUG| [stdout] [730928.281519] LTP: starting modify_ldt02
+2018-06-05 14:25:10,503 process          L0367 DEBUG| [stdout] [730928.283864] LTP: starting modify_ldt03
+2018-06-05 14:25:10,503 process          L0367 DEBUG| [stdout] [730928.286290] LTP: starting mprotect01
+2018-06-05 14:25:10,503 process          L0367 DEBUG| [stdout] [730928.288884] LTP: starting mprotect02
+2018-06-05 14:25:10,503 process          L0367 DEBUG| [stdout] [730928.292785] LTP: starting mprotect03
+2018-06-05 14:25:10,503 process          L0367 DEBUG| [stdout] [730928.295822] LTP: starting mprotect04
+2018-06-05 14:25:10,503 process          L0367 DEBUG| [stdout] [730928.297806] LTP: starting mremap01
+2018-06-05 14:25:10,503 process          L0367 DEBUG| [stdout] [730928.431904] LTP: starting mremap02
+2018-06-05 14:25:10,503 process          L0367 DEBUG| [stdout] [730928.434875] LTP: starting mremap03
+2018-06-05 14:25:10,504 process          L0367 DEBUG| [stdout] [730928.437203] LTP: starting mremap04
+2018-06-05 14:25:10,504 process          L0367 DEBUG| [stdout] [730928.439861] LTP: starting msgctl01
+2018-06-05 14:25:10,504 process          L0367 DEBUG| [stdout] [730928.443120] LTP: starting msgctl02
+2018-06-05 14:25:10,504 process          L0367 DEBUG| [stdout] [730928.445616] LTP: starting msgctl03
+2018-06-05 14:25:10,504 process          L0367 DEBUG| [stdout] [730928.447728] LTP: starting msgctl04
+2018-06-05 14:25:10,504 process          L0367 DEBUG| [stdout] [730928.449682] LTP: starting msgctl05
+2018-06-05 14:25:10,504 process          L0367 DEBUG| [stdout] [730928.452342] LTP: starting msgctl06
+2018-06-05 14:25:10,504 process          L0367 DEBUG| [stdout] [730928.454253] LTP: starting msgctl07
+2018-06-05 14:25:10,504 process          L0367 DEBUG| [stdout] [730948.457543] LTP: starting msgctl08
+2018-06-05 14:25:10,504 process          L0367 DEBUG| [stdout] [730948.810284] LTP: starting msgctl09
+2018-06-05 14:25:10,504 process          L0367 DEBUG| [stdout] [730948.922059] LTP: starting msgget01
+2018-06-05 14:25:10,504 process          L0367 DEBUG| [stdout] [730948.924408] LTP: starting msgget02
+2018-06-05 14:25:10,505 process          L0367 DEBUG| [stdout] [730948.928691] LTP: starting msgget03
+2018-06-05 14:25:10,505 process          L0367 DEBUG| [stdout] [730948.985052] LTP: starting msgrcv01
+2018-06-05 14:25:10,505 process          L0367 DEBUG| [stdout] [730948.987507] LTP: starting msgrcv02
+2018-06-05 14:25:10,505 process          L0367 DEBUG| [stdout] [730948.989983] LTP: starting msgrcv03
+2018-06-05 14:25:10,505 process          L0367 DEBUG| [stdout] [730948.991727] LTP: starting msgrcv04
+2018-06-05 14:25:10,505 process          L0367 DEBUG| [stdout] [730948.993938] LTP: starting msgrcv05
+2018-06-05 14:25:10,505 process          L0367 DEBUG| [stdout] [730949.006500] LTP: starting msgrcv06
+2018-06-05 14:25:10,505 process          L0367 DEBUG| [stdout] [730949.019320] LTP: starting msgrcv07
+2018-06-05 14:25:10,505 process          L0367 DEBUG| [stdout] [730949.021931] LTP: starting msgrcv08
+2018-06-05 14:25:10,505 process          L0367 DEBUG| [stdout] [730949.023981] LTP: starting msgsnd01
+2018-06-05 14:25:10,505 process          L0367 DEBUG| [stdout] [730949.026956] LTP: starting msgsnd02
+2018-06-05 14:25:10,505 process          L0367 DEBUG| [stdout] [730949.031038] LTP: starting msgsnd05
+2018-06-05 14:25:10,505 process          L0367 DEBUG| [stdout] [730949.044004] LTP: starting msgsnd06
+2018-06-05 14:25:10,506 process          L0367 DEBUG| [stdout] [730949.057519] LTP: starting msync01
+2018-06-05 14:25:10,506 process          L0367 DEBUG| [stdout] [730949.059921] LTP: starting msync02
+2018-06-05 14:25:10,506 process          L0367 DEBUG| [stdout] [730949.062269] LTP: starting msync03
+2018-06-05 14:25:10,506 process          L0367 DEBUG| [stdout] [730949.064747] LTP: starting munlock01
+2018-06-05 14:25:10,506 process          L0367 DEBUG| [stdout] [730949.072102] LTP: starting munlock02
+2018-06-05 14:25:10,506 process          L0367 DEBUG| [stdout] [730949.073749] LTP: starting munlockall01
+2018-06-05 14:25:10,506 process          L0367 DEBUG| [stdout] [730949.075351] LTP: starting munlockall02
+2018-06-05 14:25:10,506 process          L0367 DEBUG| [stdout] [730949.077324] LTP: starting munmap01
+2018-06-05 14:25:10,506 process          L0367 DEBUG| [stdout] [730949.079138] LTP: starting munmap02
+2018-06-05 14:25:10,506 process          L0367 DEBUG| [stdout] [730949.081125] LTP: starting munmap03
+2018-06-05 14:25:10,506 process          L0367 DEBUG| [stdout] [730949.082658] LTP: starting nanosleep01
+2018-06-05 14:25:10,506 process          L0367 DEBUG| [stdout] [730957.422014] LTP: starting nanosleep02
+2018-06-05 14:25:10,506 process          L0367 DEBUG| [stdout] [730958.424932] LTP: starting nanosleep03
+2018-06-05 14:25:10,507 process          L0367 DEBUG| [stdout] [730959.427756] LTP: starting nanosleep04
+2018-06-05 14:25:10,507 process          L0367 DEBUG| [stdout] [730959.429757] LTP: starting nftw01
+2018-06-05 14:25:10,507 process          L0367 DEBUG| [stdout] [730959.443435] LTP: starting nftw6401
+2018-06-05 14:25:10,507 process          L0367 DEBUG| [stdout] [730959.454498] LTP: starting nice01
+2018-06-05 14:25:10,507 process          L0367 DEBUG| [stdout] [730959.457185] LTP: starting nice02
+2018-06-05 14:25:10,507 process          L0367 DEBUG| [stdout] [730959.459431] LTP: starting nice03
+2018-06-05 14:25:10,507 process          L0367 DEBUG| [stdout] [730959.462134] LTP: starting nice04
+2018-06-05 14:25:10,507 process          L0367 DEBUG| [stdout] [730959.465217] LTP: starting open01
+2018-06-05 14:25:10,507 process          L0367 DEBUG| [stdout] [730959.468511] LTP: starting open01A (symlink01 -T open01)
+2018-06-05 14:25:10,507 process          L0367 DEBUG| [stdout] [730959.471570] LTP: starting open02
+2018-06-05 14:25:10,507 process          L0367 DEBUG| [stdout] [730959.475249] LTP: starting open03
+2018-06-05 14:25:10,507 process          L0367 DEBUG| [stdout] [730959.477522] LTP: starting open04
+2018-06-05 14:25:10,508 process          L0367 DEBUG| [stdout] [730959.503029] LTP: starting open05
+2018-06-05 14:25:10,508 process          L0367 DEBUG| [stdout] [730959.506360] LTP: starting open06
+2018-06-05 14:25:10,508 process          L0367 DEBUG| [stdout] [730959.508786] LTP: starting open07
+2018-06-05 14:25:10,508 process          L0367 DEBUG| [stdout] [730959.511994] LTP: starting open08
+2018-06-05 14:25:10,508 process          L0367 DEBUG| [stdout] [730959.514934] LTP: starting open09
+2018-06-05 14:25:10,508 process          L0367 DEBUG| [stdout] [730959.517526] LTP: starting open10
+2018-06-05 14:25:10,508 process          L0367 DEBUG| [stdout] [730959.520256] LTP: starting open11
+2018-06-05 14:25:10,508 process          L0367 DEBUG| [stdout] [730959.522948] LTP: starting open12
+2018-06-05 14:25:10,508 process          L0367 DEBUG| [stdout] [730960.016013] EXT4-fs (loop8): mounting ext2 file system using the ext4 subsystem
+2018-06-05 14:25:10,508 process          L0367 DEBUG| [stdout] [730960.059576] EXT4-fs (loop8): mounted filesystem without journal. Opts: (null)
+2018-06-05 14:25:10,508 process          L0367 DEBUG| [stdout] [730961.192349] LTP: starting open13
+2018-06-05 14:25:10,508 process          L0367 DEBUG| [stdout] [730961.195239] LTP: starting mincore01
+2018-06-05 14:25:10,508 process          L0367 DEBUG| [stdout] [730961.197848] LTP: starting madvise01
+2018-06-05 14:25:10,509 process          L0367 DEBUG| [stdout] [730961.201372] Injecting memory failure for pfn 0x105041a at process virtual address 0x7f971bdf1000
+2018-06-05 14:25:10,509 process          L0367 DEBUG| [stdout] [730961.203199] Memory failure: 0x105041a: recovery action for clean LRU page: Recovered
+2018-06-05 14:25:10,509 process          L0367 DEBUG| [stdout] [730961.204284] Injecting memory failure for pfn 0xd12ede at process virtual address 0x7f971bdf2000
+2018-06-05 14:25:10,509 process          L0367 DEBUG| [stdout] [730961.205727] Memory failure: 0xd12ede: recovery action for clean LRU page: Recovered
+2018-06-05 14:25:10,509 process          L0367 DEBUG| [stdout] [730961.206757] Injecting memory failure for pfn 0xf39a5f at process virtual address 0x7f971bdf3000
+2018-06-05 14:25:10,509 process          L0367 DEBUG| [stdout] [730961.208176] Memory failure: 0xf39a5f: recovery action for clean LRU page: Recovered
+2018-06-05 14:25:10,509 process          L0367 DEBUG| [stdout] [730961.209242] Injecting memory failure for pfn 0xf4aa30 at process virtual address 0x7f971bdf4000
+2018-06-05 14:25:10,509 process          L0367 DEBUG| [stdout] [730961.210747] Memory failure: 0xf4aa30: recovery action for clean LRU page: Recovered
+2018-06-05 14:25:10,509 process          L0367 DEBUG| [stdout] [730961.211900] Injecting memory failure for pfn 0xe912ca at process virtual address 0x7f971bdf5000
+2018-06-05 14:25:10,509 process          L0367 DEBUG| [stdout] [730961.213198] Memory failure: 0xe912ca: recovery action for clean LRU page: Recovered
+2018-06-05 14:25:10,509 process          L0367 DEBUG| [stdout] [730961.214081] Injecting memory failure for pfn 0xcb137e at process virtual address 0x7f971bdf6000
+2018-06-05 14:25:10,509 process          L0367 DEBUG| [stdout] [730961.215267] Memory failure: 0xcb137e: recovery action for clean LRU page: Recovered
+2018-06-05 14:25:10,509 process          L0367 DEBUG| [stdout] [730961.216289] Injecting memory failure for pfn 0xd98b6a at process virtual address 0x7f971bdf7000
+2018-06-05 14:25:10,510 process          L0367 DEBUG| [stdout] [730961.217596] Memory failure: 0xd98b6a: recovery action for clean LRU page: Recovered
+2018-06-05 14:25:10,510 process          L0367 DEBUG| [stdout] [730961.218513] Injecting memory failure for pfn 0xc83005 at process virtual address 0x7f971bdf8000
+2018-06-05 14:25:10,510 process          L0367 DEBUG| [stdout] [730961.219758] Memory failure: 0xc83005: recovery action for clean LRU page: Recovered
+2018-06-05 14:25:10,510 process          L0367 DEBUG| [stdout] [730961.220805] Injecting memory failure for pfn 0xd9af5c at process virtual address 0x7f971bdf9000
+2018-06-05 14:25:10,510 process          L0367 DEBUG| [stdout] [730961.222125] Memory failure: 0xd9af5c: recovery action for clean LRU page: Recovered
+2018-06-05 14:25:10,510 process          L0367 DEBUG| [stdout] [730961.223204] Injecting memory failure for pfn 0xe52e00 at process virtual address 0x7f971bdfa000
+2018-06-05 14:25:10,510 process          L0367 DEBUG| [stdout] [730961.224701] Memory failure: 0xe52e00: recovery action for clean LRU page: Recovered
+2018-06-05 14:25:10,510 process          L0367 DEBUG| [stdout] [730961.272287] LTP: starting madvise02
+2018-06-05 14:25:10,510 process          L0367 DEBUG| [stdout] [730961.282371] LTP: starting pathconf01
+2018-06-05 14:25:10,510 process          L0367 DEBUG| [stdout] [730961.285144] LTP: starting pause01
+2018-06-05 14:25:10,510 process          L0367 DEBUG| [stdout] [730961.289021] LTP: starting pause02
+2018-06-05 14:25:10,510 process          L0367 DEBUG| [stdout] [730961.302803] LTP: starting pause03
+2018-06-05 14:25:10,511 process          L0367 DEBUG| [stdout] [730961.315837] LTP: starting personality01
+2018-06-05 14:25:10,511 process          L0367 DEBUG| [stdout] [730961.324874] LTP: starting pipe01
+2018-06-05 14:25:10,511 process          L0367 DEBUG| [stdout] [730961.328768] LTP: starting pipe02
+2018-06-05 14:25:10,511 process          L0367 DEBUG| [stdout] [730961.333001] LTP: starting pipe03
+2018-06-05 14:25:10,511 process          L0367 DEBUG| [stdout] [730961.336781] LTP: starting pipe04
+2018-06-05 14:25:10,511 process          L0367 DEBUG| [stdout] [730961.339973] LTP: starting pipe05
+2018-06-05 14:25:10,511 process          L0367 DEBUG| [stdout] [730961.343181] LTP: starting pipe06
+2018-06-05 14:25:10,511 process          L0367 DEBUG| [stdout] [730961.347217] LTP: starting pipe07
+2018-06-05 14:25:10,511 process          L0367 DEBUG| [stdout] [730961.352352] LTP: starting pipe08
+2018-06-05 14:25:10,511 process          L0367 DEBUG| [stdout] [730961.355175] LTP: starting pipe09
+2018-06-05 14:25:10,511 process          L0367 DEBUG| [stdout] [730961.359235] LTP: starting pipe10
+2018-06-05 14:25:10,511 process          L0367 DEBUG| [stdout] [730961.362701] LTP: starting pipe11
+2018-06-05 14:25:10,511 process          L0367 DEBUG| [stdout] [730961.373597] LTP: starting poll01
+2018-06-05 14:25:10,512 process          L0367 DEBUG| [stdout] [730961.377307] LTP: starting prctl01
+2018-06-05 14:25:10,512 process          L0367 DEBUG| [stdout] [730961.380398] LTP: starting prctl02
+2018-06-05 14:25:10,512 process          L0367 DEBUG| [stdout] [730961.383824] LTP: starting pread01
+2018-06-05 14:25:10,512 process          L0367 DEBUG| [stdout] [730961.386556] LTP: starting pread02
+2018-06-05 14:25:10,512 process          L0367 DEBUG| [stdout] [730961.389277] LTP: starting pread03
+2018-06-05 14:25:10,512 process          L0367 DEBUG| [stdout] [730961.392829] LTP: starting preadv01
+2018-06-05 14:25:10,512 process          L0367 DEBUG| [stdout] [730961.396649] LTP: starting preadv02
+2018-06-05 14:25:10,512 process          L0367 DEBUG| [stdout] [730961.401867] LTP: starting preadv03
+2018-06-05 14:25:10,512 process          L0367 DEBUG| [stdout] [730961.883998] EXT4-fs (loop8): mounting ext2 file system using the ext4 subsystem
+2018-06-05 14:25:10,512 process          L0367 DEBUG| [stdout] [730961.928325] EXT4-fs (loop8): mounted filesystem without journal. Opts: (null)
+2018-06-05 14:25:10,512 process          L0367 DEBUG| [stdout] [730962.687883] EXT4-fs (loop8): mounting ext3 file system using the ext4 subsystem
+2018-06-05 14:25:10,512 process          L0367 DEBUG| [stdout] [730962.729385] EXT4-fs (loop8): mounted filesystem with ordered data mode. Opts: (null)
+2018-06-05 14:25:10,512 process          L0367 DEBUG| [stdout] [730963.415269] EXT4-fs (loop8): mounted filesystem with ordered data mode. Opts: (null)
+2018-06-05 14:25:10,513 process          L0367 DEBUG| [stdout] [730968.632345] LTP: starting profil01
+2018-06-05 14:25:10,513 process          L0367 DEBUG| [stdout] [730973.635377] LTP: starting pselect01
+2018-06-05 14:25:10,513 process          L0367 DEBUG| [stdout] [730981.980085] LTP: starting pselect02
+2018-06-05 14:25:10,513 process          L0367 DEBUG| [stdout] [730981.983884] LTP: starting pselect03
+2018-06-05 14:25:10,513 process          L0367 DEBUG| [stdout] [730981.988610] LTP: starting ptrace01
+2018-06-05 14:25:10,513 process          L0367 DEBUG| [stdout] [730981.991501] LTP: starting ptrace02
+2018-06-05 14:25:10,513 process          L0367 DEBUG| [stdout] [730981.994678] LTP: starting ptrace03
+2018-06-05 14:25:10,513 process          L0367 DEBUG| [stdout] [730981.998010] LTP: starting ptrace05
+2018-06-05 14:25:10,513 process          L0367 DEBUG| [stdout] [730982.013643] LTP: starting pwrite01
+2018-06-05 14:25:10,513 process          L0367 DEBUG| [stdout] [730982.016680] LTP: starting pwrite02
+2018-06-05 14:25:10,513 process          L0367 DEBUG| [stdout] [730982.020312] LTP: starting pwrite04
+2018-06-05 14:25:10,513 process          L0367 DEBUG| [stdout] [730982.023058] LTP: starting pwrite01_64
+2018-06-05 14:25:10,514 process          L0367 DEBUG| [stdout] [730982.025749] LTP: starting pwrite02_64
+2018-06-05 14:25:10,514 process          L0367 DEBUG| [stdout] [730982.029239] LTP: starting pwrite04_64
+2018-06-05 14:25:10,514 process          L0367 DEBUG| [stdout] [730982.032139] LTP: starting pwritev01
+2018-06-05 14:25:10,514 process          L0367 DEBUG| [stdout] [730982.035061] LTP: starting pwritev02
+2018-06-05 14:25:10,514 process          L0367 DEBUG| [stdout] [730982.037928] LTP: starting pwritev03
+2018-06-05 14:25:10,514 process          L0367 DEBUG| [stdout] [730982.607644] EXT4-fs (loop8): mounting ext2 file system using the ext4 subsystem
+2018-06-05 14:25:10,514 process          L0367 DEBUG| [stdout] [730982.643394] EXT4-fs (loop8): mounted filesystem without journal. Opts: (null)
+2018-06-05 14:25:10,514 process          L0367 DEBUG| [stdout] [730983.327551] EXT4-fs (loop8): mounting ext3 file system using the ext4 subsystem
+2018-06-05 14:25:10,514 process          L0367 DEBUG| [stdout] [730983.361122] EXT4-fs (loop8): mounted filesystem with ordered data mode. Opts: (null)
+2018-06-05 14:25:10,514 process          L0367 DEBUG| [stdout] [730984.045830] EXT4-fs (loop8): mounted filesystem with ordered data mode. Opts: (null)
+2018-06-05 14:25:10,514 process          L0367 DEBUG| [stdout] [730989.072110] LTP: starting read01
+2018-06-05 14:25:10,514 process          L0367 DEBUG| [stdout] [730989.075679] LTP: starting read02
+2018-06-05 14:25:10,514 process          L0367 DEBUG| [stdout] [730989.079584] LTP: starting read03
+2018-06-05 14:25:10,515 process          L0367 DEBUG| [stdout] [730989.082345] LTP: starting read04
+2018-06-05 14:25:10,515 process          L0367 DEBUG| [stdout] [730989.085022] LTP: starting readdir01
+2018-06-05 14:25:10,515 process          L0367 DEBUG| [stdout] [730989.087836] LTP: starting readdir02
+2018-06-05 14:25:10,515 process          L0367 DEBUG| [stdout] [730989.090234] LTP: starting readdir21
+2018-06-05 14:25:10,515 process          L0367 DEBUG| [stdout] [730989.092681] LTP: starting readlink01A (symlink01 -T readlink01)
+2018-06-05 14:25:10,515 process          L0367 DEBUG| [stdout] [730989.098695] LTP: starting readlink01
+2018-06-05 14:25:10,515 process          L0367 DEBUG| [stdout] [730989.103274] LTP: starting readlink03
+2018-06-05 14:25:10,515 process          L0367 DEBUG| [stdout] [730989.107707] LTP: starting readv01
+2018-06-05 14:25:10,515 process          L0367 DEBUG| [stdout] [730989.110363] LTP: starting readv02
+2018-06-05 14:25:10,515 process          L0367 DEBUG| [stdout] [730989.112779] LTP: starting readv03
+2018-06-05 14:25:10,515 process          L0367 DEBUG| [stdout] [730989.115023] LTP: starting reboot01
+2018-06-05 14:25:10,515 process          L0367 DEBUG| [stdout] [730989.117226] LTP: starting reboot02
+2018-06-05 14:25:10,515 process          L0367 DEBUG| [stdout] [730989.120085] LTP: starting recv01
+2018-06-05 14:25:10,516 process          L0367 DEBUG| [stdout] [730989.123271] LTP: starting recvfrom01
+2018-06-05 14:25:10,516 process          L0367 DEBUG| [stdout] [730989.126766] LTP: starting recvmsg01
+2018-06-05 14:25:10,516 process          L0367 DEBUG| [stdout] [730989.130447] LTP: starting removexattr01
+2018-06-05 14:25:10,516 process          L0367 DEBUG| [stdout] [730989.133138] LTP: starting removexattr02
+2018-06-05 14:25:10,516 process          L0367 DEBUG| [stdout] [730989.135820] LTP: starting rename01
+2018-06-05 14:25:10,516 process          L0367 DEBUG| [stdout] [730989.138417] LTP: starting rename01A (symlink01 -T rename01)
+2018-06-05 14:25:10,516 process          L0367 DEBUG| [stdout] [730989.141833] LTP: starting rename02
+2018-06-05 14:25:10,516 process          L0367 DEBUG| [stdout] [730989.144459] LTP: starting rename03
+2018-06-05 14:25:10,516 process          L0367 DEBUG| [stdout] [730989.146805] LTP: starting rename04
+2018-06-05 14:25:10,516 process          L0367 DEBUG| [stdout] [730989.149321] LTP: starting rename05
+2018-06-05 14:25:10,516 process          L0367 DEBUG| [stdout] [730989.151650] LTP: starting rename06
+2018-06-05 14:25:10,516 process          L0367 DEBUG| [stdout] [730989.153958] LTP: starting rename07
+2018-06-05 14:25:10,517 process          L0367 DEBUG| [stdout] [730989.156922] LTP: starting rename08
+2018-06-05 14:25:10,517 process          L0367 DEBUG| [stdout] [730989.158726] LTP: starting rename09
+2018-06-05 14:25:10,517 process          L0367 DEBUG| [stdout] [730989.162452] LTP: starting rename10
+2018-06-05 14:25:10,517 process          L0367 DEBUG| [stdout] [730989.164451] LTP: starting rename11
+2018-06-05 14:25:10,517 process          L0367 DEBUG| [stdout] [730989.639546] EXT4-fs (loop8): mounting ext2 file system using the ext4 subsystem
+2018-06-05 14:25:10,517 process          L0367 DEBUG| [stdout] [730989.683389] EXT4-fs (loop8): mounted filesystem without journal. Opts: (null)
+2018-06-05 14:25:10,517 process          L0367 DEBUG| [stdout] [730994.230177] EXT4-fs (loop8): re-mounted. Opts: (null)
+2018-06-05 14:25:10,517 process          L0367 DEBUG| [stdout] [730994.271909] EXT4-fs (loop8): re-mounted. Opts: (null)
+2018-06-05 14:25:10,517 process          L0367 DEBUG| [stdout] [730994.387887] LTP: starting rename12
+2018-06-05 14:25:10,517 process          L0367 DEBUG| [stdout] [730994.392563] LTP: starting rename13
+2018-06-05 14:25:10,517 process          L0367 DEBUG| [stdout] [730994.395630] LTP: starting rename14
+2018-06-05 14:25:10,517 process          L0367 DEBUG| [stdout] [730999.398923] LTP: starting request_key01
+2018-06-05 14:25:10,517 process          L0367 DEBUG| [stdout] [730999.402286] LTP: starting request_key02
+2018-06-05 14:25:10,518 process          L0367 DEBUG| [stdout] [731001.405919] LTP: starting rmdir01
+2018-06-05 14:25:10,518 process          L0367 DEBUG| [stdout] [731001.409489] LTP: starting rmdir02
+2018-06-05 14:25:10,518 process          L0367 DEBUG| [stdout] [731001.435825] LTP: starting rmdir03
+2018-06-05 14:25:10,518 process          L0367 DEBUG| [stdout] [731001.439988] LTP: starting rmdir03A (symlink01 -T rmdir03)
+2018-06-05 14:25:10,518 process          L0367 DEBUG| [stdout] [731001.442849] LTP: starting sbrk01
+2018-06-05 14:25:10,518 process          L0367 DEBUG| [stdout] [731001.445219] LTP: starting sbrk02
+2018-06-05 14:25:10,518 process          L0367 DEBUG| [stdout] [731001.447875] LTP: starting sbrk03
+2018-06-05 14:25:10,518 process          L0367 DEBUG| [stdout] [731001.450711] LTP: starting sched_get_priority_max01
+2018-06-05 14:25:10,518 process          L0367 DEBUG| [stdout] [731001.453071] LTP: starting sched_get_priority_max02
+2018-06-05 14:25:10,518 process          L0367 DEBUG| [stdout] [731001.455651] LTP: starting sched_get_priority_min01
+2018-06-05 14:25:10,518 process          L0367 DEBUG| [stdout] [731001.457945] LTP: starting sched_get_priority_min02
+2018-06-05 14:25:10,518 process          L0367 DEBUG| [stdout] [731001.460129] LTP: starting sched_getparam01
+2018-06-05 14:25:10,518 process          L0367 DEBUG| [stdout] [731001.462237] LTP: starting sched_getparam02
+2018-06-05 14:25:10,519 process          L0367 DEBUG| [stdout] [731001.464757] LTP: starting sched_getparam03
+2018-06-05 14:25:10,519 process          L0367 DEBUG| [stdout] [731001.466862] LTP: starting sched_rr_get_interval01
+2018-06-05 14:25:10,519 process          L0367 DEBUG| [stdout] [731001.469172] LTP: starting sched_rr_get_interval02
+2018-06-05 14:25:10,519 process          L0367 DEBUG| [stdout] [731001.470983] LTP: starting sched_rr_get_interval03
+2018-06-05 14:25:10,519 process          L0367 DEBUG| [stdout] [731001.473151] LTP: starting sched_setparam01
+2018-06-05 14:25:10,519 process          L0367 DEBUG| [stdout] [731001.474848] LTP: starting sched_setparam02
+2018-06-05 14:25:10,519 process          L0367 DEBUG| [stdout] [731001.476901] LTP: starting sched_setparam03
+2018-06-05 14:25:10,519 process          L0367 DEBUG| [stdout] [731001.479164] LTP: starting sched_setparam04
+2018-06-05 14:25:10,519 process          L0367 DEBUG| [stdout] [731001.481052] LTP: starting sched_setparam05
+2018-06-05 14:25:10,519 process          L0367 DEBUG| [stdout] [731001.484278] LTP: starting sched_getscheduler01
+2018-06-05 14:25:10,519 process          L0367 DEBUG| [stdout] [731001.486187] LTP: starting sched_getscheduler02
+2018-06-05 14:25:10,519 process          L0367 DEBUG| [stdout] [731001.488088] LTP: starting sched_setscheduler01
+2018-06-05 14:25:10,520 process          L0367 DEBUG| [stdout] [731001.490070] LTP: starting sched_setscheduler02
+2018-06-05 14:25:10,520 process          L0367 DEBUG| [stdout] [731001.493168] LTP: starting sched_setscheduler03
+2018-06-05 14:25:10,520 process          L0367 DEBUG| [stdout] [731001.497627] LTP: starting sched_yield01
+2018-06-05 14:25:10,520 process          L0367 DEBUG| [stdout] [731001.499224] LTP: starting select01
+2018-06-05 14:25:10,520 process          L0367 DEBUG| [stdout] [731001.500267] LTP: starting select02
+2018-06-05 14:25:10,520 process          L0367 DEBUG| [stdout] [731001.501037] LTP: starting select03
+2018-06-05 14:25:10,520 process          L0367 DEBUG| [stdout] [731001.501959] LTP: starting select04
+2018-06-05 14:25:10,520 process          L0367 DEBUG| [stdout] [731009.843618] LTP: starting semctl01
+2018-06-05 14:25:10,520 process          L0367 DEBUG| [stdout] [731009.999538] LTP: starting semctl02
+2018-06-05 14:25:10,520 process          L0367 DEBUG| [stdout] [731010.002571] LTP: starting semctl03
+2018-06-05 14:25:10,520 process          L0367 DEBUG| [stdout] [731010.005109] LTP: starting semctl04
+2018-06-05 14:25:10,520 process          L0367 DEBUG| [stdout] [731010.008819] LTP: starting semctl05
+2018-06-05 14:25:10,520 process          L0367 DEBUG| [stdout] [731010.011354] LTP: starting semctl06
+2018-06-05 14:25:10,521 process          L0367 DEBUG| [stdout] [731010.024729] LTP: starting semctl07
+2018-06-05 14:25:10,521 process          L0367 DEBUG| [stdout] [731010.026401] LTP: starting semget01
+2018-06-05 14:25:10,521 process          L0367 DEBUG| [stdout] [731010.028248] LTP: starting semget02
+2018-06-05 14:25:10,521 process          L0367 DEBUG| [stdout] [731010.030380] LTP: starting semget03
+2018-06-05 14:25:10,521 process          L0367 DEBUG| [stdout] [731010.031980] LTP: starting semget05
+2018-06-05 14:25:10,521 process          L0367 DEBUG| [stdout] [731010.062056] LTP: starting semget06
+2018-06-05 14:25:10,521 process          L0367 DEBUG| [stdout] [731010.064610] LTP: starting semop01
+2018-06-05 14:25:10,521 process          L0367 DEBUG| [stdout] [731010.066883] LTP: starting semop02
+2018-06-05 14:25:10,521 process          L0367 DEBUG| [stdout] [731010.069493] LTP: starting semop03
+2018-06-05 14:25:10,521 process          L0367 DEBUG| [stdout] [731010.072005] LTP: starting semop04
+2018-06-05 14:25:10,521 process          L0367 DEBUG| [stdout] [731010.074405] LTP: starting semop05
+2018-06-05 14:25:10,521 process          L0367 DEBUG| [stdout] [731010.109084] LTP: starting send01
+2018-06-05 14:25:10,521 process          L0367 DEBUG| [stdout] [731010.111609] LTP: starting sendfile02
+2018-06-05 14:25:10,522 process          L0367 DEBUG| [stdout] [731010.115193] LTP: starting sendfile03
+2018-06-05 14:25:10,522 process          L0367 DEBUG| [stdout] [731010.117696] LTP: starting sendmsg01
+2018-06-05 14:25:10,522 process          L0367 DEBUG| [stdout] [731010.124079] LTP: starting sendto01
+2018-06-05 14:25:10,522 process          L0367 DEBUG| [stdout] [731010.125796] LTP: starting setdomainname01
+2018-06-05 14:25:10,522 process          L0367 DEBUG| [stdout] [731010.126950] LTP: starting setdomainname02
+2018-06-05 14:25:10,522 process          L0367 DEBUG| [stdout] [731010.128090] LTP: starting setdomainname03
+2018-06-05 14:25:10,522 process          L0367 DEBUG| [stdout] [731010.130038] LTP: starting setfsgid01
+2018-06-05 14:25:10,522 process          L0367 DEBUG| [stdout] [731010.131372] LTP: starting setfsgid02
+2018-06-05 14:25:10,522 process          L0367 DEBUG| [stdout] [731010.133353] LTP: starting setfsgid03
+2018-06-05 14:25:10,522 process          L0367 DEBUG| [stdout] [731010.135261] LTP: starting setfsuid01
+2018-06-05 14:25:10,522 process          L0367 DEBUG| [stdout] [731010.136409] LTP: starting setfsuid02
+2018-06-05 14:25:10,522 process          L0367 DEBUG| [stdout] [731010.138316] LTP: starting setfsuid03
+2018-06-05 14:25:10,523 process          L0367 DEBUG| [stdout] [731010.140268] LTP: starting setfsuid04
+2018-06-05 14:25:10,523 process          L0367 DEBUG| [stdout] [731010.149747] LTP: starting setgid01
+2018-06-05 14:25:10,523 process          L0367 DEBUG| [stdout] [731010.151998] LTP: starting setgid02
+2018-06-05 14:25:10,523 process          L0367 DEBUG| [stdout] [731010.154327] LTP: starting setgid03
+2018-06-05 14:25:10,523 process          L0367 DEBUG| [stdout] [731010.156579] LTP: starting setegid01
+2018-06-05 14:25:10,523 process          L0367 DEBUG| [stdout] [731010.158903] LTP: starting setegid02
+2018-06-05 14:25:10,523 process          L0367 DEBUG| [stdout] [731010.160912] LTP: starting setgroups01
+2018-06-05 14:25:10,523 process          L0367 DEBUG| [stdout] [731010.162440] LTP: starting setgroups02
+2018-06-05 14:25:10,523 process          L0367 DEBUG| [stdout] [731010.164368] LTP: starting setgroups03
+2018-06-05 14:25:10,523 process          L0367 DEBUG| [stdout] [731010.166546] LTP: starting setgroups04
+2018-06-05 14:25:10,523 process          L0367 DEBUG| [stdout] [731010.168162] LTP: starting sethostname01
+2018-06-05 14:25:10,523 process          L0367 DEBUG| [stdout] [731010.169824] LTP: starting sethostname02
+2018-06-05 14:25:10,523 process          L0367 DEBUG| [stdout] [731010.171421] LTP: starting sethostname03
+2018-06-05 14:25:10,524 process          L0367 DEBUG| [stdout] [731010.173791] LTP: starting setitimer01
+2018-06-05 14:25:10,524 process          L0367 DEBUG| [stdout] [731010.175517] LTP: starting setitimer02
+2018-06-05 14:25:10,524 process          L0367 DEBUG| [stdout] [731010.177160] LTP: starting setitimer03
+2018-06-05 14:25:10,524 process          L0367 DEBUG| [stdout] [731010.178725] LTP: starting setpgid01
+2018-06-05 14:25:10,524 process          L0367 DEBUG| [stdout] [731010.180673] LTP: starting setpgid02
+2018-06-05 14:25:10,524 process          L0367 DEBUG| [stdout] [731010.182558] LTP: starting setpgid03
+2018-06-05 14:25:10,524 process          L0367 DEBUG| [stdout] [731010.225599] LTP: starting setpgrp01
+2018-06-05 14:25:10,524 process          L0367 DEBUG| [stdout] [731010.228092] LTP: starting setpgrp02
+2018-06-05 14:25:10,524 process          L0367 DEBUG| [stdout] [731010.230473] LTP: starting setpriority01
+2018-06-05 14:25:10,524 process          L0367 DEBUG| [stdout] [731011.200046] LTP: starting setpriority02
+2018-06-05 14:25:10,524 process          L0367 DEBUG| [stdout] [731011.204857] LTP: starting setregid01
+2018-06-05 14:25:10,524 process          L0367 DEBUG| [stdout] [731011.206767] LTP: starting setregid02
+2018-06-05 14:25:10,524 process          L0367 DEBUG| [stdout] [731011.209492] LTP: starting setregid03
+2018-06-05 14:25:10,525 process          L0367 DEBUG| [stdout] [731011.213164] LTP: starting setregid04
+2018-06-05 14:25:10,525 process          L0367 DEBUG| [stdout] [731011.215737] LTP: starting setresgid01
+2018-06-05 14:25:10,525 process          L0367 DEBUG| [stdout] [731011.218354] LTP: starting setresgid02
+2018-06-05 14:25:10,525 process          L0367 DEBUG| [stdout] [731011.220961] LTP: starting setresgid03
+2018-06-05 14:25:10,525 process          L0367 DEBUG| [stdout] [731011.223333] LTP: starting setresgid04
+2018-06-05 14:25:10,525 process          L0367 DEBUG| [stdout] [731011.225731] LTP: starting setresuid01
+2018-06-05 14:25:10,525 process          L0367 DEBUG| [stdout] [731011.228555] LTP: starting setresuid02
+2018-06-05 14:25:10,525 process          L0367 DEBUG| [stdout] [731011.231765] LTP: starting setresuid03
+2018-06-05 14:25:10,525 process          L0367 DEBUG| [stdout] [731011.235033] LTP: starting setresuid04
+2018-06-05 14:25:10,525 process          L0367 DEBUG| [stdout] [731011.239358] LTP: starting setresuid05
+2018-06-05 14:25:10,525 process          L0367 DEBUG| [stdout] [731011.241810] LTP: starting setreuid01
+2018-06-05 14:25:10,525 process          L0367 DEBUG| [stdout] [731011.243481] LTP: starting setreuid02
+2018-06-05 14:25:10,525 process          L0367 DEBUG| [stdout] [731011.245396] LTP: starting setreuid03
+2018-06-05 14:25:10,526 process          L0367 DEBUG| [stdout] [731011.247200] LTP: starting setreuid04
+2018-06-05 14:25:10,526 process          L0367 DEBUG| [stdout] [731011.249766] LTP: starting setreuid05
+2018-06-05 14:25:10,526 process          L0367 DEBUG| [stdout] [731011.252869] LTP: starting setreuid06
+2018-06-05 14:25:10,526 process          L0367 DEBUG| [stdout] [731011.255019] LTP: starting setreuid07
+2018-06-05 14:25:10,526 process          L0367 DEBUG| [stdout] [731011.258421] LTP: starting setrlimit01
+2018-06-05 14:25:10,526 process          L0367 DEBUG| [stdout] [731011.262431] LTP: starting setrlimit02
+2018-06-05 14:25:10,526 process          L0367 DEBUG| [stdout] [731011.264941] LTP: starting setrlimit03
+2018-06-05 14:25:10,526 process          L0367 DEBUG| [stdout] [731011.267294] LTP: starting setsid01
+2018-06-05 14:25:10,526 process          L0367 DEBUG| [stdout] [731012.270333] LTP: starting setsockopt01
+2018-06-05 14:25:10,526 process          L0367 DEBUG| [stdout] [731012.272663] LTP: starting settimeofday01
+2018-06-05 14:25:10,526 process          L0367 DEBUG| [stdout] [731012.275667] LTP: starting settimeofday02
+2018-06-05 14:25:10,526 process          L0367 DEBUG| [stdout] [731012.278600] LTP: starting setuid01
+2018-06-05 14:25:10,527 process          L0367 DEBUG| [stdout] [731012.281835] LTP: starting setuid03
+2018-06-05 14:25:10,527 process          L0367 DEBUG| [stdout] [731012.285002] LTP: starting setuid04
+2018-06-05 14:25:10,527 process          L0367 DEBUG| [stdout] [731012.289233] LTP: starting shmat01
+2018-06-05 14:25:10,527 process          L0367 DEBUG| [stdout] [731012.291868] shmat01[39840]: segfault at 7f726b215000 ip 0000558b0491e8a9 sp 00007ffd9dc73100 error 6 in shmat01[558b0491a000+19000]
+2018-06-05 14:25:10,527 process          L0367 DEBUG| [stdout] [731012.294463] LTP: starting shmat02
+2018-06-05 14:25:10,527 process          L0367 DEBUG| [stdout] [731012.297905] LTP: starting shmctl01
+2018-06-05 14:25:10,527 process          L0367 DEBUG| [stdout] [731013.384268] LTP: starting shmctl02
+2018-06-05 14:25:10,527 process          L0367 DEBUG| [stdout] [731013.387286] LTP: starting shmctl03
+2018-06-05 14:25:10,527 process          L0367 DEBUG| [stdout] [731013.391039] LTP: starting shmctl04
+2018-06-05 14:25:10,527 process          L0367 DEBUG| [stdout] [731013.393344] LTP: starting shmdt01
+2018-06-05 14:25:10,527 process          L0367 DEBUG| [stdout] [731013.395650] LTP: starting shmdt02
+2018-06-05 14:25:10,527 process          L0367 DEBUG| [stdout] [731013.397457] LTP: starting shmget01
+2018-06-05 14:25:10,527 process          L0367 DEBUG| [stdout] [731013.399563] LTP: starting shmget02
+2018-06-05 14:25:10,528 process          L0367 DEBUG| [stdout] [731013.401815] LTP: starting shmget03
+2018-06-05 14:25:10,528 process          L0367 DEBUG| [stdout] [731013.418970] LTP: starting shmget04
+2018-06-05 14:25:10,528 process          L0367 DEBUG| [stdout] [731013.422008] LTP: starting shmget05
+2018-06-05 14:25:10,528 process          L0367 DEBUG| [stdout] [731013.425298] LTP: starting sigaction01
+2018-06-05 14:25:10,528 process          L0367 DEBUG| [stdout] [731013.427734] LTP: starting sigaction02
+2018-06-05 14:25:10,528 process          L0367 DEBUG| [stdout] [731013.429803] LTP: starting sigaltstack01
+2018-06-05 14:25:10,528 process          L0367 DEBUG| [stdout] [731013.431768] LTP: starting sigaltstack02
+2018-06-05 14:25:10,528 process          L0367 DEBUG| [stdout] [731013.433924] LTP: starting sighold02
+2018-06-05 14:25:10,528 process          L0367 DEBUG| [stdout] [731014.207954] LTP: starting signal01
+2018-06-05 14:25:10,528 process          L0367 DEBUG| [stdout] [731014.242791] LTP: starting signal02
+2018-06-05 14:25:10,528 process          L0367 DEBUG| [stdout] [731014.244984] LTP: starting signal03
+2018-06-05 14:25:10,528 process          L0367 DEBUG| [stdout] [731014.247379] LTP: starting signal04
+2018-06-05 14:25:10,528 process          L0367 DEBUG| [stdout] [731014.249893] LTP: starting signal05
+2018-06-05 14:25:10,529 process          L0367 DEBUG| [stdout] [731014.252414] LTP: starting signal06
+2018-06-05 14:25:10,529 process          L0367 DEBUG| [stdout] [731015.118550] LTP: starting sigpending02
+2018-06-05 14:25:10,529 process          L0367 DEBUG| [stdout] [731015.120083] LTP: starting sigprocmask01
+2018-06-05 14:25:10,529 process          L0367 DEBUG| [stdout] [731015.121425] LTP: starting sigrelse01
+2018-06-05 14:25:10,529 process          L0367 DEBUG| [stdout] [731015.123201] LTP: starting sigsuspend01
+2018-06-05 14:25:10,529 process          L0367 DEBUG| [stdout] [731020.128270] LTP: starting socket01
+2018-06-05 14:25:10,529 process          L0367 DEBUG| [stdout] [731020.144239] LTP: starting socketcall01
+2018-06-05 14:25:10,529 process          L0367 DEBUG| [stdout] [731020.146071] LTP: starting socketcall02
+2018-06-05 14:25:10,529 process          L0367 DEBUG| [stdout] [731020.148177] LTP: starting socketcall03
+2018-06-05 14:25:10,529 process          L0367 DEBUG| [stdout] [731020.149928] LTP: starting socketcall04
+2018-06-05 14:25:10,529 process          L0367 DEBUG| [stdout] [731020.151483] LTP: starting socketpair01
+2018-06-05 14:25:10,529 process          L0367 DEBUG| [stdout] [731020.163717] LTP: starting sockioctl01
+2018-06-05 14:25:10,530 process          L0367 DEBUG| [stdout] [731020.165826] LTP: starting stat01
+2018-06-05 14:25:10,530 process          L0367 DEBUG| [stdout] [731020.168341] LTP: starting stat02
+2018-06-05 14:25:10,530 process          L0367 DEBUG| [stdout] [731020.170745] LTP: starting stat03
+2018-06-05 14:25:10,530 process          L0367 DEBUG| [stdout] [731020.173074] LTP: starting stat04 (symlink01 -T stat04)
+2018-06-05 14:25:10,530 process          L0367 DEBUG| [stdout] [731020.175115] LTP: starting stat05
+2018-06-05 14:25:10,530 process          L0367 DEBUG| [stdout] [731020.176833] LTP: starting stat06
+2018-06-05 14:25:10,530 process          L0367 DEBUG| [stdout] [731020.178581] LTP: starting statfs01
+2018-06-05 14:25:10,530 process          L0367 DEBUG| [stdout] [731020.180350] LTP: starting statfs02
+2018-06-05 14:25:10,530 process          L0367 DEBUG| [stdout] [731020.182244] LTP: starting statfs03
+2018-06-05 14:25:10,530 process          L0367 DEBUG| [stdout] [731020.184417] LTP: starting statvfs01
+2018-06-05 14:25:10,530 process          L0367 DEBUG| [stdout] [731020.186145] LTP: starting statvfs02
+2018-06-05 14:25:10,530 process          L0367 DEBUG| [stdout] [731020.188603] LTP: starting string01
+2018-06-05 14:25:10,530 process          L0367 DEBUG| [stdout] [731020.191306] LTP: starting swapoff01
+2018-06-05 14:25:10,531 process          L0367 DEBUG| [stdout] [731020.904685] Adding 65532k swap on ./swapfile01.  Priority:-3 extents:1 across:65532k FS
+2018-06-05 14:25:10,531 process          L0367 DEBUG| [stdout] [731020.944006] LTP: starting swapoff02
+2018-06-05 14:25:10,531 process          L0367 DEBUG| [stdout] [731020.946389] LTP: starting swapon01
+2018-06-05 14:25:10,531 process          L0367 DEBUG| [stdout] [731020.992232] Adding 36k swap on ./swapfile01.  Priority:-3 extents:1 across:36k FS
+2018-06-05 14:25:10,531 process          L0367 DEBUG| [stdout] [731021.013748] LTP: starting swapon02
+2018-06-05 14:25:10,531 process          L0367 DEBUG| [stdout] [731021.111515] Adding 36k swap on alreadyused.  Priority:-3 extents:1 across:36k FS
+2018-06-05 14:25:10,531 process          L0367 DEBUG| [stdout] [731021.112974] Unable to find swap-space signature
+2018-06-05 14:25:10,531 process          L0367 DEBUG| [stdout] [731021.138250] LTP: starting swapon03
+2018-06-05 14:25:10,531 process          L0367 DEBUG| [stdout] [731021.177022] Adding 36k swap on swapfile02.  Priority:-3 extents:1 across:36k FS
+2018-06-05 14:25:10,531 process          L0367 DEBUG| [stdout] [731021.210552] Adding 36k swap on swapfile03.  Priority:-4 extents:1 across:36k FS
+2018-06-05 14:25:10,531 process          L0367 DEBUG| [stdout] [731021.244305] Adding 36k swap on swapfile04.  Priority:-5 extents:1 across:36k FS
+2018-06-05 14:25:10,531 process          L0367 DEBUG| [stdout] [731021.277803] Adding 36k swap on swapfile05.  Priority:-6 extents:1 across:36k FS
+2018-06-05 14:25:10,531 process          L0367 DEBUG| [stdout] [731021.311508] Adding 36k swap on swapfile06.  Priority:-7 extents:1 across:36k FS
+2018-06-05 14:25:10,532 process          L0367 DEBUG| [stdout] [731021.353456] Adding 36k swap on swapfile07.  Priority:-8 extents:1 across:36k FS
+2018-06-05 14:25:10,532 process          L0367 DEBUG| [stdout] [731021.387100] Adding 36k swap on swapfile08.  Priority:-9 extents:1 across:36k FS
+2018-06-05 14:25:10,532 process          L0367 DEBUG| [stdout] [731021.429091] Adding 36k swap on swapfile09.  Priority:-10 extents:1 across:36k FS
+2018-06-05 14:25:10,532 process          L0367 DEBUG| [stdout] [731021.471099] Adding 36k swap on swapfile10.  Priority:-11 extents:1 across:36k FS
+2018-06-05 14:25:10,532 process          L0367 DEBUG| [stdout] [731021.513117] Adding 36k swap on swapfile11.  Priority:-12 extents:1 across:36k FS
+2018-06-05 14:25:10,532 process          L0367 DEBUG| [stdout] [731021.546729] Adding 36k swap on swapfile12.  Priority:-13 extents:1 across:36k FS
+2018-06-05 14:25:10,532 process          L0367 DEBUG| [stdout] [731021.572032] Adding 36k swap on swapfile13.  Priority:-14 extents:1 across:36k FS
+2018-06-05 14:25:10,532 process          L0367 DEBUG| [stdout] [731021.606951] Adding 36k swap on swapfile14.  Priority:-15 extents:1 across:36k FS
+2018-06-05 14:25:10,532 process          L0367 DEBUG| [stdout] [731021.640599] Adding 36k swap on swapfile15.  Priority:-16 extents:1 across:36k FS
+2018-06-05 14:25:10,532 process          L0367 DEBUG| [stdout] [731021.674280] Adding 36k swap on swapfile16.  Priority:-17 extents:1 across:36k FS
+2018-06-05 14:25:10,532 process          L0367 DEBUG| [stdout] [731021.707924] Adding 36k swap on swapfile17.  Priority:-18 extents:1 across:36k FS
+2018-06-05 14:25:10,532 process          L0367 DEBUG| [stdout] [731021.741618] Adding 36k swap on swapfile18.  Priority:-19 extents:1 across:36k FS
+2018-06-05 14:25:10,533 process          L0367 DEBUG| [stdout] [731021.775248] Adding 36k swap on swapfile19.  Priority:-20 extents:1 across:36k FS
+2018-06-05 14:25:10,533 process          L0367 DEBUG| [stdout] [731021.808942] Adding 36k swap on swapfile20.  Priority:-21 extents:1 across:36k FS
+2018-06-05 14:25:10,533 process          L0367 DEBUG| [stdout] [731021.842592] Adding 36k swap on swapfile21.  Priority:-22 extents:1 across:36k FS
+2018-06-05 14:25:10,533 process          L0367 DEBUG| [stdout] [731021.876336] Adding 36k swap on swapfile22.  Priority:-23 extents:1 across:36k FS
+2018-06-05 14:25:10,533 process          L0367 DEBUG| [stdout] [731021.909869] Adding 36k swap on swapfile23.  Priority:-24 extents:1 across:36k FS
+2018-06-05 14:25:10,533 process          L0367 DEBUG| [stdout] [731021.943626] Adding 36k swap on swapfile24.  Priority:-25 extents:1 across:36k FS
+2018-06-05 14:25:10,533 process          L0367 DEBUG| [stdout] [731021.977315] Adding 36k swap on swapfile25.  Priority:-26 extents:1 across:36k FS
+2018-06-05 14:25:10,533 process          L0367 DEBUG| [stdout] [731022.010932] Adding 36k swap on swapfile26.  Priority:-27 extents:1 across:36k FS
+2018-06-05 14:25:10,533 process          L0367 DEBUG| [stdout] [731022.044692] Adding 36k swap on swapfile27.  Priority:-28 extents:1 across:36k FS
+2018-06-05 14:25:10,533 process          L0367 DEBUG| [stdout] [731022.078314] Adding 36k swap on swapfile28.  Priority:-29 extents:1 across:36k FS
+2018-06-05 14:25:10,533 process          L0367 DEBUG| [stdout] [731022.120303] Adding 36k swap on swapfile29.  Priority:-30 extents:1 across:36k FS
+2018-06-05 14:25:10,533 process          L0367 DEBUG| [stdout] [731023.037198] LTP: starting symlink01
+2018-06-05 14:25:10,533 process          L0367 DEBUG| [stdout] [731023.042355] LTP: starting symlink02
+2018-06-05 14:25:10,534 process          L0367 DEBUG| [stdout] [731023.045276] LTP: starting symlink03
+2018-06-05 14:25:10,534 process          L0367 DEBUG| [stdout] [731023.048931] LTP: starting symlink04
+2018-06-05 14:25:10,534 process          L0367 DEBUG| [stdout] [731023.051700] LTP: starting symlink05
+2018-06-05 14:25:10,534 process          L0367 DEBUG| [stdout] [731023.054474] LTP: starting sync01
+2018-06-05 14:25:10,534 process          L0367 DEBUG| [stdout] [731023.234657] LTP: starting sync02
+2018-06-05 14:25:10,534 process          L0367 DEBUG| [stdout] [731023.476667] LTP: starting syscall01
+2018-06-05 14:25:10,534 process          L0367 DEBUG| [stdout] [731023.480187] LTP: starting sysconf01
+2018-06-05 14:25:10,534 process          L0367 DEBUG| [stdout] [731023.482951] LTP: starting sysctl01
+2018-06-05 14:25:10,534 process          L0367 DEBUG| [stdout] [731023.486312] LTP: starting sysctl03
+2018-06-05 14:25:10,534 process          L0367 DEBUG| [stdout] [731023.490589] LTP: starting sysctl04
+2018-06-05 14:25:10,534 process          L0367 DEBUG| [stdout] [731023.493364] LTP: starting sysfs01
+2018-06-05 14:25:10,534 process          L0367 DEBUG| [stdout] [731023.495144] LTP: starting sysfs02
+2018-06-05 14:25:10,534 process          L0367 DEBUG| [stdout] [731023.496991] LTP: starting sysfs03
+2018-06-05 14:25:10,535 process          L0367 DEBUG| [stdout] [731023.498876] LTP: starting sysfs04
+2018-06-05 14:25:10,535 process          L0367 DEBUG| [stdout] [731023.501298] LTP: starting sysfs05
+2018-06-05 14:25:10,535 process          L0367 DEBUG| [stdout] [731023.503221] LTP: starting sysfs06
+2018-06-05 14:25:10,535 process          L0367 DEBUG| [stdout] [731023.504984] LTP: starting sysinfo01
+2018-06-05 14:25:10,535 process          L0367 DEBUG| [stdout] [731023.506535] LTP: starting sysinfo02
+2018-06-05 14:25:10,535 process          L0367 DEBUG| [stdout] [731023.507751] LTP: starting syslog01
+2018-06-05 14:25:10,535 process          L0367 DEBUG| [stdout] [731029.589438] LTP: starting syslog02
+2018-06-05 14:25:10,535 process          L0367 DEBUG| [stdout] [731063.909766] LTP: starting syslog03
+2018-06-05 14:25:10,535 process          L0367 DEBUG| [stdout] [731069.992916] LTP: starting syslog04
+2018-06-05 14:25:10,535 process          L0367 DEBUG| [stdout] [731076.082303] LTP: starting syslog05
+2018-06-05 14:25:10,535 process          L0367 DEBUG| [stdout] [731102.191653] LTP: starting syslog06
+2018-06-05 14:25:10,535 process          L0367 DEBUG| [stdout] [731106.277741] LTP: starting syslog07
+2018-06-05 14:25:10,535 process          L0367 DEBUG| [stdout] [731112.393704] LTP: starting syslog08
+2018-06-05 14:25:10,536 process          L0367 DEBUG| [stdout] [731134.640545] LTP: starting syslog09
+2018-06-05 14:25:10,536 process          L0367 DEBUG| [stdout] [731140.732552] LTP: starting syslog10
+2018-06-05 14:25:10,536 process          L0367 DEBUG| [stdout] [731146.828206] LTP: starting syslog11
+2018-06-05 14:25:10,536 process          L0367 DEBUG| [stdout] [731146.831289] LTP: starting syslog12
+2018-06-05 14:25:10,536 process          L0367 DEBUG| [stdout] [731146.834269] LTP: starting times01
+2018-06-05 14:25:10,536 process          L0367 DEBUG| [stdout] [731146.836757] LTP: starting times03
+2018-06-05 14:25:10,536 process          L0367 DEBUG| [stdout] [731154.131690] LTP: starting truncate01
+2018-06-05 14:25:10,536 process          L0367 DEBUG| [stdout] [731154.134503] LTP: starting truncate02
+2018-06-05 14:25:10,536 process          L0367 DEBUG| [stdout] [731154.136482] LTP: starting truncate03
+2018-06-05 14:25:10,536 process          L0367 DEBUG| [stdout] [731154.139486] LTP: starting umask01
+2018-06-05 14:25:10,536 process          L0367 DEBUG| [stdout] [731154.155290] LTP: starting uname01
+2018-06-05 14:25:10,536 process          L0367 DEBUG| [stdout] [731154.156740] LTP: starting uname02
+2018-06-05 14:25:10,537 process          L0367 DEBUG| [stdout] [731154.158223] LTP: starting uname03
+2018-06-05 14:25:10,537 process          L0367 DEBUG| [stdout] [731154.160142] LTP: starting unlink01 (symlink01 -T unlink01)
+2018-06-05 14:25:10,537 process          L0367 DEBUG| [stdout] [731154.162250] LTP: starting unlink05
+2018-06-05 14:25:10,537 process          L0367 DEBUG| [stdout] [731154.164422] LTP: starting unlink07
+2018-06-05 14:25:10,537 process          L0367 DEBUG| [stdout] [731154.166767] LTP: starting unlink08
+2018-06-05 14:25:10,537 process          L0367 DEBUG| [stdout] [731154.169896] LTP: starting umount2_01
+2018-06-05 14:25:10,537 process          L0367 DEBUG| [stdout] [731154.614793] EXT4-fs (loop8): mounting ext2 file system using the ext4 subsystem
+2018-06-05 14:25:10,537 process          L0367 DEBUG| [stdout] [731154.651097] EXT4-fs (loop8): mounted filesystem without journal. Opts: (null)
+2018-06-05 14:25:10,537 process          L0367 DEBUG| [stdout] [731154.786827] EXT4-fs (loop8): mounting ext2 file system using the ext4 subsystem
+2018-06-05 14:25:10,537 process          L0367 DEBUG| [stdout] [731154.817979] EXT4-fs (loop8): mounted filesystem without journal. Opts: (null)
+2018-06-05 14:25:10,537 process          L0367 DEBUG| [stdout] [731154.915322] LTP: starting umount2_02
+2018-06-05 14:25:10,537 process          L0367 DEBUG| [stdout] [731155.342808] EXT4-fs (loop8): mounting ext2 file system using the ext4 subsystem
+2018-06-05 14:25:10,537 process          L0367 DEBUG| [stdout] [731155.378004] EXT4-fs (loop8): mounted filesystem without journal. Opts: (null)
+2018-06-05 14:25:10,538 process          L0367 DEBUG| [stdout] [731155.463308] LTP: starting umount2_03
+2018-06-05 14:25:10,538 process          L0367 DEBUG| [stdout] [731155.886849] EXT4-fs (loop8): mounting ext2 file system using the ext4 subsystem
+2018-06-05 14:25:10,538 process          L0367 DEBUG| [stdout] [731155.922203] EXT4-fs (loop8): mounted filesystem without journal. Opts: (null)
+2018-06-05 14:25:10,538 process          L0367 DEBUG| [stdout] [731156.030721] EXT4-fs (loop8): mounting ext2 file system using the ext4 subsystem
+2018-06-05 14:25:10,538 process          L0367 DEBUG| [stdout] [731156.072592] EXT4-fs (loop8): mounted filesystem without journal. Opts: (null)
+2018-06-05 14:25:10,538 process          L0367 DEBUG| [stdout] [731156.147049] LTP: starting ustat01
+2018-06-05 14:25:10,538 process          L0367 DEBUG| [stdout] [731156.150045] LTP: starting ustat02
+2018-06-05 14:25:10,538 process          L0367 DEBUG| [stdout] [731156.152383] LTP: starting utime01
+2018-06-05 14:25:10,538 process          L0367 DEBUG| [stdout] [731160.155407] LTP: starting utime01A (symlink01 -T utime01)
+2018-06-05 14:25:10,538 process          L0367 DEBUG| [stdout] [731160.159145] LTP: starting utime02
+2018-06-05 14:25:10,538 process          L0367 DEBUG| [stdout] [731164.163380] LTP: starting utime03
+2018-06-05 14:25:10,538 process          L0367 DEBUG| [stdout] [731168.168263] LTP: starting utime04
+2018-06-05 14:25:10,538 process          L0367 DEBUG| [stdout] [731168.171390] LTP: starting utime05
+2018-06-05 14:25:10,539 process          L0367 DEBUG| [stdout] [731168.174918] LTP: starting utime06
+2018-06-05 14:25:10,539 process          L0367 DEBUG| [stdout] [731168.622754] EXT4-fs (loop8): mounting ext2 file system using the ext4 subsystem
+2018-06-05 14:25:10,539 process          L0367 DEBUG| [stdout] [731168.625640] EXT4-fs (loop8): mounted filesystem without journal. Opts: (null)
+2018-06-05 14:25:10,539 process          L0367 DEBUG| [stdout] [731168.687253] LTP: starting vfork01
+2018-06-05 14:25:10,539 process          L0367 DEBUG| [stdout] [731168.690442] LTP: starting vfork02
+2018-06-05 14:25:10,539 process          L0367 DEBUG| [stdout] [731168.693308] LTP: starting vhangup01
+2018-06-05 14:25:10,539 process          L0367 DEBUG| [stdout] [731168.697250] LTP: starting vhangup02
+2018-06-05 14:25:10,539 process          L0367 DEBUG| [stdout] [731168.701894] LTP: starting wait01
+2018-06-05 14:25:10,539 process          L0367 DEBUG| [stdout] [731168.704340] LTP: starting wait02
+2018-06-05 14:25:10,539 process          L0367 DEBUG| [stdout] [731169.707313] LTP: starting wait401
+2018-06-05 14:25:10,539 process          L0367 DEBUG| [stdout] [731169.710740] LTP: starting wait402
+2018-06-05 14:25:10,539 process          L0367 DEBUG| [stdout] [731169.713378] LTP: starting waitpid01
+2018-06-05 14:25:10,540 process          L0367 DEBUG| [stdout] [731169.716849] LTP: starting waitpid02
+2018-06-05 14:25:10,540 process          L0367 DEBUG| [stdout] [731169.719689] LTP: starting waitpid03
+2018-06-05 14:25:10,540 process          L0367 DEBUG| [stdout] [731169.724218] LTP: starting waitpid04
+2018-06-05 14:25:10,540 process          L0367 DEBUG| [stdout] [731169.726676] LTP: starting waitpid05
+2018-06-05 14:25:10,540 process          L0367 DEBUG| [stdout] [731169.741421] LTP: starting waitpid06
+2018-06-05 14:25:10,540 process          L0367 DEBUG| [stdout] [731169.747450] LTP: starting waitpid07
+2018-06-05 14:25:10,540 process          L0367 DEBUG| [stdout] [731169.753522] LTP: starting waitpid08
+2018-06-05 14:25:10,540 process          L0367 DEBUG| [stdout] [731169.759832] LTP: starting waitpid09
+2018-06-05 14:25:10,540 process          L0367 DEBUG| [stdout] [731169.765182] LTP: starting waitpid10
+2018-06-05 14:25:10,540 process          L0367 DEBUG| [stdout] [731171.771333] LTP: starting waitpid11
+2018-06-05 14:25:10,540 process          L0367 DEBUG| [stdout] [731171.777463] LTP: starting waitpid12
+2018-06-05 14:25:10,540 process          L0367 DEBUG| [stdout] [731171.783748] LTP: starting waitpid13
+2018-06-05 14:25:10,540 process          L0367 DEBUG| [stdout] [731171.790586] LTP: starting write01
+2018-06-05 14:25:10,541 process          L0367 DEBUG| [stdout] [731171.841301] LTP: starting write03
+2018-06-05 14:25:10,541 process          L0367 DEBUG| [stdout] [731171.844689] LTP: starting write04
+2018-06-05 14:25:10,541 process          L0367 DEBUG| [stdout] [731171.848037] LTP: starting write05
+2018-06-05 14:25:10,541 process          L0367 DEBUG| [stdout] [731171.850455] LTP: starting writev01
+2018-06-05 14:25:10,541 process          L0367 DEBUG| [stdout] [731171.854544] LTP: starting writev02
+2018-06-05 14:25:10,541 process          L0367 DEBUG| [stdout] [731171.857027] LTP: starting writev05
+2018-06-05 14:25:10,541 process          L0367 DEBUG| [stdout] [731171.859854] LTP: starting writev06
+2018-06-05 14:25:10,541 process          L0367 DEBUG| [stdout] [731171.862443] LTP: starting writev07
+2018-06-05 14:25:10,541 process          L0367 DEBUG| [stdout] [731171.865775] LTP: starting mm01 (mmap001 -m 10000)
+2018-06-05 14:25:10,541 process          L0367 DEBUG| [stdout] [731172.342922] LTP: starting mm02 (mmap001)
+2018-06-05 14:25:10,541 process          L0367 DEBUG| [stdout] [731172.444433] LTP: starting mtest01 (mtest01 -p80)
+2018-06-05 14:25:10,541 process          L0367 DEBUG| [stdout] [731172.447800] LTP: starting mtest01w (mtest01 -p80 -w)
+2018-06-05 14:25:10,541 process          L0367 DEBUG| [stdout] [731175.055851] LTP: starting mtest05 (mmstress)
+2018-06-05 14:25:10,542 process          L0367 DEBUG| [stdout] [731175.484630] LTP: starting mtest06 (mmap1 -x 0.05)
+2018-06-05 14:25:10,542 process          L0367 DEBUG| [stdout] [731355.513175] LTP: starting mem01
+2018-06-05 14:25:10,542 process          L0367 DEBUG| [stdout] [731356.342681] LTP: starting mem02
+2018-06-05 14:25:10,542 process          L0367 DEBUG| [stdout] [731356.555241] LTP: starting page01
+2018-06-05 14:25:10,542 process          L0367 DEBUG| [stdout] [731357.566709] LTP: starting page02
+2018-06-05 14:25:10,542 process          L0367 DEBUG| [stdout] [731358.571873] LTP: starting data_space
+2018-06-05 14:25:10,542 process          L0367 DEBUG| [stdout] [731358.717394] LTP: starting stack_space
+2018-06-05 14:25:10,542 process          L0367 DEBUG| [stdout] [731358.917463] LTP: starting shmt02
+2018-06-05 14:25:10,542 process          L0367 DEBUG| [stdout] [731358.919174] LTP: starting shmt03
+2018-06-05 14:25:10,542 process          L0367 DEBUG| [stdout] [731358.921395] LTP: starting shmt04
+2018-06-05 14:25:10,542 process          L0367 DEBUG| [stdout] [731358.923279] LTP: starting shmt05
+2018-06-05 14:25:10,542 process          L0367 DEBUG| [stdout] [731358.924694] LTP: starting shmt06
+2018-06-05 14:25:10,542 process          L0367 DEBUG| [stdout] [731358.927054] LTP: starting shmt07
+2018-06-05 14:25:10,543 process          L0367 DEBUG| [stdout] [731358.929190] LTP: starting shmt08
+2018-06-05 14:25:10,543 process          L0367 DEBUG| [stdout] [731358.931090] LTP: starting shmt09
+2018-06-05 14:25:10,543 process          L0367 DEBUG| [stdout] [731358.933112] LTP: starting shmt10
+2018-06-05 14:25:10,543 process          L0367 DEBUG| [stdout] [731358.938619] LTP: starting pth_str01
+2018-06-05 14:25:10,543 process          L0367 DEBUG| [stdout] [731358.947787] LTP: starting pth_str02 (pth_str02 -n1000)
+2018-06-05 14:25:10,543 process          L0367 DEBUG| [stdout] [731359.065028] LTP: starting pth_str03
+2018-06-05 14:25:10,543 process          L0367 DEBUG| [stdout] [731359.076044] LTP: starting nptl01
+2018-06-05 14:25:10,543 process          L0367 DEBUG| [stdout] [731365.965877] LTP: starting pty01
+2018-06-05 14:25:10,543 process          L0367 DEBUG| [stdout] [731375.975713] LTP: starting ptem01
+2018-06-05 14:25:10,543 process          L0367 DEBUG| [stdout] [731375.979294] LTP: starting hangup01
+2018-06-05 14:25:10,543 process          L0367 DEBUG| [stdout] [731376.982349] LTP: starting gf01 (growfiles -W gf01 -b -e 1 -u -i 0 -L 20 -w -C 1 -l -I r -T 10 glseek20 glseek20.2)
+2018-06-05 14:25:10,543 process          L0367 DEBUG| [stdout] [731412.753772] LTP: starting gf02 (growfiles -W gf02 -b -e 1 -L 10 -i 100 -I p -S 2 -u -f gf03_)
+2018-06-05 14:25:10,543 process          L0367 DEBUG| [stdout] [731412.785052] LTP: starting gf03 (growfiles -W gf03 -b -e 1 -g 1 -i 1 -S 150 -u -f gf05_)
+2018-06-05 14:25:10,544 process          L0367 DEBUG| [stdout] [731412.795130] LTP: starting gf06 (growfiles -W gf06 -b -e 1 -u -r 1-5000 -R 0--1 -i 0 -L 30 -C 1 g_rand10 g_rand10.2)
+2018-06-05 14:25:10,544 process          L0367 DEBUG| [stdout] [731443.126949] LTP: starting gf07 (growfiles -W gf07 -b -e 1 -u -r 1-5000 -R 0--2 -i 0 -L 30 -C 1 -I p g_rand13 g_rand13.2)
+2018-06-05 14:25:10,544 process          L0367 DEBUG| [stdout] [731474.129316] LTP: starting gf10 (growfiles -W gf10 -b -e 1 -u -r 1-5000 -i 0 -L 30 -C 1 -I l g_lio14 g_lio14.2)
+2018-06-05 14:25:10,544 process          L0367 DEBUG| [stdout] [731506.461258] LTP: starting gf11 (growfiles -W gf11 -b -e 1 -u -r 1-5000 -i 0 -L 30 -C 1 -I L g_lio15 g_lio15.2)
+2018-06-05 14:25:10,544 process          L0367 DEBUG| [stdout] [731537.242966] LTP: starting gf12 (mkfifo gffifo17; growfiles -b -W gf12 -e 1 -u -i 0 -L 30 gffifo17)
+2018-06-05 14:25:10,544 process          L0367 DEBUG| [stdout] [731568.124521] LTP: starting gf13 (mkfifo gffifo18; growfiles -b -W gf13 -e 1 -u -i 0 -L 30 -I r -r 1-4096 gffifo18)
+2018-06-05 14:25:10,544 process          L0367 DEBUG| [stdout] [731599.123621] LTP: starting gf14 (growfiles -W gf14 -b -e 1 -u -i 0 -L 20 -w -l -C 1 -T 10 glseek19 glseek19.2)
+2018-06-05 14:25:10,544 process          L0367 DEBUG| [stdout] [731624.904368] LTP: starting gf15 (growfiles -W gf15 -b -e 1 -u -r 1-49600 -I r -u -i 0 -L 120 Lgfile1)
+2018-06-05 14:25:10,544 process          L0367 DEBUG| [stdout] [731677.424980] LTP: starting gf17 (growfiles -W gf17 -b -e 1 -i 0 -L 120 -u -g 5000 -T 100 -t 499990 -l -C 10 -c 1000 -S 10 -f Lgf03_)
+2018-06-05 14:25:10,544 process          L0367 DEBUG| [stdout] [731810.472555] LTP: starting gf18 (growfiles -W gf18 -b -e 1 -i 0 -L 120 -w -u -r 10-5000 -I r -l -S 2 -f Lgf04_)
+2018-06-05 14:25:10,544 process          L0367 DEBUG| [stdout] [731829.223659] LTP: starting gf19 (growfiles -W gf19 -b -e 1 -g 5000 -i 500 -t 49900 -T10 -c9 -I p -o O_RDWR,O_CREAT,O_TRUNC -u -f gf08i_)
+2018-06-05 14:25:10,544 process          L0367 DEBUG| [stdout] [731829.445501] LTP: starting gf20 (growfiles -W gf20 -D 0 -b -i 0 -L 60 -u -B 1000b -e 1 -r 1-256000:512 -R 512-256000 -T 4 gfbigio-$$)
+2018-06-05 14:25:10,545 process          L0367 DEBUG| [stdout] [731890.127217] LTP: starting gf23 (growfiles -W gf23 -D 0 -b -i 0 -L 60 -u -B 1000b -e 1 -r 512-64000:1024 -R 1-384000 -T 4 gf-inf-$$)
+2018-06-05 14:25:10,545 process          L0367 DEBUG| [stdout] [731905.676056] LTP: starting gf24 (growfiles -W gf24 -D 0 -b -i 0 -L 60 -u -B 1000b -e 1 -g 20480 gf-jbld-$$)
+2018-06-05 14:25:10,545 process          L0367 DEBUG| [stdout] [731905.696207] LTP: starting gf25 (growfiles -W gf25 -D 0 -b -i 0 -L 60 -u -B 1000b -e 1 -r 1024000-2048000:2048 -R 4095-2048000 -T 1 gf-large-gs-$$)
+2018-06-05 14:25:10,545 process          L0367 DEBUG| [stdout] [731905.776821] LTP: starting gf26 (growfiles -W gf26 -D 0 -b -i 0 -L 60 -u -B 1000b -e 1 -r 128-32768:128 -R 512-64000 -T 4 gfsmallio-$$)
+2018-06-05 14:25:10,545 process          L0367 DEBUG| [stdout] [731956.807476] LTP: starting gf27 (growfiles -W gf27 -b -D 0 -w -g 8b -C 1 -b -i 1000 -u gfsparse-1-$$)
+2018-06-05 14:25:10,545 process          L0367 DEBUG| [stdout] [731956.854629] LTP: starting gf30 (growfiles -W gf30 -D 0 -b -i 0 -L 60 -u -B 1000b -e 1 -o O_RDWR,O_CREAT,O_SYNC -g 20480 -T 10 -t 20480 gf-sync-$$)
+2018-06-05 14:25:10,545 process          L0367 DEBUG| [stdout] [731957.858726] LTP: starting rwtest01 (export LTPROOT; rwtest -N rwtest01 -c -q -i 60s  -f sync 10%25000:rw-sync-$$)
+2018-06-05 14:25:10,545 process          L0367 DEBUG| [stdout] [732023.269574] LTP: starting rwtest02 (export LTPROOT; rwtest -N rwtest02 -c -q -i 60s  -f buffered 10%25000:rw-buffered-$$)
+2018-06-05 14:25:10,545 process          L0367 DEBUG| [stdout] [732084.139425] LTP: starting rwtest03 (export LTPROOT; rwtest -N rwtest03 -c -q -i 60s -n 2  -f buffered -s mmread,mmwrite -m random -Dv 10%25000:mm-buff-$$)
+2018-06-05 14:25:10,545 process          L0367 DEBUG| [stdout] [732146.640486] LTP: starting rwtest04 (export LTPROOT; rwtest -N rwtest04 -c -q -i 60s -n 2  -f sync -s mmread,mmwrite -m random -Dv 10%25000:mm-sync-$$)
+2018-06-05 14:25:10,545 process          L0367 DEBUG| [stdout] [732208.378203] LTP: starting rwtest05 (export LTPROOT; rwtest -N rwtest05 -c -q -i 50 -T 64b 500b:/tmp/rwtest01%s)
+2018-06-05 14:25:10,583 process          L0523 INFO | Running 'sysbench --test=threads --thread-locks=1 --num-threads=120 run'
+2018-06-05 14:25:10,598 process          L0367 DEBUG| [stderr] WARNING: the --test option is deprecated. You can pass a script name or path on the command line without any options.
+2018-06-05 14:25:10,599 process          L0367 DEBUG| [stdout] WARNING: --num-threads is deprecated, use --threads instead
+2018-06-05 14:25:10,600 process          L0367 DEBUG| [stdout] sysbench 1.0.8 (using system LuaJIT 2.0.4)
+2018-06-05 14:25:10,600 process          L0367 DEBUG| [stdout] 
+2018-06-05 14:25:10,600 process          L0367 DEBUG| [stdout] Running the test with following options:
+2018-06-05 14:25:10,600 process          L0367 DEBUG| [stdout] Number of threads: 120
+2018-06-05 14:25:10,601 process          L0367 DEBUG| [stdout] Initializing random number generator from current time
+2018-06-05 14:25:10,601 process          L0367 DEBUG| [stdout] 
+2018-06-05 14:25:10,601 process          L0367 DEBUG| [stdout] 
+2018-06-05 14:25:10,602 process          L0367 DEBUG| [stdout] Initializing worker threads...
+2018-06-05 14:25:10,602 process          L0367 DEBUG| [stdout] 
+2018-06-05 14:25:10,604 process          L0367 DEBUG| [stdout] Threads started!
+2018-06-05 14:25:10,605 process          L0367 DEBUG| [stdout] 
+2018-06-05 14:25:20,671 process          L0367 DEBUG| [stdout] 
+2018-06-05 14:25:20,671 process          L0367 DEBUG| [stdout] General statistics:
+2018-06-05 14:25:20,672 process          L0367 DEBUG| [stdout]     total time:                          10.0653s
+2018-06-05 14:25:20,672 process          L0367 DEBUG| [stdout]     total number of events:              7960
+2018-06-05 14:25:20,672 process          L0367 DEBUG| [stdout] 
+2018-06-05 14:25:20,672 process          L0367 DEBUG| [stdout] Latency (ms):
+2018-06-05 14:25:20,672 process          L0367 DEBUG| [stdout]          min:                                  2.94
+2018-06-05 14:25:20,672 process          L0367 DEBUG| [stdout]          avg:                                151.41
+2018-06-05 14:25:20,672 process          L0367 DEBUG| [stdout]          max:                                489.46
+2018-06-05 14:25:20,672 process          L0367 DEBUG| [stdout]          95th percentile:                    331.91
+2018-06-05 14:25:20,672 process          L0367 DEBUG| [stdout]          sum:                            1205186.00
+2018-06-05 14:25:20,672 process          L0367 DEBUG| [stdout] 
+2018-06-05 14:25:20,673 process          L0367 DEBUG| [stdout] Threads fairness:
+2018-06-05 14:25:20,673 process          L0367 DEBUG| [stdout]     events (avg/stddev):           66.3333/1.23
+2018-06-05 14:25:20,673 process          L0367 DEBUG| [stdout]     execution time (avg/stddev):   10.0432/0.02
+2018-06-05 14:25:20,673 process          L0367 DEBUG| [stdout] 
+2018-06-05 14:25:20,695 process          L0605 INFO | Command 'sysbench --test=threads --thread-locks=1 --num-threads=120 run' finished with 0 after 10.1062250137s
+2018-06-05 14:25:20,750 process          L0523 INFO | Running 'dmesg'
+2018-06-05 14:25:20,756 process          L0605 INFO | Command 'dmesg' finished with 0 after 0.000944137573242s
+2018-06-05 14:25:20,756 test             L0286 DEBUG| DATA (filename=output.expected) => NOT FOUND (data sources: variant, test, file)
+2018-06-05 14:25:20,756 test             L0286 DEBUG| DATA (filename=stdout.expected) => NOT FOUND (data sources: variant, test, file)
+2018-06-05 14:25:20,757 test             L0286 DEBUG| DATA (filename=stderr.expected) => NOT FOUND (data sources: variant, test, file)
+2018-06-05 14:25:20,767 test             L1017 INFO | PASS 1-./avocado-misc-tests/generic/sysbench.py:Sysbench.test;additional_params-cpu-max-max-request-max-time-min-tests-threads-types-cbf1
+2018-06-05 14:25:20,767 test             L1000 INFO | 
+2018-06-05 14:25:20,934 job              L0483 INFO | Test results available in /home/jenkins/avocado/job-results/job-2018-06-05T14.25-4624dc9

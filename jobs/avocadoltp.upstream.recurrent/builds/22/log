@@ -1,0 +1,40 @@
+Started by timer
+[lockable-resources] acquired lock on [diesel8a87host]
+Building in workspace /var/lib/jenkins/workspace/avocadoltp.recurrent
+[WS-CLEANUP] Deleting project workspace...
+[WS-CLEANUP] Done
+[avocadoltp.recurrent] $ /bin/sh -xe /tmp/jenkins3183334885156200463.sh
+++ cd /var/lib/jenkins
+++ ./resourceslockedby.py avocadoltp.recurrent#22
++ RESOURCES=diesel8a87host
+++ echo avocadoltp.recurrent
+++ grep -oP '(?<=\.)v.+\..+(?=\.)'
+++ :
++ KERNVER=
++ TIMEOUT=3600
++ for R in ${RESOURCES}
++ wait
++ ssh -q jenkins@diesel8a87host './checkfornewkerneltag.sh https://github.com/torvalds/linux.git'
+++ ssh -q jenkins@diesel8a87host 'uname -r'
++ echo 'diesel8a87host: 4.17.0-rc4-jenkins'
++ timeout -sKILL 3600 ssh -q jenkins@diesel8a87host
++ '[' 0 -eq 0 ']'
+++ cat diesel8a87host.ssh.log
+++ fgrep 'JOB LOG'
+++ grep -oP '(?<=: ).+$'
++ AVOCADO_LOG_PATH=/home/jenkins/avocado/job-results/job-2018-05-12T18.19-3e3f6bb/job.log
++ scp jenkins@diesel8a87host:/home/jenkins/avocado/job-results/job-2018-05-12T18.19-3e3f6bb/job.log diesel8a87host.avocado.log
++ echo -n 'Kernel Release: '
++ for R in ${RESOURCES}
++ '[' -f diesel8a87host.kernelrelease ']'
+++ cat diesel8a87host.kernelrelease
+++ grep -oP '.+(?=-jenkins)'
++ echo -n 'diesel8a87host: 4.17.0-rc4, '
++ truncate --size=-2 kernelreleases
+++ cat kernelreleases
++ echo '[Kernel' Release: diesel8a87host: '4.17.0-rc4]'
+[Kernel Release: diesel8a87host: 4.17.0-rc4]
+Archiving artifacts
+[description-setter] Description set: diesel8a87host: 4.17.0-rc4
+[lockable-resources] released lock on [diesel8a87host]
+Finished: SUCCESS

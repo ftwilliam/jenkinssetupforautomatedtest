@@ -1,0 +1,36 @@
+Started by user [8mha:////4M5O53X5QONrb+aF7d3XuO6Y0FqwaEK30o3y1qqs3uiMAAAAmR+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyeEgZe/dLi1CL9pKLy/PyUYgAEKGTnwgAAAA==[0mWoods, Brian
+Building in workspace /var/lib/jenkins/workspace/avocadoltp.ondemand2
+[WS-CLEANUP] Deleting project workspace...
+[WS-CLEANUP] Done
+[avocadoltp.ondemand2] $ /bin/sh -xe /tmp/jenkins9034773701453057046.sh
++ RESOURCES=10.236.10.208
+++ echo avocadoltp.ondemand2
+++ grep -oP '(?<=\.)v.+\..+(?=\.)'
+++ :
++ KERNVER=
++ TIMEOUT=3600
++ for R in ${RESOURCES}
++ wait
++ ssh -q jenkins@10.236.10.208 './checkfornewkerneltag.sh https://github.com/torvalds/linux.git'
++ cd /var/lib/jenkins
++ ./rebootresource.sh jenkins@10.236.10.208
+++ ssh -q jenkins@10.236.10.208 'uname -r'
++ echo '10.236.10.208: 4.17.0-jenkins'
++ timeout -sKILL 3600 ssh -q jenkins@10.236.10.208
++ '[' 0 -eq 0 ']'
+++ cat 10.236.10.208.ssh.log
+++ fgrep 'JOB LOG'
+++ grep -oP '(?<=: ).+$'
++ AVOCADO_LOG_PATH=/root/avocado/job-results/job-2018-06-06T10.51-4f32a40/job.log
++ scp root@10.236.10.208:/root/avocado/job-results/job-2018-06-06T10.51-4f32a40/job.log 10.236.10.208.avocado.log
++ echo -n 'Kernel Release: '
++ for R in ${RESOURCES}
++ '[' -f 10.236.10.208.kernelrelease ']'
+++ cat 10.236.10.208.kernelrelease
++ echo -n '10.236.10.208: 4.17.0-jenkins'
+++ cat kernelreleases
++ echo '[Kernel' Release: 10.236.10.208: '4.17.0-jenkins]'
+[Kernel Release: 10.236.10.208: 4.17.0-jenkins]
+Archiving artifacts
+[description-setter] Description set: 10.236.10.208: 4.17.0-jenkins
+Finished: SUCCESS

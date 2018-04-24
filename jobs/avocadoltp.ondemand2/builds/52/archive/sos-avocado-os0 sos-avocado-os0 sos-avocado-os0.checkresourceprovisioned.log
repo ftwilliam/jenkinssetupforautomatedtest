@@ -1,0 +1,14 @@
++ cd /var/lib/jenkins
++ ./checkresourceprovisioned.new.sh sos-avocado-os0 sos-avocado-os0 sos-avocado-os0
++ set -e
++ ping -c 1 sos-avocado-os0
++ RV=0
++ ssh -q -o PasswordAuthentication=no -o StrictHostKeyChecking=no jenkins@sos-avocado-os0 'test ! -f checkfornewkerneltag.sh'
++ RV=1
++ (( RV == 1 ))
+++ ./what_distro_remote.sh root@sos-avocado-os0
++ distro=ubuntu-18.04
++ [[ ubuntu-18.04 = \u\b\u\n\t\u\-* ]]
++ scp checkfornewkerneltag_deb.sh jenkins@sos-avocado-os0:checkfornewkerneltag.sh
++ scp checkfornewqemutag.sh jenkins@sos-avocado-os0:
++ exit

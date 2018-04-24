@@ -1,0 +1,176 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<project>
+  <actions/>
+  <description>This is for testing new features, do no use this test.</description>
+  <keepDependencies>false</keepDependencies>
+  <properties>
+    <hudson.model.ParametersDefinitionProperty>
+      <parameterDefinitions>
+        <hudson.model.StringParameterDefinition>
+          <name>KERNELREPO</name>
+          <description>Git repository to use when cloning the kernel.  CURRENT -&gt; the current kernel, DISTRO -&gt; latest kernel distro</description>
+          <defaultValue>https://github.com/torvalds/linux.git</defaultValue>
+          <trim>false</trim>
+        </hudson.model.StringParameterDefinition>
+        <hudson.model.StringParameterDefinition>
+          <name>KERNELTAG</name>
+          <description>Kernel tag to use; it can also be a commit id.</description>
+          <defaultValue>v4.16-rc2</defaultValue>
+          <trim>false</trim>
+        </hudson.model.StringParameterDefinition>
+        <hudson.model.StringParameterDefinition>
+          <name>IMAGE</name>
+          <description>Image to be tested.  Can be a URL to sos-repos. 
+Ex: http://sos-repos.amd.com/updated_disk_images/build4/rhel-7.5_build4.img.bz2</description>
+          <defaultValue></defaultValue>
+          <trim>false</trim>
+        </hudson.model.StringParameterDefinition>
+        <hudson.model.StringParameterDefinition>
+          <name>RESOURCES</name>
+          <description>Space separated list of hostnames onto which to run the test</description>
+          <defaultValue>10.236.10.208</defaultValue>
+          <trim>false</trim>
+        </hudson.model.StringParameterDefinition>
+      </parameterDefinitions>
+    </hudson.model.ParametersDefinitionProperty>
+  </properties>
+  <scm class="hudson.scm.NullSCM"/>
+  <canRoam>true</canRoam>
+  <disabled>false</disabled>
+  <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
+  <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
+  <triggers/>
+  <concurrentBuild>false</concurrentBuild>
+  <builders>
+    <hudson.tasks.Shell>
+      <command># Get list of resources locked by this build.
+RESOURCES=${RESOURCES:-$(cd ${JENKINS_HOME} &amp;&amp; ./resourceslockedby.py ${JOB_BASE_NAME}#${BUILD_NUMBER})}
+
+# Kernel version to use.
+KERNVER=${KERNVER:-$(echo ${JOB_BASE_NAME} | grep -oP &apos;(?&lt;=\.)v.+\..+(?=\.)&apos; || :;)}
+
+TIMEOUT=3600
+AVO_RV=()
+
+SSHKEY=$(cat $HOME/.ssh/id_rsa.pub)
+
+# Run test on each resource.
+for ((I=0; I&lt;${#RESOURCES[@]}; I++)); do
+	# In order to execute in parallel, each
+	# ressource test run within its own subshell.
+	( 
+		R=${RESOURCES[$I]}
+		AVO_RV[$I]=424242
+		# Insure resource provisioned for test.
+		if ! (cd ${JENKINS_HOME} &amp;&amp; ./checkresourceprovisioned.new.sh ${R}) &amp;&gt; ${R}.checkresourceprovisioned.log; then
+			# Continue on to the next resource if
+			# the provision-check fail on this resource.
+			continue
+		fi
+        
+		#if this is a disk image under test
+		if [[ ! -z &quot;$IMAGE&quot; ]] ; then
+        		ssh root@${R} &quot;./image_to_scratchdisk.sh $IMAGE \&quot;$SSHKEY\&quot;&quot;
+			(cd ${JENKINS_HOME} &amp;&amp; ./rebootresource.sh root@${R} &amp;&gt; /dev/null)
+			if ! (cd ${JENKINS_HOME} &amp;&amp; ./checkresourceprovisioned.new.sh ${R}) &amp;&gt; ${R}.checkresourceprovisioned_image.log; then
+				# Continue on to the next resource if
+				# the provision-check fail on this resource.
+            	ssh root@${R} &quot;./efiboot_multitool.pl pop&quot; #image_to_scratchdisk.sh handled the push
+				(cd ${JENKINS_HOME} &amp;&amp; ./rebootresource.sh root@${R} &amp;&gt; /dev/null)
+				continue
+			fi
+		fi
+        
+		# Check if a new kernel need to be installed. line 20
+		RV=0
+		ssh -q jenkins@${R} &quot;./checkfornewkerneltag.sh $KERNELREPO $KERNELTAG&quot; &amp;&gt; ${R}.checkfornewkerneltag.log || RV=$?
+		if [ $RV -eq 1 ] ; then
+			# Reboot resource into kernel version built.
+			(cd ${JENKINS_HOME} &amp;&amp; ./rebootresource.sh jenkins@${R} &amp;&gt; /dev/null)
+		elif [ $RV -eq 2 ] ; then
+			#can&apos;t get new tag
+			continue
+		fi #RV 0 means current kernel
+
+		echo -n &quot;${R}: &quot; &gt; ${R}.kernelrelease
+		ssh -q jenkins@${R} &quot;uname -r&quot; &gt;&gt; ${R}.kernelrelease
+
+		AVO_RV[$I]=0
+		avocado \
+			run \
+			--remote-hostname $R \
+			--remote-username root \
+			--job-timeout 1h \
+			--failfast off \
+			--job-results-dir ${R}/avocado_log/ \
+			examples/sleeptest.py \
+		|| AVO_RV[$I]=$?
+		#success, or warning = 0
+		#failed, or error = 1
+        
+		#reboot back to the host system
+		if [[ ! -z &quot;$IMAGE&quot; ]] ; then
+			ssh root@${R} &quot;./efiboot_multitool.pl pop&quot; #image_to_scratchdisk.sh handled the push
+			(cd ${JENKINS_HOME} &amp;&amp; ./rebootresource.sh root@${R} &amp;&gt; /dev/null)
+		fi
+        
+	) &amp;
+done
+
+# Wait for all subshells. 39
+wait
+
+
+#print out avocado RV for each host
+echo -n &quot;avocado RV per host: &quot;
+for ((I=0; I&lt;${#RESOURCES[@]}; I++)); do
+	if [ $AVO_RV[$I] -eq &quot;424242&quot; ] ; then
+		echo -n &quot;${RESOURCES[$I]}=none &quot;
+	else
+		echo -n &quot;${RESOURCES[$I]}=$AVO_RV[$I] &quot;
+	fi
+done
+
+# Generate &quot;Kernel Release:&quot; line for
+# the &quot;Set Build Description&quot; plugin.
+echo -n &quot;Kernel Release: &quot; &gt; kernelreleases
+for R in ${RESOURCES}; do
+	if [ -f ${R}.kernelrelease ]; then
+		echo -n &quot;$(cat ${R}.kernelrelease 2&gt;/dev/null)&quot; &gt;&gt; kernelreleases
+		echo -n &quot;  &quot; &gt;&gt; kernelreleases
+	fi
+done
+
+truncate --size=-2 kernelreleases
+echo [$(cat kernelreleases)]</command>
+    </hudson.tasks.Shell>
+  </builders>
+  <publishers>
+    <hudson.tasks.ArtifactArchiver>
+      <artifacts>*.log</artifacts>
+      <allowEmptyArchive>false</allowEmptyArchive>
+      <onlyIfSuccessful>false</onlyIfSuccessful>
+      <fingerprint>false</fingerprint>
+      <defaultExcludes>true</defaultExcludes>
+      <caseSensitive>true</caseSensitive>
+    </hudson.tasks.ArtifactArchiver>
+    <hudson.plugins.descriptionsetter.DescriptionSetterPublisher plugin="description-setter@1.10">
+      <regexp>(?&lt;=\[Kernel Release: ).+(?=\])</regexp>
+      <regexpForFailed></regexpForFailed>
+      <setForMatrix>false</setForMatrix>
+    </hudson.plugins.descriptionsetter.DescriptionSetterPublisher>
+  </publishers>
+  <buildWrappers>
+    <hudson.plugins.ws__cleanup.PreBuildCleanup plugin="ws-cleanup@0.34">
+      <patterns>
+        <hudson.plugins.ws__cleanup.Pattern>
+          <pattern>*.prevplotval</pattern>
+          <type>EXCLUDE</type>
+        </hudson.plugins.ws__cleanup.Pattern>
+      </patterns>
+      <deleteDirs>false</deleteDirs>
+      <cleanupParameter></cleanupParameter>
+      <externalDelete></externalDelete>
+    </hudson.plugins.ws__cleanup.PreBuildCleanup>
+  </buildWrappers>
+</project>

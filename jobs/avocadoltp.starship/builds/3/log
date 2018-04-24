@@ -1,0 +1,49 @@
+Started by upstream project "[8mha:////4EIFeNbwhBExzGC/E4WV9Qnb/AnTYIEsfiPDk8ia6wj1AAAAqx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzJEgZ5/az8JP3EsvzkxJT87NSivKTUvOQMveKSxKLijMwCfQAeaSvh1AAAAA==[0mavocadokernbench.starship" build number [8mha:////4D1hHAcH977wLZmpRpGtARTpQnTy2rHWm+scXcQISf5FAAAAqx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLQIwSBgX9rPwk/cSy/OTElPzs1KK8pNS85Ay94pLEouKMzAJ9IwDiCs4s1QAAAA==[0m2
+originally caused by:
+ Started by upstream project "[8mha:////4K+BlSYDEuQ1R0gzNaY08DJQYZg8d4ptiFIhJEIZg9trAAAArB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAypEgYF/az8JP3EsvzkxJT8zLyS1KKk1LzkDL3iksSi4ozMAn0AJ4S5W9UAAAA=[0mavocadointerbench.starship" build number [8mha:////4GiT/ueVW0e/8+7ySWt66XoEH/ggRNw63LirriDO1r87AAAArB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLQIwSBkX9rPwk/cSy/OTElPzMvJLUoqTUvOQMveKSxKLijMwCfUMAzXz05tYAAAA=[0m1
+ originally caused by:
+  Started by upstream project "[8mha:////4PHob8RmwfO4zk1Gu4sbpqkA9C+pMunJoAcJODjEyaGtAAAApR+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzhEgZJ/az8JP3EsvzkxJT8tOIKveKSxKLijMwCfQB/jyxPzgAAAA==[0mavocadofsx.starship" build number [8mha:////4JXO2y7KkGqW+UNlJRvsAuzd04a/7zqTyaWWa5kbxHrVAAAApR+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLQIwSBin9rPwk/cSy/OTElPy04gq94pLEouKMzAJ9QwBEeJD4zwAAAA==[0m1
+  originally caused by:
+   Started by timer
+[lockable-resources] acquired lock on [sos-dsldbg-00]
+Building in workspace /var/lib/jenkins/workspace/avocadoltp.starship
+[WS-CLEANUP] Deleting project workspace...
+[WS-CLEANUP] Done
+[avocadoltp.starship] $ /bin/sh -xe /tmp/jenkins101128410414699763.sh
+++ cd /var/lib/jenkins
+++ ./resourceslockedby.py avocadoltp.starship#3
++ RESOURCES=sos-dsldbg-00
+++ echo avocadoltp.starship
+++ grep -oP '(?<=\.)v.+\..+(?=\.)'
+++ :
++ KERNVER=
++ TIMEOUT=3600
++ for R in ${RESOURCES}
++ wait
++ ssh -q jenkins@sos-dsldbg-00 ./checkfornewkerneltag.sh
++ '[' -n '' ']'
++ cd /var/lib/jenkins
++ ./rebootresource.sh jenkins@sos-dsldbg-00
+++ ssh -q jenkins@sos-dsldbg-00 'uname -r'
++ echo 'sos-dsldbg-00: 4.16.0-amdsos-build3+'
++ timeout -sKILL 3600 ssh -q jenkins@sos-dsldbg-00
++ '[' 0 -eq 0 ']'
+++ cat sos-dsldbg-00.ssh.log
+++ fgrep 'JOB LOG'
+++ grep -oP '(?<=: ).+$'
++ AVOCADO_LOG_PATH=/home/jenkins/avocado/job-results/job-2018-06-09T08.53-b261c43/job.log
++ scp jenkins@sos-dsldbg-00:/home/jenkins/avocado/job-results/job-2018-06-09T08.53-b261c43/job.log sos-dsldbg-00.avocado.log
++ echo -n 'Kernel Release: '
++ for R in ${RESOURCES}
++ '[' -f sos-dsldbg-00.kernelrelease ']'
+++ cat sos-dsldbg-00.kernelrelease
++ echo -n 'sos-dsldbg-00: 4.16.0-amdsos-build3+, '
++ truncate --size=-2 kernelreleases
+++ cat kernelreleases
++ echo '[Kernel' Release: sos-dsldbg-00: '4.16.0-amdsos-build3+]'
+[Kernel Release: sos-dsldbg-00: 4.16.0-amdsos-build3+]
+Archiving artifacts
+[description-setter] Description set: sos-dsldbg-00: 4.16.0-amdsos-build3+
+[lockable-resources] released lock on [sos-dsldbg-00]
+Triggering a new build of [8mha:////4PAe7Cr2VdGTeb6CEUpmVMjTZVHOZHw7qjkY0aodXxFZAAAAqh+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzJEgZ5/az8JP3EsvzkxJR8oL1pSal5yRl6xSWJRcUZmQX6AHdWjSvUAAAA[0mavocadoperfbench.starship
+Finished: SUCCESS

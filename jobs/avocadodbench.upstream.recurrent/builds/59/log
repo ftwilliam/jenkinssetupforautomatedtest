@@ -1,0 +1,71 @@
+Started by timer
+[lockable-resources] acquired lock on [diesel8a87host]
+Building in workspace /var/lib/jenkins/workspace/avocadodbench.upstream.recurrent
+[WS-CLEANUP] Deleting project workspace...
+[WS-CLEANUP] Done
+[avocadodbench.upstream.recurrent] $ /bin/sh -xe /tmp/jenkins5289595677227086675.sh
+++ cd /var/lib/jenkins
+++ ./resourceslockedby.py avocadodbench.upstream.recurrent#59
++ RESOURCES=diesel8a87host
++ :
++ for R in ${RESOURCES}
++ echo -n '"diesel8a87host",'
++ truncate --size=-1 plot.csv
++ echo
+++ echo avocadodbench.upstream.recurrent
+++ grep -oP '(?<=\.)v.+\..+(?=\.)'
+++ :
++ KERNVER=
++ TIMEOUT=1800
++ ITERATIONS=1
++ for R in ${RESOURCES}
++ wait
++ ssh -q jenkins@diesel8a87host './checkfornewkerneltag.sh https://github.com/torvalds/linux.git'
+++ ssh -q jenkins@diesel8a87host 'uname -r'
++ echo 'diesel8a87host: 4.16.0-amdsos-build4+'
++ timeout -sKILL 1800 ssh -q jenkins@diesel8a87host
++ '[' 0 -eq 0 ']'
+++ cat diesel8a87host.ssh.log
+++ fgrep 'JOB LOG'
+++ grep -oP '(?<=: ).+$'
++ AVOCADO_LOG_PATH=/home/jenkins/avocado/job-results/job-2018-06-28T04.51-210928f/job.log
++ scp jenkins@diesel8a87host:/home/jenkins/avocado/job-results/job-2018-06-28T04.51-210928f/job.log diesel8a87host.avocado.log
++ bc -l
+++ cat diesel8a87host.avocado.log
+++ fgrep -m1 'Throughput '
+++ grep -oP '(?<=Throughput )[0-9.]+'
++ echo 8116.3 /1
+8116.30000000000000000000
+++ bc -l
++++ cat diesel8a87host.avocado.log
++++ fgrep -m1 'Throughput '
++++ grep -oP '(?<=Throughput )[0-9.]+'
+++ echo 8116.3 /1
++ plotval=8116.30000000000000000000
++ '[' -f diesel8a87host.prevplotval ']'
+++ bc -l
++++ cat diesel8a87host.prevplotval
+++ echo '(10032.67758827869311062386+8116.30000000000000000000)/2'
++ plotval=9074.48879413934655531193
++ echo -n 9074.48879413934655531193
++ echo -n 9074.48879413934655531193
++ echo -n 'Kernel Release: '
++ for R in ${RESOURCES}
++ '[' -f diesel8a87host.kernelrelease ']'
+++ cat diesel8a87host.kernelrelease
+++ grep -oP '.+(?=-jenkins)'
++ echo -n ', '
++ truncate --size=-2 kernelreleases
+++ cat kernelreleases
++ echo '[Kernel' Release: ']'
+[Kernel Release: ]
++ for R in ${RESOURCES}
+++ cat diesel8a87host.plotval
++ echo -n 9074.48879413934655531193,
++ truncate --size=-1 plot.csv
++ echo
+Archiving artifacts
+Recording plot data
+[description-setter] Could not determine description.
+[lockable-resources] released lock on [diesel8a87host]
+Finished: SUCCESS

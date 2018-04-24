@@ -1,0 +1,7 @@
++ set -e
++ mkdir -p kernel
++ cd kernel
++ rm -f 'linux-*'
++ '[' '!' -d linux ']'
++ git remote set-url origin https://github.com/torvalds/linux.git
+fatal: Not a git repository (or any of the parent directories): .git

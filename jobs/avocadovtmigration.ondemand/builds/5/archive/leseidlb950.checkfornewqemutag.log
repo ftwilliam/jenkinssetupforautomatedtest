@@ -1,0 +1,12 @@
++ set -e
++ '[' '!' -d qemu ']'
++ cd qemu
++ git fetch --all --tags
+Fetching origin
+From https://github.com/qemu/qemu
+   66793daa03..7b1db0908d  master     -> origin/master
++ '[' 2 -eq 2 ']'
++ latestqemutag=v2.11.1
+++ cat latestqemutag
++ '[' v2.11.1 '!=' v2.11.1 ']'
++ exit 1

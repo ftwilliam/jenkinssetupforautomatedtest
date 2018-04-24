@@ -1,0 +1,657 @@
+2018-03-28 14:46:42,107 extension        L0189 DEBUG| found extension EntryPoint.parse('journal = avocado.plugins.journal:JournalResult')
+2018-03-28 14:46:42,108 extension        L0189 DEBUG| found extension EntryPoint.parse('tap = avocado.plugins.tap:TAPResult')
+2018-03-28 14:46:42,108 extension        L0189 DEBUG| found extension EntryPoint.parse('human = avocado.plugins.human:Human')
+2018-03-28 14:46:42,109 extension        L0189 DEBUG| found extension EntryPoint.parse('vt-joblock = avocado_vt.plugins.vt_joblock:VTJobLock')
+2018-03-28 14:46:42,110 extension        L0189 DEBUG| found extension EntryPoint.parse('teststmpdir = avocado.plugins.teststmpdir:TestsTmpDir')
+2018-03-28 14:46:42,111 extension        L0189 DEBUG| found extension EntryPoint.parse('jobscripts = avocado.plugins.jobscripts:JobScripts')
+2018-03-28 14:46:42,112 extension        L0189 DEBUG| found extension EntryPoint.parse('human = avocado.plugins.human:HumanJob')
+2018-03-28 14:46:43,983 extension        L0189 DEBUG| found extension EntryPoint.parse('yaml_to_mux = avocado_varianter_yaml_to_mux:YamlToMux')
+2018-03-28 14:46:43,983 sysinfo          L0392 DEBUG| File /etc/avocado/sysinfo/commands does not exist.
+2018-03-28 14:46:43,983 sysinfo          L0403 DEBUG| File /etc/avocado/sysinfo/files does not exist.
+2018-03-28 14:46:43,983 sysinfo          L0430 DEBUG| File /etc/avocado/sysinfo/profilers does not exist.
+2018-03-28 14:46:43,995 job              L0327 INFO | Command line: /usr/local/bin/avocado --config avocado.conf.d/vt-migration.conf run type_specific.io-github-autotest-qemu.migrate.default.tcp
+2018-03-28 14:46:43,996 job              L0328 INFO | 
+2018-03-28 14:46:43,996 job              L0362 INFO | Avocado version: 58.0
+2018-03-28 14:46:43,996 job              L0363 INFO | 
+2018-03-28 14:46:43,996 job              L0367 INFO | Config files read (in order):
+2018-03-28 14:46:43,996 job              L0369 INFO | /usr/local/lib/python2.7/dist-packages/avocado_framework-58.0-py2.7.egg/avocado/etc/avocado/avocado.conf
+2018-03-28 14:46:43,996 job              L0369 INFO | /usr/local/lib/python2.7/dist-packages/avocado_framework-58.0-py2.7.egg/avocado/etc/avocado/conf.d/jobscripts.conf
+2018-03-28 14:46:43,997 job              L0369 INFO | /usr/local/lib/python2.7/dist-packages/avocado_framework-58.0-py2.7.egg/avocado/etc/avocado/conf.d/resultsdb.conf
+2018-03-28 14:46:43,997 job              L0369 INFO | /usr/local/lib/python2.7/dist-packages/avocado_framework-58.0-py2.7.egg/avocado/etc/avocado/conf.d/gdb.conf
+2018-03-28 14:46:43,997 job              L0369 INFO | /usr/local/lib/python2.7/dist-packages/avocado_framework-58.0-py2.7.egg/avocado/etc/avocado/conf.d/result_upload.conf
+2018-03-28 14:46:43,997 job              L0369 INFO | /home/jenkins/.config/avocado/avocado.conf
+2018-03-28 14:46:43,997 job              L0369 INFO | avocado.conf.d/vt-migration.conf
+2018-03-28 14:46:43,997 job              L0374 INFO | 
+2018-03-28 14:46:43,997 job              L0376 INFO | Avocado config:
+2018-03-28 14:46:44,000 job              L0385 INFO | Section.Key                              Value
+2018-03-28 14:46:44,000 job              L0385 INFO | datadir.paths.base_dir                   /var/lib/avocado
+2018-03-28 14:46:44,000 job              L0385 INFO | datadir.paths.test_dir                   /usr/share/avocado/tests
+2018-03-28 14:46:44,000 job              L0385 INFO | datadir.paths.data_dir                   /var/lib/avocado/data
+2018-03-28 14:46:44,000 job              L0385 INFO | datadir.paths.logs_dir                   ~/avocado/job-results
+2018-03-28 14:46:44,000 job              L0385 INFO | sysinfo.collect.enabled                  True
+2018-03-28 14:46:44,000 job              L0385 INFO | sysinfo.collect.commands_timeout         -1
+2018-03-28 14:46:44,000 job              L0385 INFO | sysinfo.collect.installed_packages       False
+2018-03-28 14:46:44,000 job              L0385 INFO | sysinfo.collect.profiler                 False
+2018-03-28 14:46:44,001 job              L0385 INFO | sysinfo.collect.locale                   C
+2018-03-28 14:46:44,001 job              L0385 INFO | sysinfo.collect.per_test                 False
+2018-03-28 14:46:44,001 job              L0385 INFO | sysinfo.collectibles.commands            /etc/avocado/sysinfo/commands
+2018-03-28 14:46:44,001 job              L0385 INFO | sysinfo.collectibles.files               /etc/avocado/sysinfo/files
+2018-03-28 14:46:44,001 job              L0385 INFO | sysinfo.collectibles.profilers           /etc/avocado/sysinfo/profilers
+2018-03-28 14:46:44,001 job              L0385 INFO | runner.output.colored                    True
+2018-03-28 14:46:44,001 job              L0385 INFO | runner.output.utf8                       
+2018-03-28 14:46:44,001 job              L0385 INFO | remoter.behavior.reject_unknown_hosts    False
+2018-03-28 14:46:44,001 job              L0385 INFO | remoter.behavior.disable_known_hosts     False
+2018-03-28 14:46:44,002 job              L0385 INFO | job.output.loglevel                      debug
+2018-03-28 14:46:44,002 job              L0385 INFO | restclient.connection.hostname           localhost
+2018-03-28 14:46:44,002 job              L0385 INFO | restclient.connection.port               9405
+2018-03-28 14:46:44,002 job              L0385 INFO | restclient.connection.username           
+2018-03-28 14:46:44,002 job              L0385 INFO | restclient.connection.password           
+2018-03-28 14:46:44,002 job              L0385 INFO | plugins.disable                          []
+2018-03-28 14:46:44,002 job              L0385 INFO | plugins.skip_broken_plugin_notification  []
+2018-03-28 14:46:44,002 job              L0385 INFO | plugins.loaders                          ['file', '@DEFAULT']
+2018-03-28 14:46:44,002 job              L0385 INFO | plugins.jobscripts.pre                   /etc/avocado/scripts/job/pre.d/
+2018-03-28 14:46:44,002 job              L0385 INFO | plugins.jobscripts.post                  /etc/avocado/scripts/job/post.d/
+2018-03-28 14:46:44,003 job              L0385 INFO | plugins.jobscripts.warn_non_existing_dir False
+2018-03-28 14:46:44,003 job              L0385 INFO | plugins.jobscripts.warn_non_zero_status  True
+2018-03-28 14:46:44,003 job              L0385 INFO | gdb.paths.gdb                            /usr/bin/gdb
+2018-03-28 14:46:44,003 job              L0385 INFO | gdb.paths.gdbserver                      /usr/bin/gdbserver
+2018-03-28 14:46:44,003 job              L0385 INFO | vt.setup.backup_image_before_test        True
+2018-03-28 14:46:44,003 job              L0385 INFO | vt.setup.restore_image_after_test        True
+2018-03-28 14:46:44,003 job              L0385 INFO | vt.setup.keep_guest_running              False
+2018-03-28 14:46:44,003 job              L0385 INFO | vt.common.data_dir                       
+2018-03-28 14:46:44,003 job              L0385 INFO | vt.common.type_specific_only             False
+2018-03-28 14:46:44,003 job              L0385 INFO | vt.common.mem                            1024
+2018-03-28 14:46:44,004 job              L0385 INFO | vt.common.arch                           
+2018-03-28 14:46:44,004 job              L0385 INFO | vt.common.machine_type                   
+2018-03-28 14:46:44,004 job              L0385 INFO | vt.common.nettype                        bridge
+2018-03-28 14:46:44,004 job              L0385 INFO | vt.common.netdst                         br0
+2018-03-28 14:46:44,004 job              L0385 INFO | vt.qemu.qemu_bin                         /usr/bin/qemu-system-x86_64
+2018-03-28 14:46:44,004 job              L0385 INFO | vt.qemu.qemu_dst_bin                     /usr/bin/qemu-system-x86_64
+2018-03-28 14:46:44,004 job              L0385 INFO | vt.qemu.accel                            kvm
+2018-03-28 14:46:44,004 job              L0385 INFO | vt.qemu.vhost                            off
+2018-03-28 14:46:44,004 job              L0385 INFO | vt.qemu.monitor                          human
+2018-03-28 14:46:44,004 job              L0385 INFO | vt.qemu.smp                              1
+2018-03-28 14:46:44,005 job              L0385 INFO | vt.qemu.image_type                       qcow2
+2018-03-28 14:46:44,005 job              L0385 INFO | vt.qemu.nic_model                        virtio_net
+2018-03-28 14:46:44,005 job              L0385 INFO | vt.qemu.disk_bus                         virtio_scsi
+2018-03-28 14:46:44,005 job              L0385 INFO | vt.qemu.sandbox                          on
+2018-03-28 14:46:44,005 job              L0385 INFO | vt.qemu.defconfig                        yes
+2018-03-28 14:46:44,005 job              L0385 INFO | vt.qemu.malloc_perturb                   no
+2018-03-28 14:46:44,005 job              L0385 INFO | vt.libvirt.connect_uri                   qemu:///session
+2018-03-28 14:46:44,005 job              L0385 INFO | vt.debug.no_cleanup                      False
+2018-03-28 14:46:44,005 job              L0386 INFO | 
+2018-03-28 14:46:44,006 job              L0389 INFO | Avocado Data Directories:
+2018-03-28 14:46:44,006 job              L0390 INFO | 
+2018-03-28 14:46:44,006 job              L0391 INFO | base     /var/lib/avocado
+2018-03-28 14:46:44,006 job              L0392 INFO | tests    /usr/share/avocado/tests
+2018-03-28 14:46:44,007 job              L0393 INFO | data     /var/lib/avocado/data
+2018-03-28 14:46:44,007 job              L0394 INFO | logs     /home/jenkins/avocado/job-results/job-2018-03-28T14.46-1eba939
+2018-03-28 14:46:44,007 job              L0395 INFO | 
+2018-03-28 14:46:44,007 job              L0401 INFO | No variants available, using defaults only
+2018-03-28 14:46:44,007 job              L0401 INFO | 
+2018-03-28 14:46:44,007 job              L0401 INFO | Variant :    /
+2018-03-28 14:46:44,007 job              L0405 INFO | Temporary dir: /var/tmp/avocado_zk5vt9
+2018-03-28 14:46:44,008 job              L0406 INFO | 
+2018-03-28 14:46:44,008 job              L0319 INFO | Job ID: 1eba9392aeea6dc9543dde0ff9261c1f86de12bd
+2018-03-28 14:46:44,008 job              L0322 INFO | 
+2018-03-28 14:46:44,292 sysinfo          L0392 DEBUG| File /etc/avocado/sysinfo/commands does not exist.
+2018-03-28 14:46:44,293 sysinfo          L0403 DEBUG| File /etc/avocado/sysinfo/files does not exist.
+2018-03-28 14:46:44,293 sysinfo          L0430 DEBUG| File /etc/avocado/sysinfo/profilers does not exist.
+2018-03-28 14:46:44,308 parameters       L0146 DEBUG| PARAMS (key=timeout, path=*, default=None) => None
+2018-03-28 14:46:44,309 test             L0382 INFO | START 1-type_specific.io-github-autotest-qemu.migrate.default.tcp
+2018-03-28 14:46:44,629 test             L0286 DEBUG| DATA (filename=output.expected) => NOT FOUND (data sources: variant, test, file)
+2018-03-28 14:46:44,703 test             L0281 INFO | Avocado-VT 'unknown'
+2018-03-28 14:46:44,704 test             L0283 DEBUG| Test parameters:
+2018-03-28 14:46:44,704 test             L0287 DEBUG|     _name_map_file = {'subtests.cfg': '(subtest=type_specific).(subtest=io-github-autotest-qemu).(subtest=migrate).default.tcp', 'guest-hw.cfg': 'bridge.default_bios.no_virtio_rng.(image_backend=filesystem).no_9p_export.smallpages.no_pci_assignable.qcow2.virtio_scsi.up.virtio_net', 'host-os.cfg': 'Host.Host_Ubuntu.m17.u10.Host_arch_x86_64', 'guest-os.cfg': 'Guest.Linux.JeOS.27.x86_64', 'machines.cfg': 'i440fx', 'tests.cfg': 'qemu_kvm_jeos_quick'}
+2018-03-28 14:46:44,704 test             L0287 DEBUG|     _short_name_map_file = {'subtests.cfg': 'type_specific.io-github-autotest-qemu.migrate.default.tcp', 'guest-hw.cfg': 'bridge.default_bios.no_virtio_rng.filesystem.no_9p_export.smallpages.no_pci_assignable.qcow2.virtio_scsi.up.virtio_net', 'host-os.cfg': 'Host.Host_Ubuntu.m17.u10.Host_arch_x86_64', 'guest-os.cfg': 'Guest.Linux.JeOS.27.x86_64', 'machines.cfg': 'i440fx', 'tests.cfg': 'qemu_kvm_jeos_quick'}
+2018-03-28 14:46:44,704 test             L0287 DEBUG|     auto_cpu_model = yes
+2018-03-28 14:46:44,705 test             L0287 DEBUG|     backup_dir = images/
+2018-03-28 14:46:44,705 test             L0287 DEBUG|     backup_image = no
+2018-03-28 14:46:44,705 test             L0287 DEBUG|     backup_image_before_testing = yes
+2018-03-28 14:46:44,705 test             L0287 DEBUG|     backup_image_on_check_error = no
+2018-03-28 14:46:44,705 test             L0287 DEBUG|     boot_menu = off
+2018-03-28 14:46:44,705 test             L0287 DEBUG|     boot_once = c
+2018-03-28 14:46:44,705 test             L0287 DEBUG|     boot_order = cdn
+2018-03-28 14:46:44,706 test             L0287 DEBUG|     boot_path = images/pxeboot
+2018-03-28 14:46:44,706 test             L0287 DEBUG|     catch_monitor = catch_monitor
+2018-03-28 14:46:44,706 test             L0287 DEBUG|     cd_format = scsi-cd
+2018-03-28 14:46:44,706 test             L0287 DEBUG|     cdrom_check_cdrom_pattern = /dev/cdrom-\w+|/dev/cdrom\d*
+2018-03-28 14:46:44,706 test             L0287 DEBUG|     cdrom_get_cdrom_cmd = ls /dev/cdrom*
+2018-03-28 14:46:44,706 test             L0287 DEBUG|     cdrom_info_cmd = cat /proc/sys/dev/cdrom/info
+2018-03-28 14:46:44,706 test             L0287 DEBUG|     cdrom_test_cmd = dd if=%s of=/dev/null bs=1 count=1
+2018-03-28 14:46:44,707 test             L0287 DEBUG|     cdroms = cd1
+2018-03-28 14:46:44,707 test             L0287 DEBUG|     check_image = yes
+2018-03-28 14:46:44,707 test             L0287 DEBUG|     cmds_installed_host = 
+2018-03-28 14:46:44,707 test             L0287 DEBUG|     connect_uri = default
+2018-03-28 14:46:44,707 test             L0287 DEBUG|     convert_ppm_files_to_png = no
+2018-03-28 14:46:44,707 test             L0287 DEBUG|     cpu_chk_cmd = grep -c "^processor\b" /proc/cpuinfo
+2018-03-28 14:46:44,707 test             L0287 DEBUG|     cpu_model_flags = 
+2018-03-28 14:46:44,708 test             L0287 DEBUG|     dep = ['qemu_kvm_jeos_quick.bridge.default_bios.no_virtio_rng.(image_backend=filesystem).no_9p_export.smallpages.no_pci_assignable.qcow2.virtio_scsi.up.virtio_net.Guest.Linux.JeOS.27.x86_64.i440fx.Host.Host_Ubuntu.m17.u10.Host_arch_x86_64.(subtest=type_specific).install', 'qemu_kvm_jeos_quick.bridge.default_bios.no_virtio_rng.(image_backend=filesystem).no_9p_export.smallpages.no_pci_assignable.qcow2.virtio_scsi.up.virtio_net.Guest.Linux.JeOS.27.x86_64.i440fx.Host.Host_Ubuntu.m17.u10.Host_arch_x86_64.(subtest=type_specific).setup', 'qemu_kvm_jeos_quick.bridge.default_bios.no_virtio_rng.(image_backend=filesystem).no_9p_export.smallpages.no_pci_assignable.qcow2.virtio_scsi.up.virtio_net.Guest.Linux.JeOS.27.x86_64.i440fx.Host.Host_Ubuntu.m17.u10.Host_arch_x86_64.(subtest=type_specific).image_copy', 'qemu_kvm_jeos_quick.bridge.default_bios.no_virtio_rng.(image_backend=filesystem).no_9p_export.smallpages.no_pci_assignable.qcow2.virtio_scsi.up.virtio_net.Guest.Linux.JeOS.27.x86_64.i440fx.Host.Host_Ubuntu.m17.u10.Host_arch_x86_64.(subtest=type_specific).unattended_install.cdrom']
+2018-03-28 14:46:44,708 test             L0287 DEBUG|     display = vnc
+2018-03-28 14:46:44,708 test             L0287 DEBUG|     drive_format = scsi-hd
+2018-03-28 14:46:44,708 test             L0287 DEBUG|     drive_index_cd1 = 1
+2018-03-28 14:46:44,708 test             L0287 DEBUG|     drive_index_image1 = 0
+2018-03-28 14:46:44,708 test             L0287 DEBUG|     drive_rerror_image1 = 
+2018-03-28 14:46:44,709 test             L0287 DEBUG|     drive_werror_image1 = 
+2018-03-28 14:46:44,709 test             L0287 DEBUG|     enable_msix_vectors = yes
+2018-03-28 14:46:44,709 test             L0287 DEBUG|     enable_pvpanic = yes
+2018-03-28 14:46:44,709 test             L0287 DEBUG|     encode_video_files = yes
+2018-03-28 14:46:44,709 test             L0287 DEBUG|     file_transfer_client = scp
+2018-03-28 14:46:44,709 test             L0287 DEBUG|     file_transfer_port = 22
+2018-03-28 14:46:44,709 test             L0287 DEBUG|     flexible_nic_index = no
+2018-03-28 14:46:44,710 test             L0287 DEBUG|     guest_dmesg_ignore = False
+2018-03-28 14:46:44,710 test             L0287 DEBUG|     guest_dmesg_level = 3
+2018-03-28 14:46:44,710 test             L0287 DEBUG|     guest_port_remote_shell = 22
+2018-03-28 14:46:44,710 test             L0287 DEBUG|     id = type_specific.io-github-autotest-qemu.migrate.default.tcp
+2018-03-28 14:46:44,710 test             L0287 DEBUG|     image_backend = filesystem
+2018-03-28 14:46:44,710 test             L0287 DEBUG|     image_chain = 
+2018-03-28 14:46:44,710 test             L0287 DEBUG|     image_clone_command = cp --reflink=auto %s %s
+2018-03-28 14:46:44,710 test             L0287 DEBUG|     image_format = qcow2
+2018-03-28 14:46:44,710 test             L0287 DEBUG|     image_name = images/jeos-27-x86_64
+2018-03-28 14:46:44,711 test             L0287 DEBUG|     image_raw_device = no
+2018-03-28 14:46:44,711 test             L0287 DEBUG|     image_remove_command = rm -rf %s
+2018-03-28 14:46:44,711 test             L0287 DEBUG|     image_size = 10G
+2018-03-28 14:46:44,711 test             L0287 DEBUG|     image_unbootable_pattern = Hard Disk.*not a bootable disk
+2018-03-28 14:46:44,711 test             L0287 DEBUG|     image_verify_bootable = yes
+2018-03-28 14:46:44,711 test             L0287 DEBUG|     images = image1
+2018-03-28 14:46:44,711 test             L0287 DEBUG|     inactivity_treshold = 1800
+2018-03-28 14:46:44,711 test             L0287 DEBUG|     inactivity_watcher = log
+2018-03-28 14:46:44,711 test             L0287 DEBUG|     indirect_image_blacklist = /dev/hda[\d]* /dev/sda[\d]* /dev/sg0 /dev/md0
+2018-03-28 14:46:44,711 test             L0287 DEBUG|     install_virtio = no
+2018-03-28 14:46:44,711 test             L0287 DEBUG|     ioport_pvpanic = 0x505
+2018-03-28 14:46:44,712 test             L0287 DEBUG|     iterations = 2
+2018-03-28 14:46:44,712 test             L0287 DEBUG|     keep_ppm_files = no
+2018-03-28 14:46:44,712 test             L0287 DEBUG|     keep_ppm_files_on_error = no
+2018-03-28 14:46:44,712 test             L0287 DEBUG|     keep_screendumps = yes
+2018-03-28 14:46:44,712 test             L0287 DEBUG|     keep_screendumps_on_error = yes
+2018-03-28 14:46:44,712 test             L0287 DEBUG|     keep_video_files = yes
+2018-03-28 14:46:44,712 test             L0287 DEBUG|     keep_video_files_on_error = yes
+2018-03-28 14:46:44,712 test             L0287 DEBUG|     kill_timeout = 60
+2018-03-28 14:46:44,712 test             L0287 DEBUG|     kill_unresponsive_vms = yes
+2018-03-28 14:46:44,712 test             L0287 DEBUG|     kill_vm = yes
+2018-03-28 14:46:44,713 test             L0287 DEBUG|     kill_vm_before_test = no
+2018-03-28 14:46:44,713 test             L0287 DEBUG|     kill_vm_gracefully = yes
+2018-03-28 14:46:44,713 test             L0287 DEBUG|     kill_vm_on_error = yes
+2018-03-28 14:46:44,713 test             L0287 DEBUG|     libvirt_controller = virtio-scsi
+2018-03-28 14:46:44,713 test             L0287 DEBUG|     local_ip = ENTER.YOUR.LOCAL.EXAMPLE.COM
+2018-03-28 14:46:44,713 test             L0287 DEBUG|     local_pwd = 
+2018-03-28 14:46:44,713 test             L0287 DEBUG|     login_timeout = 360
+2018-03-28 14:46:44,713 test             L0287 DEBUG|     machine_type = pc
+2018-03-28 14:46:44,713 test             L0287 DEBUG|     main_vm = avocado-vt-vm1
+2018-03-28 14:46:44,713 test             L0287 DEBUG|     malloc_perturb = no
+2018-03-28 14:46:44,714 test             L0287 DEBUG|     mem = 1024
+2018-03-28 14:46:44,714 test             L0287 DEBUG|     mem_chk_cmd = dmidecode -t 17 | awk -F: '/Size/ {print $2}'
+2018-03-28 14:46:44,714 test             L0287 DEBUG|     mem_chk_cur_cmd = grep MemTotal /proc/meminfo
+2018-03-28 14:46:44,714 test             L0287 DEBUG|     mem_chk_re_str = [^\$]([0-9]+)
+2018-03-28 14:46:44,714 test             L0287 DEBUG|     memballoon_model = virtio
+2018-03-28 14:46:44,714 test             L0287 DEBUG|     mig_timeout = 3600
+2018-03-28 14:46:44,714 test             L0287 DEBUG|     migrate_dest_host = ENTER.YOUR.DEST.EXAMPLE.COM
+2018-03-28 14:46:44,714 test             L0287 DEBUG|     migrate_dest_pwd = PASSWORD.DEST.EXAMPLE
+2018-03-28 14:46:44,714 test             L0287 DEBUG|     migrate_load_vms = 
+2018-03-28 14:46:44,714 test             L0287 DEBUG|     migrate_main_vm = avocado-vt-vm1
+2018-03-28 14:46:44,714 test             L0287 DEBUG|     migrate_port = 49152
+2018-03-28 14:46:44,715 test             L0287 DEBUG|     migrate_proto = tcp
+2018-03-28 14:46:44,715 test             L0287 DEBUG|     migrate_shared_storage = SHARED_IMAGE.EXAMPLE
+2018-03-28 14:46:44,715 test             L0287 DEBUG|     migrate_source_host = ENTER.YOUR.SOURCE.EXAMPLE.COM
+2018-03-28 14:46:44,715 test             L0287 DEBUG|     migrate_source_pwd = PASSWORD.SOURCE.EXAMPLE
+2018-03-28 14:46:44,715 test             L0287 DEBUG|     migrate_vms = 
+2018-03-28 14:46:44,715 test             L0287 DEBUG|     migration_bg_check_command = pgrep tcpdump
+2018-03-28 14:46:44,715 test             L0287 DEBUG|     migration_bg_command = cd /tmp; nohup tcpdump -q -i any -t ip host localhost
+2018-03-28 14:46:44,715 test             L0287 DEBUG|     migration_bg_kill_command = pkill -9 tcpdump
+2018-03-28 14:46:44,715 test             L0287 DEBUG|     migration_protocol = tcp
+2018-03-28 14:46:44,715 test             L0287 DEBUG|     migration_test_command = help
+2018-03-28 14:46:44,716 test             L0287 DEBUG|     monitor_type = human
+2018-03-28 14:46:44,716 test             L0287 DEBUG|     monitors = hmp1
+2018-03-28 14:46:44,716 test             L0287 DEBUG|     name = qemu_kvm_jeos_quick.bridge.default_bios.no_virtio_rng.(image_backend=filesystem).no_9p_export.smallpages.no_pci_assignable.qcow2.virtio_scsi.up.virtio_net.Guest.Linux.JeOS.27.x86_64.i440fx.Host.Host_Ubuntu.m17.u10.Host_arch_x86_64.(subtest=type_specific).(subtest=io-github-autotest-qemu).(subtest=migrate).default.tcp
+2018-03-28 14:46:44,716 test             L0287 DEBUG|     netdev_peer_re = \s{2,}(.*?): .*?\\\s(.*?):
+2018-03-28 14:46:44,716 test             L0287 DEBUG|     netdst = br0
+2018-03-28 14:46:44,716 test             L0287 DEBUG|     nettype = bridge
+2018-03-28 14:46:44,716 test             L0287 DEBUG|     nic_model = virtio
+2018-03-28 14:46:44,716 test             L0287 DEBUG|     nics = nic1
+2018-03-28 14:46:44,716 test             L0287 DEBUG|     os_type = linux
+2018-03-28 14:46:44,716 test             L0287 DEBUG|     os_variant = fedora27
+2018-03-28 14:46:44,717 test             L0287 DEBUG|     other_tests_dirs = 
+2018-03-28 14:46:44,717 test             L0287 DEBUG|     password = 123456
+2018-03-28 14:46:44,717 test             L0287 DEBUG|     paused_after_start_vm = no
+2018-03-28 14:46:44,717 test             L0287 DEBUG|     pci_assignable = no
+2018-03-28 14:46:44,717 test             L0287 DEBUG|     ping_pong = 1
+2018-03-28 14:46:44,717 test             L0287 DEBUG|     profilers = kvm_stat
+2018-03-28 14:46:44,717 test             L0287 DEBUG|     provider = io-github-autotest-qemu
+2018-03-28 14:46:44,717 test             L0287 DEBUG|     qemu_binary = /usr/bin/qemu-system-x86_64
+2018-03-28 14:46:44,717 test             L0287 DEBUG|     qemu_dst_binary = /usr/bin/qemu-system-x86_64
+2018-03-28 14:46:44,717 test             L0287 DEBUG|     qemu_img_binary = /usr/bin/qemu-img
+2018-03-28 14:46:44,717 test             L0287 DEBUG|     qemu_io_binary = /usr/bin/qemu-io
+2018-03-28 14:46:44,718 test             L0287 DEBUG|     reboot_command = shutdown -r now
+2018-03-28 14:46:44,718 test             L0287 DEBUG|     redirs = remote_shell
+2018-03-28 14:46:44,718 test             L0287 DEBUG|     remote_ip = ENTER.YOUR.REMOTE.EXAMPLE.COM
+2018-03-28 14:46:44,718 test             L0287 DEBUG|     remote_pwd = 
+2018-03-28 14:46:44,718 test             L0287 DEBUG|     remote_user = root
+2018-03-28 14:46:44,718 test             L0287 DEBUG|     restore_image = no
+2018-03-28 14:46:44,718 test             L0287 DEBUG|     restore_image_after_testing = yes
+2018-03-28 14:46:44,718 test             L0287 DEBUG|     restore_image_on_check_error = no
+2018-03-28 14:46:44,718 test             L0287 DEBUG|     run_tcpdump = yes
+2018-03-28 14:46:44,718 test             L0287 DEBUG|     screendump_delay = 5
+2018-03-28 14:46:44,719 test             L0287 DEBUG|     screendump_quality = 30
+2018-03-28 14:46:44,719 test             L0287 DEBUG|     screendump_temp_dir = /dev/shm
+2018-03-28 14:46:44,719 test             L0287 DEBUG|     screendump_verbose = no
+2018-03-28 14:46:44,719 test             L0287 DEBUG|     scsi_hba = virtio-scsi-pci
+2018-03-28 14:46:44,719 test             L0287 DEBUG|     serials = serial0
+2018-03-28 14:46:44,719 test             L0287 DEBUG|     shell_client = ssh
+2018-03-28 14:46:44,719 test             L0287 DEBUG|     shell_linesep = \n
+2018-03-28 14:46:44,719 test             L0287 DEBUG|     shell_port = 22
+2018-03-28 14:46:44,719 test             L0287 DEBUG|     shortname = qcow2.virtio_scsi.up.virtio_net.Guest.JeOS.27.x86_64.io-github-autotest-qemu.migrate.tcp
+2018-03-28 14:46:44,719 test             L0287 DEBUG|     shutdown_command = shutdown -h now
+2018-03-28 14:46:44,720 test             L0287 DEBUG|     skip_cluster_leak_warn = no
+2018-03-28 14:46:44,720 test             L0287 DEBUG|     skip_image_check_during_running = no
+2018-03-28 14:46:44,720 test             L0287 DEBUG|     skip_image_processing = no
+2018-03-28 14:46:44,720 test             L0287 DEBUG|     smp = 1
+2018-03-28 14:46:44,720 test             L0287 DEBUG|     start_vm = yes
+2018-03-28 14:46:44,720 test             L0287 DEBUG|     status_test_command = echo $?
+2018-03-28 14:46:44,720 test             L0287 DEBUG|     store_vm_register = yes
+2018-03-28 14:46:44,720 test             L0287 DEBUG|     strict_mode = no
+2018-03-28 14:46:44,720 test             L0287 DEBUG|     subtest = io-github-autotest-qemu.migrate
+2018-03-28 14:46:44,720 test             L0287 DEBUG|     take_regular_screendumps = yes
+2018-03-28 14:46:44,720 test             L0287 DEBUG|     test_timeout = 14400
+2018-03-28 14:46:44,721 test             L0287 DEBUG|     type = migration
+2018-03-28 14:46:44,721 test             L0287 DEBUG|     url_auto_ip = 
+2018-03-28 14:46:44,721 test             L0287 DEBUG|     usb_bus = usb1.0
+2018-03-28 14:46:44,721 test             L0287 DEBUG|     usb_controller = ehci
+2018-03-28 14:46:44,721 test             L0287 DEBUG|     usb_devices = tablet1
+2018-03-28 14:46:44,721 test             L0287 DEBUG|     usb_max_port = 6
+2018-03-28 14:46:44,721 test             L0287 DEBUG|     usb_type = ich9-usb-ehci1
+2018-03-28 14:46:44,721 test             L0287 DEBUG|     usb_type_tablet1 = usb-tablet
+2018-03-28 14:46:44,721 test             L0287 DEBUG|     usb_type_usb1 = ich9-usb-ehci1
+2018-03-28 14:46:44,721 test             L0287 DEBUG|     usbs = usb1
+2018-03-28 14:46:44,722 test             L0287 DEBUG|     use_autostart = no
+2018-03-28 14:46:44,722 test             L0287 DEBUG|     use_check_cpu = yes
+2018-03-28 14:46:44,722 test             L0287 DEBUG|     use_debug = yes
+2018-03-28 14:46:44,722 test             L0287 DEBUG|     use_no_reboot = no
+2018-03-28 14:46:44,722 test             L0287 DEBUG|     use_os_type = yes
+2018-03-28 14:46:44,722 test             L0287 DEBUG|     use_os_variant = no
+2018-03-28 14:46:44,722 test             L0287 DEBUG|     use_virt_install_wait = no
+2018-03-28 14:46:44,722 test             L0287 DEBUG|     used_cpus = 1
+2018-03-28 14:46:44,722 test             L0287 DEBUG|     used_mem = 1024
+2018-03-28 14:46:44,722 test             L0287 DEBUG|     username = root
+2018-03-28 14:46:44,722 test             L0287 DEBUG|     vcpu_thread_pattern = thread_id.?[:|=]\s*(\d+)
+2018-03-28 14:46:44,722 test             L0287 DEBUG|     verify_guest_dmesg = yes
+2018-03-28 14:46:44,722 test             L0287 DEBUG|     verify_host_dmesg = yes
+2018-03-28 14:46:44,722 test             L0287 DEBUG|     vfd_size = 1440k
+2018-03-28 14:46:44,722 test             L0287 DEBUG|     vga = std
+2018-03-28 14:46:44,722 test             L0287 DEBUG|     virt_install_wait_time = 300
+2018-03-28 14:46:44,722 test             L0287 DEBUG|     virt_test_type = qemu
+2018-03-28 14:46:44,722 test             L0287 DEBUG|     virtinstall_extra_args = 
+2018-03-28 14:46:44,722 test             L0287 DEBUG|     vm_arch_name = x86_64
+2018-03-28 14:46:44,723 test             L0287 DEBUG|     vm_register_delay = 5
+2018-03-28 14:46:44,723 test             L0287 DEBUG|     vm_type = qemu
+2018-03-28 14:46:44,723 test             L0287 DEBUG|     vms = avocado-vt-vm1
+2018-03-28 14:46:44,723 test             L0287 DEBUG|     vnc_autoport = yes
+2018-03-28 14:46:44,781 test             L0340 DEBUG| Searching for test modules that match 'type = migration' and 'provider = io-github-autotest-qemu' on this cartesian dict
+2018-03-28 14:46:44,782 test             L0354 DEBUG| Found subtest module /var/lib/avocado/data/avocado-vt/test-providers.d/downloads/io-github-autotest-qemu/qemu/tests/migration.py
+2018-03-28 14:46:44,871 utils_env        L0082 WARNI| Creating new, empty env file
+2018-03-28 14:46:46,016 utils_misc       L2053 DEBUG| Detected CPU vendor as 'AuthenticAMD'
+2018-03-28 14:46:46,119 env_process      L0742 DEBUG| KVM version: 4.16.0-rc2-jenkins
+2018-03-28 14:46:46,136 env_process      L0765 DEBUG| KVM userspace version: 2.11.1 (v2.11.1)
+2018-03-28 14:46:46,136 utils_libvirtd   L0045 WARNI| Libvirtd service is not available in host, utils_libvirtd module will not function normally
+2018-03-28 14:46:46,136 process          L0523 INFO | Running 'true'
+2018-03-28 14:46:46,146 process          L0605 INFO | Command 'true' finished with 0 after 0.00127696990967s
+2018-03-28 14:46:46,146 process          L0523 INFO | Running 'ps -o comm 1'
+2018-03-28 14:46:46,221 process          L0367 DEBUG| [stdout] COMMAND
+2018-03-28 14:46:46,221 process          L0605 INFO | Command 'ps -o comm 1' finished with 0 after 0.0319368839264s
+2018-03-28 14:46:46,222 process          L0367 DEBUG| [stdout] systemd
+2018-03-28 14:46:46,352 storage          L0330 DEBUG| Copying /var/lib/avocado/data/avocado-vt/images/jeos-27-x86_64.qcow2 -> /var/lib/avocado/data/avocado-vt/images/jeos-27-x86_64.qcow2.backup
+2018-03-28 14:46:55,127 virt_vm          L0821 DEBUG| Generating random mac address for nic
+2018-03-28 14:46:55,182 process          L0523 INFO | Running '/usr/sbin/ovs-vswitchd --version'
+2018-03-28 14:46:55,192 process          L0367 DEBUG| [stdout] ovs-vswitchd (Open vSwitch) 2.8.1
+2018-03-28 14:46:55,192 process          L0605 INFO | Command '/usr/sbin/ovs-vswitchd --version' finished with 0 after 0.00219321250916s
+2018-03-28 14:46:55,238 process          L0523 INFO | Running '/usr/sbin/ovs-vswitchd --version'
+2018-03-28 14:46:55,248 process          L0367 DEBUG| [stdout] ovs-vswitchd (Open vSwitch) 2.8.1
+2018-03-28 14:46:55,249 process          L0605 INFO | Command '/usr/sbin/ovs-vswitchd --version' finished with 0 after 0.00227904319763s
+2018-03-28 14:46:55,340 qemu_vm          L2325 DEBUG| Adding VM avocado-vt-vm1 NIC ifname t0-CFuKVy to bridge br0
+2018-03-28 14:46:55,630 utils_misc       L2053 DEBUG| Detected CPU vendor as 'AuthenticAMD'
+2018-03-28 14:46:55,630 qemu_vm          L1883 WARNI| Set vcpu_threads to 1 for AMD cpu.
+2018-03-28 14:46:55,634 qemu_vm          L2237 DEBUG| qemu will run in KVM mode
+2018-03-28 14:46:55,656 qemu_vm          L2752 DEBUG| Devices of avocado-vt-vm1: [t'PREFIX',t'qemu',t'-S',t'vmname',t'machine',t'i440FX',t'PIIX4_PM',t'PIIX3',t'piix3-ide',t'fdc',t'nodefaults',t'VGA-std',t'HMP-hmp1',t'HMP-catch_monitor',idK6NRmE,t'SER-serial0',t'isa-log',usb1,usb1.0,usb1.1,usb1.2,virtio_scsi_pci0,drive_image1,image1,idQMhVNN,t'NET-bridge',t'mem',t'smp',t'cpu',usb-tablet1,t'tcp-redir',t'display',t'rtc',t'bootmenu',t'kvm']
+2018-03-28 14:46:55,656 qemu_vm          L2753 DEBUG| Buses of avocado-vt-vm1
+  drive_image1(QDrive): {drive:image1}
+  virtio_scsi_pci0.0(virtio-scsi-pci): {0-0:image1}
+  usb1.0(ehci): {1:usb-tablet1}
+  floppy(floppy): [None,None]
+  ide(ide): [None,None,None,None]
+  _PCI_CHASSIS_NR(None): {}
+  _PCI_CHASSIS(None): {}
+  pci.0(PCI): {0x0-0x0:t'i440FX',0x1-0x0:t'PIIX3',0x1-0x1:t'piix3-ide',0x1-0x3:t'PIIX4_PM',0x1d-0x0:usb1.0,0x1d-0x2:usb1.1,0x1d-0x4:usb1.2,0x1d-0x7:usb1,0x2-0x0:t'VGA-std',0x3-0x0:virtio_scsi_pci0,0x4-0x0:idQMhVNN}
+2018-03-28 14:46:55,657 qemu_vm          L2817 INFO | Running qemu command (reformatted):
+/usr/bin/qemu-system-x86_64 \
+    -S  \
+    -name 'avocado-vt-vm1' \
+    -machine pc  \
+    -nodefaults  \
+    -vga std  \
+    -chardev socket,id=hmp_id_hmp1,path=/var/tmp/avocado_zk5vt9/monitor-hmp1-20180328-144655-A0LxcI4Q,server,nowait \
+    -mon chardev=hmp_id_hmp1,mode=readline  \
+    -chardev socket,id=hmp_id_catch_monitor,path=/var/tmp/avocado_zk5vt9/monitor-catch_monitor-20180328-144655-A0LxcI4Q,server,nowait \
+    -mon chardev=hmp_id_catch_monitor,mode=readline \
+    -device pvpanic,ioport=0x505,id=idK6NRmE  \
+    -chardev socket,id=serial_id_serial0,path=/var/tmp/avocado_zk5vt9/serial-serial0-20180328-144655-A0LxcI4Q,server,nowait \
+    -device isa-serial,chardev=serial_id_serial0  \
+    -chardev socket,id=seabioslog_id_20180328-144655-A0LxcI4Q,path=/var/tmp/avocado_zk5vt9/seabios-20180328-144655-A0LxcI4Q,server,nowait \
+    -device isa-debugcon,chardev=seabioslog_id_20180328-144655-A0LxcI4Q,iobase=0x402 \
+    -device ich9-usb-ehci1,id=usb1,addr=0x1d.7,multifunction=on,bus=pci.0 \
+    -device ich9-usb-uhci1,id=usb1.0,multifunction=on,masterbus=usb1.0,addr=0x1d.0,firstport=0,bus=pci.0 \
+    -device ich9-usb-uhci2,id=usb1.1,multifunction=on,masterbus=usb1.0,addr=0x1d.2,firstport=2,bus=pci.0 \
+    -device ich9-usb-uhci3,id=usb1.2,multifunction=on,masterbus=usb1.0,addr=0x1d.4,firstport=4,bus=pci.0 \
+    -device virtio-scsi-pci,id=virtio_scsi_pci0,bus=pci.0,addr=0x3 \
+    -drive id=drive_image1,if=none,format=qcow2,file=/var/lib/avocado/data/avocado-vt/images/jeos-27-x86_64.qcow2 \
+    -device scsi-hd,id=image1,drive=drive_image1 \
+    -device virtio-net-pci,mac=9a:bf:c0:c1:c2:c3,id=idQMhVNN,vectors=4,netdev=idIglLyi,bus=pci.0,addr=0x4  \
+    -netdev tap,id=idIglLyi,fd=19 \
+    -m 1024  \
+    -smp 1,maxcpus=1,cores=1,threads=1,sockets=1  \
+    -cpu 'Opteron_G4' \
+    -device usb-tablet,id=usb-tablet1,bus=usb1.0,port=1  \
+    -vnc :0  \
+    -rtc base=utc,clock=host  \
+    -boot menu=off,strict=off,order=cdn,once=c \
+    -enable-kvm
+2018-03-28 14:46:55,711 client           L0567 INFO | [qemu output] qemu-system-x86_64: warning: host doesn't support requested feature: CPUID.80000001H:ECX.xop [bit 11]
+2018-03-28 14:46:55,712 client           L0567 INFO | [qemu output] qemu-system-x86_64: warning: host doesn't support requested feature: CPUID.80000001H:ECX.fma4 [bit 16]
+2018-03-28 14:46:56,694 qemu_vm          L2826 INFO | Created qemu process with parent PID 10647
+2018-03-28 14:46:56,973 qemu_monitor     L0143 INFO | Connecting to monitor '<virttest.qemu_monitor.HumanMonitor> hmp1'
+2018-03-28 14:46:56,976 qemu_monitor     L0324 DEBUG| (monitor avocado-vt-vm1.hmp1) Sending command 'help set_link' 
+2018-03-28 14:46:56,977 qemu_monitor     L0754 DEBUG| Send command: help set_link
+2018-03-28 14:46:56,977 qemu_monitor     L0718 DEBUG| (monitor avocado-vt-vm1.hmp1) Response to 'help set_link'
+2018-03-28 14:46:56,977 qemu_monitor     L0721 DEBUG| (monitor avocado-vt-vm1.hmp1)    set_link name on|off -- change the link status of a network adapter
+2018-03-28 14:46:56,978 qemu_monitor     L0143 INFO | Connecting to monitor '<virttest.qemu_monitor.HumanMonitor> catch_monitor'
+2018-03-28 14:46:56,981 qemu_monitor     L0324 DEBUG| (monitor avocado-vt-vm1.catch_monitor) Sending command 'help set_link' 
+2018-03-28 14:46:56,981 qemu_monitor     L0754 DEBUG| Send command: help set_link
+2018-03-28 14:46:56,982 qemu_monitor     L0718 DEBUG| (monitor avocado-vt-vm1.catch_monitor) Response to 'help set_link'
+2018-03-28 14:46:56,982 qemu_monitor     L0721 DEBUG| (monitor avocado-vt-vm1.catch_monitor)    set_link name on|off -- change the link status of a network adapter
+2018-03-28 14:46:57,028 qemu_vm          L2934 DEBUG| VM appears to be alive with PID 10649
+2018-03-28 14:46:57,029 qemu_monitor     L0324 DEBUG| (monitor avocado-vt-vm1.hmp1) Sending command 'info cpus' 
+2018-03-28 14:46:57,029 qemu_monitor     L0754 DEBUG| Send command: info cpus
+2018-03-28 14:46:57,030 qemu_monitor     L0718 DEBUG| (monitor avocado-vt-vm1.hmp1) Response to 'info cpus'
+2018-03-28 14:46:57,030 qemu_monitor     L0721 DEBUG| (monitor avocado-vt-vm1.hmp1)    * CPU #0: pc=0x00000000fffffff0 thread_id=10653
+2018-03-28 14:46:57,207 qemu_monitor     L0324 DEBUG| (monitor avocado-vt-vm1.hmp1) Sending command 'cont' 
+2018-03-28 14:46:57,207 qemu_monitor     L0754 DEBUG| Send command: cont
+2018-03-28 14:46:57,228 virt_vm          L0872 WARNI| Unable to read serial console
+2018-03-28 14:46:57,228 virt_vm          L0918 WARNI| Unable to read serial console
+2018-03-28 14:46:57,229 virt_vm          L1078 DEBUG| Attempting to log into 'avocado-vt-vm1' (timeout 360s)
+2018-03-28 14:52:57,294 virt_vm          L1261 DEBUG| Attempting to log into 'avocado-vt-vm1' via serial console (timeout 360s)
+2018-03-28 14:53:09,925 client           L1078 DEBUG| Sending command: echo %OS%
+2018-03-28 14:53:10,029 client           L1114 DEBUG| Sending command (safe): ifconfig -a
+2018-03-28 14:53:10,151 client           L1114 DEBUG| Sending command (safe): ip link | grep -B1 '' -i
+2018-03-28 14:53:10,259 client           L1078 DEBUG| Sending command: test -d /sys/class/net/ens4
+2018-03-28 14:53:10,364 client           L1078 DEBUG| Sending command: echo $?
+2018-03-28 14:53:10,467 client           L1078 DEBUG| Sending command: cat /sys/class/net/ens4/address
+2018-03-28 14:53:10,575 client           L1114 DEBUG| Sending command (safe): ifconfig ens4 || ip address show ens4
+2018-03-28 14:53:10,777 ip_sniffing      L0050 DEBUG| Updated HWADDR (9a:bf:c0:c1:c2:c3_6)<->(fe80::98bf:c0ff:fec1:c2c3) IP pair into address cache
+2018-03-28 14:53:10,777 ip_sniffing      L0050 DEBUG| Updated HWADDR (9a:bf:c0:c1:c2:c3)<->(10.236.119.124) IP pair into address cache
+2018-03-28 14:53:10,842 virt_vm          L0799 DEBUG| Found/Verified IP 10.236.119.124 for VM avocado-vt-vm1 NIC 0
+2018-03-28 14:53:12,194 client           L1078 DEBUG| Sending command: help
+2018-03-28 14:53:12,302 client           L1078 DEBUG| Sending command: which apt-get
+2018-03-28 14:53:12,408 client           L1078 DEBUG| Sending command: echo $?
+2018-03-28 14:53:12,510 client           L1078 DEBUG| Sending command: which yum
+2018-03-28 14:53:12,616 client           L1078 DEBUG| Sending command: echo $?
+2018-03-28 14:53:12,719 client           L1078 DEBUG| Sending command: rpm -q tcpdump
+2018-03-28 14:53:12,843 client           L1078 DEBUG| Sending command: echo $?
+2018-03-28 14:53:17,951 virt_vm          L1078 DEBUG| Attempting to log into 'avocado-vt-vm1' (timeout 360s)
+2018-03-28 14:53:17,986 virt_vm          L0799 DEBUG| Found/Verified IP 10.236.119.124 for VM avocado-vt-vm1 NIC 0
+2018-03-28 14:53:20,890 error_context    L0079 INFO | Context: Checking the background command in the guest pre migration
+2018-03-28 14:53:20,891 client           L1078 DEBUG| Sending command: pgrep tcpdump
+2018-03-28 14:53:21,005 client           L1078 DEBUG| Sending command: echo $?
+2018-03-28 14:53:21,192 migration        L0213 INFO | Round 0 ping...
+2018-03-28 14:53:21,290 virt_vm          L0821 DEBUG| Generating random mac address for nic
+2018-03-28 14:53:21,314 qemu_vm          L2681 DEBUG| Copying mac for nic nic1 from VM avocado-vt-vm1
+2018-03-28 14:53:21,362 qemu_vm          L2325 DEBUG| Adding VM avocado-vt-vm1 NIC ifname t0-jqgPbv to bridge br0
+2018-03-28 14:53:21,643 utils_misc       L2053 DEBUG| Detected CPU vendor as 'AuthenticAMD'
+2018-03-28 14:53:21,643 qemu_vm          L1883 WARNI| Set vcpu_threads to 1 for AMD cpu.
+2018-03-28 14:53:21,646 qemu_vm          L2237 DEBUG| qemu will run in KVM mode
+2018-03-28 14:53:21,666 qemu_vm          L2752 DEBUG| Devices of avocado-vt-vm1: [t'PREFIX',t'qemu',t'-S',t'vmname',t'machine',t'i440FX',t'PIIX4_PM',t'PIIX3',t'piix3-ide',t'fdc',t'nodefaults',t'VGA-std',t'HMP-hmp1',t'HMP-catch_monitor',idL8uQHz,t'SER-serial0',t'isa-log',usb1,usb1.0,usb1.1,usb1.2,virtio_scsi_pci0,drive_image1,image1,idtsrYt7,t'NET-bridge',t'mem',t'smp',t'cpu',usb-tablet1,t'tcp-redir',t'display',t'rtc',t'bootmenu',t'kvm']
+2018-03-28 14:53:21,667 qemu_vm          L2753 DEBUG| Buses of avocado-vt-vm1
+  drive_image1(QDrive): {drive:image1}
+  virtio_scsi_pci0.0(virtio-scsi-pci): {0-0:image1}
+  usb1.0(ehci): {1:usb-tablet1}
+  floppy(floppy): [None,None]
+  ide(ide): [None,None,None,None]
+  _PCI_CHASSIS_NR(None): {}
+  _PCI_CHASSIS(None): {}
+  pci.0(PCI): {0x0-0x0:t'i440FX',0x1-0x0:t'PIIX3',0x1-0x1:t'piix3-ide',0x1-0x3:t'PIIX4_PM',0x1d-0x0:usb1.0,0x1d-0x2:usb1.1,0x1d-0x4:usb1.2,0x1d-0x7:usb1,0x2-0x0:t'VGA-std',0x3-0x0:virtio_scsi_pci0,0x4-0x0:idtsrYt7}
+2018-03-28 14:53:21,668 qemu_vm          L2817 INFO | Running qemu command (reformatted):
+/usr/bin/qemu-system-x86_64 \
+    -S  \
+    -name 'avocado-vt-vm1' \
+    -machine pc  \
+    -nodefaults  \
+    -vga std  \
+    -chardev socket,id=hmp_id_hmp1,path=/var/tmp/avocado_zk5vt9/monitor-hmp1-20180328-145321-CoBg5Bo7,server,nowait \
+    -mon chardev=hmp_id_hmp1,mode=readline  \
+    -chardev socket,id=hmp_id_catch_monitor,path=/var/tmp/avocado_zk5vt9/monitor-catch_monitor-20180328-145321-CoBg5Bo7,server,nowait \
+    -mon chardev=hmp_id_catch_monitor,mode=readline \
+    -device pvpanic,ioport=0x505,id=idL8uQHz  \
+    -chardev socket,id=serial_id_serial0,path=/var/tmp/avocado_zk5vt9/serial-serial0-20180328-145321-CoBg5Bo7,server,nowait \
+    -device isa-serial,chardev=serial_id_serial0  \
+    -chardev socket,id=seabioslog_id_20180328-145321-CoBg5Bo7,path=/var/tmp/avocado_zk5vt9/seabios-20180328-145321-CoBg5Bo7,server,nowait \
+    -device isa-debugcon,chardev=seabioslog_id_20180328-145321-CoBg5Bo7,iobase=0x402 \
+    -device ich9-usb-ehci1,id=usb1,addr=0x1d.7,multifunction=on,bus=pci.0 \
+    -device ich9-usb-uhci1,id=usb1.0,multifunction=on,masterbus=usb1.0,addr=0x1d.0,firstport=0,bus=pci.0 \
+    -device ich9-usb-uhci2,id=usb1.1,multifunction=on,masterbus=usb1.0,addr=0x1d.2,firstport=2,bus=pci.0 \
+    -device ich9-usb-uhci3,id=usb1.2,multifunction=on,masterbus=usb1.0,addr=0x1d.4,firstport=4,bus=pci.0 \
+    -device virtio-scsi-pci,id=virtio_scsi_pci0,bus=pci.0,addr=0x3 \
+    -drive id=drive_image1,if=none,format=qcow2,file=/var/lib/avocado/data/avocado-vt/images/jeos-27-x86_64.qcow2 \
+    -device scsi-hd,id=image1,drive=drive_image1 \
+    -device virtio-net-pci,mac=9a:bf:c0:c1:c2:c3,id=idtsrYt7,vectors=4,netdev=idulw4tX,bus=pci.0,addr=0x4  \
+    -netdev tap,id=idulw4tX,fd=29 \
+    -m 1024  \
+    -smp 1,maxcpus=1,cores=1,threads=1,sockets=1  \
+    -cpu 'Opteron_G4' \
+    -device usb-tablet,id=usb-tablet1,bus=usb1.0,port=1  \
+    -vnc :1  \
+    -rtc base=utc,clock=host  \
+    -boot menu=off,strict=off,order=cdn,once=c \
+    -enable-kvm \
+    -incoming tcp:0:5200
+2018-03-28 14:53:21,723 client           L0567 INFO | [qemu output] qemu-system-x86_64: warning: host doesn't support requested feature: CPUID.80000001H:ECX.xop [bit 11]
+2018-03-28 14:53:21,724 client           L0567 INFO | [qemu output] qemu-system-x86_64: warning: host doesn't support requested feature: CPUID.80000001H:ECX.fma4 [bit 16]
+2018-03-28 14:53:22,709 qemu_vm          L2826 INFO | Created qemu process with parent PID 11230
+2018-03-28 14:53:22,978 qemu_monitor     L0143 INFO | Connecting to monitor '<virttest.qemu_monitor.HumanMonitor> hmp1'
+2018-03-28 14:53:22,981 qemu_monitor     L0324 DEBUG| (monitor avocado-vt-vm1.hmp1) Sending command 'help set_link' 
+2018-03-28 14:53:22,982 qemu_monitor     L0754 DEBUG| Send command: help set_link
+2018-03-28 14:53:22,982 qemu_monitor     L0718 DEBUG| (monitor avocado-vt-vm1.hmp1) Response to 'help set_link'
+2018-03-28 14:53:22,982 qemu_monitor     L0721 DEBUG| (monitor avocado-vt-vm1.hmp1)    set_link name on|off -- change the link status of a network adapter
+2018-03-28 14:53:22,983 qemu_monitor     L0143 INFO | Connecting to monitor '<virttest.qemu_monitor.HumanMonitor> catch_monitor'
+2018-03-28 14:53:22,986 qemu_monitor     L0324 DEBUG| (monitor avocado-vt-vm1.catch_monitor) Sending command 'help set_link' 
+2018-03-28 14:53:22,986 qemu_monitor     L0754 DEBUG| Send command: help set_link
+2018-03-28 14:53:22,986 qemu_monitor     L0718 DEBUG| (monitor avocado-vt-vm1.catch_monitor) Response to 'help set_link'
+2018-03-28 14:53:22,986 qemu_monitor     L0721 DEBUG| (monitor avocado-vt-vm1.catch_monitor)    set_link name on|off -- change the link status of a network adapter
+2018-03-28 14:53:23,031 qemu_vm          L2934 DEBUG| VM appears to be alive with PID 11232
+2018-03-28 14:53:23,031 qemu_monitor     L0324 DEBUG| (monitor avocado-vt-vm1.hmp1) Sending command 'info cpus' 
+2018-03-28 14:53:23,032 qemu_monitor     L0754 DEBUG| Send command: info cpus
+2018-03-28 14:53:23,033 qemu_monitor     L0718 DEBUG| (monitor avocado-vt-vm1.hmp1) Response to 'info cpus'
+2018-03-28 14:53:23,033 qemu_monitor     L0721 DEBUG| (monitor avocado-vt-vm1.hmp1)    * CPU #0: pc=0x00000000fffffff0 thread_id=11236
+2018-03-28 14:53:23,219 qemu_vm          L3940 INFO | Migrating to tcp:localhost:5200
+2018-03-28 14:53:23,220 qemu_monitor     L0324 DEBUG| (monitor avocado-vt-vm1.hmp1) Sending command 'migrate -d tcp:localhost:5200' 
+2018-03-28 14:53:23,220 qemu_monitor     L0754 DEBUG| Send command: migrate -d tcp:localhost:5200
+2018-03-28 14:53:25,223 utils_misc       L0660 DEBUG| Waiting for migration to complete (2.002080 secs)
+2018-03-28 14:53:25,224 qemu_monitor     L0324 DEBUG| (monitor avocado-vt-vm1.hmp1) Sending command 'info migrate' 
+2018-03-28 14:53:25,224 qemu_monitor     L0754 DEBUG| Send command: info migrate
+2018-03-28 14:53:25,226 qemu_monitor     L0718 DEBUG| (monitor avocado-vt-vm1.hmp1) Response to 'info migrate'
+2018-03-28 14:53:25,226 qemu_monitor     L0721 DEBUG| (monitor avocado-vt-vm1.hmp1)    globals: store-global-state=1, only_migratable=0, send-configuration=1, send-section-footer=1
+2018-03-28 14:53:25,226 qemu_monitor     L0721 DEBUG| (monitor avocado-vt-vm1.hmp1)    capabilities: xbzrle: off rdma-pin-all: off auto-converge: off zero-blocks: off compress: off events: off postcopy-ram: off x-colo: off release-ram: off block: off return-path: off pause-before-switchover: off x-multifd: off 
+2018-03-28 14:53:25,226 qemu_monitor     L0721 DEBUG| (monitor avocado-vt-vm1.hmp1)    Migration status: active
+2018-03-28 14:53:25,226 qemu_monitor     L0721 DEBUG| (monitor avocado-vt-vm1.hmp1)    total time: 2004 milliseconds
+2018-03-28 14:53:25,226 qemu_monitor     L0721 DEBUG| (monitor avocado-vt-vm1.hmp1)    expected downtime: 300 milliseconds
+2018-03-28 14:53:25,227 qemu_monitor     L0721 DEBUG| (monitor avocado-vt-vm1.hmp1)    setup: 14 milliseconds
+2018-03-28 14:53:25,227 qemu_monitor     L0721 DEBUG| (monitor avocado-vt-vm1.hmp1)    transferred ram: 65572 kbytes
+2018-03-28 14:53:25,227 qemu_monitor     L0721 DEBUG| (monitor avocado-vt-vm1.hmp1)    throughput: 268.57 mbps
+2018-03-28 14:53:25,227 qemu_monitor     L0721 DEBUG| (monitor avocado-vt-vm1.hmp1)    remaining ram: 228244 kbytes
+2018-03-28 14:53:25,227 qemu_monitor     L0721 DEBUG| (monitor avocado-vt-vm1.hmp1)    total ram: 1065800 kbytes
+2018-03-28 14:53:25,227 qemu_monitor     L0721 DEBUG| (monitor avocado-vt-vm1.hmp1)    duplicate: 193452 pages
+2018-03-28 14:53:25,228 qemu_monitor     L0721 DEBUG| (monitor avocado-vt-vm1.hmp1)    skipped: 0 pages
+2018-03-28 14:53:25,228 qemu_monitor     L0721 DEBUG| (monitor avocado-vt-vm1.hmp1)    normal: 15937 pages
+2018-03-28 14:53:25,228 qemu_monitor     L0721 DEBUG| (monitor avocado-vt-vm1.hmp1)    normal bytes: 63748 kbytes
+2018-03-28 14:53:25,228 qemu_monitor     L0721 DEBUG| (monitor avocado-vt-vm1.hmp1)    dirty sync count: 1
+2018-03-28 14:53:25,228 qemu_monitor     L0721 DEBUG| (monitor avocado-vt-vm1.hmp1)    page size: 4 kbytes
+2018-03-28 14:53:27,230 utils_misc       L0660 DEBUG| Waiting for migration to complete (4.009127 secs)
+2018-03-28 14:53:27,231 qemu_monitor     L0324 DEBUG| (monitor avocado-vt-vm1.hmp1) Sending command 'info migrate' 
+2018-03-28 14:53:27,231 qemu_monitor     L0754 DEBUG| Send command: info migrate
+2018-03-28 14:53:27,232 qemu_monitor     L0718 DEBUG| (monitor avocado-vt-vm1.hmp1) Response to 'info migrate'
+2018-03-28 14:53:27,233 qemu_monitor     L0721 DEBUG| (monitor avocado-vt-vm1.hmp1)    globals: store-global-state=1, only_migratable=0, send-configuration=1, send-section-footer=1
+2018-03-28 14:53:27,233 qemu_monitor     L0721 DEBUG| (monitor avocado-vt-vm1.hmp1)    capabilities: xbzrle: off rdma-pin-all: off auto-converge: off zero-blocks: off compress: off events: off postcopy-ram: off x-colo: off release-ram: off block: off return-path: off pause-before-switchover: off x-multifd: off 
+2018-03-28 14:53:27,233 qemu_monitor     L0721 DEBUG| (monitor avocado-vt-vm1.hmp1)    Migration status: active
+2018-03-28 14:53:27,233 qemu_monitor     L0721 DEBUG| (monitor avocado-vt-vm1.hmp1)    total time: 4011 milliseconds
+2018-03-28 14:53:27,233 qemu_monitor     L0721 DEBUG| (monitor avocado-vt-vm1.hmp1)    expected downtime: 300 milliseconds
+2018-03-28 14:53:27,233 qemu_monitor     L0721 DEBUG| (monitor avocado-vt-vm1.hmp1)    setup: 14 milliseconds
+2018-03-28 14:53:27,234 qemu_monitor     L0721 DEBUG| (monitor avocado-vt-vm1.hmp1)    transferred ram: 134423 kbytes
+2018-03-28 14:53:27,234 qemu_monitor     L0721 DEBUG| (monitor avocado-vt-vm1.hmp1)    throughput: 268.65 mbps
+2018-03-28 14:53:27,234 qemu_monitor     L0721 DEBUG| (monitor avocado-vt-vm1.hmp1)    remaining ram: 155928 kbytes
+2018-03-28 14:53:27,234 qemu_monitor     L0721 DEBUG| (monitor avocado-vt-vm1.hmp1)    total ram: 1065800 kbytes
+2018-03-28 14:53:27,234 qemu_monitor     L0721 DEBUG| (monitor avocado-vt-vm1.hmp1)    duplicate: 194354 pages
+2018-03-28 14:53:27,234 qemu_monitor     L0721 DEBUG| (monitor avocado-vt-vm1.hmp1)    skipped: 0 pages
+2018-03-28 14:53:27,234 qemu_monitor     L0721 DEBUG| (monitor avocado-vt-vm1.hmp1)    normal: 33114 pages
+2018-03-28 14:53:27,235 qemu_monitor     L0721 DEBUG| (monitor avocado-vt-vm1.hmp1)    normal bytes: 132456 kbytes
+2018-03-28 14:53:27,235 qemu_monitor     L0721 DEBUG| (monitor avocado-vt-vm1.hmp1)    dirty sync count: 1
+2018-03-28 14:53:27,235 qemu_monitor     L0721 DEBUG| (monitor avocado-vt-vm1.hmp1)    page size: 4 kbytes
+2018-03-28 14:53:29,237 utils_misc       L0660 DEBUG| Waiting for migration to complete (6.016045 secs)
+2018-03-28 14:53:29,238 qemu_monitor     L0324 DEBUG| (monitor avocado-vt-vm1.hmp1) Sending command 'info migrate' 
+2018-03-28 14:53:29,238 qemu_monitor     L0754 DEBUG| Send command: info migrate
+2018-03-28 14:53:29,239 qemu_monitor     L0718 DEBUG| (monitor avocado-vt-vm1.hmp1) Response to 'info migrate'
+2018-03-28 14:53:29,240 qemu_monitor     L0721 DEBUG| (monitor avocado-vt-vm1.hmp1)    globals: store-global-state=1, only_migratable=0, send-configuration=1, send-section-footer=1
+2018-03-28 14:53:29,240 qemu_monitor     L0721 DEBUG| (monitor avocado-vt-vm1.hmp1)    capabilities: xbzrle: off rdma-pin-all: off auto-converge: off zero-blocks: off compress: off events: off postcopy-ram: off x-colo: off release-ram: off block: off return-path: off pause-before-switchover: off x-multifd: off 
+2018-03-28 14:53:29,240 qemu_monitor     L0721 DEBUG| (monitor avocado-vt-vm1.hmp1)    Migration status: active
+2018-03-28 14:53:29,240 qemu_monitor     L0721 DEBUG| (monitor avocado-vt-vm1.hmp1)    total time: 6018 milliseconds
+2018-03-28 14:53:29,240 qemu_monitor     L0721 DEBUG| (monitor avocado-vt-vm1.hmp1)    expected downtime: 300 milliseconds
+2018-03-28 14:53:29,240 qemu_monitor     L0721 DEBUG| (monitor avocado-vt-vm1.hmp1)    setup: 14 milliseconds
+2018-03-28 14:53:29,240 qemu_monitor     L0721 DEBUG| (monitor avocado-vt-vm1.hmp1)    transferred ram: 199992 kbytes
+2018-03-28 14:53:29,241 qemu_monitor     L0721 DEBUG| (monitor avocado-vt-vm1.hmp1)    throughput: 268.57 mbps
+2018-03-28 14:53:29,241 qemu_monitor     L0721 DEBUG| (monitor avocado-vt-vm1.hmp1)    remaining ram: 89940 kbytes
+2018-03-28 14:53:29,241 qemu_monitor     L0721 DEBUG| (monitor avocado-vt-vm1.hmp1)    total ram: 1065800 kbytes
+2018-03-28 14:53:29,241 qemu_monitor     L0721 DEBUG| (monitor avocado-vt-vm1.hmp1)    duplicate: 194491 pages
+2018-03-28 14:53:29,241 qemu_monitor     L0721 DEBUG| (monitor avocado-vt-vm1.hmp1)    skipped: 0 pages
+2018-03-28 14:53:29,241 qemu_monitor     L0721 DEBUG| (monitor avocado-vt-vm1.hmp1)    normal: 49474 pages
+2018-03-28 14:53:29,241 qemu_monitor     L0721 DEBUG| (monitor avocado-vt-vm1.hmp1)    normal bytes: 197896 kbytes
+2018-03-28 14:53:29,242 qemu_monitor     L0721 DEBUG| (monitor avocado-vt-vm1.hmp1)    dirty sync count: 1
+2018-03-28 14:53:29,242 qemu_monitor     L0721 DEBUG| (monitor avocado-vt-vm1.hmp1)    page size: 4 kbytes
+2018-03-28 14:53:31,244 utils_misc       L0660 DEBUG| Waiting for migration to complete (8.022866 secs)
+2018-03-28 14:53:31,245 qemu_monitor     L0324 DEBUG| (monitor avocado-vt-vm1.hmp1) Sending command 'info migrate' 
+2018-03-28 14:53:31,245 qemu_monitor     L0754 DEBUG| Send command: info migrate
+2018-03-28 14:53:31,246 qemu_monitor     L0718 DEBUG| (monitor avocado-vt-vm1.hmp1) Response to 'info migrate'
+2018-03-28 14:53:31,246 qemu_monitor     L0721 DEBUG| (monitor avocado-vt-vm1.hmp1)    globals: store-global-state=1, only_migratable=0, send-configuration=1, send-section-footer=1
+2018-03-28 14:53:31,247 qemu_monitor     L0721 DEBUG| (monitor avocado-vt-vm1.hmp1)    capabilities: xbzrle: off rdma-pin-all: off auto-converge: off zero-blocks: off compress: off events: off postcopy-ram: off x-colo: off release-ram: off block: off return-path: off pause-before-switchover: off x-multifd: off 
+2018-03-28 14:53:31,247 qemu_monitor     L0721 DEBUG| (monitor avocado-vt-vm1.hmp1)    Migration status: active
+2018-03-28 14:53:31,247 qemu_monitor     L0721 DEBUG| (monitor avocado-vt-vm1.hmp1)    total time: 8024 milliseconds
+2018-03-28 14:53:31,247 qemu_monitor     L0721 DEBUG| (monitor avocado-vt-vm1.hmp1)    expected downtime: 300 milliseconds
+2018-03-28 14:53:31,247 qemu_monitor     L0721 DEBUG| (monitor avocado-vt-vm1.hmp1)    setup: 14 milliseconds
+2018-03-28 14:53:31,247 qemu_monitor     L0721 DEBUG| (monitor avocado-vt-vm1.hmp1)    transferred ram: 265570 kbytes
+2018-03-28 14:53:31,247 qemu_monitor     L0721 DEBUG| (monitor avocado-vt-vm1.hmp1)    throughput: 268.58 mbps
+2018-03-28 14:53:31,248 qemu_monitor     L0721 DEBUG| (monitor avocado-vt-vm1.hmp1)    remaining ram: 20104 kbytes
+2018-03-28 14:53:31,248 qemu_monitor     L0721 DEBUG| (monitor avocado-vt-vm1.hmp1)    total ram: 1065800 kbytes
+2018-03-28 14:53:31,248 qemu_monitor     L0721 DEBUG| (monitor avocado-vt-vm1.hmp1)    duplicate: 195590 pages
+2018-03-28 14:53:31,248 qemu_monitor     L0721 DEBUG| (monitor avocado-vt-vm1.hmp1)    skipped: 0 pages
+2018-03-28 14:53:31,248 qemu_monitor     L0721 DEBUG| (monitor avocado-vt-vm1.hmp1)    normal: 65834 pages
+2018-03-28 14:53:31,248 qemu_monitor     L0721 DEBUG| (monitor avocado-vt-vm1.hmp1)    normal bytes: 263336 kbytes
+2018-03-28 14:53:31,248 qemu_monitor     L0721 DEBUG| (monitor avocado-vt-vm1.hmp1)    dirty sync count: 1
+2018-03-28 14:53:31,249 qemu_monitor     L0721 DEBUG| (monitor avocado-vt-vm1.hmp1)    page size: 4 kbytes
+2018-03-28 14:53:33,251 utils_misc       L0660 DEBUG| Waiting for migration to complete (10.029733 secs)
+2018-03-28 14:53:33,251 qemu_monitor     L0324 DEBUG| (monitor avocado-vt-vm1.hmp1) Sending command 'info migrate' 
+2018-03-28 14:53:33,252 qemu_monitor     L0754 DEBUG| Send command: info migrate
+2018-03-28 14:53:33,253 qemu_monitor     L0718 DEBUG| (monitor avocado-vt-vm1.hmp1) Response to 'info migrate'
+2018-03-28 14:53:33,253 qemu_monitor     L0721 DEBUG| (monitor avocado-vt-vm1.hmp1)    globals: store-global-state=1, only_migratable=0, send-configuration=1, send-section-footer=1
+2018-03-28 14:53:33,253 qemu_monitor     L0721 DEBUG| (monitor avocado-vt-vm1.hmp1)    capabilities: xbzrle: off rdma-pin-all: off auto-converge: off zero-blocks: off compress: off events: off postcopy-ram: off x-colo: off release-ram: off block: off return-path: off pause-before-switchover: off x-multifd: off 
+2018-03-28 14:53:33,253 qemu_monitor     L0721 DEBUG| (monitor avocado-vt-vm1.hmp1)    Migration status: completed
+2018-03-28 14:53:33,253 qemu_monitor     L0721 DEBUG| (monitor avocado-vt-vm1.hmp1)    total time: 8220 milliseconds
+2018-03-28 14:53:33,254 qemu_monitor     L0721 DEBUG| (monitor avocado-vt-vm1.hmp1)    downtime: 8 milliseconds
+2018-03-28 14:53:33,254 qemu_monitor     L0721 DEBUG| (monitor avocado-vt-vm1.hmp1)    setup: 14 milliseconds
+2018-03-28 14:53:33,254 qemu_monitor     L0721 DEBUG| (monitor avocado-vt-vm1.hmp1)    transferred ram: 276083 kbytes
+2018-03-28 14:53:33,254 qemu_monitor     L0721 DEBUG| (monitor avocado-vt-vm1.hmp1)    throughput: 275.37 mbps
+2018-03-28 14:53:33,254 qemu_monitor     L0721 DEBUG| (monitor avocado-vt-vm1.hmp1)    remaining ram: 0 kbytes
+2018-03-28 14:53:33,254 qemu_monitor     L0721 DEBUG| (monitor avocado-vt-vm1.hmp1)    total ram: 1065800 kbytes
+2018-03-28 14:53:33,254 qemu_monitor     L0721 DEBUG| (monitor avocado-vt-vm1.hmp1)    duplicate: 199359 pages
+2018-03-28 14:53:33,255 qemu_monitor     L0721 DEBUG| (monitor avocado-vt-vm1.hmp1)    skipped: 0 pages
+2018-03-28 14:53:33,255 qemu_monitor     L0721 DEBUG| (monitor avocado-vt-vm1.hmp1)    normal: 68449 pages
+2018-03-28 14:53:33,255 qemu_monitor     L0721 DEBUG| (monitor avocado-vt-vm1.hmp1)    normal bytes: 273796 kbytes
+2018-03-28 14:53:33,255 qemu_monitor     L0721 DEBUG| (monitor avocado-vt-vm1.hmp1)    dirty sync count: 3
+2018-03-28 14:53:33,255 qemu_monitor     L0721 DEBUG| (monitor avocado-vt-vm1.hmp1)    page size: 4 kbytes
+2018-03-28 14:53:33,256 virt_vm          L0872 WARNI| Unable to read serial console
+2018-03-28 14:53:33,256 virt_vm          L0918 WARNI| Unable to read serial console
+2018-03-28 14:53:33,257 qemu_monitor     L0324 DEBUG| (monitor avocado-vt-vm1.hmp1) Sending command 'info migrate' 
+2018-03-28 14:53:33,257 qemu_monitor     L0754 DEBUG| Send command: info migrate
+2018-03-28 14:53:33,258 qemu_monitor     L0718 DEBUG| (monitor avocado-vt-vm1.hmp1) Response to 'info migrate'
+2018-03-28 14:53:33,258 qemu_monitor     L0721 DEBUG| (monitor avocado-vt-vm1.hmp1)    globals: store-global-state=1, only_migratable=0, send-configuration=1, send-section-footer=1
+2018-03-28 14:53:33,258 qemu_monitor     L0721 DEBUG| (monitor avocado-vt-vm1.hmp1)    capabilities: xbzrle: off rdma-pin-all: off auto-converge: off zero-blocks: off compress: off events: off postcopy-ram: off x-colo: off release-ram: off block: off return-path: off pause-before-switchover: off x-multifd: off 
+2018-03-28 14:53:33,258 qemu_monitor     L0721 DEBUG| (monitor avocado-vt-vm1.hmp1)    Migration status: completed
+2018-03-28 14:53:33,258 qemu_monitor     L0721 DEBUG| (monitor avocado-vt-vm1.hmp1)    total time: 8220 milliseconds
+2018-03-28 14:53:33,259 qemu_monitor     L0721 DEBUG| (monitor avocado-vt-vm1.hmp1)    downtime: 8 milliseconds
+2018-03-28 14:53:33,259 qemu_monitor     L0721 DEBUG| (monitor avocado-vt-vm1.hmp1)    setup: 14 milliseconds
+2018-03-28 14:53:33,259 qemu_monitor     L0721 DEBUG| (monitor avocado-vt-vm1.hmp1)    transferred ram: 276083 kbytes
+2018-03-28 14:53:33,259 qemu_monitor     L0721 DEBUG| (monitor avocado-vt-vm1.hmp1)    throughput: 275.37 mbps
+2018-03-28 14:53:33,259 qemu_monitor     L0721 DEBUG| (monitor avocado-vt-vm1.hmp1)    remaining ram: 0 kbytes
+2018-03-28 14:53:33,259 qemu_monitor     L0721 DEBUG| (monitor avocado-vt-vm1.hmp1)    total ram: 1065800 kbytes
+2018-03-28 14:53:33,259 qemu_monitor     L0721 DEBUG| (monitor avocado-vt-vm1.hmp1)    duplicate: 199359 pages
+2018-03-28 14:53:33,260 qemu_monitor     L0721 DEBUG| (monitor avocado-vt-vm1.hmp1)    skipped: 0 pages
+2018-03-28 14:53:33,260 qemu_monitor     L0721 DEBUG| (monitor avocado-vt-vm1.hmp1)    normal: 68449 pages
+2018-03-28 14:53:33,260 qemu_monitor     L0721 DEBUG| (monitor avocado-vt-vm1.hmp1)    normal bytes: 273796 kbytes
+2018-03-28 14:53:33,260 qemu_monitor     L0721 DEBUG| (monitor avocado-vt-vm1.hmp1)    dirty sync count: 3
+2018-03-28 14:53:33,260 qemu_monitor     L0721 DEBUG| (monitor avocado-vt-vm1.hmp1)    page size: 4 kbytes
+2018-03-28 14:53:33,260 qemu_vm          L3974 INFO | Migration completed successfully
+2018-03-28 14:53:34,287 virt_vm          L0872 WARNI| Unable to read serial console
+2018-03-28 14:53:34,288 virt_vm          L0918 WARNI| Unable to read serial console
+2018-03-28 14:53:34,290 qemu_monitor     L0324 DEBUG| (monitor avocado-vt-vm1.hmp1) Sending command 'cont' 
+2018-03-28 14:53:34,290 qemu_monitor     L0754 DEBUG| Send command: cont
+2018-03-28 14:53:34,336 qemu_vm          L3142 DEBUG| Destroying VM avocado-vt-vm1 (PID 10649)
+2018-03-28 14:53:34,336 qemu_vm          L3156 DEBUG| Ending VM avocado-vt-vm1 process (monitor)
+2018-03-28 14:53:34,367 client           L0567 INFO | [qemu output] (Process terminated with status 0)
+2018-03-28 14:53:34,837 qemu_vm          L3168 DEBUG| VM avocado-vt-vm1 down (monitor)
+2018-03-28 14:53:34,897 migration        L0230 INFO | Logging into guest after migration...
+2018-03-28 14:53:34,898 virt_vm          L1078 DEBUG| Attempting to log into 'avocado-vt-vm1' (timeout 30s)
+2018-03-28 14:53:34,934 virt_vm          L0799 DEBUG| Found/Verified IP 10.236.119.124 for VM avocado-vt-vm1 NIC 0
+2018-03-28 14:53:38,277 migration        L0232 INFO | Logged in after migration
+2018-03-28 14:53:38,278 error_context    L0079 INFO | Context: Checking the background command in the guest post migration
+2018-03-28 14:53:38,278 client           L1078 DEBUG| Sending command: pgrep tcpdump
+2018-03-28 14:53:38,397 client           L1078 DEBUG| Sending command: echo $?
+2018-03-28 14:53:38,499 client           L1078 DEBUG| Sending command: help
+2018-03-28 14:53:38,604 client           L1078 DEBUG| Sending command: pkill -9 tcpdump
+2018-03-28 14:53:38,720 client           L1078 DEBUG| Sending command: echo $?
+2018-03-28 14:53:38,833 virt_vm          L1078 DEBUG| Attempting to log into 'avocado-vt-vm1' (timeout 240s)
+2018-03-28 14:53:38,858 virt_vm          L0799 DEBUG| Found/Verified IP 10.236.119.124 for VM avocado-vt-vm1 NIC 0
+2018-03-28 14:53:40,138 client           L1078 DEBUG| Sending command: dmesg -T -l 0,1,2|grep .
+2018-03-28 14:53:40,249 client           L1078 DEBUG| Sending command: echo $?
+2018-03-28 14:53:40,572 qemu_vm          L3142 DEBUG| Destroying VM avocado-vt-vm1 (PID 11232)
+2018-03-28 14:53:40,572 qemu_vm          L3044 DEBUG| Shutting down VM avocado-vt-vm1 (shell)
+2018-03-28 14:53:44,342 client           L0567 INFO | [qemu output] (Process terminated with status 0)
+2018-03-28 14:53:45,051 qemu_vm          L3149 DEBUG| VM avocado-vt-vm1 down (shell)
+2018-03-28 14:53:45,132 qemu_storage     L0497 DEBUG| Checking image file /var/lib/avocado/data/avocado-vt/images/jeos-27-x86_64.qcow2
+2018-03-28 14:53:45,132 qemu_storage     L0397 DEBUG| Run qemu-img info comamnd on /var/lib/avocado/data/avocado-vt/images/jeos-27-x86_64.qcow2
+2018-03-28 14:53:45,133 process          L0523 INFO | Running '/usr/bin/qemu-img info -U /var/lib/avocado/data/avocado-vt/images/jeos-27-x86_64.qcow2'
+2018-03-28 14:53:45,139 process          L0367 DEBUG| [stdout] image: /var/lib/avocado/data/avocado-vt/images/jeos-27-x86_64.qcow2
+2018-03-28 14:53:45,139 process          L0605 INFO | Command '/usr/bin/qemu-img info -U /var/lib/avocado/data/avocado-vt/images/jeos-27-x86_64.qcow2' finished with 0 after 0.00213599205017s
+2018-03-28 14:53:45,139 process          L0367 DEBUG| [stdout] file format: qcow2
+2018-03-28 14:53:45,140 process          L0367 DEBUG| [stdout] virtual size: 10G (10737418240 bytes)
+2018-03-28 14:53:45,140 process          L0367 DEBUG| [stdout] disk size: 967M
+2018-03-28 14:53:45,140 process          L0367 DEBUG| [stdout] cluster_size: 65536
+2018-03-28 14:53:45,140 process          L0367 DEBUG| [stdout] Format specific information:
+2018-03-28 14:53:45,140 process          L0367 DEBUG| [stdout]     compat: 1.1
+2018-03-28 14:53:45,140 process          L0367 DEBUG| [stdout]     lazy refcounts: false
+2018-03-28 14:53:45,140 process          L0367 DEBUG| [stdout]     refcount bits: 16
+2018-03-28 14:53:45,140 process          L0367 DEBUG| [stdout]     corrupt: false
+2018-03-28 14:53:45,205 storage          L0330 DEBUG| Copying /var/lib/avocado/data/avocado-vt/images/jeos-27-x86_64.qcow2.backup -> /var/lib/avocado/data/avocado-vt/images/jeos-27-x86_64.qcow2
+2018-03-28 14:53:46,178 env_process      L1448 WARNI| avocado-vt-vm1 is not alive. Can't query the register status
+2018-03-28 14:53:52,596 env_process      L1434 DEBUG| Thread quit. Used to failed to get register info from guest 20180328-145321-CoBg5Bo7 for 3 times.
+2018-03-28 14:53:52,728 utils_libvirtd   L0045 WARNI| Libvirtd service is not available in host, utils_libvirtd module will not function normally
+2018-03-28 14:53:52,729 process          L0523 INFO | Running 'true'
+2018-03-28 14:53:52,739 process          L0605 INFO | Command 'true' finished with 0 after 0.0014181137085s
+2018-03-28 14:53:52,740 process          L0523 INFO | Running 'ps -o comm 1'
+2018-03-28 14:53:52,780 process          L0367 DEBUG| [stdout] COMMAND
+2018-03-28 14:53:52,781 process          L0605 INFO | Command 'ps -o comm 1' finished with 0 after 0.0329480171204s
+2018-03-28 14:53:52,781 process          L0367 DEBUG| [stdout] systemd
+2018-03-28 14:53:53,664 test             L0286 DEBUG| DATA (filename=output.expected) => NOT FOUND (data sources: variant, test, file)
+2018-03-28 14:53:53,664 test             L0286 DEBUG| DATA (filename=stdout.expected) => NOT FOUND (data sources: variant, test, file)
+2018-03-28 14:53:53,664 test             L0286 DEBUG| DATA (filename=stderr.expected) => NOT FOUND (data sources: variant, test, file)
+2018-03-28 14:53:53,678 test             L1017 INFO | PASS 1-type_specific.io-github-autotest-qemu.migrate.default.tcp
+2018-03-28 14:53:53,678 test             L1000 INFO | 
+2018-03-28 14:53:54,042 process          L0523 INFO | Running '/usr/sbin/ovs-vswitchd --version'
+2018-03-28 14:53:54,051 process          L0367 DEBUG| [stdout] ovs-vswitchd (Open vSwitch) 2.8.1
+2018-03-28 14:53:54,052 process          L0605 INFO | Command '/usr/sbin/ovs-vswitchd --version' finished with 0 after 0.00223803520203s
+2018-03-28 14:53:54,054 process          L0523 INFO | Running '/usr/sbin/ovs-vswitchd --version'
+2018-03-28 14:53:54,062 process          L0367 DEBUG| [stdout] ovs-vswitchd (Open vSwitch) 2.8.1
+2018-03-28 14:53:54,063 process          L0605 INFO | Command '/usr/sbin/ovs-vswitchd --version' finished with 0 after 0.00208401679993s
+2018-03-28 14:53:54,099 job              L0483 INFO | Test results available in /home/jenkins/avocado/job-results/job-2018-03-28T14.46-1eba939
