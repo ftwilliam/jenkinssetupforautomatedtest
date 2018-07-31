@@ -5,7 +5,7 @@
     <string>jenkins.diagnostics.SecurityIsOffMonitor</string>
     <string>jenkins.security.s2m.MasterKillSwitchWarning</string>
   </disabledAdministrativeMonitors>
-  <version>2.134</version>
+  <version>2.138</version>
   <installStateName>RESTART</installStateName>
   <numExecutors>4</numExecutors>
   <mode>NORMAL</mode>
@@ -160,7 +160,7 @@
         <hudson.views.LastDurationColumn/>
         <hudson.plugins.UpDownStreamViewColumn plugin="upstream-downstream-view@1.006"/>
         <hudson.views.BuildButtonColumn/>
-        <jenkins.plugins.extracolumns.DisableProjectColumn plugin="extra-columns@1.19">
+        <jenkins.plugins.extracolumns.DisableProjectColumn plugin="extra-columns@1.20">
           <useIcon>true</useIcon>
         </jenkins.plugins.extracolumns.DisableProjectColumn>
       </columns>
@@ -228,7 +228,6 @@
       <jobNames>
         <comparator class="hudson.util.CaseInsensitiveComparator"/>
         <string>provisioning.starship</string>
-        <string>tests.starship.start</string>
       </jobNames>
       <jobFilters/>
       <columns>
@@ -272,6 +271,29 @@
       <refreshFrequency>3</refreshFrequency>
       <showPipelineDefinitionHeader>false</showPipelineDefinitionHeader>
     </au.com.centrumsystems.hudson.plugin.buildpipeline.BuildPipelineView>
+    <listView>
+      <owner class="hudson" reference="../../.."/>
+      <name>lkpTests</name>
+      <filterExecutors>false</filterExecutors>
+      <filterQueue>false</filterQueue>
+      <properties class="hudson.model.View$PropertyList"/>
+      <jobNames>
+        <comparator class="hudson.util.CaseInsensitiveComparator"/>
+      </jobNames>
+      <jobFilters/>
+      <columns>
+        <hudson.views.StatusColumn/>
+        <hudson.views.WeatherColumn/>
+        <hudson.views.JobColumn/>
+        <hudson.views.LastSuccessColumn/>
+        <hudson.views.LastFailureColumn/>
+        <hudson.views.LastDurationColumn/>
+        <hudson.plugins.UpDownStreamViewColumn plugin="upstream-downstream-view@1.006"/>
+        <hudson.views.BuildButtonColumn/>
+      </columns>
+      <includeRegex>.+\.lkp.*</includeRegex>
+      <recurse>false</recurse>
+    </listView>
   </views>
   <primaryView>Tests</primaryView>
   <slaveAgentPort>-1</slaveAgentPort>

@@ -1,40 +1,24 @@
 Started by user [8mha:////4P5oqbiDCv/29AmYake8E+zpu/gy/ryniUjftzEVtlv7AAAAmB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAy+EgYe/dLi1CL98pLE3KRUAMN7XeHBAAAA[0mTambe, William
-[lockable-resources] acquired lock on [sos-dsldbg-00]
+[lockable-resources] acquired lock on [ethanolxb2abhost]
 Building in workspace /var/lib/jenkins/workspace/avocadodbench.starship
 [WS-CLEANUP] Deleting project workspace...
-[avocadodbench.starship] $ /bin/sh -xe /tmp/jenkins9105655026601179667.sh
+[WS-CLEANUP] Done
+[avocadodbench.starship] $ /bin/sh -xe /tmp/jenkins2636083343541110106.sh
 ++ cd /var/lib/jenkins
 ++ ./resourceslockedby.py avocadodbench.starship#1
-+ RESOURCES=sos-dsldbg-00
++ RESOURCES=ethanolxb2abhost
 + :
 + for R in ${RESOURCES}
-+ echo -n '"sos-dsldbg-00",'
++ echo -n '"ethanolxb2abhost",'
 + truncate --size=-1 plot.csv
 + echo
 ++ echo avocadodbench.starship
 ++ grep -oP '(?<=\.)v.+\..+(?=\.)'
 ++ :
 + KERNVER=
-+ TIMEOUT=1800
-+ ITERATIONS=1
++ TIMEOUT=3600
++ ITERATIONS=4
 + for R in ${RESOURCES}
 + wait
-+ continue
-+ echo -n 'Kernel Release: '
-+ for R in ${RESOURCES}
-+ '[' -f sos-dsldbg-00.kernelrelease ']'
-+ truncate --size=-2 kernelreleases
-++ cat kernelreleases
-+ echo '[Kernel' 'Release]'
-[Kernel Release]
-+ for R in ${RESOURCES}
-++ cat sos-dsldbg-00.plotval
-+ echo -n ,
-+ truncate --size=-1 plot.csv
-+ echo
-Archiving artifacts
-Recording plot data
-[description-setter] Could not determine description.
-[lockable-resources] released lock on [sos-dsldbg-00]
-[8mha:////4EoQXCCvCL1ZAUvbxERBMTGFvdw8yZlTD18gs9e3mwThAAAAqB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzxEgZZ/az8JP3EsvzkxJT8tEygouISveKSxKLijMwCfQAg0vi80gAAAA==[0mavocadofiotest.starship is disabled. Triggering skipped
-Finished: SUCCESS
++ cd /var/lib/jenkins
++ ./rebootresource.sh jenkins@ethanolxb2abhost

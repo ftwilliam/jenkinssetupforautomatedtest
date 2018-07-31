@@ -173,6 +173,16 @@ ssh jenkins@$1 <<-EOF
 		sudo python setup.py install
 		yes | sudo avocado vt-bootstrap
 	)
+
+	#  Install lkp-tests
+	git clone https://github.com/01org/lkp-tests.git
+	cd lkp-tests
+	sudo make install
+	# remove any sos repo; as it conflicts;
+	# it will be restored by test neededing it.
+	sudo rm -rf /etc/apt/sources.list.d/*sos*
+	sudo apt update
+	sudo lkp install
 EOF
 
 # Install configuration files used with avocado-vt.

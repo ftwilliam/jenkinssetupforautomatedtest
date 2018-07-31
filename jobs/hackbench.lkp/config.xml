@@ -1,0 +1,181 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<project>
+  <actions/>
+  <description>&lt;img src=&quot;http://avocado-server:8080/job/hackbench.lkp/plot/getPlot?index=0&amp;width=750&amp;height=450&quot;/&gt;</description>
+  <keepDependencies>false</keepDependencies>
+  <properties>
+    <org.jenkins.plugins.lockableresources.RequiredResourcesProperty plugin="lockable-resources@2.3">
+      <resourceNames>diesel8a87host</resourceNames>
+    </org.jenkins.plugins.lockableresources.RequiredResourcesProperty>
+  </properties>
+  <scm class="hudson.scm.NullSCM"/>
+  <canRoam>true</canRoam>
+  <disabled>false</disabled>
+  <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
+  <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
+  <triggers>
+    <hudson.triggers.TimerTrigger>
+      <spec>H H/24 * * *</spec>
+    </hudson.triggers.TimerTrigger>
+  </triggers>
+  <concurrentBuild>false</concurrentBuild>
+  <builders>
+    <hudson.tasks.Shell>
+      <command># Get list of resources locked by this build.
+RESOURCES=${RESOURCES:-$(cd ${JENKINS_HOME} &amp;&amp; ./resourceslockedby.py ${JOB_BASE_NAME}#${BUILD_NUMBER})}
+
+# Create csv header.
+:&gt; plot.csv
+for R in ${RESOURCES}; do
+	echo -n \&quot;${R}\&quot;, &gt;&gt; plot.csv
+done
+truncate --size=-1 plot.csv
+echo &gt;&gt; plot.csv
+
+# Kernel version to use.
+KERNVER=${KERNVER:-$(echo ${JOB_BASE_NAME} | grep -oP &apos;(?&lt;=\.)v.+\..+(?=\.)&apos; || :;)}
+
+TIMEOUT=1800
+ITERATIONS=1
+
+# Run test on each resource.
+for R in ${RESOURCES}; do
+	# In order to execute in parallel, each
+	# ressource test run within its own subshell.
+	(
+		# Insure resource provisioned for test.
+        if ! (cd ${JENKINS_HOME} &amp;&amp; ./checkresourceprovisioned.sh ${R}) &amp;&gt; ${R}.checkresourceprovisioned.log; then
+			# Continue on to the next resource if
+			# the provision-check fail on this resource.
+			continue
+		fi
+		# Check if a new kernel need to be installed.
+		if ssh -q jenkins@${R} &apos;./checkfornewkerneltag.sh https://github.com/torvalds/linux.git&apos; ${KERNVER} &amp;&gt; ${R}.checkfornewkerneltag.log; then
+			# Get the version built.
+            kernbuilt=$(ssh -q jenkins@${R} ls kernel/linux-image* | grep -oP &quot;(?&lt;=linux-image-).+(?=-jenkins_)&quot;)
+			# Reboot resource into kernel version built.
+			(cd ${JENKINS_HOME} &amp;&amp; ./rebootresource.sh jenkins@${R} ${kernbuilt} &amp;&gt; /dev/null)
+		fi
+		echo &quot;${R}: $(ssh -q jenkins@${R} &apos;uname -r&apos;)&quot; &gt; ${R}.kernelrelease
+		
+		timeout -sKILL ${TIMEOUT} ssh -q jenkins@${R} &amp;&gt; ${R}.ssh.log &lt;&lt;-EOF
+			# remove any sos repo; as it conflicts;
+			# it will be restored by test neededing it.
+			sudo rm /etc/apt/sources.list.d/*sos*
+			sudo apt update
+			
+	        # Remove any previous lkp result.
+			#sudo rm -rf /lkp/result/*
+			
+			# make working directory.
+			mkdir -p lkp-tests-runs
+			
+			cd lkp-tests-runs
+			
+			# Generate hackbench tests.
+			lkp split-job ../lkp-tests/jobs/hackbench.yaml
+			
+			# Install test dependencies.
+			sudo lkp install ./hackbench-50%-process-pipe.yaml
+			
+			# Run test.
+			sudo lkp run ./hackbench-50%-process-pipe.yaml
+		EOF
+
+		if [ ${PIPESTATUS[0]} -eq 0 ]; then
+			AVOCADO_LOG_PATH=$(cat ${R}.ssh.log | fgrep &apos;JOB LOG&apos; | grep -oP &apos;(?&lt;=: ).+$&apos;)
+			scp jenkins@${R}:${AVOCADO_LOG_PATH} ${R}.avocado.log
+			plotval=$(echo $(cat ${R}.avocado.log | fgrep &apos;Time Taken:&apos; | grep -oP &apos;(?&lt;=Time Taken:)[0-9.]+$&apos;) /${ITERATIONS} | bc -l)
+			# Average with previous value if available,
+			# in an attempt to remove noise from plots.
+			if [ -f ${R}.prevplotval ]; then
+				plotval=$(echo \($(cat ${R}.prevplotval)+${plotval}\)/2 | bc -l)
+			fi
+			echo -n &quot;${plotval}&quot; &gt; ${R}.prevplotval
+			echo -n &quot;${plotval}&quot; &gt; ${R}.plotval
+		fi
+	) &amp;
+done
+
+# Wait for all subshells.
+wait
+
+# Generate &quot;Kernel Release:&quot; line for
+# the &quot;Set Build Description&quot; plugin.
+echo -n &quot;Kernel Release: &quot; &gt; kernelreleases
+for R in ${RESOURCES}; do
+	if [ -f ${R}.kernelrelease ]; then
+		echo -n &quot;$(cat ${R}.kernelrelease 2&gt;/dev/null | grep -oP &apos;.+(?=-jenkins)&apos;), &quot; &gt;&gt; kernelreleases
+	fi
+done
+truncate --size=-2 kernelreleases
+echo [$(cat kernelreleases)]
+
+# Finalize csv with plot values.
+for R in ${RESOURCES}; do
+	echo -n &quot;$(cat ${R}.plotval 2&gt;/dev/null),&quot; &gt;&gt; plot.csv
+done
+truncate --size=-1 plot.csv
+echo &gt;&gt; plot.csv
+</command>
+    </hudson.tasks.Shell>
+  </builders>
+  <publishers>
+    <hudson.tasks.ArtifactArchiver>
+      <artifacts>*.log, *.csv</artifacts>
+      <allowEmptyArchive>false</allowEmptyArchive>
+      <onlyIfSuccessful>false</onlyIfSuccessful>
+      <fingerprint>false</fingerprint>
+      <defaultExcludes>true</defaultExcludes>
+      <caseSensitive>true</caseSensitive>
+    </hudson.tasks.ArtifactArchiver>
+    <hudson.plugins.plot.PlotPublisher plugin="plot@2.1.0">
+      <plots>
+        <hudson.plugins.plot.Plot>
+          <title>hackbench.lkp</title>
+          <yaxis>Seconds</yaxis>
+          <series>
+            <hudson.plugins.plot.CSVSeries>
+              <file>plot.csv</file>
+              <label></label>
+              <fileType>csv</fileType>
+              <inclusionFlag>OFF</inclusionFlag>
+              <exclusionValues></exclusionValues>
+              <url></url>
+              <displayTableFlag>false</displayTableFlag>
+            </hudson.plugins.plot.CSVSeries>
+          </series>
+          <group>hackbench.lkp</group>
+          <numBuilds></numBuilds>
+          <csvFileName>plot-7746477396399308319.csv</csvFileName>
+          <csvLastModification>0</csvLastModification>
+          <style>lineSimple</style>
+          <useDescr>false</useDescr>
+          <keepRecords>false</keepRecords>
+          <exclZero>false</exclZero>
+          <logarithmic>false</logarithmic>
+          <yaxisMinimum></yaxisMinimum>
+          <yaxisMaximum></yaxisMaximum>
+        </hudson.plugins.plot.Plot>
+      </plots>
+    </hudson.plugins.plot.PlotPublisher>
+    <hudson.plugins.descriptionsetter.DescriptionSetterPublisher plugin="description-setter@1.10">
+      <regexp>(?&lt;=\[Kernel Release: ).+(?=\])</regexp>
+      <regexpForFailed></regexpForFailed>
+      <setForMatrix>false</setForMatrix>
+    </hudson.plugins.descriptionsetter.DescriptionSetterPublisher>
+  </publishers>
+  <buildWrappers>
+    <hudson.plugins.ws__cleanup.PreBuildCleanup plugin="ws-cleanup@0.34">
+      <patterns>
+        <hudson.plugins.ws__cleanup.Pattern>
+          <pattern>*.prevplotval</pattern>
+          <type>EXCLUDE</type>
+        </hudson.plugins.ws__cleanup.Pattern>
+      </patterns>
+      <deleteDirs>false</deleteDirs>
+      <cleanupParameter></cleanupParameter>
+      <externalDelete></externalDelete>
+    </hudson.plugins.ws__cleanup.PreBuildCleanup>
+  </buildWrappers>
+</project>

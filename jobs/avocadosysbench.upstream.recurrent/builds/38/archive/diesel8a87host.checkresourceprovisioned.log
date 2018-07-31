@@ -1,9 +1,0 @@
-+ cd /var/lib/jenkins
-+ ./checkresourceprovisioned.sh diesel8a87host
-+ set -e
-+ ping -c 1 diesel8a87host
-+ ssh -q -o PasswordAuthentication=no -o StrictHostKeyChecking=no jenkins@diesel8a87host 'test ! -f checkfornewkerneltag.sh'
-+ '[' 1 -eq 1 ']'
-+ scp checkfornewkerneltag.sh jenkins@diesel8a87host:
-+ scp checkfornewqemutag.sh jenkins@diesel8a87host:
-+ exit

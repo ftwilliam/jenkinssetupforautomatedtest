@@ -1,71 +1,70 @@
-Started by user [8mha:////4FqkCksSARbySc15RUTa15KLDuDohiBDNYbuyYSsWMPyAAAAlR+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzmEgZO/dLi1CL9xNwUAAxcekO+AAAA[0mamd
+Started by user [8mha:////4P5oqbiDCv/29AmYake8E+zpu/gy/ryniUjftzEVtlv7AAAAmB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAy+EgYe/dLi1CL98pLE3KRUAMN7XeHBAAAA[0mTambe, William
 [lockable-resources] acquired lock on [diesel8a87host]
-Building in workspace /var/lib/jenkins/workspace/avocadodbench.recurrent
+Building in workspace /var/lib/jenkins/workspace/avocadodbench.upstream.recurrent
 [WS-CLEANUP] Deleting project workspace...
 [WS-CLEANUP] Done
-[avocadodbench.recurrent] $ /bin/sh -xe /tmp/jenkins8670347209991045297.sh
+[avocadodbench.upstream.recurrent] $ /bin/sh -xe /tmp/jenkins2502427263919842616.sh
 ++ cd /var/lib/jenkins
-++ ./resourceslockedby.py avocadodbench.recurrent#1
+++ ./resourceslockedby.py avocadodbench.upstream.recurrent#1
 + RESOURCES=diesel8a87host
 + :
 + for R in ${RESOURCES}
 + echo -n '"diesel8a87host",'
 + truncate --size=-1 plot.csv
 + echo
-++ echo avocadodbench.recurrent
+++ echo avocadodbench.upstream.recurrent
 ++ grep -oP '(?<=\.)v.+\..+(?=\.)'
 ++ :
 + KERNVER=
 + TIMEOUT=1800
-+ ITERATIONS=1
++ ITERATIONS=64
 + for R in ${RESOURCES}
 + wait
 + ssh -q jenkins@diesel8a87host './checkfornewkerneltag.sh https://github.com/torvalds/linux.git'
 ++ ssh -q jenkins@diesel8a87host 'uname -r'
-+ echo 'diesel8a87host: 4.17.0-rc5-jenkins'
++ echo 'diesel8a87host: 4.17.0-amdsos-build6+'
 + timeout -sKILL 1800 ssh -q jenkins@diesel8a87host
 + '[' 0 -eq 0 ']'
 ++ cat diesel8a87host.ssh.log
 ++ fgrep 'JOB LOG'
 ++ grep -oP '(?<=: ).+$'
-+ AVOCADO_LOG_PATH=/home/jenkins/avocado/job-results/job-2018-05-14T10.01-84c14dc/job.log
-+ scp jenkins@diesel8a87host:/home/jenkins/avocado/job-results/job-2018-05-14T10.01-84c14dc/job.log diesel8a87host.avocado.log
++ AVOCADO_LOG_PATH=/home/jenkins/avocado/job-results/job-2018-08-21T11.40-ebae839/job.log
++ scp jenkins@diesel8a87host:/home/jenkins/avocado/job-results/job-2018-08-21T11.40-ebae839/job.log diesel8a87host.avocado.log
 + bc -l
 ++ cat diesel8a87host.avocado.log
 ++ fgrep -m1 'Throughput '
 ++ grep -oP '(?<=Throughput )[0-9.]+'
-+ echo 9104.68 /1
-9104.68000000000000000000
++ echo 9019.86 /64
+140.93531250000000000000
 ++ bc -l
 +++ cat diesel8a87host.avocado.log
 +++ fgrep -m1 'Throughput '
 +++ grep -oP '(?<=Throughput )[0-9.]+'
-++ echo 9104.68 /1
-+ plotval=9104.68000000000000000000
+++ echo 9019.86 /64
++ plotval=140.93531250000000000000
 + '[' -f diesel8a87host.prevplotval ']'
 ++ bc -l
 +++ cat diesel8a87host.prevplotval
-++ echo '(9748.37000000000000000000+9104.68000000000000000000)/2'
-+ plotval=9426.52500000000000000000
-+ echo -n 9426.52500000000000000000
-+ echo -n 9426.52500000000000000000
+++ echo '(9266.57329849874029076035+140.93531250000000000000)/2'
++ plotval=4703.75430549937014538017
++ echo -n 4703.75430549937014538017
++ echo -n 4703.75430549937014538017
 + echo -n 'Kernel Release: '
 + for R in ${RESOURCES}
 + '[' -f diesel8a87host.kernelrelease ']'
 ++ cat diesel8a87host.kernelrelease
-++ grep -oP '.+(?=-jenkins)'
-+ echo -n 'diesel8a87host: 4.17.0-rc5, '
++ echo -n 'diesel8a87host: 4.17.0-amdsos-build6+, '
 + truncate --size=-2 kernelreleases
 ++ cat kernelreleases
-+ echo '[Kernel' Release: diesel8a87host: '4.17.0-rc5]'
-[Kernel Release: diesel8a87host: 4.17.0-rc5]
++ echo '[Kernel' Release: diesel8a87host: '4.17.0-amdsos-build6+]'
+[Kernel Release: diesel8a87host: 4.17.0-amdsos-build6+]
 + for R in ${RESOURCES}
 ++ cat diesel8a87host.plotval
-+ echo -n 9426.52500000000000000000,
++ echo -n 4703.75430549937014538017,
 + truncate --size=-1 plot.csv
 + echo
 Archiving artifacts
 Recording plot data
-[description-setter] Description set: diesel8a87host: 4.17.0-rc5
+[description-setter] Description set: diesel8a87host: 4.17.0-amdsos-build6+
 [lockable-resources] released lock on [diesel8a87host]
 Finished: SUCCESS

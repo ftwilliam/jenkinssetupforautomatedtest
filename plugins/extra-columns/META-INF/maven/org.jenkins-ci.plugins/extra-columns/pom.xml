@@ -8,12 +8,12 @@
 
     <artifactId>extra-columns</artifactId>
     <packaging>hpi</packaging>
-    <version>1.19</version>
+    <version>1.20</version>
     <name>Extra Columns Plugin</name>
     <url>http://wiki.jenkins-ci.org/display/JENKINS/Extra+Columns+Plugin</url>
 
     <properties>
-        <jenkins.version>1.580</jenkins.version>
+        <jenkins.version>1.607</jenkins.version>
     </properties>
 
     <developers>
@@ -35,7 +35,7 @@
         <connection>scm:git:git://github.com/jenkinsci/extra-columns-plugin.git</connection>
         <developerConnection>scm:git:git@github.com:jenkinsci/extra-columns-plugin.git</developerConnection>
         <url>https://github.com/jenkinsci/extra-columns-plugin</url>
-        <tag>extra-columns-1.19</tag>
+        <tag>extra-columns-1.20</tag>
     </scm>
 
     <dependencies>
@@ -43,6 +43,12 @@
             <groupId>org.jenkins-ci.plugins</groupId>
             <artifactId>junit</artifactId>
             <version>1.11</version>
+        </dependency>
+        <dependency>
+            <groupId>org.jenkins-ci.plugins.workflow</groupId>
+            <artifactId>workflow-job</artifactId>
+            <version>2.0</version>
+            <optional>true</optional>
         </dependency>
     </dependencies>
 

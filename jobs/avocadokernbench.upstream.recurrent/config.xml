@@ -5,7 +5,7 @@
 </description>
   <keepDependencies>false</keepDependencies>
   <properties>
-    <org.jenkins.plugins.lockableresources.RequiredResourcesProperty plugin="lockable-resources@2.2">
+    <org.jenkins.plugins.lockableresources.RequiredResourcesProperty plugin="lockable-resources@2.3">
       <resourceNames>diesel8a87host</resourceNames>
     </org.jenkins.plugins.lockableresources.RequiredResourcesProperty>
   </properties>
@@ -39,7 +39,7 @@ echo &gt;&gt; plot.csv
 KERNVER=${KERNVER:-$(echo ${JOB_BASE_NAME} | grep -oP &apos;(?&lt;=\.)v.+\..+(?=\.)&apos; || :;)}
 
 TIMEOUT=1800
-ITERATIONS=1
+ITERATIONS=16
 
 # Run test on each resource.
 for R in ${RESOURCES}; do
@@ -103,7 +103,7 @@ wait
 echo -n &quot;Kernel Release: &quot; &gt; kernelreleases
 for R in ${RESOURCES}; do
 	if [ -f ${R}.kernelrelease ]; then
-		echo -n &quot;$(cat ${R}.kernelrelease 2&gt;/dev/null | grep -oP &apos;.+(?=-jenkins)&apos;), &quot; &gt;&gt; kernelreleases
+		echo -n &quot;$(cat ${R}.kernelrelease 2&gt;/dev/null), &quot; &gt;&gt; kernelreleases
 	fi
 done
 truncate --size=-2 kernelreleases
@@ -129,7 +129,7 @@ echo &gt;&gt; plot.csv
       <defaultExcludes>true</defaultExcludes>
       <caseSensitive>true</caseSensitive>
     </hudson.tasks.ArtifactArchiver>
-    <hudson.plugins.plot.PlotPublisher plugin="plot@2.0.4">
+    <hudson.plugins.plot.PlotPublisher plugin="plot@2.1.0">
       <plots>
         <hudson.plugins.plot.Plot>
           <title>avocadokernbench</title>

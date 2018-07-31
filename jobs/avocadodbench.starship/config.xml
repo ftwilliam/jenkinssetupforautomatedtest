@@ -4,8 +4,8 @@
   <description>&lt;img src=&quot;http://avocado-server:8080/job/avocadodbench.starship/plot/getPlot?index=0&amp;width=750&amp;height=450&quot;/&gt;</description>
   <keepDependencies>false</keepDependencies>
   <properties>
-    <org.jenkins.plugins.lockableresources.RequiredResourcesProperty plugin="lockable-resources@2.2">
-      <labelName>Starship</labelName>
+    <org.jenkins.plugins.lockableresources.RequiredResourcesProperty plugin="lockable-resources@2.3">
+      <resourceNames>ethanolxb2abhost</resourceNames>
     </org.jenkins.plugins.lockableresources.RequiredResourcesProperty>
   </properties>
   <scm class="hudson.scm.NullSCM"/>
@@ -42,8 +42,8 @@ echo &gt;&gt; plot.csv
 # Kernel version to use.
 KERNVER=${KERNVER:-$(echo ${JOB_BASE_NAME} | grep -oP &apos;(?&lt;=\.)v.+\..+(?=\.)&apos; || :;)}
 
-TIMEOUT=1800
-ITERATIONS=1
+TIMEOUT=3600
+ITERATIONS=4
 
 # Run test on each resource.
 for R in ${RESOURCES}; do

@@ -4,8 +4,8 @@
   <description></description>
   <keepDependencies>false</keepDependencies>
   <properties>
-    <org.jenkins.plugins.lockableresources.RequiredResourcesProperty plugin="lockable-resources@2.2">
-      <labelName>Starship</labelName>
+    <org.jenkins.plugins.lockableresources.RequiredResourcesProperty plugin="lockable-resources@2.3">
+      <resourceNames>ethanolxb2abhost</resourceNames>
     </org.jenkins.plugins.lockableresources.RequiredResourcesProperty>
   </properties>
   <scm class="hudson.scm.NullSCM"/>
@@ -50,6 +50,7 @@ for R in ${RESOURCES}; do
 				(cd ${JENKINS_HOME} &amp;&amp; ./rebootresource.sh jenkins@${R} &amp;&gt; /dev/null)
 			fi
 		fi
+		echo &quot;${R}: $(ssh -q jenkins@${R} &apos;uname -r&apos;)&quot; &gt; ${R}.kernelrelease
 	) &amp;
 done
 
