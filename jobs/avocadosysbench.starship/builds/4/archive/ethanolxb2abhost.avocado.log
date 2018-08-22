@@ -1,0 +1,1468 @@
+2018-08-22 13:55:55,838 extension        L0189 DEBUG| found extension EntryPoint.parse('journal = avocado.plugins.journal:JournalResult')
+2018-08-22 13:55:55,838 extension        L0189 DEBUG| found extension EntryPoint.parse('tap = avocado.plugins.tap:TAPResult')
+2018-08-22 13:55:55,838 extension        L0189 DEBUG| found extension EntryPoint.parse('human = avocado.plugins.human:Human')
+2018-08-22 13:55:55,839 extension        L0189 DEBUG| found extension EntryPoint.parse('vt-joblock = avocado_vt.plugins.vt_joblock:VTJobLock')
+2018-08-22 13:55:55,840 extension        L0189 DEBUG| found extension EntryPoint.parse('teststmpdir = avocado.plugins.teststmpdir:TestsTmpDir')
+2018-08-22 13:55:55,841 extension        L0189 DEBUG| found extension EntryPoint.parse('jobscripts = avocado.plugins.jobscripts:JobScripts')
+2018-08-22 13:55:55,842 extension        L0189 DEBUG| found extension EntryPoint.parse('human = avocado.plugins.human:HumanJob')
+2018-08-22 13:55:55,848 extension        L0189 DEBUG| found extension EntryPoint.parse('yaml_to_mux = avocado_varianter_yaml_to_mux:YamlToMux')
+2018-08-22 13:55:55,853 sysinfo          L0392 DEBUG| File /etc/avocado/sysinfo/commands does not exist.
+2018-08-22 13:55:55,853 sysinfo          L0403 DEBUG| File /etc/avocado/sysinfo/files does not exist.
+2018-08-22 13:55:55,853 sysinfo          L0430 DEBUG| File /etc/avocado/sysinfo/profilers does not exist.
+2018-08-22 13:55:56,078 job              L0327 INFO | Command line: /usr/local/bin/avocado run ./avocado-misc-tests/generic/sysbench.py -m avocadosysbench.starship.yaml
+2018-08-22 13:55:56,078 job              L0328 INFO | 
+2018-08-22 13:55:56,078 job              L0362 INFO | Avocado version: 58.0
+2018-08-22 13:55:56,078 job              L0363 INFO | 
+2018-08-22 13:55:56,078 job              L0367 INFO | Config files read (in order):
+2018-08-22 13:55:56,078 job              L0369 INFO | /usr/local/lib/python2.7/dist-packages/avocado_framework-58.0-py2.7.egg/avocado/etc/avocado/avocado.conf
+2018-08-22 13:55:56,078 job              L0369 INFO | /usr/local/lib/python2.7/dist-packages/avocado_framework-58.0-py2.7.egg/avocado/etc/avocado/conf.d/jobscripts.conf
+2018-08-22 13:55:56,079 job              L0369 INFO | /usr/local/lib/python2.7/dist-packages/avocado_framework-58.0-py2.7.egg/avocado/etc/avocado/conf.d/gdb.conf
+2018-08-22 13:55:56,079 job              L0369 INFO | /usr/local/lib/python2.7/dist-packages/avocado_framework-58.0-py2.7.egg/avocado/etc/avocado/conf.d/result_upload.conf
+2018-08-22 13:55:56,079 job              L0369 INFO | /usr/local/lib/python2.7/dist-packages/avocado_framework-58.0-py2.7.egg/avocado/etc/avocado/conf.d/resultsdb.conf
+2018-08-22 13:55:56,079 job              L0369 INFO | /home/jenkins/.config/avocado/avocado.conf
+2018-08-22 13:55:56,079 job              L0374 INFO | 
+2018-08-22 13:55:56,079 job              L0376 INFO | Avocado config:
+2018-08-22 13:55:56,080 job              L0385 INFO | Section.Key                              Value
+2018-08-22 13:55:56,080 job              L0385 INFO | datadir.paths.base_dir                   /var/lib/avocado
+2018-08-22 13:55:56,080 job              L0385 INFO | datadir.paths.test_dir                   /usr/share/avocado/tests
+2018-08-22 13:55:56,080 job              L0385 INFO | datadir.paths.data_dir                   /var/lib/avocado/data
+2018-08-22 13:55:56,080 job              L0385 INFO | datadir.paths.logs_dir                   ~/avocado/job-results
+2018-08-22 13:55:56,081 job              L0385 INFO | sysinfo.collect.enabled                  True
+2018-08-22 13:55:56,081 job              L0385 INFO | sysinfo.collect.commands_timeout         -1
+2018-08-22 13:55:56,081 job              L0385 INFO | sysinfo.collect.installed_packages       False
+2018-08-22 13:55:56,081 job              L0385 INFO | sysinfo.collect.profiler                 False
+2018-08-22 13:55:56,081 job              L0385 INFO | sysinfo.collect.locale                   C
+2018-08-22 13:55:56,081 job              L0385 INFO | sysinfo.collect.per_test                 False
+2018-08-22 13:55:56,081 job              L0385 INFO | sysinfo.collectibles.commands            /etc/avocado/sysinfo/commands
+2018-08-22 13:55:56,081 job              L0385 INFO | sysinfo.collectibles.files               /etc/avocado/sysinfo/files
+2018-08-22 13:55:56,081 job              L0385 INFO | sysinfo.collectibles.profilers           /etc/avocado/sysinfo/profilers
+2018-08-22 13:55:56,081 job              L0385 INFO | runner.output.colored                    True
+2018-08-22 13:55:56,081 job              L0385 INFO | runner.output.utf8                       
+2018-08-22 13:55:56,081 job              L0385 INFO | remoter.behavior.reject_unknown_hosts    False
+2018-08-22 13:55:56,081 job              L0385 INFO | remoter.behavior.disable_known_hosts     False
+2018-08-22 13:55:56,081 job              L0385 INFO | job.output.loglevel                      debug
+2018-08-22 13:55:56,082 job              L0385 INFO | restclient.connection.hostname           localhost
+2018-08-22 13:55:56,082 job              L0385 INFO | restclient.connection.port               9405
+2018-08-22 13:55:56,082 job              L0385 INFO | restclient.connection.username           
+2018-08-22 13:55:56,082 job              L0385 INFO | restclient.connection.password           
+2018-08-22 13:55:56,082 job              L0385 INFO | plugins.disable                          []
+2018-08-22 13:55:56,082 job              L0385 INFO | plugins.skip_broken_plugin_notification  []
+2018-08-22 13:55:56,082 job              L0385 INFO | plugins.loaders                          ['file', '@DEFAULT']
+2018-08-22 13:55:56,082 job              L0385 INFO | plugins.jobscripts.pre                   /etc/avocado/scripts/job/pre.d/
+2018-08-22 13:55:56,082 job              L0385 INFO | plugins.jobscripts.post                  /etc/avocado/scripts/job/post.d/
+2018-08-22 13:55:56,082 job              L0385 INFO | plugins.jobscripts.warn_non_existing_dir False
+2018-08-22 13:55:56,082 job              L0385 INFO | plugins.jobscripts.warn_non_zero_status  True
+2018-08-22 13:55:56,082 job              L0385 INFO | gdb.paths.gdb                            /usr/bin/gdb
+2018-08-22 13:55:56,082 job              L0385 INFO | gdb.paths.gdbserver                      /usr/bin/gdbserver
+2018-08-22 13:55:56,082 job              L0386 INFO | 
+2018-08-22 13:55:56,083 job              L0389 INFO | Avocado Data Directories:
+2018-08-22 13:55:56,083 job              L0390 INFO | 
+2018-08-22 13:55:56,083 job              L0391 INFO | base     /var/lib/avocado
+2018-08-22 13:55:56,083 job              L0392 INFO | tests    /usr/share/avocado/tests
+2018-08-22 13:55:56,084 job              L0393 INFO | data     /var/lib/avocado/data
+2018-08-22 13:55:56,084 job              L0394 INFO | logs     /home/jenkins/avocado/job-results/job-2018-08-22T13.55-13651e1
+2018-08-22 13:55:56,084 job              L0395 INFO | 
+2018-08-22 13:55:56,085 job              L0401 INFO | Multiplex tree representation:
+2018-08-22 13:55:56,085 job              L0401 INFO |  \-- run
+2018-08-22 13:55:56,085 job              L0401 INFO |       |-- max-time
+2018-08-22 13:55:56,085 job              L0401 INFO |       |-- max-request
+2018-08-22 13:55:56,085 job              L0401 INFO |       |-- tests
+2018-08-22 13:55:56,085 job              L0401 INFO |       |-- types
+2018-08-22 13:55:56,085 job              L0401 INFO |       |-- cpu
+2018-08-22 13:55:56,085 job              L0401 INFO |       |-- threads
+2018-08-22 13:55:56,085 job              L0401 INFO |       |-- additional_params
+2018-08-22 13:55:56,085 job              L0401 INFO |       |-- min
+2018-08-22 13:55:56,085 job              L0401 INFO |       \-- max
+2018-08-22 13:55:56,085 job              L0401 INFO | 
+2018-08-22 13:55:56,085 job              L0401 INFO | Multiplex variants (1):
+2018-08-22 13:55:56,086 job              L0401 INFO | Variant additional_params-cpu-max-max-request-max-time-min-tests-threads-types-cbf1:    /run/max-time, /run/max-request, /run/tests, /run/types, /run/cpu, /run/threads, /run/additional_params, /run/min, /run/max
+2018-08-22 13:55:56,086 job              L0405 INFO | Temporary dir: /var/tmp/avocado_VyDIl0
+2018-08-22 13:55:56,086 job              L0406 INFO | 
+2018-08-22 13:55:56,086 job              L0319 INFO | Job ID: 13651e1f34e13352dbc9db5cf05fccfe8c0d0a65
+2018-08-22 13:55:56,086 job              L0322 INFO | 
+2018-08-22 13:55:56,116 sysinfo          L0392 DEBUG| File /etc/avocado/sysinfo/commands does not exist.
+2018-08-22 13:55:56,116 sysinfo          L0403 DEBUG| File /etc/avocado/sysinfo/files does not exist.
+2018-08-22 13:55:56,116 sysinfo          L0430 DEBUG| File /etc/avocado/sysinfo/profilers does not exist.
+2018-08-22 13:55:56,133 parameters       L0146 DEBUG| PARAMS (key=timeout, path=*, default=None) => None
+2018-08-22 13:55:56,134 test             L0382 INFO | START 1-./avocado-misc-tests/generic/sysbench.py:Sysbench.test;additional_params-cpu-max-max-request-max-time-min-tests-threads-types-cbf1
+2018-08-22 13:55:56,134 test             L0403 DEBUG| Test metadata:
+2018-08-22 13:55:56,134 test             L0404 DEBUG|   filename: /home/jenkins/avocado-misc-tests/generic/sysbench.py
+2018-08-22 13:55:56,159 test             L0286 DEBUG| DATA (filename=output.expected) => NOT FOUND (data sources: variant, test, file)
+2018-08-22 13:55:56,160 process          L0523 INFO | Running 'which sysbench'
+2018-08-22 13:55:56,166 process          L0367 DEBUG| [stdout] /usr/bin/sysbench
+2018-08-22 13:55:56,167 process          L0605 INFO | Command 'which sysbench' finished with 0 after 0.00218987464905s
+2018-08-22 13:55:56,169 parameters       L0146 DEBUG| PARAMS (key=max-time, path=*, default=None) => None
+2018-08-22 13:55:56,169 parameters       L0146 DEBUG| PARAMS (key=max-request, path=*, default=None) => None
+2018-08-22 13:55:56,169 parameters       L0146 DEBUG| PARAMS (key=num-threads, path=*, default=2) => 120
+2018-08-22 13:55:56,170 parameters       L0146 DEBUG| PARAMS (key=type, path=*, default=cpu) => 'threads'
+2018-08-22 13:55:56,170 parameters       L0146 DEBUG| PARAMS (key=cpu-max-prime, path=*, default=100) => 50000
+2018-08-22 13:55:56,170 parameters       L0146 DEBUG| PARAMS (key=threads-locks, path=*, default=None) => 1
+2018-08-22 13:55:56,170 process          L0523 INFO | Running 'dmesg -c '
+2018-08-22 13:55:56,191 process          L0367 DEBUG| [stdout] [    0.000000] Linux version 4.17.0-amdsos-build6+ (jenkins@sos-jenkins-s0) (gcc version 7.3.0 (Ubuntu 7.3.0-16ubuntu3)) #1 SMP Fri Jul 13 16:12:06 UTC 2018
+2018-08-22 13:55:56,192 process          L0605 INFO | Command 'dmesg -c ' finished with 0 after 0.0130519866943s
+2018-08-22 13:55:56,192 process          L0367 DEBUG| [stdout] [    0.000000] Command line: BOOT_IMAGE=/boot/vmlinuz-4.17.0-amdsos-build6+ root=UUID=bd2cc212-47bd-4b3e-9e47-f7fd1301eb48 ro console=tty0 console=ttyS0,115200n8 earlyprintk=serial,keep net.ifnames=0 biosdevname=0 quiet splash vt.handoff=1
+2018-08-22 13:55:56,192 process          L0367 DEBUG| [stdout] [    0.000000] KERNEL supported cpus:
+2018-08-22 13:55:56,193 process          L0367 DEBUG| [stdout] [    0.000000]   Intel GenuineIntel
+2018-08-22 13:55:56,193 process          L0367 DEBUG| [stdout] [    0.000000]   AMD AuthenticAMD
+2018-08-22 13:55:56,193 process          L0367 DEBUG| [stdout] [    0.000000]   Centaur CentaurHauls
+2018-08-22 13:55:56,193 process          L0367 DEBUG| [stdout] [    0.000000] x86/fpu: Supporting XSAVE feature 0x001: 'x87 floating point registers'
+2018-08-22 13:55:56,193 process          L0367 DEBUG| [stdout] [    0.000000] x86/fpu: Supporting XSAVE feature 0x002: 'SSE registers'
+2018-08-22 13:55:56,193 process          L0367 DEBUG| [stdout] [    0.000000] x86/fpu: Supporting XSAVE feature 0x004: 'AVX registers'
+2018-08-22 13:55:56,194 process          L0367 DEBUG| [stdout] [    0.000000] x86/fpu: xstate_offset[2]:  576, xstate_sizes[2]:  256
+2018-08-22 13:55:56,194 process          L0367 DEBUG| [stdout] [    0.000000] x86/fpu: Enabled xstate features 0x7, context size is 832 bytes, using 'compacted' format.
+2018-08-22 13:55:56,194 process          L0367 DEBUG| [stdout] [    0.000000] e820: BIOS-provided physical RAM map:
+2018-08-22 13:55:56,194 process          L0367 DEBUG| [stdout] [    0.000000] BIOS-e820: [mem 0x0000000000000000-0x000000000009ffff] usable
+2018-08-22 13:55:56,194 process          L0367 DEBUG| [stdout] [    0.000000] BIOS-e820: [mem 0x00000000000a0000-0x00000000000fffff] reserved
+2018-08-22 13:55:56,194 process          L0367 DEBUG| [stdout] [    0.000000] BIOS-e820: [mem 0x0000000000100000-0x0000000003ffffff] usable
+2018-08-22 13:55:56,195 process          L0367 DEBUG| [stdout] [    0.000000] BIOS-e820: [mem 0x0000000004000000-0x0000000004008fff] ACPI NVS
+2018-08-22 13:55:56,195 process          L0367 DEBUG| [stdout] [    0.000000] BIOS-e820: [mem 0x0000000004009000-0x0000000074a32fff] usable
+2018-08-22 13:55:56,195 process          L0367 DEBUG| [stdout] [    0.000000] BIOS-e820: [mem 0x0000000074a33000-0x0000000075f01fff] reserved
+2018-08-22 13:55:56,195 process          L0367 DEBUG| [stdout] [    0.000000] BIOS-e820: [mem 0x0000000075f02000-0x0000000075fc6fff] usable
+2018-08-22 13:55:56,195 process          L0367 DEBUG| [stdout] [    0.000000] BIOS-e820: [mem 0x0000000075fc7000-0x0000000076329fff] ACPI NVS
+2018-08-22 13:55:56,195 process          L0367 DEBUG| [stdout] [    0.000000] BIOS-e820: [mem 0x000000007632a000-0x0000000076b9efff] reserved
+2018-08-22 13:55:56,196 process          L0367 DEBUG| [stdout] [    0.000000] BIOS-e820: [mem 0x0000000076b9f000-0x0000000076cfefff] type 20
+2018-08-22 13:55:56,196 process          L0367 DEBUG| [stdout] [    0.000000] BIOS-e820: [mem 0x0000000076cff000-0x0000000076cfffff] usable
+2018-08-22 13:55:56,196 process          L0367 DEBUG| [stdout] [    0.000000] BIOS-e820: [mem 0x0000000076d00000-0x0000000076ffffff] reserved
+2018-08-22 13:55:56,196 process          L0367 DEBUG| [stdout] [    0.000000] BIOS-e820: [mem 0x0000000077000000-0x000000007bffffff] usable
+2018-08-22 13:55:56,196 process          L0367 DEBUG| [stdout] [    0.000000] BIOS-e820: [mem 0x000000007c000000-0x000000007fffffff] reserved
+2018-08-22 13:55:56,196 process          L0367 DEBUG| [stdout] [    0.000000] BIOS-e820: [mem 0x000000008a800000-0x000000008a880fff] reserved
+2018-08-22 13:55:56,196 process          L0367 DEBUG| [stdout] [    0.000000] BIOS-e820: [mem 0x00000000f2b00000-0x00000000f2b80fff] reserved
+2018-08-22 13:55:56,197 process          L0367 DEBUG| [stdout] [    0.000000] BIOS-e820: [mem 0x00000000f3b00000-0x00000000f3b80fff] reserved
+2018-08-22 13:55:56,197 process          L0367 DEBUG| [stdout] [    0.000000] BIOS-e820: [mem 0x00000000f9b00000-0x00000000f9b80fff] reserved
+2018-08-22 13:55:56,197 process          L0367 DEBUG| [stdout] [    0.000000] BIOS-e820: [mem 0x00000000fea00000-0x00000000feafffff] reserved
+2018-08-22 13:55:56,197 process          L0367 DEBUG| [stdout] [    0.000000] BIOS-e820: [mem 0x00000000fec00000-0x00000000fec00fff] reserved
+2018-08-22 13:55:56,197 process          L0367 DEBUG| [stdout] [    0.000000] BIOS-e820: [mem 0x00000000fec10000-0x00000000fec10fff] reserved
+2018-08-22 13:55:56,197 process          L0367 DEBUG| [stdout] [    0.000000] BIOS-e820: [mem 0x00000000fed00000-0x00000000fed00fff] reserved
+2018-08-22 13:55:56,198 process          L0367 DEBUG| [stdout] [    0.000000] BIOS-e820: [mem 0x00000000fed40000-0x00000000fed44fff] reserved
+2018-08-22 13:55:56,198 process          L0367 DEBUG| [stdout] [    0.000000] BIOS-e820: [mem 0x00000000fed80000-0x00000000fed8ffff] reserved
+2018-08-22 13:55:56,198 process          L0367 DEBUG| [stdout] [    0.000000] BIOS-e820: [mem 0x00000000fedc0000-0x00000000fedc0fff] reserved
+2018-08-22 13:55:56,198 process          L0367 DEBUG| [stdout] [    0.000000] BIOS-e820: [mem 0x00000000fedc2000-0x00000000fedc5fff] reserved
+2018-08-22 13:55:56,198 process          L0367 DEBUG| [stdout] [    0.000000] BIOS-e820: [mem 0x00000000fedc7000-0x00000000fedc7fff] reserved
+2018-08-22 13:55:56,198 process          L0367 DEBUG| [stdout] [    0.000000] BIOS-e820: [mem 0x00000000fedc9000-0x00000000fedcafff] reserved
+2018-08-22 13:55:56,199 process          L0367 DEBUG| [stdout] [    0.000000] BIOS-e820: [mem 0x00000000fee00000-0x00000000feefffff] reserved
+2018-08-22 13:55:56,199 process          L0367 DEBUG| [stdout] [    0.000000] BIOS-e820: [mem 0x00000000ff000000-0x00000000ffffffff] reserved
+2018-08-22 13:55:56,199 process          L0367 DEBUG| [stdout] [    0.000000] BIOS-e820: [mem 0x0000000100000000-0x000000087fefffff] usable
+2018-08-22 13:55:56,199 process          L0367 DEBUG| [stdout] [    0.000000] BIOS-e820: [mem 0x000000087ff00000-0x000000087fffffff] reserved
+2018-08-22 13:55:56,199 process          L0367 DEBUG| [stdout] [    0.000000] BIOS-e820: [mem 0x0000000880000000-0x000000107f2fffff] usable
+2018-08-22 13:55:56,199 process          L0367 DEBUG| [stdout] [    0.000000] BIOS-e820: [mem 0x000000107f300000-0x000000107fffffff] reserved
+2018-08-22 13:55:56,199 process          L0367 DEBUG| [stdout] [    0.000000] console [earlyser0] enabled
+2018-08-22 13:55:56,200 process          L0367 DEBUG| [stdout] [    0.000000] NX (Execute Disable) protection: active
+2018-08-22 13:55:56,200 process          L0367 DEBUG| [stdout] [    0.000000] efi: EFI v2.60 by American Megatrends
+2018-08-22 13:55:56,200 process          L0367 DEBUG| [stdout] [    0.000000] efi:  ACPI 2.0=0x75fc7000  ACPI=0x75fc7000  SMBIOS=0x76a06000  SMBIOS 3.0=0x76a05000  MPS=0xfcb40  ESRT=0x70d69718  MEMATTR=0x70779018 
+2018-08-22 13:55:56,200 process          L0367 DEBUG| [stdout] [    0.000000] SMBIOS 3.1.1 present.
+2018-08-22 13:55:56,200 process          L0367 DEBUG| [stdout] [    0.000000] DMI: To be filled by O.E.M. To be filled by O.E.M./To be filled by O.E.M., BIOS TEX0052A 07/27/2018
+2018-08-22 13:55:56,200 process          L0367 DEBUG| [stdout] [    0.000000] e820: update [mem 0x00000000-0x00000fff] usable ==> reserved
+2018-08-22 13:55:56,201 process          L0367 DEBUG| [stdout] [    0.000000] e820: remove [mem 0x000a0000-0x000fffff] usable
+2018-08-22 13:55:56,201 process          L0367 DEBUG| [stdout] [    0.000000] e820: last_pfn = 0x107f300 max_arch_pfn = 0x400000000
+2018-08-22 13:55:56,201 process          L0367 DEBUG| [stdout] [    0.000000] MTRR default type: uncachable
+2018-08-22 13:55:56,201 process          L0367 DEBUG| [stdout] [    0.000000] MTRR fixed ranges enabled:
+2018-08-22 13:55:56,201 process          L0367 DEBUG| [stdout] [    0.000000]   00000-9FFFF write-back
+2018-08-22 13:55:56,201 process          L0367 DEBUG| [stdout] [    0.000000]   A0000-BFFFF write-through
+2018-08-22 13:55:56,202 process          L0367 DEBUG| [stdout] [    0.000000]   C0000-FFFFF write-protect
+2018-08-22 13:55:56,202 process          L0367 DEBUG| [stdout] [    0.000000] MTRR variable ranges enabled:
+2018-08-22 13:55:56,202 process          L0367 DEBUG| [stdout] [    0.000000]   0 base 000000000000 mask FFFF80000000 write-back
+2018-08-22 13:55:56,202 process          L0367 DEBUG| [stdout] [    0.000000]   1 base 00007C000000 mask FFFFFC000000 uncachable
+2018-08-22 13:55:56,202 process          L0367 DEBUG| [stdout] [    0.000000]   2 disabled
+2018-08-22 13:55:56,202 process          L0367 DEBUG| [stdout] [    0.000000]   3 disabled
+2018-08-22 13:55:56,202 process          L0367 DEBUG| [stdout] [    0.000000]   4 disabled
+2018-08-22 13:55:56,203 process          L0367 DEBUG| [stdout] [    0.000000]   5 disabled
+2018-08-22 13:55:56,203 process          L0367 DEBUG| [stdout] [    0.000000]   6 disabled
+2018-08-22 13:55:56,203 process          L0367 DEBUG| [stdout] [    0.000000]   7 disabled
+2018-08-22 13:55:56,203 process          L0367 DEBUG| [stdout] [    0.000000] TOM2: 0000001080000000 aka 67584M
+2018-08-22 13:55:56,203 process          L0367 DEBUG| [stdout] [    0.000000] x86/PAT: Configuration [0-7]: WB  WC  UC- UC  WB  WP  UC- WT  
+2018-08-22 13:55:56,203 process          L0367 DEBUG| [stdout] [    0.000000] total RAM covered: 1984M
+2018-08-22 13:55:56,204 process          L0367 DEBUG| [stdout] [    0.000000] Found optimal setting for mtrr clean up
+2018-08-22 13:55:56,204 process          L0367 DEBUG| [stdout] [    0.000000]  gran_size: 64K 	chunk_size: 128M 	num_reg: 2  	lose cover RAM: 0G
+2018-08-22 13:55:56,204 process          L0367 DEBUG| [stdout] [    0.000000] e820: update [mem 0x7c000000-0xffffffff] usable ==> reserved
+2018-08-22 13:55:56,204 process          L0367 DEBUG| [stdout] [    0.000000] e820: last_pfn = 0x7c000 max_arch_pfn = 0x400000000
+2018-08-22 13:55:56,204 process          L0367 DEBUG| [stdout] [    0.000000] found SMP MP-table at [mem 0x000fd380-0x000fd38f] mapped at [        (ptrval)]
+2018-08-22 13:55:56,204 process          L0367 DEBUG| [stdout] [    0.000000] esrt: Reserving ESRT space from 0x0000000070d69718 to 0x0000000070d69750.
+2018-08-22 13:55:56,205 process          L0367 DEBUG| [stdout] [    0.000000] Scanning 1 areas for low memory corruption
+2018-08-22 13:55:56,205 process          L0367 DEBUG| [stdout] [    0.000000] Base memory trampoline at [        (ptrval)] 94000 size 24576
+2018-08-22 13:55:56,205 process          L0367 DEBUG| [stdout] [    0.000000] Using GB pages for direct mapping
+2018-08-22 13:55:56,205 process          L0367 DEBUG| [stdout] [    0.000000] BRK [0x4234c000, 0x4234cfff] PGTABLE
+2018-08-22 13:55:56,205 process          L0367 DEBUG| [stdout] [    0.000000] BRK [0x4234d000, 0x4234dfff] PGTABLE
+2018-08-22 13:55:56,205 process          L0367 DEBUG| [stdout] [    0.000000] BRK [0x4234e000, 0x4234efff] PGTABLE
+2018-08-22 13:55:56,206 process          L0367 DEBUG| [stdout] [    0.000000] BRK [0x4234f000, 0x4234ffff] PGTABLE
+2018-08-22 13:55:56,206 process          L0367 DEBUG| [stdout] [    0.000000] BRK [0x42350000, 0x42350fff] PGTABLE
+2018-08-22 13:55:56,206 process          L0367 DEBUG| [stdout] [    0.000000] BRK [0x42351000, 0x42351fff] PGTABLE
+2018-08-22 13:55:56,206 process          L0367 DEBUG| [stdout] [    0.000000] BRK [0x42352000, 0x42352fff] PGTABLE
+2018-08-22 13:55:56,206 process          L0367 DEBUG| [stdout] [    0.000000] BRK [0x42353000, 0x42353fff] PGTABLE
+2018-08-22 13:55:56,206 process          L0367 DEBUG| [stdout] [    0.000000] BRK [0x42354000, 0x42354fff] PGTABLE
+2018-08-22 13:55:56,206 process          L0367 DEBUG| [stdout] [    0.000000] BRK [0x42355000, 0x42355fff] PGTABLE
+2018-08-22 13:55:56,207 process          L0367 DEBUG| [stdout] [    0.000000] Secure boot could not be determined
+2018-08-22 13:55:56,207 process          L0367 DEBUG| [stdout] [    0.000000] RAMDISK: [mem 0x3157b000-0x34ab4fff]
+2018-08-22 13:55:56,207 process          L0367 DEBUG| [stdout] [    0.000000] ACPI: Early table checksum verification disabled
+2018-08-22 13:55:56,207 process          L0367 DEBUG| [stdout] [    0.000000] ACPI: RSDP 0x0000000075FC7000 000024 (v02 AMD   )
+2018-08-22 13:55:56,207 process          L0367 DEBUG| [stdout] [    0.000000] ACPI: XSDT 0x0000000075FC70A8 0000CC (v01 AMD    EthanolX 03242016 AMI  00010013)
+2018-08-22 13:55:56,207 process          L0367 DEBUG| [stdout] [    0.000000] ACPI: FACP 0x0000000075FD5E10 000114 (v06 AMD    EthanolX 03242016 AMI  00010013)
+2018-08-22 13:55:56,208 process          L0367 DEBUG| [stdout] [    0.000000] ACPI: DSDT 0x0000000075FC7208 00EC03 (v02 AMD    EthanolX 03242016 INTL 20120913)
+2018-08-22 13:55:56,208 process          L0367 DEBUG| [stdout] [    0.000000] ACPI: FACS 0x000000007630FD80 000040
+2018-08-22 13:55:56,208 process          L0367 DEBUG| [stdout] [    0.000000] ACPI: APIC 0x0000000075FD5F28 000882 (v04 AMD    EthanolX 03242016 AMI  00010013)
+2018-08-22 13:55:56,208 process          L0367 DEBUG| [stdout] [    0.000000] ACPI: FPDT 0x0000000075FD67B0 000044 (v01 AMD    EthanolX 03242016 AMI  00010013)
+2018-08-22 13:55:56,208 process          L0367 DEBUG| [stdout] [    0.000000] ACPI: FIDT 0x0000000075FD67F8 00009C (v01 AMD    EthanolX 03242016 AMI  00010013)
+2018-08-22 13:55:56,208 process          L0367 DEBUG| [stdout] [    0.000000] ACPI: SSDT 0x0000000075FD6898 00092A (v02 AMD    AMD ALIB 00000002 MSFT 04000000)
+2018-08-22 13:55:56,208 process          L0367 DEBUG| [stdout] [    0.000000] ACPI: SPMI 0x0000000075FD71C8 000041 (v05 AMD    EthanolX 00000000 AMI. 00000000)
+2018-08-22 13:55:56,209 process          L0367 DEBUG| [stdout] [    0.000000] ACPI: SSDT 0x0000000075FD7210 00036C (v02 AMD    CPUSSDT  03242016 AMI  03242016)
+2018-08-22 13:55:56,209 process          L0367 DEBUG| [stdout] [    0.000000] ACPI: MCFG 0x0000000075FD7580 00003C (v01 AMD    EthanolX 03242016 MSFT 00010013)
+2018-08-22 13:55:56,209 process          L0367 DEBUG| [stdout] [    0.000000] ACPI: BERT 0x0000000075FD75C0 000030 (v01 AMD    AMD BERT 00000001 AMD  00000001)
+2018-08-22 13:55:56,209 process          L0367 DEBUG| [stdout] [    0.000000] ACPI: EINJ 0x0000000075FD75F0 000150 (v01 AMD    AMD EINJ 00000001 AMD  00000001)
+2018-08-22 13:55:56,209 process          L0367 DEBUG| [stdout] [    0.000000] ACPI: HEST 0x0000000075FD7740 000DFC (v01 AMD    AMD HEST 00000001 AMD  00000001)
+2018-08-22 13:55:56,209 process          L0367 DEBUG| [stdout] [    0.000000] ACPI: SSDT 0x0000000075FD8540 000106 (v01 AMD    CPMRAS   00000001 INTL 20120913)
+2018-08-22 13:55:56,210 process          L0367 DEBUG| [stdout] [    0.000000] ACPI: HPET 0x0000000075FD8648 000038 (v01 AMD    EthanolX 03242016 AMI  00000005)
+2018-08-22 13:55:56,210 process          L0367 DEBUG| [stdout] [    0.000000] ACPI: UEFI 0x0000000075FD8680 000048 (v01 AMD    EthanolX 00000002      01000013)
+2018-08-22 13:55:56,210 process          L0367 DEBUG| [stdout] [    0.000000] ACPI: BGRT 0x0000000075FD86C8 000038 (v01 AMD    EthanolX 03242016 AMI  00010013)
+2018-08-22 13:55:56,210 process          L0367 DEBUG| [stdout] [    0.000000] ACPI: IVRS 0x0000000075FD8700 0001F0 (v02 AMD    AMD IVRS 00000001 AMD  00000000)
+2018-08-22 13:55:56,210 process          L0367 DEBUG| [stdout] [    0.000000] ACPI: SSDT 0x0000000075FD88F0 008BE4 (v01 AMD    AMD CPU  00000001 AMD  00000001)
+2018-08-22 13:55:56,210 process          L0367 DEBUG| [stdout] [    0.000000] ACPI: CRAT 0x0000000075FE14D8 002DD0 (v01 AMD    AMD CRAT 00000001 AMD  00000001)
+2018-08-22 13:55:56,211 process          L0367 DEBUG| [stdout] [    0.000000] ACPI: CDIT 0x0000000075FE42A8 000029 (v01 AMD    AMD CDIT 00000001 AMD  00000001)
+2018-08-22 13:55:56,211 process          L0367 DEBUG| [stdout] [    0.000000] ACPI: SSDT 0x0000000075FE42D8 001630 (v01 AMD    CPMCMN   00000001 INTL 20120913)
+2018-08-22 13:55:56,211 process          L0367 DEBUG| [stdout] [    0.000000] ACPI: WSMT 0x0000000075FE5908 000028 (v01 AMD    EthanolX 03242016 AMI  00010013)
+2018-08-22 13:55:56,211 process          L0367 DEBUG| [stdout] [    0.000000] ACPI: Local APIC address 0xfee00000
+2018-08-22 13:55:56,211 process          L0367 DEBUG| [stdout] [    0.000000] No NUMA configuration found
+2018-08-22 13:55:56,211 process          L0367 DEBUG| [stdout] [    0.000000] Faking a node at [mem 0x0000000000000000-0x000000107f2fffff]
+2018-08-22 13:55:56,211 process          L0367 DEBUG| [stdout] [    0.000000] NODE_DATA(0) allocated [mem 0x107f2d5000-0x107f2fffff]
+2018-08-22 13:55:56,212 process          L0367 DEBUG| [stdout] [    0.000000] tsc: Fast TSC calibration using PIT
+2018-08-22 13:55:56,212 process          L0367 DEBUG| [stdout] [    0.000000] Zone ranges:
+2018-08-22 13:55:56,212 process          L0367 DEBUG| [stdout] [    0.000000]   DMA      [mem 0x0000000000001000-0x0000000000ffffff]
+2018-08-22 13:55:56,212 process          L0367 DEBUG| [stdout] [    0.000000]   DMA32    [mem 0x0000000001000000-0x00000000ffffffff]
+2018-08-22 13:55:56,212 process          L0367 DEBUG| [stdout] [    0.000000]   Normal   [mem 0x0000000100000000-0x000000107f2fffff]
+2018-08-22 13:55:56,212 process          L0367 DEBUG| [stdout] [    0.000000]   Device   empty
+2018-08-22 13:55:56,213 process          L0367 DEBUG| [stdout] [    0.000000] Movable zone start for each node
+2018-08-22 13:55:56,213 process          L0367 DEBUG| [stdout] [    0.000000] Early memory node ranges
+2018-08-22 13:55:56,213 process          L0367 DEBUG| [stdout] [    0.000000]   node   0: [mem 0x0000000000001000-0x000000000009ffff]
+2018-08-22 13:55:56,213 process          L0367 DEBUG| [stdout] [    0.000000]   node   0: [mem 0x0000000000100000-0x0000000003ffffff]
+2018-08-22 13:55:56,213 process          L0367 DEBUG| [stdout] [    0.000000]   node   0: [mem 0x0000000004009000-0x0000000074a32fff]
+2018-08-22 13:55:56,213 process          L0367 DEBUG| [stdout] [    0.000000]   node   0: [mem 0x0000000075f02000-0x0000000075fc6fff]
+2018-08-22 13:55:56,214 process          L0367 DEBUG| [stdout] [    0.000000]   node   0: [mem 0x0000000076cff000-0x0000000076cfffff]
+2018-08-22 13:55:56,214 process          L0367 DEBUG| [stdout] [    0.000000]   node   0: [mem 0x0000000077000000-0x000000007bffffff]
+2018-08-22 13:55:56,214 process          L0367 DEBUG| [stdout] [    0.000000]   node   0: [mem 0x0000000100000000-0x000000087fefffff]
+2018-08-22 13:55:56,214 process          L0367 DEBUG| [stdout] [    0.000000]   node   0: [mem 0x0000000880000000-0x000000107f2fffff]
+2018-08-22 13:55:56,214 process          L0367 DEBUG| [stdout] [    0.000000] Initmem setup node 0 [mem 0x0000000000001000-0x000000107f2fffff]
+2018-08-22 13:55:56,214 process          L0367 DEBUG| [stdout] [    0.000000] On node 0 totalpages: 16747663
+2018-08-22 13:55:56,214 process          L0367 DEBUG| [stdout] [    0.000000]   DMA zone: 64 pages used for memmap
+2018-08-22 13:55:56,215 process          L0367 DEBUG| [stdout] [    0.000000]   DMA zone: 29 pages reserved
+2018-08-22 13:55:56,215 process          L0367 DEBUG| [stdout] [    0.000000]   DMA zone: 3999 pages, LIFO batch:0
+2018-08-22 13:55:56,215 process          L0367 DEBUG| [stdout] [    0.000000]   DMA32 zone: 7724 pages used for memmap
+2018-08-22 13:55:56,215 process          L0367 DEBUG| [stdout] [    0.000000]   DMA32 zone: 494320 pages, LIFO batch:31
+2018-08-22 13:55:56,215 process          L0367 DEBUG| [stdout] [    0.000000]   Normal zone: 253900 pages used for memmap
+2018-08-22 13:55:56,215 process          L0367 DEBUG| [stdout] [    0.000000]   Normal zone: 16249344 pages, LIFO batch:31
+2018-08-22 13:55:56,216 process          L0367 DEBUG| [stdout] [    0.000000] Reserved but unavailable: 97 pages
+2018-08-22 13:55:56,216 process          L0367 DEBUG| [stdout] [    0.000000] ACPI: PM-Timer IO Port: 0x808
+2018-08-22 13:55:56,216 process          L0367 DEBUG| [stdout] [    0.000000] ACPI: Local APIC address 0xfee00000
+2018-08-22 13:55:56,216 process          L0367 DEBUG| [stdout] [    0.000000] ACPI: LAPIC_NMI (acpi_id[0xff] high edge lint[0x1])
+2018-08-22 13:55:56,216 process          L0367 DEBUG| [stdout] [    0.000000] IOAPIC[0]: apic_id 240, version 33, address 0xfec00000, GSI 0-23
+2018-08-22 13:55:56,216 process          L0367 DEBUG| [stdout] [    0.000000] IOAPIC[1]: apic_id 241, version 33, address 0x8a880000, GSI 24-55
+2018-08-22 13:55:56,216 process          L0367 DEBUG| [stdout] [    0.000000] IOAPIC[2]: apic_id 242, version 33, address 0xf3b80000, GSI 56-87
+2018-08-22 13:55:56,217 process          L0367 DEBUG| [stdout] [    0.000000] IOAPIC[3]: apic_id 243, version 33, address 0xf2b80000, GSI 88-119
+2018-08-22 13:55:56,217 process          L0367 DEBUG| [stdout] [    0.000000] IOAPIC[4]: apic_id 244, version 33, address 0xf9b80000, GSI 120-151
+2018-08-22 13:55:56,217 process          L0367 DEBUG| [stdout] [    0.000000] ACPI: INT_SRC_OVR (bus 0 bus_irq 0 global_irq 2 dfl dfl)
+2018-08-22 13:55:56,217 process          L0367 DEBUG| [stdout] [    0.000000] ACPI: INT_SRC_OVR (bus 0 bus_irq 9 global_irq 9 low level)
+2018-08-22 13:55:56,217 process          L0367 DEBUG| [stdout] [    0.000000] ACPI: IRQ0 used by override.
+2018-08-22 13:55:56,217 process          L0367 DEBUG| [stdout] [    0.000000] ACPI: IRQ9 used by override.
+2018-08-22 13:55:56,218 process          L0367 DEBUG| [stdout] [    0.000000] Using ACPI (MADT) for SMP configuration information
+2018-08-22 13:55:56,218 process          L0367 DEBUG| [stdout] [    0.000000] ACPI: HPET id: 0x10228201 base: 0xfed00000
+2018-08-22 13:55:56,218 process          L0367 DEBUG| [stdout] [    0.000000] smpboot: Allowing 256 CPUs, 192 hotplug CPUs
+2018-08-22 13:55:56,218 process          L0367 DEBUG| [stdout] [    0.000000] PM: Registered nosave memory: [mem 0x00000000-0x00000fff]
+2018-08-22 13:55:56,218 process          L0367 DEBUG| [stdout] [    0.000000] PM: Registered nosave memory: [mem 0x000a0000-0x000fffff]
+2018-08-22 13:55:56,218 process          L0367 DEBUG| [stdout] [    0.000000] PM: Registered nosave memory: [mem 0x04000000-0x04008fff]
+2018-08-22 13:55:56,219 process          L0367 DEBUG| [stdout] [    0.000000] PM: Registered nosave memory: [mem 0x74a33000-0x75f01fff]
+2018-08-22 13:55:56,219 process          L0367 DEBUG| [stdout] [    0.000000] PM: Registered nosave memory: [mem 0x75fc7000-0x76329fff]
+2018-08-22 13:55:56,219 process          L0367 DEBUG| [stdout] [    0.000000] PM: Registered nosave memory: [mem 0x7632a000-0x76b9efff]
+2018-08-22 13:55:56,219 process          L0367 DEBUG| [stdout] [    0.000000] PM: Registered nosave memory: [mem 0x76b9f000-0x76cfefff]
+2018-08-22 13:55:56,219 process          L0367 DEBUG| [stdout] [    0.000000] PM: Registered nosave memory: [mem 0x76d00000-0x76ffffff]
+2018-08-22 13:55:56,219 process          L0367 DEBUG| [stdout] [    0.000000] PM: Registered nosave memory: [mem 0x7c000000-0x7fffffff]
+2018-08-22 13:55:56,219 process          L0367 DEBUG| [stdout] [    0.000000] PM: Registered nosave memory: [mem 0x80000000-0x8a7fffff]
+2018-08-22 13:55:56,220 process          L0367 DEBUG| [stdout] [    0.000000] PM: Registered nosave memory: [mem 0x8a800000-0x8a880fff]
+2018-08-22 13:55:56,220 process          L0367 DEBUG| [stdout] [    0.000000] PM: Registered nosave memory: [mem 0x8a881000-0xf2afffff]
+2018-08-22 13:55:56,220 process          L0367 DEBUG| [stdout] [    0.000000] PM: Registered nosave memory: [mem 0xf2b00000-0xf2b80fff]
+2018-08-22 13:55:56,220 process          L0367 DEBUG| [stdout] [    0.000000] PM: Registered nosave memory: [mem 0xf2b81000-0xf3afffff]
+2018-08-22 13:55:56,220 process          L0367 DEBUG| [stdout] [    0.000000] PM: Registered nosave memory: [mem 0xf3b00000-0xf3b80fff]
+2018-08-22 13:55:56,220 process          L0367 DEBUG| [stdout] [    0.000000] PM: Registered nosave memory: [mem 0xf3b81000-0xf9afffff]
+2018-08-22 13:55:56,221 process          L0367 DEBUG| [stdout] [    0.000000] PM: Registered nosave memory: [mem 0xf9b00000-0xf9b80fff]
+2018-08-22 13:55:56,221 process          L0367 DEBUG| [stdout] [    0.000000] PM: Registered nosave memory: [mem 0xf9b81000-0xfe9fffff]
+2018-08-22 13:55:56,221 process          L0367 DEBUG| [stdout] [    0.000000] PM: Registered nosave memory: [mem 0xfea00000-0xfeafffff]
+2018-08-22 13:55:56,221 process          L0367 DEBUG| [stdout] [    0.000000] PM: Registered nosave memory: [mem 0xfeb00000-0xfebfffff]
+2018-08-22 13:55:56,221 process          L0367 DEBUG| [stdout] [    0.000000] PM: Registered nosave memory: [mem 0xfec00000-0xfec00fff]
+2018-08-22 13:55:56,221 process          L0367 DEBUG| [stdout] [    0.000000] PM: Registered nosave memory: [mem 0xfec01000-0xfec0ffff]
+2018-08-22 13:55:56,222 process          L0367 DEBUG| [stdout] [    0.000000] PM: Registered nosave memory: [mem 0xfec10000-0xfec10fff]
+2018-08-22 13:55:56,222 process          L0367 DEBUG| [stdout] [    0.000000] PM: Registered nosave memory: [mem 0xfec11000-0xfecfffff]
+2018-08-22 13:55:56,222 process          L0367 DEBUG| [stdout] [    0.000000] PM: Registered nosave memory: [mem 0xfed00000-0xfed00fff]
+2018-08-22 13:55:56,222 process          L0367 DEBUG| [stdout] [    0.000000] PM: Registered nosave memory: [mem 0xfed01000-0xfed3ffff]
+2018-08-22 13:55:56,222 process          L0367 DEBUG| [stdout] [    0.000000] PM: Registered nosave memory: [mem 0xfed40000-0xfed44fff]
+2018-08-22 13:55:56,222 process          L0367 DEBUG| [stdout] [    0.000000] PM: Registered nosave memory: [mem 0xfed45000-0xfed7ffff]
+2018-08-22 13:55:56,222 process          L0367 DEBUG| [stdout] [    0.000000] PM: Registered nosave memory: [mem 0xfed80000-0xfed8ffff]
+2018-08-22 13:55:56,223 process          L0367 DEBUG| [stdout] [    0.000000] PM: Registered nosave memory: [mem 0xfed90000-0xfedbffff]
+2018-08-22 13:55:56,223 process          L0367 DEBUG| [stdout] [    0.000000] PM: Registered nosave memory: [mem 0xfedc0000-0xfedc0fff]
+2018-08-22 13:55:56,223 process          L0367 DEBUG| [stdout] [    0.000000] PM: Registered nosave memory: [mem 0xfedc1000-0xfedc1fff]
+2018-08-22 13:55:56,223 process          L0367 DEBUG| [stdout] [    0.000000] PM: Registered nosave memory: [mem 0xfedc2000-0xfedc5fff]
+2018-08-22 13:55:56,223 process          L0367 DEBUG| [stdout] [    0.000000] PM: Registered nosave memory: [mem 0xfedc6000-0xfedc6fff]
+2018-08-22 13:55:56,223 process          L0367 DEBUG| [stdout] [    0.000000] PM: Registered nosave memory: [mem 0xfedc7000-0xfedc7fff]
+2018-08-22 13:55:56,224 process          L0367 DEBUG| [stdout] [    0.000000] PM: Registered nosave memory: [mem 0xfedc8000-0xfedc8fff]
+2018-08-22 13:55:56,224 process          L0367 DEBUG| [stdout] [    0.000000] PM: Registered nosave memory: [mem 0xfedc9000-0xfedcafff]
+2018-08-22 13:55:56,224 process          L0367 DEBUG| [stdout] [    0.000000] PM: Registered nosave memory: [mem 0xfedcb000-0xfedfffff]
+2018-08-22 13:55:56,224 process          L0367 DEBUG| [stdout] [    0.000000] PM: Registered nosave memory: [mem 0xfee00000-0xfeefffff]
+2018-08-22 13:55:56,224 process          L0367 DEBUG| [stdout] [    0.000000] PM: Registered nosave memory: [mem 0xfef00000-0xfeffffff]
+2018-08-22 13:55:56,224 process          L0367 DEBUG| [stdout] [    0.000000] PM: Registered nosave memory: [mem 0xff000000-0xffffffff]
+2018-08-22 13:55:56,224 process          L0367 DEBUG| [stdout] [    0.000000] PM: Registered nosave memory: [mem 0x87ff00000-0x87fffffff]
+2018-08-22 13:55:56,225 process          L0367 DEBUG| [stdout] [    0.000000] e820: [mem 0x8a881000-0xf2afffff] available for PCI devices
+2018-08-22 13:55:56,225 process          L0367 DEBUG| [stdout] [    0.000000] Booting paravirtualized kernel on bare hardware
+2018-08-22 13:55:56,225 process          L0367 DEBUG| [stdout] [    0.000000] clocksource: refined-jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 7645519600211568 ns
+2018-08-22 13:55:56,225 process          L0367 DEBUG| [stdout] [    0.000000] random: get_random_bytes called from start_kernel+0x99/0x55a with crng_init=0
+2018-08-22 13:55:56,225 process          L0367 DEBUG| [stdout] [    0.000000] setup_percpu: NR_CPUS:8192 nr_cpumask_bits:256 nr_cpu_ids:256 nr_node_ids:1
+2018-08-22 13:55:56,225 process          L0367 DEBUG| [stdout] [    0.000000] percpu: Embedded 46 pages/cpu @        (ptrval) s151552 r8192 d28672 u262144
+2018-08-22 13:55:56,226 process          L0367 DEBUG| [stdout] [    0.000000] pcpu-alloc: s151552 r8192 d28672 u262144 alloc=1*2097152
+2018-08-22 13:55:56,226 process          L0367 DEBUG| [stdout] [    0.000000] pcpu-alloc: [0] 000 001 002 003 004 005 006 007 
+2018-08-22 13:55:56,226 process          L0367 DEBUG| [stdout] [    0.000000] pcpu-alloc: [0] 008 009 010 011 012 013 014 015 
+2018-08-22 13:55:56,226 process          L0367 DEBUG| [stdout] [    0.000000] pcpu-alloc: [0] 016 017 018 019 020 021 022 023 
+2018-08-22 13:55:56,226 process          L0367 DEBUG| [stdout] [    0.000000] pcpu-alloc: [0] 024 025 026 027 028 029 030 031 
+2018-08-22 13:55:56,226 process          L0367 DEBUG| [stdout] [    0.000000] pcpu-alloc: [0] 032 033 034 035 036 037 038 039 
+2018-08-22 13:55:56,227 process          L0367 DEBUG| [stdout] [    0.000000] pcpu-alloc: [0] 040 041 042 043 044 045 046 047 
+2018-08-22 13:55:56,227 process          L0367 DEBUG| [stdout] [    0.000000] pcpu-alloc: [0] 048 049 050 051 052 053 054 055 
+2018-08-22 13:55:56,227 process          L0367 DEBUG| [stdout] [    0.000000] pcpu-alloc: [0] 056 057 058 059 060 061 062 063 
+2018-08-22 13:55:56,227 process          L0367 DEBUG| [stdout] [    0.000000] pcpu-alloc: [0] 064 065 066 067 068 069 070 071 
+2018-08-22 13:55:56,227 process          L0367 DEBUG| [stdout] [    0.000000] pcpu-alloc: [0] 072 073 074 075 076 077 078 079 
+2018-08-22 13:55:56,227 process          L0367 DEBUG| [stdout] [    0.000000] pcpu-alloc: [0] 080 081 082 083 084 085 086 087 
+2018-08-22 13:55:56,227 process          L0367 DEBUG| [stdout] [    0.000000] pcpu-alloc: [0] 088 089 090 091 092 093 094 095 
+2018-08-22 13:55:56,228 process          L0367 DEBUG| [stdout] [    0.000000] pcpu-alloc: [0] 096 097 098 099 100 101 102 103 
+2018-08-22 13:55:56,228 process          L0367 DEBUG| [stdout] [    0.000000] pcpu-alloc: [0] 104 105 106 107 108 109 110 111 
+2018-08-22 13:55:56,228 process          L0367 DEBUG| [stdout] [    0.000000] pcpu-alloc: [0] 112 113 114 115 116 117 118 119 
+2018-08-22 13:55:56,228 process          L0367 DEBUG| [stdout] [    0.000000] pcpu-alloc: [0] 120 121 122 123 124 125 126 127 
+2018-08-22 13:55:56,228 process          L0367 DEBUG| [stdout] [    0.000000] pcpu-alloc: [0] 128 129 130 131 132 133 134 135 
+2018-08-22 13:55:56,228 process          L0367 DEBUG| [stdout] [    0.000000] pcpu-alloc: [0] 136 137 138 139 140 141 142 143 
+2018-08-22 13:55:56,229 process          L0367 DEBUG| [stdout] [    0.000000] pcpu-alloc: [0] 144 145 146 147 148 149 150 151 
+2018-08-22 13:55:56,229 process          L0367 DEBUG| [stdout] [    0.000000] pcpu-alloc: [0] 152 153 154 155 156 157 158 159 
+2018-08-22 13:55:56,229 process          L0367 DEBUG| [stdout] [    0.000000] pcpu-alloc: [0] 160 161 162 163 164 165 166 167 
+2018-08-22 13:55:56,229 process          L0367 DEBUG| [stdout] [    0.000000] pcpu-alloc: [0] 168 169 170 171 172 173 174 175 
+2018-08-22 13:55:56,229 process          L0367 DEBUG| [stdout] [    0.000000] pcpu-alloc: [0] 176 177 178 179 180 181 182 183 
+2018-08-22 13:55:56,229 process          L0367 DEBUG| [stdout] [    0.000000] pcpu-alloc: [0] 184 185 186 187 188 189 190 191 
+2018-08-22 13:55:56,230 process          L0367 DEBUG| [stdout] [    0.000000] pcpu-alloc: [0] 192 193 194 195 196 197 198 199 
+2018-08-22 13:55:56,230 process          L0367 DEBUG| [stdout] [    0.000000] pcpu-alloc: [0] 200 201 202 203 204 205 206 207 
+2018-08-22 13:55:56,230 process          L0367 DEBUG| [stdout] [    0.000000] pcpu-alloc: [0] 208 209 210 211 212 213 214 215 
+2018-08-22 13:55:56,230 process          L0367 DEBUG| [stdout] [    0.000000] pcpu-alloc: [0] 216 217 218 219 220 221 222 223 
+2018-08-22 13:55:56,230 process          L0367 DEBUG| [stdout] [    0.000000] pcpu-alloc: [0] 224 225 226 227 228 229 230 231 
+2018-08-22 13:55:56,230 process          L0367 DEBUG| [stdout] [    0.000000] pcpu-alloc: [0] 232 233 234 235 236 237 238 239 
+2018-08-22 13:55:56,230 process          L0367 DEBUG| [stdout] [    0.000000] pcpu-alloc: [0] 240 241 242 243 244 245 246 247 
+2018-08-22 13:55:56,231 process          L0367 DEBUG| [stdout] [    0.000000] pcpu-alloc: [0] 248 249 250 251 252 253 254 255 
+2018-08-22 13:55:56,231 process          L0367 DEBUG| [stdout] [    0.000000] Built 1 zonelists, mobility grouping on.  Total pages: 16485946
+2018-08-22 13:55:56,231 process          L0367 DEBUG| [stdout] [    0.000000] Policy zone: Normal
+2018-08-22 13:55:56,231 process          L0367 DEBUG| [stdout] [    0.000000] Kernel command line: BOOT_IMAGE=/boot/vmlinuz-4.17.0-amdsos-build6+ root=UUID=bd2cc212-47bd-4b3e-9e47-f7fd1301eb48 ro console=tty0 console=ttyS0,115200n8 earlyprintk=serial,keep net.ifnames=0 biosdevname=0 quiet splash vt.handoff=1
+2018-08-22 13:55:56,231 process          L0367 DEBUG| [stdout] [    0.000000] log_buf_len individual max cpu contribution: 4096 bytes
+2018-08-22 13:55:56,231 process          L0367 DEBUG| [stdout] [    0.000000] log_buf_len total cpu_extra contributions: 1044480 bytes
+2018-08-22 13:55:56,232 process          L0367 DEBUG| [stdout] [    0.000000] log_buf_len min size: 262144 bytes
+2018-08-22 13:55:56,232 process          L0367 DEBUG| [stdout] [    0.000000] log_buf_len: 2097152 bytes
+2018-08-22 13:55:56,232 process          L0367 DEBUG| [stdout] [    0.000000] early log buf free: 243988(93%)
+2018-08-22 13:55:56,232 process          L0367 DEBUG| [stdout] [    0.000000] Calgary: detecting Calgary via BIOS EBDA area
+2018-08-22 13:55:56,232 process          L0367 DEBUG| [stdout] [    0.000000] Calgary: Unable to locate Rio Grande table in EBDA - bailing!
+2018-08-22 13:55:56,232 process          L0367 DEBUG| [stdout] [    0.000000] Memory: 65642528K/66990652K available (12300K kernel code, 2524K rwdata, 4384K rodata, 2436K init, 2384K bss, 1348124K reserved, 0K cma-reserved)
+2018-08-22 13:55:56,233 process          L0367 DEBUG| [stdout] [    0.000000] SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=256, Nodes=1
+2018-08-22 13:55:56,233 process          L0367 DEBUG| [stdout] [    0.000000] ftrace: allocating 40454 entries in 159 pages
+2018-08-22 13:55:56,233 process          L0367 DEBUG| [stdout] [    0.000000] Hierarchical RCU implementation.
+2018-08-22 13:55:56,233 process          L0367 DEBUG| [stdout] [    0.000000] 	RCU restricting CPUs from NR_CPUS=8192 to nr_cpu_ids=256.
+2018-08-22 13:55:56,233 process          L0367 DEBUG| [stdout] [    0.000000] 	Tasks RCU enabled.
+2018-08-22 13:55:56,233 process          L0367 DEBUG| [stdout] [    0.000000] RCU: Adjusting geometry for rcu_fanout_leaf=16, nr_cpu_ids=256
+2018-08-22 13:55:56,233 process          L0367 DEBUG| [stdout] [    0.000000] NR_IRQS: 524544, nr_irqs: 4648, preallocated irqs: 16
+2018-08-22 13:55:56,234 process          L0367 DEBUG| [stdout] [    0.000000] Console: colour dummy device 80x25
+2018-08-22 13:55:56,234 process          L0367 DEBUG| [stdout] [    0.000000] console [tty0] enabled
+2018-08-22 13:55:56,234 process          L0367 DEBUG| [stdout] [    0.000000] console [ttyS0] enabled
+2018-08-22 13:55:56,234 process          L0367 DEBUG| [stdout] [    0.000000] ACPI: Core revision 20180313
+2018-08-22 13:55:56,234 process          L0367 DEBUG| [stdout] [    0.000000] clocksource: hpet: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 133484873504 ns
+2018-08-22 13:55:56,234 process          L0367 DEBUG| [stdout] [    0.000000] hpet clockevent registered
+2018-08-22 13:55:56,235 process          L0367 DEBUG| [stdout] [    0.000000] APIC: Switch to symmetric I/O mode setup
+2018-08-22 13:55:56,235 process          L0367 DEBUG| [stdout] [    0.004000] Switched APIC routing to physical flat.
+2018-08-22 13:55:56,235 process          L0367 DEBUG| [stdout] [    0.008000] ..TIMER: vector=0x30 apic1=0 pin1=2 apic2=-1 pin2=-1
+2018-08-22 13:55:56,235 process          L0367 DEBUG| [stdout] [    0.028000] tsc: Fast TSC calibration using PIT
+2018-08-22 13:55:56,235 process          L0367 DEBUG| [stdout] [    0.032000] tsc: Detected 1696.748 MHz processor
+2018-08-22 13:55:56,235 process          L0367 DEBUG| [stdout] [    0.032000] clocksource: tsc-early: mask: 0xffffffffffffffff max_cycles: 0x18752743c99, max_idle_ns: 440795215663 ns
+2018-08-22 13:55:56,235 process          L0367 DEBUG| [stdout] [    0.032000] Calibrating delay loop (skipped), value calculated using timer frequency.. 3393.49 BogoMIPS (lpj=6786992)
+2018-08-22 13:55:56,236 process          L0367 DEBUG| [stdout] [    0.032000] pid_max: default: 262144 minimum: 2048
+2018-08-22 13:55:56,236 process          L0367 DEBUG| [stdout] [    0.037214] Security Framework initialized
+2018-08-22 13:55:56,236 process          L0367 DEBUG| [stdout] [    0.037216] Yama: becoming mindful.
+2018-08-22 13:55:56,236 process          L0367 DEBUG| [stdout] [    0.037568] AppArmor: AppArmor initialized
+2018-08-22 13:55:56,236 process          L0367 DEBUG| [stdout] [    0.048635] Dentry cache hash table entries: 8388608 (order: 14, 67108864 bytes)
+2018-08-22 13:55:56,236 process          L0367 DEBUG| [stdout] [    0.054145] Inode-cache hash table entries: 4194304 (order: 13, 33554432 bytes)
+2018-08-22 13:55:56,237 process          L0367 DEBUG| [stdout] [    0.054434] Mount-cache hash table entries: 131072 (order: 8, 1048576 bytes)
+2018-08-22 13:55:56,237 process          L0367 DEBUG| [stdout] [    0.054609] Mountpoint-cache hash table entries: 131072 (order: 8, 1048576 bytes)
+2018-08-22 13:55:56,237 process          L0367 DEBUG| [stdout] [    0.055657] CPU: Physical Processor ID: 0
+2018-08-22 13:55:56,237 process          L0367 DEBUG| [stdout] [    0.055658] CPU: Processor Core ID: 0
+2018-08-22 13:55:56,237 process          L0367 DEBUG| [stdout] [    0.055667] x86/cpu: Activated the Intel User Mode Instruction Prevention (UMIP) CPU feature
+2018-08-22 13:55:56,237 process          L0367 DEBUG| [stdout] [    0.055668] CPU: Physical Processor ID: 0
+2018-08-22 13:55:56,238 process          L0367 DEBUG| [stdout] [    0.055668] CPU: Processor Core ID: 0
+2018-08-22 13:55:56,238 process          L0367 DEBUG| [stdout] [    0.055843] LVT offset 2 assigned for vector 0xf4
+2018-08-22 13:55:56,238 process          L0367 DEBUG| [stdout] [    0.055876] Last level iTLB entries: 4KB 1024, 2MB 1024, 4MB 512
+2018-08-22 13:55:56,238 process          L0367 DEBUG| [stdout] [    0.055877] Last level dTLB entries: 4KB 2048, 2MB 2048, 4MB 1024, 1GB 0
+2018-08-22 13:55:56,238 process          L0367 DEBUG| [stdout] [    0.055882] Spectre V2 : Mitigation: Full AMD retpoline
+2018-08-22 13:55:56,238 process          L0367 DEBUG| [stdout] [    0.055886] Speculative Store Bypass: Mitigation: Speculative Store Bypass disabled via prctl and seccomp
+2018-08-22 13:55:56,238 process          L0367 DEBUG| [stdout] [    0.056134] Freeing SMP alternatives memory: 36K
+2018-08-22 13:55:56,239 process          L0367 DEBUG| [stdout] [    0.064000] smpboot: CPU0: AMD Eng Sample: 1S1701E2VIVG2_20/17_N (family: 0x17, model: 0x30, stepping: 0x0)
+2018-08-22 13:55:56,239 process          L0367 DEBUG| [stdout] [    0.064000] Performance Events: Fam17h core perfctr, AMD PMU driver.
+2018-08-22 13:55:56,239 process          L0367 DEBUG| [stdout] [    0.064000] ... version:                0
+2018-08-22 13:55:56,239 process          L0367 DEBUG| [stdout] [    0.064000] ... bit width:              48
+2018-08-22 13:55:56,239 process          L0367 DEBUG| [stdout] [    0.064000] ... generic registers:      6
+2018-08-22 13:55:56,239 process          L0367 DEBUG| [stdout] [    0.064000] ... value mask:             0000ffffffffffff
+2018-08-22 13:55:56,240 process          L0367 DEBUG| [stdout] [    0.064000] ... max period:             00007fffffffffff
+2018-08-22 13:55:56,240 process          L0367 DEBUG| [stdout] [    0.064000] ... fixed-purpose events:   0
+2018-08-22 13:55:56,240 process          L0367 DEBUG| [stdout] [    0.064000] ... event mask:             000000000000003f
+2018-08-22 13:55:56,240 process          L0367 DEBUG| [stdout] [    0.064000] Hierarchical SRCU implementation.
+2018-08-22 13:55:56,240 process          L0367 DEBUG| [stdout] [    0.064000] MCE: In-kernel MCE decoding enabled.
+2018-08-22 13:55:56,240 process          L0367 DEBUG| [stdout] [    0.064805] NMI watchdog: Enabled. Permanently consumes one hw-PMU counter.
+2018-08-22 13:55:56,241 process          L0367 DEBUG| [stdout] [    0.064824] smp: Bringing up secondary CPUs ...
+2018-08-22 13:55:56,241 process          L0367 DEBUG| [stdout] [    0.065015] x86: Booting SMP configuration:
+2018-08-22 13:55:56,241 process          L0367 DEBUG| [stdout] [    0.065018] .... node  #0, CPUs:          #1
+2018-08-22 13:55:56,241 process          L0367 DEBUG| [stdout] [    0.004000] x86/cpu: Activated the Intel User Mode Instruction Prevention (UMIP) CPU feature
+2018-08-22 13:55:56,241 process          L0367 DEBUG| [stdout] [    0.068216]    #2
+2018-08-22 13:55:56,241 process          L0367 DEBUG| [stdout] [    0.004000] x86/cpu: Activated the Intel User Mode Instruction Prevention (UMIP) CPU feature
+2018-08-22 13:55:56,242 process          L0367 DEBUG| [stdout] [    0.072113]    #3
+2018-08-22 13:55:56,242 process          L0367 DEBUG| [stdout] [    0.004000] x86/cpu: Activated the Intel User Mode Instruction Prevention (UMIP) CPU feature
+2018-08-22 13:55:56,242 process          L0367 DEBUG| [stdout] [    0.074425]    #4
+2018-08-22 13:55:56,242 process          L0367 DEBUG| [stdout] [    0.004000] x86/cpu: Activated the Intel User Mode Instruction Prevention (UMIP) CPU feature
+2018-08-22 13:55:56,242 process          L0367 DEBUG| [stdout] [    0.076190]    #5
+2018-08-22 13:55:56,242 process          L0367 DEBUG| [stdout] [    0.004000] x86/cpu: Activated the Intel User Mode Instruction Prevention (UMIP) CPU feature
+2018-08-22 13:55:56,242 process          L0367 DEBUG| [stdout] [    0.080115]    #6
+2018-08-22 13:55:56,243 process          L0367 DEBUG| [stdout] [    0.004000] x86/cpu: Activated the Intel User Mode Instruction Prevention (UMIP) CPU feature
+2018-08-22 13:55:56,243 process          L0367 DEBUG| [stdout] [    0.082446]    #7
+2018-08-22 13:55:56,243 process          L0367 DEBUG| [stdout] [    0.004000] x86/cpu: Activated the Intel User Mode Instruction Prevention (UMIP) CPU feature
+2018-08-22 13:55:56,243 process          L0367 DEBUG| [stdout] [    0.084171]    #8
+2018-08-22 13:55:56,243 process          L0367 DEBUG| [stdout] [    0.004000] x86/cpu: Activated the Intel User Mode Instruction Prevention (UMIP) CPU feature
+2018-08-22 13:55:56,243 process          L0367 DEBUG| [stdout] [    0.088176]    #9
+2018-08-22 13:55:56,244 process          L0367 DEBUG| [stdout] [    0.004000] x86/cpu: Activated the Intel User Mode Instruction Prevention (UMIP) CPU feature
+2018-08-22 13:55:56,244 process          L0367 DEBUG| [stdout] [    0.090555]   #10
+2018-08-22 13:55:56,244 process          L0367 DEBUG| [stdout] [    0.004000] x86/cpu: Activated the Intel User Mode Instruction Prevention (UMIP) CPU feature
+2018-08-22 13:55:56,244 process          L0367 DEBUG| [stdout] [    0.092225]   #11
+2018-08-22 13:55:56,244 process          L0367 DEBUG| [stdout] [    0.004000] x86/cpu: Activated the Intel User Mode Instruction Prevention (UMIP) CPU feature
+2018-08-22 13:55:56,244 process          L0367 DEBUG| [stdout] [    0.096204]   #12
+2018-08-22 13:55:56,244 process          L0367 DEBUG| [stdout] [    0.004000] x86/cpu: Activated the Intel User Mode Instruction Prevention (UMIP) CPU feature
+2018-08-22 13:55:56,245 process          L0367 DEBUG| [stdout] [    0.098516]   #13
+2018-08-22 13:55:56,245 process          L0367 DEBUG| [stdout] [    0.004000] x86/cpu: Activated the Intel User Mode Instruction Prevention (UMIP) CPU feature
+2018-08-22 13:55:56,245 process          L0367 DEBUG| [stdout] [    0.100204]   #14
+2018-08-22 13:55:56,245 process          L0367 DEBUG| [stdout] [    0.004000] x86/cpu: Activated the Intel User Mode Instruction Prevention (UMIP) CPU feature
+2018-08-22 13:55:56,245 process          L0367 DEBUG| [stdout] [    0.104225]   #15
+2018-08-22 13:55:56,246 process          L0367 DEBUG| [stdout] [    0.004000] x86/cpu: Activated the Intel User Mode Instruction Prevention (UMIP) CPU feature
+2018-08-22 13:55:56,246 process          L0367 DEBUG| [stdout] [    0.106529]   #16
+2018-08-22 13:55:56,246 process          L0367 DEBUG| [stdout] [    0.004000] x86/cpu: Activated the Intel User Mode Instruction Prevention (UMIP) CPU feature
+2018-08-22 13:55:56,246 process          L0367 DEBUG| [stdout] [    0.106529] TSC synchronization [CPU#0 -> CPU#16]:
+2018-08-22 13:55:56,246 process          L0367 DEBUG| [stdout] [    0.106529] Measured 1139 cycles TSC warp between CPUs, turning off TSC clock.
+2018-08-22 13:55:56,246 process          L0367 DEBUG| [stdout] [    0.106529] tsc: Marking TSC unstable due to check_tsc_sync_source failed
+2018-08-22 13:55:56,246 process          L0367 DEBUG| [stdout] [    0.108243]   #17
+2018-08-22 13:55:56,247 process          L0367 DEBUG| [stdout] [    0.004000] x86/cpu: Activated the Intel User Mode Instruction Prevention (UMIP) CPU feature
+2018-08-22 13:55:56,247 process          L0367 DEBUG| [stdout] [    0.108543]   #18
+2018-08-22 13:55:56,247 process          L0367 DEBUG| [stdout] [    0.004000] x86/cpu: Activated the Intel User Mode Instruction Prevention (UMIP) CPU feature
+2018-08-22 13:55:56,247 process          L0367 DEBUG| [stdout] [    0.108543]   #19
+2018-08-22 13:55:56,247 process          L0367 DEBUG| [stdout] [    0.004000] x86/cpu: Activated the Intel User Mode Instruction Prevention (UMIP) CPU feature
+2018-08-22 13:55:56,247 process          L0367 DEBUG| [stdout] [    0.112188]   #20
+2018-08-22 13:55:56,248 process          L0367 DEBUG| [stdout] [    0.004000] x86/cpu: Activated the Intel User Mode Instruction Prevention (UMIP) CPU feature
+2018-08-22 13:55:56,248 process          L0367 DEBUG| [stdout] [    0.112525]   #21
+2018-08-22 13:55:56,248 process          L0367 DEBUG| [stdout] [    0.004000] x86/cpu: Activated the Intel User Mode Instruction Prevention (UMIP) CPU feature
+2018-08-22 13:55:56,248 process          L0367 DEBUG| [stdout] [    0.112528]   #22
+2018-08-22 13:55:56,248 process          L0367 DEBUG| [stdout] [    0.004000] x86/cpu: Activated the Intel User Mode Instruction Prevention (UMIP) CPU feature
+2018-08-22 13:55:56,248 process          L0367 DEBUG| [stdout] [    0.112528]   #23
+2018-08-22 13:55:56,248 process          L0367 DEBUG| [stdout] [    0.004000] x86/cpu: Activated the Intel User Mode Instruction Prevention (UMIP) CPU feature
+2018-08-22 13:55:56,249 process          L0367 DEBUG| [stdout] [    0.112530]   #24
+2018-08-22 13:55:56,249 process          L0367 DEBUG| [stdout] [    0.004000] x86/cpu: Activated the Intel User Mode Instruction Prevention (UMIP) CPU feature
+2018-08-22 13:55:56,249 process          L0367 DEBUG| [stdout] [    0.116196]   #25
+2018-08-22 13:55:56,249 process          L0367 DEBUG| [stdout] [    0.004000] x86/cpu: Activated the Intel User Mode Instruction Prevention (UMIP) CPU feature
+2018-08-22 13:55:56,249 process          L0367 DEBUG| [stdout] [    0.116572]   #26
+2018-08-22 13:55:56,249 process          L0367 DEBUG| [stdout] [    0.004000] x86/cpu: Activated the Intel User Mode Instruction Prevention (UMIP) CPU feature
+2018-08-22 13:55:56,250 process          L0367 DEBUG| [stdout] [    0.116572]   #27
+2018-08-22 13:55:56,250 process          L0367 DEBUG| [stdout] [    0.004000] x86/cpu: Activated the Intel User Mode Instruction Prevention (UMIP) CPU feature
+2018-08-22 13:55:56,250 process          L0367 DEBUG| [stdout] [    0.116572]   #28
+2018-08-22 13:55:56,250 process          L0367 DEBUG| [stdout] [    0.004000] x86/cpu: Activated the Intel User Mode Instruction Prevention (UMIP) CPU feature
+2018-08-22 13:55:56,250 process          L0367 DEBUG| [stdout] [    0.116572]   #29
+2018-08-22 13:55:56,250 process          L0367 DEBUG| [stdout] [    0.004000] x86/cpu: Activated the Intel User Mode Instruction Prevention (UMIP) CPU feature
+2018-08-22 13:55:56,251 process          L0367 DEBUG| [stdout] [    0.120063]   #30
+2018-08-22 13:55:56,251 process          L0367 DEBUG| [stdout] [    0.004000] x86/cpu: Activated the Intel User Mode Instruction Prevention (UMIP) CPU feature
+2018-08-22 13:55:56,251 process          L0367 DEBUG| [stdout] [    0.120418]   #31
+2018-08-22 13:55:56,251 process          L0367 DEBUG| [stdout] [    0.004000] x86/cpu: Activated the Intel User Mode Instruction Prevention (UMIP) CPU feature
+2018-08-22 13:55:56,251 process          L0367 DEBUG| [stdout] [    0.120536]   #32
+2018-08-22 13:55:56,251 process          L0367 DEBUG| [stdout] [    0.004000] x86/cpu: Activated the Intel User Mode Instruction Prevention (UMIP) CPU feature
+2018-08-22 13:55:56,251 process          L0367 DEBUG| [stdout] [    0.120536]   #33
+2018-08-22 13:55:56,252 process          L0367 DEBUG| [stdout] [    0.004000] x86/cpu: Activated the Intel User Mode Instruction Prevention (UMIP) CPU feature
+2018-08-22 13:55:56,252 process          L0367 DEBUG| [stdout] [    0.120553]   #34
+2018-08-22 13:55:56,252 process          L0367 DEBUG| [stdout] [    0.004000] x86/cpu: Activated the Intel User Mode Instruction Prevention (UMIP) CPU feature
+2018-08-22 13:55:56,252 process          L0367 DEBUG| [stdout] [    0.120553]   #35
+2018-08-22 13:55:56,252 process          L0367 DEBUG| [stdout] [    0.004000] x86/cpu: Activated the Intel User Mode Instruction Prevention (UMIP) CPU feature
+2018-08-22 13:55:56,252 process          L0367 DEBUG| [stdout] [    0.124207]   #36
+2018-08-22 13:55:56,253 process          L0367 DEBUG| [stdout] [    0.004000] x86/cpu: Activated the Intel User Mode Instruction Prevention (UMIP) CPU feature
+2018-08-22 13:55:56,253 process          L0367 DEBUG| [stdout] [    0.124532]   #37
+2018-08-22 13:55:56,253 process          L0367 DEBUG| [stdout] [    0.004000] x86/cpu: Activated the Intel User Mode Instruction Prevention (UMIP) CPU feature
+2018-08-22 13:55:56,253 process          L0367 DEBUG| [stdout] [    0.124535]   #38
+2018-08-22 13:55:56,253 process          L0367 DEBUG| [stdout] [    0.004000] x86/cpu: Activated the Intel User Mode Instruction Prevention (UMIP) CPU feature
+2018-08-22 13:55:56,253 process          L0367 DEBUG| [stdout] [    0.124535]   #39
+2018-08-22 13:55:56,253 process          L0367 DEBUG| [stdout] [    0.004000] x86/cpu: Activated the Intel User Mode Instruction Prevention (UMIP) CPU feature
+2018-08-22 13:55:56,254 process          L0367 DEBUG| [stdout] [    0.124535]   #40
+2018-08-22 13:55:56,254 process          L0367 DEBUG| [stdout] [    0.004000] x86/cpu: Activated the Intel User Mode Instruction Prevention (UMIP) CPU feature
+2018-08-22 13:55:56,254 process          L0367 DEBUG| [stdout] [    0.128186]   #41
+2018-08-22 13:55:56,254 process          L0367 DEBUG| [stdout] [    0.004000] x86/cpu: Activated the Intel User Mode Instruction Prevention (UMIP) CPU feature
+2018-08-22 13:55:56,254 process          L0367 DEBUG| [stdout] [    0.128570]   #42
+2018-08-22 13:55:56,254 process          L0367 DEBUG| [stdout] [    0.004000] x86/cpu: Activated the Intel User Mode Instruction Prevention (UMIP) CPU feature
+2018-08-22 13:55:56,255 process          L0367 DEBUG| [stdout] [    0.128570]   #43
+2018-08-22 13:55:56,255 process          L0367 DEBUG| [stdout] [    0.004000] x86/cpu: Activated the Intel User Mode Instruction Prevention (UMIP) CPU feature
+2018-08-22 13:55:56,255 process          L0367 DEBUG| [stdout] [    0.128570]   #44
+2018-08-22 13:55:56,255 process          L0367 DEBUG| [stdout] [    0.004000] x86/cpu: Activated the Intel User Mode Instruction Prevention (UMIP) CPU feature
+2018-08-22 13:55:56,255 process          L0367 DEBUG| [stdout] [    0.128570]   #45
+2018-08-22 13:55:56,255 process          L0367 DEBUG| [stdout] [    0.004000] x86/cpu: Activated the Intel User Mode Instruction Prevention (UMIP) CPU feature
+2018-08-22 13:55:56,256 process          L0367 DEBUG| [stdout] [    0.132180]   #46
+2018-08-22 13:55:56,256 process          L0367 DEBUG| [stdout] [    0.004000] x86/cpu: Activated the Intel User Mode Instruction Prevention (UMIP) CPU feature
+2018-08-22 13:55:56,256 process          L0367 DEBUG| [stdout] [    0.132543]   #47
+2018-08-22 13:55:56,256 process          L0367 DEBUG| [stdout] [    0.004000] x86/cpu: Activated the Intel User Mode Instruction Prevention (UMIP) CPU feature
+2018-08-22 13:55:56,256 process          L0367 DEBUG| [stdout] [    0.132550]   #48
+2018-08-22 13:55:56,256 process          L0367 DEBUG| [stdout] [    0.004000] x86/cpu: Activated the Intel User Mode Instruction Prevention (UMIP) CPU feature
+2018-08-22 13:55:56,256 process          L0367 DEBUG| [stdout] [    0.132550]   #49
+2018-08-22 13:55:56,257 process          L0367 DEBUG| [stdout] [    0.004000] x86/cpu: Activated the Intel User Mode Instruction Prevention (UMIP) CPU feature
+2018-08-22 13:55:56,257 process          L0367 DEBUG| [stdout] [    0.132561]   #50
+2018-08-22 13:55:56,257 process          L0367 DEBUG| [stdout] [    0.004000] x86/cpu: Activated the Intel User Mode Instruction Prevention (UMIP) CPU feature
+2018-08-22 13:55:56,257 process          L0367 DEBUG| [stdout] [    0.136032]   #51
+2018-08-22 13:55:56,257 process          L0367 DEBUG| [stdout] [    0.004000] x86/cpu: Activated the Intel User Mode Instruction Prevention (UMIP) CPU feature
+2018-08-22 13:55:56,257 process          L0367 DEBUG| [stdout] [    0.136403]   #52
+2018-08-22 13:55:56,258 process          L0367 DEBUG| [stdout] [    0.004000] x86/cpu: Activated the Intel User Mode Instruction Prevention (UMIP) CPU feature
+2018-08-22 13:55:56,258 process          L0367 DEBUG| [stdout] [    0.136540]   #53
+2018-08-22 13:55:56,258 process          L0367 DEBUG| [stdout] [    0.004000] x86/cpu: Activated the Intel User Mode Instruction Prevention (UMIP) CPU feature
+2018-08-22 13:55:56,258 process          L0367 DEBUG| [stdout] [    0.136546]   #54
+2018-08-22 13:55:56,258 process          L0367 DEBUG| [stdout] [    0.004000] x86/cpu: Activated the Intel User Mode Instruction Prevention (UMIP) CPU feature
+2018-08-22 13:55:56,258 process          L0367 DEBUG| [stdout] [    0.136546]   #55
+2018-08-22 13:55:56,258 process          L0367 DEBUG| [stdout] [    0.004000] x86/cpu: Activated the Intel User Mode Instruction Prevention (UMIP) CPU feature
+2018-08-22 13:55:56,259 process          L0367 DEBUG| [stdout] [    0.136546]   #56
+2018-08-22 13:55:56,259 process          L0367 DEBUG| [stdout] [    0.004000] x86/cpu: Activated the Intel User Mode Instruction Prevention (UMIP) CPU feature
+2018-08-22 13:55:56,259 process          L0367 DEBUG| [stdout] [    0.140250]   #57
+2018-08-22 13:55:56,259 process          L0367 DEBUG| [stdout] [    0.004000] x86/cpu: Activated the Intel User Mode Instruction Prevention (UMIP) CPU feature
+2018-08-22 13:55:56,259 process          L0367 DEBUG| [stdout] [    0.140566]   #58
+2018-08-22 13:55:56,259 process          L0367 DEBUG| [stdout] [    0.004000] x86/cpu: Activated the Intel User Mode Instruction Prevention (UMIP) CPU feature
+2018-08-22 13:55:56,260 process          L0367 DEBUG| [stdout] [    0.140566]   #59
+2018-08-22 13:55:56,260 process          L0367 DEBUG| [stdout] [    0.004000] x86/cpu: Activated the Intel User Mode Instruction Prevention (UMIP) CPU feature
+2018-08-22 13:55:56,260 process          L0367 DEBUG| [stdout] [    0.140566]   #60
+2018-08-22 13:55:56,260 process          L0367 DEBUG| [stdout] [    0.004000] x86/cpu: Activated the Intel User Mode Instruction Prevention (UMIP) CPU feature
+2018-08-22 13:55:56,260 process          L0367 DEBUG| [stdout] [    0.140566]   #61
+2018-08-22 13:55:56,260 process          L0367 DEBUG| [stdout] [    0.004000] x86/cpu: Activated the Intel User Mode Instruction Prevention (UMIP) CPU feature
+2018-08-22 13:55:56,261 process          L0367 DEBUG| [stdout] [    0.144233]   #62
+2018-08-22 13:55:56,261 process          L0367 DEBUG| [stdout] [    0.004000] x86/cpu: Activated the Intel User Mode Instruction Prevention (UMIP) CPU feature
+2018-08-22 13:55:56,261 process          L0367 DEBUG| [stdout] [    0.144552]   #63
+2018-08-22 13:55:56,261 process          L0367 DEBUG| [stdout] [    0.004000] x86/cpu: Activated the Intel User Mode Instruction Prevention (UMIP) CPU feature
+2018-08-22 13:55:56,261 process          L0367 DEBUG| [stdout] [    0.144557] smp: Brought up 1 node, 64 CPUs
+2018-08-22 13:55:56,261 process          L0367 DEBUG| [stdout] [    0.144557] smpboot: Max logical packages: 4
+2018-08-22 13:55:56,261 process          L0367 DEBUG| [stdout] [    0.144557] smpboot: Total of 64 processors activated (217183.74 BogoMIPS)
+2018-08-22 13:55:56,262 process          L0367 DEBUG| [stdout] [    0.157370] devtmpfs: initialized
+2018-08-22 13:55:56,262 process          L0367 DEBUG| [stdout] [    0.157370] x86/mm: Memory block size: 128MB
+2018-08-22 13:55:56,262 process          L0367 DEBUG| [stdout] [    0.166336] evm: security.selinux
+2018-08-22 13:55:56,262 process          L0367 DEBUG| [stdout] [    0.166337] evm: security.SMACK64
+2018-08-22 13:55:56,262 process          L0367 DEBUG| [stdout] [    0.166338] evm: security.SMACK64EXEC
+2018-08-22 13:55:56,262 process          L0367 DEBUG| [stdout] [    0.166339] evm: security.SMACK64TRANSMUTE
+2018-08-22 13:55:56,263 process          L0367 DEBUG| [stdout] [    0.166340] evm: security.SMACK64MMAP
+2018-08-22 13:55:56,263 process          L0367 DEBUG| [stdout] [    0.166340] evm: security.apparmor
+2018-08-22 13:55:56,263 process          L0367 DEBUG| [stdout] [    0.166341] evm: security.ima
+2018-08-22 13:55:56,263 process          L0367 DEBUG| [stdout] [    0.166342] evm: security.capability
+2018-08-22 13:55:56,263 process          L0367 DEBUG| [stdout] [    0.166519] PM: Registering ACPI NVS region [mem 0x04000000-0x04008fff] (36864 bytes)
+2018-08-22 13:55:56,263 process          L0367 DEBUG| [stdout] [    0.166519] PM: Registering ACPI NVS region [mem 0x75fc7000-0x76329fff] (3551232 bytes)
+2018-08-22 13:55:56,264 process          L0367 DEBUG| [stdout] [    0.166519] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 7645041785100000 ns
+2018-08-22 13:55:56,264 process          L0367 DEBUG| [stdout] [    0.166519] futex hash table entries: 65536 (order: 10, 4194304 bytes)
+2018-08-22 13:55:56,264 process          L0367 DEBUG| [stdout] [    0.170024] pinctrl core: initialized pinctrl subsystem
+2018-08-22 13:55:56,264 process          L0367 DEBUG| [stdout] [    0.170239] RTC time: 18:53:23, date: 08/22/18
+2018-08-22 13:55:56,264 process          L0367 DEBUG| [stdout] [    0.172850] NET: Registered protocol family 16
+2018-08-22 13:55:56,264 process          L0367 DEBUG| [stdout] [    0.173109] audit: initializing netlink subsys (disabled)
+2018-08-22 13:55:56,264 process          L0367 DEBUG| [stdout] [    0.173118] audit: type=2000 audit(1534964001.172:1): state=initialized audit_enabled=0 res=1
+2018-08-22 13:55:56,265 process          L0367 DEBUG| [stdout] [    0.173118] cpuidle: using governor ladder
+2018-08-22 13:55:56,265 process          L0367 DEBUG| [stdout] [    0.173118] cpuidle: using governor menu
+2018-08-22 13:55:56,265 process          L0367 DEBUG| [stdout] [    0.173118] ACPI: bus type PCI registered
+2018-08-22 13:55:56,265 process          L0367 DEBUG| [stdout] [    0.173118] acpiphp: ACPI Hot Plug PCI Controller Driver version: 0.5
+2018-08-22 13:55:56,265 process          L0367 DEBUG| [stdout] [    0.173118] PCI: MMCONFIG for domain 0000 [bus 00-ff] at [mem 0xe0000000-0xefffffff] (base 0xe0000000)
+2018-08-22 13:55:56,265 process          L0367 DEBUG| [stdout] [    0.173118] PCI: not using MMCONFIG
+2018-08-22 13:55:56,266 process          L0367 DEBUG| [stdout] [    0.173118] PCI: Using configuration type 1 for base access
+2018-08-22 13:55:56,266 process          L0367 DEBUG| [stdout] [    0.173118] PCI: Using configuration type 1 for extended access
+2018-08-22 13:55:56,266 process          L0367 DEBUG| [stdout] [    0.183264] HugeTLB registered 1.00 GiB page size, pre-allocated 0 pages
+2018-08-22 13:55:56,266 process          L0367 DEBUG| [stdout] [    0.183264] HugeTLB registered 2.00 MiB page size, pre-allocated 0 pages
+2018-08-22 13:55:56,266 process          L0367 DEBUG| [stdout] [    0.184848] ACPI: Added _OSI(Module Device)
+2018-08-22 13:55:56,266 process          L0367 DEBUG| [stdout] [    0.184849] ACPI: Added _OSI(Processor Device)
+2018-08-22 13:55:56,267 process          L0367 DEBUG| [stdout] [    0.184851] ACPI: Added _OSI(3.0 _SCP Extensions)
+2018-08-22 13:55:56,267 process          L0367 DEBUG| [stdout] [    0.184852] ACPI: Added _OSI(Processor Aggregator Device)
+2018-08-22 13:55:56,267 process          L0367 DEBUG| [stdout] [    0.184854] ACPI: Added _OSI(Linux-Dell-Video)
+2018-08-22 13:55:56,267 process          L0367 DEBUG| [stdout] [    0.228356] ACPI: 6 ACPI AML tables successfully acquired and loaded
+2018-08-22 13:55:56,267 process          L0367 DEBUG| [stdout] [    0.244461] ACPI: Interpreter enabled
+2018-08-22 13:55:56,267 process          L0367 DEBUG| [stdout] [    0.244487] ACPI: (supports S0 S5)
+2018-08-22 13:55:56,267 process          L0367 DEBUG| [stdout] [    0.244488] ACPI: Using IOAPIC for interrupt routing
+2018-08-22 13:55:56,268 process          L0367 DEBUG| [stdout] [    0.245004] PCI: MMCONFIG for domain 0000 [bus 00-ff] at [mem 0xe0000000-0xefffffff] (base 0xe0000000)
+2018-08-22 13:55:56,268 process          L0367 DEBUG| [stdout] [    0.245302] PCI: MMCONFIG at [mem 0xe0000000-0xefffffff] reserved in ACPI motherboard resources
+2018-08-22 13:55:56,268 process          L0367 DEBUG| [stdout] [    0.245342] [Firmware Warn]: HEST: Unknown or unused hardware error source type: 11 for hardware error source: 5.
+2018-08-22 13:55:56,268 process          L0367 DEBUG| [stdout] [    0.245347] PCI: Using host bridge windows from ACPI; if necessary, use "pci=nocrs" and report a bug
+2018-08-22 13:55:56,268 process          L0367 DEBUG| [stdout] [    0.246160] ACPI: Enabled 3 GPEs in block 00 to 1F
+2018-08-22 13:55:56,268 process          L0367 DEBUG| [stdout] [    0.251259] ACPI: Power Resource [P0SA] (off)
+2018-08-22 13:55:56,269 process          L0367 DEBUG| [stdout] [    0.251317] ACPI: Power Resource [P3SA] (off)
+2018-08-22 13:55:56,269 process          L0367 DEBUG| [stdout] [    0.252278] ACPI: Power Resource [P0SA] (off)
+2018-08-22 13:55:56,269 process          L0367 DEBUG| [stdout] [    0.252331] ACPI: Power Resource [P3SA] (off)
+2018-08-22 13:55:56,269 process          L0367 DEBUG| [stdout] [    0.254879] ACPI: Power Resource [P0SA] (off)
+2018-08-22 13:55:56,269 process          L0367 DEBUG| [stdout] [    0.254930] ACPI: Power Resource [P3SA] (off)
+2018-08-22 13:55:56,269 process          L0367 DEBUG| [stdout] [    0.255876] ACPI: Power Resource [P0SA] (off)
+2018-08-22 13:55:56,270 process          L0367 DEBUG| [stdout] [    0.255925] ACPI: Power Resource [P3SA] (off)
+2018-08-22 13:55:56,270 process          L0367 DEBUG| [stdout] [    0.258486] ACPI: Power Resource [P0SA] (off)
+2018-08-22 13:55:56,270 process          L0367 DEBUG| [stdout] [    0.258536] ACPI: Power Resource [P3SA] (off)
+2018-08-22 13:55:56,270 process          L0367 DEBUG| [stdout] [    0.259477] ACPI: Power Resource [P0SA] (off)
+2018-08-22 13:55:56,270 process          L0367 DEBUG| [stdout] [    0.259531] ACPI: Power Resource [P3SA] (off)
+2018-08-22 13:55:56,270 process          L0367 DEBUG| [stdout] [    0.262437] ACPI: Power Resource [P0SA] (off)
+2018-08-22 13:55:56,270 process          L0367 DEBUG| [stdout] [    0.262494] ACPI: Power Resource [P3SA] (off)
+2018-08-22 13:55:56,271 process          L0367 DEBUG| [stdout] [    0.263432] ACPI: Power Resource [P0SA] (off)
+2018-08-22 13:55:56,271 process          L0367 DEBUG| [stdout] [    0.263482] ACPI: Power Resource [P3SA] (off)
+2018-08-22 13:55:56,271 process          L0367 DEBUG| [stdout] [    0.269820] ACPI: Power Resource [P0SA] (off)
+2018-08-22 13:55:56,271 process          L0367 DEBUG| [stdout] [    0.269871] ACPI: Power Resource [P3SA] (off)
+2018-08-22 13:55:56,271 process          L0367 DEBUG| [stdout] [    0.270825] ACPI: Power Resource [P0SA] (off)
+2018-08-22 13:55:56,271 process          L0367 DEBUG| [stdout] [    0.270877] ACPI: Power Resource [P3SA] (off)
+2018-08-22 13:55:56,272 process          L0367 DEBUG| [stdout] [    0.273366] ACPI: Power Resource [P0SA] (off)
+2018-08-22 13:55:56,272 process          L0367 DEBUG| [stdout] [    0.273420] ACPI: Power Resource [P3SA] (off)
+2018-08-22 13:55:56,272 process          L0367 DEBUG| [stdout] [    0.274374] ACPI: Power Resource [P0SA] (off)
+2018-08-22 13:55:56,272 process          L0367 DEBUG| [stdout] [    0.274423] ACPI: Power Resource [P3SA] (off)
+2018-08-22 13:55:56,272 process          L0367 DEBUG| [stdout] [    0.276901] ACPI: Power Resource [P0SA] (off)
+2018-08-22 13:55:56,272 process          L0367 DEBUG| [stdout] [    0.276952] ACPI: Power Resource [P3SA] (off)
+2018-08-22 13:55:56,272 process          L0367 DEBUG| [stdout] [    0.277905] ACPI: Power Resource [P0SA] (off)
+2018-08-22 13:55:56,273 process          L0367 DEBUG| [stdout] [    0.277958] ACPI: Power Resource [P3SA] (off)
+2018-08-22 13:55:56,273 process          L0367 DEBUG| [stdout] [    0.280456] ACPI: Power Resource [P0SA] (off)
+2018-08-22 13:55:56,273 process          L0367 DEBUG| [stdout] [    0.280507] ACPI: Power Resource [P3SA] (off)
+2018-08-22 13:55:56,273 process          L0367 DEBUG| [stdout] [    0.281467] ACPI: Power Resource [P0SA] (off)
+2018-08-22 13:55:56,273 process          L0367 DEBUG| [stdout] [    0.281517] ACPI: Power Resource [P3SA] (off)
+2018-08-22 13:55:56,273 process          L0367 DEBUG| [stdout] [    0.287183] ACPI: PCI Root Bridge [S0D0] (domain 0000 [bus c0-ff])
+2018-08-22 13:55:56,274 process          L0367 DEBUG| [stdout] [    0.287193] acpi PNP0A08:00: _OSC: OS supports [ExtendedConfig ASPM ClockPM Segments MSI]
+2018-08-22 13:55:56,274 process          L0367 DEBUG| [stdout] [    0.287802] acpi PNP0A08:00: _OSC: OS now controls [PCIeHotplug PME AER PCIeCapability]
+2018-08-22 13:55:56,274 process          L0367 DEBUG| [stdout] [    0.288480] PCI host bridge to bus 0000:c0
+2018-08-22 13:55:56,274 process          L0367 DEBUG| [stdout] [    0.288484] pci_bus 0000:c0: root bus resource [io  0x03b0-0x03df window]
+2018-08-22 13:55:56,274 process          L0367 DEBUG| [stdout] [    0.288487] pci_bus 0000:c0: root bus resource [io  0x7000-0xffff window]
+2018-08-22 13:55:56,274 process          L0367 DEBUG| [stdout] [    0.288490] pci_bus 0000:c0: root bus resource [mem 0x000a0000-0x000bffff window]
+2018-08-22 13:55:56,275 process          L0367 DEBUG| [stdout] [    0.288492] pci_bus 0000:c0: root bus resource [mem 0x80000000-0x8a5fffff window]
+2018-08-22 13:55:56,275 process          L0367 DEBUG| [stdout] [    0.288495] pci_bus 0000:c0: root bus resource [mem 0x10020200000-0x180201fffff window]
+2018-08-22 13:55:56,275 process          L0367 DEBUG| [stdout] [    0.288498] pci_bus 0000:c0: root bus resource [bus c0-ff]
+2018-08-22 13:55:56,275 process          L0367 DEBUG| [stdout] [    0.288511] pci 0000:c0:00.0: [1022:1480] type 00 class 0x060000
+2018-08-22 13:55:56,275 process          L0367 DEBUG| [stdout] [    0.288669] pci 0000:c0:00.2: [1022:1481] type 00 class 0x080600
+2018-08-22 13:55:56,275 process          L0367 DEBUG| [stdout] [    0.288833] pci 0000:c0:01.0: [1022:1482] type 00 class 0x060000
+2018-08-22 13:55:56,275 process          L0367 DEBUG| [stdout] [    0.288964] pci 0000:c0:02.0: [1022:1482] type 00 class 0x060000
+2018-08-22 13:55:56,276 process          L0367 DEBUG| [stdout] [    0.289095] pci 0000:c0:03.0: [1022:1482] type 00 class 0x060000
+2018-08-22 13:55:56,276 process          L0367 DEBUG| [stdout] [    0.289225] pci 0000:c0:04.0: [1022:1482] type 00 class 0x060000
+2018-08-22 13:55:56,276 process          L0367 DEBUG| [stdout] [    0.289362] pci 0000:c0:05.0: [1022:1482] type 00 class 0x060000
+2018-08-22 13:55:56,276 process          L0367 DEBUG| [stdout] [    0.289495] pci 0000:c0:05.2: [1022:1483] type 01 class 0x060400
+2018-08-22 13:55:56,276 process          L0367 DEBUG| [stdout] [    0.289607] pci 0000:c0:05.2: PME# supported from D0 D3hot D3cold
+2018-08-22 13:55:56,276 process          L0367 DEBUG| [stdout] [    0.289760] pci 0000:c0:07.0: [1022:1482] type 00 class 0x060000
+2018-08-22 13:55:56,277 process          L0367 DEBUG| [stdout] [    0.289892] pci 0000:c0:07.1: [1022:1484] type 01 class 0x060400
+2018-08-22 13:55:56,277 process          L0367 DEBUG| [stdout] [    0.289933] pci 0000:c0:07.1: enabling Extended Tags
+2018-08-22 13:55:56,277 process          L0367 DEBUG| [stdout] [    0.289982] pci 0000:c0:07.1: PME# supported from D0 D3hot D3cold
+2018-08-22 13:55:56,277 process          L0367 DEBUG| [stdout] [    0.290115] pci 0000:c0:08.0: [1022:1482] type 00 class 0x060000
+2018-08-22 13:55:56,277 process          L0367 DEBUG| [stdout] [    0.290247] pci 0000:c0:08.1: [1022:1484] type 01 class 0x060400
+2018-08-22 13:55:56,277 process          L0367 DEBUG| [stdout] [    0.290287] pci 0000:c0:08.1: enabling Extended Tags
+2018-08-22 13:55:56,278 process          L0367 DEBUG| [stdout] [    0.290338] pci 0000:c0:08.1: PME# supported from D0 D3hot D3cold
+2018-08-22 13:55:56,278 process          L0367 DEBUG| [stdout] [    0.290565] pci 0000:c1:00.0: [1a03:1150] type 01 class 0x060400
+2018-08-22 13:55:56,278 process          L0367 DEBUG| [stdout] [    0.290641] pci 0000:c1:00.0: enabling Extended Tags
+2018-08-22 13:55:56,278 process          L0367 DEBUG| [stdout] [    0.290725] pci 0000:c1:00.0: supports D1 D2
+2018-08-22 13:55:56,278 process          L0367 DEBUG| [stdout] [    0.290727] pci 0000:c1:00.0: PME# supported from D0 D1 D2 D3hot D3cold
+2018-08-22 13:55:56,278 process          L0367 DEBUG| [stdout] [    0.304028] pci 0000:c0:05.2: PCI bridge to [bus c1-c2]
+2018-08-22 13:55:56,278 process          L0367 DEBUG| [stdout] [    0.304034] pci 0000:c0:05.2:   bridge window [io  0xf000-0xffff]
+2018-08-22 13:55:56,279 process          L0367 DEBUG| [stdout] [    0.304039] pci 0000:c0:05.2:   bridge window [mem 0x84000000-0x880fffff]
+2018-08-22 13:55:56,279 process          L0367 DEBUG| [stdout] [    0.304118] pci 0000:c2:00.0: [1a03:2000] type 00 class 0x030000
+2018-08-22 13:55:56,279 process          L0367 DEBUG| [stdout] [    0.304156] pci 0000:c2:00.0: reg 0x10: [mem 0x84000000-0x87ffffff]
+2018-08-22 13:55:56,279 process          L0367 DEBUG| [stdout] [    0.304172] pci 0000:c2:00.0: reg 0x14: [mem 0x88000000-0x8801ffff]
+2018-08-22 13:55:56,279 process          L0367 DEBUG| [stdout] [    0.304189] pci 0000:c2:00.0: reg 0x18: [io  0xf000-0xf07f]
+2018-08-22 13:55:56,279 process          L0367 DEBUG| [stdout] [    0.304260] pci 0000:c2:00.0: BAR 0: assigned to efifb
+2018-08-22 13:55:56,280 process          L0367 DEBUG| [stdout] [    0.304314] pci 0000:c2:00.0: supports D1 D2
+2018-08-22 13:55:56,280 process          L0367 DEBUG| [stdout] [    0.304316] pci 0000:c2:00.0: PME# supported from D0 D1 D2 D3hot D3cold
+2018-08-22 13:55:56,280 process          L0367 DEBUG| [stdout] [    0.304441] pci 0000:c1:00.0: PCI bridge to [bus c2]
+2018-08-22 13:55:56,280 process          L0367 DEBUG| [stdout] [    0.304450] pci 0000:c1:00.0:   bridge window [io  0xf000-0xffff]
+2018-08-22 13:55:56,280 process          L0367 DEBUG| [stdout] [    0.304456] pci 0000:c1:00.0:   bridge window [mem 0x84000000-0x880fffff]
+2018-08-22 13:55:56,280 process          L0367 DEBUG| [stdout] [    0.304561] pci 0000:c3:00.0: [1022:148a] type 00 class 0x130000
+2018-08-22 13:55:56,280 process          L0367 DEBUG| [stdout] [    0.304614] pci 0000:c3:00.0: enabling Extended Tags
+2018-08-22 13:55:56,281 process          L0367 DEBUG| [stdout] [    0.304751] pci 0000:c3:00.1: [1022:148b] type 00 class 0x068000
+2018-08-22 13:55:56,281 process          L0367 DEBUG| [stdout] [    0.304769] pci 0000:c3:00.1: reg 0x10: [mem 0x88200000-0x883fffff]
+2018-08-22 13:55:56,281 process          L0367 DEBUG| [stdout] [    0.304776] pci 0000:c3:00.1: reg 0x14: [mem 0x88600000-0x886fffff]
+2018-08-22 13:55:56,281 process          L0367 DEBUG| [stdout] [    0.304787] pci 0000:c3:00.1: reg 0x18: [mem 0x88500000-0x885fffff 64bit]
+2018-08-22 13:55:56,281 process          L0367 DEBUG| [stdout] [    0.304797] pci 0000:c3:00.1: reg 0x20: [mem 0x88400000-0x884fffff 64bit]
+2018-08-22 13:55:56,281 process          L0367 DEBUG| [stdout] [    0.304810] pci 0000:c3:00.1: enabling Extended Tags
+2018-08-22 13:55:56,282 process          L0367 DEBUG| [stdout] [    0.304864] pci 0000:c3:00.1: PME# supported from D3hot D3cold
+2018-08-22 13:55:56,282 process          L0367 DEBUG| [stdout] [    0.304949] pci 0000:c3:00.2: [1022:1498] type 00 class 0x108000
+2018-08-22 13:55:56,282 process          L0367 DEBUG| [stdout] [    0.304976] pci 0000:c3:00.2: reg 0x18: [mem 0x88700000-0x8877ffff]
+2018-08-22 13:55:56,282 process          L0367 DEBUG| [stdout] [    0.304993] pci 0000:c3:00.2: reg 0x24: [mem 0x88780000-0x88781fff]
+2018-08-22 13:55:56,282 process          L0367 DEBUG| [stdout] [    0.305005] pci 0000:c3:00.2: enabling Extended Tags
+2018-08-22 13:55:56,282 process          L0367 DEBUG| [stdout] [    0.305167] pci 0000:c0:07.1: PCI bridge to [bus c3]
+2018-08-22 13:55:56,283 process          L0367 DEBUG| [stdout] [    0.305175] pci 0000:c0:07.1:   bridge window [mem 0x88200000-0x887fffff]
+2018-08-22 13:55:56,283 process          L0367 DEBUG| [stdout] [    0.305292] pci 0000:c4:00.0: [1022:1485] type 00 class 0x130000
+2018-08-22 13:55:56,283 process          L0367 DEBUG| [stdout] [    0.305349] pci 0000:c4:00.0: enabling Extended Tags
+2018-08-22 13:55:56,283 process          L0367 DEBUG| [stdout] [    0.305493] pci 0000:c4:00.2: [1022:1498] type 00 class 0x108000
+2018-08-22 13:55:56,283 process          L0367 DEBUG| [stdout] [    0.305522] pci 0000:c4:00.2: reg 0x18: [mem 0x88800000-0x8887ffff]
+2018-08-22 13:55:56,283 process          L0367 DEBUG| [stdout] [    0.305540] pci 0000:c4:00.2: reg 0x24: [mem 0x88880000-0x88881fff]
+2018-08-22 13:55:56,283 process          L0367 DEBUG| [stdout] [    0.305553] pci 0000:c4:00.2: enabling Extended Tags
+2018-08-22 13:55:56,284 process          L0367 DEBUG| [stdout] [    0.305724] pci 0000:c0:08.1: PCI bridge to [bus c4]
+2018-08-22 13:55:56,284 process          L0367 DEBUG| [stdout] [    0.305732] pci 0000:c0:08.1:   bridge window [mem 0x88800000-0x888fffff]
+2018-08-22 13:55:56,284 process          L0367 DEBUG| [stdout] [    0.306944] ACPI: PCI Root Bridge [S0D1] (domain 0000 [bus 80-bf])
+2018-08-22 13:55:56,284 process          L0367 DEBUG| [stdout] [    0.306952] acpi PNP0A08:01: _OSC: OS supports [ExtendedConfig ASPM ClockPM Segments MSI]
+2018-08-22 13:55:56,284 process          L0367 DEBUG| [stdout] [    0.307569] acpi PNP0A08:01: _OSC: OS now controls [PCIeHotplug PME AER PCIeCapability]
+2018-08-22 13:55:56,284 process          L0367 DEBUG| [stdout] [    0.308098] PCI host bridge to bus 0000:80
+2018-08-22 13:55:56,285 process          L0367 DEBUG| [stdout] [    0.308102] pci_bus 0000:80: root bus resource [io  0x5000-0x6fff window]
+2018-08-22 13:55:56,285 process          L0367 DEBUG| [stdout] [    0.308105] pci_bus 0000:80: root bus resource [mem 0xf4a00000-0xf71fffff window]
+2018-08-22 13:55:56,285 process          L0367 DEBUG| [stdout] [    0.308108] pci_bus 0000:80: root bus resource [mem 0x18050200000-0x200501fffff window]
+2018-08-22 13:55:56,285 process          L0367 DEBUG| [stdout] [    0.308110] pci_bus 0000:80: root bus resource [bus 80-bf]
+2018-08-22 13:55:56,285 process          L0367 DEBUG| [stdout] [    0.308120] pci 0000:80:00.0: [1022:1480] type 00 class 0x060000
+2018-08-22 13:55:56,285 process          L0367 DEBUG| [stdout] [    0.308258] pci 0000:80:00.2: [1022:1481] type 00 class 0x080600
+2018-08-22 13:55:56,286 process          L0367 DEBUG| [stdout] [    0.308413] pci 0000:80:01.0: [1022:1482] type 00 class 0x060000
+2018-08-22 13:55:56,286 process          L0367 DEBUG| [stdout] [    0.308535] pci 0000:80:02.0: [1022:1482] type 00 class 0x060000
+2018-08-22 13:55:56,286 process          L0367 DEBUG| [stdout] [    0.308658] pci 0000:80:03.0: [1022:1482] type 00 class 0x060000
+2018-08-22 13:55:56,286 process          L0367 DEBUG| [stdout] [    0.308782] pci 0000:80:04.0: [1022:1482] type 00 class 0x060000
+2018-08-22 13:55:56,286 process          L0367 DEBUG| [stdout] [    0.308907] pci 0000:80:05.0: [1022:1482] type 00 class 0x060000
+2018-08-22 13:55:56,286 process          L0367 DEBUG| [stdout] [    0.309032] pci 0000:80:07.0: [1022:1482] type 00 class 0x060000
+2018-08-22 13:55:56,286 process          L0367 DEBUG| [stdout] [    0.309153] pci 0000:80:07.1: [1022:1484] type 01 class 0x060400
+2018-08-22 13:55:56,287 process          L0367 DEBUG| [stdout] [    0.309195] pci 0000:80:07.1: enabling Extended Tags
+2018-08-22 13:55:56,287 process          L0367 DEBUG| [stdout] [    0.309247] pci 0000:80:07.1: PME# supported from D0 D3hot D3cold
+2018-08-22 13:55:56,287 process          L0367 DEBUG| [stdout] [    0.309378] pci 0000:80:08.0: [1022:1482] type 00 class 0x060000
+2018-08-22 13:55:56,287 process          L0367 DEBUG| [stdout] [    0.309502] pci 0000:80:08.1: [1022:1484] type 01 class 0x060400
+2018-08-22 13:55:56,287 process          L0367 DEBUG| [stdout] [    0.309544] pci 0000:80:08.1: enabling Extended Tags
+2018-08-22 13:55:56,287 process          L0367 DEBUG| [stdout] [    0.309596] pci 0000:80:08.1: PME# supported from D0 D3hot D3cold
+2018-08-22 13:55:56,288 process          L0367 DEBUG| [stdout] [    0.309816] pci 0000:81:00.0: [1022:148a] type 00 class 0x130000
+2018-08-22 13:55:56,288 process          L0367 DEBUG| [stdout] [    0.309870] pci 0000:81:00.0: enabling Extended Tags
+2018-08-22 13:55:56,288 process          L0367 DEBUG| [stdout] [    0.310005] pci 0000:81:00.1: [1022:148b] type 00 class 0x068000
+2018-08-22 13:55:56,288 process          L0367 DEBUG| [stdout] [    0.310024] pci 0000:81:00.1: reg 0x10: [mem 0xf6a00000-0xf6bfffff]
+2018-08-22 13:55:56,288 process          L0367 DEBUG| [stdout] [    0.310031] pci 0000:81:00.1: reg 0x14: [mem 0xf6e00000-0xf6efffff]
+2018-08-22 13:55:56,288 process          L0367 DEBUG| [stdout] [    0.310042] pci 0000:81:00.1: reg 0x18: [mem 0xf6d00000-0xf6dfffff 64bit]
+2018-08-22 13:55:56,288 process          L0367 DEBUG| [stdout] [    0.310053] pci 0000:81:00.1: reg 0x20: [mem 0xf6c00000-0xf6cfffff 64bit]
+2018-08-22 13:55:56,289 process          L0367 DEBUG| [stdout] [    0.310066] pci 0000:81:00.1: enabling Extended Tags
+2018-08-22 13:55:56,289 process          L0367 DEBUG| [stdout] [    0.310120] pci 0000:81:00.1: PME# supported from D3hot D3cold
+2018-08-22 13:55:56,289 process          L0367 DEBUG| [stdout] [    0.310205] pci 0000:81:00.2: [1022:1498] type 00 class 0x108000
+2018-08-22 13:55:56,289 process          L0367 DEBUG| [stdout] [    0.310233] pci 0000:81:00.2: reg 0x18: [mem 0xf6f00000-0xf6f7ffff]
+2018-08-22 13:55:56,289 process          L0367 DEBUG| [stdout] [    0.310250] pci 0000:81:00.2: reg 0x24: [mem 0xf6f80000-0xf6f81fff]
+2018-08-22 13:55:56,289 process          L0367 DEBUG| [stdout] [    0.310262] pci 0000:81:00.2: enabling Extended Tags
+2018-08-22 13:55:56,290 process          L0367 DEBUG| [stdout] [    0.310427] pci 0000:80:07.1: PCI bridge to [bus 81]
+2018-08-22 13:55:56,290 process          L0367 DEBUG| [stdout] [    0.310435] pci 0000:80:07.1:   bridge window [mem 0xf6a00000-0xf6ffffff]
+2018-08-22 13:55:56,290 process          L0367 DEBUG| [stdout] [    0.310548] pci 0000:82:00.0: [1022:1485] type 00 class 0x130000
+2018-08-22 13:55:56,290 process          L0367 DEBUG| [stdout] [    0.310606] pci 0000:82:00.0: enabling Extended Tags
+2018-08-22 13:55:56,290 process          L0367 DEBUG| [stdout] [    0.310755] pci 0000:82:00.2: [1022:1498] type 00 class 0x108000
+2018-08-22 13:55:56,290 process          L0367 DEBUG| [stdout] [    0.310785] pci 0000:82:00.2: reg 0x18: [mem 0xf7000000-0xf707ffff]
+2018-08-22 13:55:56,291 process          L0367 DEBUG| [stdout] [    0.310803] pci 0000:82:00.2: reg 0x24: [mem 0xf7080000-0xf7081fff]
+2018-08-22 13:55:56,291 process          L0367 DEBUG| [stdout] [    0.310816] pci 0000:82:00.2: enabling Extended Tags
+2018-08-22 13:55:56,291 process          L0367 DEBUG| [stdout] [    0.310989] pci 0000:80:08.1: PCI bridge to [bus 82]
+2018-08-22 13:55:56,291 process          L0367 DEBUG| [stdout] [    0.310997] pci 0000:80:08.1:   bridge window [mem 0xf7000000-0xf70fffff]
+2018-08-22 13:55:56,291 process          L0367 DEBUG| [stdout] [    0.312168] ACPI: PCI Root Bridge [S0D2] (domain 0000 [bus 40-7f])
+2018-08-22 13:55:56,291 process          L0367 DEBUG| [stdout] [    0.312176] acpi PNP0A08:02: _OSC: OS supports [ExtendedConfig ASPM ClockPM Segments MSI]
+2018-08-22 13:55:56,291 process          L0367 DEBUG| [stdout] [    0.312789] acpi PNP0A08:02: _OSC: OS now controls [PCIeHotplug PME AER PCIeCapability]
+2018-08-22 13:55:56,292 process          L0367 DEBUG| [stdout] [    0.313321] PCI host bridge to bus 0000:40
+2018-08-22 13:55:56,292 process          L0367 DEBUG| [stdout] [    0.313325] pci_bus 0000:40: root bus resource [io  0x4000-0x4fff window]
+2018-08-22 13:55:56,292 process          L0367 DEBUG| [stdout] [    0.313328] pci_bus 0000:40: root bus resource [mem 0xf0000000-0xf29fffff window]
+2018-08-22 13:55:56,292 process          L0367 DEBUG| [stdout] [    0.313330] pci_bus 0000:40: root bus resource [mem 0x20080200000-0x280801fffff window]
+2018-08-22 13:55:56,292 process          L0367 DEBUG| [stdout] [    0.313333] pci_bus 0000:40: root bus resource [bus 40-7f]
+2018-08-22 13:55:56,292 process          L0367 DEBUG| [stdout] [    0.313342] pci 0000:40:00.0: [1022:1480] type 00 class 0x060000
+2018-08-22 13:55:56,293 process          L0367 DEBUG| [stdout] [    0.313478] pci 0000:40:00.2: [1022:1481] type 00 class 0x080600
+2018-08-22 13:55:56,293 process          L0367 DEBUG| [stdout] [    0.313630] pci 0000:40:01.0: [1022:1482] type 00 class 0x060000
+2018-08-22 13:55:56,293 process          L0367 DEBUG| [stdout] [    0.313751] pci 0000:40:02.0: [1022:1482] type 00 class 0x060000
+2018-08-22 13:55:56,293 process          L0367 DEBUG| [stdout] [    0.313875] pci 0000:40:03.0: [1022:1482] type 00 class 0x060000
+2018-08-22 13:55:56,293 process          L0367 DEBUG| [stdout] [    0.313997] pci 0000:40:04.0: [1022:1482] type 00 class 0x060000
+2018-08-22 13:55:56,293 process          L0367 DEBUG| [stdout] [    0.314121] pci 0000:40:05.0: [1022:1482] type 00 class 0x060000
+2018-08-22 13:55:56,294 process          L0367 DEBUG| [stdout] [    0.314244] pci 0000:40:07.0: [1022:1482] type 00 class 0x060000
+2018-08-22 13:55:56,294 process          L0367 DEBUG| [stdout] [    0.314364] pci 0000:40:07.1: [1022:1484] type 01 class 0x060400
+2018-08-22 13:55:56,294 process          L0367 DEBUG| [stdout] [    0.314405] pci 0000:40:07.1: enabling Extended Tags
+2018-08-22 13:55:56,294 process          L0367 DEBUG| [stdout] [    0.314455] pci 0000:40:07.1: PME# supported from D0 D3hot D3cold
+2018-08-22 13:55:56,294 process          L0367 DEBUG| [stdout] [    0.314580] pci 0000:40:08.0: [1022:1482] type 00 class 0x060000
+2018-08-22 13:55:56,294 process          L0367 DEBUG| [stdout] [    0.314704] pci 0000:40:08.1: [1022:1484] type 01 class 0x060400
+2018-08-22 13:55:56,294 process          L0367 DEBUG| [stdout] [    0.314745] pci 0000:40:08.1: enabling Extended Tags
+2018-08-22 13:55:56,295 process          L0367 DEBUG| [stdout] [    0.314795] pci 0000:40:08.1: PME# supported from D0 D3hot D3cold
+2018-08-22 13:55:56,295 process          L0367 DEBUG| [stdout] [    0.315013] pci 0000:41:00.0: [1022:148a] type 00 class 0x130000
+2018-08-22 13:55:56,295 process          L0367 DEBUG| [stdout] [    0.315066] pci 0000:41:00.0: enabling Extended Tags
+2018-08-22 13:55:56,295 process          L0367 DEBUG| [stdout] [    0.315213] pci 0000:41:00.1: [1022:148b] type 00 class 0x068000
+2018-08-22 13:55:56,295 process          L0367 DEBUG| [stdout] [    0.315232] pci 0000:41:00.1: reg 0x10: [mem 0xf2000000-0xf21fffff]
+2018-08-22 13:55:56,295 process          L0367 DEBUG| [stdout] [    0.315239] pci 0000:41:00.1: reg 0x14: [mem 0xf2400000-0xf24fffff]
+2018-08-22 13:55:56,296 process          L0367 DEBUG| [stdout] [    0.315250] pci 0000:41:00.1: reg 0x18: [mem 0xf2300000-0xf23fffff 64bit]
+2018-08-22 13:55:56,296 process          L0367 DEBUG| [stdout] [    0.315261] pci 0000:41:00.1: reg 0x20: [mem 0xf2200000-0xf22fffff 64bit]
+2018-08-22 13:55:56,296 process          L0367 DEBUG| [stdout] [    0.315273] pci 0000:41:00.1: enabling Extended Tags
+2018-08-22 13:55:56,296 process          L0367 DEBUG| [stdout] [    0.315327] pci 0000:41:00.1: PME# supported from D3hot D3cold
+2018-08-22 13:55:56,296 process          L0367 DEBUG| [stdout] [    0.315413] pci 0000:41:00.2: [1022:1498] type 00 class 0x108000
+2018-08-22 13:55:56,296 process          L0367 DEBUG| [stdout] [    0.315440] pci 0000:41:00.2: reg 0x18: [mem 0xf2500000-0xf257ffff]
+2018-08-22 13:55:56,296 process          L0367 DEBUG| [stdout] [    0.315457] pci 0000:41:00.2: reg 0x24: [mem 0xf2580000-0xf2581fff]
+2018-08-22 13:55:56,297 process          L0367 DEBUG| [stdout] [    0.315469] pci 0000:41:00.2: enabling Extended Tags
+2018-08-22 13:55:56,297 process          L0367 DEBUG| [stdout] [    0.315632] pci 0000:40:07.1: PCI bridge to [bus 41]
+2018-08-22 13:55:56,297 process          L0367 DEBUG| [stdout] [    0.315639] pci 0000:40:07.1:   bridge window [mem 0xf2000000-0xf25fffff]
+2018-08-22 13:55:56,297 process          L0367 DEBUG| [stdout] [    0.315755] pci 0000:42:00.0: [1022:1485] type 00 class 0x130000
+2018-08-22 13:55:56,297 process          L0367 DEBUG| [stdout] [    0.315812] pci 0000:42:00.0: enabling Extended Tags
+2018-08-22 13:55:56,297 process          L0367 DEBUG| [stdout] [    0.315960] pci 0000:42:00.1: [1022:1486] type 00 class 0x108000
+2018-08-22 13:55:56,298 process          L0367 DEBUG| [stdout] [    0.315990] pci 0000:42:00.1: reg 0x18: [mem 0xf2700000-0xf27fffff]
+2018-08-22 13:55:56,298 process          L0367 DEBUG| [stdout] [    0.316013] pci 0000:42:00.1: reg 0x24: [mem 0xf288a000-0xf288bfff]
+2018-08-22 13:55:56,298 process          L0367 DEBUG| [stdout] [    0.316026] pci 0000:42:00.1: enabling Extended Tags
+2018-08-22 13:55:56,298 process          L0367 DEBUG| [stdout] [    0.316171] pci 0000:42:00.2: [1022:1498] type 00 class 0x108000
+2018-08-22 13:55:56,298 process          L0367 DEBUG| [stdout] [    0.316200] pci 0000:42:00.2: reg 0x18: [mem 0xf2800000-0xf287ffff]
+2018-08-22 13:55:56,298 process          L0367 DEBUG| [stdout] [    0.316218] pci 0000:42:00.2: reg 0x24: [mem 0xf2888000-0xf2889fff]
+2018-08-22 13:55:56,299 process          L0367 DEBUG| [stdout] [    0.316231] pci 0000:42:00.2: enabling Extended Tags
+2018-08-22 13:55:56,299 process          L0367 DEBUG| [stdout] [    0.316370] pci 0000:42:00.3: [1022:148c] type 00 class 0x0c0330
+2018-08-22 13:55:56,299 process          L0367 DEBUG| [stdout] [    0.316395] pci 0000:42:00.3: reg 0x10: [mem 0xf2600000-0xf26fffff 64bit]
+2018-08-22 13:55:56,299 process          L0367 DEBUG| [stdout] [    0.316438] pci 0000:42:00.3: enabling Extended Tags
+2018-08-22 13:55:56,299 process          L0367 DEBUG| [stdout] [    0.316496] pci 0000:42:00.3: PME# supported from D0 D3hot D3cold
+2018-08-22 13:55:56,299 process          L0367 DEBUG| [stdout] [    0.316591] pci 0000:42:00.4: [1022:1487] type 00 class 0x040300
+2018-08-22 13:55:56,299 process          L0367 DEBUG| [stdout] [    0.316610] pci 0000:42:00.4: reg 0x10: [mem 0xf2880000-0xf2887fff]
+2018-08-22 13:55:56,300 process          L0367 DEBUG| [stdout] [    0.316648] pci 0000:42:00.4: enabling Extended Tags
+2018-08-22 13:55:56,300 process          L0367 DEBUG| [stdout] [    0.316701] pci 0000:42:00.4: PME# supported from D0 D3hot D3cold
+2018-08-22 13:55:56,300 process          L0367 DEBUG| [stdout] [    0.316835] pci 0000:40:08.1: PCI bridge to [bus 42]
+2018-08-22 13:55:56,300 process          L0367 DEBUG| [stdout] [    0.316842] pci 0000:40:08.1:   bridge window [mem 0xf2600000-0xf28fffff]
+2018-08-22 13:55:56,300 process          L0367 DEBUG| [stdout] [    0.318172] ACPI: PCI Root Bridge [PCI0] (domain 0000 [bus 00-3f])
+2018-08-22 13:55:56,300 process          L0367 DEBUG| [stdout] [    0.318180] acpi PNP0A08:03: _OSC: OS supports [ExtendedConfig ASPM ClockPM Segments MSI]
+2018-08-22 13:55:56,301 process          L0367 DEBUG| [stdout] [    0.318802] acpi PNP0A08:03: _OSC: OS now controls [PCIeHotplug PME AER PCIeCapability]
+2018-08-22 13:55:56,301 process          L0367 DEBUG| [stdout] [    0.319569] PCI host bridge to bus 0000:00
+2018-08-22 13:55:56,301 process          L0367 DEBUG| [stdout] [    0.319572] pci_bus 0000:00: root bus resource [io  0x0000-0x02e7 window]
+2018-08-22 13:55:56,301 process          L0367 DEBUG| [stdout] [    0.319575] pci_bus 0000:00: root bus resource [io  0x0300-0x03af window]
+2018-08-22 13:55:56,301 process          L0367 DEBUG| [stdout] [    0.319577] pci_bus 0000:00: root bus resource [io  0x0400-0x0cf7 window]
+2018-08-22 13:55:56,301 process          L0367 DEBUG| [stdout] [    0.319580] pci_bus 0000:00: root bus resource [io  0x1000-0x3fff window]
+2018-08-22 13:55:56,302 process          L0367 DEBUG| [stdout] [    0.319582] pci_bus 0000:00: root bus resource [mem 0x000c0000-0x000dffff window]
+2018-08-22 13:55:56,302 process          L0367 DEBUG| [stdout] [    0.319584] pci_bus 0000:00: root bus resource [mem 0xf7200000-0xf99fffff window]
+2018-08-22 13:55:56,302 process          L0367 DEBUG| [stdout] [    0.319587] pci_bus 0000:00: root bus resource [mem 0x280b0200000-0x380b01fffff window]
+2018-08-22 13:55:56,302 process          L0367 DEBUG| [stdout] [    0.319589] pci_bus 0000:00: root bus resource [bus 00-3f]
+2018-08-22 13:55:56,302 process          L0367 DEBUG| [stdout] [    0.319599] pci 0000:00:00.0: [1022:1480] type 00 class 0x060000
+2018-08-22 13:55:56,302 process          L0367 DEBUG| [stdout] [    0.319754] pci 0000:00:00.2: [1022:1481] type 00 class 0x080600
+2018-08-22 13:55:56,302 process          L0367 DEBUG| [stdout] [    0.319931] pci 0000:00:01.0: [1022:1482] type 00 class 0x060000
+2018-08-22 13:55:56,303 process          L0367 DEBUG| [stdout] [    0.320081] pci 0000:00:02.0: [1022:1482] type 00 class 0x060000
+2018-08-22 13:55:56,303 process          L0367 DEBUG| [stdout] [    0.320226] pci 0000:00:03.0: [1022:1482] type 00 class 0x060000
+2018-08-22 13:55:56,303 process          L0367 DEBUG| [stdout] [    0.320370] pci 0000:00:04.0: [1022:1482] type 00 class 0x060000
+2018-08-22 13:55:56,303 process          L0367 DEBUG| [stdout] [    0.320512] pci 0000:00:05.0: [1022:1482] type 00 class 0x060000
+2018-08-22 13:55:56,303 process          L0367 DEBUG| [stdout] [    0.320659] pci 0000:00:07.0: [1022:1482] type 00 class 0x060000
+2018-08-22 13:55:56,303 process          L0367 DEBUG| [stdout] [    0.320795] pci 0000:00:07.1: [1022:1484] type 01 class 0x060400
+2018-08-22 13:55:56,304 process          L0367 DEBUG| [stdout] [    0.320837] pci 0000:00:07.1: enabling Extended Tags
+2018-08-22 13:55:56,304 process          L0367 DEBUG| [stdout] [    0.320889] pci 0000:00:07.1: PME# supported from D0 D3hot D3cold
+2018-08-22 13:55:56,304 process          L0367 DEBUG| [stdout] [    0.321037] pci 0000:00:08.0: [1022:1482] type 00 class 0x060000
+2018-08-22 13:55:56,304 process          L0367 DEBUG| [stdout] [    0.321180] pci 0000:00:08.1: [1022:1484] type 01 class 0x060400
+2018-08-22 13:55:56,304 process          L0367 DEBUG| [stdout] [    0.321222] pci 0000:00:08.1: enabling Extended Tags
+2018-08-22 13:55:56,304 process          L0367 DEBUG| [stdout] [    0.321277] pci 0000:00:08.1: PME# supported from D0 D3hot D3cold
+2018-08-22 13:55:56,304 process          L0367 DEBUG| [stdout] [    0.321443] pci 0000:00:14.0: [1022:790b] type 00 class 0x0c0500
+2018-08-22 13:55:56,305 process          L0367 DEBUG| [stdout] [    0.321636] pci 0000:00:14.3: [1022:790e] type 00 class 0x060100
+2018-08-22 13:55:56,305 process          L0367 DEBUG| [stdout] [    0.321839] pci 0000:00:18.0: [1022:1490] type 00 class 0x060000
+2018-08-22 13:55:56,305 process          L0367 DEBUG| [stdout] [    0.321956] pci 0000:00:18.1: [1022:1491] type 00 class 0x060000
+2018-08-22 13:55:56,305 process          L0367 DEBUG| [stdout] [    0.322072] pci 0000:00:18.2: [1022:1492] type 00 class 0x060000
+2018-08-22 13:55:56,305 process          L0367 DEBUG| [stdout] [    0.322190] pci 0000:00:18.3: [1022:1493] type 00 class 0x060000
+2018-08-22 13:55:56,305 process          L0367 DEBUG| [stdout] [    0.322307] pci 0000:00:18.4: [1022:1494] type 00 class 0x060000
+2018-08-22 13:55:56,306 process          L0367 DEBUG| [stdout] [    0.322423] pci 0000:00:18.5: [1022:1495] type 00 class 0x060000
+2018-08-22 13:55:56,306 process          L0367 DEBUG| [stdout] [    0.322540] pci 0000:00:18.6: [1022:1496] type 00 class 0x060000
+2018-08-22 13:55:56,306 process          L0367 DEBUG| [stdout] [    0.322656] pci 0000:00:18.7: [1022:1497] type 00 class 0x060000
+2018-08-22 13:55:56,306 process          L0367 DEBUG| [stdout] [    0.322867] pci 0000:01:00.0: [1022:148a] type 00 class 0x130000
+2018-08-22 13:55:56,306 process          L0367 DEBUG| [stdout] [    0.322921] pci 0000:01:00.0: enabling Extended Tags
+2018-08-22 13:55:56,306 process          L0367 DEBUG| [stdout] [    0.323057] pci 0000:01:00.1: [1022:148b] type 00 class 0x068000
+2018-08-22 13:55:56,306 process          L0367 DEBUG| [stdout] [    0.323076] pci 0000:01:00.1: reg 0x10: [mem 0xf9200000-0xf93fffff]
+2018-08-22 13:55:56,307 process          L0367 DEBUG| [stdout] [    0.323084] pci 0000:01:00.1: reg 0x14: [mem 0xf9600000-0xf96fffff]
+2018-08-22 13:55:56,307 process          L0367 DEBUG| [stdout] [    0.323095] pci 0000:01:00.1: reg 0x18: [mem 0xf9500000-0xf95fffff 64bit]
+2018-08-22 13:55:56,307 process          L0367 DEBUG| [stdout] [    0.323106] pci 0000:01:00.1: reg 0x20: [mem 0xf9400000-0xf94fffff 64bit]
+2018-08-22 13:55:56,307 process          L0367 DEBUG| [stdout] [    0.323118] pci 0000:01:00.1: enabling Extended Tags
+2018-08-22 13:55:56,307 process          L0367 DEBUG| [stdout] [    0.323174] pci 0000:01:00.1: PME# supported from D3hot D3cold
+2018-08-22 13:55:56,307 process          L0367 DEBUG| [stdout] [    0.323262] pci 0000:01:00.2: [1022:1498] type 00 class 0x108000
+2018-08-22 13:55:56,308 process          L0367 DEBUG| [stdout] [    0.323290] pci 0000:01:00.2: reg 0x18: [mem 0xf9700000-0xf977ffff]
+2018-08-22 13:55:56,308 process          L0367 DEBUG| [stdout] [    0.323307] pci 0000:01:00.2: reg 0x24: [mem 0xf9780000-0xf9781fff]
+2018-08-22 13:55:56,308 process          L0367 DEBUG| [stdout] [    0.323319] pci 0000:01:00.2: enabling Extended Tags
+2018-08-22 13:55:56,308 process          L0367 DEBUG| [stdout] [    0.323485] pci 0000:00:07.1: PCI bridge to [bus 01]
+2018-08-22 13:55:56,308 process          L0367 DEBUG| [stdout] [    0.323493] pci 0000:00:07.1:   bridge window [mem 0xf9200000-0xf97fffff]
+2018-08-22 13:55:56,308 process          L0367 DEBUG| [stdout] [    0.323610] pci 0000:02:00.0: [1022:1485] type 00 class 0x130000
+2018-08-22 13:55:56,309 process          L0367 DEBUG| [stdout] [    0.323669] pci 0000:02:00.0: enabling Extended Tags
+2018-08-22 13:55:56,309 process          L0367 DEBUG| [stdout] [    0.323817] pci 0000:02:00.2: [1022:1498] type 00 class 0x108000
+2018-08-22 13:55:56,309 process          L0367 DEBUG| [stdout] [    0.323846] pci 0000:02:00.2: reg 0x18: [mem 0xf9900000-0xf997ffff]
+2018-08-22 13:55:56,309 process          L0367 DEBUG| [stdout] [    0.323864] pci 0000:02:00.2: reg 0x24: [mem 0xf9980000-0xf9981fff]
+2018-08-22 13:55:56,309 process          L0367 DEBUG| [stdout] [    0.323878] pci 0000:02:00.2: enabling Extended Tags
+2018-08-22 13:55:56,309 process          L0367 DEBUG| [stdout] [    0.324030] pci 0000:02:00.3: [1022:148c] type 00 class 0x0c0330
+2018-08-22 13:55:56,310 process          L0367 DEBUG| [stdout] [    0.324056] pci 0000:02:00.3: reg 0x10: [mem 0xf9800000-0xf98fffff 64bit]
+2018-08-22 13:55:56,310 process          L0367 DEBUG| [stdout] [    0.324101] pci 0000:02:00.3: enabling Extended Tags
+2018-08-22 13:55:56,310 process          L0367 DEBUG| [stdout] [    0.324160] pci 0000:02:00.3: PME# supported from D0 D3hot D3cold
+2018-08-22 13:55:56,310 process          L0367 DEBUG| [stdout] [    0.324290] pci 0000:00:08.1: PCI bridge to [bus 02]
+2018-08-22 13:55:56,310 process          L0367 DEBUG| [stdout] [    0.324298] pci 0000:00:08.1:   bridge window [mem 0xf9800000-0xf99fffff]
+2018-08-22 13:55:56,310 process          L0367 DEBUG| [stdout] [    0.326468] ACPI: PCI Interrupt Link [LNKA] (IRQs 4 5 7 10 11 14 15) *0
+2018-08-22 13:55:56,310 process          L0367 DEBUG| [stdout] [    0.326600] ACPI: PCI Interrupt Link [LNKB] (IRQs 4 5 7 10 *11 14 15)
+2018-08-22 13:55:56,311 process          L0367 DEBUG| [stdout] [    0.326717] ACPI: PCI Interrupt Link [LNKC] (IRQs 4 5 7 *10 11 14 15)
+2018-08-22 13:55:56,311 process          L0367 DEBUG| [stdout] [    0.326856] ACPI: PCI Interrupt Link [LNKD] (IRQs 4 5 7 10 11 14 15) *0
+2018-08-22 13:55:56,311 process          L0367 DEBUG| [stdout] [    0.326983] ACPI: PCI Interrupt Link [LNKE] (IRQs 4 *5 7 10 11 14 15)
+2018-08-22 13:55:56,311 process          L0367 DEBUG| [stdout] [    0.327090] ACPI: PCI Interrupt Link [LNKF] (IRQs 4 5 7 *10 11 14 15)
+2018-08-22 13:55:56,311 process          L0367 DEBUG| [stdout] [    0.327196] ACPI: PCI Interrupt Link [LNKG] (IRQs 4 *5 7 10 11 14 15)
+2018-08-22 13:55:56,311 process          L0367 DEBUG| [stdout] [    0.327302] ACPI: PCI Interrupt Link [LNKH] (IRQs 4 5 7 10 *11 14 15)
+2018-08-22 13:55:56,312 process          L0367 DEBUG| [stdout] [    0.328034] pci 0000:c2:00.0: vgaarb: setting as boot VGA device
+2018-08-22 13:55:56,312 process          L0367 DEBUG| [stdout] [    0.328034] pci 0000:c2:00.0: vgaarb: VGA device added: decodes=io+mem,owns=io+mem,locks=none
+2018-08-22 13:55:56,312 process          L0367 DEBUG| [stdout] [    0.328037] pci 0000:c2:00.0: vgaarb: bridge control possible
+2018-08-22 13:55:56,312 process          L0367 DEBUG| [stdout] [    0.328038] vgaarb: loaded
+2018-08-22 13:55:56,312 process          L0367 DEBUG| [stdout] [    0.328382] SCSI subsystem initialized
+2018-08-22 13:55:56,312 process          L0367 DEBUG| [stdout] [    0.328614] libata version 3.00 loaded.
+2018-08-22 13:55:56,312 process          L0367 DEBUG| [stdout] [    0.328614] ACPI: bus type USB registered
+2018-08-22 13:55:56,313 process          L0367 DEBUG| [stdout] [    0.328614] usbcore: registered new interface driver usbfs
+2018-08-22 13:55:56,313 process          L0367 DEBUG| [stdout] [    0.328614] usbcore: registered new interface driver hub
+2018-08-22 13:55:56,313 process          L0367 DEBUG| [stdout] [    0.328614] usbcore: registered new device driver usb
+2018-08-22 13:55:56,313 process          L0367 DEBUG| [stdout] [    0.328614] pps_core: LinuxPPS API ver. 1 registered
+2018-08-22 13:55:56,313 process          L0367 DEBUG| [stdout] [    0.328614] pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+2018-08-22 13:55:56,313 process          L0367 DEBUG| [stdout] [    0.328614] PTP clock support registered
+2018-08-22 13:55:56,314 process          L0367 DEBUG| [stdout] [    0.332001] EDAC MC: Ver: 3.0.0
+2018-08-22 13:55:56,314 process          L0367 DEBUG| [stdout] [    0.332001] EDAC DEBUG: edac_mc_sysfs_init: device mc created
+2018-08-22 13:55:56,314 process          L0367 DEBUG| [stdout] [    0.332035] Registered efivars operations
+2018-08-22 13:55:56,314 process          L0367 DEBUG| [stdout] [    0.344032] PCI: Using ACPI for IRQ routing
+2018-08-22 13:55:56,314 process          L0367 DEBUG| [stdout] [    0.348719] PCI: pci_cache_line_size set to 64 bytes
+2018-08-22 13:55:56,314 process          L0367 DEBUG| [stdout] [    0.348899] e820: reserve RAM buffer [mem 0x74a33000-0x77ffffff]
+2018-08-22 13:55:56,315 process          L0367 DEBUG| [stdout] [    0.348901] e820: reserve RAM buffer [mem 0x75fc7000-0x77ffffff]
+2018-08-22 13:55:56,315 process          L0367 DEBUG| [stdout] [    0.348903] e820: reserve RAM buffer [mem 0x76d00000-0x77ffffff]
+2018-08-22 13:55:56,315 process          L0367 DEBUG| [stdout] [    0.348905] e820: reserve RAM buffer [mem 0x87ff00000-0x87fffffff]
+2018-08-22 13:55:56,315 process          L0367 DEBUG| [stdout] [    0.348907] e820: reserve RAM buffer [mem 0x107f300000-0x107fffffff]
+2018-08-22 13:55:56,315 process          L0367 DEBUG| [stdout] [    0.349147] NetLabel: Initializing
+2018-08-22 13:55:56,315 process          L0367 DEBUG| [stdout] [    0.349148] NetLabel:  domain hash size = 128
+2018-08-22 13:55:56,315 process          L0367 DEBUG| [stdout] [    0.349149] NetLabel:  protocols = UNLABELED CIPSOv4 CALIPSO
+2018-08-22 13:55:56,316 process          L0367 DEBUG| [stdout] [    0.349172] NetLabel:  unlabeled traffic allowed by default
+2018-08-22 13:55:56,316 process          L0367 DEBUG| [stdout] [    0.349198] hpet0: at MMIO 0xfed00000, IRQs 2, 8, 0
+2018-08-22 13:55:56,316 process          L0367 DEBUG| [stdout] [    0.349198] hpet0: 3 comparators, 32-bit 14.318180 MHz counter
+2018-08-22 13:55:56,316 process          L0367 DEBUG| [stdout] [    0.352128] clocksource: Switched to clocksource hpet
+2018-08-22 13:55:56,316 process          L0367 DEBUG| [stdout] [    0.378244] VFS: Disk quotas dquot_6.6.0
+2018-08-22 13:55:56,316 process          L0367 DEBUG| [stdout] [    0.378410] VFS: Dquot-cache hash table entries: 512 (order 0, 4096 bytes)
+2018-08-22 13:55:56,317 process          L0367 DEBUG| [stdout] [    0.378822] AppArmor: AppArmor Filesystem Enabled
+2018-08-22 13:55:56,317 process          L0367 DEBUG| [stdout] [    0.378856] pnp: PnP ACPI init
+2018-08-22 13:55:56,317 process          L0367 DEBUG| [stdout] [    0.381319] system 00:00: [mem 0xe0000000-0xefffffff] has been reserved
+2018-08-22 13:55:56,317 process          L0367 DEBUG| [stdout] [    0.381328] system 00:00: Plug and Play ACPI device, IDs PNP0c01 (active)
+2018-08-22 13:55:56,317 process          L0367 DEBUG| [stdout] [    0.382113] pnp 00:01: Plug and Play ACPI device, IDs PNP0b00 (active)
+2018-08-22 13:55:56,317 process          L0367 DEBUG| [stdout] [    0.382615] pnp 00:02: disabling [io  0xfe00-0xfefe] because it overlaps 0000:c0:05.2 BAR 13 [io  0xf000-0xffff]
+2018-08-22 13:55:56,318 process          L0367 DEBUG| [stdout] [    0.382627] pnp 00:02: disabling [io  0xfe00-0xfefe disabled] because it overlaps 0000:c1:00.0 BAR 13 [io  0xf000-0xffff]
+2018-08-22 13:55:56,318 process          L0367 DEBUG| [stdout] [    0.382742] system 00:02: [io  0x04d0-0x04d1] has been reserved
+2018-08-22 13:55:56,318 process          L0367 DEBUG| [stdout] [    0.382745] system 00:02: [io  0x040b] has been reserved
+2018-08-22 13:55:56,318 process          L0367 DEBUG| [stdout] [    0.382747] system 00:02: [io  0x04d6] has been reserved
+2018-08-22 13:55:56,318 process          L0367 DEBUG| [stdout] [    0.382750] system 00:02: [io  0x0c00-0x0c01] has been reserved
+2018-08-22 13:55:56,318 process          L0367 DEBUG| [stdout] [    0.382753] system 00:02: [io  0x0c14] has been reserved
+2018-08-22 13:55:56,318 process          L0367 DEBUG| [stdout] [    0.382755] system 00:02: [io  0x0c50-0x0c51] has been reserved
+2018-08-22 13:55:56,319 process          L0367 DEBUG| [stdout] [    0.382758] system 00:02: [io  0x0c52] has been reserved
+2018-08-22 13:55:56,319 process          L0367 DEBUG| [stdout] [    0.382760] system 00:02: [io  0x0c6c] has been reserved
+2018-08-22 13:55:56,319 process          L0367 DEBUG| [stdout] [    0.382763] system 00:02: [io  0x0c6f] has been reserved
+2018-08-22 13:55:56,319 process          L0367 DEBUG| [stdout] [    0.382766] system 00:02: [io  0x0cd0-0x0cd1] has been reserved
+2018-08-22 13:55:56,319 process          L0367 DEBUG| [stdout] [    0.382768] system 00:02: [io  0x0cd2-0x0cd3] has been reserved
+2018-08-22 13:55:56,319 process          L0367 DEBUG| [stdout] [    0.382771] system 00:02: [io  0x0cd4-0x0cd5] has been reserved
+2018-08-22 13:55:56,320 process          L0367 DEBUG| [stdout] [    0.382774] system 00:02: [io  0x0cd6-0x0cd7] has been reserved
+2018-08-22 13:55:56,320 process          L0367 DEBUG| [stdout] [    0.382776] system 00:02: [io  0x0cd8-0x0cdf] has been reserved
+2018-08-22 13:55:56,320 process          L0367 DEBUG| [stdout] [    0.382779] system 00:02: [io  0x0800-0x089f] has been reserved
+2018-08-22 13:55:56,320 process          L0367 DEBUG| [stdout] [    0.382782] system 00:02: [io  0x0b00-0x0b0f] has been reserved
+2018-08-22 13:55:56,320 process          L0367 DEBUG| [stdout] [    0.382784] system 00:02: [io  0x0b20-0x0b3f] has been reserved
+2018-08-22 13:55:56,320 process          L0367 DEBUG| [stdout] [    0.382787] system 00:02: [io  0x0900-0x090f] has been reserved
+2018-08-22 13:55:56,321 process          L0367 DEBUG| [stdout] [    0.382789] system 00:02: [io  0x0910-0x091f] has been reserved
+2018-08-22 13:55:56,321 process          L0367 DEBUG| [stdout] [    0.382793] system 00:02: [mem 0xfec00000-0xfec00fff] could not be reserved
+2018-08-22 13:55:56,321 process          L0367 DEBUG| [stdout] [    0.382797] system 00:02: [mem 0xfedc0000-0xfedc0fff] has been reserved
+2018-08-22 13:55:56,321 process          L0367 DEBUG| [stdout] [    0.382799] system 00:02: [mem 0xfee00000-0xfee00fff] has been reserved
+2018-08-22 13:55:56,321 process          L0367 DEBUG| [stdout] [    0.382802] system 00:02: [mem 0xfed80000-0xfed814ff] has been reserved
+2018-08-22 13:55:56,321 process          L0367 DEBUG| [stdout] [    0.382805] system 00:02: [mem 0xfed81900-0xfed8ffff] has been reserved
+2018-08-22 13:55:56,321 process          L0367 DEBUG| [stdout] [    0.382808] system 00:02: [mem 0xfec10000-0xfec10fff] has been reserved
+2018-08-22 13:55:56,322 process          L0367 DEBUG| [stdout] [    0.382811] system 00:02: [mem 0xff000000-0xffffffff] has been reserved
+2018-08-22 13:55:56,322 process          L0367 DEBUG| [stdout] [    0.382817] system 00:02: Plug and Play ACPI device, IDs PNP0c02 (active)
+2018-08-22 13:55:56,322 process          L0367 DEBUG| [stdout] [    0.383510] pnp 00:03: Plug and Play ACPI device, IDs PNP0501 (active)
+2018-08-22 13:55:56,322 process          L0367 DEBUG| [stdout] [    0.383660] pnp 00:04: Plug and Play ACPI device, IDs PNP0501 (active)
+2018-08-22 13:55:56,322 process          L0367 DEBUG| [stdout] [    0.384133] pnp: PnP ACPI: found 5 devices
+2018-08-22 13:55:56,322 process          L0367 DEBUG| [stdout] [    0.391526] clocksource: acpi_pm: mask: 0xffffff max_cycles: 0xffffff, max_idle_ns: 2085701024 ns
+2018-08-22 13:55:56,323 process          L0367 DEBUG| [stdout] [    0.391573] pci 0000:c1:00.0: PCI bridge to [bus c2]
+2018-08-22 13:55:56,323 process          L0367 DEBUG| [stdout] [    0.391578] pci 0000:c1:00.0:   bridge window [io  0xf000-0xffff]
+2018-08-22 13:55:56,323 process          L0367 DEBUG| [stdout] [    0.391586] pci 0000:c1:00.0:   bridge window [mem 0x84000000-0x880fffff]
+2018-08-22 13:55:56,323 process          L0367 DEBUG| [stdout] [    0.391599] pci 0000:c0:05.2: PCI bridge to [bus c1-c2]
+2018-08-22 13:55:56,323 process          L0367 DEBUG| [stdout] [    0.391602] pci 0000:c0:05.2:   bridge window [io  0xf000-0xffff]
+2018-08-22 13:55:56,323 process          L0367 DEBUG| [stdout] [    0.391607] pci 0000:c0:05.2:   bridge window [mem 0x84000000-0x880fffff]
+2018-08-22 13:55:56,324 process          L0367 DEBUG| [stdout] [    0.391616] pci 0000:c0:07.1: PCI bridge to [bus c3]
+2018-08-22 13:55:56,324 process          L0367 DEBUG| [stdout] [    0.391621] pci 0000:c0:07.1:   bridge window [mem 0x88200000-0x887fffff]
+2018-08-22 13:55:56,324 process          L0367 DEBUG| [stdout] [    0.391629] pci 0000:c0:08.1: PCI bridge to [bus c4]
+2018-08-22 13:55:56,324 process          L0367 DEBUG| [stdout] [    0.391634] pci 0000:c0:08.1:   bridge window [mem 0x88800000-0x888fffff]
+2018-08-22 13:55:56,324 process          L0367 DEBUG| [stdout] [    0.391642] pci_bus 0000:c0: resource 4 [io  0x03b0-0x03df window]
+2018-08-22 13:55:56,324 process          L0367 DEBUG| [stdout] [    0.391645] pci_bus 0000:c0: resource 5 [io  0x7000-0xffff window]
+2018-08-22 13:55:56,324 process          L0367 DEBUG| [stdout] [    0.391648] pci_bus 0000:c0: resource 6 [mem 0x000a0000-0x000bffff window]
+2018-08-22 13:55:56,325 process          L0367 DEBUG| [stdout] [    0.391650] pci_bus 0000:c0: resource 7 [mem 0x80000000-0x8a5fffff window]
+2018-08-22 13:55:56,325 process          L0367 DEBUG| [stdout] [    0.391653] pci_bus 0000:c0: resource 8 [mem 0x10020200000-0x180201fffff window]
+2018-08-22 13:55:56,325 process          L0367 DEBUG| [stdout] [    0.391655] pci_bus 0000:c1: resource 0 [io  0xf000-0xffff]
+2018-08-22 13:55:56,325 process          L0367 DEBUG| [stdout] [    0.391658] pci_bus 0000:c1: resource 1 [mem 0x84000000-0x880fffff]
+2018-08-22 13:55:56,325 process          L0367 DEBUG| [stdout] [    0.391660] pci_bus 0000:c2: resource 0 [io  0xf000-0xffff]
+2018-08-22 13:55:56,325 process          L0367 DEBUG| [stdout] [    0.391662] pci_bus 0000:c2: resource 1 [mem 0x84000000-0x880fffff]
+2018-08-22 13:55:56,326 process          L0367 DEBUG| [stdout] [    0.391665] pci_bus 0000:c3: resource 1 [mem 0x88200000-0x887fffff]
+2018-08-22 13:55:56,326 process          L0367 DEBUG| [stdout] [    0.391667] pci_bus 0000:c4: resource 1 [mem 0x88800000-0x888fffff]
+2018-08-22 13:55:56,326 process          L0367 DEBUG| [stdout] [    0.391740] pci 0000:80:07.1: PCI bridge to [bus 81]
+2018-08-22 13:55:56,326 process          L0367 DEBUG| [stdout] [    0.391745] pci 0000:80:07.1:   bridge window [mem 0xf6a00000-0xf6ffffff]
+2018-08-22 13:55:56,326 process          L0367 DEBUG| [stdout] [    0.391753] pci 0000:80:08.1: PCI bridge to [bus 82]
+2018-08-22 13:55:56,326 process          L0367 DEBUG| [stdout] [    0.391758] pci 0000:80:08.1:   bridge window [mem 0xf7000000-0xf70fffff]
+2018-08-22 13:55:56,327 process          L0367 DEBUG| [stdout] [    0.391766] pci_bus 0000:80: resource 4 [io  0x5000-0x6fff window]
+2018-08-22 13:55:56,327 process          L0367 DEBUG| [stdout] [    0.391769] pci_bus 0000:80: resource 5 [mem 0xf4a00000-0xf71fffff window]
+2018-08-22 13:55:56,327 process          L0367 DEBUG| [stdout] [    0.391771] pci_bus 0000:80: resource 6 [mem 0x18050200000-0x200501fffff window]
+2018-08-22 13:55:56,327 process          L0367 DEBUG| [stdout] [    0.391774] pci_bus 0000:81: resource 1 [mem 0xf6a00000-0xf6ffffff]
+2018-08-22 13:55:56,327 process          L0367 DEBUG| [stdout] [    0.391776] pci_bus 0000:82: resource 1 [mem 0xf7000000-0xf70fffff]
+2018-08-22 13:55:56,327 process          L0367 DEBUG| [stdout] [    0.391838] pci 0000:40:07.1: PCI bridge to [bus 41]
+2018-08-22 13:55:56,327 process          L0367 DEBUG| [stdout] [    0.391843] pci 0000:40:07.1:   bridge window [mem 0xf2000000-0xf25fffff]
+2018-08-22 13:55:56,328 process          L0367 DEBUG| [stdout] [    0.391851] pci 0000:40:08.1: PCI bridge to [bus 42]
+2018-08-22 13:55:56,328 process          L0367 DEBUG| [stdout] [    0.391856] pci 0000:40:08.1:   bridge window [mem 0xf2600000-0xf28fffff]
+2018-08-22 13:55:56,328 process          L0367 DEBUG| [stdout] [    0.391864] pci_bus 0000:40: resource 4 [io  0x4000-0x4fff window]
+2018-08-22 13:55:56,328 process          L0367 DEBUG| [stdout] [    0.391867] pci_bus 0000:40: resource 5 [mem 0xf0000000-0xf29fffff window]
+2018-08-22 13:55:56,328 process          L0367 DEBUG| [stdout] [    0.391869] pci_bus 0000:40: resource 6 [mem 0x20080200000-0x280801fffff window]
+2018-08-22 13:55:56,328 process          L0367 DEBUG| [stdout] [    0.391872] pci_bus 0000:41: resource 1 [mem 0xf2000000-0xf25fffff]
+2018-08-22 13:55:56,329 process          L0367 DEBUG| [stdout] [    0.391874] pci_bus 0000:42: resource 1 [mem 0xf2600000-0xf28fffff]
+2018-08-22 13:55:56,329 process          L0367 DEBUG| [stdout] [    0.391937] pci 0000:00:07.1: PCI bridge to [bus 01]
+2018-08-22 13:55:56,329 process          L0367 DEBUG| [stdout] [    0.391943] pci 0000:00:07.1:   bridge window [mem 0xf9200000-0xf97fffff]
+2018-08-22 13:55:56,329 process          L0367 DEBUG| [stdout] [    0.391951] pci 0000:00:08.1: PCI bridge to [bus 02]
+2018-08-22 13:55:56,329 process          L0367 DEBUG| [stdout] [    0.391956] pci 0000:00:08.1:   bridge window [mem 0xf9800000-0xf99fffff]
+2018-08-22 13:55:56,329 process          L0367 DEBUG| [stdout] [    0.391965] pci_bus 0000:00: resource 4 [io  0x0000-0x02e7 window]
+2018-08-22 13:55:56,329 process          L0367 DEBUG| [stdout] [    0.391968] pci_bus 0000:00: resource 5 [io  0x0300-0x03af window]
+2018-08-22 13:55:56,330 process          L0367 DEBUG| [stdout] [    0.391970] pci_bus 0000:00: resource 6 [io  0x0400-0x0cf7 window]
+2018-08-22 13:55:56,330 process          L0367 DEBUG| [stdout] [    0.391972] pci_bus 0000:00: resource 7 [io  0x1000-0x3fff window]
+2018-08-22 13:55:56,330 process          L0367 DEBUG| [stdout] [    0.391975] pci_bus 0000:00: resource 8 [mem 0x000c0000-0x000dffff window]
+2018-08-22 13:55:56,330 process          L0367 DEBUG| [stdout] [    0.391977] pci_bus 0000:00: resource 9 [mem 0xf7200000-0xf99fffff window]
+2018-08-22 13:55:56,330 process          L0367 DEBUG| [stdout] [    0.391980] pci_bus 0000:00: resource 10 [mem 0x280b0200000-0x380b01fffff window]
+2018-08-22 13:55:56,330 process          L0367 DEBUG| [stdout] [    0.391982] pci_bus 0000:01: resource 1 [mem 0xf9200000-0xf97fffff]
+2018-08-22 13:55:56,331 process          L0367 DEBUG| [stdout] [    0.391985] pci_bus 0000:02: resource 1 [mem 0xf9800000-0xf99fffff]
+2018-08-22 13:55:56,331 process          L0367 DEBUG| [stdout] [    0.392274] NET: Registered protocol family 2
+2018-08-22 13:55:56,331 process          L0367 DEBUG| [stdout] [    0.393128] tcp_listen_portaddr_hash hash table entries: 32768 (order: 7, 524288 bytes)
+2018-08-22 13:55:56,331 process          L0367 DEBUG| [stdout] [    0.393459] TCP established hash table entries: 524288 (order: 10, 4194304 bytes)
+2018-08-22 13:55:56,331 process          L0367 DEBUG| [stdout] [    0.394868] TCP bind hash table entries: 65536 (order: 8, 1048576 bytes)
+2018-08-22 13:55:56,331 process          L0367 DEBUG| [stdout] [    0.395105] TCP: Hash tables configured (established 524288 bind 65536)
+2018-08-22 13:55:56,331 process          L0367 DEBUG| [stdout] [    0.395637] UDP hash table entries: 32768 (order: 8, 1048576 bytes)
+2018-08-22 13:55:56,332 process          L0367 DEBUG| [stdout] [    0.395955] UDP-Lite hash table entries: 32768 (order: 8, 1048576 bytes)
+2018-08-22 13:55:56,332 process          L0367 DEBUG| [stdout] [    0.397287] NET: Registered protocol family 1
+2018-08-22 13:55:56,332 process          L0367 DEBUG| [stdout] [    0.397348] pci 0000:c2:00.0: Video device with shadowed ROM at [mem 0x000c0000-0x000dffff]
+2018-08-22 13:55:56,332 process          L0367 DEBUG| [stdout] [    0.398133] PCI: CLS 64 bytes, default 64
+2018-08-22 13:55:56,332 process          L0367 DEBUG| [stdout] [    0.398191] Unpacking initramfs...
+2018-08-22 13:55:56,332 process          L0367 DEBUG| [stdout] [    2.104784] Freeing initrd memory: 54504K
+2018-08-22 13:55:56,333 process          L0367 DEBUG| [stdout] [    2.104810] AMD-Vi: IOMMU performance counters supported
+2018-08-22 13:55:56,333 process          L0367 DEBUG| [stdout] [    2.104893] AMD-Vi: IOMMU performance counters supported
+2018-08-22 13:55:56,333 process          L0367 DEBUG| [stdout] [    2.104937] AMD-Vi: IOMMU performance counters supported
+2018-08-22 13:55:56,333 process          L0367 DEBUG| [stdout] [    2.104986] AMD-Vi: IOMMU performance counters supported
+2018-08-22 13:55:56,333 process          L0367 DEBUG| [stdout] [    2.108751] iommu: Adding device 0000:c0:01.0 to group 0
+2018-08-22 13:55:56,333 process          L0367 DEBUG| [stdout] [    2.110701] iommu: Adding device 0000:c0:02.0 to group 1
+2018-08-22 13:55:56,334 process          L0367 DEBUG| [stdout] [    2.113093] iommu: Adding device 0000:c0:03.0 to group 2
+2018-08-22 13:55:56,334 process          L0367 DEBUG| [stdout] [    2.115098] iommu: Adding device 0000:c0:04.0 to group 3
+2018-08-22 13:55:56,334 process          L0367 DEBUG| [stdout] [    2.117428] iommu: Adding device 0000:c0:05.0 to group 4
+2018-08-22 13:55:56,334 process          L0367 DEBUG| [stdout] [    2.119616] iommu: Adding device 0000:c0:05.2 to group 5
+2018-08-22 13:55:56,334 process          L0367 DEBUG| [stdout] [    2.121648] iommu: Adding device 0000:c0:07.0 to group 6
+2018-08-22 13:55:56,334 process          L0367 DEBUG| [stdout] [    2.121695] iommu: Adding device 0000:c0:07.1 to group 6
+2018-08-22 13:55:56,334 process          L0367 DEBUG| [stdout] [    2.123968] iommu: Adding device 0000:c0:08.0 to group 7
+2018-08-22 13:55:56,335 process          L0367 DEBUG| [stdout] [    2.124023] iommu: Adding device 0000:c0:08.1 to group 7
+2018-08-22 13:55:56,335 process          L0367 DEBUG| [stdout] [    2.125993] iommu: Adding device 0000:c1:00.0 to group 8
+2018-08-22 13:55:56,335 process          L0367 DEBUG| [stdout] [    2.126015] iommu: Adding device 0000:c2:00.0 to group 8
+2018-08-22 13:55:56,335 process          L0367 DEBUG| [stdout] [    2.126043] iommu: Adding device 0000:c3:00.0 to group 6
+2018-08-22 13:55:56,335 process          L0367 DEBUG| [stdout] [    2.126070] iommu: Adding device 0000:c3:00.1 to group 6
+2018-08-22 13:55:56,335 process          L0367 DEBUG| [stdout] [    2.126094] iommu: Adding device 0000:c3:00.2 to group 6
+2018-08-22 13:55:56,336 process          L0367 DEBUG| [stdout] [    2.126121] iommu: Adding device 0000:c4:00.0 to group 7
+2018-08-22 13:55:56,336 process          L0367 DEBUG| [stdout] [    2.126144] iommu: Adding device 0000:c4:00.2 to group 7
+2018-08-22 13:55:56,336 process          L0367 DEBUG| [stdout] [    2.128441] iommu: Adding device 0000:80:01.0 to group 9
+2018-08-22 13:55:56,336 process          L0367 DEBUG| [stdout] [    2.130408] iommu: Adding device 0000:80:02.0 to group 10
+2018-08-22 13:55:56,336 process          L0367 DEBUG| [stdout] [    2.132658] iommu: Adding device 0000:80:03.0 to group 11
+2018-08-22 13:55:56,336 process          L0367 DEBUG| [stdout] [    2.134668] iommu: Adding device 0000:80:04.0 to group 12
+2018-08-22 13:55:56,336 process          L0367 DEBUG| [stdout] [    2.136923] iommu: Adding device 0000:80:05.0 to group 13
+2018-08-22 13:55:56,337 process          L0367 DEBUG| [stdout] [    2.138937] iommu: Adding device 0000:80:07.0 to group 14
+2018-08-22 13:55:56,337 process          L0367 DEBUG| [stdout] [    2.138990] iommu: Adding device 0000:80:07.1 to group 14
+2018-08-22 13:55:56,337 process          L0367 DEBUG| [stdout] [    2.141248] iommu: Adding device 0000:80:08.0 to group 15
+2018-08-22 13:55:56,337 process          L0367 DEBUG| [stdout] [    2.141300] iommu: Adding device 0000:80:08.1 to group 15
+2018-08-22 13:55:56,337 process          L0367 DEBUG| [stdout] [    2.141326] iommu: Adding device 0000:81:00.0 to group 14
+2018-08-22 13:55:56,337 process          L0367 DEBUG| [stdout] [    2.141350] iommu: Adding device 0000:81:00.1 to group 14
+2018-08-22 13:55:56,338 process          L0367 DEBUG| [stdout] [    2.141373] iommu: Adding device 0000:81:00.2 to group 14
+2018-08-22 13:55:56,338 process          L0367 DEBUG| [stdout] [    2.141404] iommu: Adding device 0000:82:00.0 to group 15
+2018-08-22 13:55:56,338 process          L0367 DEBUG| [stdout] [    2.141427] iommu: Adding device 0000:82:00.2 to group 15
+2018-08-22 13:55:56,338 process          L0367 DEBUG| [stdout] [    2.143305] iommu: Adding device 0000:40:01.0 to group 16
+2018-08-22 13:55:56,338 process          L0367 DEBUG| [stdout] [    2.145416] iommu: Adding device 0000:40:02.0 to group 17
+2018-08-22 13:55:56,338 process          L0367 DEBUG| [stdout] [    2.147249] iommu: Adding device 0000:40:03.0 to group 18
+2018-08-22 13:55:56,339 process          L0367 DEBUG| [stdout] [    2.149365] iommu: Adding device 0000:40:04.0 to group 19
+2018-08-22 13:55:56,339 process          L0367 DEBUG| [stdout] [    2.151213] iommu: Adding device 0000:40:05.0 to group 20
+2018-08-22 13:55:56,339 process          L0367 DEBUG| [stdout] [    2.153343] iommu: Adding device 0000:40:07.0 to group 21
+2018-08-22 13:55:56,339 process          L0367 DEBUG| [stdout] [    2.153396] iommu: Adding device 0000:40:07.1 to group 21
+2018-08-22 13:55:56,339 process          L0367 DEBUG| [stdout] [    2.155232] iommu: Adding device 0000:40:08.0 to group 22
+2018-08-22 13:55:56,339 process          L0367 DEBUG| [stdout] [    2.155285] iommu: Adding device 0000:40:08.1 to group 22
+2018-08-22 13:55:56,339 process          L0367 DEBUG| [stdout] [    2.155312] iommu: Adding device 0000:41:00.0 to group 21
+2018-08-22 13:55:56,340 process          L0367 DEBUG| [stdout] [    2.155336] iommu: Adding device 0000:41:00.1 to group 21
+2018-08-22 13:55:56,340 process          L0367 DEBUG| [stdout] [    2.155360] iommu: Adding device 0000:41:00.2 to group 21
+2018-08-22 13:55:56,340 process          L0367 DEBUG| [stdout] [    2.155387] iommu: Adding device 0000:42:00.0 to group 22
+2018-08-22 13:55:56,340 process          L0367 DEBUG| [stdout] [    2.155411] iommu: Adding device 0000:42:00.1 to group 22
+2018-08-22 13:55:56,340 process          L0367 DEBUG| [stdout] [    2.155435] iommu: Adding device 0000:42:00.2 to group 22
+2018-08-22 13:55:56,340 process          L0367 DEBUG| [stdout] [    2.155459] iommu: Adding device 0000:42:00.3 to group 22
+2018-08-22 13:55:56,341 process          L0367 DEBUG| [stdout] [    2.155486] iommu: Adding device 0000:42:00.4 to group 22
+2018-08-22 13:55:56,341 process          L0367 DEBUG| [stdout] [    2.157607] iommu: Adding device 0000:00:01.0 to group 23
+2018-08-22 13:55:56,341 process          L0367 DEBUG| [stdout] [    2.159456] iommu: Adding device 0000:00:02.0 to group 24
+2018-08-22 13:55:56,341 process          L0367 DEBUG| [stdout] [    2.161574] iommu: Adding device 0000:00:03.0 to group 25
+2018-08-22 13:55:56,341 process          L0367 DEBUG| [stdout] [    2.163678] iommu: Adding device 0000:00:04.0 to group 26
+2018-08-22 13:55:56,341 process          L0367 DEBUG| [stdout] [    2.165568] iommu: Adding device 0000:00:05.0 to group 27
+2018-08-22 13:55:56,342 process          L0367 DEBUG| [stdout] [    2.167688] iommu: Adding device 0000:00:07.0 to group 28
+2018-08-22 13:55:56,342 process          L0367 DEBUG| [stdout] [    2.167745] iommu: Adding device 0000:00:07.1 to group 28
+2018-08-22 13:55:56,342 process          L0367 DEBUG| [stdout] [    2.169629] iommu: Adding device 0000:00:08.0 to group 29
+2018-08-22 13:55:56,342 process          L0367 DEBUG| [stdout] [    2.169686] iommu: Adding device 0000:00:08.1 to group 29
+2018-08-22 13:55:56,342 process          L0367 DEBUG| [stdout] [    2.171888] iommu: Adding device 0000:00:14.0 to group 30
+2018-08-22 13:55:56,342 process          L0367 DEBUG| [stdout] [    2.171940] iommu: Adding device 0000:00:14.3 to group 30
+2018-08-22 13:55:56,342 process          L0367 DEBUG| [stdout] [    2.174155] iommu: Adding device 0000:00:18.0 to group 31
+2018-08-22 13:55:56,343 process          L0367 DEBUG| [stdout] [    2.174208] iommu: Adding device 0000:00:18.1 to group 31
+2018-08-22 13:55:56,343 process          L0367 DEBUG| [stdout] [    2.174256] iommu: Adding device 0000:00:18.2 to group 31
+2018-08-22 13:55:56,343 process          L0367 DEBUG| [stdout] [    2.174304] iommu: Adding device 0000:00:18.3 to group 31
+2018-08-22 13:55:56,343 process          L0367 DEBUG| [stdout] [    2.174352] iommu: Adding device 0000:00:18.4 to group 31
+2018-08-22 13:55:56,343 process          L0367 DEBUG| [stdout] [    2.174400] iommu: Adding device 0000:00:18.5 to group 31
+2018-08-22 13:55:56,343 process          L0367 DEBUG| [stdout] [    2.174448] iommu: Adding device 0000:00:18.6 to group 31
+2018-08-22 13:55:56,344 process          L0367 DEBUG| [stdout] [    2.174497] iommu: Adding device 0000:00:18.7 to group 31
+2018-08-22 13:55:56,344 process          L0367 DEBUG| [stdout] [    2.174528] iommu: Adding device 0000:01:00.0 to group 28
+2018-08-22 13:55:56,344 process          L0367 DEBUG| [stdout] [    2.174553] iommu: Adding device 0000:01:00.1 to group 28
+2018-08-22 13:55:56,344 process          L0367 DEBUG| [stdout] [    2.174578] iommu: Adding device 0000:01:00.2 to group 28
+2018-08-22 13:55:56,344 process          L0367 DEBUG| [stdout] [    2.174606] iommu: Adding device 0000:02:00.0 to group 29
+2018-08-22 13:55:56,344 process          L0367 DEBUG| [stdout] [    2.174634] iommu: Adding device 0000:02:00.2 to group 29
+2018-08-22 13:55:56,344 process          L0367 DEBUG| [stdout] [    2.174659] iommu: Adding device 0000:02:00.3 to group 29
+2018-08-22 13:55:56,345 process          L0367 DEBUG| [stdout] [    2.174964] AMD-Vi: Found IOMMU at 0000:c0:00.2 cap 0x40
+2018-08-22 13:55:56,345 process          L0367 DEBUG| [stdout] [    2.174965] AMD-Vi: Extended features (0x58f77ef22294ade):
+2018-08-22 13:55:56,345 process          L0367 DEBUG| [stdout] [    2.174967]  PPR X2APIC NX GT IA GA PC GA_vAPIC
+2018-08-22 13:55:56,345 process          L0367 DEBUG| [stdout] [    2.174973] AMD-Vi: Found IOMMU at 0000:80:00.2 cap 0x40
+2018-08-22 13:55:56,345 process          L0367 DEBUG| [stdout] [    2.174974] AMD-Vi: Extended features (0x58f77ef22294ade):
+2018-08-22 13:55:56,345 process          L0367 DEBUG| [stdout] [    2.174975]  PPR X2APIC NX GT IA GA PC GA_vAPIC
+2018-08-22 13:55:56,346 process          L0367 DEBUG| [stdout] [    2.174980] AMD-Vi: Found IOMMU at 0000:40:00.2 cap 0x40
+2018-08-22 13:55:56,346 process          L0367 DEBUG| [stdout] [    2.174981] AMD-Vi: Extended features (0x58f77ef22294ade):
+2018-08-22 13:55:56,346 process          L0367 DEBUG| [stdout] [    2.174982]  PPR X2APIC NX GT IA GA PC GA_vAPIC
+2018-08-22 13:55:56,346 process          L0367 DEBUG| [stdout] [    2.174986] AMD-Vi: Found IOMMU at 0000:00:00.2 cap 0x40
+2018-08-22 13:55:56,346 process          L0367 DEBUG| [stdout] [    2.174987] AMD-Vi: Extended features (0x58f77ef22294ade):
+2018-08-22 13:55:56,346 process          L0367 DEBUG| [stdout] [    2.174988]  PPR X2APIC NX GT IA GA PC GA_vAPIC
+2018-08-22 13:55:56,347 process          L0367 DEBUG| [stdout] [    2.174992] AMD-Vi: Interrupt remapping enabled
+2018-08-22 13:55:56,347 process          L0367 DEBUG| [stdout] [    2.174993] AMD-Vi: virtual APIC enabled
+2018-08-22 13:55:56,347 process          L0367 DEBUG| [stdout] [    2.174993] AMD-Vi: X2APIC enabled
+2018-08-22 13:55:56,347 process          L0367 DEBUG| [stdout] [    2.175704] AMD-Vi: Lazy IO/TLB flushing enabled
+2018-08-22 13:55:56,347 process          L0367 DEBUG| [stdout] [    2.177949] amd_uncore: AMD NB counters detected
+2018-08-22 13:55:56,347 process          L0367 DEBUG| [stdout] [    2.178035] amd_uncore: AMD LLC counters detected
+2018-08-22 13:55:56,347 process          L0367 DEBUG| [stdout] [    2.183262] LVT offset 0 assigned for vector 0x400
+2018-08-22 13:55:56,348 process          L0367 DEBUG| [stdout] [    2.185136] perf: AMD IBS detected (0x000003ff)
+2018-08-22 13:55:56,348 process          L0367 DEBUG| [stdout] [    2.185248] perf/amd_iommu: Detected AMD IOMMU #0 (2 banks, 4 counters/bank).
+2018-08-22 13:55:56,348 process          L0367 DEBUG| [stdout] [    2.185321] perf/amd_iommu: Detected AMD IOMMU #1 (2 banks, 4 counters/bank).
+2018-08-22 13:55:56,348 process          L0367 DEBUG| [stdout] [    2.185393] perf/amd_iommu: Detected AMD IOMMU #2 (2 banks, 4 counters/bank).
+2018-08-22 13:55:56,348 process          L0367 DEBUG| [stdout] [    2.185467] perf/amd_iommu: Detected AMD IOMMU #3 (2 banks, 4 counters/bank).
+2018-08-22 13:55:56,348 process          L0367 DEBUG| [stdout] [    2.185579] Scanning for low memory corruption every 60 seconds
+2018-08-22 13:55:56,349 process          L0367 DEBUG| [stdout] [    2.190625] Initialise system trusted keyrings
+2018-08-22 13:55:56,349 process          L0367 DEBUG| [stdout] [    2.190655] Key type blacklist registered
+2018-08-22 13:55:56,349 process          L0367 DEBUG| [stdout] [    2.190719] workingset: timestamp_bits=36 max_order=24 bucket_order=0
+2018-08-22 13:55:56,349 process          L0367 DEBUG| [stdout] [    2.192923] zbud: loaded
+2018-08-22 13:55:56,349 process          L0367 DEBUG| [stdout] [    2.194666] squashfs: version 4.0 (2009/01/31) Phillip Lougher
+2018-08-22 13:55:56,349 process          L0367 DEBUG| [stdout] [    2.195120] fuse init (API version 7.26)
+2018-08-22 13:55:56,349 process          L0367 DEBUG| [stdout] [    2.195293] pstore: using deflate compression
+2018-08-22 13:55:56,350 process          L0367 DEBUG| [stdout] [    2.198774] Key type asymmetric registered
+2018-08-22 13:55:56,350 process          L0367 DEBUG| [stdout] [    2.198776] Asymmetric key parser 'x509' registered
+2018-08-22 13:55:56,350 process          L0367 DEBUG| [stdout] [    2.198858] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 244)
+2018-08-22 13:55:56,350 process          L0367 DEBUG| [stdout] [    2.199163] io scheduler noop registered
+2018-08-22 13:55:56,350 process          L0367 DEBUG| [stdout] [    2.199164] io scheduler deadline registered
+2018-08-22 13:55:56,350 process          L0367 DEBUG| [stdout] [    2.199301] io scheduler cfq registered (default)
+2018-08-22 13:55:56,351 process          L0367 DEBUG| [stdout] [    2.203274] pcieport 0000:c0:05.2: AER enabled with IRQ 30
+2018-08-22 13:55:56,351 process          L0367 DEBUG| [stdout] [    2.203296] pcieport 0000:c0:05.2: Signaling PME with IRQ 30
+2018-08-22 13:55:56,351 process          L0367 DEBUG| [stdout] [    2.203320] pcieport 0000:c0:07.1: Signaling PME with IRQ 32
+2018-08-22 13:55:56,351 process          L0367 DEBUG| [stdout] [    2.203358] pcieport 0000:c0:08.1: Signaling PME with IRQ 34
+2018-08-22 13:55:56,351 process          L0367 DEBUG| [stdout] [    2.203397] pcieport 0000:80:07.1: Signaling PME with IRQ 36
+2018-08-22 13:55:56,351 process          L0367 DEBUG| [stdout] [    2.203432] pcieport 0000:80:08.1: Signaling PME with IRQ 38
+2018-08-22 13:55:56,352 process          L0367 DEBUG| [stdout] [    2.203471] pcieport 0000:40:07.1: Signaling PME with IRQ 40
+2018-08-22 13:55:56,352 process          L0367 DEBUG| [stdout] [    2.203511] pcieport 0000:40:08.1: Signaling PME with IRQ 41
+2018-08-22 13:55:56,352 process          L0367 DEBUG| [stdout] [    2.203554] pcieport 0000:00:07.1: Signaling PME with IRQ 43
+2018-08-22 13:55:56,352 process          L0367 DEBUG| [stdout] [    2.203588] pcieport 0000:00:08.1: Signaling PME with IRQ 44
+2018-08-22 13:55:56,352 process          L0367 DEBUG| [stdout] [    2.203791] efifb: probing for efifb
+2018-08-22 13:55:56,352 process          L0367 DEBUG| [stdout] [    2.203831] efifb: framebuffer at 0x84000000, using 1920k, total 1920k
+2018-08-22 13:55:56,352 process          L0367 DEBUG| [stdout] [    2.203833] efifb: mode is 800x600x32, linelength=3200, pages=1
+2018-08-22 13:55:56,353 process          L0367 DEBUG| [stdout] [    2.203833] efifb: scrolling: redraw
+2018-08-22 13:55:56,353 process          L0367 DEBUG| [stdout] [    2.203836] efifb: Truecolor: size=8:8:8:8, shift=24:16:8:0
+2018-08-22 13:55:56,353 process          L0367 DEBUG| [stdout] [    2.214321] Console: switching to colour frame buffer device 100x37
+2018-08-22 13:55:56,353 process          L0367 DEBUG| [stdout] [    2.224524] fb0: EFI VGA frame buffer device
+2018-08-22 13:55:56,353 process          L0367 DEBUG| [stdout] [    2.224934] input: Power Button as /devices/LNXSYSTM:00/LNXSYBUS:00/PNP0C0C:00/input/input0
+2018-08-22 13:55:56,353 process          L0367 DEBUG| [stdout] [    2.224953] ACPI: Power Button [PWRB]
+2018-08-22 13:55:56,354 process          L0367 DEBUG| [stdout] [    2.225010] input: Power Button as /devices/LNXSYSTM:00/LNXPWRBN:00/input/input1
+2018-08-22 13:55:56,354 process          L0367 DEBUG| [stdout] [    2.225116] ACPI: Power Button [PWRF]
+2018-08-22 13:55:56,354 process          L0367 DEBUG| [stdout] [    2.225192] Monitor-Mwait will be used to enter C-1 state
+2018-08-22 13:55:56,354 process          L0367 DEBUG| [stdout] [    2.234930] GHES: HEST is not enabled!
+2018-08-22 13:55:56,354 process          L0367 DEBUG| [stdout] [    2.235089] Serial: 8250/16550 driver, 32 ports, IRQ sharing enabled
+2018-08-22 13:55:56,354 process          L0367 DEBUG| [stdout] [    2.256124] 00:03: ttyS1 at I/O 0x2f8 (irq = 4, base_baud = 115200) is a 16550A
+2018-08-22 13:55:56,354 process          L0367 DEBUG| [stdout] [    2.277216] 00:04: ttyS0 at I/O 0x3f8 (irq = 3, base_baud = 115200) is a 16550A
+2018-08-22 13:55:56,355 process          L0367 DEBUG| [stdout] [    2.279888] Linux agpgart interface v0.103
+2018-08-22 13:55:56,355 process          L0367 DEBUG| [stdout] [    2.312069] loop: module loaded
+2018-08-22 13:55:56,355 process          L0367 DEBUG| [stdout] [    2.312815] libphy: Fixed MDIO Bus: probed
+2018-08-22 13:55:56,355 process          L0367 DEBUG| [stdout] [    2.312817] tun: Universal TUN/TAP device driver, 1.6
+2018-08-22 13:55:56,355 process          L0367 DEBUG| [stdout] [    2.312893] PPP generic driver version 2.4.2
+2018-08-22 13:55:56,355 process          L0367 DEBUG| [stdout] [    2.312953] ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+2018-08-22 13:55:56,356 process          L0367 DEBUG| [stdout] [    2.312957] ehci-pci: EHCI PCI platform driver
+2018-08-22 13:55:56,356 process          L0367 DEBUG| [stdout] [    2.312978] ehci-platform: EHCI generic platform driver
+2018-08-22 13:55:56,356 process          L0367 DEBUG| [stdout] [    2.312989] ohci_hcd: USB 1.1 'Open' Host Controller (OHCI) Driver
+2018-08-22 13:55:56,356 process          L0367 DEBUG| [stdout] [    2.312992] ohci-pci: OHCI PCI platform driver
+2018-08-22 13:55:56,356 process          L0367 DEBUG| [stdout] [    2.313012] ohci-platform: OHCI generic platform driver
+2018-08-22 13:55:56,356 process          L0367 DEBUG| [stdout] [    2.313021] uhci_hcd: USB Universal Host Controller Interface driver
+2018-08-22 13:55:56,357 process          L0367 DEBUG| [stdout] [    2.313291] xhci_hcd 0000:42:00.3: xHCI Host Controller
+2018-08-22 13:55:56,357 process          L0367 DEBUG| [stdout] [    2.313300] xhci_hcd 0000:42:00.3: new USB bus registered, assigned bus number 1
+2018-08-22 13:55:56,357 process          L0367 DEBUG| [stdout] [    2.313418] xhci_hcd 0000:42:00.3: hcc params 0x0260ffe5 hci version 0x110 quirks 0x00000410
+2018-08-22 13:55:56,357 process          L0367 DEBUG| [stdout] [    2.314152] usb usb1: New USB device found, idVendor=1d6b, idProduct=0002, bcdDevice= 4.17
+2018-08-22 13:55:56,357 process          L0367 DEBUG| [stdout] [    2.314155] usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+2018-08-22 13:55:56,357 process          L0367 DEBUG| [stdout] [    2.314158] usb usb1: Product: xHCI Host Controller
+2018-08-22 13:55:56,357 process          L0367 DEBUG| [stdout] [    2.314160] usb usb1: Manufacturer: Linux 4.17.0-amdsos-build6+ xhci-hcd
+2018-08-22 13:55:56,358 process          L0367 DEBUG| [stdout] [    2.314162] usb usb1: SerialNumber: 0000:42:00.3
+2018-08-22 13:55:56,358 process          L0367 DEBUG| [stdout] [    2.314326] hub 1-0:1.0: USB hub found
+2018-08-22 13:55:56,358 process          L0367 DEBUG| [stdout] [    2.314339] hub 1-0:1.0: 2 ports detected
+2018-08-22 13:55:56,358 process          L0367 DEBUG| [stdout] [    2.314503] xhci_hcd 0000:42:00.3: xHCI Host Controller
+2018-08-22 13:55:56,358 process          L0367 DEBUG| [stdout] [    2.314508] xhci_hcd 0000:42:00.3: new USB bus registered, assigned bus number 2
+2018-08-22 13:55:56,358 process          L0367 DEBUG| [stdout] [    2.314513] xhci_hcd 0000:42:00.3: Host supports USB 3.10 Enhanced SuperSpeed
+2018-08-22 13:55:56,359 process          L0367 DEBUG| [stdout] [    2.314532] usb usb2: We don't know the algorithms for LPM for this host, disabling LPM.
+2018-08-22 13:55:56,359 process          L0367 DEBUG| [stdout] [    2.314563] usb usb2: New USB device found, idVendor=1d6b, idProduct=0003, bcdDevice= 4.17
+2018-08-22 13:55:56,359 process          L0367 DEBUG| [stdout] [    2.314566] usb usb2: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+2018-08-22 13:55:56,359 process          L0367 DEBUG| [stdout] [    2.314568] usb usb2: Product: xHCI Host Controller
+2018-08-22 13:55:56,359 process          L0367 DEBUG| [stdout] [    2.314571] usb usb2: Manufacturer: Linux 4.17.0-amdsos-build6+ xhci-hcd
+2018-08-22 13:55:56,359 process          L0367 DEBUG| [stdout] [    2.314573] usb usb2: SerialNumber: 0000:42:00.3
+2018-08-22 13:55:56,360 process          L0367 DEBUG| [stdout] [    2.314691] hub 2-0:1.0: USB hub found
+2018-08-22 13:55:56,360 process          L0367 DEBUG| [stdout] [    2.314700] hub 2-0:1.0: 2 ports detected
+2018-08-22 13:55:56,360 process          L0367 DEBUG| [stdout] [    2.315012] xhci_hcd 0000:02:00.3: xHCI Host Controller
+2018-08-22 13:55:56,360 process          L0367 DEBUG| [stdout] [    2.315018] xhci_hcd 0000:02:00.3: new USB bus registered, assigned bus number 3
+2018-08-22 13:55:56,360 process          L0367 DEBUG| [stdout] [    2.315130] xhci_hcd 0000:02:00.3: hcc params 0x0260ffe5 hci version 0x110 quirks 0x00000410
+2018-08-22 13:55:56,360 process          L0367 DEBUG| [stdout] [    2.315862] usb usb3: New USB device found, idVendor=1d6b, idProduct=0002, bcdDevice= 4.17
+2018-08-22 13:55:56,360 process          L0367 DEBUG| [stdout] [    2.315864] usb usb3: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+2018-08-22 13:55:56,361 process          L0367 DEBUG| [stdout] [    2.315866] usb usb3: Product: xHCI Host Controller
+2018-08-22 13:55:56,361 process          L0367 DEBUG| [stdout] [    2.315869] usb usb3: Manufacturer: Linux 4.17.0-amdsos-build6+ xhci-hcd
+2018-08-22 13:55:56,361 process          L0367 DEBUG| [stdout] [    2.315871] usb usb3: SerialNumber: 0000:02:00.3
+2018-08-22 13:55:56,361 process          L0367 DEBUG| [stdout] [    2.315986] hub 3-0:1.0: USB hub found
+2018-08-22 13:55:56,361 process          L0367 DEBUG| [stdout] [    2.315995] hub 3-0:1.0: 2 ports detected
+2018-08-22 13:55:56,361 process          L0367 DEBUG| [stdout] [    2.316160] xhci_hcd 0000:02:00.3: xHCI Host Controller
+2018-08-22 13:55:56,362 process          L0367 DEBUG| [stdout] [    2.316165] xhci_hcd 0000:02:00.3: new USB bus registered, assigned bus number 4
+2018-08-22 13:55:56,362 process          L0367 DEBUG| [stdout] [    2.316169] xhci_hcd 0000:02:00.3: Host supports USB 3.10 Enhanced SuperSpeed
+2018-08-22 13:55:56,362 process          L0367 DEBUG| [stdout] [    2.316187] usb usb4: We don't know the algorithms for LPM for this host, disabling LPM.
+2018-08-22 13:55:56,362 process          L0367 DEBUG| [stdout] [    2.316217] usb usb4: New USB device found, idVendor=1d6b, idProduct=0003, bcdDevice= 4.17
+2018-08-22 13:55:56,362 process          L0367 DEBUG| [stdout] [    2.316220] usb usb4: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+2018-08-22 13:55:56,362 process          L0367 DEBUG| [stdout] [    2.316222] usb usb4: Product: xHCI Host Controller
+2018-08-22 13:55:56,363 process          L0367 DEBUG| [stdout] [    2.316224] usb usb4: Manufacturer: Linux 4.17.0-amdsos-build6+ xhci-hcd
+2018-08-22 13:55:56,363 process          L0367 DEBUG| [stdout] [    2.316226] usb usb4: SerialNumber: 0000:02:00.3
+2018-08-22 13:55:56,363 process          L0367 DEBUG| [stdout] [    2.316344] hub 4-0:1.0: USB hub found
+2018-08-22 13:55:56,363 process          L0367 DEBUG| [stdout] [    2.316352] hub 4-0:1.0: 2 ports detected
+2018-08-22 13:55:56,363 process          L0367 DEBUG| [stdout] [    2.316508] i8042: PNP: No PS/2 controller found.
+2018-08-22 13:55:56,363 process          L0367 DEBUG| [stdout] [    2.316589] mousedev: PS/2 mouse device common for all mice
+2018-08-22 13:55:56,363 process          L0367 DEBUG| [stdout] [    2.316764] rtc_cmos 00:01: RTC can wake from S4
+2018-08-22 13:55:56,364 process          L0367 DEBUG| [stdout] [    2.316957] rtc_cmos 00:01: registered as rtc0
+2018-08-22 13:55:56,364 process          L0367 DEBUG| [stdout] [    2.316979] rtc_cmos 00:01: alarms up to one month, y3k, 114 bytes nvram, hpet irqs
+2018-08-22 13:55:56,364 process          L0367 DEBUG| [stdout] [    2.316988] i2c /dev entries driver
+2018-08-22 13:55:56,364 process          L0367 DEBUG| [stdout] [    2.317098] device-mapper: uevent: version 1.0.3
+2018-08-22 13:55:56,364 process          L0367 DEBUG| [stdout] [    2.317219] device-mapper: ioctl: 4.39.0-ioctl (2018-04-03) initialised: dm-devel@redhat.com
+2018-08-22 13:55:56,364 process          L0367 DEBUG| [stdout] [    2.321240] ledtrig-cpu: registered to indicate activity on CPUs
+2018-08-22 13:55:56,365 process          L0367 DEBUG| [stdout] [    2.321267] EFI Variables Facility v0.08 2004-May-17
+2018-08-22 13:55:56,365 process          L0367 DEBUG| [stdout] [    2.338831] NET: Registered protocol family 10
+2018-08-22 13:55:56,365 process          L0367 DEBUG| [stdout] [    2.346940] Segment Routing with IPv6
+2018-08-22 13:55:56,365 process          L0367 DEBUG| [stdout] [    2.346974] NET: Registered protocol family 17
+2018-08-22 13:55:56,365 process          L0367 DEBUG| [stdout] [    2.347071] Key type dns_resolver registered
+2018-08-22 13:55:56,365 process          L0367 DEBUG| [stdout] [    2.347073] mce: CPU supports 28 MCE banks
+2018-08-22 13:55:56,366 process          L0367 DEBUG| [stdout] [    2.354799] intel_rdt: Intel RDT L3 allocation detected
+2018-08-22 13:55:56,366 process          L0367 DEBUG| [stdout] [    2.354800] intel_rdt: Intel RDT L3DATA allocation detected
+2018-08-22 13:55:56,366 process          L0367 DEBUG| [stdout] [    2.354801] intel_rdt: Intel RDT L3CODE allocation detected
+2018-08-22 13:55:56,366 process          L0367 DEBUG| [stdout] [    2.354802] intel_rdt: Intel RDT L3 monitoring detected
+2018-08-22 13:55:56,366 process          L0367 DEBUG| [stdout] [    2.354820] RAS: Correctable Errors collector initialized.
+2018-08-22 13:55:56,366 process          L0367 DEBUG| [stdout] [    2.354868] microcode: CPU0: patch_level=0x08300004
+2018-08-22 13:55:56,366 process          L0367 DEBUG| [stdout] [    2.354880] microcode: CPU1: patch_level=0x08300004
+2018-08-22 13:55:56,367 process          L0367 DEBUG| [stdout] [    2.354895] microcode: CPU2: patch_level=0x08300004
+2018-08-22 13:55:56,367 process          L0367 DEBUG| [stdout] [    2.354909] microcode: CPU3: patch_level=0x08300004
+2018-08-22 13:55:56,367 process          L0367 DEBUG| [stdout] [    2.354923] microcode: CPU4: patch_level=0x08300004
+2018-08-22 13:55:56,367 process          L0367 DEBUG| [stdout] [    2.354936] microcode: CPU5: patch_level=0x08300004
+2018-08-22 13:55:56,367 process          L0367 DEBUG| [stdout] [    2.354942] microcode: CPU6: patch_level=0x08300004
+2018-08-22 13:55:56,367 process          L0367 DEBUG| [stdout] [    2.354957] microcode: CPU7: patch_level=0x08300004
+2018-08-22 13:55:56,368 process          L0367 DEBUG| [stdout] [    2.354975] microcode: CPU8: patch_level=0x08300004
+2018-08-22 13:55:56,368 process          L0367 DEBUG| [stdout] [    2.354990] microcode: CPU9: patch_level=0x08300004
+2018-08-22 13:55:56,368 process          L0367 DEBUG| [stdout] [    2.355008] microcode: CPU10: patch_level=0x08300004
+2018-08-22 13:55:56,368 process          L0367 DEBUG| [stdout] [    2.355023] microcode: CPU11: patch_level=0x08300004
+2018-08-22 13:55:56,368 process          L0367 DEBUG| [stdout] [    2.355043] microcode: CPU12: patch_level=0x08300004
+2018-08-22 13:55:56,368 process          L0367 DEBUG| [stdout] [    2.355059] microcode: CPU13: patch_level=0x08300004
+2018-08-22 13:55:56,368 process          L0367 DEBUG| [stdout] [    2.355076] microcode: CPU14: patch_level=0x08300004
+2018-08-22 13:55:56,369 process          L0367 DEBUG| [stdout] [    2.355093] microcode: CPU15: patch_level=0x08300004
+2018-08-22 13:55:56,369 process          L0367 DEBUG| [stdout] [    2.355112] microcode: CPU16: patch_level=0x08300004
+2018-08-22 13:55:56,369 process          L0367 DEBUG| [stdout] [    2.355128] microcode: CPU17: patch_level=0x08300004
+2018-08-22 13:55:56,369 process          L0367 DEBUG| [stdout] [    2.355145] microcode: CPU18: patch_level=0x08300004
+2018-08-22 13:55:56,369 process          L0367 DEBUG| [stdout] [    2.355161] microcode: CPU19: patch_level=0x08300004
+2018-08-22 13:55:56,369 process          L0367 DEBUG| [stdout] [    2.355178] microcode: CPU20: patch_level=0x08300004
+2018-08-22 13:55:56,370 process          L0367 DEBUG| [stdout] [    2.355195] microcode: CPU21: patch_level=0x08300004
+2018-08-22 13:55:56,370 process          L0367 DEBUG| [stdout] [    2.355212] microcode: CPU22: patch_level=0x08300004
+2018-08-22 13:55:56,370 process          L0367 DEBUG| [stdout] [    2.355228] microcode: CPU23: patch_level=0x08300004
+2018-08-22 13:55:56,370 process          L0367 DEBUG| [stdout] [    2.355247] microcode: CPU24: patch_level=0x08300004
+2018-08-22 13:55:56,370 process          L0367 DEBUG| [stdout] [    2.355263] microcode: CPU25: patch_level=0x08300004
+2018-08-22 13:55:56,370 process          L0367 DEBUG| [stdout] [    2.355280] microcode: CPU26: patch_level=0x08300004
+2018-08-22 13:55:56,371 process          L0367 DEBUG| [stdout] [    2.355297] microcode: CPU27: patch_level=0x08300004
+2018-08-22 13:55:56,371 process          L0367 DEBUG| [stdout] [    2.355314] microcode: CPU28: patch_level=0x08300004
+2018-08-22 13:55:56,371 process          L0367 DEBUG| [stdout] [    2.355329] microcode: CPU29: patch_level=0x08300004
+2018-08-22 13:55:56,371 process          L0367 DEBUG| [stdout] [    2.355347] microcode: CPU30: patch_level=0x08300004
+2018-08-22 13:55:56,371 process          L0367 DEBUG| [stdout] [    2.355363] microcode: CPU31: patch_level=0x08300004
+2018-08-22 13:55:56,371 process          L0367 DEBUG| [stdout] [    2.355385] microcode: CPU32: patch_level=0x08300004
+2018-08-22 13:55:56,371 process          L0367 DEBUG| [stdout] [    2.355402] microcode: CPU33: patch_level=0x08300004
+2018-08-22 13:55:56,372 process          L0367 DEBUG| [stdout] [    2.355419] microcode: CPU34: patch_level=0x08300004
+2018-08-22 13:55:56,372 process          L0367 DEBUG| [stdout] [    2.355436] microcode: CPU35: patch_level=0x08300004
+2018-08-22 13:55:56,372 process          L0367 DEBUG| [stdout] [    2.355453] microcode: CPU36: patch_level=0x08300004
+2018-08-22 13:55:56,372 process          L0367 DEBUG| [stdout] [    2.355471] microcode: CPU37: patch_level=0x08300004
+2018-08-22 13:55:56,372 process          L0367 DEBUG| [stdout] [    2.355488] microcode: CPU38: patch_level=0x08300004
+2018-08-22 13:55:56,372 process          L0367 DEBUG| [stdout] [    2.355505] microcode: CPU39: patch_level=0x08300004
+2018-08-22 13:55:56,373 process          L0367 DEBUG| [stdout] [    2.355524] microcode: CPU40: patch_level=0x08300004
+2018-08-22 13:55:56,373 process          L0367 DEBUG| [stdout] [    2.355542] microcode: CPU41: patch_level=0x08300004
+2018-08-22 13:55:56,373 process          L0367 DEBUG| [stdout] [    2.355559] microcode: CPU42: patch_level=0x08300004
+2018-08-22 13:55:56,373 process          L0367 DEBUG| [stdout] [    2.355576] microcode: CPU43: patch_level=0x08300004
+2018-08-22 13:55:56,373 process          L0367 DEBUG| [stdout] [    2.355593] microcode: CPU44: patch_level=0x08300004
+2018-08-22 13:55:56,373 process          L0367 DEBUG| [stdout] [    2.355609] microcode: CPU45: patch_level=0x08300004
+2018-08-22 13:55:56,373 process          L0367 DEBUG| [stdout] [    2.355627] microcode: CPU46: patch_level=0x08300004
+2018-08-22 13:55:56,374 process          L0367 DEBUG| [stdout] [    2.355643] microcode: CPU47: patch_level=0x08300004
+2018-08-22 13:55:56,374 process          L0367 DEBUG| [stdout] [    2.355662] microcode: CPU48: patch_level=0x08300004
+2018-08-22 13:55:56,374 process          L0367 DEBUG| [stdout] [    2.355678] microcode: CPU49: patch_level=0x08300004
+2018-08-22 13:55:56,374 process          L0367 DEBUG| [stdout] [    2.355695] microcode: CPU50: patch_level=0x08300004
+2018-08-22 13:55:56,374 process          L0367 DEBUG| [stdout] [    2.355711] microcode: CPU51: patch_level=0x08300004
+2018-08-22 13:55:56,374 process          L0367 DEBUG| [stdout] [    2.355730] microcode: CPU52: patch_level=0x08300004
+2018-08-22 13:55:56,375 process          L0367 DEBUG| [stdout] [    2.355746] microcode: CPU53: patch_level=0x08300004
+2018-08-22 13:55:56,375 process          L0367 DEBUG| [stdout] [    2.355763] microcode: CPU54: patch_level=0x08300004
+2018-08-22 13:55:56,375 process          L0367 DEBUG| [stdout] [    2.355779] microcode: CPU55: patch_level=0x08300004
+2018-08-22 13:55:56,375 process          L0367 DEBUG| [stdout] [    2.355799] microcode: CPU56: patch_level=0x08300004
+2018-08-22 13:55:56,375 process          L0367 DEBUG| [stdout] [    2.355815] microcode: CPU57: patch_level=0x08300004
+2018-08-22 13:55:56,375 process          L0367 DEBUG| [stdout] [    2.355832] microcode: CPU58: patch_level=0x08300004
+2018-08-22 13:55:56,375 process          L0367 DEBUG| [stdout] [    2.355848] microcode: CPU59: patch_level=0x08300004
+2018-08-22 13:55:56,376 process          L0367 DEBUG| [stdout] [    2.355867] microcode: CPU60: patch_level=0x08300004
+2018-08-22 13:55:56,376 process          L0367 DEBUG| [stdout] [    2.355883] microcode: CPU61: patch_level=0x08300004
+2018-08-22 13:55:56,376 process          L0367 DEBUG| [stdout] [    2.355900] microcode: CPU62: patch_level=0x08300004
+2018-08-22 13:55:56,376 process          L0367 DEBUG| [stdout] [    2.355916] microcode: CPU63: patch_level=0x08300004
+2018-08-22 13:55:56,376 process          L0367 DEBUG| [stdout] [    2.355967] microcode: Microcode Update Driver: v2.2.
+2018-08-22 13:55:56,376 process          L0367 DEBUG| [stdout] [    2.356168] registered taskstats version 1
+2018-08-22 13:55:56,377 process          L0367 DEBUG| [stdout] [    2.356181] Loading compiled-in X.509 certificates
+2018-08-22 13:55:56,377 process          L0367 DEBUG| [stdout] [    2.359836] Loaded X.509 cert 'Build time autogenerated kernel key: 00f0a0767554135d6054990ccdbde1196d824e31'
+2018-08-22 13:55:56,377 process          L0367 DEBUG| [stdout] [    2.359976] zswap: loaded using pool lzo/zbud
+2018-08-22 13:55:56,377 process          L0367 DEBUG| [stdout] [    2.366256] Key type big_key registered
+2018-08-22 13:55:56,377 process          L0367 DEBUG| [stdout] [    2.366262] Key type trusted registered
+2018-08-22 13:55:56,377 process          L0367 DEBUG| [stdout] [    2.368786] Key type encrypted registered
+2018-08-22 13:55:56,378 process          L0367 DEBUG| [stdout] [    2.368789] AppArmor: AppArmor sha1 policy hashing enabled
+2018-08-22 13:55:56,378 process          L0367 DEBUG| [stdout] [    2.368794] ima: No TPM chip found, activating TPM-bypass! (rc=-19)
+2018-08-22 13:55:56,378 process          L0367 DEBUG| [stdout] [    2.368799] ima: Allocated hash algorithm: sha1
+2018-08-22 13:55:56,378 process          L0367 DEBUG| [stdout] [    2.368835] evm: HMAC attrs: 0x1
+2018-08-22 13:55:56,378 process          L0367 DEBUG| [stdout] [    2.370199]   Magic number: 14:913:898
+2018-08-22 13:55:56,378 process          L0367 DEBUG| [stdout] [    2.370648] memory memory333: hash matches
+2018-08-22 13:55:56,378 process          L0367 DEBUG| [stdout] [    2.370865] rtc_cmos 00:01: setting system clock to 2018-08-22 18:53:25 UTC (1534964005)
+2018-08-22 13:55:56,379 process          L0367 DEBUG| [stdout] [    2.374351] acpi_cpufreq: overriding BIOS provided _PSD data
+2018-08-22 13:55:56,379 process          L0367 DEBUG| [stdout] [    2.379593] Unstable clock detected, switching default tracing clock to "global"
+2018-08-22 13:55:56,379 process          L0367 DEBUG| [stdout]                If you want to keep using the local clock, then add:
+2018-08-22 13:55:56,379 process          L0367 DEBUG| [stdout]                  "trace_clock=local"
+2018-08-22 13:55:56,379 process          L0367 DEBUG| [stdout]                on the kernel command line
+2018-08-22 13:55:56,379 process          L0367 DEBUG| [stdout] [    2.385684] Freeing unused kernel memory: 2436K
+2018-08-22 13:55:56,380 process          L0367 DEBUG| [stdout] [    2.428062] Write protecting the kernel read-only data: 20480k
+2018-08-22 13:55:56,380 process          L0367 DEBUG| [stdout] [    2.429423] Freeing unused kernel memory: 2008K
+2018-08-22 13:55:56,380 process          L0367 DEBUG| [stdout] [    2.438029] Freeing unused kernel memory: 1760K
+2018-08-22 13:55:56,380 process          L0367 DEBUG| [stdout] [    2.461884] x86/mm: Checked W+X mappings: passed, no W+X pages found.
+2018-08-22 13:55:56,380 process          L0367 DEBUG| [stdout] [    2.736066] piix4_smbus 0000:00:14.0: SMBus Host Controller at 0xb00, revision 0
+2018-08-22 13:55:56,380 process          L0367 DEBUG| [stdout] [    2.736070] piix4_smbus 0000:00:14.0: Using register 0x02 for SMBus port selection
+2018-08-22 13:55:56,380 process          L0367 DEBUG| [stdout] [    2.783930] [drm] Using P2A bridge for configuration
+2018-08-22 13:55:56,381 process          L0367 DEBUG| [stdout] [    2.783934] [drm] AST 2500 detected
+2018-08-22 13:55:56,381 process          L0367 DEBUG| [stdout] [    2.783941] [drm] Analog VGA only
+2018-08-22 13:55:56,381 process          L0367 DEBUG| [stdout] [    2.783960] [drm] dram MCLK=800 Mhz type=7 bus_width=16 size=04000000
+2018-08-22 13:55:56,381 process          L0367 DEBUG| [stdout] [    2.784130] [TTM] Zone  kernel: Available graphics memory: 32935216 kiB
+2018-08-22 13:55:56,381 process          L0367 DEBUG| [stdout] [    2.784131] [TTM] Zone   dma32: Available graphics memory: 2097152 kiB
+2018-08-22 13:55:56,381 process          L0367 DEBUG| [stdout] [    2.784132] [TTM] Initializing pool allocator
+2018-08-22 13:55:56,382 process          L0367 DEBUG| [stdout] [    2.784140] [TTM] Initializing DMA pool allocator
+2018-08-22 13:55:56,382 process          L0367 DEBUG| [stdout] [    2.869529] checking generic (84000000 1e0000) vs hw (84000000 4000000)
+2018-08-22 13:55:56,382 process          L0367 DEBUG| [stdout] [    2.869531] fb: switching to astdrmfb from EFI VGA
+2018-08-22 13:55:56,382 process          L0367 DEBUG| [stdout] [    2.869576] Console: switching to colour dummy device 80x25
+2018-08-22 13:55:56,382 process          L0367 DEBUG| [stdout] [    2.869807] fbcon: astdrmfb (fb0) is primary device
+2018-08-22 13:55:56,382 process          L0367 DEBUG| [stdout] [    2.901798] Console: switching to colour frame buffer device 160x64
+2018-08-22 13:55:56,383 process          L0367 DEBUG| [stdout] [    2.934409] ast 0000:c2:00.0: fb0: astdrmfb frame buffer device
+2018-08-22 13:55:56,383 process          L0367 DEBUG| [stdout] [    2.956041] [drm] Initialized ast 0.1.0 20120228 for 0000:c2:00.0 on minor 0
+2018-08-22 13:55:56,383 process          L0367 DEBUG| [stdout] [    3.408090] usb 2-1: new SuperSpeed USB device number 2 using xhci_hcd
+2018-08-22 13:55:56,383 process          L0367 DEBUG| [stdout] [    3.412340] usb 4-1: new SuperSpeed USB device number 2 using xhci_hcd
+2018-08-22 13:55:56,383 process          L0367 DEBUG| [stdout] [    3.428953] usb 2-1: New USB device found, idVendor=152d, idProduct=1561, bcdDevice= 2.04
+2018-08-22 13:55:56,383 process          L0367 DEBUG| [stdout] [    3.428956] usb 2-1: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+2018-08-22 13:55:56,383 process          L0367 DEBUG| [stdout] [    3.428959] usb 2-1: Product: SABRENT
+2018-08-22 13:55:56,384 process          L0367 DEBUG| [stdout] [    3.428961] usb 2-1: Manufacturer: SABRENT
+2018-08-22 13:55:56,384 process          L0367 DEBUG| [stdout] [    3.428963] usb 2-1: SerialNumber: DB9876543214E
+2018-08-22 13:55:56,384 process          L0367 DEBUG| [stdout] [    3.436101] usbcore: registered new interface driver usb-storage
+2018-08-22 13:55:56,384 process          L0367 DEBUG| [stdout] [    3.438770] usb 4-1: New USB device found, idVendor=0b95, idProduct=1790, bcdDevice= 1.00
+2018-08-22 13:55:56,384 process          L0367 DEBUG| [stdout] [    3.438774] usb 4-1: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+2018-08-22 13:55:56,384 process          L0367 DEBUG| [stdout] [    3.438776] usb 4-1: Product: AX88179
+2018-08-22 13:55:56,385 process          L0367 DEBUG| [stdout] [    3.438779] usb 4-1: Manufacturer: ASIX Elec. Corp.
+2018-08-22 13:55:56,385 process          L0367 DEBUG| [stdout] [    3.438781] usb 4-1: SerialNumber: 000050B6251167
+2018-08-22 13:55:56,385 process          L0367 DEBUG| [stdout] [    3.441154] scsi host0: uas
+2018-08-22 13:55:56,385 process          L0367 DEBUG| [stdout] [    3.441358] usbcore: registered new interface driver uas
+2018-08-22 13:55:56,385 process          L0367 DEBUG| [stdout] [    3.442679] scsi 0:0:0:0: Direct-Access     SABRENT                   0204 PQ: 0 ANSI: 6
+2018-08-22 13:55:56,385 process          L0367 DEBUG| [stdout] [    3.443675] sd 0:0:0:0: Attached scsi generic sg0 type 0
+2018-08-22 13:55:56,386 process          L0367 DEBUG| [stdout] [    3.444308] sd 0:0:0:0: [sda] 117231408 512-byte logical blocks: (60.0 GB/55.9 GiB)
+2018-08-22 13:55:56,386 process          L0367 DEBUG| [stdout] [    3.444312] sd 0:0:0:0: [sda] 4096-byte physical blocks
+2018-08-22 13:55:56,386 process          L0367 DEBUG| [stdout] [    3.444495] sd 0:0:0:0: [sda] Write Protect is off
+2018-08-22 13:55:56,386 process          L0367 DEBUG| [stdout] [    3.444498] sd 0:0:0:0: [sda] Mode Sense: 53 00 00 08
+2018-08-22 13:55:56,386 process          L0367 DEBUG| [stdout] [    3.444843] sd 0:0:0:0: [sda] Write cache: enabled, read cache: enabled, doesn't support DPO or FUA
+2018-08-22 13:55:56,386 process          L0367 DEBUG| [stdout] [    3.444980] xhci_hcd 0000:42:00.3: ERROR Transfer event for unknown stream ring slot 2 ep 6
+2018-08-22 13:55:56,386 process          L0367 DEBUG| [stdout] [    3.448973] xhci_hcd 0000:42:00.3: @00000000ffffc5c0 00000000 00000000 1b000000 02078001
+2018-08-22 13:55:56,387 process          L0367 DEBUG| [stdout] [    3.560040] usb 3-2: new low-speed USB device number 3 using xhci_hcd
+2018-08-22 13:55:56,387 process          L0367 DEBUG| [stdout] [    3.560050] usb 1-2: new high-speed USB device number 3 using xhci_hcd
+2018-08-22 13:55:56,387 process          L0367 DEBUG| [stdout] [    3.709055] usb 1-2: New USB device found, idVendor=0b1f, idProduct=03e8, bcdDevice= 0.00
+2018-08-22 13:55:56,387 process          L0367 DEBUG| [stdout] [    3.709059] usb 1-2: New USB device strings: Mfr=0, Product=0, SerialNumber=0
+2018-08-22 13:55:56,387 process          L0367 DEBUG| [stdout] [    3.725286] usb 3-2: New USB device found, idVendor=06f2, idProduct=0011, bcdDevice= 1.00
+2018-08-22 13:55:56,387 process          L0367 DEBUG| [stdout] [    3.725290] usb 3-2: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+2018-08-22 13:55:56,388 process          L0367 DEBUG| [stdout] [    3.725292] usb 3-2: Product: USB KVM Switch
+2018-08-22 13:55:56,388 process          L0367 DEBUG| [stdout] [    3.725295] usb 3-2: Manufacturer: Justcom Technology
+2018-08-22 13:55:56,388 process          L0367 DEBUG| [stdout] [    3.754723] hub 1-2:1.0: USB hub found
+2018-08-22 13:55:56,388 process          L0367 DEBUG| [stdout] [    3.755050] hub 1-2:1.0: 5 ports detected
+2018-08-22 13:55:56,388 process          L0367 DEBUG| [stdout] [    3.898896] hidraw: raw HID events driver (C) Jiri Kosina
+2018-08-22 13:55:56,388 process          L0367 DEBUG| [stdout] [    3.914398] usbcore: registered new interface driver usbhid
+2018-08-22 13:55:56,389 process          L0367 DEBUG| [stdout] [    3.914399] usbhid: USB HID core driver
+2018-08-22 13:55:56,389 process          L0367 DEBUG| [stdout] [    3.918693] input: Justcom Technology USB KVM Switch as /devices/pci0000:00/0000:00:08.1/0000:02:00.3/usb3/3-2/3-2:1.0/0003:06F2:0011.0001/input/input2
+2018-08-22 13:55:56,389 process          L0367 DEBUG| [stdout] [    3.976174] hid-generic 0003:06F2:0011.0001: input,hidraw0: USB HID v1.10 Keyboard [Justcom Technology USB KVM Switch] on usb-0000:02:00.3-2/input0
+2018-08-22 13:55:56,389 process          L0367 DEBUG| [stdout] [    3.976338] input: Justcom Technology USB KVM Switch as /devices/pci0000:00/0000:00:08.1/0000:02:00.3/usb3/3-2/3-2:1.1/0003:06F2:0011.0002/input/input3
+2018-08-22 13:55:56,389 process          L0367 DEBUG| [stdout] [    3.976503] hid-generic 0003:06F2:0011.0002: input,hidraw1: USB HID v1.10 Mouse [Justcom Technology USB KVM Switch] on usb-0000:02:00.3-2/input1
+2018-08-22 13:55:56,389 process          L0367 DEBUG| [stdout] [    3.989850]  sda: sda1 sda2
+2018-08-22 13:55:56,389 process          L0367 DEBUG| [stdout] [    3.991357] sd 0:0:0:0: [sda] Attached SCSI disk
+2018-08-22 13:55:56,390 process          L0367 DEBUG| [stdout] [    4.017476] random: fast init done
+2018-08-22 13:55:56,390 process          L0367 DEBUG| [stdout] [    4.044033] usb 1-2.2: new low-speed USB device number 4 using xhci_hcd
+2018-08-22 13:55:56,390 process          L0367 DEBUG| [stdout] [    4.157559] usb 1-2.2: New USB device found, idVendor=0b1f, idProduct=03e9, bcdDevice= 1.00
+2018-08-22 13:55:56,390 process          L0367 DEBUG| [stdout] [    4.157563] usb 1-2.2: New USB device strings: Mfr=0, Product=0, SerialNumber=0
+2018-08-22 13:55:56,390 process          L0367 DEBUG| [stdout] [    4.243040] input: HID 0b1f:03e9 as /devices/pci0000:40/0000:40:08.1/0000:42:00.3/usb1/1-2/1-2.2/1-2.2:1.0/0003:0B1F:03E9.0003/input/input4
+2018-08-22 13:55:56,390 process          L0367 DEBUG| [stdout] [    4.300216] hid-generic 0003:0B1F:03E9.0003: input,hidraw2: USB HID v1.00 Keyboard [HID 0b1f:03e9] on usb-0000:42:00.3-2.2/input0
+2018-08-22 13:55:56,391 process          L0367 DEBUG| [stdout] [    4.305829] input: HID 0b1f:03e9 as /devices/pci0000:40/0000:40:08.1/0000:42:00.3/usb1/1-2/1-2.2/1-2.2:1.1/0003:0B1F:03E9.0004/input/input5
+2018-08-22 13:55:56,391 process          L0367 DEBUG| [stdout] [    4.306016] hid-generic 0003:0B1F:03E9.0004: input,hidraw3: USB HID v1.00 Mouse [HID 0b1f:03e9] on usb-0000:42:00.3-2.2/input1
+2018-08-22 13:55:56,391 process          L0367 DEBUG| [stdout] [    4.726500] EXT4-fs (sda2): mounted filesystem with ordered data mode. Opts: (null)
+2018-08-22 13:55:56,391 process          L0367 DEBUG| [stdout] [    4.995481] systemd[1]: systemd 237 running in system mode. (+PAM +AUDIT +SELINUX +IMA +APPARMOR +SMACK +SYSVINIT +UTMP +LIBCRYPTSETUP +GCRYPT +GNUTLS +ACL +XZ +LZ4 +SECCOMP +BLKID +ELFUTILS +KMOD -IDN2 +IDN -PCRE2 default-hierarchy=hybrid)
+2018-08-22 13:55:56,391 process          L0367 DEBUG| [stdout] [    5.020630] systemd[1]: Detected architecture x86-64.
+2018-08-22 13:55:56,391 process          L0367 DEBUG| [stdout] [    5.052751] systemd[1]: Set hostname to <ethanolxb2abhost>.
+2018-08-22 13:55:56,392 process          L0367 DEBUG| [stdout] [    5.253924] random: systemd: uninitialized urandom read (16 bytes read)
+2018-08-22 13:55:56,392 process          L0367 DEBUG| [stdout] [    5.254464] systemd[1]: Set up automount Arbitrary Executable File Formats File System Automount Point.
+2018-08-22 13:55:56,392 process          L0367 DEBUG| [stdout] [    5.254529] random: systemd: uninitialized urandom read (16 bytes read)
+2018-08-22 13:55:56,392 process          L0367 DEBUG| [stdout] [    5.254852] systemd[1]: Created slice System Slice.
+2018-08-22 13:55:56,392 process          L0367 DEBUG| [stdout] [    5.254887] random: systemd: uninitialized urandom read (16 bytes read)
+2018-08-22 13:55:56,392 process          L0367 DEBUG| [stdout] [    5.254967] systemd[1]: Listening on fsck to fsckd communication Socket.
+2018-08-22 13:55:56,392 process          L0367 DEBUG| [stdout] [    5.255044] systemd[1]: Listening on LVM2 poll daemon socket.
+2018-08-22 13:55:56,393 process          L0367 DEBUG| [stdout] [    5.255128] systemd[1]: Listening on Journal Socket (/dev/log).
+2018-08-22 13:55:56,393 process          L0367 DEBUG| [stdout] [    5.255195] systemd[1]: Listening on udev Kernel Socket.
+2018-08-22 13:55:56,393 process          L0367 DEBUG| [stdout] [    5.255305] systemd[1]: Listening on /dev/initctl Compatibility Named Pipe.
+2018-08-22 13:55:56,393 process          L0367 DEBUG| [stdout] [    5.348842] EXT4-fs (sda2): re-mounted. Opts: errors=remount-ro
+2018-08-22 13:55:56,393 process          L0367 DEBUG| [stdout] [    5.516366] random: crng init done
+2018-08-22 13:55:56,393 process          L0367 DEBUG| [stdout] [    5.516371] random: 7 urandom warning(s) missed due to ratelimiting
+2018-08-22 13:55:56,394 process          L0367 DEBUG| [stdout] [    5.653322] lp: driver loaded but no devices found
+2018-08-22 13:55:56,394 process          L0367 DEBUG| [stdout] [    5.681080] ppdev: user-space parallel port driver
+2018-08-22 13:55:56,394 process          L0367 DEBUG| [stdout] [    5.722033] systemd-journald[770]: Received request to flush runtime journal from PID 1
+2018-08-22 13:55:56,394 process          L0367 DEBUG| [stdout] [    5.737355] systemd-journald[770]: File /var/log/journal/f5d03b29e3f0421db434b59a5d15645b/system.journal corrupted or uncleanly shut down, renaming and replacing.
+2018-08-22 13:55:56,394 process          L0367 DEBUG| [stdout] [    5.765806] Adding 2097148k swap on /swapfile.  Priority:-2 extents:6 across:2260988k FS
+2018-08-22 13:55:56,394 process          L0367 DEBUG| [stdout] [    5.839054] xhci_hcd 0000:42:00.3: ERROR Transfer event for unknown stream ring slot 2 ep 7
+2018-08-22 13:55:56,395 process          L0367 DEBUG| [stdout] [    5.840390] xhci_hcd 0000:42:00.3: @00000000ffffcf80 00000000 00000000 1b000000 02088000
+2018-08-22 13:55:56,395 process          L0367 DEBUG| [stdout] [    6.024771] ipmi message handler version 39.2
+2018-08-22 13:55:56,395 process          L0367 DEBUG| [stdout] [    6.036280] shpchp: Standard Hot Plug PCI Controller Driver version: 0.4
+2018-08-22 13:55:56,395 process          L0367 DEBUG| [stdout] [    6.041266] ipmi device interface
+2018-08-22 13:55:56,395 process          L0367 DEBUG| [stdout] [    6.054800] IPMI System Interface driver.
+2018-08-22 13:55:56,395 process          L0367 DEBUG| [stdout] [    6.055249] ipmi_si dmi-ipmi-si.0: ipmi_platform: probing via SMBIOS
+2018-08-22 13:55:56,395 process          L0367 DEBUG| [stdout] [    6.055253] ipmi_si: SMBIOS: io 0xca2 regsize 1 spacing 1 irq 0
+2018-08-22 13:55:56,396 process          L0367 DEBUG| [stdout] [    6.055255] ipmi_si: Adding SMBIOS-specified kcs state machine
+2018-08-22 13:55:56,396 process          L0367 DEBUG| [stdout] [    6.061595] ipmi_si IPI0001:00: ipmi_platform: probing via ACPI
+2018-08-22 13:55:56,396 process          L0367 DEBUG| [stdout] [    6.061663] ipmi_si IPI0001:00: [io  0x0ca2] regsize 1 spacing 1 irq 0
+2018-08-22 13:55:56,396 process          L0367 DEBUG| [stdout] [    6.061667] ipmi_si dmi-ipmi-si.0: Removing SMBIOS-specified kcs state machine in favor of ACPI
+2018-08-22 13:55:56,396 process          L0367 DEBUG| [stdout] [    6.124111] ipmi_si: Adding ACPI-specified kcs state machine
+2018-08-22 13:55:56,396 process          L0367 DEBUG| [stdout] [    6.126270] ipmi_si: Trying ACPI-specified kcs state machine at i/o address 0xca2, slave address 0x20, irq 0
+2018-08-22 13:55:56,397 process          L0367 DEBUG| [stdout] [    6.177125] ccp 0000:42:00.1: enabling device (0000 -> 0002)
+2018-08-22 13:55:56,397 process          L0367 DEBUG| [stdout] [    6.192754] ccp 0000:42:00.1: ccp enabled
+2018-08-22 13:55:56,397 process          L0367 DEBUG| [stdout] [    6.193758] ccp 0000:42:00.1: psp enabled
+2018-08-22 13:55:56,397 process          L0367 DEBUG| [stdout] [    6.193762] ccp 0000:42:00.1: enabled
+2018-08-22 13:55:56,397 process          L0367 DEBUG| [stdout] [    6.295034] cryptd: max_cpu_qlen set to 1000
+2018-08-22 13:55:56,397 process          L0367 DEBUG| [stdout] [    6.352350] AVX2 version of gcm_enc/dec engaged.
+2018-08-22 13:55:56,398 process          L0367 DEBUG| [stdout] [    6.352353] AES CTR mode by8 optimization enabled
+2018-08-22 13:55:56,398 process          L0367 DEBUG| [stdout] [    6.469091] ipmi_si IPI0001:00: Found new BMC (man_id: 0x00b009, prod_id: 0xfefe, dev_id: 0x22)
+2018-08-22 13:55:56,398 process          L0367 DEBUG| [stdout] [    6.525722] ipmi_si IPI0001:00: IPMI kcs interface initialized
+2018-08-22 13:55:56,398 process          L0367 DEBUG| [stdout] [    6.539217] IPMI SSIF Interface driver
+2018-08-22 13:55:56,398 process          L0367 DEBUG| [stdout] [    6.568222] snd_hda_intel 0000:42:00.4: enabling device (0000 -> 0002)
+2018-08-22 13:55:56,398 process          L0367 DEBUG| [stdout] [    6.573296] snd_hda_intel 0000:42:00.4: no codecs found!
+2018-08-22 13:55:56,398 process          L0367 DEBUG| [stdout] [    7.062164] ax88179_178a 4-1:1.0 eth0: register 'ax88179_178a' at usb-0000:02:00.3-1, ASIX AX88179 USB 3.0 Gigabit Ethernet, 00:50:b6:25:11:67
+2018-08-22 13:55:56,399 process          L0367 DEBUG| [stdout] [    7.062221] usbcore: registered new interface driver ax88179_178a
+2018-08-22 13:55:56,399 process          L0367 DEBUG| [stdout] [    7.587149] openvswitch: Open vSwitch switching datapath
+2018-08-22 13:55:56,399 process          L0367 DEBUG| [stdout] [  127.080390] bridge: filtering via arp/ip/ip6tables is no longer available by default. Update your scripts to load br_netfilter if you need this.
+2018-08-22 13:55:56,399 process          L0367 DEBUG| [stdout] [  127.086868] br0: port 1(eth0) entered blocking state
+2018-08-22 13:55:56,399 process          L0367 DEBUG| [stdout] [  127.086872] br0: port 1(eth0) entered disabled state
+2018-08-22 13:55:56,399 process          L0367 DEBUG| [stdout] [  127.087273] device eth0 entered promiscuous mode
+2018-08-22 13:55:56,400 process          L0367 DEBUG| [stdout] [  127.417918] IPv6: ADDRCONF(NETDEV_UP): eth0: link is not ready
+2018-08-22 13:55:56,400 process          L0367 DEBUG| [stdout] [  127.445530] IPv6: ADDRCONF(NETDEV_UP): br0: link is not ready
+2018-08-22 13:55:56,400 process          L0367 DEBUG| [stdout] [  130.444223] ax88179_178a 4-1:1.0 eth0: ax88179 - Link status is: 1
+2018-08-22 13:55:56,400 process          L0367 DEBUG| [stdout] [  130.449005] IPv6: ADDRCONF(NETDEV_CHANGE): eth0: link becomes ready
+2018-08-22 13:55:56,400 process          L0367 DEBUG| [stdout] [  130.450390] br0: port 1(eth0) entered blocking state
+2018-08-22 13:55:56,400 process          L0367 DEBUG| [stdout] [  130.450393] br0: port 1(eth0) entered forwarding state
+2018-08-22 13:55:56,401 process          L0367 DEBUG| [stdout] [  130.450546] IPv6: ADDRCONF(NETDEV_CHANGE): br0: link becomes ready
+2018-08-22 13:55:56,401 process          L0367 DEBUG| [stdout] [  150.432811] systemd-journald[770]: File /var/log/journal/f5d03b29e3f0421db434b59a5d15645b/user-1001.journal corrupted or uncleanly shut down, renaming and replacing.
+2018-08-22 13:55:56,403 process          L0523 INFO | Running 'sysbench --test=threads --thread-locks=1 --num-threads=120 run'
+2018-08-22 13:55:56,446 process          L0367 DEBUG| [stderr] WARNING: the --test option is deprecated. You can pass a script name or path on the command line without any options.
+2018-08-22 13:55:56,447 process          L0367 DEBUG| [stdout] WARNING: --num-threads is deprecated, use --threads instead
+2018-08-22 13:55:56,447 process          L0367 DEBUG| [stdout] sysbench 1.0.11 (using system LuaJIT 2.1.0-beta3)
+2018-08-22 13:55:56,448 process          L0367 DEBUG| [stdout] 
+2018-08-22 13:55:56,448 process          L0367 DEBUG| [stdout] Running the test with following options:
+2018-08-22 13:55:56,448 process          L0367 DEBUG| [stdout] Number of threads: 120
+2018-08-22 13:55:56,448 process          L0367 DEBUG| [stdout] Initializing random number generator from current time
+2018-08-22 13:55:56,448 process          L0367 DEBUG| [stdout] 
+2018-08-22 13:55:56,448 process          L0367 DEBUG| [stdout] 
+2018-08-22 13:55:56,448 process          L0367 DEBUG| [stdout] Initializing worker threads...
+2018-08-22 13:55:56,449 process          L0367 DEBUG| [stdout] 
+2018-08-22 13:55:56,451 process          L0367 DEBUG| [stdout] Threads started!
+2018-08-22 13:55:56,452 process          L0367 DEBUG| [stdout] 
+2018-08-22 13:56:06,127 process          L0367 DEBUG| [stdout] 
+2018-08-22 13:56:06,128 process          L0367 DEBUG| [stdout] General statistics:
+2018-08-22 13:56:06,128 process          L0367 DEBUG| [stdout]     total time:                          10.1530s
+2018-08-22 13:56:06,128 process          L0367 DEBUG| [stdout]     total number of events:              3371
+2018-08-22 13:56:06,128 process          L0367 DEBUG| [stdout] 
+2018-08-22 13:56:06,129 process          L0367 DEBUG| [stdout] Latency (ms):
+2018-08-22 13:56:06,129 process          L0367 DEBUG| [stdout]          min:                                164.09
+2018-08-22 13:56:06,129 process          L0367 DEBUG| [stdout]          avg:                                360.00
+2018-08-22 13:56:06,129 process          L0367 DEBUG| [stdout]          max:                                436.19
+2018-08-22 13:56:06,129 process          L0367 DEBUG| [stdout]          95th percentile:                    397.39
+2018-08-22 13:56:06,129 process          L0367 DEBUG| [stdout]          sum:                            1213566.71
+2018-08-22 13:56:06,130 process          L0367 DEBUG| [stdout] 
+2018-08-22 13:56:06,130 process          L0367 DEBUG| [stdout] Threads fairness:
+2018-08-22 13:56:06,130 process          L0367 DEBUG| [stdout]     events (avg/stddev):           28.0917/0.34
+2018-08-22 13:56:06,130 process          L0367 DEBUG| [stdout]     execution time (avg/stddev):   10.1131/0.04
+2018-08-22 13:56:06,130 process          L0367 DEBUG| [stdout] 
+2018-08-22 13:56:06,132 process          L0605 INFO | Command 'sysbench --test=threads --thread-locks=1 --num-threads=120 run' finished with 0 after 9.7197599411s
+2018-08-22 13:56:06,135 process          L0523 INFO | Running 'dmesg'
+2018-08-22 13:56:06,144 process          L0605 INFO | Command 'dmesg' finished with 0 after 0.00128889083862s
+2018-08-22 13:56:06,145 test             L0286 DEBUG| DATA (filename=output.expected) => NOT FOUND (data sources: variant, test, file)
+2018-08-22 13:56:06,146 test             L0286 DEBUG| DATA (filename=stdout.expected) => NOT FOUND (data sources: variant, test, file)
+2018-08-22 13:56:06,146 test             L0286 DEBUG| DATA (filename=stderr.expected) => NOT FOUND (data sources: variant, test, file)
+2018-08-22 13:56:06,253 test             L1017 INFO | PASS 1-./avocado-misc-tests/generic/sysbench.py:Sysbench.test;additional_params-cpu-max-max-request-max-time-min-tests-threads-types-cbf1
+2018-08-22 13:56:06,254 test             L1000 INFO | 
+2018-08-22 13:56:06,281 job              L0483 INFO | Test results available in /home/jenkins/avocado/job-results/job-2018-08-22T13.55-13651e1

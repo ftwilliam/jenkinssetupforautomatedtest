@@ -42,8 +42,7 @@ echo &gt;&gt; plot.csv
 # Kernel version to use.
 KERNVER=${KERNVER:-$(echo ${JOB_BASE_NAME} | grep -oP &apos;(?&lt;=\.)v.+\..+(?=\.)&apos; || :;)}
 
-TIMEOUT=3600
-ITERATIONS=4
+TIMEOUT=1800
 
 # Run test on each resource.
 for R in ${RESOURCES}; do
@@ -67,8 +66,8 @@ for R in ${RESOURCES}; do
 		if [ ${PIPESTATUS[0]} -eq 0 ]; then
 			AVOCADO_LOG_PATH=$(cat ${R}.ssh.log | fgrep &apos;JOB LOG&apos; | grep -oP &apos;(?&lt;=: ).+$&apos;)
 			scp jenkins@${R}:${AVOCADO_LOG_PATH} ${R}.avocado.log
-            echo $(cat ${R}.avocado.log | fgrep -m1 &apos;Throughput &apos; | grep -oP &apos;(?&lt;=Throughput )[0-9.]+&apos;) /${ITERATIONS} | bc -l
-			plotval=$(echo $(cat ${R}.avocado.log | fgrep -m1 &apos;Throughput &apos; | grep -oP &apos;(?&lt;=Throughput )[0-9.]+&apos;) /${ITERATIONS} | bc -l)
+            echo $(cat ${R}.avocado.log | fgrep -m1 &apos;Throughput &apos; | grep -oP &apos;(?&lt;=Throughput )[0-9.]+&apos;) | bc -l
+			plotval=$(echo $(cat ${R}.avocado.log | fgrep -m1 &apos;Throughput &apos; | grep -oP &apos;(?&lt;=Throughput )[0-9.]+&apos;) | bc -l)
 			# Average with previous value if available,
 			# in an attempt to remove noise from plots.
 			if [ -f ${R}.prevplotval ]; then

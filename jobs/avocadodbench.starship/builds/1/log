@@ -22,3 +22,51 @@ Building in workspace /var/lib/jenkins/workspace/avocadodbench.starship
 + wait
 + cd /var/lib/jenkins
 + ./rebootresource.sh jenkins@ethanolxb2abhost
+++ ssh -q jenkins@ethanolxb2abhost 'uname -r'
++ echo 'ethanolxb2abhost: 4.17.0-amdsos-build6+'
++ timeout -sKILL 3600 ssh -q jenkins@ethanolxb2abhost
++ '[' 0 -eq 0 ']'
+++ cat ethanolxb2abhost.ssh.log
+++ fgrep 'JOB LOG'
+++ grep -oP '(?<=: ).+$'
++ AVOCADO_LOG_PATH=/home/jenkins/avocado/job-results/job-2018-08-21T13.45-d99d4ca/job.log
++ scp jenkins@ethanolxb2abhost:/home/jenkins/avocado/job-results/job-2018-08-21T13.45-d99d4ca/job.log ethanolxb2abhost.avocado.log
++ bc -l
+++ cat ethanolxb2abhost.avocado.log
+++ fgrep -m1 'Throughput '
+++ grep -oP '(?<=Throughput )[0-9.]+'
++ echo 6665.85 /4
+1666.46250000000000000000
+++ bc -l
++++ cat ethanolxb2abhost.avocado.log
++++ fgrep -m1 'Throughput '
++++ grep -oP '(?<=Throughput )[0-9.]+'
+++ echo 6665.85 /4
++ plotval=1666.46250000000000000000
++ '[' -f ethanolxb2abhost.prevplotval ']'
+++ bc -l
++++ cat ethanolxb2abhost.prevplotval
+++ echo '(1650.08218750000000000000+1666.46250000000000000000)/2'
++ plotval=1658.27234375000000000000
++ echo -n 1658.27234375000000000000
++ echo -n 1658.27234375000000000000
++ echo -n 'Kernel Release: '
++ for R in ${RESOURCES}
++ '[' -f ethanolxb2abhost.kernelrelease ']'
+++ cat ethanolxb2abhost.kernelrelease
++ echo -n 'ethanolxb2abhost: 4.17.0-amdsos-build6+, '
++ truncate --size=-2 kernelreleases
+++ cat kernelreleases
++ echo '[Kernel' Release: ethanolxb2abhost: '4.17.0-amdsos-build6+]'
+[Kernel Release: ethanolxb2abhost: 4.17.0-amdsos-build6+]
++ for R in ${RESOURCES}
+++ cat ethanolxb2abhost.plotval
++ echo -n 1658.27234375000000000000,
++ truncate --size=-1 plot.csv
++ echo
+Archiving artifacts
+Recording plot data
+[description-setter] Description set: ethanolxb2abhost: 4.17.0-amdsos-build6+
+[lockable-resources] released lock on [ethanolxb2abhost]
+Triggering a new build of [8mha:////4EoQXCCvCL1ZAUvbxERBMTGFvdw8yZlTD18gs9e3mwThAAAAqB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzxEgZZ/az8JP3EsvzkxJT8tEygouISveKSxKLijMwCfQAg0vi80gAAAA==[0mavocadofiotest.starship
+Finished: SUCCESS

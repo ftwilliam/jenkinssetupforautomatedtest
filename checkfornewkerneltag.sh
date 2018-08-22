@@ -13,6 +13,9 @@ if [ $# -eq 0 ]; then
 	exit $?
 fi
 
+# Remove any installed *-jenkins package.
+sudo apt remove -y *-jenkins
+
 mkdir -p kernel
 
 cd kernel

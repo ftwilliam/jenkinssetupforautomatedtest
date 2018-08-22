@@ -23,6 +23,8 @@ ssh -q \
 		# checkfornewkerneltag.sh is installed.
 		scp checkfornewkerneltag.sh jenkins@$1:
 
+		scp checkfornewkerneldeb.sh jenkins@$1:
+
 		scp checkfornewqemutag.sh jenkins@$1:
 
 		exit

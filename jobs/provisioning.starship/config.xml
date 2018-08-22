@@ -24,6 +24,9 @@
       <command># Get list of resources locked by this build.
 RESOURCES=${RESOURCES:-$(cd ${JENKINS_HOME} &amp;&amp; ./resourceslockedby.py ${JOB_BASE_NAME}#${BUILD_NUMBER})}
 
+# Kernel git repository to use:
+#KERNELREPO=${KERNELREPO:-&quot;https://github.com/torvalds/linux.git&quot;}
+
 # Kernel version to use.
 KERNVER=${KERNVER:-$(echo ${JOB_BASE_NAME} | grep -oP &apos;(?&lt;=\.)v.+\..+(?=\.)&apos; || :;)}
 

@@ -3,7 +3,7 @@ Started by user [8mha:////4P5oqbiDCv/29AmYake8E+zpu/gy/ryniUjftzEVtlv7AAAAmB+LC
 Building in workspace /var/lib/jenkins/workspace/avocadoperfbench.upstream.recurrent
 [WS-CLEANUP] Deleting project workspace...
 [WS-CLEANUP] Done
-[avocadoperfbench.upstream.recurrent] $ /bin/sh -xe /tmp/jenkins2215067526044951574.sh
+[avocadoperfbench.upstream.recurrent] $ /bin/sh -xe /tmp/jenkins9020171245881884527.sh
 ++ cd /var/lib/jenkins
 ++ ./resourceslockedby.py avocadoperfbench.upstream.recurrent#1
 + RESOURCES=diesel8a87host
@@ -16,33 +16,29 @@ Building in workspace /var/lib/jenkins/workspace/avocadoperfbench.upstream.recur
 ++ grep -oP '(?<=\.)v.+\..+(?=\.)'
 ++ :
 + KERNVER=
-+ TIMEOUT=1800
-+ ITERATIONS=64
++ TIMEOUT=3600
++ ITERATIONS=128
 + for R in ${RESOURCES}
 + wait
 + ssh -q jenkins@diesel8a87host './checkfornewkerneltag.sh https://github.com/torvalds/linux.git'
 ++ ssh -q jenkins@diesel8a87host 'uname -r'
 + echo 'diesel8a87host: 4.17.0-amdsos-build6+'
-+ timeout -sKILL 1800 ssh -q jenkins@diesel8a87host
++ timeout -sKILL 3600 ssh -q jenkins@diesel8a87host
 + '[' 0 -eq 0 ']'
 ++ cat diesel8a87host.ssh.log
 ++ fgrep 'JOB LOG'
 ++ grep -oP '(?<=: ).+$'
-+ AVOCADO_LOG_PATH=/home/jenkins/avocado/job-results/job-2018-08-21T12.11-140bfc1/job.log
-+ scp jenkins@diesel8a87host:/home/jenkins/avocado/job-results/job-2018-08-21T12.11-140bfc1/job.log diesel8a87host.avocado.log
++ AVOCADO_LOG_PATH=/home/jenkins/avocado/job-results/job-2018-08-22T10.41-57310b1/job.log
++ scp jenkins@diesel8a87host:/home/jenkins/avocado/job-results/job-2018-08-22T10.41-57310b1/job.log diesel8a87host.avocado.log
 ++ bc -l
 +++ cat diesel8a87host.avocado.log
 +++ fgrep 'Time Taken:'
 +++ grep -oP '(?<=Time Taken:)[0-9.]+$'
-++ echo 210.005 /64
-+ plotval=3.28132812500000000000
+++ echo 403.682 /128
++ plotval=3.15376562500000000000
 + '[' -f diesel8a87host.prevplotval ']'
-++ bc -l
-+++ cat diesel8a87host.prevplotval
-++ echo '(2.27480304828479721412+3.28132812500000000000)/2'
-+ plotval=2.77806558664239860706
-+ echo -n 2.77806558664239860706
-+ echo -n 2.77806558664239860706
++ echo -n 3.15376562500000000000
++ echo -n 3.15376562500000000000
 + echo -n 'Kernel Release: '
 + for R in ${RESOURCES}
 + '[' -f diesel8a87host.kernelrelease ']'
@@ -54,7 +50,7 @@ Building in workspace /var/lib/jenkins/workspace/avocadoperfbench.upstream.recur
 [Kernel Release: diesel8a87host: 4.17.0-amdsos-build6+]
 + for R in ${RESOURCES}
 ++ cat diesel8a87host.plotval
-+ echo -n 2.77806558664239860706,
++ echo -n 3.15376562500000000000,
 + truncate --size=-1 plot.csv
 + echo
 Archiving artifacts

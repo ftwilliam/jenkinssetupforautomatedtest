@@ -4,7 +4,7 @@
   <description></description>
   <keepDependencies>false</keepDependencies>
   <properties>
-    <org.jenkins.plugins.lockableresources.RequiredResourcesProperty plugin="lockable-resources@2.2">
+    <org.jenkins.plugins.lockableresources.RequiredResourcesProperty plugin="lockable-resources@2.3">
       <resourceNames>diesel8a87host</resourceNames>
     </org.jenkins.plugins.lockableresources.RequiredResourcesProperty>
   </properties>
@@ -24,6 +24,9 @@
       <command># Get list of resources locked by this build.
 RESOURCES=${RESOURCES:-$(cd ${JENKINS_HOME} &amp;&amp; ./resourceslockedby.py ${JOB_BASE_NAME}#${BUILD_NUMBER})}
 
+# Kernel git repository to use:
+KERNELREPO=${KERNELREPO:-&quot;https://github.com/torvalds/linux.git&quot;}
+
 # Kernel version to use.
 KERNVER=${KERNVER:-$(echo ${JOB_BASE_NAME} | grep -oP &apos;(?&lt;=\.)v.+\..+(?=\.)&apos; || :;)}
 
@@ -41,7 +44,7 @@ for R in ${RESOURCES}; do
 			continue
 		fi
 		# Check if a new kernel need to be installed.
-		if ssh -q jenkins@${R} &apos;./checkfornewkerneltag.sh https://github.com/torvalds/linux.git&apos; ${KERNVER} &amp;&gt; ${R}.checkfornewkerneltag.log; then
+		if ssh -q jenkins@${R} ./checkfornewkerneltag.sh ${KERNELREPO} ${KERNVER} &amp;&gt; ${R}.checkfornewkerneltag.log; then
 			# Get the version built.
             kernbuilt=$(ssh -q jenkins@${R} ls kernel/linux-image* | grep -oP &quot;(?&lt;=linux-image-).+(?=-jenkins_)&quot;)
 			# Reboot resource into kernel version built.

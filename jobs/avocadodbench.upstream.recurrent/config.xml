@@ -32,11 +32,13 @@ done
 truncate --size=-1 plot.csv
 echo &gt;&gt; plot.csv
 
+# Kernel git repository to use:
+KERNELREPO=${KERNELREPO:-&quot;https://github.com/torvalds/linux.git&quot;}
+
 # Kernel version to use.
 KERNVER=${KERNVER:-$(echo ${JOB_BASE_NAME} | grep -oP &apos;(?&lt;=\.)v.+\..+(?=\.)&apos; || :;)}
 
-TIMEOUT=1800
-ITERATIONS=64
+TIMEOUT=3600
 
 # Run test on each resource.
 for R in ${RESOURCES}; do
@@ -50,7 +52,7 @@ for R in ${RESOURCES}; do
 			continue
 		fi
 		# Check if a new kernel need to be installed.
-		if ssh -q jenkins@${R} &apos;./checkfornewkerneltag.sh https://github.com/torvalds/linux.git&apos; ${KERNVER} &amp;&gt; ${R}.checkfornewkerneltag.log; then
+		if ssh -q jenkins@${R} ./checkfornewkerneltag.sh ${KERNELREPO} ${KERNVER} &amp;&gt; ${R}.checkfornewkerneltag.log; then
 			# Get the version built.
             kernbuilt=$(ssh -q jenkins@${R} ls kernel/linux-image* | grep -oP &quot;(?&lt;=linux-image-).+(?=-jenkins_)&quot;)
 			# Reboot resource into kernel version built.
@@ -70,8 +72,8 @@ for R in ${RESOURCES}; do
 		if [ ${PIPESTATUS[0]} -eq 0 ]; then
 			AVOCADO_LOG_PATH=$(cat ${R}.ssh.log | fgrep &apos;JOB LOG&apos; | grep -oP &apos;(?&lt;=: ).+$&apos;)
 			scp jenkins@${R}:${AVOCADO_LOG_PATH} ${R}.avocado.log
-            echo $(cat ${R}.avocado.log | fgrep -m1 &apos;Throughput &apos; | grep -oP &apos;(?&lt;=Throughput )[0-9.]+&apos;) /${ITERATIONS} | bc -l
-			plotval=$(echo $(cat ${R}.avocado.log | fgrep -m1 &apos;Throughput &apos; | grep -oP &apos;(?&lt;=Throughput )[0-9.]+&apos;) /${ITERATIONS} | bc -l)
+            echo $(cat ${R}.avocado.log | fgrep -m1 &apos;Throughput &apos; | grep -oP &apos;(?&lt;=Throughput )[0-9.]+&apos;) | bc -l
+			plotval=$(echo $(cat ${R}.avocado.log | fgrep -m1 &apos;Throughput &apos; | grep -oP &apos;(?&lt;=Throughput )[0-9.]+&apos;) | bc -l)
 			# Average with previous value if available,
 			# in an attempt to remove noise from plots.
 			if [ -f ${R}.prevplotval ]; then

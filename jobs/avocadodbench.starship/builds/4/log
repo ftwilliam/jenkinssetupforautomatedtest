@@ -1,0 +1,74 @@
+Started by upstream project "[8mha:////4Gg7dKudIWPd5rlxteWhcH45UVf/qxiN8X3getNAlqg6AAAAph+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzREgZp/az8JP2CovyyzOLM/DygGXrFJYlFxRmZBfoACCgvVNAAAAA=[0mprovisioning.starship" build number [8mha:////4LSXpCqUM6NOnUGLJ3KZewyuHUf9u5PR2LQ8zApyWfUlAAAAph+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLQIwSBhn9rPwk/YKi/LLM4sz8PKAZesUliUXFGZkF+kYAaWTvitEAAAA=[0m2
+originally caused by:
+ Started by timer
+[lockable-resources] acquired lock on [ethanolxb2abhost]
+Building in workspace /var/lib/jenkins/workspace/avocadodbench.starship
+[WS-CLEANUP] Deleting project workspace...
+[WS-CLEANUP] Done
+[avocadodbench.starship] $ /bin/sh -xe /tmp/jenkins4351183110054459776.sh
+++ cd /var/lib/jenkins
+++ ./resourceslockedby.py avocadodbench.starship#4
++ RESOURCES=ethanolxb2abhost
++ :
++ for R in ${RESOURCES}
++ echo -n '"ethanolxb2abhost",'
++ truncate --size=-1 plot.csv
++ echo
+++ echo avocadodbench.starship
+++ grep -oP '(?<=\.)v.+\..+(?=\.)'
+++ :
++ KERNVER=
++ TIMEOUT=3600
++ ITERATIONS=4
++ for R in ${RESOURCES}
++ wait
++ cd /var/lib/jenkins
++ ./rebootresource.sh jenkins@ethanolxb2abhost
+++ ssh -q jenkins@ethanolxb2abhost 'uname -r'
++ echo 'ethanolxb2abhost: 4.17.0-amdsos-build6+'
++ timeout -sKILL 3600 ssh -q jenkins@ethanolxb2abhost
++ '[' 0 -eq 0 ']'
+++ cat ethanolxb2abhost.ssh.log
+++ fgrep 'JOB LOG'
+++ grep -oP '(?<=: ).+$'
++ AVOCADO_LOG_PATH=/home/jenkins/avocado/job-results/job-2018-08-22T12.25-f745e83/job.log
++ scp jenkins@ethanolxb2abhost:/home/jenkins/avocado/job-results/job-2018-08-22T12.25-f745e83/job.log ethanolxb2abhost.avocado.log
++ bc -l
+++ cat ethanolxb2abhost.avocado.log
+++ fgrep -m1 'Throughput '
+++ grep -oP '(?<=Throughput )[0-9.]+'
++ echo 6620.38 /4
+1655.09500000000000000000
+++ bc -l
++++ cat ethanolxb2abhost.avocado.log
++++ fgrep -m1 'Throughput '
++++ grep -oP '(?<=Throughput )[0-9.]+'
+++ echo 6620.38 /4
++ plotval=1655.09500000000000000000
++ '[' -f ethanolxb2abhost.prevplotval ']'
+++ bc -l
++++ cat ethanolxb2abhost.prevplotval
+++ echo '(1655.88558593750000000000+1655.09500000000000000000)/2'
++ plotval=1655.49029296875000000000
++ echo -n 1655.49029296875000000000
++ echo -n 1655.49029296875000000000
++ echo -n 'Kernel Release: '
++ for R in ${RESOURCES}
++ '[' -f ethanolxb2abhost.kernelrelease ']'
+++ cat ethanolxb2abhost.kernelrelease
++ echo -n 'ethanolxb2abhost: 4.17.0-amdsos-build6+, '
++ truncate --size=-2 kernelreleases
+++ cat kernelreleases
++ echo '[Kernel' Release: ethanolxb2abhost: '4.17.0-amdsos-build6+]'
+[Kernel Release: ethanolxb2abhost: 4.17.0-amdsos-build6+]
++ for R in ${RESOURCES}
+++ cat ethanolxb2abhost.plotval
++ echo -n 1655.49029296875000000000,
++ truncate --size=-1 plot.csv
++ echo
+Archiving artifacts
+Recording plot data
+[description-setter] Description set: ethanolxb2abhost: 4.17.0-amdsos-build6+
+[lockable-resources] released lock on [ethanolxb2abhost]
+Triggering a new build of [8mha:////4EoQXCCvCL1ZAUvbxERBMTGFvdw8yZlTD18gs9e3mwThAAAAqB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzxEgZZ/az8JP3EsvzkxJT8tEygouISveKSxKLijMwCfQAg0vi80gAAAA==[0mavocadofiotest.starship
+Finished: SUCCESS
