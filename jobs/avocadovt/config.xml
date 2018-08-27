@@ -4,7 +4,7 @@
   <description></description>
   <keepDependencies>false</keepDependencies>
   <properties>
-    <org.jenkins.plugins.lockableresources.RequiredResourcesProperty plugin="lockable-resources@2.2"/>
+    <org.jenkins.plugins.lockableresources.RequiredResourcesProperty plugin="lockable-resources@2.3"/>
     <hudson.model.ParametersDefinitionProperty>
       <parameterDefinitions>
         <hudson.model.StringParameterDefinition>
@@ -66,6 +66,9 @@ QEMUTAG=${QEMUTAG:-&quot;v2.11.1&quot;}
 
 TIMEOUT=1800
 
+# Remove failure flags if any.
+rm -rf *.failed
+
 # Run test on each resource.
 for R in ${RESOURCES}; do
 	# In order to execute in parallel, each
@@ -73,6 +76,7 @@ for R in ${RESOURCES}; do
 	(
 		# Insure resource provisioned for test.
 		if ! (cd ${JENKINS_HOME} &amp;&amp; ./checkresourceprovisioned.sh ${R}) &amp;&gt; ${R}.checkresourceprovisioned.log; then
+			touch ${R}.failed
 			# Continue on to the next resource if
 			# the provision-check fail on this resource.
 			continue
@@ -88,11 +92,14 @@ for R in ${RESOURCES}; do
 		# Check if a new qemu need to be installed.
 		ssh -q jenkins@${R} &quot;./checkfornewqemutag.sh ${QEMUREPO}&quot; ${QEMUTAG} &amp;&gt; ${R}.checkfornewqemutag.log || :;
 		# Run test.
-        timeout -sKILL ${TIMEOUT} ssh -q jenkins@${R} sudo avocado --config avocado.conf.d/vt-migration.conf run type_specific.io-github-autotest-qemu.migrate.default.tcp &amp;&gt; ${R}.ssh.log || :;
-        #if [ ${PIPESTATUS[0]} -eq 0 ]; then
+		timeout -sKILL ${TIMEOUT} ssh -q jenkins@${R} &amp;&gt; ${R}.ssh.log &lt;&lt;-EOF || touch ${R}.failed
+			set -e
+			sudo avocado --config avocado.conf.d/vt-migration.conf run type_specific.io-github-autotest-qemu.migrate.default.tcp
+		EOF
+		if [ ! -e ${R}.failed ]; then
 			AVOCADO_LOG_PATH=$(cat ${R}.ssh.log | fgrep &apos;JOB LOG&apos; | grep -oP &apos;(?&lt;=: ).+$&apos;)
 			scp jenkins@${R}:${AVOCADO_LOG_PATH} ${R}.avocado.log
-		#fi
+		fi
 	) &amp;
 done
 
@@ -109,6 +116,10 @@ for R in ${RESOURCES}; do
 done
 truncate --size=-2 kernelreleases
 echo [$(cat kernelreleases)]
+
+# This is the last command so as
+# to be the script exit status.
+test ! -e *.failed
 </command>
     </hudson.tasks.Shell>
   </builders>

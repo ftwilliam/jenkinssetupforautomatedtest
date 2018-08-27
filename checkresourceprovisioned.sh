@@ -46,6 +46,8 @@ ssh \
 ssh root@$1 <<-EOF
 	set -e
 
+	apt update
+
 	# Install necessary applications.
 	apt -y install build-essential libssl-dev libelf-dev git bison ifupdown net-tools cpuid flex rpm htop
 	apt -y install lib32z1 lib32z1-dev

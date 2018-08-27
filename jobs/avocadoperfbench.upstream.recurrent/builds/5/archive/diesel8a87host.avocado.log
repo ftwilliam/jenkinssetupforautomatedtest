@@ -1,0 +1,785 @@
+2018-08-25 07:03:31,415 extension        L0189 DEBUG| found extension EntryPoint.parse('journal = avocado.plugins.journal:JournalResult')
+2018-08-25 07:03:31,415 extension        L0189 DEBUG| found extension EntryPoint.parse('tap = avocado.plugins.tap:TAPResult')
+2018-08-25 07:03:31,416 extension        L0189 DEBUG| found extension EntryPoint.parse('human = avocado.plugins.human:Human')
+2018-08-25 07:03:31,427 extension        L0189 DEBUG| found extension EntryPoint.parse('vt-joblock = avocado_vt.plugins.vt_joblock:VTJobLock')
+2018-08-25 07:03:31,437 extension        L0189 DEBUG| found extension EntryPoint.parse('teststmpdir = avocado.plugins.teststmpdir:TestsTmpDir')
+2018-08-25 07:03:31,444 extension        L0189 DEBUG| found extension EntryPoint.parse('jobscripts = avocado.plugins.jobscripts:JobScripts')
+2018-08-25 07:03:31,452 extension        L0189 DEBUG| found extension EntryPoint.parse('human = avocado.plugins.human:HumanJob')
+2018-08-25 07:03:31,490 extension        L0189 DEBUG| found extension EntryPoint.parse('yaml_to_mux = avocado_varianter_yaml_to_mux:YamlToMux')
+2018-08-25 07:03:31,492 sysinfo          L0392 DEBUG| File /etc/avocado/sysinfo/commands does not exist.
+2018-08-25 07:03:31,492 sysinfo          L0403 DEBUG| File /etc/avocado/sysinfo/files does not exist.
+2018-08-25 07:03:31,492 sysinfo          L0430 DEBUG| File /etc/avocado/sysinfo/profilers does not exist.
+2018-08-25 07:03:31,502 job              L0327 INFO | Command line: /usr/local/bin/avocado run avocado-misc-tests/perf/hackbench.py -m avocadoperfbench.upstream.recurrent.yaml
+2018-08-25 07:03:31,502 job              L0328 INFO | 
+2018-08-25 07:03:31,502 job              L0362 INFO | Avocado version: 58.0
+2018-08-25 07:03:31,502 job              L0363 INFO | 
+2018-08-25 07:03:31,503 job              L0367 INFO | Config files read (in order):
+2018-08-25 07:03:31,503 job              L0369 INFO | /usr/local/lib/python2.7/dist-packages/avocado_framework-58.0-py2.7.egg/avocado/etc/avocado/avocado.conf
+2018-08-25 07:03:31,503 job              L0369 INFO | /usr/local/lib/python2.7/dist-packages/avocado_framework-58.0-py2.7.egg/avocado/etc/avocado/conf.d/result_upload.conf
+2018-08-25 07:03:31,503 job              L0369 INFO | /usr/local/lib/python2.7/dist-packages/avocado_framework-58.0-py2.7.egg/avocado/etc/avocado/conf.d/gdb.conf
+2018-08-25 07:03:31,503 job              L0369 INFO | /usr/local/lib/python2.7/dist-packages/avocado_framework-58.0-py2.7.egg/avocado/etc/avocado/conf.d/jobscripts.conf
+2018-08-25 07:03:31,503 job              L0369 INFO | /usr/local/lib/python2.7/dist-packages/avocado_framework-58.0-py2.7.egg/avocado/etc/avocado/conf.d/resultsdb.conf
+2018-08-25 07:03:31,503 job              L0369 INFO | /home/jenkins/.config/avocado/avocado.conf
+2018-08-25 07:03:31,503 job              L0374 INFO | 
+2018-08-25 07:03:31,503 job              L0376 INFO | Avocado config:
+2018-08-25 07:03:31,504 job              L0385 INFO | Section.Key                              Value
+2018-08-25 07:03:31,504 job              L0385 INFO | datadir.paths.base_dir                   /var/lib/avocado
+2018-08-25 07:03:31,504 job              L0385 INFO | datadir.paths.test_dir                   /usr/share/avocado/tests
+2018-08-25 07:03:31,504 job              L0385 INFO | datadir.paths.data_dir                   /var/lib/avocado/data
+2018-08-25 07:03:31,504 job              L0385 INFO | datadir.paths.logs_dir                   ~/avocado/job-results
+2018-08-25 07:03:31,505 job              L0385 INFO | sysinfo.collect.enabled                  True
+2018-08-25 07:03:31,505 job              L0385 INFO | sysinfo.collect.commands_timeout         -1
+2018-08-25 07:03:31,505 job              L0385 INFO | sysinfo.collect.installed_packages       False
+2018-08-25 07:03:31,505 job              L0385 INFO | sysinfo.collect.profiler                 False
+2018-08-25 07:03:31,505 job              L0385 INFO | sysinfo.collect.locale                   C
+2018-08-25 07:03:31,505 job              L0385 INFO | sysinfo.collect.per_test                 False
+2018-08-25 07:03:31,505 job              L0385 INFO | sysinfo.collectibles.commands            /etc/avocado/sysinfo/commands
+2018-08-25 07:03:31,505 job              L0385 INFO | sysinfo.collectibles.files               /etc/avocado/sysinfo/files
+2018-08-25 07:03:31,505 job              L0385 INFO | sysinfo.collectibles.profilers           /etc/avocado/sysinfo/profilers
+2018-08-25 07:03:31,505 job              L0385 INFO | runner.output.colored                    True
+2018-08-25 07:03:31,505 job              L0385 INFO | runner.output.utf8                       
+2018-08-25 07:03:31,505 job              L0385 INFO | remoter.behavior.reject_unknown_hosts    False
+2018-08-25 07:03:31,505 job              L0385 INFO | remoter.behavior.disable_known_hosts     False
+2018-08-25 07:03:31,506 job              L0385 INFO | job.output.loglevel                      debug
+2018-08-25 07:03:31,506 job              L0385 INFO | restclient.connection.hostname           localhost
+2018-08-25 07:03:31,506 job              L0385 INFO | restclient.connection.port               9405
+2018-08-25 07:03:31,506 job              L0385 INFO | restclient.connection.username           
+2018-08-25 07:03:31,506 job              L0385 INFO | restclient.connection.password           
+2018-08-25 07:03:31,506 job              L0385 INFO | plugins.disable                          []
+2018-08-25 07:03:31,506 job              L0385 INFO | plugins.skip_broken_plugin_notification  []
+2018-08-25 07:03:31,506 job              L0385 INFO | plugins.loaders                          ['file', '@DEFAULT']
+2018-08-25 07:03:31,506 job              L0385 INFO | gdb.paths.gdb                            /usr/bin/gdb
+2018-08-25 07:03:31,506 job              L0385 INFO | gdb.paths.gdbserver                      /usr/bin/gdbserver
+2018-08-25 07:03:31,506 job              L0385 INFO | plugins.jobscripts.pre                   /etc/avocado/scripts/job/pre.d/
+2018-08-25 07:03:31,506 job              L0385 INFO | plugins.jobscripts.post                  /etc/avocado/scripts/job/post.d/
+2018-08-25 07:03:31,506 job              L0385 INFO | plugins.jobscripts.warn_non_existing_dir False
+2018-08-25 07:03:31,506 job              L0385 INFO | plugins.jobscripts.warn_non_zero_status  True
+2018-08-25 07:03:31,506 job              L0386 INFO | 
+2018-08-25 07:03:31,507 job              L0389 INFO | Avocado Data Directories:
+2018-08-25 07:03:31,507 job              L0390 INFO | 
+2018-08-25 07:03:31,507 job              L0391 INFO | base     /var/lib/avocado
+2018-08-25 07:03:31,533 job              L0392 INFO | tests    /usr/share/avocado/tests
+2018-08-25 07:03:31,533 job              L0393 INFO | data     /var/lib/avocado/data
+2018-08-25 07:03:31,533 job              L0394 INFO | logs     /home/jenkins/avocado/job-results/job-2018-08-25T07.03-35dfa3c
+2018-08-25 07:03:31,533 job              L0395 INFO | 
+2018-08-25 07:03:31,534 job              L0401 INFO | Multiplex tree representation:
+2018-08-25 07:03:31,534 job              L0401 INFO |  \-- run
+2018-08-25 07:03:31,534 job              L0401 INFO |       |-- runargs
+2018-08-25 07:03:31,534 job              L0401 INFO |       \-- default
+2018-08-25 07:03:31,534 job              L0401 INFO | 
+2018-08-25 07:03:31,534 job              L0401 INFO | Multiplex variants (1):
+2018-08-25 07:03:31,534 job              L0401 INFO | Variant default-runargs-47bc:    /run/runargs, /run/default
+2018-08-25 07:03:31,534 job              L0405 INFO | Temporary dir: /var/tmp/avocado_C_w2zl
+2018-08-25 07:03:31,535 job              L0406 INFO | 
+2018-08-25 07:03:31,535 job              L0319 INFO | Job ID: 35dfa3cc171fba7c0592549c6a43235b9d27d995
+2018-08-25 07:03:31,535 job              L0322 INFO | 
+2018-08-25 07:03:31,804 sysinfo          L0392 DEBUG| File /etc/avocado/sysinfo/commands does not exist.
+2018-08-25 07:03:31,805 sysinfo          L0403 DEBUG| File /etc/avocado/sysinfo/files does not exist.
+2018-08-25 07:03:31,805 sysinfo          L0430 DEBUG| File /etc/avocado/sysinfo/profilers does not exist.
+2018-08-25 07:03:31,816 parameters       L0146 DEBUG| PARAMS (key=timeout, path=*, default=None) => None
+2018-08-25 07:03:31,816 test             L0382 INFO | START 1-avocado-misc-tests/perf/hackbench.py:Hackbench.test;default-runargs-47bc
+2018-08-25 07:03:31,817 test             L0403 DEBUG| Test metadata:
+2018-08-25 07:03:31,817 test             L0404 DEBUG|   filename: /home/jenkins/avocado-misc-tests/perf/hackbench.py
+2018-08-25 07:03:32,097 test             L0286 DEBUG| DATA (filename=output.expected) => NOT FOUND (data sources: variant, test, file)
+2018-08-25 07:03:32,098 parameters       L0146 DEBUG| PARAMS (key=time_val, path=*, default=None) => None
+2018-08-25 07:03:32,098 parameters       L0146 DEBUG| PARAMS (key=num_groups, path=*, default=90) => 200
+2018-08-25 07:03:32,098 parameters       L0146 DEBUG| PARAMS (key=iterations, path=*, default=1) => 128
+2018-08-25 07:03:32,357 software_manager L0845 DEBUG| apt-get version: 1.5.2
+2018-08-25 07:03:32,357 process          L0523 INFO | Running '/usr/bin/dpkg -s gdebi-core'
+2018-08-25 07:03:32,578 process          L0367 DEBUG| [stdout] Package: gdebi-core
+2018-08-25 07:03:32,579 process          L0605 INFO | Command '/usr/bin/dpkg -s gdebi-core' finished with 0 after 0.204005002975s
+2018-08-25 07:03:32,580 process          L0367 DEBUG| [stdout] Status: install ok installed
+2018-08-25 07:03:32,580 process          L0367 DEBUG| [stdout] Priority: optional
+2018-08-25 07:03:32,580 process          L0367 DEBUG| [stdout] Section: admin
+2018-08-25 07:03:32,581 process          L0367 DEBUG| [stdout] Installed-Size: 855
+2018-08-25 07:03:32,581 process          L0367 DEBUG| [stdout] Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+2018-08-25 07:03:32,581 process          L0367 DEBUG| [stdout] Architecture: all
+2018-08-25 07:03:32,581 process          L0367 DEBUG| [stdout] Source: gdebi
+2018-08-25 07:03:32,582 process          L0367 DEBUG| [stdout] Version: 0.9.5.7+nmu1ubuntu3
+2018-08-25 07:03:32,582 process          L0367 DEBUG| [stdout] Depends: python3:any (>= 3.3.2-2~), python3-apt, python3-debian, file
+2018-08-25 07:03:32,582 process          L0367 DEBUG| [stdout] Suggests: xz-utils | xz-lzma
+2018-08-25 07:03:32,582 process          L0367 DEBUG| [stdout] Description: simple tool to install deb files
+2018-08-25 07:03:32,582 process          L0367 DEBUG| [stdout]  gdebi lets you install local deb packages resolving and installing
+2018-08-25 07:03:32,583 process          L0367 DEBUG| [stdout]  its dependencies. apt does the same, but only for remote (http, ftp)
+2018-08-25 07:03:32,583 process          L0367 DEBUG| [stdout]  located packages.
+2018-08-25 07:03:32,583 process          L0367 DEBUG| [stdout]  .
+2018-08-25 07:03:32,583 process          L0367 DEBUG| [stdout]  It can also resolve build-depends of local debian/control files.
+2018-08-25 07:03:32,583 process          L0367 DEBUG| [stdout]  .
+2018-08-25 07:03:32,584 process          L0367 DEBUG| [stdout]  This package contains the libraries and command-line utility.
+2018-08-25 07:03:32,584 process          L0367 DEBUG| [stdout] Original-Maintainer: Ubuntu Developers <ubuntu-dev-team@lists.alioth.debian.org>
+2018-08-25 07:03:32,621 process          L0523 INFO | Running '/usr/bin/dpkg -s gcc'
+2018-08-25 07:03:32,674 process          L0367 DEBUG| [stdout] Package: gcc
+2018-08-25 07:03:32,675 process          L0605 INFO | Command '/usr/bin/dpkg -s gcc' finished with 0 after 0.0481300354004s
+2018-08-25 07:03:32,675 process          L0367 DEBUG| [stdout] Status: install ok installed
+2018-08-25 07:03:32,676 process          L0367 DEBUG| [stdout] Priority: optional
+2018-08-25 07:03:32,676 process          L0367 DEBUG| [stdout] Section: devel
+2018-08-25 07:03:32,676 process          L0367 DEBUG| [stdout] Installed-Size: 50
+2018-08-25 07:03:32,676 process          L0367 DEBUG| [stdout] Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+2018-08-25 07:03:32,676 process          L0367 DEBUG| [stdout] Architecture: amd64
+2018-08-25 07:03:32,677 process          L0367 DEBUG| [stdout] Source: gcc-defaults (1.173ubuntu1)
+2018-08-25 07:03:32,677 process          L0367 DEBUG| [stdout] Version: 4:7.2.0-1ubuntu1
+2018-08-25 07:03:32,677 process          L0367 DEBUG| [stdout] Provides: c-compiler
+2018-08-25 07:03:32,677 process          L0367 DEBUG| [stdout] Depends: cpp (>= 4:7.2.0-1ubuntu1), gcc-7 (>= 7.2.0-1~)
+2018-08-25 07:03:32,677 process          L0367 DEBUG| [stdout] Recommends: libc6-dev | libc-dev
+2018-08-25 07:03:32,678 process          L0367 DEBUG| [stdout] Suggests: gcc-multilib, make, manpages-dev, autoconf, automake, libtool, flex, bison, gdb, gcc-doc
+2018-08-25 07:03:32,678 process          L0367 DEBUG| [stdout] Conflicts: gcc-doc (<< 1:2.95.3)
+2018-08-25 07:03:32,678 process          L0367 DEBUG| [stdout] Description: GNU C compiler
+2018-08-25 07:03:32,678 process          L0367 DEBUG| [stdout]  This is the GNU C compiler, a fairly portable optimizing compiler for C.
+2018-08-25 07:03:32,678 process          L0367 DEBUG| [stdout]  .
+2018-08-25 07:03:32,679 process          L0367 DEBUG| [stdout]  This is a dependency package providing the default GNU C compiler.
+2018-08-25 07:03:32,679 process          L0367 DEBUG| [stdout] Original-Maintainer: Debian GCC Maintainers <debian-gcc@lists.debian.org>
+2018-08-25 07:03:32,785 process          L0523 INFO | Running 'cc  hackbench.c -o hackbench -lpthread'
+2018-08-25 07:03:33,343 process          L0367 DEBUG| [stderr] hackbench.c:32:66: warning: missing terminating ' character
+2018-08-25 07:03:33,343 process          L0367 DEBUG| [stderr]  2) It runs too fast and ends in a couple of seconds. Sometimes it's too hard to debug
+2018-08-25 07:03:33,344 process          L0367 DEBUG| [stderr]                                                                   ^
+2018-08-25 07:03:33,344 process          L0367 DEBUG| [stderr] hackbench.c:70:7: warning: missing terminating ' character
+2018-08-25 07:03:33,344 process          L0367 DEBUG| [stderr]  > Here's a fixlet for the hackbench program found at
+2018-08-25 07:03:33,344 process          L0367 DEBUG| [stderr]        ^
+2018-08-25 07:03:34,255 process          L0605 INFO | Command 'cc  hackbench.c -o hackbench -lpthread' finished with 0 after 1.42503786087s
+2018-08-25 07:03:34,313 hackbench        L0072 INFO | Iteration 1
+2018-08-25 07:03:34,313 process          L0523 INFO | Running '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200'
+2018-08-25 07:03:34,320 process          L0367 DEBUG| [stdout] Running with 200*40 (== 8000) tasks.
+2018-08-25 07:03:37,975 process          L0367 DEBUG| [stdout] Time: 3.081
+2018-08-25 07:03:37,976 process          L0605 INFO | Command '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200' finished with 0 after 3.65795111656s
+2018-08-25 07:03:38,006 hackbench        L0072 INFO | Iteration 2
+2018-08-25 07:03:38,007 process          L0523 INFO | Running '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200'
+2018-08-25 07:03:38,014 process          L0367 DEBUG| [stdout] Running with 200*40 (== 8000) tasks.
+2018-08-25 07:03:41,890 process          L0367 DEBUG| [stdout] Time: 3.256
+2018-08-25 07:03:41,890 process          L0605 INFO | Command '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200' finished with 0 after 3.87860798836s
+2018-08-25 07:03:41,922 hackbench        L0072 INFO | Iteration 3
+2018-08-25 07:03:41,922 process          L0523 INFO | Running '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200'
+2018-08-25 07:03:41,930 process          L0367 DEBUG| [stdout] Running with 200*40 (== 8000) tasks.
+2018-08-25 07:03:45,837 process          L0367 DEBUG| [stdout] Time: 3.344
+2018-08-25 07:03:45,838 process          L0605 INFO | Command '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200' finished with 0 after 3.91066598892s
+2018-08-25 07:03:45,874 hackbench        L0072 INFO | Iteration 4
+2018-08-25 07:03:45,875 process          L0523 INFO | Running '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200'
+2018-08-25 07:03:45,886 process          L0367 DEBUG| [stdout] Running with 200*40 (== 8000) tasks.
+2018-08-25 07:03:50,263 process          L0367 DEBUG| [stdout] Time: 3.777
+2018-08-25 07:03:50,263 process          L0605 INFO | Command '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200' finished with 0 after 4.38249802589s
+2018-08-25 07:03:50,304 hackbench        L0072 INFO | Iteration 5
+2018-08-25 07:03:50,305 process          L0523 INFO | Running '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200'
+2018-08-25 07:03:50,311 process          L0367 DEBUG| [stdout] Running with 200*40 (== 8000) tasks.
+2018-08-25 07:03:54,292 process          L0367 DEBUG| [stdout] Time: 3.420
+2018-08-25 07:03:54,293 process          L0605 INFO | Command '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200' finished with 0 after 3.98338508606s
+2018-08-25 07:03:54,327 hackbench        L0072 INFO | Iteration 6
+2018-08-25 07:03:54,328 process          L0523 INFO | Running '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200'
+2018-08-25 07:03:54,335 process          L0367 DEBUG| [stdout] Running with 200*40 (== 8000) tasks.
+2018-08-25 07:03:58,213 process          L0367 DEBUG| [stdout] Time: 3.293
+2018-08-25 07:03:58,214 process          L0605 INFO | Command '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200' finished with 0 after 3.88120985031s
+2018-08-25 07:03:58,244 hackbench        L0072 INFO | Iteration 7
+2018-08-25 07:03:58,245 process          L0523 INFO | Running '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200'
+2018-08-25 07:03:58,252 process          L0367 DEBUG| [stdout] Running with 200*40 (== 8000) tasks.
+2018-08-25 07:04:02,281 process          L0367 DEBUG| [stdout] Time: 3.381
+2018-08-25 07:04:02,281 process          L0605 INFO | Command '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200' finished with 0 after 4.03108096123s
+2018-08-25 07:04:02,320 hackbench        L0072 INFO | Iteration 8
+2018-08-25 07:04:02,320 process          L0523 INFO | Running '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200'
+2018-08-25 07:04:02,330 process          L0367 DEBUG| [stdout] Running with 200*40 (== 8000) tasks.
+2018-08-25 07:04:06,315 process          L0367 DEBUG| [stdout] Time: 3.382
+2018-08-25 07:04:06,316 process          L0605 INFO | Command '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200' finished with 0 after 3.99094080925s
+2018-08-25 07:04:06,345 hackbench        L0072 INFO | Iteration 9
+2018-08-25 07:04:06,346 process          L0523 INFO | Running '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200'
+2018-08-25 07:04:06,353 process          L0367 DEBUG| [stdout] Running with 200*40 (== 8000) tasks.
+2018-08-25 07:04:10,567 process          L0367 DEBUG| [stdout] Time: 3.632
+2018-08-25 07:04:10,567 process          L0605 INFO | Command '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200' finished with 0 after 4.21630477905s
+2018-08-25 07:04:10,603 hackbench        L0072 INFO | Iteration 10
+2018-08-25 07:04:10,604 process          L0523 INFO | Running '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200'
+2018-08-25 07:04:10,611 process          L0367 DEBUG| [stdout] Running with 200*40 (== 8000) tasks.
+2018-08-25 07:04:14,657 process          L0367 DEBUG| [stdout] Time: 3.457
+2018-08-25 07:04:14,657 process          L0605 INFO | Command '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200' finished with 0 after 4.04790592194s
+2018-08-25 07:04:14,695 hackbench        L0072 INFO | Iteration 11
+2018-08-25 07:04:14,696 process          L0523 INFO | Running '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200'
+2018-08-25 07:04:14,703 process          L0367 DEBUG| [stdout] Running with 200*40 (== 8000) tasks.
+2018-08-25 07:04:18,924 process          L0605 INFO | Command '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200' finished with 0 after 4.22302722931s
+2018-08-25 07:04:18,924 process          L0367 DEBUG| [stdout] Time: 3.588
+2018-08-25 07:04:18,962 hackbench        L0072 INFO | Iteration 12
+2018-08-25 07:04:18,962 process          L0523 INFO | Running '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200'
+2018-08-25 07:04:18,970 process          L0367 DEBUG| [stdout] Running with 200*40 (== 8000) tasks.
+2018-08-25 07:04:22,459 process          L0367 DEBUG| [stdout] Time: 2.887
+2018-08-25 07:04:22,459 process          L0605 INFO | Command '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200' finished with 0 after 3.49147987366s
+2018-08-25 07:04:22,495 hackbench        L0072 INFO | Iteration 13
+2018-08-25 07:04:22,496 process          L0523 INFO | Running '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200'
+2018-08-25 07:04:22,503 process          L0367 DEBUG| [stdout] Running with 200*40 (== 8000) tasks.
+2018-08-25 07:04:26,419 process          L0367 DEBUG| [stdout] Time: 3.346
+2018-08-25 07:04:26,420 process          L0605 INFO | Command '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200' finished with 0 after 3.91866993904s
+2018-08-25 07:04:26,454 hackbench        L0072 INFO | Iteration 14
+2018-08-25 07:04:26,454 process          L0523 INFO | Running '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200'
+2018-08-25 07:04:26,462 process          L0367 DEBUG| [stdout] Running with 200*40 (== 8000) tasks.
+2018-08-25 07:04:30,050 process          L0367 DEBUG| [stdout] Time: 2.993
+2018-08-25 07:04:30,050 process          L0605 INFO | Command '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200' finished with 0 after 3.59063482285s
+2018-08-25 07:04:30,087 hackbench        L0072 INFO | Iteration 15
+2018-08-25 07:04:30,087 process          L0523 INFO | Running '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200'
+2018-08-25 07:04:30,095 process          L0367 DEBUG| [stdout] Running with 200*40 (== 8000) tasks.
+2018-08-25 07:04:33,876 process          L0367 DEBUG| [stdout] Time: 3.212
+2018-08-25 07:04:33,876 process          L0605 INFO | Command '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200' finished with 0 after 3.78367590904s
+2018-08-25 07:04:33,912 hackbench        L0072 INFO | Iteration 16
+2018-08-25 07:04:33,912 process          L0523 INFO | Running '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200'
+2018-08-25 07:04:33,920 process          L0367 DEBUG| [stdout] Running with 200*40 (== 8000) tasks.
+2018-08-25 07:04:38,095 process          L0367 DEBUG| [stdout] Time: 3.514
+2018-08-25 07:04:38,095 process          L0605 INFO | Command '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200' finished with 0 after 4.17713999748s
+2018-08-25 07:04:38,128 hackbench        L0072 INFO | Iteration 17
+2018-08-25 07:04:38,129 process          L0523 INFO | Running '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200'
+2018-08-25 07:04:38,137 process          L0367 DEBUG| [stdout] Running with 200*40 (== 8000) tasks.
+2018-08-25 07:04:41,886 process          L0367 DEBUG| [stdout] Time: 3.175
+2018-08-25 07:04:41,886 process          L0605 INFO | Command '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200' finished with 0 after 3.75176882744s
+2018-08-25 07:04:41,920 hackbench        L0072 INFO | Iteration 18
+2018-08-25 07:04:41,921 process          L0523 INFO | Running '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200'
+2018-08-25 07:04:41,928 process          L0367 DEBUG| [stdout] Running with 200*40 (== 8000) tasks.
+2018-08-25 07:04:45,876 process          L0367 DEBUG| [stdout] Time: 3.364
+2018-08-25 07:04:45,877 process          L0605 INFO | Command '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200' finished with 0 after 3.95047497749s
+2018-08-25 07:04:45,912 hackbench        L0072 INFO | Iteration 19
+2018-08-25 07:04:45,913 process          L0523 INFO | Running '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200'
+2018-08-25 07:04:45,919 process          L0367 DEBUG| [stdout] Running with 200*40 (== 8000) tasks.
+2018-08-25 07:04:49,695 process          L0367 DEBUG| [stdout] Time: 3.145
+2018-08-25 07:04:49,695 process          L0605 INFO | Command '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200' finished with 0 after 3.77817893028s
+2018-08-25 07:04:49,729 hackbench        L0072 INFO | Iteration 20
+2018-08-25 07:04:49,729 process          L0523 INFO | Running '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200'
+2018-08-25 07:04:49,737 process          L0367 DEBUG| [stdout] Running with 200*40 (== 8000) tasks.
+2018-08-25 07:04:53,547 process          L0367 DEBUG| [stdout] Time: 3.252
+2018-08-25 07:04:53,547 process          L0605 INFO | Command '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200' finished with 0 after 3.81262588501s
+2018-08-25 07:04:53,587 hackbench        L0072 INFO | Iteration 21
+2018-08-25 07:04:53,588 process          L0523 INFO | Running '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200'
+2018-08-25 07:04:53,595 process          L0367 DEBUG| [stdout] Running with 200*40 (== 8000) tasks.
+2018-08-25 07:04:57,770 process          L0367 DEBUG| [stdout] Time: 3.559
+2018-08-25 07:04:57,770 process          L0605 INFO | Command '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200' finished with 0 after 4.17707109451s
+2018-08-25 07:04:57,803 hackbench        L0072 INFO | Iteration 22
+2018-08-25 07:04:57,804 process          L0523 INFO | Running '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200'
+2018-08-25 07:04:57,811 process          L0367 DEBUG| [stdout] Running with 200*40 (== 8000) tasks.
+2018-08-25 07:05:01,820 process          L0367 DEBUG| [stdout] Time: 3.456
+2018-08-25 07:05:01,821 process          L0605 INFO | Command '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200' finished with 0 after 4.01197195053s
+2018-08-25 07:05:01,862 hackbench        L0072 INFO | Iteration 23
+2018-08-25 07:05:01,863 process          L0523 INFO | Running '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200'
+2018-08-25 07:05:01,870 process          L0367 DEBUG| [stdout] Running with 200*40 (== 8000) tasks.
+2018-08-25 07:05:06,089 process          L0367 DEBUG| [stdout] Time: 3.648
+2018-08-25 07:05:06,089 process          L0605 INFO | Command '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200' finished with 0 after 4.22150492668s
+2018-08-25 07:05:06,129 hackbench        L0072 INFO | Iteration 24
+2018-08-25 07:05:06,130 process          L0523 INFO | Running '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200'
+2018-08-25 07:05:06,137 process          L0367 DEBUG| [stdout] Running with 200*40 (== 8000) tasks.
+2018-08-25 07:05:10,100 process          L0367 DEBUG| [stdout] Time: 3.363
+2018-08-25 07:05:10,100 process          L0605 INFO | Command '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200' finished with 0 after 3.96545004845s
+2018-08-25 07:05:10,137 hackbench        L0072 INFO | Iteration 25
+2018-08-25 07:05:10,138 process          L0523 INFO | Running '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200'
+2018-08-25 07:05:10,145 process          L0367 DEBUG| [stdout] Running with 200*40 (== 8000) tasks.
+2018-08-25 07:05:13,941 process          L0367 DEBUG| [stdout] Time: 3.180
+2018-08-25 07:05:13,941 process          L0605 INFO | Command '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200' finished with 0 after 3.79805397987s
+2018-08-25 07:05:13,979 hackbench        L0072 INFO | Iteration 26
+2018-08-25 07:05:13,980 process          L0523 INFO | Running '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200'
+2018-08-25 07:05:13,987 process          L0367 DEBUG| [stdout] Running with 200*40 (== 8000) tasks.
+2018-08-25 07:05:18,030 process          L0367 DEBUG| [stdout] Time: 3.484
+2018-08-25 07:05:18,030 process          L0605 INFO | Command '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200' finished with 0 after 4.04490804672s
+2018-08-25 07:05:18,079 hackbench        L0072 INFO | Iteration 27
+2018-08-25 07:05:18,080 process          L0523 INFO | Running '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200'
+2018-08-25 07:05:18,087 process          L0367 DEBUG| [stdout] Running with 200*40 (== 8000) tasks.
+2018-08-25 07:05:22,143 process          L0367 DEBUG| [stdout] Time: 3.440
+2018-08-25 07:05:22,143 process          L0605 INFO | Command '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200' finished with 0 after 4.05817294121s
+2018-08-25 07:05:22,179 hackbench        L0072 INFO | Iteration 28
+2018-08-25 07:05:22,180 process          L0523 INFO | Running '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200'
+2018-08-25 07:05:22,187 process          L0367 DEBUG| [stdout] Running with 200*40 (== 8000) tasks.
+2018-08-25 07:05:26,273 process          L0367 DEBUG| [stdout] Time: 3.519
+2018-08-25 07:05:26,273 process          L0605 INFO | Command '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200' finished with 0 after 4.08809685707s
+2018-08-25 07:05:26,321 hackbench        L0072 INFO | Iteration 29
+2018-08-25 07:05:26,322 process          L0523 INFO | Running '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200'
+2018-08-25 07:05:26,329 process          L0367 DEBUG| [stdout] Running with 200*40 (== 8000) tasks.
+2018-08-25 07:05:30,145 process          L0367 DEBUG| [stdout] Time: 3.254
+2018-08-25 07:05:30,145 process          L0605 INFO | Command '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200' finished with 0 after 3.81840801239s
+2018-08-25 07:05:30,179 hackbench        L0072 INFO | Iteration 30
+2018-08-25 07:05:30,180 process          L0523 INFO | Running '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200'
+2018-08-25 07:05:30,187 process          L0367 DEBUG| [stdout] Running with 200*40 (== 8000) tasks.
+2018-08-25 07:05:34,560 process          L0367 DEBUG| [stdout] Time: 3.799
+2018-08-25 07:05:34,560 process          L0605 INFO | Command '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200' finished with 0 after 4.37504291534s
+2018-08-25 07:05:34,596 hackbench        L0072 INFO | Iteration 31
+2018-08-25 07:05:34,597 process          L0523 INFO | Running '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200'
+2018-08-25 07:05:34,604 process          L0367 DEBUG| [stdout] Running with 200*40 (== 8000) tasks.
+2018-08-25 07:05:38,415 process          L0605 INFO | Command '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200' finished with 0 after 3.81310081482s
+2018-08-25 07:05:38,415 process          L0367 DEBUG| [stdout] Time: 3.256
+2018-08-25 07:05:38,463 hackbench        L0072 INFO | Iteration 32
+2018-08-25 07:05:38,463 process          L0523 INFO | Running '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200'
+2018-08-25 07:05:38,471 process          L0367 DEBUG| [stdout] Running with 200*40 (== 8000) tasks.
+2018-08-25 07:05:42,405 process          L0367 DEBUG| [stdout] Time: 3.316
+2018-08-25 07:05:42,405 process          L0605 INFO | Command '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200' finished with 0 after 3.93667888641s
+2018-08-25 07:05:42,454 hackbench        L0072 INFO | Iteration 33
+2018-08-25 07:05:42,455 process          L0523 INFO | Running '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200'
+2018-08-25 07:05:42,462 process          L0367 DEBUG| [stdout] Running with 200*40 (== 8000) tasks.
+2018-08-25 07:05:46,237 process          L0367 DEBUG| [stdout] Time: 3.197
+2018-08-25 07:05:46,237 process          L0605 INFO | Command '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200' finished with 0 after 3.77709698677s
+2018-08-25 07:05:46,271 hackbench        L0072 INFO | Iteration 34
+2018-08-25 07:05:46,272 process          L0523 INFO | Running '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200'
+2018-08-25 07:05:46,279 process          L0367 DEBUG| [stdout] Running with 200*40 (== 8000) tasks.
+2018-08-25 07:05:50,422 process          L0367 DEBUG| [stdout] Time: 3.567
+2018-08-25 07:05:50,422 process          L0605 INFO | Command '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200' finished with 0 after 4.14561986923s
+2018-08-25 07:05:50,471 hackbench        L0072 INFO | Iteration 35
+2018-08-25 07:05:50,472 process          L0523 INFO | Running '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200'
+2018-08-25 07:05:50,479 process          L0367 DEBUG| [stdout] Running with 200*40 (== 8000) tasks.
+2018-08-25 07:05:54,319 process          L0367 DEBUG| [stdout] Time: 3.288
+2018-08-25 07:05:54,319 process          L0605 INFO | Command '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200' finished with 0 after 3.84248495102s
+2018-08-25 07:05:54,371 hackbench        L0072 INFO | Iteration 36
+2018-08-25 07:05:54,372 process          L0523 INFO | Running '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200'
+2018-08-25 07:05:54,379 process          L0367 DEBUG| [stdout] Running with 200*40 (== 8000) tasks.
+2018-08-25 07:05:57,977 process          L0367 DEBUG| [stdout] Time: 3.053
+2018-08-25 07:05:57,978 process          L0605 INFO | Command '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200' finished with 0 after 3.60059714317s
+2018-08-25 07:05:58,021 hackbench        L0072 INFO | Iteration 37
+2018-08-25 07:05:58,022 process          L0523 INFO | Running '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200'
+2018-08-25 07:05:58,029 process          L0367 DEBUG| [stdout] Running with 200*40 (== 8000) tasks.
+2018-08-25 07:06:01,714 process          L0367 DEBUG| [stdout] Time: 3.111
+2018-08-25 07:06:01,714 process          L0605 INFO | Command '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200' finished with 0 after 3.68768692017s
+2018-08-25 07:06:01,754 hackbench        L0072 INFO | Iteration 38
+2018-08-25 07:06:01,755 process          L0523 INFO | Running '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200'
+2018-08-25 07:06:01,766 process          L0367 DEBUG| [stdout] Running with 200*40 (== 8000) tasks.
+2018-08-25 07:06:05,786 process          L0367 DEBUG| [stdout] Time: 3.406
+2018-08-25 07:06:05,786 process          L0605 INFO | Command '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200' finished with 0 after 4.02545595169s
+2018-08-25 07:06:05,821 hackbench        L0072 INFO | Iteration 39
+2018-08-25 07:06:05,822 process          L0523 INFO | Running '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200'
+2018-08-25 07:06:05,829 process          L0367 DEBUG| [stdout] Running with 200*40 (== 8000) tasks.
+2018-08-25 07:06:09,754 process          L0367 DEBUG| [stdout] Time: 3.317
+2018-08-25 07:06:09,755 process          L0605 INFO | Command '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200' finished with 0 after 3.92785477638s
+2018-08-25 07:06:09,796 hackbench        L0072 INFO | Iteration 40
+2018-08-25 07:06:09,797 process          L0523 INFO | Running '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200'
+2018-08-25 07:06:09,804 process          L0367 DEBUG| [stdout] Running with 200*40 (== 8000) tasks.
+2018-08-25 07:06:13,542 process          L0367 DEBUG| [stdout] Time: 3.162
+2018-08-25 07:06:13,543 process          L0605 INFO | Command '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200' finished with 0 after 3.74078893661s
+2018-08-25 07:06:13,579 hackbench        L0072 INFO | Iteration 41
+2018-08-25 07:06:13,580 process          L0523 INFO | Running '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200'
+2018-08-25 07:06:13,585 process          L0367 DEBUG| [stdout] Running with 200*40 (== 8000) tasks.
+2018-08-25 07:06:17,232 process          L0367 DEBUG| [stdout] Time: 3.129
+2018-08-25 07:06:17,232 process          L0605 INFO | Command '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200' finished with 0 after 3.64853215218s
+2018-08-25 07:06:17,271 hackbench        L0072 INFO | Iteration 42
+2018-08-25 07:06:17,272 process          L0523 INFO | Running '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200'
+2018-08-25 07:06:17,278 process          L0367 DEBUG| [stdout] Running with 200*40 (== 8000) tasks.
+2018-08-25 07:06:21,225 process          L0367 DEBUG| [stdout] Time: 3.385
+2018-08-25 07:06:21,226 process          L0605 INFO | Command '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200' finished with 0 after 3.94961810112s
+2018-08-25 07:06:21,263 hackbench        L0072 INFO | Iteration 43
+2018-08-25 07:06:21,263 process          L0523 INFO | Running '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200'
+2018-08-25 07:06:21,270 process          L0367 DEBUG| [stdout] Running with 200*40 (== 8000) tasks.
+2018-08-25 07:06:24,840 process          L0367 DEBUG| [stdout] Time: 3.031
+2018-08-25 07:06:24,840 process          L0605 INFO | Command '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200' finished with 0 after 3.57202506065s
+2018-08-25 07:06:24,879 hackbench        L0072 INFO | Iteration 44
+2018-08-25 07:06:24,880 process          L0523 INFO | Running '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200'
+2018-08-25 07:06:24,887 process          L0367 DEBUG| [stdout] Running with 200*40 (== 8000) tasks.
+2018-08-25 07:06:28,477 process          L0367 DEBUG| [stdout] Time: 3.085
+2018-08-25 07:06:28,477 process          L0605 INFO | Command '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200' finished with 0 after 3.59213590622s
+2018-08-25 07:06:28,521 hackbench        L0072 INFO | Iteration 45
+2018-08-25 07:06:28,522 process          L0523 INFO | Running '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200'
+2018-08-25 07:06:28,528 process          L0367 DEBUG| [stdout] Running with 200*40 (== 8000) tasks.
+2018-08-25 07:06:32,029 process          L0367 DEBUG| [stdout] Time: 2.860
+2018-08-25 07:06:32,029 process          L0605 INFO | Command '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200' finished with 0 after 3.50276494026s
+2018-08-25 07:06:32,063 hackbench        L0072 INFO | Iteration 46
+2018-08-25 07:06:32,064 process          L0523 INFO | Running '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200'
+2018-08-25 07:06:32,070 process          L0367 DEBUG| [stdout] Running with 200*40 (== 8000) tasks.
+2018-08-25 07:06:35,778 process          L0367 DEBUG| [stdout] Time: 3.179
+2018-08-25 07:06:35,779 process          L0605 INFO | Command '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200' finished with 0 after 3.71117401123s
+2018-08-25 07:06:35,813 hackbench        L0072 INFO | Iteration 47
+2018-08-25 07:06:35,814 process          L0523 INFO | Running '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200'
+2018-08-25 07:06:35,820 process          L0367 DEBUG| [stdout] Running with 200*40 (== 8000) tasks.
+2018-08-25 07:06:39,561 process          L0367 DEBUG| [stdout] Time: 3.227
+2018-08-25 07:06:39,561 process          L0605 INFO | Command '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200' finished with 0 after 3.7430729866s
+2018-08-25 07:06:39,605 hackbench        L0072 INFO | Iteration 48
+2018-08-25 07:06:39,605 process          L0523 INFO | Running '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200'
+2018-08-25 07:06:39,608 process          L0367 DEBUG| [stdout] Running with 200*40 (== 8000) tasks.
+2018-08-25 07:06:43,023 process          L0367 DEBUG| [stdout] Time: 2.848
+2018-08-25 07:06:43,024 process          L0605 INFO | Command '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200' finished with 0 after 3.41645407677s
+2018-08-25 07:06:43,063 hackbench        L0072 INFO | Iteration 49
+2018-08-25 07:06:43,064 process          L0523 INFO | Running '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200'
+2018-08-25 07:06:43,068 process          L0367 DEBUG| [stdout] Running with 200*40 (== 8000) tasks.
+2018-08-25 07:06:47,067 process          L0367 DEBUG| [stdout] Time: 3.488
+2018-08-25 07:06:47,067 process          L0605 INFO | Command '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200' finished with 0 after 3.99988293648s
+2018-08-25 07:06:47,105 hackbench        L0072 INFO | Iteration 50
+2018-08-25 07:06:47,105 process          L0523 INFO | Running '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200'
+2018-08-25 07:06:47,109 process          L0367 DEBUG| [stdout] Running with 200*40 (== 8000) tasks.
+2018-08-25 07:06:50,932 process          L0367 DEBUG| [stdout] Time: 3.324
+2018-08-25 07:06:50,933 process          L0605 INFO | Command '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200' finished with 0 after 3.82495307922s
+2018-08-25 07:06:50,973 hackbench        L0072 INFO | Iteration 51
+2018-08-25 07:06:50,973 process          L0523 INFO | Running '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200'
+2018-08-25 07:06:50,980 process          L0367 DEBUG| [stdout] Running with 200*40 (== 8000) tasks.
+2018-08-25 07:06:54,944 process          L0367 DEBUG| [stdout] Time: 3.432
+2018-08-25 07:06:54,944 process          L0605 INFO | Command '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200' finished with 0 after 3.96612286568s
+2018-08-25 07:06:54,981 hackbench        L0072 INFO | Iteration 52
+2018-08-25 07:06:54,981 process          L0523 INFO | Running '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200'
+2018-08-25 07:06:54,988 process          L0367 DEBUG| [stdout] Running with 200*40 (== 8000) tasks.
+2018-08-25 07:06:58,244 process          L0367 DEBUG| [stdout] Time: 2.745
+2018-08-25 07:06:58,245 process          L0605 INFO | Command '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200' finished with 0 after 3.25877904892s
+2018-08-25 07:06:58,272 hackbench        L0072 INFO | Iteration 53
+2018-08-25 07:06:58,273 process          L0523 INFO | Running '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200'
+2018-08-25 07:06:58,280 process          L0367 DEBUG| [stdout] Running with 200*40 (== 8000) tasks.
+2018-08-25 07:07:02,317 process          L0367 DEBUG| [stdout] Time: 3.528
+2018-08-25 07:07:02,317 process          L0605 INFO | Command '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200' finished with 0 after 4.0393280983s
+2018-08-25 07:07:02,348 hackbench        L0072 INFO | Iteration 54
+2018-08-25 07:07:02,348 process          L0523 INFO | Running '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200'
+2018-08-25 07:07:02,355 process          L0367 DEBUG| [stdout] Running with 200*40 (== 8000) tasks.
+2018-08-25 07:07:06,390 process          L0367 DEBUG| [stdout] Time: 3.473
+2018-08-25 07:07:06,390 process          L0605 INFO | Command '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200' finished with 0 after 4.03721404076s
+2018-08-25 07:07:06,439 hackbench        L0072 INFO | Iteration 55
+2018-08-25 07:07:06,440 process          L0523 INFO | Running '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200'
+2018-08-25 07:07:06,447 process          L0367 DEBUG| [stdout] Running with 200*40 (== 8000) tasks.
+2018-08-25 07:07:10,225 process          L0367 DEBUG| [stdout] Time: 3.213
+2018-08-25 07:07:10,226 process          L0605 INFO | Command '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200' finished with 0 after 3.78073692322s
+2018-08-25 07:07:10,256 hackbench        L0072 INFO | Iteration 56
+2018-08-25 07:07:10,256 process          L0523 INFO | Running '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200'
+2018-08-25 07:07:10,261 process          L0367 DEBUG| [stdout] Running with 200*40 (== 8000) tasks.
+2018-08-25 07:07:14,455 process          L0367 DEBUG| [stdout] Time: 3.522
+2018-08-25 07:07:14,455 process          L0605 INFO | Command '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200' finished with 0 after 4.19544196129s
+2018-08-25 07:07:14,489 hackbench        L0072 INFO | Iteration 57
+2018-08-25 07:07:14,490 process          L0523 INFO | Running '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200'
+2018-08-25 07:07:14,497 process          L0367 DEBUG| [stdout] Running with 200*40 (== 8000) tasks.
+2018-08-25 07:07:18,218 process          L0367 DEBUG| [stdout] Time: 3.195
+2018-08-25 07:07:18,219 process          L0605 INFO | Command '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200' finished with 0 after 3.72358298302s
+2018-08-25 07:07:18,248 hackbench        L0072 INFO | Iteration 58
+2018-08-25 07:07:18,249 process          L0523 INFO | Running '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200'
+2018-08-25 07:07:18,255 process          L0367 DEBUG| [stdout] Running with 200*40 (== 8000) tasks.
+2018-08-25 07:07:21,834 process          L0367 DEBUG| [stdout] Time: 3.085
+2018-08-25 07:07:21,834 process          L0605 INFO | Command '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200' finished with 0 after 3.58109593391s
+2018-08-25 07:07:21,864 hackbench        L0072 INFO | Iteration 59
+2018-08-25 07:07:21,865 process          L0523 INFO | Running '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200'
+2018-08-25 07:07:21,871 process          L0367 DEBUG| [stdout] Running with 200*40 (== 8000) tasks.
+2018-08-25 07:07:25,908 process          L0367 DEBUG| [stdout] Time: 3.442
+2018-08-25 07:07:25,909 process          L0605 INFO | Command '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200' finished with 0 after 4.03969597816s
+2018-08-25 07:07:25,940 hackbench        L0072 INFO | Iteration 60
+2018-08-25 07:07:25,940 process          L0523 INFO | Running '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200'
+2018-08-25 07:07:25,950 process          L0367 DEBUG| [stdout] Running with 200*40 (== 8000) tasks.
+2018-08-25 07:07:29,888 process          L0367 DEBUG| [stdout] Time: 3.411
+2018-08-25 07:07:29,888 process          L0605 INFO | Command '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200' finished with 0 after 3.94390296936s
+2018-08-25 07:07:29,923 hackbench        L0072 INFO | Iteration 61
+2018-08-25 07:07:29,923 process          L0523 INFO | Running '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200'
+2018-08-25 07:07:29,929 process          L0367 DEBUG| [stdout] Running with 200*40 (== 8000) tasks.
+2018-08-25 07:07:33,572 process          L0367 DEBUG| [stdout] Time: 3.141
+2018-08-25 07:07:33,572 process          L0605 INFO | Command '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200' finished with 0 after 3.6447520256s
+2018-08-25 07:07:33,606 hackbench        L0072 INFO | Iteration 62
+2018-08-25 07:07:33,607 process          L0523 INFO | Running '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200'
+2018-08-25 07:07:33,614 process          L0367 DEBUG| [stdout] Running with 200*40 (== 8000) tasks.
+2018-08-25 07:07:37,853 process          L0367 DEBUG| [stdout] Time: 3.705
+2018-08-25 07:07:37,854 process          L0605 INFO | Command '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200' finished with 0 after 4.24294495583s
+2018-08-25 07:07:37,881 hackbench        L0072 INFO | Iteration 63
+2018-08-25 07:07:37,882 process          L0523 INFO | Running '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200'
+2018-08-25 07:07:37,889 process          L0367 DEBUG| [stdout] Running with 200*40 (== 8000) tasks.
+2018-08-25 07:07:41,623 process          L0367 DEBUG| [stdout] Time: 3.229
+2018-08-25 07:07:41,623 process          L0605 INFO | Command '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200' finished with 0 after 3.73632097244s
+2018-08-25 07:07:41,656 hackbench        L0072 INFO | Iteration 64
+2018-08-25 07:07:41,657 process          L0523 INFO | Running '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200'
+2018-08-25 07:07:41,661 process          L0367 DEBUG| [stdout] Running with 200*40 (== 8000) tasks.
+2018-08-25 07:07:45,658 process          L0367 DEBUG| [stdout] Time: 3.446
+2018-08-25 07:07:45,658 process          L0605 INFO | Command '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200' finished with 0 after 3.99838399887s
+2018-08-25 07:07:45,690 hackbench        L0072 INFO | Iteration 65
+2018-08-25 07:07:45,690 process          L0523 INFO | Running '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200'
+2018-08-25 07:07:45,698 process          L0367 DEBUG| [stdout] Running with 200*40 (== 8000) tasks.
+2018-08-25 07:07:49,644 process          L0367 DEBUG| [stdout] Time: 3.386
+2018-08-25 07:07:49,644 process          L0605 INFO | Command '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200' finished with 0 after 3.94887304306s
+2018-08-25 07:07:49,673 hackbench        L0072 INFO | Iteration 66
+2018-08-25 07:07:49,674 process          L0523 INFO | Running '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200'
+2018-08-25 07:07:49,682 process          L0367 DEBUG| [stdout] Running with 200*40 (== 8000) tasks.
+2018-08-25 07:07:53,305 process          L0367 DEBUG| [stdout] Time: 3.125
+2018-08-25 07:07:53,305 process          L0605 INFO | Command '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200' finished with 0 after 3.62733507156s
+2018-08-25 07:07:53,340 hackbench        L0072 INFO | Iteration 67
+2018-08-25 07:07:53,341 process          L0523 INFO | Running '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200'
+2018-08-25 07:07:53,348 process          L0367 DEBUG| [stdout] Running with 200*40 (== 8000) tasks.
+2018-08-25 07:07:57,111 process          L0367 DEBUG| [stdout] Time: 3.217
+2018-08-25 07:07:57,111 process          L0605 INFO | Command '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200' finished with 0 after 3.76516604424s
+2018-08-25 07:07:57,157 hackbench        L0072 INFO | Iteration 68
+2018-08-25 07:07:57,157 process          L0523 INFO | Running '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200'
+2018-08-25 07:07:57,164 process          L0367 DEBUG| [stdout] Running with 200*40 (== 8000) tasks.
+2018-08-25 07:08:00,612 process          L0367 DEBUG| [stdout] Time: 2.947
+2018-08-25 07:08:00,613 process          L0605 INFO | Command '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200' finished with 0 after 3.45105886459s
+2018-08-25 07:08:00,648 hackbench        L0072 INFO | Iteration 69
+2018-08-25 07:08:00,649 process          L0523 INFO | Running '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200'
+2018-08-25 07:08:00,653 process          L0367 DEBUG| [stdout] Running with 200*40 (== 8000) tasks.
+2018-08-25 07:08:04,387 process          L0367 DEBUG| [stdout] Time: 3.133
+2018-08-25 07:08:04,388 process          L0605 INFO | Command '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200' finished with 0 after 3.73585891724s
+2018-08-25 07:08:04,423 hackbench        L0072 INFO | Iteration 70
+2018-08-25 07:08:04,424 process          L0523 INFO | Running '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200'
+2018-08-25 07:08:04,431 process          L0367 DEBUG| [stdout] Running with 200*40 (== 8000) tasks.
+2018-08-25 07:08:08,167 process          L0605 INFO | Command '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200' finished with 0 after 3.73839402199s
+2018-08-25 07:08:08,167 process          L0367 DEBUG| [stdout] Time: 3.025
+2018-08-25 07:08:08,198 hackbench        L0072 INFO | Iteration 71
+2018-08-25 07:08:08,199 process          L0523 INFO | Running '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200'
+2018-08-25 07:08:08,206 process          L0367 DEBUG| [stdout] Running with 200*40 (== 8000) tasks.
+2018-08-25 07:08:11,988 process          L0367 DEBUG| [stdout] Time: 3.191
+2018-08-25 07:08:11,988 process          L0605 INFO | Command '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200' finished with 0 after 3.784471035s
+2018-08-25 07:08:12,023 hackbench        L0072 INFO | Iteration 72
+2018-08-25 07:08:12,024 process          L0523 INFO | Running '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200'
+2018-08-25 07:08:12,031 process          L0367 DEBUG| [stdout] Running with 200*40 (== 8000) tasks.
+2018-08-25 07:08:15,936 process          L0367 DEBUG| [stdout] Time: 3.317
+2018-08-25 07:08:15,937 process          L0605 INFO | Command '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200' finished with 0 after 3.90741086006s
+2018-08-25 07:08:15,973 hackbench        L0072 INFO | Iteration 73
+2018-08-25 07:08:15,974 process          L0523 INFO | Running '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200'
+2018-08-25 07:08:15,982 process          L0367 DEBUG| [stdout] Running with 200*40 (== 8000) tasks.
+2018-08-25 07:08:20,012 process          L0367 DEBUG| [stdout] Time: 3.420
+2018-08-25 07:08:20,013 process          L0605 INFO | Command '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200' finished with 0 after 4.03349804878s
+2018-08-25 07:08:20,048 hackbench        L0072 INFO | Iteration 74
+2018-08-25 07:08:20,049 process          L0523 INFO | Running '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200'
+2018-08-25 07:08:20,056 process          L0367 DEBUG| [stdout] Running with 200*40 (== 8000) tasks.
+2018-08-25 07:08:22,462 process          L0367 DEBUG| [stdout] Time: 1.933
+2018-08-25 07:08:22,463 process          L0605 INFO | Command '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200' finished with 0 after 2.40832209587s
+2018-08-25 07:08:22,498 hackbench        L0072 INFO | Iteration 75
+2018-08-25 07:08:22,499 process          L0523 INFO | Running '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200'
+2018-08-25 07:08:22,506 process          L0367 DEBUG| [stdout] Running with 200*40 (== 8000) tasks.
+2018-08-25 07:08:25,053 process          L0367 DEBUG| [stdout] Time: 2.021
+2018-08-25 07:08:25,054 process          L0605 INFO | Command '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200' finished with 0 after 2.54948401451s
+2018-08-25 07:08:25,090 hackbench        L0072 INFO | Iteration 76
+2018-08-25 07:08:25,091 process          L0523 INFO | Running '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200'
+2018-08-25 07:08:25,097 process          L0367 DEBUG| [stdout] Running with 200*40 (== 8000) tasks.
+2018-08-25 07:08:27,602 process          L0367 DEBUG| [stdout] Time: 1.991
+2018-08-25 07:08:27,603 process          L0605 INFO | Command '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200' finished with 0 after 2.50863599777s
+2018-08-25 07:08:27,640 hackbench        L0072 INFO | Iteration 77
+2018-08-25 07:08:27,641 process          L0523 INFO | Running '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200'
+2018-08-25 07:08:27,647 process          L0367 DEBUG| [stdout] Running with 200*40 (== 8000) tasks.
+2018-08-25 07:08:30,333 process          L0605 INFO | Command '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200' finished with 0 after 2.68786001205s
+2018-08-25 07:08:30,333 process          L0367 DEBUG| [stdout] Time: 2.163
+2018-08-25 07:08:30,365 hackbench        L0072 INFO | Iteration 78
+2018-08-25 07:08:30,366 process          L0523 INFO | Running '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200'
+2018-08-25 07:08:30,373 process          L0367 DEBUG| [stdout] Running with 200*40 (== 8000) tasks.
+2018-08-25 07:08:32,922 process          L0367 DEBUG| [stdout] Time: 2.044
+2018-08-25 07:08:32,922 process          L0605 INFO | Command '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200' finished with 0 after 2.55107092857s
+2018-08-25 07:08:32,957 hackbench        L0072 INFO | Iteration 79
+2018-08-25 07:08:32,957 process          L0523 INFO | Running '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200'
+2018-08-25 07:08:32,966 process          L0367 DEBUG| [stdout] Running with 200*40 (== 8000) tasks.
+2018-08-25 07:08:35,441 process          L0367 DEBUG| [stdout] Time: 1.965
+2018-08-25 07:08:35,441 process          L0605 INFO | Command '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200' finished with 0 after 2.48018789291s
+2018-08-25 07:08:35,474 hackbench        L0072 INFO | Iteration 80
+2018-08-25 07:08:35,474 process          L0523 INFO | Running '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200'
+2018-08-25 07:08:35,482 process          L0367 DEBUG| [stdout] Running with 200*40 (== 8000) tasks.
+2018-08-25 07:08:38,098 process          L0367 DEBUG| [stdout] Time: 2.051
+2018-08-25 07:08:38,098 process          L0605 INFO | Command '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200' finished with 0 after 2.61889314651s
+2018-08-25 07:08:38,132 hackbench        L0072 INFO | Iteration 81
+2018-08-25 07:08:38,132 process          L0523 INFO | Running '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200'
+2018-08-25 07:08:38,142 process          L0367 DEBUG| [stdout] Running with 200*40 (== 8000) tasks.
+2018-08-25 07:08:40,775 process          L0367 DEBUG| [stdout] Time: 2.046
+2018-08-25 07:08:40,775 process          L0605 INFO | Command '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200' finished with 0 after 2.63797020912s
+2018-08-25 07:08:40,807 hackbench        L0072 INFO | Iteration 82
+2018-08-25 07:08:40,808 process          L0523 INFO | Running '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200'
+2018-08-25 07:08:40,815 process          L0367 DEBUG| [stdout] Running with 200*40 (== 8000) tasks.
+2018-08-25 07:08:43,484 process          L0367 DEBUG| [stdout] Time: 2.057
+2018-08-25 07:08:43,484 process          L0605 INFO | Command '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200' finished with 0 after 2.67115402222s
+2018-08-25 07:08:43,515 hackbench        L0072 INFO | Iteration 83
+2018-08-25 07:08:43,516 process          L0523 INFO | Running '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200'
+2018-08-25 07:08:43,523 process          L0367 DEBUG| [stdout] Running with 200*40 (== 8000) tasks.
+2018-08-25 07:08:46,101 process          L0367 DEBUG| [stdout] Time: 2.078
+2018-08-25 07:08:46,102 process          L0605 INFO | Command '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200' finished with 0 after 2.5802628994s
+2018-08-25 07:08:46,132 hackbench        L0072 INFO | Iteration 84
+2018-08-25 07:08:46,132 process          L0523 INFO | Running '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200'
+2018-08-25 07:08:46,139 process          L0367 DEBUG| [stdout] Running with 200*40 (== 8000) tasks.
+2018-08-25 07:08:48,728 process          L0367 DEBUG| [stdout] Time: 1.997
+2018-08-25 07:08:48,728 process          L0605 INFO | Command '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200' finished with 0 after 2.59049797058s
+2018-08-25 07:08:48,766 hackbench        L0072 INFO | Iteration 85
+2018-08-25 07:08:48,766 process          L0523 INFO | Running '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200'
+2018-08-25 07:08:48,774 process          L0367 DEBUG| [stdout] Running with 200*40 (== 8000) tasks.
+2018-08-25 07:08:51,498 process          L0367 DEBUG| [stdout] Time: 2.106
+2018-08-25 07:08:51,499 process          L0605 INFO | Command '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200' finished with 0 after 2.72725892067s
+2018-08-25 07:08:51,532 hackbench        L0072 INFO | Iteration 86
+2018-08-25 07:08:51,533 process          L0523 INFO | Running '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200'
+2018-08-25 07:08:51,540 process          L0367 DEBUG| [stdout] Running with 200*40 (== 8000) tasks.
+2018-08-25 07:08:54,130 process          L0367 DEBUG| [stdout] Time: 2.033
+2018-08-25 07:08:54,131 process          L0605 INFO | Command '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200' finished with 0 after 2.59341192245s
+2018-08-25 07:08:54,166 hackbench        L0072 INFO | Iteration 87
+2018-08-25 07:08:54,166 process          L0523 INFO | Running '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200'
+2018-08-25 07:08:54,173 process          L0367 DEBUG| [stdout] Running with 200*40 (== 8000) tasks.
+2018-08-25 07:08:56,925 process          L0367 DEBUG| [stdout] Time: 2.147
+2018-08-25 07:08:56,925 process          L0605 INFO | Command '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200' finished with 0 after 2.75455188751s
+2018-08-25 07:08:56,957 hackbench        L0072 INFO | Iteration 88
+2018-08-25 07:08:56,958 process          L0523 INFO | Running '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200'
+2018-08-25 07:08:56,965 process          L0367 DEBUG| [stdout] Running with 200*40 (== 8000) tasks.
+2018-08-25 07:08:59,830 process          L0367 DEBUG| [stdout] Time: 2.332
+2018-08-25 07:08:59,830 process          L0605 INFO | Command '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200' finished with 0 after 2.86794090271s
+2018-08-25 07:08:59,866 hackbench        L0072 INFO | Iteration 89
+2018-08-25 07:08:59,866 process          L0523 INFO | Running '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200'
+2018-08-25 07:08:59,874 process          L0367 DEBUG| [stdout] Running with 200*40 (== 8000) tasks.
+2018-08-25 07:09:02,575 process          L0367 DEBUG| [stdout] Time: 2.068
+2018-08-25 07:09:02,576 process          L0605 INFO | Command '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200' finished with 0 after 2.70424413681s
+2018-08-25 07:09:02,607 hackbench        L0072 INFO | Iteration 90
+2018-08-25 07:09:02,608 process          L0523 INFO | Running '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200'
+2018-08-25 07:09:02,615 process          L0367 DEBUG| [stdout] Running with 200*40 (== 8000) tasks.
+2018-08-25 07:09:05,335 process          L0367 DEBUG| [stdout] Time: 2.140
+2018-08-25 07:09:05,335 process          L0605 INFO | Command '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200' finished with 0 after 2.72242212296s
+2018-08-25 07:09:05,374 hackbench        L0072 INFO | Iteration 91
+2018-08-25 07:09:05,375 process          L0523 INFO | Running '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200'
+2018-08-25 07:09:05,381 process          L0367 DEBUG| [stdout] Running with 200*40 (== 8000) tasks.
+2018-08-25 07:09:08,123 process          L0367 DEBUG| [stdout] Time: 2.213
+2018-08-25 07:09:08,123 process          L0605 INFO | Command '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200' finished with 0 after 2.74389815331s
+2018-08-25 07:09:08,157 hackbench        L0072 INFO | Iteration 92
+2018-08-25 07:09:08,158 process          L0523 INFO | Running '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200'
+2018-08-25 07:09:08,163 process          L0367 DEBUG| [stdout] Running with 200*40 (== 8000) tasks.
+2018-08-25 07:09:10,738 process          L0367 DEBUG| [stdout] Time: 2.018
+2018-08-25 07:09:10,738 process          L0605 INFO | Command '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200' finished with 0 after 2.57582807541s
+2018-08-25 07:09:10,774 hackbench        L0072 INFO | Iteration 93
+2018-08-25 07:09:10,775 process          L0523 INFO | Running '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200'
+2018-08-25 07:09:10,781 process          L0367 DEBUG| [stdout] Running with 200*40 (== 8000) tasks.
+2018-08-25 07:09:13,347 process          L0367 DEBUG| [stdout] Time: 2.028
+2018-08-25 07:09:13,348 process          L0605 INFO | Command '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200' finished with 0 after 2.56821393967s
+2018-08-25 07:09:13,382 hackbench        L0072 INFO | Iteration 94
+2018-08-25 07:09:13,383 process          L0523 INFO | Running '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200'
+2018-08-25 07:09:13,388 process          L0367 DEBUG| [stdout] Running with 200*40 (== 8000) tasks.
+2018-08-25 07:09:15,742 process          L0367 DEBUG| [stdout] Time: 1.812
+2018-08-25 07:09:15,742 process          L0605 INFO | Command '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200' finished with 0 after 2.35542798042s
+2018-08-25 07:09:15,774 hackbench        L0072 INFO | Iteration 95
+2018-08-25 07:09:15,774 process          L0523 INFO | Running '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200'
+2018-08-25 07:09:15,778 process          L0367 DEBUG| [stdout] Running with 200*40 (== 8000) tasks.
+2018-08-25 07:09:18,168 process          L0367 DEBUG| [stdout] Time: 1.907
+2018-08-25 07:09:18,168 process          L0605 INFO | Command '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200' finished with 0 after 2.39175009727s
+2018-08-25 07:09:18,216 hackbench        L0072 INFO | Iteration 96
+2018-08-25 07:09:18,216 process          L0523 INFO | Running '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200'
+2018-08-25 07:09:18,220 process          L0367 DEBUG| [stdout] Running with 200*40 (== 8000) tasks.
+2018-08-25 07:09:20,935 process          L0367 DEBUG| [stdout] Time: 2.081
+2018-08-25 07:09:20,935 process          L0605 INFO | Command '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200' finished with 0 after 2.71597194672s
+2018-08-25 07:09:20,983 hackbench        L0072 INFO | Iteration 97
+2018-08-25 07:09:20,983 process          L0523 INFO | Running '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200'
+2018-08-25 07:09:20,989 process          L0367 DEBUG| [stdout] Running with 200*40 (== 8000) tasks.
+2018-08-25 07:09:23,695 process          L0605 INFO | Command '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200' finished with 0 after 2.70756006241s
+2018-08-25 07:09:23,694 process          L0367 DEBUG| [stdout] Time: 2.186
+2018-08-25 07:09:23,741 hackbench        L0072 INFO | Iteration 98
+2018-08-25 07:09:23,741 process          L0523 INFO | Running '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200'
+2018-08-25 07:09:23,748 process          L0367 DEBUG| [stdout] Running with 200*40 (== 8000) tasks.
+2018-08-25 07:09:26,129 process          L0367 DEBUG| [stdout] Time: 1.859
+2018-08-25 07:09:26,129 process          L0605 INFO | Command '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200' finished with 0 after 2.38369894028s
+2018-08-25 07:09:26,175 hackbench        L0072 INFO | Iteration 99
+2018-08-25 07:09:26,175 process          L0523 INFO | Running '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200'
+2018-08-25 07:09:26,183 process          L0367 DEBUG| [stdout] Running with 200*40 (== 8000) tasks.
+2018-08-25 07:09:28,908 process          L0367 DEBUG| [stdout] Time: 2.124
+2018-08-25 07:09:28,909 process          L0605 INFO | Command '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200' finished with 0 after 2.72821903229s
+2018-08-25 07:09:28,941 hackbench        L0072 INFO | Iteration 100
+2018-08-25 07:09:28,942 process          L0523 INFO | Running '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200'
+2018-08-25 07:09:28,949 process          L0367 DEBUG| [stdout] Running with 200*40 (== 8000) tasks.
+2018-08-25 07:09:31,496 process          L0367 DEBUG| [stdout] Time: 2.005
+2018-08-25 07:09:31,496 process          L0605 INFO | Command '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200' finished with 0 after 2.54974889755s
+2018-08-25 07:09:31,541 hackbench        L0072 INFO | Iteration 101
+2018-08-25 07:09:31,542 process          L0523 INFO | Running '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200'
+2018-08-25 07:09:31,549 process          L0367 DEBUG| [stdout] Running with 200*40 (== 8000) tasks.
+2018-08-25 07:09:34,180 process          L0367 DEBUG| [stdout] Time: 2.079
+2018-08-25 07:09:34,181 process          L0605 INFO | Command '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200' finished with 0 after 2.633425951s
+2018-08-25 07:09:34,216 hackbench        L0072 INFO | Iteration 102
+2018-08-25 07:09:34,217 process          L0523 INFO | Running '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200'
+2018-08-25 07:09:34,224 process          L0367 DEBUG| [stdout] Running with 200*40 (== 8000) tasks.
+2018-08-25 07:09:37,004 process          L0367 DEBUG| [stdout] Time: 2.164
+2018-08-25 07:09:37,005 process          L0605 INFO | Command '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200' finished with 0 after 2.78259897232s
+2018-08-25 07:09:37,041 hackbench        L0072 INFO | Iteration 103
+2018-08-25 07:09:37,042 process          L0523 INFO | Running '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200'
+2018-08-25 07:09:37,048 process          L0367 DEBUG| [stdout] Running with 200*40 (== 8000) tasks.
+2018-08-25 07:09:39,848 process          L0367 DEBUG| [stdout] Time: 2.253
+2018-08-25 07:09:39,848 process          L0605 INFO | Command '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200' finished with 0 after 2.80155920982s
+2018-08-25 07:09:39,883 hackbench        L0072 INFO | Iteration 104
+2018-08-25 07:09:39,883 process          L0523 INFO | Running '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200'
+2018-08-25 07:09:39,890 process          L0367 DEBUG| [stdout] Running with 200*40 (== 8000) tasks.
+2018-08-25 07:09:42,708 process          L0367 DEBUG| [stdout] Time: 2.272
+2018-08-25 07:09:42,708 process          L0605 INFO | Command '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200' finished with 0 after 2.82002592087s
+2018-08-25 07:09:42,741 hackbench        L0072 INFO | Iteration 105
+2018-08-25 07:09:42,742 process          L0523 INFO | Running '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200'
+2018-08-25 07:09:42,749 process          L0367 DEBUG| [stdout] Running with 200*40 (== 8000) tasks.
+2018-08-25 07:09:45,236 process          L0605 INFO | Command '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200' finished with 0 after 2.48873400688s
+2018-08-25 07:09:45,236 process          L0367 DEBUG| [stdout] Time: 1.958
+2018-08-25 07:09:45,283 hackbench        L0072 INFO | Iteration 106
+2018-08-25 07:09:45,284 process          L0523 INFO | Running '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200'
+2018-08-25 07:09:45,291 process          L0367 DEBUG| [stdout] Running with 200*40 (== 8000) tasks.
+2018-08-25 07:09:47,831 process          L0367 DEBUG| [stdout] Time: 1.985
+2018-08-25 07:09:47,832 process          L0605 INFO | Command '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200' finished with 0 after 2.54264998436s
+2018-08-25 07:09:47,866 hackbench        L0072 INFO | Iteration 107
+2018-08-25 07:09:47,867 process          L0523 INFO | Running '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200'
+2018-08-25 07:09:47,873 process          L0367 DEBUG| [stdout] Running with 200*40 (== 8000) tasks.
+2018-08-25 07:09:50,417 process          L0367 DEBUG| [stdout] Time: 2.015
+2018-08-25 07:09:50,417 process          L0605 INFO | Command '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200' finished with 0 after 2.54618191719s
+2018-08-25 07:09:50,466 hackbench        L0072 INFO | Iteration 108
+2018-08-25 07:09:50,467 process          L0523 INFO | Running '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200'
+2018-08-25 07:09:50,473 process          L0367 DEBUG| [stdout] Running with 200*40 (== 8000) tasks.
+2018-08-25 07:09:53,129 process          L0367 DEBUG| [stdout] Time: 2.158
+2018-08-25 07:09:53,129 process          L0605 INFO | Command '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200' finished with 0 after 2.65744614601s
+2018-08-25 07:09:53,158 hackbench        L0072 INFO | Iteration 109
+2018-08-25 07:09:53,159 process          L0523 INFO | Running '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200'
+2018-08-25 07:09:53,166 process          L0367 DEBUG| [stdout] Running with 200*40 (== 8000) tasks.
+2018-08-25 07:09:55,600 process          L0367 DEBUG| [stdout] Time: 1.944
+2018-08-25 07:09:55,600 process          L0605 INFO | Command '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200' finished with 0 after 2.43675112724s
+2018-08-25 07:09:55,642 hackbench        L0072 INFO | Iteration 110
+2018-08-25 07:09:55,642 process          L0523 INFO | Running '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200'
+2018-08-25 07:09:55,649 process          L0367 DEBUG| [stdout] Running with 200*40 (== 8000) tasks.
+2018-08-25 07:09:58,391 process          L0367 DEBUG| [stdout] Time: 2.232
+2018-08-25 07:09:58,391 process          L0605 INFO | Command '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200' finished with 0 after 2.74422979355s
+2018-08-25 07:09:58,425 hackbench        L0072 INFO | Iteration 111
+2018-08-25 07:09:58,426 process          L0523 INFO | Running '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200'
+2018-08-25 07:09:58,433 process          L0367 DEBUG| [stdout] Running with 200*40 (== 8000) tasks.
+2018-08-25 07:10:00,898 process          L0367 DEBUG| [stdout] Time: 1.946
+2018-08-25 07:10:00,898 process          L0605 INFO | Command '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200' finished with 0 after 2.46736598015s
+2018-08-25 07:10:00,933 hackbench        L0072 INFO | Iteration 112
+2018-08-25 07:10:00,934 process          L0523 INFO | Running '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200'
+2018-08-25 07:10:00,941 process          L0367 DEBUG| [stdout] Running with 200*40 (== 8000) tasks.
+2018-08-25 07:10:03,251 process          L0367 DEBUG| [stdout] Time: 1.788
+2018-08-25 07:10:03,252 process          L0605 INFO | Command '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200' finished with 0 after 2.31293582916s
+2018-08-25 07:10:03,292 hackbench        L0072 INFO | Iteration 113
+2018-08-25 07:10:03,293 process          L0523 INFO | Running '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200'
+2018-08-25 07:10:03,300 process          L0367 DEBUG| [stdout] Running with 200*40 (== 8000) tasks.
+2018-08-25 07:10:05,991 process          L0367 DEBUG| [stdout] Time: 2.184
+2018-08-25 07:10:05,992 process          L0605 INFO | Command '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200' finished with 0 after 2.69402194023s
+2018-08-25 07:10:06,033 hackbench        L0072 INFO | Iteration 114
+2018-08-25 07:10:06,034 process          L0523 INFO | Running '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200'
+2018-08-25 07:10:06,039 process          L0367 DEBUG| [stdout] Running with 200*40 (== 8000) tasks.
+2018-08-25 07:10:08,729 process          L0367 DEBUG| [stdout] Time: 2.176
+2018-08-25 07:10:08,729 process          L0605 INFO | Command '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200' finished with 0 after 2.69140291214s
+2018-08-25 07:10:08,767 hackbench        L0072 INFO | Iteration 115
+2018-08-25 07:10:08,767 process          L0523 INFO | Running '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200'
+2018-08-25 07:10:08,770 process          L0367 DEBUG| [stdout] Running with 200*40 (== 8000) tasks.
+2018-08-25 07:10:11,230 process          L0367 DEBUG| [stdout] Time: 1.859
+2018-08-25 07:10:11,231 process          L0605 INFO | Command '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200' finished with 0 after 2.46162295341s
+2018-08-25 07:10:11,267 hackbench        L0072 INFO | Iteration 116
+2018-08-25 07:10:11,267 process          L0523 INFO | Running '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200'
+2018-08-25 07:10:11,273 process          L0367 DEBUG| [stdout] Running with 200*40 (== 8000) tasks.
+2018-08-25 07:10:13,719 process          L0367 DEBUG| [stdout] Time: 1.912
+2018-08-25 07:10:13,719 process          L0605 INFO | Command '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200' finished with 0 after 2.44758296013s
+2018-08-25 07:10:13,759 hackbench        L0072 INFO | Iteration 117
+2018-08-25 07:10:13,759 process          L0523 INFO | Running '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200'
+2018-08-25 07:10:13,770 process          L0367 DEBUG| [stdout] Running with 200*40 (== 8000) tasks.
+2018-08-25 07:10:16,492 process          L0367 DEBUG| [stdout] Time: 2.129
+2018-08-25 07:10:16,493 process          L0605 INFO | Command '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200' finished with 0 after 2.72807502747s
+2018-08-25 07:10:16,534 hackbench        L0072 INFO | Iteration 118
+2018-08-25 07:10:16,534 process          L0523 INFO | Running '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200'
+2018-08-25 07:10:16,542 process          L0367 DEBUG| [stdout] Running with 200*40 (== 8000) tasks.
+2018-08-25 07:10:19,055 process          L0367 DEBUG| [stdout] Time: 1.953
+2018-08-25 07:10:19,056 process          L0605 INFO | Command '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200' finished with 0 after 2.51690196991s
+2018-08-25 07:10:19,092 hackbench        L0072 INFO | Iteration 119
+2018-08-25 07:10:19,093 process          L0523 INFO | Running '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200'
+2018-08-25 07:10:19,099 process          L0367 DEBUG| [stdout] Running with 200*40 (== 8000) tasks.
+2018-08-25 07:10:21,575 process          L0367 DEBUG| [stdout] Time: 1.977
+2018-08-25 07:10:21,575 process          L0605 INFO | Command '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200' finished with 0 after 2.47781300545s
+2018-08-25 07:10:21,617 hackbench        L0072 INFO | Iteration 120
+2018-08-25 07:10:21,618 process          L0523 INFO | Running '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200'
+2018-08-25 07:10:21,624 process          L0367 DEBUG| [stdout] Running with 200*40 (== 8000) tasks.
+2018-08-25 07:10:24,343 process          L0367 DEBUG| [stdout] Time: 2.228
+2018-08-25 07:10:24,343 process          L0605 INFO | Command '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200' finished with 0 after 2.72108006477s
+2018-08-25 07:10:24,384 hackbench        L0072 INFO | Iteration 121
+2018-08-25 07:10:24,384 process          L0523 INFO | Running '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200'
+2018-08-25 07:10:24,389 process          L0367 DEBUG| [stdout] Running with 200*40 (== 8000) tasks.
+2018-08-25 07:10:27,200 process          L0367 DEBUG| [stdout] Time: 2.266
+2018-08-25 07:10:27,201 process          L0605 INFO | Command '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200' finished with 0 after 2.81291103363s
+2018-08-25 07:10:27,242 hackbench        L0072 INFO | Iteration 122
+2018-08-25 07:10:27,243 process          L0523 INFO | Running '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200'
+2018-08-25 07:10:27,250 process          L0367 DEBUG| [stdout] Running with 200*40 (== 8000) tasks.
+2018-08-25 07:10:29,975 process          L0367 DEBUG| [stdout] Time: 2.170
+2018-08-25 07:10:29,975 process          L0605 INFO | Command '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200' finished with 0 after 2.72726607323s
+2018-08-25 07:10:30,010 hackbench        L0072 INFO | Iteration 123
+2018-08-25 07:10:30,011 process          L0523 INFO | Running '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200'
+2018-08-25 07:10:30,018 process          L0367 DEBUG| [stdout] Running with 200*40 (== 8000) tasks.
+2018-08-25 07:10:32,573 process          L0605 INFO | Command '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200' finished with 0 after 2.55719304085s
+2018-08-25 07:10:32,573 process          L0367 DEBUG| [stdout] Time: 2.057
+2018-08-25 07:10:32,610 hackbench        L0072 INFO | Iteration 124
+2018-08-25 07:10:32,611 process          L0523 INFO | Running '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200'
+2018-08-25 07:10:32,617 process          L0367 DEBUG| [stdout] Running with 200*40 (== 8000) tasks.
+2018-08-25 07:10:35,123 process          L0367 DEBUG| [stdout] Time: 1.886
+2018-08-25 07:10:35,124 process          L0605 INFO | Command '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200' finished with 0 after 2.50793004036s
+2018-08-25 07:10:35,160 hackbench        L0072 INFO | Iteration 125
+2018-08-25 07:10:35,161 process          L0523 INFO | Running '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200'
+2018-08-25 07:10:35,165 process          L0367 DEBUG| [stdout] Running with 200*40 (== 8000) tasks.
+2018-08-25 07:10:37,832 process          L0367 DEBUG| [stdout] Time: 2.086
+2018-08-25 07:10:37,832 process          L0605 INFO | Command '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200' finished with 0 after 2.66740107536s
+2018-08-25 07:10:37,869 hackbench        L0072 INFO | Iteration 126
+2018-08-25 07:10:37,869 process          L0523 INFO | Running '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200'
+2018-08-25 07:10:37,876 process          L0367 DEBUG| [stdout] Running with 200*40 (== 8000) tasks.
+2018-08-25 07:10:40,422 process          L0367 DEBUG| [stdout] Time: 2.019
+2018-08-25 07:10:40,422 process          L0605 INFO | Command '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200' finished with 0 after 2.54779601097s
+2018-08-25 07:10:40,452 hackbench        L0072 INFO | Iteration 127
+2018-08-25 07:10:40,452 process          L0523 INFO | Running '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200'
+2018-08-25 07:10:40,459 process          L0367 DEBUG| [stdout] Running with 200*40 (== 8000) tasks.
+2018-08-25 07:10:43,092 process          L0367 DEBUG| [stdout] Time: 2.044
+2018-08-25 07:10:43,093 process          L0605 INFO | Command '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200' finished with 0 after 2.63523101807s
+2018-08-25 07:10:43,185 hackbench        L0072 INFO | Iteration 128
+2018-08-25 07:10:43,186 process          L0523 INFO | Running '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200'
+2018-08-25 07:10:43,193 process          L0367 DEBUG| [stdout] Running with 200*40 (== 8000) tasks.
+2018-08-25 07:10:45,890 process          L0367 DEBUG| [stdout] Time: 2.049
+2018-08-25 07:10:45,890 process          L0605 INFO | Command '/var/tmp/avocado_C_w2zl/1-avocado-misc-tests_perf_hackbench.py_Hackbench.test_default-runargs-47bc/src/hackbench 200' finished with 0 after 2.69917917252s
+2018-08-25 07:10:45,927 hackbench        L0080 INFO | Time Taken:353.952
+2018-08-25 07:10:45,928 test             L0286 DEBUG| DATA (filename=output.expected) => NOT FOUND (data sources: variant, test, file)
+2018-08-25 07:10:45,928 test             L0286 DEBUG| DATA (filename=stdout.expected) => NOT FOUND (data sources: variant, test, file)
+2018-08-25 07:10:45,928 test             L0286 DEBUG| DATA (filename=stderr.expected) => NOT FOUND (data sources: variant, test, file)
+2018-08-25 07:10:45,948 test             L1017 INFO | PASS 1-avocado-misc-tests/perf/hackbench.py:Hackbench.test;default-runargs-47bc
+2018-08-25 07:10:45,948 test             L1000 INFO | 
+2018-08-25 07:10:46,128 job              L0483 INFO | Test results available in /home/jenkins/avocado/job-results/job-2018-08-25T07.03-35dfa3c

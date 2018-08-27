@@ -36,13 +36,21 @@
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command># Get list of resources locked by this build.
+      <command># Template0_20180824
+
+# Get list of resources locked by this build.
 RESOURCES=${RESOURCES:-$(cd ${JENKINS_HOME} &amp;&amp; ./resourceslockedby.py ${JOB_BASE_NAME}#${BUILD_NUMBER})}
+
+# Kernel git repository to use:
+KERNELREPO=${KERNELREPO:-&quot;https://github.com/torvalds/linux.git&quot;}
 
 # Kernel version to use.
 KERNVER=${KERNVER:-$(echo ${JOB_BASE_NAME} | grep -oP &apos;(?&lt;=\.)v.+\..+(?=\.)&apos; || :;)}
 
 TIMEOUT=3600
+
+# Remove failure flags if any.
+rm -rf *.failed
 
 # Run test on each resource.
 for R in ${RESOURCES}; do
@@ -51,19 +59,19 @@ for R in ${RESOURCES}; do
 	(
 		# Insure resource provisioned for test.
 		if ! (cd ${JENKINS_HOME} &amp;&amp; ./checkresourceprovisioned.sh ${R}) &amp;&gt; ${R}.checkresourceprovisioned.log; then
+			touch ${R}.failed
 			# Continue on to the next resource if
 			# the provision-check fail on this resource.
 			continue
 		fi
 		# Check if a new kernel need to be installed.
-		if ssh -q jenkins@${R} &apos;./checkfornewkerneltag.sh https://github.com/torvalds/linux.git&apos; ${KERNVER} &amp;&gt; ${R}.checkfornewkerneltag.log; then
-			# Get the version built.
-            kernbuilt=$(ssh -q jenkins@${R} ls kernel/linux-image* | grep -oP &quot;(?&lt;=linux-image-).+(?=-jenkins_)&quot;)
-			# Reboot resource into kernel version built.
-			(cd ${JENKINS_HOME} &amp;&amp; ./rebootresource.sh jenkins@${R} ${kernbuilt} &amp;&gt; /dev/null)
-		fi
+		ssh -q jenkins@${R} ./checkfornewkerneltag.sh ${KERNELREPO} ${KERNVER} &amp;&gt; ${R}.checkfornewkerneltag.log || :;
+		# Get the last version built.
+		kernbuilt=$(ssh -q jenkins@${R} ls kernel/linux-image* | grep -oP &quot;(?&lt;=linux-image-).+(?=-jenkins_)&quot;)
+		# Reboot resource into last kernel version built.
+		(cd ${JENKINS_HOME} &amp;&amp; ./rebootresource.sh jenkins@${R} ${kernbuilt}) &amp;&gt; ${R}.rebootresource.log
 		echo &quot;${R}: $(ssh -q jenkins@${R} &apos;uname -r&apos;)&quot; &gt; ${R}.kernelrelease
-		timeout -sKILL ${TIMEOUT} ssh -q jenkins@${R} &amp;&gt; ${R}.ssh.log &lt;&lt;-EOF || :;
+		timeout -sKILL ${TIMEOUT} ssh -q jenkins@${R} &amp;&gt; ${R}.ssh.log &lt;&lt;-EOF || touch ${R}.failed
 			set -e
 			cat &gt; ${JOB_BASE_NAME}.yaml &lt;&lt;-NESTEDEOF
 				!mux
@@ -72,8 +80,8 @@ for R in ${RESOURCES}; do
 			NESTEDEOF
 			sudo avocado run ./avocado-misc-tests/perf/stress.py -m ${JOB_BASE_NAME}.yaml
 		EOF
-		if [ ${PIPESTATUS[0]} -eq 0 ]; then
-			AVOCADO_LOG_PATH=$(cat ${R}.ssh.log | fgrep &apos;JOB LOG&apos; | grep -oP &apos;(?&lt;=: ).+$&apos;)
+		AVOCADO_LOG_PATH=$(cat ${R}.ssh.log | fgrep &apos;JOB LOG&apos; | grep -oP &apos;(?&lt;=: ).+$&apos;)
+		if [ -n &quot;${AVOCADO_LOG_PATH}&quot; ]; then
 			scp jenkins@${R}:${AVOCADO_LOG_PATH} ${R}.avocado.log
 		fi
 	) &amp;
@@ -87,11 +95,15 @@ wait
 echo -n &quot;Kernel Release: &quot; &gt; kernelreleases
 for R in ${RESOURCES}; do
 	if [ -f ${R}.kernelrelease ]; then
-		echo -n &quot;$(cat ${R}.kernelrelease 2&gt;/dev/null | grep -oP &apos;.+(?=-jenkins)&apos;), &quot; &gt;&gt; kernelreleases
+		echo -n &quot;$(cat ${R}.kernelrelease 2&gt;/dev/null), &quot; &gt;&gt; kernelreleases
 	fi
 done
 truncate --size=-2 kernelreleases
 echo [$(cat kernelreleases)]
+
+# This is the last command so as
+# to be the script exit status.
+test ! -e *.failed
 </command>
     </hudson.tasks.Shell>
   </builders>
@@ -106,7 +118,7 @@ echo [$(cat kernelreleases)]
     </hudson.tasks.ArtifactArchiver>
     <hudson.plugins.descriptionsetter.DescriptionSetterPublisher plugin="description-setter@1.10">
       <regexp>(?&lt;=\[Kernel Release: ).+(?=\])</regexp>
-      <regexpForFailed></regexpForFailed>
+      <regexpForFailed>(?&lt;=\[Kernel Release: ).+(?=\])</regexpForFailed>
       <setForMatrix>false</setForMatrix>
     </hudson.plugins.descriptionsetter.DescriptionSetterPublisher>
   </publishers>

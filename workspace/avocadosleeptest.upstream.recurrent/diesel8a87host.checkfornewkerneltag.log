@@ -1,5 +1,18 @@
 + set -e
 + '[' 1 -eq 0 ']'
++ sudo apt remove -y '*-amdsos-*'
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Package 'linux-image-4.17.0-amdsos-build6+' is not installed, so not removed
+Package 'linux-image-4.16.0-amdsos-build2+' is not installed, so not removed
+Package 'linux-image-4.16.0-amdsos-build4+' is not installed, so not removed
+Package 'linux-image-4.16.0-amdsos-build1+' is not installed, so not removed
+Package 'linux-image-4.16.0-amdsos-build5+' is not installed, so not removed
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
 + mkdir -p kernel
 + cd kernel
 + '[' '!' -d linux ']'
@@ -7,11 +20,9 @@
 + git remote set-url origin https://github.com/torvalds/linux.git
 + git fetch --all --tags
 Fetching origin
-From https://github.com/torvalds/linux
-   778a33959a8a..c1fecabecc35  master     -> origin/master
 + '[' 1 -eq 2 -a -n '' ']'
 ++ git describe --tags --abbrev=0 origin/master
-+ latestkerneltag=v4.18
++ latestkerneltag=v4.19-rc1
 ++ cat latestkerneltag
-+ '[' v4.18 '!=' v4.18 ']'
++ '[' v4.19-rc1 '!=' v4.19-rc1 ']'
 + exit 1

@@ -13,8 +13,8 @@ if [ $# -eq 0 ]; then
 	exit $?
 fi
 
-# Remove any installed *-jenkins package.
-sudo apt remove -y *-jenkins
+# Remove any installed *-amdsos-* package.
+sudo apt remove -y *-amdsos-*
 
 mkdir -p kernel
 

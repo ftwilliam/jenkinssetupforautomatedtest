@@ -29,7 +29,9 @@
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command># Get list of resources locked by this build.
+      <command># Template1_20180824
+
+# Get list of resources locked by this build.
 RESOURCES=${RESOURCES:-$(cd ${JENKINS_HOME} &amp;&amp; ./resourceslockedby.py ${JOB_BASE_NAME}#${BUILD_NUMBER})}
 
 # Create csv header.
@@ -42,11 +44,11 @@ done
 truncate --size=-1 plot.csv
 echo &gt;&gt; plot.csv
 
-# Kernel version to use.
-KERNVER=${KERNVER:-$(echo ${JOB_BASE_NAME} | grep -oP &apos;(?&lt;=\.)v.+\..+(?=\.)&apos; || :;)}
-
 TIMEOUT=3600
 ITERATIONS=8
+
+# Remove failure flags if any.
+rm -rf *.failed
 
 # Run test on each resource.
 for R in ${RESOURCES}; do
@@ -57,7 +59,7 @@ for R in ${RESOURCES}; do
 		(cd ${JENKINS_HOME} &amp;&amp; ./rebootresource.sh jenkins@${R} &amp;&gt; /dev/null)
 		
 		echo &quot;${R}: $(ssh -q jenkins@${R} &apos;uname -r&apos;)&quot; &gt; ${R}.kernelrelease
-		timeout -sKILL ${TIMEOUT} ssh -q jenkins@${R} &amp;&gt; ${R}.ssh.log &lt;&lt;-EOF
+		timeout -sKILL ${TIMEOUT} ssh -q jenkins@${R} &amp;&gt; ${R}.ssh.log &lt;&lt;-EOF || touch ${R}.failed
 			set -e
 			cat &gt; ${JOB_BASE_NAME}.yaml &lt;&lt;-NESTEDEOF
 				iteration: !mux
@@ -66,9 +68,11 @@ for R in ${RESOURCES}; do
 			NESTEDEOF
 			sudo avocado run avocado-misc-tests/kernel/kernbench.py -m ${JOB_BASE_NAME}.yaml
 		EOF
-		if [ ${PIPESTATUS[0]} -eq 0 ]; then
 			AVOCADO_LOG_PATH=$(cat ${R}.ssh.log | fgrep &apos;JOB LOG&apos; | grep -oP &apos;(?&lt;=: ).+$&apos;)
+		if [ -n &quot;${AVOCADO_LOG_PATH}&quot; ]; then
 			scp jenkins@${R}:${AVOCADO_LOG_PATH} ${R}.avocado.log
+		fi
+		if [ ! -e ${R}.failed ]; then
 			CPUCNT=$(ssh -q jenkins@${R} grep -c &apos;^processor&apos; /proc/cpuinfo)
 			userplotval=$(echo \($(cat ${R}.avocado.log | fgrep &apos;User &apos; | grep -oP &apos;(?&lt;= : )[0-9.]+$&apos;) / ${ITERATIONS}\) / ${CPUCNT} | bc -l)
 			systemplotval=$(echo \($(cat ${R}.avocado.log | fgrep &apos;System &apos; | grep -oP &apos;(?&lt;= : )[0-9.]+$&apos;) / ${ITERATIONS}\) / ${CPUCNT} | bc -l)
@@ -114,6 +118,10 @@ for R in ${RESOURCES}; do
 done
 truncate --size=-1 plot.csv
 echo &gt;&gt; plot.csv
+
+# This is the last command so as
+# to be the script exit status.
+test ! -e *.failed
 </command>
     </hudson.tasks.Shell>
   </builders>
@@ -158,7 +166,7 @@ echo &gt;&gt; plot.csv
     </hudson.plugins.plot.PlotPublisher>
     <hudson.plugins.descriptionsetter.DescriptionSetterPublisher plugin="description-setter@1.10">
       <regexp>(?&lt;=\[Kernel Release: ).+(?=\])</regexp>
-      <regexpForFailed></regexpForFailed>
+      <regexpForFailed>(?&lt;=\[Kernel Release: ).+(?=\])</regexpForFailed>
       <setForMatrix>false</setForMatrix>
     </hudson.plugins.descriptionsetter.DescriptionSetterPublisher>
   </publishers>

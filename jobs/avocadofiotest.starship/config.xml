@@ -31,10 +31,10 @@
       <command># Get list of resources locked by this build.
 RESOURCES=${RESOURCES:-$(cd ${JENKINS_HOME} &amp;&amp; ./resourceslockedby.py ${JOB_BASE_NAME}#${BUILD_NUMBER})}
 
-# Kernel version to use.
-KERNVER=${KERNVER:-$(echo ${JOB_BASE_NAME} | grep -oP &apos;(?&lt;=\.)v.+\..+(?=\.)&apos; || :;)}
-
 TIMEOUT=1800
+
+# Remove failure flags if any.
+rm -rf *.failed
 
 # Run test on each resource.
 for R in ${RESOURCES}; do
@@ -45,11 +45,11 @@ for R in ${RESOURCES}; do
 		(cd ${JENKINS_HOME} &amp;&amp; ./rebootresource.sh jenkins@${R} &amp;&gt; /dev/null)
 		
 		echo &quot;${R}: $(ssh -q jenkins@${R} &apos;uname -r&apos;)&quot; &gt; ${R}.kernelrelease
-		timeout -sKILL ${TIMEOUT} ssh -q jenkins@${R} &amp;&gt; ${R}.ssh.log &lt;&lt;-EOF || :;
+		timeout -sKILL ${TIMEOUT} ssh -q jenkins@${R} &amp;&gt; ${R}.ssh.log &lt;&lt;-EOF || touch ${R}.failed
 			set -e
 			sudo avocado run avocado-misc-tests/io/disk/fiotest.py
 		EOF
-		if [ ${PIPESTATUS[0]} -eq 0 ]; then
+		if [ ! -e ${R}.failed ]; then
 			AVOCADO_LOG_PATH=$(cat ${R}.ssh.log | fgrep &apos;JOB LOG&apos; | grep -oP &apos;(?&lt;=: ).+$&apos;)
 			scp jenkins@${R}:${AVOCADO_LOG_PATH} ${R}.avocado.log
 		fi
@@ -69,6 +69,10 @@ for R in ${RESOURCES}; do
 done
 truncate --size=-2 kernelreleases
 echo [$(cat kernelreleases)]
+
+# This is the last command so as
+# to be the script exit status.
+test ! -e *.failed
 </command>
     </hudson.tasks.Shell>
   </builders>

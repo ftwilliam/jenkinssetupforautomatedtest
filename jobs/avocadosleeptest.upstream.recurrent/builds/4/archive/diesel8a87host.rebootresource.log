@@ -1,0 +1,36 @@
++ cd /var/lib/jenkins
++ ./rebootresource.sh jenkins@diesel8a87host 4.18.0
++ set -e
++ '[' 2 -eq 2 ']'
+++ echo -n 4.18.0
+++ sed 's/[.[\*^$()+?{|]/\\&/g'
++ kernver='4\.18\.0'
+++ ssh -q jenkins@diesel8a87host sudo cat /boot/grub/grub.cfg
+++ grep -P '(?<=menuentry '\'').+4\.18\.0(|.+)(?=-jenkins'\'')'
++ grubkernentry0='	menuentry '\''Ubuntu, with Linux 4.18.0-jenkins'\'' --class ubuntu --class gnu-linux --class gnu --class os $menuentry_id_option '\''gnulinux-4.18.0-jenkins-advanced-1da552ed-0b2b-4411-9a84-7db0d8c62e95'\'' {'
+++ echo -n menuentry ''\''Ubuntu,' with Linux '4.18.0-jenkins'\''' --class ubuntu --class gnu-linux --class gnu --class os '$menuentry_id_option' ''\''gnulinux-4.18.0-jenkins-advanced-1da552ed-0b2b-4411-9a84-7db0d8c62e95'\''' '{'
+++ grep -oP '(?<=menuentry_id_option '\'').+4\.18\.0(|.+)(?='\'' {)'
++ grubkernentry1=gnulinux-4.18.0-jenkins-advanced-1da552ed-0b2b-4411-9a84-7db0d8c62e95
+++ echo -n gnulinux-4.18.0-jenkins-advanced-1da552ed-0b2b-4411-9a84-7db0d8c62e95
+++ grep -oP '(?<=advanced-).+'
++ grubkernentry2=1da552ed-0b2b-4411-9a84-7db0d8c62e95
+++ echo -n gnulinux-4.18.0-jenkins-advanced-1da552ed-0b2b-4411-9a84-7db0d8c62e95
+++ sed 's/[.[\*^$]/\\&/g'
++ grubkernentry1='gnulinux-4\.18\.0-jenkins-advanced-1da552ed-0b2b-4411-9a84-7db0d8c62e95'
+++ echo -n 1da552ed-0b2b-4411-9a84-7db0d8c62e95
+++ sed 's/[.[\*^$]/\\&/g'
++ grubkernentry2=1da552ed-0b2b-4411-9a84-7db0d8c62e95
++ ssh -q jenkins@diesel8a87host sudo sed -i '/GRUB_DEFAULT=/c\GRUB_DEFAULT=\'\''gnulinux-advanced-1da552ed-0b2b-4411-9a84-7db0d8c62e95\>gnulinux-4\.18\.0-jenkins-advanced-1da552ed-0b2b-4411-9a84-7db0d8c62e95\'\''' /etc/default/grub
++ ssh -q jenkins@diesel8a87host sudo update-grub
+Generating grub configuration file ...
+Found linux image: /boot/vmlinuz-4.18.0-jenkins
+Found initrd image: /boot/initrd.img-4.18.0-jenkins
+Found linux image: /boot/vmlinuz-4.13.0-46-generic
+Found initrd image: /boot/initrd.img-4.13.0-46-generic
+Adding boot menu entry for EFI firmware configuration
+done
++ timeout -sKILL 60 ssh -q jenkins@diesel8a87host 'sync; sudo reboot -f'
+Rebooting.
+./rebootresource.sh: line 32: 20922 Killed                  timeout -sKILL 60 ssh -q $1 'sync; sudo reboot -f'
++ :
++ timeout -sKILL 60 ssh -q jenkins@diesel8a87host :

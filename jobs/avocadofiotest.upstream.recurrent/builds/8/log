@@ -1,0 +1,41 @@
+Started by user [8mha:////4P5oqbiDCv/29AmYake8E+zpu/gy/ryniUjftzEVtlv7AAAAmB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAy+EgYe/dLi1CL98pLE3KRUAMN7XeHBAAAA[0mTambe, William
+[lockable-resources] acquired lock on [diesel8a87host]
+Building in workspace /var/lib/jenkins/workspace/avocadofiotest.upstream.recurrent
+[WS-CLEANUP] Deleting project workspace...
+[WS-CLEANUP] Done
+[avocadofiotest.upstream.recurrent] $ /bin/sh -xe /tmp/jenkins2136770117680675711.sh
+++ cd /var/lib/jenkins
+++ ./resourceslockedby.py avocadofiotest.upstream.recurrent#8
++ RESOURCES=diesel8a87host
++ KERNELREPO=https://github.com/torvalds/linux.git
+++ echo avocadofiotest.upstream.recurrent
+++ grep -oP '(?<=\.)v.+\..+(?=\.)'
+++ :
++ KERNVER=
++ TIMEOUT=1800
++ for R in ${RESOURCES}
++ wait
++ ssh -q jenkins@diesel8a87host ./checkfornewkerneltag.sh https://github.com/torvalds/linux.git
++ :
+++ ssh -q jenkins@diesel8a87host ls 'kernel/linux-image*'
+++ grep -oP '(?<=linux-image-).+(?=-jenkins_)'
++ kernbuilt=4.18.0
+++ ssh -q jenkins@diesel8a87host 'uname -r'
++ echo 'diesel8a87host: 4.18.0-jenkins'
++ diesel8a87host.failed
+/tmp/jenkins2136770117680675711.sh: line 31: diesel8a87host.failed: command not found
++ echo -n 'Kernel Release: '
++ for R in ${RESOURCES}
++ '[' -f diesel8a87host.kernelrelease ']'
+++ cat diesel8a87host.kernelrelease
++ echo -n 'diesel8a87host: 4.18.0-jenkins, '
++ truncate --size=-2 kernelreleases
+++ cat kernelreleases
++ echo '[Kernel' Release: diesel8a87host: '4.18.0-jenkins]'
+[Kernel Release: diesel8a87host: 4.18.0-jenkins]
++ test -e '*.failed'
+Build step 'Execute shell' marked build as failure
+Archiving artifacts
+[description-setter] Description set: 
+[lockable-resources] released lock on [diesel8a87host]
+Finished: FAILURE

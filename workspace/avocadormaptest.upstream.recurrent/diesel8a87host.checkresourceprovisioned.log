@@ -5,5 +5,6 @@
 + ssh -q -o PasswordAuthentication=no -o StrictHostKeyChecking=no jenkins@diesel8a87host 'test ! -f checkfornewkerneltag.sh'
 + '[' 1 -eq 1 ']'
 + scp checkfornewkerneltag.sh jenkins@diesel8a87host:
++ scp checkfornewkerneldeb.sh jenkins@diesel8a87host:
 + scp checkfornewqemutag.sh jenkins@diesel8a87host:
 + exit

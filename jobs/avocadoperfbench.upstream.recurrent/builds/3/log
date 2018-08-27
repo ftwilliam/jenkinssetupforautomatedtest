@@ -1,0 +1,65 @@
+Started by timer
+[lockable-resources] acquired lock on [diesel8a87host]
+Building in workspace /var/lib/jenkins/workspace/avocadoperfbench.upstream.recurrent
+[WS-CLEANUP] Deleting project workspace...
+[WS-CLEANUP] Done
+[avocadoperfbench.upstream.recurrent] $ /bin/sh -xe /tmp/jenkins4424333005191086257.sh
+++ cd /var/lib/jenkins
+++ ./resourceslockedby.py avocadoperfbench.upstream.recurrent#3
++ RESOURCES=diesel8a87host
++ :
++ for R in ${RESOURCES}
++ echo -n '"diesel8a87host",'
++ truncate --size=-1 plot.csv
++ echo
++ KERNELREPO=https://github.com/torvalds/linux.git
+++ echo avocadoperfbench.upstream.recurrent
+++ grep -oP '(?<=\.)v.+\..+(?=\.)'
+++ :
++ KERNVER=
++ TIMEOUT=3600
++ ITERATIONS=128
++ for R in ${RESOURCES}
++ wait
++ ssh -q jenkins@diesel8a87host ./checkfornewkerneltag.sh https://github.com/torvalds/linux.git
+++ ssh -q jenkins@diesel8a87host 'uname -r'
++ echo 'diesel8a87host: 4.18.0-jenkins'
++ timeout -sKILL 3600 ssh -q jenkins@diesel8a87host
++ '[' 0 -eq 0 ']'
+++ cat diesel8a87host.ssh.log
+++ fgrep 'JOB LOG'
+++ grep -oP '(?<=: ).+$'
++ AVOCADO_LOG_PATH=/home/jenkins/avocado/job-results/job-2018-08-23T07.01-06113e9/job.log
++ scp jenkins@diesel8a87host:/home/jenkins/avocado/job-results/job-2018-08-23T07.01-06113e9/job.log diesel8a87host.avocado.log
+++ bc -l
++++ cat diesel8a87host.avocado.log
++++ fgrep 'Time Taken:'
++++ grep -oP '(?<=Time Taken:)[0-9.]+$'
+++ echo 406.856 /128
++ plotval=3.17856250000000000000
++ '[' -f diesel8a87host.prevplotval ']'
+++ bc -l
++++ cat diesel8a87host.prevplotval
+++ echo '(3.19751953125000000000+3.17856250000000000000)/2'
++ plotval=3.18804101562500000000
++ echo -n 3.18804101562500000000
++ echo -n 3.18804101562500000000
++ echo -n 'Kernel Release: '
++ for R in ${RESOURCES}
++ '[' -f diesel8a87host.kernelrelease ']'
+++ cat diesel8a87host.kernelrelease
++ echo -n 'diesel8a87host: 4.18.0-jenkins, '
++ truncate --size=-2 kernelreleases
+++ cat kernelreleases
++ echo '[Kernel' Release: diesel8a87host: '4.18.0-jenkins]'
+[Kernel Release: diesel8a87host: 4.18.0-jenkins]
++ for R in ${RESOURCES}
+++ cat diesel8a87host.plotval
++ echo -n 3.18804101562500000000,
++ truncate --size=-1 plot.csv
++ echo
+Archiving artifacts
+Recording plot data
+[description-setter] Description set: diesel8a87host: 4.18.0-jenkins
+[lockable-resources] released lock on [diesel8a87host]
+Finished: SUCCESS

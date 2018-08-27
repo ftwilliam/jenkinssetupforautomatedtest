@@ -1,11 +1,11 @@
-Started by upstream project "[8mha:////4Gg7dKudIWPd5rlxteWhcH45UVf/qxiN8X3getNAlqg6AAAAph+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzREgZp/az8JP2CovyyzOLM/DygGXrFJYlFxRmZBfoACCgvVNAAAAA=[0mprovisioning.starship" build number [8mha:////4IBoBWSy35eTymPfrpbkT68XZlrkgOehndTb2OB+iaDUAAAAph+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLQIwSBhn9rPwk/YKi/LLM4sz8PKAZesUliUXFGZkF+oYA0zXmE9EAAAA=[0m1
+Started by upstream project "[8mha:////4Gg7dKudIWPd5rlxteWhcH45UVf/qxiN8X3getNAlqg6AAAAph+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzREgZp/az8JP2CovyyzOLM/DygGXrFJYlFxRmZBfoACCgvVNAAAAA=[0mprovisioning.starship" build number [8mha:////4AHeckx+9P7wEnu+NrRZVKutrCrgvWLJCt3MS8+wB5t/AAAAph+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLQIwSBhn9rPwk/YKi/LLM4sz8PKAZesUliUXFGZkF+iYAXMGMY9EAAAA=[0m4
 originally caused by:
- Started by user [8mha:////4P5oqbiDCv/29AmYake8E+zpu/gy/ryniUjftzEVtlv7AAAAmB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAy+EgYe/dLi1CL98pLE3KRUAMN7XeHBAAAA[0mTambe, William
+ Started by timer
 [lockable-resources] acquired lock on [ethanolxb2abhost]
 Building in workspace /var/lib/jenkins/workspace/avocadodbench.starship
 [WS-CLEANUP] Deleting project workspace...
 [WS-CLEANUP] Done
-[avocadodbench.starship] $ /bin/sh -xe /tmp/jenkins7657182398376094147.sh
+[avocadodbench.starship] $ /bin/sh -xe /tmp/jenkins1213632457575177047.sh
 ++ cd /var/lib/jenkins
 ++ ./resourceslockedby.py avocadodbench.starship#3
 + RESOURCES=ethanolxb2abhost
@@ -14,44 +14,40 @@ Building in workspace /var/lib/jenkins/workspace/avocadodbench.starship
 + echo -n '"ethanolxb2abhost",'
 + truncate --size=-1 plot.csv
 + echo
-++ echo avocadodbench.starship
-++ grep -oP '(?<=\.)v.+\..+(?=\.)'
-++ :
-+ KERNVER=
-+ TIMEOUT=3600
-+ ITERATIONS=4
++ TIMEOUT=1800
++ rm -rf '*.failed'
 + for R in ${RESOURCES}
 + wait
 + cd /var/lib/jenkins
 + ./rebootresource.sh jenkins@ethanolxb2abhost
 ++ ssh -q jenkins@ethanolxb2abhost 'uname -r'
 + echo 'ethanolxb2abhost: 4.17.0-amdsos-build6+'
-+ timeout -sKILL 3600 ssh -q jenkins@ethanolxb2abhost
-+ '[' 0 -eq 0 ']'
++ timeout -sKILL 1800 ssh -q jenkins@ethanolxb2abhost
++ '[' '!' -e ethanolxb2abhost.failed ']'
 ++ cat ethanolxb2abhost.ssh.log
 ++ fgrep 'JOB LOG'
 ++ grep -oP '(?<=: ).+$'
-+ AVOCADO_LOG_PATH=/home/jenkins/avocado/job-results/job-2018-08-22T10.44-d07ae92/job.log
-+ scp jenkins@ethanolxb2abhost:/home/jenkins/avocado/job-results/job-2018-08-22T10.44-d07ae92/job.log ethanolxb2abhost.avocado.log
++ AVOCADO_LOG_PATH=/home/jenkins/avocado/job-results/job-2018-08-24T12.16-8d2313a/job.log
++ scp jenkins@ethanolxb2abhost:/home/jenkins/avocado/job-results/job-2018-08-24T12.16-8d2313a/job.log ethanolxb2abhost.avocado.log
 + bc -l
 ++ cat ethanolxb2abhost.avocado.log
 ++ fgrep -m1 'Throughput '
 ++ grep -oP '(?<=Throughput )[0-9.]+'
-+ echo 6658.25 /4
-1664.56250000000000000000
++ echo 6630.4
+6630.4
 ++ bc -l
 +++ cat ethanolxb2abhost.avocado.log
 +++ fgrep -m1 'Throughput '
 +++ grep -oP '(?<=Throughput )[0-9.]+'
-++ echo 6658.25 /4
-+ plotval=1664.56250000000000000000
+++ echo 6630.4
++ plotval=6630.4
 + '[' -f ethanolxb2abhost.prevplotval ']'
 ++ bc -l
 +++ cat ethanolxb2abhost.prevplotval
-++ echo '(1647.20867187500000000000+1664.56250000000000000000)/2'
-+ plotval=1655.88558593750000000000
-+ echo -n 1655.88558593750000000000
-+ echo -n 1655.88558593750000000000
+++ echo '(6021.43439331054687500000+6630.4)/2'
++ plotval=6325.91719665527343750000
++ echo -n 6325.91719665527343750000
++ echo -n 6325.91719665527343750000
 + echo -n 'Kernel Release: '
 + for R in ${RESOURCES}
 + '[' -f ethanolxb2abhost.kernelrelease ']'
@@ -63,9 +59,10 @@ Building in workspace /var/lib/jenkins/workspace/avocadodbench.starship
 [Kernel Release: ethanolxb2abhost: 4.17.0-amdsos-build6+]
 + for R in ${RESOURCES}
 ++ cat ethanolxb2abhost.plotval
-+ echo -n 1655.88558593750000000000,
++ echo -n 6325.91719665527343750000,
 + truncate --size=-1 plot.csv
 + echo
++ test '!' -e '*.failed'
 Archiving artifacts
 Recording plot data
 [description-setter] Description set: ethanolxb2abhost: 4.17.0-amdsos-build6+

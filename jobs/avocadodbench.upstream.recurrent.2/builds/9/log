@@ -1,0 +1,47 @@
+Started by user [8mha:////4LtcOqxYBVsSdbxBNKXu5pJSwGmUMjPwSE/FNdugHXOvAAAAmR+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzuEgY+/dLi1CL9rPyMxByg6QDrwLMXwwAAAA==[0mAllen, John
+[lockable-resources] acquired lock on [diesel79d4host]
+Building in workspace /var/lib/jenkins/workspace/avocadodbench.upstream.recurrent.2
+[WS-CLEANUP] Deleting project workspace...
+[WS-CLEANUP] Done
+[avocadodbench.upstream.recurrent.2] $ /bin/sh -xe /tmp/jenkins3493454449013719435.sh
+++ cd /var/lib/jenkins
+++ ./resourceslockedby.py avocadodbench.upstream.recurrent.2#9
++ RESOURCES=diesel79d4host
++ :
++ for R in ${RESOURCES}
++ echo -n '"diesel79d4host",'
++ truncate --size=-1 plot.csv
++ echo
++ KERNELREPO=https://github.com/torvalds/linux.git
+++ echo avocadodbench.upstream.recurrent.2
+++ grep -oP '(?<=\.)v.+\..+(?=\.)'
+++ :
++ KERNVER=
++ TIMEOUT=1800
++ rm -rf '*.failed'
++ for R in ${RESOURCES}
++ wait
++ ssh -q jenkins@diesel79d4host ./checkfornewkerneltag.sh https://github.com/torvalds/linux.git
++ :
+++ ssh -q jenkins@diesel79d4host ls 'kernel/linux-image*'
+++ grep -oP '(?<=linux-image-).+(?=-jenkins_)'
+ls: cannot access 'kernel/linux-image*': No such file or directory
++ kernbuilt=
++ echo -n 'Kernel Release: '
++ for R in ${RESOURCES}
++ '[' -f diesel79d4host.kernelrelease ']'
++ truncate --size=-2 kernelreleases
+++ cat kernelreleases
++ echo '[Kernel' 'Release]'
+[Kernel Release]
++ for R in ${RESOURCES}
+++ cat diesel79d4host.plotval
++ echo -n ,
++ truncate --size=-1 plot.csv
++ echo
++ test '!' -e '*.failed'
+Archiving artifacts
+Recording plot data
+[description-setter] Could not determine description.
+[lockable-resources] released lock on [diesel79d4host]
+Finished: SUCCESS

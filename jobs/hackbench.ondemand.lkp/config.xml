@@ -48,11 +48,17 @@ done
 truncate --size=-1 plot.csv
 echo &gt;&gt; plot.csv
 
+# Kernel git repository to use:
+KERNELREPO=${KERNELREPO:-&quot;https://github.com/torvalds/linux.git&quot;}
+
 # Kernel version to use.
 KERNVER=${KERNVER:-$(echo ${JOB_BASE_NAME} | grep -oP &apos;(?&lt;=\.)v.+\..+(?=\.)&apos; || :;)}
 
 TIMEOUT=1800
 ITERATIONS=1
+
+# Remove failure flags if any.
+rm -rf *.failed
 
 # Run test on each resource.
 for R in ${RESOURCES}; do
@@ -61,20 +67,20 @@ for R in ${RESOURCES}; do
 	(
 		# Insure resource provisioned for test.
         if ! (cd ${JENKINS_HOME} &amp;&amp; ./checkresourceprovisioned.sh ${R}) &amp;&gt; ${R}.checkresourceprovisioned.log; then
+			touch ${R}.failed
 			# Continue on to the next resource if
 			# the provision-check fail on this resource.
 			continue
 		fi
 		# Check if a new kernel need to be installed.
-		if ssh -q jenkins@${R} &apos;./checkfornewkerneltag.sh https://github.com/torvalds/linux.git&apos; ${KERNVER} &amp;&gt; ${R}.checkfornewkerneltag.log; then
-			# Get the version built.
-            kernbuilt=$(ssh -q jenkins@${R} ls kernel/linux-image* | grep -oP &quot;(?&lt;=linux-image-).+(?=-jenkins_)&quot;)
-			# Reboot resource into kernel version built.
-			(cd ${JENKINS_HOME} &amp;&amp; ./rebootresource.sh jenkins@${R} ${kernbuilt} &amp;&gt; /dev/null)
-		fi
+		ssh -q jenkins@${R} ./checkfornewkerneltag.sh ${KERNELREPO} ${KERNVER} &amp;&gt; ${R}.checkfornewkerneltag.log || :;
+		# Get the last version built.
+		kernbuilt=$(ssh -q jenkins@${R} ls kernel/linux-image* | grep -oP &quot;(?&lt;=linux-image-).+(?=-jenkins_)&quot;)
+		# Reboot resource into last kernel version built.
+		(cd ${JENKINS_HOME} &amp;&amp; ./rebootresource.sh jenkins@${R} ${kernbuilt}) &amp;&gt; ${R}.rebootresource.log
 		echo &quot;${R}: $(ssh -q jenkins@${R} &apos;uname -r&apos;)&quot; &gt; ${R}.kernelrelease
 
-		timeout -sKILL ${TIMEOUT} ssh -q jenkins@${R} &amp;&gt; ${R}.ssh.log &lt;&lt;-EOF
+		timeout -sKILL ${TIMEOUT} ssh -q jenkins@${R} &amp;&gt; ${R}.ssh.log &lt;&lt;-EOF || touch ${R}.failed
 			# remove any sos repo; as it conflicts;
 			# it will be restored by test neededing it.
 			sudo rm /etc/apt/sources.list.d/*sos*
@@ -98,7 +104,7 @@ for R in ${RESOURCES}; do
 			sudo lkp run ./hackbench-50%-process-pipe.yaml
 		EOF
 
-		if [ ${PIPESTATUS[0]} -eq 0 ]; then
+		if [ ! -e ${R}.failed ]; then
 			AVOCADO_LOG_PATH=$(cat ${R}.ssh.log | fgrep &apos;JOB LOG&apos; | grep -oP &apos;(?&lt;=: ).+$&apos;)
 			scp jenkins@${R}:${AVOCADO_LOG_PATH} ${R}.avocado.log
 			plotval=$(echo $(cat ${R}.avocado.log | fgrep &apos;Time Taken:&apos; | grep -oP &apos;(?&lt;=Time Taken:)[0-9.]+$&apos;) /${ITERATIONS} | bc -l)
@@ -133,6 +139,10 @@ for R in ${RESOURCES}; do
 done
 truncate --size=-1 plot.csv
 echo &gt;&gt; plot.csv
+
+# This is the last command so as
+# to be the script exit status.
+test ! -e *.failed
 </command>
     </hudson.tasks.Shell>
   </builders>

@@ -1,0 +1,46 @@
++ cd /var/lib/jenkins
++ ./checkresourceprovisioned.sh diesel79d4host
++ set -e
++ ping -c 1 diesel79d4host
++ ssh -q -o PasswordAuthentication=no -o StrictHostKeyChecking=no jenkins@diesel79d4host 'test ! -f checkfornewkerneltag.sh'
++ '[' 255 -eq 1 ']'
++ ssh-keygen -R diesel79d4host
++ ssh -o PasswordAuthentication=no -o StrictHostKeyChecking=no root@diesel79d4host :
+Warning: Permanently added 'diesel79d4host,10.236.11.16' (ECDSA) to the list of known hosts.
++ ssh root@diesel79d4host
+Pseudo-terminal will not be allocated because stdin is not a terminal.
+Welcome to Ubuntu 18.04.1 LTS (GNU/Linux 4.15.0-33-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  System information as of Fri Aug 24 19:02:39 UTC 2018
+
+  System load:  0.0                Processes:             922
+  Usage of /:   27.9% of 35.93GB   Users logged in:       0
+  Memory usage: 0%                 IP address for enp1s0: 10.236.11.16
+  Swap usage:   0%
+
+ * Read about Ubuntu updates for L1 Terminal Fault Vulnerabilities
+   (L1TF).
+
+   - https://ubu.one/L1TF
+
+ * Check out 6 great IDEs now available on Ubuntu. There may even be
+   something worthwhile there for those crazy EMACS fans ;)
+
+   - https://bit.ly/6-cool-IDEs
+
+18 packages can be updated.
+10 updates are security updates.
+
+
+mesg: ttyname failed: Inappropriate ioctl for device
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+E: Unable to locate package cpuid

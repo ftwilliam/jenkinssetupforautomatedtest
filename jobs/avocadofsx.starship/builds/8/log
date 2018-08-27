@@ -1,0 +1,43 @@
+Started by upstream project "[8mha:////4EoQXCCvCL1ZAUvbxERBMTGFvdw8yZlTD18gs9e3mwThAAAAqB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzxEgZZ/az8JP3EsvzkxJT8tEygouISveKSxKLijMwCfQAg0vi80gAAAA==[0mavocadofiotest.starship" build number [8mha:////4BT8en0p5snUb4CM2bkzOyoZP4GnIVi5ASYZ0kUl/SEjAAAAqB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLQIwSBjn9rPwk/cSy/OTElPy0TKCi4hK94pLEouKMzAJ9CwBtSUEs0wAAAA==[0m8
+originally caused by:
+ Started by upstream project "[8mha:////4D6QEbonrRn5YLzIUVIkh4y7cb4tmNOsv8cBePStM98kAAAAqB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyxEgYZ/az8JP3EsvzkxJT8lKTUvOQMveKSxKLijMwCfQAi5RMo0QAAAA==[0mavocadodbench.starship" build number [8mha:////4DHvoiDFOeMMGCwz7wlCRjD+8OJnLCXT7LkdZblm4Jj+AAAAqB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLQIwSBln9rPwk/cSy/OTElPyUpNS85Ay94pLEouKMzAJ9IwBv/uuq0gAAAA==[0m2
+ originally caused by:
+  Started by user unknown or anonymous
+[lockable-resources] acquired lock on [ethanolxb2abhost]
+Building in workspace /var/lib/jenkins/workspace/avocadofsx.starship
+[WS-CLEANUP] Deleting project workspace...
+[WS-CLEANUP] Done
+[avocadofsx.starship] $ /bin/sh -xe /tmp/jenkins5843101991977460103.sh
+++ cd /var/lib/jenkins
+++ ./resourceslockedby.py avocadofsx.starship#8
++ RESOURCES=ethanolxb2abhost
++ TIMEOUT=1800
++ rm -rf '*.failed'
++ for R in ${RESOURCES}
++ wait
++ cd /var/lib/jenkins
++ ./rebootresource.sh jenkins@ethanolxb2abhost
+++ ssh -q jenkins@ethanolxb2abhost 'uname -r'
++ echo 'ethanolxb2abhost: 4.17.0-amdsos-build6+'
++ timeout -sKILL 1800 ssh -q jenkins@ethanolxb2abhost
++ '[' '!' -e ethanolxb2abhost.failed ']'
+++ cat ethanolxb2abhost.ssh.log
+++ fgrep 'JOB LOG'
+++ grep -oP '(?<=: ).+$'
++ AVOCADO_LOG_PATH=/home/jenkins/avocado/job-results/job-2018-08-24T10.48-eaa1023/job.log
++ scp jenkins@ethanolxb2abhost:/home/jenkins/avocado/job-results/job-2018-08-24T10.48-eaa1023/job.log ethanolxb2abhost.avocado.log
++ echo -n 'Kernel Release: '
++ for R in ${RESOURCES}
++ '[' -f ethanolxb2abhost.kernelrelease ']'
+++ cat ethanolxb2abhost.kernelrelease
++ echo -n 'ethanolxb2abhost: 4.17.0-amdsos-build6+, '
++ truncate --size=-2 kernelreleases
+++ cat kernelreleases
++ echo '[Kernel' Release: ethanolxb2abhost: '4.17.0-amdsos-build6+]'
+[Kernel Release: ethanolxb2abhost: 4.17.0-amdsos-build6+]
++ test '!' -e '*.failed'
+Archiving artifacts
+[description-setter] Description set: ethanolxb2abhost: 4.17.0-amdsos-build6+
+[lockable-resources] released lock on [ethanolxb2abhost]
+Triggering a new build of [8mha:////4K+BlSYDEuQ1R0gzNaY08DJQYZg8d4ptiFIhJEIZg9trAAAArB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAypEgYF/az8JP3EsvzkxJT8zLyS1KKk1LzkDL3iksSi4ozMAn0AJ4S5W9UAAAA=[0mavocadointerbench.starship
+Finished: SUCCESS

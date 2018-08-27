@@ -28,7 +28,10 @@ RESOURCES=${RESOURCES:-$(cd ${JENKINS_HOME} &amp;&amp; ./resourceslockedby.py ${
 #KERNELREPO=${KERNELREPO:-&quot;https://github.com/torvalds/linux.git&quot;}
 
 # Kernel version to use.
-KERNVER=${KERNVER:-$(echo ${JOB_BASE_NAME} | grep -oP &apos;(?&lt;=\.)v.+\..+(?=\.)&apos; || :;)}
+#KERNVER=${KERNVER:-$(echo ${JOB_BASE_NAME} | grep -oP &apos;(?&lt;=\.)v.+\..+(?=\.)&apos; || :;)}
+
+# Remove failure flags if any.
+rm -rf *.failed
 
 # Run test on each resource.
 for R in ${RESOURCES}; do
@@ -37,22 +40,17 @@ for R in ${RESOURCES}; do
 	(
 		# Insure resource provisioned for test.
 		if ! (cd ${JENKINS_HOME} &amp;&amp; ./checkresourceprovisioned.sh ${R}) &amp;&gt; ${R}.checkresourceprovisioned.log; then
+			touch ${R}.failed
 			# Continue on to the next resource if
 			# the provision-check fail on this resource.
 			continue
 		fi
 		# Check if a new kernel need to be installed.
-		if ssh -q jenkins@${R} ./checkfornewkerneltag.sh ${KERNELREPO} ${KERNVER} &amp;&gt; ${R}.checkfornewkerneltag.log; then
-			if [ -n &quot;${KERNELREPO}&quot; ]; then
-				# Get the version built.
-				kernbuilt=$(ssh -q jenkins@${R} ls kernel/linux-image* | grep -oP &quot;(?&lt;=linux-image-).+(?=-jenkins_)&quot;)
-				# Reboot resource into kernel version built.
-				(cd ${JENKINS_HOME} &amp;&amp; ./rebootresource.sh jenkins@${R} ${kernbuilt} &amp;&gt; /dev/null)
-			else
-				# Reboot resource.
-				(cd ${JENKINS_HOME} &amp;&amp; ./rebootresource.sh jenkins@${R} &amp;&gt; /dev/null)
-			fi
-		fi
+		ssh -q jenkins@${R} ./checkfornewkerneltag.sh ${KERNELREPO} ${KERNVER} &amp;&gt; ${R}.checkfornewkerneltag.log || :;
+		# Get the last version built.
+		kernbuilt=$(ssh -q jenkins@${R} ls kernel/linux-image* | grep -oP &quot;(?&lt;=linux-image-).+(?=-jenkins_)&quot;)
+		# Reboot resource into last kernel version built.
+		(cd ${JENKINS_HOME} &amp;&amp; ./rebootresource.sh jenkins@${R} ${kernbuilt}) &amp;&gt; ${R}.rebootresource.log
 		echo &quot;${R}: $(ssh -q jenkins@${R} &apos;uname -r&apos;)&quot; &gt; ${R}.kernelrelease
 	) &amp;
 done
@@ -70,6 +68,10 @@ for R in ${RESOURCES}; do
 done
 truncate --size=-2 kernelreleases
 echo [$(cat kernelreleases)]
+
+# This is the last command so as
+# to be the script exit status.
+test ! -e *.failed
 </command>
     </hudson.tasks.Shell>
   </builders>

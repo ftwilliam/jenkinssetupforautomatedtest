@@ -1,9 +1,11 @@
-Started by user [8mha:////4P5oqbiDCv/29AmYake8E+zpu/gy/ryniUjftzEVtlv7AAAAmB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAy+EgYe/dLi1CL98pLE3KRUAMN7XeHBAAAA[0mTambe, William
+Started by upstream project "[8mha:////4Gg7dKudIWPd5rlxteWhcH45UVf/qxiN8X3getNAlqg6AAAAph+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzREgZp/az8JP2CovyyzOLM/DygGXrFJYlFxRmZBfoACCgvVNAAAAA=[0mprovisioning.starship" build number [8mha:////4K+o4rJbb6h4G/yLHpPi9u9k7sdmoNzmYjJ1HgLVL6vJAAAAph+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLQIwSBhn9rPwk/YKi/LLM4sz8PKAZesUliUXFGZkF+mYAcKCCjdEAAAA=[0m6
+originally caused by:
+ Started by timer
 [lockable-resources] acquired lock on [ethanolxb2abhost]
 Building in workspace /var/lib/jenkins/workspace/avocadodbench.starship
 [WS-CLEANUP] Deleting project workspace...
 [WS-CLEANUP] Done
-[avocadodbench.starship] $ /bin/sh -xe /tmp/jenkins2626957048756415548.sh
+[avocadodbench.starship] $ /bin/sh -xe /tmp/jenkins7734234735597696792.sh
 ++ cd /var/lib/jenkins
 ++ ./resourceslockedby.py avocadodbench.starship#5
 + RESOURCES=ethanolxb2abhost
@@ -12,61 +14,58 @@ Building in workspace /var/lib/jenkins/workspace/avocadodbench.starship
 + echo -n '"ethanolxb2abhost",'
 + truncate --size=-1 plot.csv
 + echo
-++ echo avocadodbench.starship
-++ grep -oP '(?<=\.)v.+\..+(?=\.)'
-++ :
-+ KERNVER=
-+ TIMEOUT=3600
-+ ITERATIONS=4
++ TIMEOUT=1800
++ rm -rf '*.failed'
 + for R in ${RESOURCES}
 + wait
 + cd /var/lib/jenkins
 + ./rebootresource.sh jenkins@ethanolxb2abhost
 ++ ssh -q jenkins@ethanolxb2abhost 'uname -r'
-+ echo 'ethanolxb2abhost: 4.17.0-amdsos-build6+'
-+ timeout -sKILL 3600 ssh -q jenkins@ethanolxb2abhost
-+ '[' 0 -eq 0 ']'
++ echo 'ethanolxb2abhost: 4.17.0-amdsos-build7+'
++ timeout -sKILL 1800 ssh -q jenkins@ethanolxb2abhost
++ '[' '!' -e ethanolxb2abhost.failed ']'
 ++ cat ethanolxb2abhost.ssh.log
 ++ fgrep 'JOB LOG'
 ++ grep -oP '(?<=: ).+$'
-+ AVOCADO_LOG_PATH=/home/jenkins/avocado/job-results/job-2018-08-22T14.45-a219d07/job.log
-+ scp jenkins@ethanolxb2abhost:/home/jenkins/avocado/job-results/job-2018-08-22T14.45-a219d07/job.log ethanolxb2abhost.avocado.log
++ AVOCADO_LOG_PATH=/home/jenkins/avocado/job-results/job-2018-08-26T12.15-ea3e939/job.log
++ scp jenkins@ethanolxb2abhost:/home/jenkins/avocado/job-results/job-2018-08-26T12.15-ea3e939/job.log ethanolxb2abhost.avocado.log
 + bc -l
 ++ cat ethanolxb2abhost.avocado.log
 ++ fgrep -m1 'Throughput '
 ++ grep -oP '(?<=Throughput )[0-9.]+'
-+ echo 6510.56 /4
-1627.64000000000000000000
++ echo 6591.32
+6591.32
 ++ bc -l
 +++ cat ethanolxb2abhost.avocado.log
 +++ fgrep -m1 'Throughput '
 +++ grep -oP '(?<=Throughput )[0-9.]+'
-++ echo 6510.56 /4
-+ plotval=1627.64000000000000000000
+++ echo 6591.32
++ plotval=6591.32
 + '[' -f ethanolxb2abhost.prevplotval ']'
 ++ bc -l
 +++ cat ethanolxb2abhost.prevplotval
-++ echo '(1655.49029296875000000000+1627.64000000000000000000)/2'
-+ plotval=1641.56514648437500000000
-+ echo -n 1641.56514648437500000000
-+ echo -n 1641.56514648437500000000
+++ echo '(6466.04859832763671875000+6591.32)/2'
++ plotval=6528.68429916381835937500
++ echo -n 6528.68429916381835937500
++ echo -n 6528.68429916381835937500
 + echo -n 'Kernel Release: '
 + for R in ${RESOURCES}
 + '[' -f ethanolxb2abhost.kernelrelease ']'
 ++ cat ethanolxb2abhost.kernelrelease
-+ echo -n 'ethanolxb2abhost: 4.17.0-amdsos-build6+, '
++ echo -n 'ethanolxb2abhost: 4.17.0-amdsos-build7+, '
 + truncate --size=-2 kernelreleases
 ++ cat kernelreleases
-+ echo '[Kernel' Release: ethanolxb2abhost: '4.17.0-amdsos-build6+]'
-[Kernel Release: ethanolxb2abhost: 4.17.0-amdsos-build6+]
++ echo '[Kernel' Release: ethanolxb2abhost: '4.17.0-amdsos-build7+]'
+[Kernel Release: ethanolxb2abhost: 4.17.0-amdsos-build7+]
 + for R in ${RESOURCES}
 ++ cat ethanolxb2abhost.plotval
-+ echo -n 1641.56514648437500000000,
++ echo -n 6528.68429916381835937500,
 + truncate --size=-1 plot.csv
 + echo
++ test '!' -e '*.failed'
 Archiving artifacts
 Recording plot data
-[description-setter] Description set: ethanolxb2abhost: 4.17.0-amdsos-build6+
+[description-setter] Description set: ethanolxb2abhost: 4.17.0-amdsos-build7+
 [lockable-resources] released lock on [ethanolxb2abhost]
 Triggering a new build of [8mha:////4EoQXCCvCL1ZAUvbxERBMTGFvdw8yZlTD18gs9e3mwThAAAAqB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzxEgZZ/az8JP3EsvzkxJT8tEygouISveKSxKLijMwCfQAg0vi80gAAAA==[0mavocadofiotest.starship
 Finished: SUCCESS

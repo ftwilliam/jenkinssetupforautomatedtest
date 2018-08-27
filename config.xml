@@ -102,7 +102,7 @@
     </hudson.model.AllView>
     <listView>
       <owner class="hudson" reference="../../.."/>
-      <name>Tests</name>
+      <name>tests</name>
       <description>&lt;img src=&quot;http://avocado-server:8080/job/avocadokernbench.upstream.recurrent/plot/getPlot?index=0&amp;width=750&amp;height=450&quot;/&gt;&#xd;
 &lt;img src=&quot;http://avocado-server:8080/job/avocadoperfbench.upstream.recurrent/plot/getPlot?index=0&amp;width=750&amp;height=450&quot;/&gt;&#xd;
 &lt;img src=&quot;http://avocado-server:8080/job/avocadodbench.upstream.recurrent/plot/getPlot?index=0&amp;width=750&amp;height=450&quot;/&gt;&#xd;
@@ -114,6 +114,7 @@
         <comparator class="hudson.util.CaseInsensitiveComparator"/>
         <string>avocadodbench.ondemand</string>
         <string>avocadodbench.upstream.recurrent</string>
+        <string>avocadodbench.upstream.recurrent.2</string>
         <string>avocadofiotest.upstream.recurrent</string>
         <string>avocadofsx.starship</string>
         <string>avocadofsx.upstream.recurrent</string>
@@ -168,7 +169,7 @@
     </listView>
     <listView>
       <owner class="hudson" reference="../../.."/>
-      <name>tests.daily</name>
+      <name>tests.diesel.daily</name>
       <description>&lt;img src=&quot;http://avocado-server:8080/job/avocadokernbench.upstream.recurrent/plot/getPlot?index=0&amp;width=750&amp;height=450&quot;/&gt;&#xd;
 &lt;img src=&quot;http://avocado-server:8080/job/avocadoperfbench.upstream.recurrent/plot/getPlot?index=0&amp;width=750&amp;height=450&quot;/&gt;&#xd;
 &lt;img src=&quot;http://avocado-server:8080/job/avocadodbench.upstream.recurrent/plot/getPlot?index=0&amp;width=750&amp;height=450&quot;/&gt;&#xd;
@@ -195,7 +196,7 @@
     </listView>
     <listView>
       <owner class="hudson" reference="../../.."/>
-      <name>tests.ondemand</name>
+      <name>tests.diesel.ondemand</name>
       <filterExecutors>false</filterExecutors>
       <filterQueue>false</filterQueue>
       <properties class="hudson.model.View$PropertyList"/>
@@ -218,7 +219,7 @@
     </listView>
     <listView>
       <owner class="hudson" reference="../../.."/>
-      <name>tests.starship</name>
+      <name>tests.starship.daily</name>
       <description>&lt;img src=&quot;http://avocado-server:8080/job/avocadodbench.starship/plot/getPlot?index=0&amp;width=750&amp;height=450&quot;/&gt;&#xd;
 &lt;img src=&quot;http://avocado-server:8080/job/avocadokernbench.starship/plot/getPlot?index=0&amp;width=750&amp;height=450&quot;/&gt;&#xd;
 &lt;img src=&quot;http://avocado-server:8080/job/avocadoperfbench.starship/plot/getPlot?index=0&amp;width=750&amp;height=450&quot;/&gt;&#xd;
@@ -246,7 +247,7 @@
     </listView>
     <au.com.centrumsystems.hudson.plugin.buildpipeline.BuildPipelineView plugin="build-pipeline-plugin@1.5.8">
       <owner class="hudson" reference="../../.."/>
-      <name>StarshipTestPipeline</name>
+      <name>tests.starship.pipelineview</name>
       <description>&lt;img src=&quot;http://avocado-server:8080/job/avocadokernbench.starship/plot/getPlot?index=0&amp;width=750&amp;height=450&quot;/&gt;&#xd;
 &lt;img src=&quot;http://avocado-server:8080/job/avocadoperfbench.starship/plot/getPlot?index=0&amp;width=750&amp;height=450&quot;/&gt;&#xd;
 </description>
@@ -272,31 +273,8 @@
       <refreshFrequency>3</refreshFrequency>
       <showPipelineDefinitionHeader>false</showPipelineDefinitionHeader>
     </au.com.centrumsystems.hudson.plugin.buildpipeline.BuildPipelineView>
-    <listView>
-      <owner class="hudson" reference="../../.."/>
-      <name>lkpTests</name>
-      <filterExecutors>false</filterExecutors>
-      <filterQueue>false</filterQueue>
-      <properties class="hudson.model.View$PropertyList"/>
-      <jobNames>
-        <comparator class="hudson.util.CaseInsensitiveComparator"/>
-      </jobNames>
-      <jobFilters/>
-      <columns>
-        <hudson.views.StatusColumn/>
-        <hudson.views.WeatherColumn/>
-        <hudson.views.JobColumn/>
-        <hudson.views.LastSuccessColumn/>
-        <hudson.views.LastFailureColumn/>
-        <hudson.views.LastDurationColumn/>
-        <hudson.plugins.UpDownStreamViewColumn plugin="upstream-downstream-view@1.006"/>
-        <hudson.views.BuildButtonColumn/>
-      </columns>
-      <includeRegex>.+\.lkp.*</includeRegex>
-      <recurse>false</recurse>
-    </listView>
   </views>
-  <primaryView>Tests</primaryView>
+  <primaryView>tests</primaryView>
   <slaveAgentPort>-1</slaveAgentPort>
   <disabledAgentProtocols>
     <string>JNLP-connect</string>
