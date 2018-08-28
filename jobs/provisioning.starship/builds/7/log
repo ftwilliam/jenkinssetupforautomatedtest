@@ -1,0 +1,30 @@
+Started by timer
+[lockable-resources] acquired lock on [ethanolxb2abhost]
+Building in workspace /var/lib/jenkins/workspace/provisioning.starship
+[WS-CLEANUP] Deleting project workspace...
+[WS-CLEANUP] Done
+[provisioning.starship] $ /bin/sh -xe /tmp/jenkins5873166146448348761.sh
+++ cd /var/lib/jenkins
+++ ./resourceslockedby.py provisioning.starship#7
++ RESOURCES=ethanolxb2abhost
++ rm -rf '*.failed'
++ for R in ${RESOURCES}
++ wait
++ ssh -q jenkins@ethanolxb2abhost ./checkfornewkerneltag.sh
+++ ssh -q jenkins@ethanolxb2abhost ls 'kernel/linux-image*'
+++ grep -oP '(?<=linux-image-).+(?=-jenkins_)'
+ls: cannot access 'kernel/linux-image*': No such file or directory
++ kernbuilt=
++ echo -n 'Kernel Release: '
++ for R in ${RESOURCES}
++ '[' -f ethanolxb2abhost.kernelrelease ']'
++ truncate --size=-2 kernelreleases
+++ cat kernelreleases
++ echo '[Kernel' 'Release]'
+[Kernel Release]
++ test '!' -e '*.failed'
+Archiving artifacts
+[description-setter] Could not determine description.
+[lockable-resources] released lock on [ethanolxb2abhost]
+Triggering a new build of [8mha:////4D6QEbonrRn5YLzIUVIkh4y7cb4tmNOsv8cBePStM98kAAAAqB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyxEgYZ/az8JP3EsvzkxJT8lKTUvOQMveKSxKLijMwCfQAi5RMo0QAAAA==[0mavocadodbench.starship
+Finished: SUCCESS

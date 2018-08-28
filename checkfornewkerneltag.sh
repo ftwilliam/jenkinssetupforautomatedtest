@@ -14,7 +14,7 @@ if [ $# -eq 0 ]; then
 fi
 
 # Remove any installed *-amdsos-* package.
-sudo apt remove -y *-amdsos-*
+sudo apt remove -y *-amdsos-* || :;
 
 mkdir -p kernel
 

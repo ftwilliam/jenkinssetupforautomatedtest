@@ -1,0 +1,62 @@
+Started by timer
+[lockable-resources] acquired lock on [diesel8a87host]
+Building in workspace /var/lib/jenkins/workspace/avocadokernbench.upstream.recurrent
+[WS-CLEANUP] Deleting project workspace...
+[WS-CLEANUP] Done
+[avocadokernbench.upstream.recurrent] $ /bin/sh -xe /tmp/jenkins4952667691293501335.sh
+++ cd /var/lib/jenkins
+++ ./resourceslockedby.py avocadokernbench.upstream.recurrent#8
++ RESOURCES=diesel8a87host
++ :
++ for R in ${RESOURCES}
++ echo -n '"diesel8a87host.user",'
++ echo -n '"diesel8a87host.system",'
++ echo -n '"diesel8a87host.elapsed",'
++ truncate --size=-1 plot.csv
++ echo
++ KERNELREPO=https://github.com/torvalds/linux.git
+++ echo avocadokernbench.upstream.recurrent
+++ grep -oP '(?<=\.)v.+\..+(?=\.)'
+++ :
++ KERNVER=
++ TIMEOUT=1800
++ ITERATIONS=16
++ rm -rf '*.failed'
++ for R in ${RESOURCES}
++ wait
++ ssh -q jenkins@diesel8a87host ./checkfornewkerneltag.sh https://github.com/torvalds/linux.git
++ :
+++ ssh -q jenkins@diesel8a87host ls 'kernel/linux-image*'
+++ grep -oP '(?<=linux-image-).+(?=-jenkins_)'
++ kernbuilt=4.19.0-rc1
+++ ssh -q jenkins@diesel8a87host 'uname -r'
++ echo 'diesel8a87host: 4.19.0-rc1-jenkins'
++ timeout -sKILL 1800 ssh -q jenkins@diesel8a87host
++ '[' -n '' ']'
++ '[' '!' -e diesel8a87host.failed ']'
++ scp jenkins@diesel8a87host: diesel8a87host.avocado.log
+scp: .: not a regular file
++ echo -n 'Kernel Release: '
++ for R in ${RESOURCES}
++ '[' -f diesel8a87host.kernelrelease ']'
+++ cat diesel8a87host.kernelrelease
++ echo -n 'diesel8a87host: 4.19.0-rc1-jenkins, '
++ truncate --size=-2 kernelreleases
+++ cat kernelreleases
++ echo '[Kernel' Release: diesel8a87host: '4.19.0-rc1-jenkins]'
+[Kernel Release: diesel8a87host: 4.19.0-rc1-jenkins]
++ for R in ${RESOURCES}
+++ cat diesel8a87host.user.plotval
++ echo -n ,
+++ cat diesel8a87host.system.plotval
++ echo -n ,
+++ cat diesel8a87host.elapsed.plotval
++ echo -n ,
++ truncate --size=-1 plot.csv
++ echo
++ test '!' -e '*.failed'
+Archiving artifacts
+Recording plot data
+[description-setter] Description set: diesel8a87host: 4.19.0-rc1-jenkins
+[lockable-resources] released lock on [diesel8a87host]
+Finished: SUCCESS

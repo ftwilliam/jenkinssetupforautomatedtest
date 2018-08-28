@@ -1,0 +1,46 @@
+Started by timer
+[lockable-resources] acquired lock on [diesel8a87host]
+Building in workspace /var/lib/jenkins/workspace/avocadosleeptest.upstream.recurrent
+[WS-CLEANUP] Deleting project workspace...
+[WS-CLEANUP] Done
+[avocadosleeptest.upstream.recurrent] $ /bin/sh -xe /tmp/jenkins5530247614112356787.sh
+++ cd /var/lib/jenkins
+++ ./resourceslockedby.py avocadosleeptest.upstream.recurrent#7
++ RESOURCES=diesel8a87host
++ KERNELREPO=https://github.com/torvalds/linux.git
+++ echo avocadosleeptest.upstream.recurrent
+++ grep -oP '(?<=\.)v.+\..+(?=\.)'
+++ :
++ KERNVER=
++ TIMEOUT=3600
++ rm -rf '*.failed'
++ for R in ${RESOURCES}
++ wait
++ ssh -q jenkins@diesel8a87host ./checkfornewkerneltag.sh https://github.com/torvalds/linux.git
++ :
+++ ssh -q jenkins@diesel8a87host ls 'kernel/linux-image*'
+++ grep -oP '(?<=linux-image-).+(?=-jenkins_)'
++ kernbuilt=4.19.0-rc1
+++ ssh -q jenkins@diesel8a87host 'uname -r'
++ echo 'diesel8a87host: 4.19.0-rc1-jenkins'
++ timeout -sKILL 3600 ssh -q jenkins@diesel8a87host
+++ cat diesel8a87host.ssh.log
+++ fgrep 'JOB LOG'
+++ grep -oP '(?<=: ).+$'
++ AVOCADO_LOG_PATH=/home/jenkins/avocado/job-results/job-2018-08-27T20.30-d6c8fa2/job.log
++ '[' -n /home/jenkins/avocado/job-results/job-2018-08-27T20.30-d6c8fa2/job.log ']'
++ scp jenkins@diesel8a87host:/home/jenkins/avocado/job-results/job-2018-08-27T20.30-d6c8fa2/job.log diesel8a87host.avocado.log
++ echo -n 'Kernel Release: '
++ for R in ${RESOURCES}
++ '[' -f diesel8a87host.kernelrelease ']'
+++ cat diesel8a87host.kernelrelease
++ echo -n 'diesel8a87host: 4.19.0-rc1-jenkins, '
++ truncate --size=-2 kernelreleases
+++ cat kernelreleases
++ echo '[Kernel' Release: diesel8a87host: '4.19.0-rc1-jenkins]'
+[Kernel Release: diesel8a87host: 4.19.0-rc1-jenkins]
++ test '!' -e '*.failed'
+Archiving artifacts
+[description-setter] Description set: diesel8a87host: 4.19.0-rc1-jenkins
+[lockable-resources] released lock on [diesel8a87host]
+Finished: SUCCESS

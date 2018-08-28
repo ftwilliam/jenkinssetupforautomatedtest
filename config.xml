@@ -82,7 +82,7 @@
   <projectNamingStrategy class="jenkins.model.ProjectNamingStrategy$DefaultProjectNamingStrategy"/>
   <workspaceDir>${JENKINS_HOME}/workspace/${ITEM_FULLNAME}</workspaceDir>
   <buildsDir>${ITEM_ROOTDIR}/builds</buildsDir>
-  <systemMessage>&lt;h2 align=&quot;center&quot;&gt;&lt;a href= &quot;http://confluence.amd.com/pages/viewpage.action?pageId=62945651&quot; target=&quot;_blank&quot; style=&quot;text-decoration: none&quot;&gt;Info on preparing a new system for use with the test-infrastructure&lt;/a&gt;&lt;/h2&gt;</systemMessage>
+  <systemMessage>&lt;a href= &quot;http://confluence.amd.com/pages/viewpage.action?pageId=62945651&quot; target=&quot;_blank&quot; style=&quot;text-decoration: none&quot;&gt;Info on preparing a new system for use with the test-infrastructure&lt;/a&gt;</systemMessage>
   <markupFormatter class="hudson.markup.RawHtmlMarkupFormatter" plugin="antisamy-markup-formatter@1.5">
     <disableSyntaxHighlighting>false</disableSyntaxHighlighting>
   </markupFormatter>
@@ -112,6 +112,7 @@
       <properties class="hudson.model.View$PropertyList"/>
       <jobNames>
         <comparator class="hudson.util.CaseInsensitiveComparator"/>
+        <string>avocadodbench.comparison</string>
         <string>avocadodbench.ondemand</string>
         <string>avocadodbench.upstream.recurrent</string>
         <string>avocadodbench.upstream.recurrent.2</string>
@@ -169,7 +170,7 @@
     </listView>
     <listView>
       <owner class="hudson" reference="../../.."/>
-      <name>tests.diesel.daily</name>
+      <name>tests.diesel.upstream.daily</name>
       <description>&lt;img src=&quot;http://avocado-server:8080/job/avocadokernbench.upstream.recurrent/plot/getPlot?index=0&amp;width=750&amp;height=450&quot;/&gt;&#xd;
 &lt;img src=&quot;http://avocado-server:8080/job/avocadoperfbench.upstream.recurrent/plot/getPlot?index=0&amp;width=750&amp;height=450&quot;/&gt;&#xd;
 &lt;img src=&quot;http://avocado-server:8080/job/avocadodbench.upstream.recurrent/plot/getPlot?index=0&amp;width=750&amp;height=450&quot;/&gt;&#xd;
@@ -191,7 +192,7 @@
         <hudson.views.BuildButtonColumn/>
         <hudson.plugins.UpDownStreamViewColumn plugin="upstream-downstream-view@1.006"/>
       </columns>
-      <includeRegex>.+\.recurrent.*</includeRegex>
+      <includeRegex>.+\.upstream\.recurrent.*</includeRegex>
       <recurse>false</recurse>
     </listView>
     <listView>
@@ -219,7 +220,7 @@
     </listView>
     <listView>
       <owner class="hudson" reference="../../.."/>
-      <name>tests.starship.daily</name>
+      <name>tests.starship.buildinfra.daily</name>
       <description>&lt;img src=&quot;http://avocado-server:8080/job/avocadodbench.starship/plot/getPlot?index=0&amp;width=750&amp;height=450&quot;/&gt;&#xd;
 &lt;img src=&quot;http://avocado-server:8080/job/avocadokernbench.starship/plot/getPlot?index=0&amp;width=750&amp;height=450&quot;/&gt;&#xd;
 &lt;img src=&quot;http://avocado-server:8080/job/avocadoperfbench.starship/plot/getPlot?index=0&amp;width=750&amp;height=450&quot;/&gt;&#xd;
@@ -247,7 +248,7 @@
     </listView>
     <au.com.centrumsystems.hudson.plugin.buildpipeline.BuildPipelineView plugin="build-pipeline-plugin@1.5.8">
       <owner class="hudson" reference="../../.."/>
-      <name>tests.starship.pipelineview</name>
+      <name>tests.starship.buildinfra.daily.pipelineview</name>
       <description>&lt;img src=&quot;http://avocado-server:8080/job/avocadokernbench.starship/plot/getPlot?index=0&amp;width=750&amp;height=450&quot;/&gt;&#xd;
 &lt;img src=&quot;http://avocado-server:8080/job/avocadoperfbench.starship/plot/getPlot?index=0&amp;width=750&amp;height=450&quot;/&gt;&#xd;
 </description>
@@ -256,7 +257,6 @@
       <properties class="hudson.model.View$PropertyList"/>
       <gridBuilder class="au.com.centrumsystems.hudson.plugin.buildpipeline.DownstreamProjectGridBuilder">
         <firstJob>avocadodbench.starship</firstJob>
-        <firstJobLink>job/avocadodbench.starship/</firstJobLink>
       </gridBuilder>
       <noOfDisplayedBuilds>10</noOfDisplayedBuilds>
       <buildViewTitle></buildViewTitle>

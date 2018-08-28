@@ -1,0 +1,69 @@
+Started by user [8mha:////4P5oqbiDCv/29AmYake8E+zpu/gy/ryniUjftzEVtlv7AAAAmB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAy+EgYe/dLi1CL98pLE3KRUAMN7XeHBAAAA[0mTambe, William
+[lockable-resources] acquired lock on [ethanolxb2abhost]
+Building in workspace /var/lib/jenkins/workspace/avocadodbench.starship
+[WS-CLEANUP] Deleting project workspace...
+[WS-CLEANUP] Done
+[avocadodbench.starship] $ /bin/sh -xe /tmp/jenkins8864605922045130874.sh
+++ cd /var/lib/jenkins
+++ ./resourceslockedby.py avocadodbench.starship#7
++ RESOURCES=ethanolxb2abhost
++ :
++ for R in ${RESOURCES}
++ echo -n '"ethanolxb2abhost",'
++ truncate --size=-1 plot.csv
++ echo
++ TIMEOUT=1800
++ rm -rf '*.failed'
++ for R in ${RESOURCES}
++ wait
++ cd /var/lib/jenkins
++ ./rebootresource.sh jenkins@ethanolxb2abhost
+++ ssh -q jenkins@ethanolxb2abhost 'uname -r'
++ echo 'ethanolxb2abhost: 4.17.0-amdsos-build7+'
++ timeout -sKILL 1800 ssh -q jenkins@ethanolxb2abhost
++ '[' '!' -e ethanolxb2abhost.failed ']'
+++ cat ethanolxb2abhost.ssh.log
+++ fgrep 'JOB LOG'
+++ grep -oP '(?<=: ).+$'
++ AVOCADO_LOG_PATH=/home/jenkins/avocado/job-results/job-2018-08-27T14.45-1e8632a/job.log
++ scp jenkins@ethanolxb2abhost:/home/jenkins/avocado/job-results/job-2018-08-27T14.45-1e8632a/job.log ethanolxb2abhost.avocado.log
++ bc -l
+++ fgrep -m1 'Throughput '
+++ cat ethanolxb2abhost.avocado.log
+++ grep -oP '(?<=Throughput )[0-9.]+'
++ echo 6596.9
+6596.9
+++ bc -l
++++ cat ethanolxb2abhost.avocado.log
++++ fgrep -m1 'Throughput '
++++ grep -oP '(?<=Throughput )[0-9.]+'
+++ echo 6596.9
++ plotval=6596.9
++ '[' -f ethanolxb2abhost.prevplotval ']'
+++ bc -l
++++ cat ethanolxb2abhost.prevplotval
+++ echo '(6567.62714958190917968750+6596.9)/2'
++ plotval=6582.26357479095458984375
++ echo -n 6582.26357479095458984375
++ echo -n 6582.26357479095458984375
++ echo -n 'Kernel Release: '
++ for R in ${RESOURCES}
++ '[' -f ethanolxb2abhost.kernelrelease ']'
+++ cat ethanolxb2abhost.kernelrelease
++ echo -n 'ethanolxb2abhost: 4.17.0-amdsos-build7+, '
++ truncate --size=-2 kernelreleases
+++ cat kernelreleases
++ echo '[Kernel' Release: ethanolxb2abhost: '4.17.0-amdsos-build7+]'
+[Kernel Release: ethanolxb2abhost: 4.17.0-amdsos-build7+]
++ for R in ${RESOURCES}
+++ cat ethanolxb2abhost.plotval
++ echo -n 6582.26357479095458984375,
++ truncate --size=-1 plot.csv
++ echo
++ test '!' -e '*.failed'
+Archiving artifacts
+Recording plot data
+[description-setter] Description set: ethanolxb2abhost: 4.17.0-amdsos-build7+
+[lockable-resources] released lock on [ethanolxb2abhost]
+Triggering a new build of [8mha:////4EoQXCCvCL1ZAUvbxERBMTGFvdw8yZlTD18gs9e3mwThAAAAqB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzxEgZZ/az8JP3EsvzkxJT8tEygouISveKSxKLijMwCfQAg0vi80gAAAA==[0mavocadofiotest.starship
+Finished: SUCCESS
